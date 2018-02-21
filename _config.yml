@@ -12,11 +12,11 @@ locale                   : "en-US"
 title                    : "Donald Boulton"
 title_separator          : "-"
 name                     : "Donald W. Boulton II"
-description              : "DWB's amazing website."
+description              : "DWB's Jekyll Website."
 url                      : "https://donaldboulton.github.io"
 baseurl                  : "/DWB"
 repository               : "donaldboulton/DWB"
-teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+teaser                   : "/assets/images/enoch_500.jpg"
 # breadcrumbs            : true # true, false (default)
 words_per_minute         : 200
 comments:
@@ -63,7 +63,7 @@ algolia:
 github                   : [metadata]
 
 # SEO Related
-google_site_verification :
+google_site_verification : "9uC-GgFFGwTqC8ERkfG6jgWN0LQvBJWAatcFa8EkAT0"
 bing_site_verification   :
 yandex_site_verification :
 naver_site_verification  :
@@ -87,17 +87,17 @@ social:
 analytics:
   provider               : true # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          : "UA- 189365554"
+    tracking_id          : "UA-30162465-2"
 
 
 # Site Author
 author:
-  name             : "Dpnald W. Boulton"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  name             : "Donald Boulton"
+  avatar           : "/assets/images/donald-boulton_100.jpg"
   bio              : "Away from Asp. Anything."
   location         : "OKC Oklahoma"
   email            : "donaldboulton@gmail.com"
-  uri              : "http://donboulton.github.io/DWB/
+  uri              : "http://donboulton.github.io/DWB/"
   home             : # null (default), "absolute or relative url to link to author home"
   bitbucket        :
   codepen          :
@@ -114,14 +114,14 @@ author:
   linkedin         : # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
   pinterest        :
   soundcloud       :
-  stackoverflow    : # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
+  stackoverflow    : "3135143/donald-boulton"
   steam            : # "steamId" (the last part of your profile url, e.g. https://steamcommunity.com/id/steamId/)
   tumblr           :
-  twitter          :
+  twitter          : "donboulton"
   vine             :
   weibo            :
   xing             :
-  youtube          : # "https://youtube.com/c/MichaelRoseDesign"
+  youtube          : "https://www.youtube.com/channel/UCHED4RFSxXXNGDDvWpgzHXg"
 
 # Reading Files
 include:
@@ -257,6 +257,17 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: # true
+      comments: true
+      share: true
+      related: true
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
       share: true
       related: true
