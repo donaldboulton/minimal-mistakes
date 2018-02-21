@@ -1,6 +1,14 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\assets\\css",
+    "\\assets\\images",
+    "\\assets\\images\\icons",
+    "\\assets\\js",
+    "\\_includes",
+    "\\_includes\\search",
+    "\\_site\\assets\\css"
   ],
+  "SelectedNode": "\\_includes\\search\\algolia-search-scripts.html",
   "PreviewInSolutionExplorer": false
 }

@@ -47,13 +47,13 @@ staticman:
       options:
         format           : # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
 reCaptcha:
-  siteKey                :
-  secret                 :
+  siteKey                : "6Le_8DAUAAAAAC2B902PFAI_HpazMMZ6vhTkaTAW"
+  secret                 : "6Le_8DAUAAAAAKk85ETPdMT_aqQxGafBv8b_d9Q3"
 atom_feed:
   path                   : # blank (default) uses feed.xml
-search                   : # true, false (default)
-search_full_content      : # true, false (default)
-search_provider          : # lunr (default), algolia
+search                   : "true"
+search_full_content      : "true"
+search_provider          : "algolia"
 algolia:
   application_id         : "8TO5EHY2FM"
   index_name             : "getstarted_actors"
@@ -67,7 +67,7 @@ head_scripts:
 
 # SEO Related
 google_site_verification : "9uC-GgFFGwTqC8ERkfG6jgWN0LQvBJWAatcFa8EkAT0"
-bing_site_verification   :
+bing_site_verification   : "361016BEC0F67F6A834D6186E897D9EC"
 yandex_site_verification :
 naver_site_verification  :
 
