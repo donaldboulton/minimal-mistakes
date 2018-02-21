@@ -20,7 +20,7 @@ teaser                   : # path of fallback teaser image, e.g. "/assets/images
 # breadcrumbs            : true # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
+  provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
   disqus:
     shortname            : "mansbooks-1"
   discourse:
@@ -70,7 +70,7 @@ naver_site_verification  :
 
 # Social Sharing
 twitter:
-  username               :
+  username               : "donbouton"
 facebook:
   username               :
   app_id                 :
@@ -85,19 +85,19 @@ social:
 
 # Analytics
 analytics:
-  provider               : false # false (default), "google", "google-universal", "custom"
+  provider               : true # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          :
+    tracking_id          : "UA- 189365554"
 
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "Dpnald W. Boulton"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an amazing person."
-  location         : "Somewhere"
-  email            :
-  uri              :
+  bio              : "Away from Asp. Anything."
+  location         : "OKC Oklahoma"
+  email            : "donaldboulton@gmail.com"
+  uri              : "http://donboulton.github.io/DWB/
   home             : # null (default), "absolute or relative url to link to author home"
   bitbucket        :
   codepen          :
@@ -105,9 +105,9 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           :
+  github           : "donaldboulton"
   gitlab           :
-  google_plus      :
+  google_plus      : "donaldboulton"
   keybase          :
   instagram        :
   lastfm           :
