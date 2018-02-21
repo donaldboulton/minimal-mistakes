@@ -4,11 +4,12 @@
     "\\assets\\css",
     "\\assets\\images",
     "\\assets\\images\\icons",
-    "\\assets\\js",
-    "\\_includes",
-    "\\_includes\\search",
-    "\\_site\\assets\\css"
+    "\\docs\\_docs",
+    "\\docs\\_layouts",
+    "\\docs\\_portfolio",
+    "\\test",
+    "\\test\\_recipes"
   ],
-  "SelectedNode": "\\_includes\\search\\algolia-search-scripts.html",
+  "SelectedNode": "\\_config.yml",
   "PreviewInSolutionExplorer": false
 }
