@@ -1,18 +1,18 @@
 {
-  "name": "minimal-mistakes",
+  "name": "donaldboulton",
   "version": "4.10.0",
   "description": "Minimal Mistakes Jekyll theme npm build scripts",
   "repository": {
     "type": "git",
-    "url": "git://github.com/mmistakes/minimal-mistakes.git"
+    "url": "git://github.com/donaldboulton/DWB.git"
   },
   "keywords": ["jekyll", "theme", "minimal"],
-  "author": "Michael Rose",
+  "author": "Donald Boulton",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mmistakes/minimal-mistakes/issues"
+    "url": "https://github.com/donaldboulton/DWB/issues"
   },
-  "homepage": "https://mmistakes.github.io/minimal-mistakes/",
+  "homepage": "https://donaldboulton.github.io/DWB/",
   "engines": {
     "node": ">= 0.10.0"
   },

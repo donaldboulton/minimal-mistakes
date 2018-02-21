@@ -62,6 +62,9 @@ algolia:
   
 github                   : [metadata]
 
+head_scripts:
+  - https://www.googletagmanager.com/gtag/js?id=UA-30162465-2
+
 # SEO Related
 google_site_verification : "9uC-GgFFGwTqC8ERkfG6jgWN0LQvBJWAatcFa8EkAT0"
 bing_site_verification   :
