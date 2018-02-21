@@ -1,4 +1,4 @@
-<meta charset="utf-8">
+﻿<meta charset="utf-8">
 
 {% include seo.html %}
 
@@ -8,9 +8,40 @@
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" Content="index, follow, archive">
+<meta name="revisit-after" Content="3 days">
+<meta name="apple-mobile-web-app-capable" Content="yes">
+<meta name="expires" Content="Mon, 06 Jan 2020 21:31:12 GMT">
+<meta name="author" Content="Donald Boulton">
+<meta name="fb:app_id" Content="322180367845124">
+<meta name="twitter:url" Content="https://donaldboulton.github.io/DWB/">
+<meta name="twitter:thumbnailUrl" Content="https://d13ie4yeey2dtq.cloudfront.net/donald-boulton_100.jpg">
+<meta name="twitter:id" Content="105217183">
+<meta name="twitter:creator:id" Content="105217183">
+<meta name="twitter:widgets:theme" Content="dark">
+<meta name="twitter:widgets:link-color" Content=" #71ba70">
+<meta name="twitter:widgets:border-color" Content="#282A2B">
+<meta name="name" Content="Donald Boulton">
+<meta name="InLanguage" Content="en-US">
+<meta name="google-signin-clientid" Content="857761645811-u1iefg2lorg7aqoiat9vkn1d146n8lkp.apps.googleusercontent.com">
+<meta name="google-signin-scope" Content="https://www.googleapis.com/auth/plus.login">
+<meta name="google-signin-requestvisibleactions" Content="http://schema.org/AddAction">
+<meta name="google-signin-cookiepolicy" Content="single_host_origin">
+<meta name="specificfeeds-verification-code" content="w48MyShCerwN6kA3DklR" />
+<meta name="theme-color" content="#212529">
 
 <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-30162465-2');
+</script>
+<script type="application/ld+json">
+  [{"@@context":"http://schema.org","@@type":"WebSite","url":"https://mansbooks.com/","potentialAction":{"@@type":"SearchAction","target":"https://query.mansbooks.com/search?q={q}","query-input":"required name=q"}},{"@@context":"http://schema.org","@@type":"SoftwareApplication","name":"Mansbooks","operatingSystem":"Windows 10","applicationCategory":"http://schema.org/WebApplication","aggregateRating":{"@@type":"AggregateRating","ratingValue":"4.6","ratingCount":"8864"},"offers":{"@@type":"Offer","price":"1.00","priceCurrency":"USD"}}]
 </script>
 
 <!-- For all browsers -->
@@ -30,7 +61,6 @@
     }
   </style>
 <![endif]-->
-
 {% if site.head_scripts %}
   {% for script in site.head_scripts %}
     {% if script contains "://" %}
@@ -38,6 +68,6 @@
     {% else %}
       {% capture script_path %}{{ script | absolute_url }}{% endcapture %}
     {% endif %}
-    <script src="{{ script_path }}"></script>
+<script src="{{ script_path }}"></script>
   {% endfor %}
 {% endif %}
