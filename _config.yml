@@ -56,9 +56,9 @@ search_full_content      : true
 search_provider          : algolia
 
 algolia:
-  application_id         : "8TO5EHY2FM"
+  application_id         : "G34JUR3EB9"
   index_name             : "getstarted_actors"
-  search_only_api_key    : "efe2c5eec92d0bf53e2014ccf2300934"
+  search_only_api_key    : "68c60968e03d06ce61d592425b22c6bd"
   powered_by             : true
 
 mailgun:
@@ -203,7 +203,7 @@ sass:
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
-timezone: America/Chicago # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins (previously gems:)
@@ -214,7 +214,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jemoji
-  - algoliasearch
+  - jekyll-algolia
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -224,7 +224,7 @@ whitelist:
   - jekyll-feed
   - jekyll-seo-tag
   - jemoji
-  - algoliasearch
+  - jekyll-algolia
 
 
 # Archives
