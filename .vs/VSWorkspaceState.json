@@ -1,15 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\assets\\css",
-    "\\assets\\images",
-    "\\assets\\images\\icons",
-    "\\docs\\_docs",
-    "\\docs\\_layouts",
-    "\\docs\\_portfolio",
-    "\\test",
-    "\\test\\_recipes"
+    "\\test\\_recipes",
+    "\\_layouts",
+    "\\_site",
+    "\\_site\\assets",
+    "\\_site\\assets\\css"
   ],
-  "SelectedNode": "\\_config.yml",
+  "SelectedNode": "\\index.html",
   "PreviewInSolutionExplorer": false
 }

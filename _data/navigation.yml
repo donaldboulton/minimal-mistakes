@@ -1,12 +1,12 @@
 # main links
 main:
-  - title: "Quick-Start Guide"
-    url: https://donaldboulton.github.io/DWB/docs/quick-start-guide/
+  - title: "Home"
+    url: https://donaldboulton.github.io/DWB/Home/
   - title: "About"
     url: https://donaldboulton.github.io/DWB/about/
-  - title: "Sample Posts"
-    url: /year-archive/
-  - title: "Sample Collections"
+  - title: "Portfolio"
+    url: /portfolio/
+  - title: "Posts"
     url: /collection-archive/
   - title: "Sitemap"
     url: /sitemap/

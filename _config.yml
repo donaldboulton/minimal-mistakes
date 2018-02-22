@@ -16,7 +16,7 @@ description              : "DWB's amazing website."
 url                      : "https://donaldboulton.github.io"
 baseurl                  : "/DWB"
 repository               : "donaldboulton/DWB"
-teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+teaser                   : "/assets/images/digital_box_1400-compressor.jpg"
 # breadcrumbs            : true # true, false (default)
 words_per_minute         : 200
 comments:
@@ -31,35 +31,41 @@ comments:
     num_posts            : # 5 (default)
     colorscheme          : # "light" (default), "dark"
 staticman:
-  allowedFields          : # ['name', 'email', 'url', 'message']
-  branch                 : # "master"
-  commitMessage          : # "New comment."
-  filename               : # comment-{@timestamp}
-  format                 : # "yml"
-  moderation             : # true
-  path                   : # "/_data/comments/{options.slug}" (default)
-  requiredFields         : # ['name', 'email', 'message']
+  allowedFields          : ['name', 'email', 'url', 'message']
+  branch                 : "master"
+  commitMessage          : "New comment."
+  filename               : comment-{@timestamp}
+  format                 : "yml"
+  moderation             : true
+  path                   : "/_data/comments/{options.slug}"
+  requiredFields         : ['name', 'email', 'message']
   transforms:
-    email                : # "md5"
+    email                : "md5"
   generatedFields:
     date:
-      type               : # "date"
+      type               : "date"
       options:
-        format           : # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
+        format           : "iso8601"
 reCaptcha:
-  siteKey                : "6Le_8DAUAAAAAC2B902PFAI_HpazMMZ6vhTkaTAW"
-  secret                 : "6Le_8DAUAAAAAKk85ETPdMT_aqQxGafBv8b_d9Q3"
+  siteKey                : "6Lf15UcUAAAAALh_yk6LPPErNxT-Qd-k2efKcJxR"
+  secret                 : "6Lf15UcUAAAAAB6Sw2Bax9QV7n7FFEy09NeeF3rp"
 atom_feed:
   path                   : # blank (default) uses feed.xml
-search                   : "true"
-search_full_content      : "true"
+search                   : true
+search_full_content      : true
 search_provider          : "algolia"
 algolia:
   application_id         : "8TO5EHY2FM"
   index_name             : "getstarted_actors"
   search_only_api_key    : "efe2c5eec92d0bf53e2014ccf2300934"
-  powered_by             : "true"
-  
+  powered_by             : true
+
+mailgun:
+  smpt_Hostname           : "smtp.mailgun.org"
+  api_Base_Url            : "https://api.mailgun.net/v3/donboulton.com"
+  api_key                 : "key-c47c18b3f05454dc9e56db92f2d641e9"
+  smtp_login              : "postmaster@donboulton.com"
+
 github                   : [metadata]
 
 head_scripts:
@@ -88,7 +94,7 @@ social:
 
 # Analytics
 analytics:
-  provider               : true # false (default), "google", "google-universal", "custom"
+  provider               : "google"
   google:
     tracking_id          : "UA-30162465-2"
 
