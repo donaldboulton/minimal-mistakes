@@ -1,12 +1,12 @@
 # main links
 main:
   - title: "Home"
-    url: https://donaldboulton.github.io/DWB/Home/
+    url: /Home/
   - title: "About"
-    url: https://donaldboulton.github.io/DWB/about/
+    url: /about/
   - title: "Portfolio"
     url: /portfolio/
   - title: "Posts"
-    url: /collection-archive/
+    url: /posts/
   - title: "Sitemap"
     url: /sitemap/

@@ -12,7 +12,7 @@ locale                   : "en-US"
 title                    : "Donald Boulton"
 title_separator          : "-"
 name                     : "Donald W. Boulton II"
-description              : "DWB's amazing website."
+description              : "DWB's Jekyll website."
 url                      : "https://donaldboulton.github.io"
 baseurl                  : "/DWB"
 repository               : "donaldboulton/DWB"
@@ -53,7 +53,8 @@ atom_feed:
   path                   : # blank (default) uses feed.xml
 search                   : true
 search_full_content      : true
-search_provider          : "algolia"
+search_provider          : algolia
+
 algolia:
   application_id         : "8TO5EHY2FM"
   index_name             : "getstarted_actors"
@@ -81,16 +82,18 @@ naver_site_verification  :
 twitter:
   username               : "donbouton"
 facebook:
-  username               :
+  username               : &facebook "donboulton"
   app_id                 :
   publisher              :
-og_image                 : # Open Graph/Twitter default site image
+og_image                 : "/assets/images/paste-logo-light@2x.png" # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
   type                   : # Person or Organization (defaults to Person)
   name                   : # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
+    - "https://twitter.com/donboulton"
+    - "https://facebook.com/donboulton"
 
 # Analytics
 analytics:
@@ -107,7 +110,7 @@ author:
   location         : "OKC Oklahoma"
   email            : "donaldboulton@gmail.com"
   uri              : "http://donboulton.github.io/DWB/"
-  home             : # null (default), "absolute or relative url to link to author home"
+  home             : "http://donboulton.github.io/DWB/"
   bitbucket        :
   codepen          :
   dribbble         :
@@ -126,7 +129,7 @@ author:
   stackoverflow    : "3135143/donald-boulton"
   steam            : # "steamId" (the last part of your profile url, e.g. https://steamcommunity.com/id/steamId/)
   tumblr           :
-  twitter          :
+  twitter          : "donboulton"
   vine             :
   weibo            :
   xing             :
@@ -136,6 +139,7 @@ author:
 include:
   - .htaccess
   - _pages
+  - _posts
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -199,7 +203,7 @@ sass:
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: America/Chicago # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins (previously gems:)
@@ -208,7 +212,9 @@ plugins:
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
+  - jekyll-seo-tag
   - jemoji
+  - algoliasearch
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -216,7 +222,9 @@ whitelist:
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
+  - jekyll-seo-tag
   - jemoji
+  - algoliasearch
 
 
 # Archives
@@ -256,6 +264,15 @@ compress_html:
     envs: development
 
 
+# Collections
+collections:
+  pets:
+    output: true
+    permalink: /:collection/:path/
+  portfolio:
+    output: true
+    permalink: /:collection/:path/
+
 # Defaults
 defaults:
   # _posts
@@ -266,6 +283,33 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: # true
+      comments: true
       share: true
       related: true
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+      comments: true
+      share: true
+      related: true
+  # _pets
+  - scope:
+      path: "_pets"
+      type: pets
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comment: true
+  # _portfolio
+  - scope:
+      path: "_portfolio"
+      type: portfolio
+    values:
+      layout: single
+      author_profile: false
+      share: true
