@@ -6,8 +6,6 @@ main:
     url: /about/
   - title: "Portfolio"
     url: /portfolio/
-  - title: "Posts"
-    url: /posts/
   - title: "Cats"
     url: /pets/
   - title: "Sitemap"

@@ -62,7 +62,7 @@ algolia:
   powered_by             : true
 
 mailgun:
-  smpt_Hostname           : "smtp.mailgun.org"
+  smtp_Hostname           : "smtp.mailgun.org"
   api_Base_Url            : "https://api.mailgun.net/v3/donboulton.com"
   api_key                 : "key-c47c18b3f05454dc9e56db92f2d641e9"
   smtp_login              : "postmaster@donboulton.com"
