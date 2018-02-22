@@ -1,56 +1,57 @@
----
-layout: home
-author_profile: true
-comments: true
----
-
-<!doctype html>
-<!--
-  Minimal Mistakes Jekyll Theme 4.10.0 by Michael Rose
-  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
-  Free for personal and commercial use under the MIT license
-  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
--->
-<html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
-<head>
-  {% include head.html %}
-  {% include head/custom.html %}
-</head>
-
-<body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
-
-  {% include browser-upgrade.html %}
-  {% include masthead.html %}
-
-  <div class="initial-content">
-    {{ content }}
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <div align="center" style="margin: 1em 0;">
-      <ins class="adsbygoogle"
-           style="display:block; border-bottom: initial;"
-           data-ad-client="ca-pub-7655495105068461"
-           data-ad-slot="5601054893"
-           data-ad-format="auto"></ins>
-    </div>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-  </div>
-
-  {% if site.search == true %}
-  <div class="search-content">
-    {% include search/search_form.html %}
-  </div>
-  {% endif %}
-
-  <div class="page__footer">
-    <footer>
-      {% include footer/custom.html %}
-      {% include footer.html %}
-    </footer>
-  </div>
-
-  {% include scripts.html %}
-
-</body>
-</html>
+﻿<hr />
+<p>layout: archive
+permalink: /Home/
+last_modified_at: 2018-22-10T11:22:24-05:00
+tags:</p>
+<ul>
+<li>God</li>
+<li>Ruby</li>
+<li>Jekyll</li>
+<li>Github Pages</li>
+<li>MMistakes</li>
+</ul>
+<p>category:</p>
+<ul>
+<li>Home</li>
+<li>Programing</li>
+</ul>
+<p>toc: true</p>
+<p>comments: true</p>
+<p ::nomarkdown>header:
+overlay_color: &quot;#5e616c&quot;
+overlay_image: /assets/images/digital_box_1400-compressor.jpg
+cta_label: &quot;<i class='fas fa-file-alt'></i> Posts&quot;
+cta_url: &quot;/Posts/&quot;
+caption:
+excerpt: 'Donald W. Boulton II Personal website home page, hosted on GitHub.<br /> <small><a href="https://github.com/mmistakes/minimal-mistakes/releases/tag/4.10.0">Latest release v4.10.0</a></small><br /><br /> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=mmistakes&repo=minimal-mistakes&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=mmistakes&repo=minimal-mistakes&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
+feature_row:</p>
+<ul>
+<li>image_path: /assets/images/demo/mm-customizable-feature.png
+alt: &quot;customizable&quot;
+title: &quot;Super Customizable&quot;
+excerpt: &quot;Everything from the menus, sidebars, comments, and more can be configured or set with YAML Front Matter.&quot;
+url: &quot;/docs/configuration/&quot;
+btn_class: &quot;btn--primary&quot;
+btn_label: &quot;Learn More&quot;</li>
+<li>image_path: /assets/images/demo/mm-responsive-feature.png
+alt: &quot;fully responsive&quot;
+title: &quot;Responsive Layouts&quot;
+excerpt: &quot;Built on HTML5 + CSS3. All layouts are fully responsive with helpers to augment your content.&quot;
+url: &quot;/docs/layouts/&quot;
+btn_class: &quot;btn--primary&quot;
+btn_label: &quot;Learn More&quot;</li>
+<li>image_path: /assets/images/demo/mm-free-feature.png
+alt: &quot;100% free&quot;
+title: &quot;100% Free&quot;
+excerpt: &quot;Free to use however you want under the MIT License. Clone it, fork it, customize it, whatever!&quot;
+url: &quot;/docs/license/&quot;
+btn_class: &quot;btn--primary&quot;
+btn_label: &quot;Learn More&quot;
+github:</li>
+<li>excerpt: '<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
+intro:</li>
+<li>excerpt: 'Get notified when I add new stuff   <a href="https://twitter.com/donboulton" class="btn btn--twitter" :><i class="fab fa-twitter"></i> @mmistakes</a> <a href="https://www.paypal.me/donboulton" class="btn btn--primary" :><i class="fab fa-paypal"></i> Tip Me</a>'</li>
+</ul>
+<hr />
+<p>{% include feature_row id=&quot;intro&quot; type=&quot;center&quot; %}</p>
+<p>{% include feature_row %}</p>
