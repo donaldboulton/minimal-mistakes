@@ -1,12 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\test\\_recipes",
-    "\\_layouts",
-    "\\_site",
+    "\\assets",
+    "\\assets\\images",
+    "\\docs\\assets",
+    "\\docs\\assets\\images",
+    "\\_includes\\comments-providers",
+    "\\_pages",
+    "\\_portfolio",
     "\\_site\\assets",
     "\\_site\\assets\\css"
   ],
-  "SelectedNode": "\\index.html",
+  "SelectedNode": "\\node_modules",
   "PreviewInSolutionExplorer": false
 }

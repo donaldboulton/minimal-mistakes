@@ -10,3 +10,5 @@ main:
     url: /posts/
   - title: "Sitemap"
     url: /sitemap/
+  -title: "Terms & Privacy"
+    url: /terms/
