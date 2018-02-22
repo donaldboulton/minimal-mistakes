@@ -8,7 +8,9 @@ main:
     url: /portfolio/
   - title: "Posts"
     url: /posts/
+  - title: "Cats"
+    url: /pets/
   - title: "Sitemap"
     url: /sitemap/
-  -title: "Terms & Privacy"
+  - title: "Terms & Privacy"
     url: /terms/
