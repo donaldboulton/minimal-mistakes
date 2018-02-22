@@ -1,7 +1,8 @@
 ---
-layout: archive
+layout: splash
 permalink: /Home/
-last_modified_at: 2018-22-10T11:22:24-05:00
+author_profile: false
+classes: wide
 tags: 
   - God
   - Ruby
@@ -13,8 +14,6 @@ category:
   - Home
   - Programing
 
-toc: true
-
 comments: true
 
 header:
@@ -23,7 +22,7 @@ header:
   cta_label: "<i class='fas fa-file-alt'></i> Posts"
   cta_url: "/Posts/"
   caption:
-excerpt: 'Donald W. Boulton II Personal website home page, hosted on GitHub.<br /> <small><a href="https://github.com/mmistakes/minimal-mistakes/releases/tag/4.10.0">Latest release v4.10.0</a></small><br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=mmistakes&repo=minimal-mistakes&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=mmistakes&repo=minimal-mistakes&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
+excerpt: 'Donald Boulton, hosted on GitHub.<br /> <small><a href="https://github.com/donaldboulton/DWB/">Github Build</a></small><br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
 feature_row:
   - image_path: /assets/images/demo/mm-customizable-feature.png
     alt: "customizable"
