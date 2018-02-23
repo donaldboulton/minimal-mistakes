@@ -48,7 +48,8 @@ feature_row:
 github:
   - excerpt: '{::nomarkdown}<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
 intro:
-  - excerpt: 'This page is Showing Off Minimal Mistakes Ruby, Jekyll Github Pages App'
+  - excerpt: 'My Home page is Showing Off Minimal Mistakes Ruby, Jekyll Github Pages App'
+  - excerpt: 'Notifications & Tips for Michael Rose -- Just another boring, tattooed, time traveling, designer of Minimal Mistakes.'
   - excerpt: 'Get notified when I add new stuff &nbsp; [<i class="fab fa-twitter"></i> @mmistakes](https://twitter.com/mmistakes){: .btn .btn--twitter} [<i class="fab fa-paypal"></i> Tip Me](https://www.paypal.me/mmistakes){: .btn .btn--primary}'
 ---
 
