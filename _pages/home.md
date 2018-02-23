@@ -28,27 +28,28 @@ feature_row:
     alt: "customizable"
     title: "Super Customizable"
     excerpt: "Everything from the menus, sidebars, comments, and more can be configured or set with YAML Front Matter."
-    url: "/docs/configuration/"
+    url: "https://mademistakes.com/work/minimal-mistakes-jekyll-theme/"
     btn_class: "btn--primary"
     btn_label: "Learn More"
   - image_path: /assets/images/demo/mm-responsive-feature.png
     alt: "fully responsive"
     title: "Responsive Layouts"
     excerpt: "Built on HTML5 + CSS3. All layouts are fully responsive with helpers to augment your content."
-    url: "/docs/layouts/"
+    url: "https://github.com/mmistakes/minimal-mistakes"
     btn_class: "btn--primary"
     btn_label: "Learn More"
   - image_path: /assets/images/demo/mm-free-feature.png
     alt: "100% free"
     title: "100% Free"
     excerpt: "Free to use however you want under the MIT License. Clone it, fork it, customize it, whatever!"
-    url: "/docs/license/"
+    url: "https://mmistakes.github.io/minimal-mistakes/terms/"
     btn_class: "btn--primary"
     btn_label: "Learn More"
 github:
   - excerpt: '{::nomarkdown}<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
 intro:
-  - excerpt: 'Get notified when I add new stuff &nbsp; [<i class="fab fa-twitter"></i> @mmistakes](https://twitter.com/donboulton){: .btn .btn--twitter} [<i class="fab fa-paypal"></i> Tip Me](https://www.paypal.me/donboulton){: .btn .btn--primary}'
+  - excerpt: 'This page is Showing Off Minimal Mistakes Ruby, Jekyll Github Pages App'
+  - excerpt: 'Get notified when I add new stuff &nbsp; [<i class="fab fa-twitter"></i> @mmistakes](https://twitter.com/mmistakes){: .btn .btn--twitter} [<i class="fab fa-paypal"></i> Tip Me](https://www.paypal.me/mmistakes){: .btn .btn--primary}'
 ---
 
 {% include feature_row id="intro" type="center" %}

@@ -48,7 +48,7 @@ staticman:
         format           : "iso8601"
 reCaptcha:
   siteKey                : "6Lf15UcUAAAAALh_yk6LPPErNxT-Qd-k2efKcJxR"
-  secret                 : "6Lf15UcUAAAAAB6Sw2Bax9QV7n7FFEy09NeeF3rp"
+  secret                 : "q0fksxUG8S3yendptK4byPIrlKUWhVPPn+zMA+2hjPd3ekaOPrwK04Ig0hHlyneN3z6zfH6edP7zk4kQEIHy8OOYADVmBAOX8US4dKusdXvoxHBFbdZPdC9o/FgS1eUkcrsn4g8cuXr4HUxz9/hoiMg2gHn0+5W99KoxR8pL+54="
 atom_feed:
   path                   : # blank (default) uses feed.xml
 search                   : true
@@ -61,7 +61,7 @@ algolia:
   search_only_api_key    : "68c60968e03d06ce61d592425b22c6bd"
   powered_by             : true
 
-mailgun:
+Mailgun:
   smtp_Hostname           : "smtp.mailgun.org"
   api_Base_Url            : "https://api.mailgun.net/v3/donboulton.com"
   api_key                 : "key-c47c18b3f05454dc9e56db92f2d641e9"
