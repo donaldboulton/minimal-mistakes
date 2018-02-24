@@ -14,7 +14,7 @@ title_separator          : "-"
 name                     : "Donald W. Boulton II"
 description              : "DWB's Jekyll website."
 url                      : "https://donaldboulton.github.io"
-baseurl                  : "/DWB/Home/"
+baseurl                  : "/DWB/"
 repository               : "donaldboulton/DWB"
 teaser                   : "/assets/images/digital_box_1400-compressor.jpg"
 # breadcrumbs            : true # true, false (default)
@@ -109,7 +109,7 @@ author:
   bio              : "Away from Asp. Anything."
   location         : "OKC Oklahoma"
   email            : "donaldboulton@gmail.com"
-  uri              : "http://donboulton.github.io/DWB/Home/"
+  uri              : "http://donboulton.github.io/DWB/"
   home             : "http://donboulton.github.io/DWB/Home/"
   bitbucket        :
   codepen          :
