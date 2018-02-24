@@ -110,7 +110,7 @@ author:
   location         : "OKC Oklahoma"
   email            : "donaldboulton@gmail.com"
   uri              : "http://donboulton.github.io/DWB/"
-  home             : "http://donboulton.github.io/DWB/"
+  home             : "http://donboulton.github.io/DWB/home/"
   bitbucket        :
   codepen          :
   dribbble         :
@@ -126,14 +126,14 @@ author:
   linkedin         : # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
   pinterest        :
   soundcloud       :
-  stackoverflow    : "3135143/donald-boulton"
+  stackoverflow    : # none
   steam            : # "steamId" (the last part of your profile url, e.g. https://steamcommunity.com/id/steamId/)
   tumblr           :
   twitter          : "donboulton"
   vine             :
   weibo            :
   xing             :
-  youtube          : "https://www.youtube.com/channel/UCHED4RFSxXXNGDDvWpgzHXg"
+  youtube          : # None
 
 # Reading Files
 include:
@@ -215,6 +215,7 @@ plugins:
   - jekyll-seo-tag
   - jemoji
   - jekyll-algolia
+  - jekyll-admin
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -225,6 +226,7 @@ whitelist:
   - jekyll-seo-tag
   - jemoji
   - jekyll-algolia
+  - jekyll-admin
 
 
 # Archives
@@ -283,7 +285,7 @@ collections:
 defaults:
   # _posts
   - scope:
-      path: "_posts"
+      path: ""
       type: posts
     values:
       layout: single
@@ -302,15 +304,6 @@ defaults:
       comments: true
       share: true
       related: true
-  # _pets
-  - scope:
-      path: "_pets"
-      type: pets
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comment: true
   # _portfolio
   - scope:
       path: "_portfolio"

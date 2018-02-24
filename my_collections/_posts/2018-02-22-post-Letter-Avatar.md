@@ -23,7 +23,8 @@ comments: true
 share: true
 related: true
 
-excerpt: "Many of us got really tired of the Gravatar Service being down or slow and having multiple server calls to download the Gravatar. Alot of people do not even know about gravatar and your get a generic image for the User Avatar."
+excerpt: "Many of us got really tired of the Gravatar Service being down or slow and having multiple server calls to download the Gravatar. 
+Alot of people do not even know about gravatar and your get a generic image for the User Avatar."
 header:
   image: /assets/images/letter-avatar-header.png
   teaser: /assets/images/letter-avatar-header.png
@@ -41,13 +42,13 @@ gallery:
 
 ## Letter Avatar
 
-How to easily create letter avatars for your comments in Minimal Mistakes. This coversion is a work in progress as I am just learning liquid.
+How to easily create Letter Avatars for your comments in Minimal Mistakes. This coversion is a work in progress as I am just learning liquid.
 
 ### Gihub code By Lee Crossly
 
 Gihub Gist, by [Lee Crossly](https://gist.github.com/leecrossley/6027780)
 
-Avatar Generator from - A name (first name and surname) is input and a canvas element is output using the initials from the name and a background colour (based on the first name & surname first letter). 
+Avatar Generator from - Commenter name as - (first name and surname) as input and a canvas element as output using the initials from the name and a background colour (based on the first name & surname first letter). 
 
 The background colours are from from [Flat Ui Colors](http://flatuicolors.com/) Now with retina support.
 
@@ -212,7 +213,13 @@ Changed To: Letter Avatar
 <img class="user-icon" avatar="{{ include.name | escape }}" alt="{{ include.name | escape }}">
 ```
 
-I Modified to the file _ includes/comment.html to a avatar="{{ include.name | escape }}" as above.
+I Modified to the file at _ includes/comment.html
+
+To include avatar="{{ include.name | escape }}" 
+
+Removed src="..." and srcset="..." 
+
+As in the above example.
 
 ### Modify _main.js_
 
