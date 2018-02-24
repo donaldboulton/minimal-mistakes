@@ -6,10 +6,6 @@ main:
     url: /about/
   - title: "Posts"
     url: /posts/
-  - title: "Portfolio"
-    url: /portfolio/
-  - title: "Cats"
-    url: /pets/
   - title: "Sitemap"
     url: /sitemap/
   - title: "Terms & Privacy"
