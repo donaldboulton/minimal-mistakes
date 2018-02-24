@@ -18,14 +18,17 @@ toc: true
 toc_label: "Page Contents"
 toc_icon: "file"
 
+read_time: true
 comments: true
+share: true
+related: true
 
 excerpt: "Many of us got really tired of the Gravatar Service being down or slow and having multiple server calls to download the Gravatar. Alot of people do not even know about gravatar and your get a generic image for the User Avatar."
 header:
   image: /assets/images/letter-avatar-header.png
   teaser: /assets/images/letter-avatar-header.png
 gallery:
-  - url: /assets/images/gravtar-icon-600.jpg
+  - url: /assets/images/gravatar-icon-600.jpg
     image_path: /assets/images/gravatar-icon-225.jpg
     alt: "Gravtar Image"
   - url: /assets/images/avatar-600.png
@@ -50,11 +53,13 @@ The background colours are from from [Flat Ui Colors](http://flatuicolors.com/) 
 
 ### The Canvas html snippet. 
 
-```<canvas id="user-icon" width="60" height="60"></canvas>```
+```python
+<canvas id="user-icon" width="60" height="60"></canvas>
+```
 
 ### The Code before conversion
 
-```
+```python
 var colours = ["#1abc9c", "#2ecc71", "#3498db", "#9b59b6", "#34495e", "#16a085", "#27ae60", "#2980b9", "#8e44ad", "#2c3e50", "#f1c40f", "#e67e22", "#e74c3c", "#ecf0f1", "#95a5a6", "#f39c12", "#d35400", "#c0392b", "#bdc3c7", "#7f8c8d"];
 
 var name = "Lee Crossley",
@@ -86,20 +91,21 @@ context.font = "128px Arial";
 context.textAlign = "center";
 context.fillStyle = "#FFF";
 context.fillText(initials, canvasCssWidth / 2, canvasCssHeight / 1.5);
-
 ```
 
 ## MVC Implimentation
 
 ### Image tag changes for MVC
 
-```<img itemprop="image" avatar="@comment.Author" alt="@comment.Author" class="comments-media-object" />```
+```python
+<img itemprop="image" avatar="@comment.Author" alt="@comment.Author" class="comments-media-object" />
+```
 
 
 ### My Script Changes for MVC
 
-<pre>
-(function (w, d) {
+```python
+    (function (w, d) {
         function LetterAvatar(name, size) {
 
             name = name || '';
@@ -180,7 +186,7 @@ context.fillText(initials, canvasCssWidth / 2, canvasCssHeight / 1.5);
         }
 
     })(window, document);
-</pre>
+```
 
 ## Liquid Conversion
 
@@ -188,15 +194,23 @@ Lets take a look a Minimal Mistakes post on Staticman Comments, at [Improving Je
 
 The comments include form in: _includes/comment.html, lines 
 
-```<img src="/assets/images/avatar-60.png" srcset="/assets/images/avatar-120.png 2x" alt="{{ include.name | escape }}">```
+```python
+<img src="/assets/images/avatar-60.png" srcset="/assets/images/avatar-120.png 2x" alt="{{ include.name | escape }}">
+```
 
 ### Image changes
 
-Modifying the <img to add avatar="{{ include.name | escape }}" instead of src="/assets/images/avatar-60.png" srcset="/assets/images/avatar-120.png 2x; will work just fine in Minimal Mistakes, Staticman Comments form.
+Modifying the Image link From:
+```ruby
+<img src="/assets/images/avatar-60.png" srcset="/assets/images/avatar-120.png 2x; 
+```
 
-As below
+I am sure this will work just fine in Minimal Mistakes - Staticman Comments form.
 
-```<img class="user-icon" avatar="{{ include.name | escape }}" alt="{{ include.name | escape }}">```
+Changed To: Letter Avatar
+```ruby
+<img class="user-icon" avatar="{{ include.name | escape }}" alt="{{ include.name | escape }}">
+```
 
 I Modified to the file _ includes/comment.html to a avatar="{{ include.name | escape }}" as above.
 
