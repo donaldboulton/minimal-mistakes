@@ -1,6 +1,17 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\assets",
+    "\\docs\\_pets",
+    "\\docs\\_posts",
+    "\\my_collections",
+    "\\my_collections\\_posts",
+    "\\_data",
+    "\\_includes",
+    "\\_pages",
+    "\\_pets",
+    "\\_portfolio"
   ],
+  "SelectedNode": "\\assets\\images\\myLetterAvatar-200.png",
   "PreviewInSolutionExplorer": false
 }

@@ -22,7 +22,7 @@ words_per_minute         : 200
 comments:
   provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
   disqus:
-    shortname            : "mansbooks-1"
+    shortname            : "donald-boulton"
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -266,6 +266,12 @@ compress_html:
 
 # Collections
 collections:
+  my_collection:
+    output: true
+    permalink: /:collection/:name
+  posts:
+    output: true
+    permalink: /:collection/:path/
   pets:
     output: true
     permalink: /:collection/:path/
@@ -277,7 +283,7 @@ collections:
 defaults:
   # _posts
   - scope:
-      path: ""
+      path: "_posts"
       type: posts
     values:
       layout: single

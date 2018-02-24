@@ -1,5 +1,7 @@
 ---
-title: "Baz Boom Identity"
+title: "Letter Avatar"
+date:   2018-02-22 16:16:01 -0600
+search: true
 author: Donald Boulton
 author_profile: true
 tags:
@@ -7,14 +9,13 @@ tags:
   - Letter Avatar
   - Staticman
   - MMistakes
-
 category:
-  - Letter Avatar
+  - Programing
 comments: true
 toc: true
 toc_label: "Page Contents"
 toc_icon: "file"
-excerpt: "Got really tired of the Gravatar Service being down or slow and having multiple server calls to download the Gravatar. Alot of people do not even know about gravatar and your get a generic image for the User Avatar."
+excerpt: "Many of us got really tired of the Gravatar Service being down or slow and having multiple server calls to download the Gravatar. Alot of people do not even know about gravatar and your get a generic image for the User Avatar."
 header:
   image: /assets/images/letter-avatar-header.png
   teaser: /assets/images/letter-avatar-header.png
@@ -22,20 +23,21 @@ gallery:
   - url: /assets/images/gravtar-icon-600.jpg
     image_path: /assets/images/gravatar-icon.jpg
     alt: "Gravtar Image"
-  - url: /assets/images/gravatar-generic-600.jpg
-    image_path: /assets/images/gravatar-icon.jpg
+  - url: /assets/images/avatar-600.jpg
+    image_path: /assets/images/avatar-225.jpg
     alt: "Gravtar Generic Image"
   - url: /assets/images/myLetterAvatar-600.png
-    image_path: /assets/images/myLetterAvatar.png
+    image_path: /assets/images/myLetterAvatar-225.png
     alt: "Letter Avatar"
 ---
+
 ## Letter Avatar
 
 How to easily create letter avatars for your comments in Minimal Mistakes. This coversion is a work in progress as I am just learning liquid.
 
 ### Gihub code By Lee Crossly
 
-Gihub Gist [Lee Crossly](https://gist.github.com/leecrossley/6027780)
+Gihub Gist, by [Lee Crossly](https://gist.github.com/leecrossley/6027780)
 
 Avatar Generator from - A name (first name and surname) is input and a canvas element is output using the initials from the name and a background colour (based on the first name & surname first letter). 
 
@@ -47,7 +49,8 @@ The background colours are from from [Flat Ui Colors](http://flatuicolors.com/) 
 
 ### The Code before conversion
 
-`var colours = ["#1abc9c", "#2ecc71", "#3498db", "#9b59b6", "#34495e", "#16a085", "#27ae60", "#2980b9", "#8e44ad", "#2c3e50", "#f1c40f", "#e67e22", "#e74c3c", "#ecf0f1", "#95a5a6", "#f39c12", "#d35400", "#c0392b", "#bdc3c7", "#7f8c8d"];
+```yaml
+var colours = ["#1abc9c", "#2ecc71", "#3498db", "#9b59b6", "#34495e", "#16a085", "#27ae60", "#2980b9", "#8e44ad", "#2c3e50", "#f1c40f", "#e67e22", "#e74c3c", "#ecf0f1", "#95a5a6", "#f39c12", "#d35400", "#c0392b", "#bdc3c7", "#7f8c8d"];
 
 var name = "Lee Crossley",
     nameSplit = name.split(" "),
@@ -77,7 +80,9 @@ context.fillRect (0, 0, canvas.width, canvas.height);
 context.font = "128px Arial";
 context.textAlign = "center";
 context.fillStyle = "#FFF";
-context.fillText(initials, canvasCssWidth / 2, canvasCssHeight / 1.5);`
+context.fillText(initials, canvasCssWidth / 2, canvasCssHeight / 1.5);
+
+```
 
 ## MVC Implimentation
 
@@ -91,8 +96,10 @@ context.fillText(initials, canvasCssWidth / 2, canvasCssHeight / 1.5);`
 <pre>
 (function (w, d) {
         function LetterAvatar(name, size) {
+
             name = name || '';
             size = size || 60;
+
             var colours = [
                     "#1abc9c", "#2ecc71", "#3498db", "#9b59b6", "#34495e", "#16a085", "#27ae60", "#2980b9", "#8e44ad", "#2c3e50",
                     "#f1c40f", "#e67e22", "#e74c3c", "#ecf0f1", "#95a5a6", "#f39c12", "#d35400", "#c0392b", "#bdc3c7", "#7f8c8d"
@@ -170,7 +177,6 @@ context.fillText(initials, canvasCssWidth / 2, canvasCssHeight / 1.5);`
     })(window, document);
 </pre>
 
-
 ## Liquid Conversion
 
 Lets take a look a Minimal Mistakes post on Staticman Comments, at [Improving Jekyll Staticman Comments](https://mademistakes.com/articles/improving-jekyll-static-comments/)
@@ -189,9 +195,9 @@ As below
 
 I Modified to the file _ includes/comment.html to a avatar="?" as above.
 
-### Modify _main.js 
+### Modify _main.js_
 
-Adding the modified .js to my _main.js and add a avatar.scss file for width and height.
+Adding the modified MVC .js to my _main.js and add a avatar.scss file for width and height.
 
 {% include gallery caption="Gravtar, Avatar, Letter Avatar." %}
  

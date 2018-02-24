@@ -4,6 +4,8 @@ main:
     url: /Home/
   - title: "About"
     url: /about/
+  - title: "Posts"
+    url: /posts/
   - title: "Portfolio"
     url: /portfolio/
   - title: "Cats"

@@ -1,15 +1,16 @@
 ---
 layout: archive
-title: "Pets"
-permalink: /pets/
+title: "Posts"
+permalink: /posts/
 author_profile: true
 comments: true
 header:
+  image: /archives/images/digital_box_1400-compressor.jpg
   teaser: /archives/images/digital_box_1400-compressor.jpg
 ---
 
 <div class="grid__wrapper">
-  {% for post in site.portfolio %}
+  {% for post in site.posts %}
   {% include archive-single.html type="grid" %}
   {% endfor %}
 </div>
