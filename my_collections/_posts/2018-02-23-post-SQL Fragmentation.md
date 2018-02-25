@@ -51,7 +51,7 @@ Step 1\. Open Microsoft SQL Server 2008 R2
 
 Step 2\. Open Microsoft SQL Server Management Studio  
 Start- All programs- Microsoft SQL Server 2008 R2- Microsoft SQL Server Management Studio  
-<img class="text-left" src="/DWB/assets/images/pages/sql_management.png" />
+<img class="text-left" src="https://donaldboulton.github.io/DWB/assets/images/pages/sql_management.png" />
 
 Step 3\. Drag the script file to SQL Server Management Studio
 

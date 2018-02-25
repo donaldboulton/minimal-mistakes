@@ -139,7 +139,6 @@ author:
 include:
   - .htaccess
   - _pages
-  - _posts
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -268,7 +267,7 @@ compress_html:
 
 # Collections
 collections:
-  my_collection:
+  my_collections:
     output: true
     permalink: /:collection/:name
   posts:
