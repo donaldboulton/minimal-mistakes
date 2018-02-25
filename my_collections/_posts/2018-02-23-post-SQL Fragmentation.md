@@ -25,8 +25,8 @@ related: true
 
 excerpt: "SQl Fragmentation is a issue for most all my other sites. Not for this Jekyll SIte though - Static."
 header:
-  image: /assets/images/pages/defrag-1600.png
-  teaser: /assets/images/pages/defrag-1600.png
+  image: /assets/images/pages/check_sql_fragmentation-1400.png
+  teaser: /assets/images/pages/check_sql_fragmentation-1400.png
 
 excerpt: Check SQL Server a specified database index fragmentation percentage (SQL)
 ---
@@ -51,7 +51,7 @@ Step 1\. Open Microsoft SQL Server 2008 R2
 
 Step 2\. Open Microsoft SQL Server Management Studio  
 Start- All programs- Microsoft SQL Server 2008 R2- Microsoft SQL Server Management Studio  
-![SQL Management](/assets/images/pages/sql_management.png)
+<img class="text-left" src="/DWB/assets/images/pages/sql_management.png" />
 
 Step 3\. Drag the script file to SQL Server Management Studio
 
@@ -65,17 +65,17 @@ The below script selects AdventureWorks2008. 
 
 After the script executing, we will get a result as the following figure shows:
 
-![Script Results](/assets/images/pages/script-results.jpg)
+<img class="text-left" src="/DWB/assets/images/pages/script-results.jpg" />
 
 ### Web Matrix is what I use to check Fragmentation.
 
 Open Web Matrix select databases and logon to your database, Select new query and paste IndexDefrag query in workspace the execute.
 
-![Index Fragmentation](/assets/images/pages/IndexFragmentation_WebMatrix.png)
+<img class="text-left" src="/DWB/assets/images/pages/IndexFragmentation_WebMatrix.png" />
 
 Here is my result on a database that is less than a month old. Media Library is 87% FRAGMENTED.
 
-![SQL Management](/assets/images/pages/IndexFragmentation_WebMatrix_Script_Results.png)
+<img class="text-left" src="/DWB/assets/images/pages/IndexFragmentation_WebMatrix_Script_Results.png" />
 
 ## Additional Resources
 

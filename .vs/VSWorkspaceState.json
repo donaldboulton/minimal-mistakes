@@ -1,13 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\assets\\js",
-    "\\docs\\_pets",
-    "\\my_collections\\_posts",
-    "\\_data",
-    "\\_includes",
-    "\\_sass\\minimal-mistakes"
+    "\\assets",
+    "\\assets\\images",
+    "\\assets\\images\\pages",
+    "\\my_collections",
+    "\\my_collections\\_posts"
   ],
-  "SelectedNode": "\\_includes\\scripts.html",
+  "SelectedNode": "\\_config.yml",
   "PreviewInSolutionExplorer": false
 }
