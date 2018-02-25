@@ -209,10 +209,9 @@ Modifying the Image link From:
 I am sure this will work just fine in Minimal Mistakes - Staticman Comments form.
 
 Changed To: Letter Avatar
-```ruby
+```liquid
 <img class="user-icon" avatar="{{ include.name | escape }}" alt="{{ include.name | escape }}">
 ```
-
 I Modified to the file at _ includes/comment.html
 
 To include avatar="{{ include.name | escape }}" 
@@ -220,6 +219,9 @@ To include avatar="{{ include.name | escape }}"
 Removed src="..." and srcset="..." 
 
 As in the above example.
+`
+avatar="{{ include.name | escape }}" alt="{{ include.name | escape }}"
+`
 
 ### Modify _main.js_
 

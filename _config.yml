@@ -57,7 +57,7 @@ search_provider          : algolia
 
 algolia:
   application_id         : "G34JUR3EB9"
-  index_name             : "getstarted_actors"
+  index_name             : "donald_boulton"
   search_only_api_key    : "68c60968e03d06ce61d592425b22c6bd"
   powered_by             : true
 
