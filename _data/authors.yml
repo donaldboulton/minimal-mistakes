@@ -5,7 +5,7 @@ Donald Boulton:
   uri         : "http://donboulton.com"
   email       : "donaldboulton@gmail.com"
   bio         : "Work Full Time for Father God."
-  avatar      : "/assets/images/donald-boulton_200.jpg"
+  avatar      : "/assets/images/pages/donald-boulton-200.jpg"
   twitter     : "donboulton"
   google_plus : "donaldboulton"
 
@@ -14,6 +14,6 @@ Michael Rose:
   uri         : "https://mademistakes.com"
   email       : "michaelrose@mademistakes.com"
   bio         : "Just making mistakes."
-  avatar      : "/assets/images/bio-photo.jpg"
+  avatar      : "/assets/images/pages/bio-photo.jpg"
   twitter     : "mademistakes"
   google_plus : "mademistakes"

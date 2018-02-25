@@ -26,17 +26,18 @@ related: true
 excerpt: "Many of us got really tired of the Gravatar Service being down or slow and having multiple server calls to download the Gravatar. 
 Alot of people do not even know about gravatar and your get a generic image for the User Avatar."
 header:
-  image: /assets/images/letter-avatar-header.png
-  teaser: /assets/images/letter-avatar-header.png
+  image: /assets/images/pages/letter-avatar-header.png
+  teaser: /assets/images/pages/letter-avatar-header.png
+
 gallery:
-  - url: /assets/images/gravatar-icon-600.jpg
-    image_path: /assets/images/gravatar-icon-225.jpg
+  - url: /assets/images/pages/gravatar-icon-600.jpg
+    image_path: /assets/images/pages/gravatar-icon-225.jpg
     alt: "Gravtar Image"
-  - url: /assets/images/avatar-600.png
-    image_path: /assets/images/avatar-225.png
+  - url: /assets/images/pages/avatar-600.png
+    image_path: /assets/images/pages/avatar-225.png
     alt: "Gravtar Generic Image"
-  - url: /assets/images/myLetterAvatar-600.png
-    image_path: /assets/images/myLetterAvatar-225.png
+  - url: /assets/images/pages/myLetterAvatar-600.png
+    image_path: /assets/images/pages/myLetterAvatar-225.png
     alt: "Letter Avatar"
 ---
 
@@ -101,7 +102,6 @@ context.fillText(initials, canvasCssWidth / 2, canvasCssHeight / 1.5);
 ```python
 <img itemprop="image" avatar="@comment.Author" alt="@comment.Author" class="comments-media-object" />
 ```
-
 
 ### My Script Changes for MVC
 
@@ -214,7 +214,7 @@ Changed To: Letter Avatar
 ```
 I Modified to the file at _ includes/comment.html
 
-To include avatar="{{ include.name | escape }}" 
+To include but missing {{ avatar="include.name | escape" , cannot get liquid to display in code blocks???
 
 Removed src="..." and srcset="..." 
 
@@ -225,7 +225,9 @@ avatar="{{ include.name | escape }}" alt="{{ include.name | escape }}"
 
 ### Modify _main.js_
 
-Adding the modified MVC .js to my _main.js and add a avatar.scss file for width and height.
+Adding the modified MVC .js to my _main.js.
+
+Then create and register avatar.scss file in minimal-mistakes.scss, for width, height and rounded images.
 
 {% include gallery caption="Gravtar, Avatar, Letter Avatar." %}
  
