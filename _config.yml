@@ -14,7 +14,7 @@ title_separator          : "-"
 name                     : "Donald W. Boulton II"
 description              : "DWB's Jekyll website."
 url                      : "https://donaldboulton.github.io/DWB/"
-baseurl                  : "/DWB/"
+baseurl                  : "/DWB"
 repository               : "donaldboulton/DWB"
 teaser                   : "/assets/images/pages/digital_box_1400-compressor.jpg"
 # breadcrumbs            : true # true, false (default)
@@ -82,10 +82,10 @@ naver_site_verification  :
 twitter:
   username               : "donbouton"
 facebook:
-  username               : &facebook "donboulton"
+  username               : "donboulton"
   app_id                 :
   publisher              :
-og_image                 : "/assets/images/pages/favicon.png" # Open Graph/Twitter default site image
+og_image                 : "favicon.png" # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -269,7 +269,7 @@ compress_html:
 collections:
   my_collections:
     output: true
-    permalink: /:collection/:name
+    permalink: /:collection/:name/
   posts:
     output: true
     permalink: /:collection/:path/
@@ -282,13 +282,25 @@ collections:
 
 # Defaults
 defaults:
+  # _posts
+  - scope:
+      path: "_posts"
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
   # _pages
   - scope:
-      path: "_pages"
+      path: ""
       type: pages
     values:
       layout: single
       author_profile: true
+      read_time: true
       comments: true
       share: true
-      related: true
+      related: tru

@@ -45,7 +45,7 @@ intro:
   - excerpt: 'Showing Off My Version of Minimal Mistakes Ruby, Jekyll at Github'
   - excerpt: 'Just Learning Ruby, Jekyll, Gihub Pages with liquid, see any mistakes please feel free to go to one of the post pages and comment on site issues.'
   - excerpt: 'Notifications & Tips for Michael Rose -- Just another boring, tattooed, time traveling, designer of Minimal Mistakes.'
-  - excerpt: 'Get notified when I add new stuff &nbsp; [<i class="fab fa-twitter"></i> @mmistakes](https://twitter.com/mmistakes){: .btn .btn--twitter} [<i class="fab fa-paypal"></i> Tip Me](https://www.paypal.me/mmistakes){: .btn .btn--primary}'
+  - excerpt: 'Get notified when Michael Rose; "MMistakes" adds new stuff &nbsp; [<i class="fab fa-twitter"></i> @mmistakes](https://twitter.com/mmistakes){: .btn .btn--twitter} [<i class="fab fa-paypal"></i> Tip Me](https://www.paypal.me/mmistakes){: .btn .btn--primary}'
 ---
 
 {% include feature_row id="intro" type="center" %}
