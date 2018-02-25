@@ -2,6 +2,9 @@
 layout: splash
 author_profile: false
 classes: wide
+pagination: 
+  enabled: false
+
 tags: 
   - God
   - Ruby
@@ -11,13 +14,12 @@ tags:
 
 category:
   - Home
-  - Programing
 
-comments: true
+comments: false
 
 header:
   overlay_color: "#5e616c"
-  overlay_image: /assets/images/digital_box_1400-compressor.jpg
+  overlay_image: /assets/images/pages/digital_box_1400-compressor.jpg
   cta_label: "<i class='fas fa-file-alt'></i> Posts"
   cta_url: "/Posts/"
   caption: Digital Home

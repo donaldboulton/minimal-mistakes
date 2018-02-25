@@ -214,13 +214,13 @@ Changed To: Letter Avatar
 ```
 I Modified to the file at _ includes/comment.html
 
-To include but missing {{ avatar="include.name | escape" , cannot get liquid to display in code blocks???
+To include but missing avatar="include.name | escape" , cannot get liquid to display in code blocks???
 
 Removed src="..." and srcset="..." 
 
 As in the above example.
 `
-avatar="{{ include.name | escape }}" alt="{{ include.name | escape }}"
+avatar="include.name | escape" alt="include.name | escape"
 `
 
 ### Modify _main.js_

@@ -25,8 +25,8 @@ related: true
 
 excerpt: "SQl Fragmentation is a issue for most all my other sites. Not for this Jekyll SIte though - Static."
 header:
-  image: /assets/images/pages/svg/check_sql_fragmentation-min.svg
-  teaser: /assets/images/defrag-1600.png
+  image: /assets/images/pages/defrag-1600.png
+  teaser: /assets/images/pages/defrag-1600.png
 
 excerpt: Check SQL Server a specified database index fragmentation percentage (SQL)
 ---
@@ -85,7 +85,3 @@ See My post on how to fix this at: [https://donaldboulton.gihub.io/DWB/SQl-Defra
 
 Download this script .zip file [Check Index Defragmentation](https://donaldboulton.gihub.io/DWB/assets/zip/IndexFragmentation.zip).
 
-
-*   [ Favorite](https://twitter.com/intent/favorite?tweet_id=446055523948199936 "Favorite") [Reply](https://twitter.com/intent/tweet?in_reply_to=446055523948199936 "Reply") [ Retweet](https://twitter.com/intent/retweet?tweet_id=446055523948199936 "Retweet")
-
-</div>
