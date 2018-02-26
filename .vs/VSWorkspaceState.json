@@ -1,12 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\assets",
-    "\\assets\\images",
-    "\\assets\\images\\pages",
-    "\\my_collections",
-    "\\my_collections\\_posts"
+    "\\collections"
   ],
-  "SelectedNode": "\\_config.yml",
+  "SelectedNode": "\\collections\\_pets",
   "PreviewInSolutionExplorer": false
 }

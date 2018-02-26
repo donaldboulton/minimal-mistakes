@@ -13,7 +13,7 @@ title                    : "Donald Boulton"
 title_separator          : "-"
 name                     : "Donald W. Boulton II"
 description              : "DWB's Jekyll website."
-url                      : "https://donaldboulton.github.io/DWB/"
+url                      : "https://donaldboulton.github.io"
 baseurl                  : "/DWB"
 repository               : "donaldboulton/DWB"
 teaser                   : "/assets/images/pages/digital_box_1400-compressor.jpg"
@@ -212,9 +212,10 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-seo-tag
-  - jemoji
+  - jekyll-archives
   - jekyll-algolia
   - jekyll-admin
+  - jemoji
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -223,10 +224,10 @@ whitelist:
   - jekyll-gist
   - jekyll-feed
   - jekyll-seo-tag
-  - jemoji
+  - jekyll-archives
   - jekyll-algolia
   - jekyll-admin
-
+  - jemoji
 
 # Archives
 #  Type
@@ -245,17 +246,16 @@ tag_archive:
   type: liquid
   path: /tags/
 # https://github.com/jekyll/jekyll-archives
-# jekyll-archives:
-#   enabled:
-#     - categories
-#     - tags
-#   layouts:
-#     category: archive-taxonomy
-#     tag: archive-taxonomy
-#   permalinks:
-#     category: /categories/:name/
-#     tag: /tags/:name/
-
+jekyll-archives:
+   enabled:
+     - categories
+     - tags
+   layouts:
+     category: archive-taxonomy
+     tag: archive-taxonomy
+   permalinks:
+     category: /categories/:name/
+     tag: /tags/:name/
 
 # HTML Compression
 # - http://jch.penibelst.de/
@@ -264,27 +264,20 @@ compress_html:
   ignore:
     envs: development
 
-
 # Collections
 collections:
-  my_collections:
-    output: true
-    permalink: /:collection/:name/
-  posts:
-    output: true
-    permalink: /:collection/:path/
   pets:
     output: true
-    permalink: /:collection/:path/
-  portfolio:
+    permalink: /pets/:path/
+  posts:
     output: true
-    permalink: /:collection/:path/
+    permalink: /posts/:path/
 
 # Defaults
 defaults:
   # _posts
   - scope:
-      path: "_posts"
+      path: ""
       type: posts
     values:
       layout: single
@@ -295,12 +288,25 @@ defaults:
       related: true
   # _pages
   - scope:
-      path: ""
+      path: "_pages"
       type: pages
     values:
       layout: single
       author_profile: true
-      read_time: true
-      comments: true
+  # _pets
+  - scope:
+      path: ""
+      type: pets
+    values:
+      layout: single
+      author_profile: true
       share: true
-      related: tru
+      comment: true
+  # _portfolio
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: single
+      author_profile: false
+      share: true    

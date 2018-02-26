@@ -1,7 +1,5 @@
 ---
-layout: single
 title: "SQL Fragmentation"
-permalink: /2018-02-23-post-SQL-Fragmentation/
 date: 2018-02-23 16:16:01 -0900
 search: true
 author: Donald Boulton
