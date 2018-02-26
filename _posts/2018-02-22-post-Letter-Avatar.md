@@ -219,9 +219,9 @@ To include but missing avatar="include.name | escape" , cannot get liquid to dis
 Removed src="..." and srcset="..." 
 
 As in the above example.
-`
+```yaml
 avatar="include.name | escape" alt="include.name | escape"
-`
+```
 
 ### Modify _main.js_
 

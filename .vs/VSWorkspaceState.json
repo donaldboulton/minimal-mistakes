@@ -1,8 +1,14 @@
 {
   "ExpandedNodes": [
     "",
-    "\\collections"
+    "\\assets",
+    "\\assets\\images",
+    "\\docs\\_posts",
+    "\\_pages",
+    "\\_pets",
+    "\\_posts",
+    "\\_site"
   ],
-  "SelectedNode": "\\collections\\_pets",
+  "SelectedNode": "\\_posts\\2018-02-26-post-Jekyll-Admin.md",
   "PreviewInSolutionExplorer": false
 }

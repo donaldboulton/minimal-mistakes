@@ -59,6 +59,7 @@ algolia:
   application_id         : "G34JUR3EB9"
   index_name             : "donald_boulton"
   search_only_api_key    : "68c60968e03d06ce61d592425b22c6bd"
+  algolia_api_key        : "26c704b1c187c65cb2e3a044a9b2b488"
   powered_by             : true
 
 Mailgun:
