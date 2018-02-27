@@ -21,43 +21,44 @@ comments: true
 share: true
 related: true
 
-excerpt: "Many of us got really tired of the Gravatar Service being down or slow and having multiple server calls to download the Gravatar. 
-Alot of people do not even know about gravatar and your get a generic image for the User Avatar."
+excerpt: "Defrag Sql 2014 to 2016"
 header:
-  image: /assets/images/pages/letter-avatar-header.png
-  teaser: /assets/images/pages/letter-avatar-header.png
+  image: /assets/images/pages/defrag-sql-2014-400-min.svg
+  teaser: /assets/images/pages/defrag-sql-2014-1400-min.png
 
 gallery:
-  - url: /assets/images/pages/gravatar-icon-600.jpg
-    image_path: /assets/images/pages/gravatar-icon-225.jpg
-    alt: "Gravtar Image"
-  - url: /assets/images/pages/avatar-600.png
-    image_path: /assets/images/pages/avatar-225.png
-    alt: "Gravtar Generic Image"
-  - url: /assets/images/pages/myLetterAvatar-600.png
-    image_path: /assets/images/pages/myLetterAvatar-225.png
-    alt: "Letter Avatar"
+  - url: /assets/images/pages/defrag-sql-2014-400-min.svg
+    image_path: /assets/images/pages/defrag-sql-2014-400-min.svg
+    alt: "Generic Image"
+  - url: /assets/images/pages/defrag-sql-2014-400-min.svg
+    image_path: /assets/images/pages/defrag-sql-2014-400-min.svg
+    alt: "Generic Image"
+  - url: /assets/images/pages/defrag-sql-2014-400-min.svg
+    image_path: /assets/images/pages/defrag-sql-2014-400-min.svg
+    alt: "Clusters"
 ---
 
 ## Defragment SQL Server
 
-<div class="post-image">[![](~/images/pages/svg/defrag-sql-2014.svg)](https://lh3.googleusercontent.com/proxy/OdYBSPJ0TSiTQ1juJClZa5OlnbWYhZ_Hobw-L6HRehnnnYBbgFsvVb6ghuCqfzy5HXE39QoBJ5kkt8-yE3Uc_XiA_WgL=w120-h120 "defrag SQL 2014")</div>
+### [Index Defrag Script, v4.1](https://plus.google.com/u/0/b/107995112308214802482/107995112308214802482)
 
-### [Index Defrag Script, v4.1](https://plus.google.com/u/0/b/107995112308214802482/107995112308214802482 "Google Plus +1 Posts.")
+View all posts by Michelle Ufford
+Origionally Posting by [Michelle Ufford](http://sqlfool.com/author/michelle/)
 
-<div itemprop="description">Origionally Posting by <span>[Michelle Ufford](http://sqlfool.com/author/michelle/ "View all posts by Michelle Ufford")</span></div>
-
-<div itemprop="mainContentOfPage">
 
 In any SQl database and one that updates through migrations like Orchard CMS get defragmented and I have notice over the years dealing with SQL server that it needs defraging occasionaly, keeping the performance optimized.
 
-<span>I have included this in my blog as a notice to pay attention and defrag your SQL database.</span>
+I have included this in my blog as a notice to pay attention and defrag your SQL database.
 
 #### Origional Post
 
-New For SQL 2012[<span class="published"> **Posted on Jun16 2011**</span>](http://sqlfool.com/2011/06/index-defrag-script-v4-1/) <span class="author vcard">Written by **[Michelle Ufford](http://sqlfool.com/author/michelle/ "View all posts by Michelle Ufford")**</span> at:  [http://sqlfool.com/2011/06/index-defrag-script-v4-1/](http://sqlfool.com/2011/06/index-defrag-script-v4-1/ "Origional Post By Michelle Ufford")
+New For SQL 2012
+[Posted on Jun16 2011](http://sqlfool.com/2011/06/index-defrag-script-v4-1/)
 
-<div class="entry-content article">
+Written by **[Michelle Ufford](http://sqlfool.com/author/michelle/)
+
+[index-defrag-script-v4-1/](http://sqlfool.com/2011/06/index-defrag-script-v4-1/)
+
 
 It’s been quite some time since my last index defrag script update. A big part of the reason for that is because I wanted to implement many of the suggestions I’ve received, but I just haven’t had the time. I still have those changes planned, but I’m not sure quite when I’ll get to it. Rather than continue to wait for a major release, I’m releasing a small update to my defrag that will take care of the most common complaints I receive.
 
@@ -83,31 +84,23 @@ It’s been quite some time since my last index defrag script update. A big part
 
 I often receive the same questions about this script, so allow me to answer them here:
 
-_“I keep running the script, but my index is still fragmented. Why?”_  
+I keep running the script, but my index is still fragmented. Why?
 This is most likely a very small index. Here’s what Microsoft has to say:
 
-“In general, fragmentation on small indexes is often not controllable. The pages of small indexes are stored on mixed extents. Mixed extents are shared by up to eight objects, so the fragmentation in a small index might not be reduced after reorganizing or rebuilding the index. For more information about mixed extents, see Understanding Pages and Extents.”
+In general, fragmentation on small indexes is often not controllable. The pages of small indexes are stored on mixed extents. Mixed extents are shared by up to eight objects, so the fragmentation in a small index might not be reduced after reorganizing or rebuilding the index. For more information about mixed extents, see Understanding Pages and Extents.
 
-_“What database should I create it in?” or “Can I create this in the MASTER database?”_  
+What database should I create it in? or Can I create this in the MASTER database? 
 It’s up to you where you create it. You could technically create it in the MASTER database, but I recommend creating a utility database for your DBA administrative tasks.
 
-_“Can I run this against a SharePoint database?”_  
+Can I run this against a SharePoint database?
 Yes, you can.
 
-_“What are the minimum requirements to run this script?” or “Will this run on SQL Server 2000 instances?”_  
+What are the minimum requirements to run this script? or Will this run on SQL Server 2000 instances?
 You need to be on SQL Server 2005 SP2 or higher.
 
-</div>
+[First Code block for SQL Server 2008 R2 or higher.](#SQL-Server-2008-R2-or-higher")
 
-</div>
-
-<div>[First Code block for SQL Server 2008 R2 or higher.](#profile1 "SQL Server 2008 R2 or higher")</div>
-
-<div class="hidden" id="inline_profiles">
-
-<div class="profilex" id="profile1">
-
-<pre class="pre">SQL Server 2008 R2 or higher</pre>
+SQL Server 2008 R2 or higher
 
 <pre class="pre"><span style="color: #008080;">/*** Scroll down to the see important notes, disclaimers, and licensing information ***/</span>
 
@@ -1152,19 +1145,12 @@ Go
     <span style="color: #0000FF;">RETURN</span> <span style="color: #000;">0</span>;
 <span style="color: #0000FF;">END</span></pre>
 
-</div>
+#### [SQL 2005 - 2008 code.](#profile2 "SQL 2005 - 2008 R2")
 
-</div>
-
-<div>[SQL 2005 - 2008 code.](#profile2 "SQL 2005 - 2008 R2")</div>
-
-<div class="hidden" id="inline_profiles">
-
-<div class="profilex" id="profile2">
 
 <pre class="pre">SQL 2005 - 2008 R2</pre>
 
-<pre class="pre"><span style="color:green;">/* Originally created by Microsoft */
+/* Originally created by Microsoft */
 
 			/* Error corrected by Pinal Dave (http://www.SQLAuthority.com) */
 
@@ -1348,11 +1334,13 @@ Go
 
 			<span style="color:blue;">DROP TABLE </span><span style="color:#434343;"> #fraglist</span><span style="color:gray;">;</span>
 
-			<span style="color:black;">GO</span></pre>
+			<span style="color:black;">GO</span>
 
 ## MSDN Books OnLine DBCC INDEXDEFRAG (Transact-SQL)
 
-<pre class="pre">DBCC INDEXDEFRAG
+<pre class="pre">
+
+DBCC INDEXDEFRAG
 (
     { database_name | database_id | 0 } 
     , { table_name | table_id | view_name | view_id } 
@@ -1360,21 +1348,14 @@ Go
 )
     [ WITH NO_INFOMSGS ] </pre>
 
-</div>
-
-</div>
-
 * * *
 
-[SQL Server DBCC INDEXDEFRAG code.](#profile3 "SQL Server DBCC INDEXDEFRAG code")
+#### [SQL Server DBCC INDEXDEFRAG code.](#profile3 "SQL Server DBCC INDEXDEFRAG code")
 
-<div class="hidden" id="inline_profiles">
-
-<div class="profilex" id="profile3">
 
 <pre class="pre">SQL Server DBCC INDEXDEFRAG code</pre>
 
-<pre class="pre">/*Perform a 'USE <database name>' to select the database in which to run the script.*/
+/*Perform a 'USE <database name>' to select the database in which to run the script.*/
 -- Declare variables
 SET NOCOUNT ON;
 DECLARE @tablename varchar(255);
@@ -1476,18 +1457,7 @@ DEALLOCATE indexes;
 DROP TABLE #fraglist;
 GO</pre>
 
-</div>
-
-</div>
-
 * * *
-
-<div>
-
-<div class="sectionblock">
-
-<dl class="authored">
-
 <dt>Info</dt>
 
 <dt><span><span class="parameter">database_name</span>| <span class="parameter">database_id</span> | 0</span></dt>
@@ -1512,57 +1482,20 @@ GO</pre>
 
 </dl>
 
-</div>
-
-</div>
-
-<div>
-
-<div class="LW_CollapsibleArea_TitleDiv">
-
-<div><a class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="LW_CollapsibleArea_Title">Remarks</span></a>
-
-<div class="LW_CollapsibleArea_HrDiv">
-
 * * *
-
-</div>
-
-</div>
-
-</div>
-
-<div class="sectionblock"><a id="languageReferenceRemarksToggle"></a>
-
 DBCC INDEXDEFRAG defragments the leaf level of an index so that the physical order of the pages matches the left-to-right logical order of the leaf nodes, therefore improving index-scanning performance.
 
-<div class="alert">
 
-<table>
 
-<tbody>
-
-<tr>
-
-<th class="float-left">**Note**</th>
-
-</tr>
-
-<tr>
-
-<td>
+| **Note** |
+| --- |
+| 
 
 When DBCC INDEXDEFRAG is run, index defragmentation occurs serially. This means that the operation on a single index is performed using a single thread. No parallelism occurs. Also, operations on multiple indexes from the same DBCC INDEXDEFRAG statement are performed on one index at a time.
 
-</td>
+ |
 
-</tr>
 
-</tbody>
-
-</table>
-
-</div>
 
 DBCC INDEXDEFRAG also compacts the pages of an index, taking into consideration the fill factor specified when the index was created. Any empty pages created because of this compaction are removed. For more information, see <span>[Specify Fill Factor for an Index](http://msdn.microsoft.com/en-us/library/ms177459.aspx)</span>.
 
@@ -1576,8 +1509,6 @@ The defragmentation is always fully logged, regardless of the database recovery 
 
 ### Restrictions
 
-<div class="subsection">
-
 DBCC INDEXDEFRAG shuffles index leaf pages in place. Therefore, if an index is interleaved with other indexes on disk, running DBCC INDEXDEFRAG against that index does not make all leaf pages in the index contiguous. To improve the clustering of pages, rebuild the index.
 
 DBCC INDEXDEFRAG cannot be used to defragment the following indexes:
@@ -1589,9 +1520,3 @@ DBCC INDEXDEFRAG cannot be used to defragment the following indexes:
 *   A spatial index.
 
 DBCC INDEXDEFRAG is not supported for use on system tables.
-
-</div>
-
-</div>
-
-</div>
