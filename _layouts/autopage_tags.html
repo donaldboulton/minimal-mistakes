@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+{% include page-intro.html %}
+
+<main id="main" class="page-content" aria-label="Content">
+  <div class="index inner">
+    <div>{{ content }}</div>
+
+    {% if page.autopages %}
+      <header class="section-title">
+        <h2>Page {{ page.pagination_info.curr_page }} of {{ page.pagination_info.total_pages }}</h2>
+      </header>
+    {% endif %}
+    <div class="entries">
+      {% include posts-paginated.html %}
+    </div>
+
+    {% include footer.html %}
+  </div>
+</main>

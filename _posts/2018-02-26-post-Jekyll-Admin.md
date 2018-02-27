@@ -13,4 +13,5 @@ author: Donald Boulton
 ---
 
 ### Jekyll Admin for Local Host
+
 Jekyll admin makes it so easy for me to add new pages, posts or any type of content including Changing Configuration.

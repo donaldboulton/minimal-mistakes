@@ -1,0 +1,71 @@
+.back-to-top-wrapper {
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transition: transform .2s;
+}
+
+.js-cart-items .back-to-top-wrapper {
+  transform: translateY(150px);
+}
+
+.back-to-top:focus {
+  background-color: #282634;
+  opacity: 1;
+}
+
+a.back-to-top {
+  &:hover {
+    background-color: #282634;
+    opacity: 1;
+  }
+
+  svg {
+    display: block;
+  }
+}
+
+.back-to-top-wrapper {
+  width: 50px;
+  height: 50px;
+  display: none;
+  position: relative;
+  position: fixed;
+  bottom: .5em;
+  right: 1em;
+  z-index: 9;
+
+  &::before {
+    display: block;
+    content: "";
+    height: 90%;
+    width: 160%;
+    position: absolute;
+    background-image: url(../assets/images/shadow.png);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    top: 89%;
+    left: -30%;
+    right: 0;
+    transition: all .1s ease-out;
+    transform-origin: 30% 50%;
+    pointer-events: none;
+  }
+
+  &:hover {
+    a {
+      transform: rotate(0);
+    }
+
+    &::before {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+  }
+}
+
+@media (min-height: 600px) {
+  .back-to-top-wrapper {
+    display: block;
+  }
+}

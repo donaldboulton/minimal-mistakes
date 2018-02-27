@@ -53,7 +53,7 @@ atom_feed:
   path                   : # blank (default) uses feed.xml
 search                   : true
 search_full_content      : true
-search_provider          : algolia
+search_provider          : lunr
 
 algolia:
   application_id         : "G34JUR3EB9"
@@ -81,7 +81,7 @@ naver_site_verification  :
 
 # Social Sharing
 twitter:
-  username               : "donbouton"
+  username               : "donboulton"
 facebook:
   username               : "donboulton"
   app_id                 :
@@ -214,7 +214,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-archives
-  - jekyll-algolia
+  - jekyll-paginate-v2
   - jekyll-admin
   - jemoji
 
@@ -226,7 +226,7 @@ whitelist:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-archives
-  - jekyll-algolia
+  - jekyll-paginate-v2
   - jekyll-admin
   - jemoji
 
@@ -310,4 +310,32 @@ defaults:
     values:
       layout: single
       author_profile: false
-      share: true    
+      share: true
+
+# Plugin: Pagination (jekyll-paginate-v2)
+pagination:
+  enabled: true
+  debug: false
+  per_page: 15
+  permalink: "/page/:num/"
+  title: ":title - Page :num of :max"
+  limit: 0
+  sort_field: "date"
+  sort_reverse: true
+
+# Plugin: Auto Pages (jekyll-paginate-v2)
+autopages:
+  enabled: true
+  categories:
+    enabled: false
+  collections:
+    enabled: false
+  tags:
+    enabled: true
+    slugify:
+      mode: raw
+      cased: true
+    layouts:
+      - "autopage_tags.html"
+    title: ":tag" # :tag is replaced by the tag name
+    permalink: "/tag/:tag"
