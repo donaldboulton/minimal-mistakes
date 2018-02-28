@@ -2,12 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\assets",
-    "\\assets\\js",
-    "\\_includes",
-    "\\_includes\\footer",
-    "\\_includes\\head",
-    "\\_posts"
+    "\\assets\\images",
+    "\\assets\\images\\pages",
+    "\\_layouts",
+    "\\_posts",
+    "\\_sass\\minimal-mistakes"
   ],
-  "SelectedNode": "\\_includes\\footer\\custom.html",
+  "SelectedNode": "\\_posts\\2018-02-25-post-Defrag-SQL.md",
   "PreviewInSolutionExplorer": false
 }
