@@ -9,44 +9,44 @@
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
 -->
 <html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
-  <head>
-    {% include head.html %}
-    {% include head/custom.html %}
-  </head>
+<head>
+  {% include head.html %}
+  {% include head/custom.html %}
+</head>
 
-  <body id="style-3" class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
+<body id="style-3" class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
 
-    {% include browser-upgrade.html %}
-    {% include masthead.html %}
+  {% include browser-upgrade.html %}
+  {% include masthead.html %}
 
-    <div class="initial-content">
-      {{ content }}
-    </div>
+  <div class="initial-content">
+    {{ content }}
+  </div>
 
-    {% if site.search == true %}
-      <div class="search-content">
-        {% include search/search_form.html %}
-      </div>
-    {% endif %}
+  {% if site.search == true %}
+  <div class="search-content">
+    {% include search/search_form.html %}
+  </div>
+  {% endif %}
 
-      <div class="page__footer">
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- Github -->
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-7655495105068461"
-             data-ad-slot="5601054893"
-             data-ad-format="auto"></ins>
-        <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-        <footer>
-          {% include footer/custom.html %}
-          {% include footer.html %}
-        </footer>
-      </div>
+  <div class="page__footer">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Github -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-7655495105068461"
+         data-ad-slot="5601054893"
+         data-ad-format="auto"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    <footer>
+      {% include footer/custom.html %}
+      {% include footer.html %}
+    </footer>
+  </div>
 
-    {% include scripts.html %}
+  {% include scripts.html %}
 
-  </body>
+</body>
 </html>

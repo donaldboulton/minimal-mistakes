@@ -5,11 +5,11 @@
     {% else %}
       {% capture script_path %}{{ script | absolute_url }}{% endcapture %}
     {% endif %}
-    <script src="{{ script_path }}"></script>
+<script src="{{ script_path }}"></script>
   {% endfor %}
 {% else %}
-  <script src="{{ '/assets/js/main.min.js' | absolute_url }}"></script>
-  <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<script src="{{ '/assets/js/main.min.js' | absolute_url }}"></script>
+<script src="{{ '/assets/js/clipboard.min.js' | absolute_url }}"></script>
 {% endif %}
 
 {% if site.search == true or page.layout == "search" %}
