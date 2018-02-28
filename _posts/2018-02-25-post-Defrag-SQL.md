@@ -23,18 +23,18 @@ related: true
 
 excerpt: "Defrag Sql 2014 to 2016"
 header:
-  image: /assets/images/pages/defrag-sql-2014-400-min.svg
+  image: /assets/images/pages/defrag-sql-2014.svg
   teaser: /assets/images/pages/defrag-sql-2014-1400-min.png
 
 gallery:
-  - url: /assets/images/pages/defrag-sql-2014-400-min.svg
-    image_path: /assets/images/pages/defrag-sql-2014-400-min.svg
+  - url: /assets/images/pages/page-splitting.png
+    image_path: /assets/images/pages/page-splitting-256.png
     alt: "Generic Image"
-  - url: /assets/images/pages/defrag-sql-2014-400-min.svg
-    image_path: /assets/images/pages/defrag-sql-2014-400-min.svg
+  - url: /assets/images/pages/windows-xp-defragment-hard-drive.jpg
+    image_path: /assets/images/pages/windows-xp-defragment-hard-drive-256.jpg
     alt: "Generic Image"
-  - url: /assets/images/pages/defrag-sql-2014-400-min.svg
-    image_path: /assets/images/pages/defrag-sql-2014-400-min.svg
+  - url: /assets/images/pages/windows-xp-defragment-hard-drive.png
+    image_path: /assets/images/pages/windows-xp-defragment-hard-drive-256.png
     alt: "Clusters"
 ---
 
@@ -1520,3 +1520,5 @@ DBCC INDEXDEFRAG cannot be used to defragment the following indexes:
 *   A spatial index.
 
 DBCC INDEXDEFRAG is not supported for use on system tables.
+
+{% include gallery caption="Old XP Defragmentation, Page Splitting, Web Matrix Defrag." %}

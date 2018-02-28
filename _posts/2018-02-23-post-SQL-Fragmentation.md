@@ -77,9 +77,10 @@ Here is my result on a database that is less than a month old. Media Library is 
 
 ## Additional Resources
 
-See My post on how to fix this at: [https://donaldboulton.gihub.io/DWB/SQl-Defrag](https://donaldboulton.gihub.io/DWB/SQl-Defrag)
+See My post on how to fix this at: [Defrag SQl](https://donaldboulton.gihub.io/DWB/Defrag-SQL)
 
 [SQL query performance might decrease when the SQL Server Database instance has high index fragmentation](http://support.microsoft.com/kb/2755960)
 
-Download this script .zip file [Check Index Defragmentation](https://donaldboulton.gihub.io/DWB/assets/zip/IndexFragmentation.zip).
+Download this script .zip file 
+[Check Index Defragmentation](https://drive.google.com/open?id=1_BAytAHtcqp23dw-mOFSRjiIRzqPjmnX).
 
