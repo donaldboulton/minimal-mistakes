@@ -1,8 +1,8 @@
 ---
 layout: single
 title: "Letter Avatar"
-permalink: /2018-02-28-post-Mobile-Colorbox/
-date: 2018-02-28 16:16:01 -0600
+permalink: /2018-02-25-post-Mobile-Colorbox/
+date: 2018-02-25 15:16:01 -0600
 search: true
 author: Donald Boulton
 author_profile: true
@@ -38,6 +38,7 @@ gallery:
     image_path: /assets/images/pages/myLetterAvatar-225.png
     alt: "Letter Avatar"
 ---
+
 ### Mobile First Colorbox
 
 Mobile First Responsive Colorbox Window to open a link, div, code, about anything. Including a iframe using external data. Using the provided code works with Bootstrap 4 beta 3
@@ -60,8 +61,8 @@ Below is the new Colorbox Initialization code with additions highlighted.
                         <img class="clippy" width="13" src="/assets/images/pages/svg/clippy.svg" alt="clippy">
                     </button>
 
- 
 ```python
+<pre class="snippet">     
 $(".group1").colorbox({
     rel: "group1"
 });
@@ -147,6 +148,7 @@ function resizeColorBox() {
 }
 jQuery(window).resize(resizeColorBox);
 window.addEventListener("orientationchange", resizeColorBox, false);
+</pre>
 ```
 </div>
 
