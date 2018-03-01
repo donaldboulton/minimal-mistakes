@@ -68,36 +68,41 @@ Below is My testing and Opinions, "try at you own risk". I tried all the below.
 [Registry, Visual Tweaks, & Icon Shortcut to](#Registry)
 [Multiple OS no Boot Managers](#Multiple-OSs)
 Separate Drives and OS's
-        [Change Icon Spacing in Vista](#Icon-Spacing)
-        [Indexing Problems and Fixes](#Indexing-problems) = Search and Indexing are the file renaming problems
-        [Start Explorer In A Different Folder or Drive In Windows Vista](#Start-Explorer-In-A-Different-Folder)
-        [Vista Has 32 bit and 64 bit Explorer](#32-bit-and-64-bit-Explorer) Flash, SilverLight FIX
-        [Turn Off User Account Control](#UAC) [Defragment](#Defragment)
-        [Defrag Boot Sector](#Defragment-Boot-Sector)
-        [Registry Tweaks](#regedit)
-### Advanced Users
+[Change Icon Spacing in Vista](#Icon-Spacing)
+[Indexing Problems and Fixes](#Indexing-problems) = Search and Indexing are the file renaming problems
+[Start Explorer In A Different Folder or Drive In Windows Vista](#Start-Explorer-In-A-Different-Folder)
+[Vista Has 32 bit and 64 bit Explorer](#32-bit-and-64-bit-Explorer) Flash, SilverLight FIX
+[Turn Off User Account Control](#UAC) [Defragment](#Defragment)
+[Defrag Boot Sector](#Defragment-Boot-Sector)
+[Registry Tweaks](#regedit)
+
+#### Advanced Users
 
 [Turned off Windows Defender](#Turned-off-Windows-Defender)
 [Processor Scheduling](#Processor-Scheduling)
 [Processor Level 2 Cash](#Processor-Level-2-Cash)
-        [Change the behavior of Superfetcher](#Superfetcher)
-        [Change the behavior of Prefetcher](#Change-the-behavior-of-Prefetcher)
+[Change the behavior of Superfetcher](#Superfetcher)
+[Change the behavior of Prefetcher](#Change-the-behavior-of-Prefetcher)
 
 Reset Properties that SP1 changes, "read the below".
 
-Advanced System Settings" name="Advanced System Settings" title="">Go to Control Panel, Click System, Go to advanced System settings in left pane, click on system property's, it will come up in a new Window, click on the advanced tab and click on Performance,  and new Window saying Performance options will appear, click on advanced tab, make sure it is not set to background services = set it to programs.
+#### Advanced System Settings
 
-Virtual Memory" name="Virtual Memory" title="">Also on the Advanced tab for Virtual Memory click the Change button and  a new window will again pop up, click on Custom size button, type in the initial size as 4069 and in the Maximum size type 8069 and then click set, you can do this for more than one drive, and the maximum size can be at 3 times the amount of RAM installed on your computer. If you see warnings at these [Windows Vista](http://windowshelp.microsoft.com/Windows/en-US/Help/89ca317f-649d-40a6-8934-e5707ee5c4b81033.mspx) recommended levels, then increase the minimum and maximum sizes.
+Go to Control Panel, Click System, Go to advanced System settings in left pane, click on system property's, it will come up in a new Window, click on the advanced tab and click on Performance,  and new Window saying Performance options will appear, click on advanced tab, make sure it is not set to background services = set it to programs.
+
+#### Virtual Memory
+
+Also on the Advanced tab for Virtual Memory click the Change button and  a new window will again pop up, click on Custom size button, type in the initial size as 4069 and in the Maximum size type 8069 and then click set, you can do this for more than one drive, and the maximum size can be at 3 times the amount of RAM installed on your computer. If you see warnings at these [Windows Vista](http://windowshelp.microsoft.com/Windows/en-US/Help/89ca317f-649d-40a6-8934-e5707ee5c4b81033.mspx) recommended levels, then increase the minimum and maximum sizes.
 
 Vista SP1 changes this to allot of different Values, some sites suggest not to set this to custom and let Windows decide Virtual Memory settings,  OK, they said that about XP also, but I found setting this to the max and on multiple drives increases performance and in XP if you reboot several times and then set it back o System Managed size it will increase the normal System management and size of page filing by letting Windows decide Virtual Memory settings, kind of tricks Windows into increasing this value, through its own Management. I leave it on custom, and to the MAX.
 
 My second partition I set to 2069 and 4069 which was the best min & max for XP Pro 32 bit. CAUTION, the above [Virtual Memory](http://windowshelp.microsoft.com/Windows/en-US/Help/89ca317f-649d-40a6-8934-e5707ee5c4b81033.mspx) setting is for 64 bit machines. Initial minimum: 1536 or 3072 or 4096 Maximum:, is max in X86 32 bit XP Machines. Some Vista Tweak's web sites recommend Disabling Virtual Memory, I don't know what they are smoking, but I don not recommend sharing whatever they are puffing on or Disabling Virtual Memory.
 
-  [Top](#Top)
+[Top](#Top)
 
 Physical Memory In Vista and 7 Editions" name="Phyisical Memory" title="">Physical Memory In Vista and 7 Editions
 
-### Physical Memory Limits: Windows Vista
+#### Physical Memory Limits: Windows Vista
 
 The following table specifies the limits on physical memory for Windows Vista.
 
@@ -146,9 +151,9 @@ The following table specifies the limits on physical memory for Windows Vista.
 
                      |   |
 
-        ### Physical Memory Limits: Windows 7
+#### Physical Memory Limits: Windows 7
 
-        <span style="color:#f0ffff;">The following table specifies the limits on physical memory for Windows 7.
+The following table specifies the limits on physical memory for Windows 7.
 
        | Version | Limit on X86 | Limit on X64      |
 | --- | --- | --- |
@@ -208,7 +213,7 @@ The following table specifies the limits on physical memory for Windows Vista.
                      |
 
 
-### Advanced Visual Effects
+#### Advanced Visual Effects
 
 Go to the Visual effects tab and click on CUSTOM = click on Desktop compression, smooth screen fonts, Folder background images, drop shadows, visual styles = which will still give you the Vista look without the Glass which eats up system resources along with allot of visual additions not really needed, You can play with this for the look you want.
 
@@ -225,67 +230,72 @@ Defragment Your Hard Drives after a new Upgrades, "before doing anything else". 
 
 Is Windows Vista taking a long time to startup? You can try defragmenting the boot files by using the Command Prompt in Windows Vista.
 
-1\. Go to Start/All Programs/Accessories/Command Prompt
+#### 1\. Go to Start/All Programs/Accessories/Command Prompt
 
-2\. At the prompt, type defrag c: -b
+#### 2\. At the prompt, type defrag c: -b
 
 Disk Defragmenter does not defragment files in the Recycle Bin. It is best to run Disk Cleaner first and then empty the Recycle Bin, before defragmenting
 
-            •Disk Defragmenter will also not defragment files which are in use. Best to try and shut down as many processes as possible and then defragment.
+Disk Defragmenter will also not defragment files which are in use. Best to try and shut down as many processes as possible and then defragment.
 
-            •Disk Defragmenter does not defragment the following files: Bootsect DOS, Safeboot fs, Safeboot csv, Safeboot rsv, Hiberfil sys, Memory dmp and the Windows page file. However using the -b parameter, as mentioned below, will optimize the boot files.
+Disk Defragmenter does not defragment the following files: Bootsect DOS, Safeboot fs, Safeboot csv, Safeboot rsv, Hiberfil sys, Memory dmp and the Windows page file. However using the -b parameter, as mentioned below, will optimize the boot files.
 
-            Disk defragmenter Command line options
+Disk defragmenter Command line options
 
-            There are various command line options for you to exercise control over the defragmentation process.
+There are various command line options for you to exercise control over the defragmentation process.
 
-            To defrag a specific drive, say Drive C, open a command prompt and type:
+To defrag a specific drive, say Drive C, open a command prompt and type:
 
-            defrag c:
+defrag c: -v
 
-            You can use the following parameters or switches with the Defrag command to further fine-tune your control:
+Doing it verbos instead of with the numbering system
 
-            -r  This is the default setting and defragments file fragments that less than 64 MB.
+Disk Defragmenter does not defragment files in the Recycle Bin. It is best to run Disk Cleaner first and then empty the Recycle Bin, before defragmenting
 
-            -a  Analyze the selected drive / volume & display a summary report, consisting of analysis and defragmentation reports.
+You can use the following parameters or switches with the Defrag command to further fine-tune your control:
+```sql
+-r  This is the default setting and defragments file fragments that less than 64 MB.
 
-            -c  Defragments all volumes on the computer. Don’t specify a drive letter while using this.
+-a  Analyze the selected drive / volume & display a summary report, consisting of analysis and defragmentation reports.
 
-            -w  Perform FULL defragmentation of files of ALL sizes.
+-c  Defragments all volumes on the computer. Don’t specify a drive letter while using this.
 
-            -f  Forced defragmentation even when there is less amount of free space on the drive being defragmented. A volume must have at least 15 % free space before Disk Defragmenter can completely defragment it.
+-w  Perform FULL defragmentation of files of ALL sizes.
 
-            -i  This makes Defrag run in the background & operate only if the computer is idle, like when run as a scheduled task.
+-f  Forced defragmentation even when there is less amount of free space on the drive being defragmented. A volume must have at least 15 % free space before Disk Defragmenter can completely defragment it.
 
-            -v  Displays complete reports.
+-i  This makes Defrag run in the background & operate only if the computer is idle, like when run as a scheduled task.
 
-            -b  It optimizes boot files and applications only.
+-v  Displays complete reports.
 
-            The only indication you will get is a blinking cursor. This means that the process is going. To interrupt the defragmentation process, press Ctrl + C in the command window.
+-b  It optimizes boot files and applications only.
+```
 
-            You can read more here on Defrag Options & Command line switches.
+The only indication you will get is a blinking cursor. This means that the process is going. To interrupt the defragmentation process, press Ctrl + C in the command window.
 
-            Disk defragmenter does not run
+You can read more here on Defrag Options & Command line switches.
 
-            If you find that you are unable to defragment or cannot run the defragment utility in Windows or that a drive or volume has been marked  as having errors, run chdsk by entering
+Disk defragmenter does not run
 
-            chkdsk c: /f 
+If you find that you are unable to defragment or cannot run the defragment utility in Windows or that a drive or volume has been marked  as having errors, run chdsk by entering
 
-            at any command prompt; where c is the drive letter. You will be able to then run Defrag after Chkdsk has repaired the file system. If you still face problems, seee this post on Disk defragmenter could not start or Failed to initialize.
+chkdsk c: /f 
 
-            In Windows 8, while the  is good enough for most of us, there are some who prefer to use Free Defragmentation Software. You may want to have a look at these too.
+at any command prompt; where c is the drive letter. You will be able to then run Defrag after Chkdsk has repaired the file system. If you still face problems, seee this post on Disk defragmenter could not start or Failed to initialize.
 
-            Or any drive letter. The below is some different ways to defrag from command prompt.
+In Windows 8, while the  is good enough for most of us, there are some who prefer to use Free Defragmentation Software. You may want to have a look at these too.
 
-            defrag c:
+Or any drive letter. The below is some different ways to defrag from command prompt.
 
-            defrag c:\vol\mountpoint -w -f
+defrag c:
 
-            defrag c: -a -v
+defrag c:\vol\mountpoint -w -f
 
-            defrag -c -v
+defrag c: -a -v
 
-3\. Exit Dos Window when defrag has completed., you will see the original prompt when it is finished = as in mine it's C:\Users\donboulton
+defrag -c -v
+
+#### 3\. Exit Dos Window when defrag has completed., you will see the original prompt when it is finished = as in mine it's C:\Users\donboulton
         
  [Top](#Top)
 
@@ -308,11 +318,11 @@ Caution the below is for Experts only! Pay attention to what you are doing and d
 Some tweaks Curtsey of  
 Regedit Tweaks below. and the links to the details on how to do each one of them below.
 
-        A ADDED VALUE!
+A ADDED VALUE!
 
 ### Turned off Windows Defender. Links for regedit below.
 
-        [Added registry entry for 32bit not 64 bit](http://www.liutilities.com/products/registrybooster/tweaklibrary/tweaks/11423/)
+[Added registry entry for 32 bit not 64 bit](http://www.liutilities.com/products/registrybooster/tweaklibrary/tweaks/11423/)
 
         [Path: [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\]
         Location: Local Machine
@@ -326,9 +336,9 @@ Regedit Tweaks below. and the links to the details on how to do each one of them
         Disabled Value: 0
         Action Type: Add an Entry](http://www.liutilities.com/products/registrybooster/tweaklibrary/tweaks/11423/)
 
-   [Top](#Top)
+[Top](#Top)
 
-        A Changed Value!
+A Changed Value!
 
 ### Processor Scheduling I set to 12
 
@@ -342,7 +352,7 @@ Regedit Tweaks below. and the links to the details on how to do each one of them
 
 [Top](#Top)
 
-        A Changed Value!
+A Changed Value!
 
 #### Processor Level 2 Cash settings
 
@@ -350,7 +360,7 @@ Set to 400 for L2 1024 was 0 = HAL was sick.
 
 L2 common settings 80 for 128, 100 for 256, 200 for 512, 400 for 1024 and so on. Hal not reading AMD 64 X2 Level 2 cash.
 
-        Most Xp and Vista Machines have this setting to 0 Check AMD or Intel for you processor L2 cash and set this value accordingly.
+Most Xp and Vista Machines have this setting to 0 Check AMD or Intel for you processor L2 cash and set this value accordingly.
 
         Path: [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\]
         Location: Local Machine
@@ -360,17 +370,17 @@ L2 common settings 80 for 128, 100 for 256, 200 for 512, 400 for 1024 and so on.
         Disabled Value: 0
         Action Type: Modified
 
-### Change the  Behavior of Superfetcher
+#### Change the  Behavior of Superfetcher
 
-        A Changed Value!
+A Changed Value!
 
-        Superfetch is a new feature in vista that understands which applications you use most, and preloads these applications into memory, so your system is more responsive. Superfetch uses a complex prioritization scheme that can even differentiate which applications you use most often and when you use them. Now, you can change the way that superfetch behaves by making a change in the registry. This is helpful when you want to alter superfetch or disable superfetch completely.
+Superfetch is a new feature in vista that understands which applications you use most, and preloads these applications into memory, so your system is more responsive. Superfetch uses a complex prioritization scheme that can even differentiate which applications you use most often and when you use them. Now, you can change the way that superfetch behaves by making a change in the registry. This is helpful when you want to alter superfetch or disable superfetch completely.
 
-        For this, go to start > run menu, enter regedit and navigate to the registry path listed below. Now, right-click and modify the dword value enable prefetcher, in the right panel, to the suitable value given above. However, if you want to get the default value back, change the value data to 2\. The changes take effect after a restart or logoff.
+For this, go to start > run menu, enter regedit and navigate to the registry path listed below. Now, right-click and modify the dword value enable prefetcher, in the right panel, to the suitable value given above. However, if you want to get the default value back, change the value data to 2\. The changes take effect after a restart or logoff.
 
-        My value was 3, I changed it to 1 as stated below!
+My value was 3, I changed it to 1 as stated below!
 
-        Set a user defined value like "1" to alter the behavior of Prefetcher and click 'OK'.
+Set a user defined value like "1" to alter the behavior of Prefetcher and click 'OK'.
 
         Path: [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters\]
         Location: Local Machine
@@ -382,28 +392,26 @@ L2 common settings 80 for 128, 100 for 256, 200 for 512, 400 for 1024 and so on.
 
  [Top](#Top)
 
- ### Change the  Behavior of Prefetcher
+ #### Change the  Behavior of Prefetcher
 
-        A Changed Value!
+A Changed Value!
 
-        Change the behavior of Prefetcher = I set it to 1 was set to 3\. Still allot of files in prefetch = 45MB after a couple of restarts it is only 32 MB setting's after registry tweak below. Prefetch size depends on how many programs you have used in Vista and how often they are used. If you have installed programs you no longer use or rarely use some programs, Vista puts some parts of these programs in the Windows > Prefetch folder and then loads them into memory for faster startup of these commonly used programs and sometimes all previously used programs. At startup the size of  the contents of this folder is taken out of you memory size so if it is 48MB it come off of your 2GB or whatever, right at startup. You can delete all the contents of this folder except the Sub-Folder named ReadyBoot = do not mess with this folder or its contents. If you use allot of Different Programs and do not like waiting for them to startup, do not change these values, as some delay in starting these programs could occur. If you have allot of Memory then I would not change these values like 4GB or more of RAM.
+Change the behavior of Prefetcher = I set it to 1 was set to 3\. Still allot of files in prefetch = 45MB after a couple of restarts it is only 32 MB setting's after registry tweak below. Prefetch size depends on how many programs you have used in Vista and how often they are used. If you have installed programs you no longer use or rarely use some programs, Vista puts some parts of these programs in the Windows > Prefetch folder and then loads them into memory for faster startup of these commonly used programs and sometimes all previously used programs. At startup the size of  the contents of this folder is taken out of you memory size so if it is 48MB it come off of your 2GB or whatever, right at startup. You can delete all the contents of this folder except the Sub-Folder named ReadyBoot = do not mess with this folder or its contents. If you use allot of Different Programs and do not like waiting for them to startup, do not change these values, as some delay in starting these programs could occur. If you have allot of Memory then I would not change these values like 4GB or more of RAM.
 
-        Prefetcher in most of the sites and tweaks you will find that they suggest that you do not mess with this feature, but it worked great for me. Tweak It for less memory usage.
+Prefetcher in most of the sites and tweaks you will find that they suggest that you do not mess with this feature, but it worked great for me. Tweak It for less memory usage.
 
         Path: [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters\]
         Location: Local Machine Value Name: EnablePrefetcher
         Data Type: DWORD (DWORD Value)
         Enabled Value:
         Disabled Value:
-        Action Type: Modified
+        Action Type: Modified     
 
-        [Top](#Top)
-
-        A ADDED VALUE!
+A ADDED VALUE!
 
 ### Turn off for faster boot and resume time feature. Turn off NV Cache.
 
-        Added registry entry for 32bit not 64 bit
+Added registry entry for 32bit not 64 bit
 
         Path: [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\]
         Location: Local Machine
@@ -421,7 +429,7 @@ L2 common settings 80 for 128, 100 for 256, 200 for 512, 400 for 1024 and so on.
 
 Get rid of the shortcut arrow on the Vista desktop. Frameworkx, it work's.
 
-        A Changed Value!
+A Changed Value!
 
 Tweak for the Registry Desktop Icon. The Icon Size is to large, my registry size was 36, I set it to 16\. Worked great for me. I have dual 32 inch HDTV monitors with 1366 X 786 display resolutions so the icons are now a tolerable size. Smaller displays and resolutions 16 might be to small, and 16 is the smallest size, if you set it smaller than 16 will default and reset to 16.
 
@@ -431,12 +439,13 @@ A trick to change Icon sizes that works till reboot is. While on your desktop, h
 
  ### To Rename Recycle Bin to whatever you want
 
-                Navigate to the following branch:
+Navigate to the following branch:
 
-                HKEY_CURRENT_USER \ Software \ Microsoft \ Windows \ CurrentVersion \ Explorer \ CLSID \ {645FF040-5081-101B-9F08-00AA002F954E}
+HKEY_CURRENT_USER \ Software \ Microsoft \ Windows \ CurrentVersion \ Explorer \ CLSID \ {645FF040-5081-101B-9F08-00AA002F954E}
 
-                Double-click **(default)** and replace the existing text ("Recycle Bin") with your preferred text.
- [Top](#Top)                  
+Double-click **(default)** and replace the existing text ("Recycle Bin") with your preferred text.
+
+[Top](#Top)                 
 
 ### Change Desktop Icon Spacing Vista
 
@@ -456,9 +465,9 @@ Steps for spacing desktop icons horizontal and vertical. Also you can change Des
 
 I made the choice 16 for Horizontal and 30 for Vertical mainly because Recycle bin overlaps the bottom of other icons because of its large size, even though I made it smaller as in the above Visual Tweaks section of this document or you can put it on top or other icons and change Vertical to what ever works, CAUTION do not overlap icons as when you click on them it will activate both that are overlapped. Note this will change Icon spacing in Explorer also.  You will notice the size and spacing in the Print Screen of my desktop on bottom right next to the sidebar.    
         
- [Top](#Top)
+[Top](#Top)
         
-            A Changed Value!
+A Changed Value!
 
 #### For Vista Indexing problems, or it will not start or stay running. = Indexing and search are file renaming problems
 

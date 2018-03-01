@@ -24,18 +24,18 @@ related: true
 excerpt: "I use colorbox in my ASP.Core2 apps. 
 Alot of developers still do in their applications"
 header:
-  image: /assets/images/pages/svg/letter-avatar-header.png
-  teaser: /assets/images/pages/svg/mobile_colorbox.svg
+  image: /assets/images/pages/svg/colorbox-html-1400.svg
+  teaser: /assets/images/pages/svg/colorbox-html-1400.svg
 
 gallery:
-  - url: /assets/images/pages/gravatar-icon-600.jpg
-    image_path: /assets/images/pages/gravatar-icon-225.jpg
+  - url: /assets/images/pages/svg/colorbox-html-1400.svg
+    image_path: /assets/images/pagessvg/colorbox-html.svg
     alt: "Gravtar Image"
-  - url: /assets/images/pages/avatar-600.png
-    image_path: /assets/images/pages/avatar-225.png
+  - url: /assets/images/pages/svg/colorbox800.png
+    image_path: /assets/images/pages/svg/colorbox.png
     alt: "Gravtar Generic Image"
-  - url: /assets/images/pages/myLetterAvatar-600.png
-    image_path: /assets/images/pages/myLetterAvatar-225.png
+  - url: /assets/images/pages/svg/clorboxlogon.png
+    image_path: /assets/images/pages/svg/colorboxlogon1.png
     alt: "Letter Avatar"
 ---
 
@@ -183,4 +183,4 @@ Below is the changed javascript  with additions highlighted.
   window.addEventListener("orientationchange", resizeColorBox, false);
 ```
 
-{% include gallery caption="Old XP Defragmentation, Page Splitting, Web Matrix Defrag." %}
+{% include gallery caption="Colorbox HTML, Colorbox Inline, Colorbox Logon." %}
