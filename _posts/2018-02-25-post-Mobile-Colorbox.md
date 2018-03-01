@@ -30,14 +30,14 @@ header:
 
 gallery:
   - url: /assets/images/pages/svg/colorbox-html-1400.svg
-    image_path: /assets/images/pagessvg/colorbox-html.svg
-    alt: "Gravtar Image"
+    image_path: /assets/images/pages/svg/colorbox-html.svg
+    alt: "Colorbox HTML"
   - url: /assets/images/pages/svg/colorbox800.png
     image_path: /assets/images/pages/svg/colorbox.png
-    alt: "Gravtar Generic Image"
+    alt: "Colorbox Images"
   - url: /assets/images/pages/svg/clorboxlogon.png
     image_path: /assets/images/pages/svg/colorboxlogon1.png
-    alt: "Letter Avatar"
+    alt: "Colorbox Logon"
 ---
 
 {% include octo-arm.html %}
@@ -184,4 +184,4 @@ Below is the changed javascript  with additions highlighted.
   window.addEventListener("orientationchange", resizeColorBox, false);
 ```
 
-{% include gallery caption="Colorbox HTML, Colorbox Inline, Colorbox Logon." %}
+{% include gallery caption="Colorbox HTML, Colorbox Images, Colorbox Logon." %}
