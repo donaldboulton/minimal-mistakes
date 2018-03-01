@@ -41,6 +41,8 @@ gallery:
     alt: "Letter Avatar"
 ---
 
+{% include octo-arm.html %}
+
 ## Letter Avatar
 
 How to easily create Letter Avatars for your comments in Minimal Mistakes. This coversion is a work in progress as I am just learning liquid.
@@ -55,13 +57,13 @@ The background colours are from from [Flat Ui Colors](http://flatuicolors.com/) 
 
 ### The Canvas html snippet. 
 
-```python
+```html
 <canvas id="user-icon" width="60" height="60"></canvas>
 ```
 
 ### The Code before conversion
 
-```python
+```javascript
 var colours = ["#1abc9c", "#2ecc71", "#3498db", "#9b59b6", "#34495e", "#16a085", "#27ae60", "#2980b9", "#8e44ad", "#2c3e50", "#f1c40f", "#e67e22", "#e74c3c", "#ecf0f1", "#95a5a6", "#f39c12", "#d35400", "#c0392b", "#bdc3c7", "#7f8c8d"];
 
 var name = "Lee Crossley",
@@ -99,13 +101,13 @@ context.fillText(initials, canvasCssWidth / 2, canvasCssHeight / 1.5);
 
 ### Image tag changes for MVC
 
-```python
+```html
 <img itemprop="image" avatar="@comment.Author" alt="@comment.Author" class="comments-media-object" />
 ```
 
 ### My Script Changes for MVC
 
-```python
+```javascript
     (function (w, d) {
         function LetterAvatar(name, size) {
 
@@ -195,21 +197,21 @@ Lets take a look a Minimal Mistakes post on Staticman Comments, at [Improving Je
 
 The comments include form in: _includes/comment.html, lines 
 
-```python
+```html
 <img src="/assets/images/avatar-60.png" srcset="/assets/images/avatar-120.png 2x" alt="{{ include.name | escape }}">
 ```
 
 ### Image changes
 
 Modifying the Image link From:
-```ruby
+```html
 <img src="/assets/images/avatar-60.png" srcset="/assets/images/avatar-120.png 2x; 
 ```
 
 I am sure this will work just fine in Minimal Mistakes - Staticman Comments form.
 
 Changed To: Letter Avatar
-```liquid
+```html
 <img class="user-icon" avatar="{{ include.name | escape }}" alt="{{ include.name | escape }}">
 ```
 I Modified to the file at _ includes/comment.html
@@ -219,7 +221,7 @@ To include but missing avatar="include.name | escape" , cannot get liquid to dis
 Removed src="..." and srcset="..." 
 
 As in the above example.
-```yaml
+```html
 avatar="include.name | escape" alt="include.name | escape"
 ```
 

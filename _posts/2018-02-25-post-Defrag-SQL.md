@@ -39,6 +39,8 @@ gallery:
 
 ---
 
+{% include octo-arm.html %}
+
 ## Defragment SQL Server
 
 In any SQl database and one that updates through migrations like Orchard CMS get defragmented and I have notice over the years dealing with SQL server that it needs defraging occasionaly, keeping the performance optimized.
@@ -89,7 +91,7 @@ You need to be on SQL Server 2005 SP2 or higher.
 
 ### SQL Server 2008 R2 or higher
 
-```python
+```sql
 /*Perform a 'USE <database name>' to select the database in which to run the script.*/  
 -- Declare variables  
 SET NOCOUNT ON;  
@@ -213,7 +215,7 @@ DBCC INDEXDEFRAG
 
 #### SQL Server DBCC INDEXDEFRAG code
 
-```python
+```sql
 Perform a 'USE <database name>' to select the database in which to run the script.*/
 -- Declare variables
 SET NOCOUNT ON;
@@ -346,6 +348,5 @@ DBCC INDEXDEFRAG cannot be used to defragment the following indexes:
 *   A spatial index.
 
 DBCC INDEXDEFRAG is not supported for use on system tables.
-
 
 {% include gallery caption="Old XP Defragmentation, Page Splitting, Web Matrix Defrag." %}

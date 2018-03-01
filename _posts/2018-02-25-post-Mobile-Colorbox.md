@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Letter Avatar"
+title: "Mobile Colorbox"
 permalink: /2018-02-25-post-Mobile-Colorbox/
 date: 2018-02-25 15:16:01 -0600
 search: true
@@ -39,9 +39,15 @@ gallery:
     alt: "Letter Avatar"
 ---
 
+{% include octo-arm.html %}
+
 ### Mobile First Colorbox
 
-Mobile First Responsive Colorbox Window to open a link, div, code, about anything. Including a iframe using external data. Using the provided code works with Bootstrap 4 beta 3
+Mobile First Responsive Colorbox Window to open a link, div, code, about anything. Including a iframe using external data.
+
+Using the provided code works with, Jquery 3.3.2 and Bootstrap 4 beta 3.
+
+Colorbox if you have not used it was created by [Jack Moore](http://www.jacklmoore.com/colorbox/)
 
 I created a colorbox window for ASP.Net Core 2 app. On most Phone and Tablets, no matter the orientation Colorbox was way to small about 40% of the view.
 
@@ -53,103 +59,128 @@ Colorbox now is working perfect on my Android and some other phone's I have trie
 
 I am building Mobile First sites now and it way to easy with Core 2 framework, with a Mobile First Agency Theme based on Bootstrap 4 beta 3 using colorbox for some internal views.
 
-Below is the new Colorbox Initialization code with additions highlighted.
+#### Click to open the Page Code block or anything in a Colorbox Window.
 
-##### The Javascript
-<div>
-<button class="btn btn-light btn-sm text-right" data-clipboard-action="copy" data-clipboard-target="#color">
-                        <img class="clippy" width="13" src="/assets/images/pages/svg/clippy.svg" alt="clippy">
-                    </button>
+To use the Colorbox window by clicking a link that uses a class as class="inline" and link it to the div with href="#profiles"</div>
 
-```python
-<pre class="snippet">     
-$(".group1").colorbox({
-    rel: "group1"
+```html
+<a class="inline" href="#profiles" title="Colorbox">Click to open in a Colorbox Window.</a>    
+```
+Hide Content in a hidden div class="hidden"
+
+The css for hidden
+```css
+.hidden{display:none}
+```
+The link is to a div with id="profiles"
+Add Colorbox Content in the div with profiles
+
+### The Inline Code for inline code.
+
+```javascript
+$(".inline").colorbox({
+    inline: !0,
+    width: '100%',
+    rel: 'proflex'
 });
-$(".group2").colorbox({
+$('.inline_content').on('click', function() {
+    $.fn.colorbox.prev()
+});
+$('.inline_content').on('click', function() {
+    $.fn.colorbox.next()
+});
+```
+
+Below is the changed javascript  with additions highlighted.
+
+#### The Javascript
+
+```javascript
+  $(".group1").colorbox({
+    rel: "group1"
+  });
+  $(".group2").colorbox({
     rel: "group2",
     transition: "fade"
-});
-$(".group3").colorbox({
+  });
+  $(".group3").colorbox({
     rel: "group3",
     transition: "none",
     width: "80%",
     height: "80%"
-});
-$(".group4").colorbox({
+  });
+  $(".group4").colorbox({
     rel: "group4",
     slideshow: true
-});
-$(".ajax").colorbox();
-$(".youtube").colorbox({
+  });
+  $(".ajax").colorbox();
+  $(".youtube").colorbox({
     iframe: true,
     innerWidth: 640,
     innerHeight: 390
-});
-$(".vimeo").colorbox({
+  });
+  $(".vimeo").colorbox({
     iframe: true,
     innerWidth: 500,
     innerHeight: 409
-});
-$(".iframe").colorbox({
+  });
+  $(".iframe").colorbox({
     iframe: true,
     width: "80%",
     height: "80%"
-});
-$(".inline").colorbox({
+  });
+  $(".inline").colorbox({
     inline: true,
     width: "80%"
-});
-$(".callbacks").colorbox({
-    onOpen: function() {
-        alert("onOpen: colorbox is about to open");
+  });
+  $(".callbacks").colorbox({
+    onOpen: function () {
+      alert("onOpen: colorbox is about to open");
     },
-    onLoad: function() {
-        alert("onLoad: colorbox has started to load the targeted content");
+    onLoad: function () {
+      alert("onLoad: colorbox has started to load the targeted content");
     },
-    onComplete: function() {
-        alert("onComplete: colorbox has displayed the loaded content");
+    onComplete: function () {
+      alert("onComplete: colorbox has displayed the loaded content");
     },
-    onCleanup: function() {
-        alert("onCleanup: colorbox has begun the close process");
+    onCleanup: function () {
+      alert("onCleanup: colorbox has begun the close process");
     },
-    onClosed: function() {
-        alert("onClosed: colorbox has completely closed");
+    onClosed: function () {
+      alert("onClosed: colorbox has completely closed");
     }
-});
-$(".non-retina").colorbox({
+  });
+  $(".non-retina").colorbox({
     rel: "group5",
     transition: "none"
-});
-$(".retina").colorbox({
+  });
+  $(".retina").colorbox({
     rel: "group5",
     transition: "none",
     retinaImage: true,
     retinaUrl: true
-});
-$("#click").click(function() {
+  });
+  $("#click").click(function () {
     $("#click").css({
-        "background-color": "#f00",
-        color: "#fff",
-        cursor: "inherit"
+      "background-color": "#f00",
+      color: "#fff",
+      cursor: "inherit"
     }).text("Open this window again and this message will still be here.");
     return false;
-});
-var resizeTimer;
-//Mobile Resize Function
-function resizeColorBox() {
+  });
+  var resizeTimer;
+  //Mobile Resize Function
+  function resizeColorBox() {
     if (resizeTimer) clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(function() {
-        if (jQuery("#cboxOverlay").is(":visible")) jQuery.colorbox.resize({
-            width: "90%",
-            height: "90%"
-        });
+    resizeTimer = setTimeout(function () {
+      if (jQuery("#cboxOverlay").is(":visible")) jQuery.colorbox.resize({
+        width: "90%",
+        height: "90%"
+      });
     }, 300);
-}
-jQuery(window).resize(resizeColorBox);
-window.addEventListener("orientationchange", resizeColorBox, false);
-</pre>
+  }
+  jQuery(window).resize(resizeColorBox);
+  window.addEventListener("orientationchange", resizeColorBox, false);
 ```
-</div>
 
-
+{% include gallery caption="Old XP Defragmentation, Page Splitting, Web Matrix Defrag." %}

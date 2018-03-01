@@ -28,6 +28,9 @@ header:
 
 excerpt: Check SQL Server a specified database index fragmentation percentage (SQL)
 ---
+
+{% include octo-arm.html %}
+
 ### Introduction
 
 This T-SQL sample script illustrates how to check index fragmentation of a specified database in SQL Server.

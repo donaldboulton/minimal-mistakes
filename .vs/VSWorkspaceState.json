@@ -2,11 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\assets",
-    "\\assets\\images",
     "\\assets\\images\\pages",
-    "\\_layouts",
+    "\\assets\\images\\pages\\svg",
+    "\\assets\\js",
     "\\_posts"
   ],
-  "SelectedNode": "\\_posts\\2018=02-25-post-Mobile-Colorbox.md",
+  "SelectedNode": "\\assets\\js\\_main.js",
   "PreviewInSolutionExplorer": false
 }

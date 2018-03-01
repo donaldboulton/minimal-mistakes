@@ -39,6 +39,9 @@ gallery:
 
 excerpt: "Jekyll admin makes it so easy for me to add new pages, posts or any type of content including Changing Configuration."
 ---
+
+{% include octo-arm.html %}
+
 ### Jekyll Admin for Local Host
 
 Cannot stop myself from opening VS 2017 to do work. When I get it down I will be doing alot of bundle exec jekyll serve and then going to my root and going to Jekyll Admin to build my sites as /admin.
