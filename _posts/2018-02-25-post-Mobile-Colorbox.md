@@ -23,6 +23,7 @@ related: true
 
 excerpt: "I use colorbox in my ASP.Core2 apps. 
 Alot of developers still do in their applications"
+
 header:
   image: /assets/images/pages/svg/colorbox-html-1400.svg
   teaser: /assets/images/pages/svg/colorbox-html-1400.svg
