@@ -47,9 +47,7 @@ gallery:
 
 How to easily create Letter Avatars for your comments in Minimal Mistakes. This coversion is a work in progress as I am just learning liquid.
 
-### Gihub code By Lee Crossly
-
-Gihub Gist, by [Lee Crossly](https://gist.github.com/leecrossley/6027780)
+### Gihub code as a Gihub Gist, by [Lee Crossly](https://gist.github.com/leecrossley/6027780)
 
 Avatar Generator from - Commenter name as - (first name and surname) as input and a canvas element as output using the initials from the name and a background colour (based on the first name & surname first letter). 
 
@@ -211,16 +209,11 @@ Modifying the Image link From:
 I am sure this will work just fine in Minimal Mistakes - Staticman Comments form.
 
 Changed To: Letter Avatar
-```html
-<img class="user-icon" avatar="{{ include.name | escape }}" alt="{{ include.name | escape }}">
-```
-I Modified to the file at _ includes/comment.html
-
-To include but missing avatar="include.name | escape" , cannot get liquid to display in code blocks???
 
 Removed src="..." and srcset="..." 
 
-As in the above example.
+Added
+
 ```html
 avatar="include.name | escape" alt="include.name | escape"
 ```

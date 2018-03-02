@@ -30,7 +30,7 @@ gallery:
   - url: /assets/images/pages/page-splitting.png
     image_path: /assets/images/pages/page-splitting-256.png
     alt: "Page Splitting"
-  - url: /assets/images/pages/index_heatmap.png
+  - url: /assets/images/pages/index_heatmap.jpeg
     image_path: /assets/images/pages/index_heatmap-256.png
     alt: "Index Heatmap"
   - url: /assets/images/pages/windows-xp-defragment-hard-drive.jpg

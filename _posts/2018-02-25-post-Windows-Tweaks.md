@@ -29,13 +29,13 @@ header:
 gallery:
   - url: /assets/images/pages/Windows_XP_logo.png
     image_path: /assets/images/pages/Windows_XP_logo.png
-    alt: "Gravtar Image"
+    alt: "Windows XP"
   - url: /assets/images/pages/windows_vista_logo.png
     image_path: /assets/images/pages/windows_vista_logo.png
-    alt: "Gravtar Generic Image"
+    alt: "Vista"
   - url: /assets/images/pages/Windows_10.png
     image_path: /assets/images/pages/Windows_10.png
-    alt: "Letter Avatar"
+    alt: "Windows 10"
 ---
 
 {% include octo-arm.html %}

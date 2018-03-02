@@ -25,8 +25,8 @@ excerpt: "I use colorbox in my ASP.Core2 apps.
 Alot of developers still do in their applications"
 
 header:
-  image: /assets/images/pages/svg/colorbox-html-1400.svg
-  teaser: /assets/images/pages/svg/colorbox-html-1400.svg
+  image: /assets/images/pages/svg/colorbox-html-1400.png
+  teaser: /assets/images/pages/svg/colorbox-html-1400.png
 
 gallery:
   - url: /assets/images/pages/svg/colorbox-html-1400.svg
@@ -35,8 +35,8 @@ gallery:
   - url: /assets/images/pages/svg/colorbox800.png
     image_path: /assets/images/pages/svg/colorbox.png
     alt: "Colorbox Images"
-  - url: /assets/images/pages/svg/colorboxlogon1.png
-    image_path: /assets/images/pages/svg/colorboxlogon.png
+  - url: /assets/images/pages/svg/colorbox-logon.png
+    image_path: /assets/images/pages/svg/colorbox-logon-800.png
     alt: "Colorbox Logon"
 ---
 

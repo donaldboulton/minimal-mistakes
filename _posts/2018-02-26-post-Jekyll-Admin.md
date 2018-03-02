@@ -23,12 +23,12 @@ toc_icon: "file"
 
 excerpt: "Administer your Jekyll site Locally with Jekyll Admin"
 header:
-  image: /assets/images/pages/jekyll-admin-1400.jpg
-  teaser: /assets/images/pages/jekyll-admin-1400.jpg
+  image: /assets/images/pages/jekyll-admin-1400.jpeg
+  teaser: /assets/images/pages/jekyll-admin-1400.jpeg
 
 gallery:
-  - url: /assets/images/pages/gravatar-icon-600.jpg
-    image_path: /assets/images/pages/gravatar-icon-225.jpg
+  - url: /assets/images/pages/gravatar-icon-600.jpeg
+    image_path: /assets/images/pages/gravatar-icon-225.jpeg
     alt: "Gravtar Image"
   - url: /assets/images/pages/avatar-600.png
     image_path: /assets/images/pages/avatar-225.png
