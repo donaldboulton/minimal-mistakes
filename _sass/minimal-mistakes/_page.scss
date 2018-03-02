@@ -78,10 +78,13 @@
     font-size: 1em;
   }
 
+  a {
+    color: #1faaaa;
+    text-decoration: none;
+  }
   /* paragraph indents */
   p {
     margin: 0 0 $indent-var;
-
     /* sibling indentation*/
     @if $paragraph-indent == true {
       & + p {
@@ -116,7 +119,6 @@
   .small {
     font-size: $type-size-6;
   }
-
   /* blockquote citations */
   blockquote + .small {
     margin-top: -1.5em;
