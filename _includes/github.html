@@ -2,19 +2,6 @@
 ---
 
 <div class="wide">
-  <div>
-    <script>
-      GitHubActivity.feed({
-        username: "donaldboulton",
-        repository: "", // optional
-        selector: "#feed",
-        limit: 20 // optional
-      })
-    </script>
-    <div id="feed"></div>
-  </div>
   <div id="github-widget" data-user="donaldboulton" data-display="pop_repos,calendar"></div>
 </div>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
-<script src="{{ '/assets/js/github/github-activity.js' | absolute_url }}"></script>
 <script src="{{ '/assets/js/github/github-widget.js' | absolute_url }}"></script>

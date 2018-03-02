@@ -18,8 +18,12 @@ category:
   - Donald Boulton
 
 header:
+  image: /assets/images/pages/letter-avatar-header.png
+  teaser: /assets/images/pages/letter-avatar-header.png
+
+header:
   overlay_color: "#5e616c"
-  overlay_image: /DWB/assets/images/digital_box_1400-compressor.jpg
+  overlay_image: /assets/images/pages/digital_box_1400-compressor.jpg
   cta_label: "<i class='fas fa-file-alt'></i> Posts"
   cta_url: "/Posts/"
   caption: Lost In a Digatal Box
