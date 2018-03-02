@@ -30,8 +30,8 @@ header:
   teaser: /assets/images/pages/letter-avatar-header.png
 
 gallery:
-  - url: /assets/images/pages/svg/gravatar-icon-600.svg
-    image_path: /assets/images/pages/svg/gravatar-icon-225.svg
+  - url: /assets/images/pages/gravatar-icon-600.jpeg
+    image_path: /assets/images/pages/gravatar-icon-256.jpg
     alt: "Gravtar Image"
   - url: /assets/images/pages/avatar-600.png
     image_path: /assets/images/pages/avatar-225.png
@@ -39,6 +39,7 @@ gallery:
   - url: /assets/images/pages/myLetterAvatar-600.png
     image_path: /assets/images/pages/myLetterAvatar-225.png
     alt: "Letter Avatar"
+
 ---
 
 {% include octo-arm.html %}
