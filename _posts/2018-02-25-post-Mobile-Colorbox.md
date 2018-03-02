@@ -30,13 +30,13 @@ header:
 
 gallery:
   - url: /assets/images/pages/svg/colorbox-html-1400.svg
-    image_path: /assets/images/pages/svg/colorbox-html.svg
+    image_path: /assets/images/pages/svg/colorbox-html.png
     alt: "Colorbox HTML"
   - url: /assets/images/pages/svg/colorbox800.png
     image_path: /assets/images/pages/svg/colorbox.png
     alt: "Colorbox Images"
-  - url: /assets/images/pages/svg/clorboxlogon.png
-    image_path: /assets/images/pages/svg/colorboxlogon1.png
+  - url: /assets/images/pages/svg/colorboxlogon1.png
+    image_path: /assets/images/pages/svg/colorboxlogon.png
     alt: "Colorbox Logon"
 ---
 

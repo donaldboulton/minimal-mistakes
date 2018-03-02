@@ -23,7 +23,7 @@ related: true
 
 excerpt: "This Tweaks page has evolved from Windows XP to Now upgrading this to Windows 10."
 header:
-  image: /assets/images/pages/windows-tweaks.svg
+  image: /assets/images/pages/windows-tweaks.png
   teaser: /assets/images/pages/windows-tweaks.png
 
 gallery:

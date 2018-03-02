@@ -15,7 +15,9 @@ category:
 
 toc: true
 comments: true
----
+
+{% include octo-arm.html %}
+
 ### Working for Father God
 Always worked for Father Creator since the beginning of time. Just hanging out watching our children play; till my day then playtime ends, to my new way.
 ### Just Moved from ASP. Everything
