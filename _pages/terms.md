@@ -26,9 +26,9 @@ Like many other websites, this site uses log files to help learn about when, fro
 
 All of this information is not linked to anything that is personally identifiable.
 
-### Cookies and Web Beacons
+## Cookies and Web Beacons
 
-![Cookie](/assets/images/pages/svg/cookies.svg){: .align-left}
+![Cookie](/DWB/assets/images/pages/svg/cookies.svg)
 
 When you visit this site "convenience" cookies are stored on your computer when you submit a comment to help you log in faster to [Disqus](http://disqus.com) the next time you leave a comment.
 
@@ -36,7 +36,7 @@ Third-party advertisers may also place and read cookies on your browser and/or u
 
 If you wish to disable cookies, you may do so through your web browser options. Instructions for doing so can be found on the specific web browsers' websites.
 
-#### Disabling Cookies
+### Disabling Cookies
               
 If you would like to restrict the use of cookies you can control this in your Internet browser. Links to advice on how to do this for the most popular Internet browsers are provided below for convenience and will be available for the Internet browser of your choice either online or via the software help (normally available via key F1).
 
@@ -48,7 +48,7 @@ If you would like to restrict the use of cookies you can control this in your In
 
 [Disabling cookies in Apple Safari](http://docs.info.apple.com/article.html?artnum=324)
 
-### Google Analytics
+## Google Analytics
 
 The cookies in use to deliver Google Analytics service are described below.
 
@@ -70,17 +70,19 @@ These cookies contain no personally identifiable information but they will use y
 
 Google stores the information collected by these cookies on servers in the United States. Google may transfer this information to third-parties where required to do so by law, or where such third-parties process the information on Google's behalf.
 
-#### Opt-out
+### Opt-out
 
 In order to provide website visitors with more choice on how data is collected by Google Analytics, Google has developed the Google Analytics Opt-out Browser Add-on. The add-on communicates with the Google Analytics JavaScript (ga.js) to stop data being sent to Google Analytics. The Google Analytics Opt-out Browser Add-on does not affect usage of the website in any other way. A link to further information on the Google Analytics Opt-out Browser Add-on is provided below for your convenience.
+
 [Opt Out](http://tools.google.com/dlpage/gaoptout?hl=None)
 
 For more information on the usage of cookies by Google Analytics please see the Google website. A link to the privacy advice for this product is provided below for your convenience.
+
 [Privacy Google](http://www.google.com/analytics/learn/privacy.html)
 
 Google Analytics is a web analytics tool I use to help understand how visitors engage with this website. It reports website trends using cookies and web beacons without identifying individual visitors. You can read [Google Analytics Privacy Policy](http://www.google.com/analytics/learn/privacy.html).
 
-### Google Adsense
+## Google Adsense
 
 Google Adsense, a third party affiliate marketing network, uses cookies to help make sure I get a commission when you buy a product after clicking on a link or ad banner that takes you to the site of one of their merchants. You can read [Google Adsense Privacy Policy](http://support.google.com/adsense/bin/answer.py?hl=en&answer=48182).
 
