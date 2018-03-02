@@ -1,6 +1,7 @@
 ---
 title: "SQL Fragmentation"
 date: 2018-02-23 16:16:01 -0900
+last_modified_at: 2018-03-01T12:42:38-04:00
 search: true
 author: Donald Boulton
 author_profile: true

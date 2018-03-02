@@ -3,6 +3,7 @@ layout: single
 title: "Defrag SQL"
 permalink: /2018-02-25-post-Defrag-SQL/
 date: 2018-02-25 16:16:01 -0600
+last_modified_at: 2018-03-01T12:42:38-04:00
 search: true
 author: Donald Boulton
 author_profile: true
