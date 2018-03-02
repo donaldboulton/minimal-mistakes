@@ -33,8 +33,8 @@ gallery:
   - url: /assets/images/pages/index_heatmap.jpeg
     image_path: /assets/images/pages/index_heatmap-256.png
     alt: "Index Heatmap"
-  - url: /assets/images/pages/windows-xp-defragment-hard-drive.jpg
-    image_path: /assets/images/pages/windows-xp-defragment-hard-drive-256.jpg
+  - url: /assets/images/pages/windows-xp-defragment-hard-drive.jpeg
+    image_path: /assets/images/pages/windows-xp-defragment-hard-drive-256.jpeg
     alt: "Clusters"
 
 ---
