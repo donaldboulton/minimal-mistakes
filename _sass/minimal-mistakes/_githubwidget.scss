@@ -1,16 +1,26 @@
+$color_1: #666;
+$color_2: #1faaaa;
+$color_3: #ccc;
+$color_4: #767676;
+$font_family_1: Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, 'Segoe UI Emoji', 'Segoe UI Symbol';
+$background_color_1: transparent;
+$background_color_2: #f2f8fa;
+$border_color_1: #666;
+$border_color_2: #767676;
+
 #github-widget {
   .boxed-group {
     > h3 {
-      background-color: transparent;
+      background-color: $background_color_1;
       margin: 0px;
       border-radius: 3px 3px 0px 0px;
       border-width: 1px 1px 0px;
       border-style: solid solid none;
-      border-color: #666;
+      border-color: $border_color_1;
       border-image: none;
       padding: 9px 10px 10px;
       font-size: 14px;
-      font-family: Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, 'Segoe UI Emoji', 'Segoe UI Symbol';
+      font-family: $font_family_1;
       font-weight: bold;
       line-height: 17px;
       display: block;
@@ -26,8 +36,8 @@
     border: 1px solid #666;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
-    color: #666;
-    font-family: Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, 'Segoe UI Emoji', 'Segoe UI Symbol';
+    color: $color_1;
+    font-family: $font_family_1;
     font-size: 13px;
     list-style: outside none none;
     overflow: auto;
@@ -44,30 +54,29 @@
         padding: 6px 64px 6px 30px;
         font-size: 14px;
         border-top: 1px solid #666;
-        color: #1faaaa;
+        color: $color_2;
         text-decoration: none;
-      }
 
-      .repo-and-owner {
-        span {
-          color: #1faaaa;
-          font-weight: bold;
-        }
-      }
-
-      .mini-repo-list-item {
         .repo-and-owner {
-          display: inline-block;
-          max-width: 125px;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap;
-          vertical-align: top;
+          span {
+            color: $color_2;
+            font-weight: bold;
+          }
+        }
+
+        .mini-repo-list-item {
+          .repo-and-owner {
+            display: inline-block;
+            max-width: 125px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            vertical-align: top;
+          }
         }
       }
     }
   }
-}
 
   .mini-repo-list {
     > li {
@@ -91,7 +100,7 @@
       float: left;
       margin-top: 2px;
       margin-left: -20px;
-      color: #ccc;
+      color: $color_3;
     }
 
     .stars {
@@ -100,14 +109,14 @@
       right: 10px;
       margin-top: 16px;
       font-size: 12px;
-      color: #ccc;
+      color: $color_3;
     }
 
     .repo-description {
       display: block;
       max-width: 100%;
       font-size: 12px;
-      color: #ccc;
+      color: $color_3;
       line-height: 21px;
     }
   }
@@ -118,7 +127,7 @@
   }
 
   .text-muted {
-    color: #767676;
+    color: $color_4;
   }
 
   .left {
@@ -169,7 +178,7 @@
     line-height: 1.3em;
     font-size: 24px;
     display: block;
-    color: #ccc;
+    color: $color_3;
   }
 
   .calendar-graph {
@@ -213,7 +222,7 @@
     #github-widget {
       .pinned-repository-handle {
         padding-top: 1px;
-        color: #767676;
+        color: $color_4;
 
         &:hover {
           cursor: -webkit-grab;
@@ -226,7 +235,7 @@
   .pinned-repo-item.is-dragging {
     cursor: -webkit-grabbing;
     cursor: grabbing;
-    background-color: #f2f8fa;
+    background-color: $background_color_2;
 
     #github-widget {
       .pinned-repository-handle {
@@ -237,7 +246,7 @@
   }
 
   .pinned-repo-item.sortable-ghost {
-    background-color: #f2f8fa;
+    background-color: $background_color_2;
     opacity: 0;
   }
 
@@ -284,7 +293,7 @@
   }
 
   .border-gray-dark {
-    border-color: #767676 !important;
+    border-color: $border_color_2 !important;
   }
 
   .border {
@@ -302,16 +311,16 @@
 
 .boxed-group {
   .heading {
-    background-color: transparent;
+    background-color: $background_color_1;
     margin: 0px;
     border-radius: 3px 3px 0px 0px;
     border-width: 1px 1px 0px;
     border-style: solid solid none;
-    border-color: #666;
+    border-color: $border_color_1;
     border-image: none;
     padding: 9px 10px 10px;
     font-size: 14px;
-    font-family: Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, 'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-family: $font_family_1;
     font-weight: bold;
     line-height: 17px;
     display: block;
