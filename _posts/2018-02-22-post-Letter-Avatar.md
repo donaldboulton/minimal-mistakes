@@ -30,8 +30,8 @@ header:
   teaser: /assets/images/pages/letter-avatar-header.png
 
 gallery:
-  - url: /assets/images/pages/gravatar-icon-600.jpg
-    image_path: /assets/images/pages/gravatar-icon-225.jpg
+  - url: /assets/images/pages/svg/gravatar-icon-600.svg
+    image_path: /assets/images/pages/svg/gravatar-icon-225.svg
     alt: "Gravtar Image"
   - url: /assets/images/pages/avatar-600.png
     image_path: /assets/images/pages/avatar-225.png
