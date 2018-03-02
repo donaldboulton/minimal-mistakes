@@ -44,29 +44,30 @@
         padding: 6px 64px 6px 30px;
         font-size: 14px;
         border-top: 1px solid #666;
-        color: #4078C0;
+        color: #1faaaa;
         text-decoration: none;
+      }
 
-        .repo-and-owner {
-          span {
-            color: #4078C0;
-            font-weight: bold;
-          }
+      .repo-and-owner {
+        span {
+          color: #1faaaa;
+          font-weight: bold;
         }
+      }
 
-        .mini-repo-list-item {
-          .repo-and-owner {
-            display: inline-block;
-            max-width: 125px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            vertical-align: top;
-          }
+      .mini-repo-list-item {
+        .repo-and-owner {
+          display: inline-block;
+          max-width: 125px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          vertical-align: top;
         }
       }
     }
   }
+}
 
   .mini-repo-list {
     > li {

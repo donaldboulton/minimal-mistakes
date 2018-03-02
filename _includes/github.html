@@ -2,16 +2,17 @@
 ---
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/font/octicons.min.css" />
 
-<div class="archive">
+<div class="wide">
   <div class="widget">
     <script>
       GitHubActivity.feed({
         username: "donaldboulton",
-        repository: "DWB", // optional
+        repository: "", // optional
         selector: "#feed",
         limit: 20 // optional
       })
     </script>
+    <div id="feed" class="widget feed"></div>
   </div>
   <div id="github-widget" data-user="donaldboulton" data-display="pop_repos,calendar"></div>
 </div>

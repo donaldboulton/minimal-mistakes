@@ -227,6 +227,7 @@ whitelist:
   - jekyll-seo-tag
   - jekyll-archives
   - jekyll-paginate-v2
+  - jekyll-octicons
   - jekyll-admin
   - jemoji
 
