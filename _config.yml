@@ -30,7 +30,7 @@ comments:
     num_posts            : # 5 (default)
     colorscheme          : "dark"
 staticman:
-  allowedFields          : ['name', 'email', 'url', 'message']
+  allowedFields          : ['name', 'email', 'url', 'message', 'replying_to']
   branch                 : "master"
   commitMessage          : "New comment."
   filename               : "comment-{@timestamp}"
