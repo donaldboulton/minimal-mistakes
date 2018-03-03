@@ -1,14 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\assets\\images",
-    "\\assets\\images\\pages",
+    "\\assets",
+    "\\assets\\js",
     "\\_includes",
-    "\\_pages",
-    "\\_posts",
-    "\\_sass\\minimal-mistakes",
-    "\\_sass\\minimal-mistakes\\vendor\\breakpoint"
+    "\\_includes\\comments-providers",
+    "\\_sass\\minimal-mistakes"
   ],
-  "SelectedNode": "\\_includes\\github.html",
+  "SelectedNode": "\\_includes\\page__comments.html",
   "PreviewInSolutionExplorer": false
 }
