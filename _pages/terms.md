@@ -1,7 +1,7 @@
 ---
 permalink: /terms/
 title: "Terms and Privacy Policy"
-last_modified_at: 2018-02-28T12:42:38-04:00
+last_modified_at: 2018-03-03T12:42:38-04:00
 toc: true
 ---
 
@@ -104,3 +104,11 @@ What this means for you:
 * I respect and value my readers too much to write anything other than my own genuine and objective opinions and advice.
 
 Just like this website, my Disclosure Policy is a work in progress. As the revenue streams evolve, so will this page.
+
+## License
+
+All original content (e.g. articles, blog posts, illustrations, artwork, and photographs) available on donboulton.com is released under a [Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License](http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US) unless otherwise noted. Basically this means you are free to share, transmit, distribute, alter, transform, and build on my work just as long as you don't use it for commercial purposes without my prior written consent.
+
+### Attribution
+
+If you're inclined to give credit --- a link back to the source article attributed to either [Donald Boulton](https://github.com/donaldboulton) or [donboulton.com](https://donaldboulton.github.io/DWB/) is good enough for me. If you don't want to attribute my content, hey that's cool too. Just don't go stealing stuff and republishing it as your own.
