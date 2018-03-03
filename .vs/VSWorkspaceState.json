@@ -1,14 +1,14 @@
 {
   "ExpandedNodes": [
     "",
-    "\\assets",
     "\\assets\\images",
     "\\assets\\images\\pages",
-    "\\assets\\js\\github",
+    "\\_includes",
+    "\\_pages",
     "\\_posts",
     "\\_sass\\minimal-mistakes",
-    "\\_site\\assets\\css"
+    "\\_sass\\minimal-mistakes\\vendor\\breakpoint"
   ],
-  "SelectedNode": "\\_posts\\2018-02-23-post-SQL-Fragmentation.md",
+  "SelectedNode": "\\_includes\\github.html",
   "PreviewInSolutionExplorer": false
 }

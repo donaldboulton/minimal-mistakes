@@ -20,16 +20,15 @@ teaser                   : "/assets/images/pages/digital_box_1400-compressor.jpg
 # breadcrumbs            : true # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
+  provider               : "staticman_v2" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
   disqus:
     shortname            : "donald-boulton"
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
-    # https://developers.facebook.com/docs/plugins/comments
-    appid                :
+    appid                : "322180367845124"
     num_posts            : # 5 (default)
-    colorscheme          : # "light" (default), "dark"
+    colorscheme          : "dark"
 staticman:
   allowedFields          : ['name', 'email', 'url', 'message']
   branch                 : "master"
@@ -59,14 +58,14 @@ algolia:
   application_id         : "G34JUR3EB9"
   index_name             : "donald_boulton"
   search_only_api_key    : "68c60968e03d06ce61d592425b22c6bd"
-  algolia_api_key        : "26c704b1c187c65cb2e3a044a9b2b488"
+  algolia_api_key        : "KLAOJmvpl1yZhCrno50lgSpRVJrrTtPKi98521LaL8X62hajFubs8IHB5eLjrcG5DOQJdfB6Dca9XluHQQQCWVJhQVAD7aqzfivz5/AlYEYukabDmEOw6Efd8RzNhlsFvVTa0t2/oxYWL66Xo9LtRbC0Lfpkf/u/RpA55pn5CkE="
   powered_by             : true
 
 Mailgun:
-  smtp_Hostname           : "smtp.mailgun.org"
-  api_Base_Url            : "https://api.mailgun.net/v3/donboulton.com"
-  api_key                 : "key-c47c18b3f05454dc9e56db92f2d641e9"
-  smtp_login              : "postmaster@donboulton.com"
+  smtp_Hostname          : "smtp.mailgun.org"
+  api_Base_Url           : "https://api.mailgun.net/v3/donboulton.com"
+  api_key                : "key-c47c18b3f05454dc9e56db92f2d641e9"
+  smtp_login             : "postmaster@donboulton.com"
 
 github                   : [metadata]
 
@@ -105,36 +104,36 @@ analytics:
 
 # Site Author
 author:
-  name             : "Donald Boulton"
-  avatar           : "/assets/images/pages/donald-boulton-100.jpg"
-  bio              : "Away from Asp. Anything."
-  location         : "OKC Oklahoma"
-  email            : "donaldboulton@gmail.com"
-  uri              : "http://donboulton.github.io/DWB/"
-  home             : "http://donboulton.github.io/DWB/"
-  bitbucket        :
-  codepen          :
-  dribbble         :
-  flickr           :
-  facebook         :
-  foursquare       :
-  github           : "donaldboulton"
-  gitlab           :
-  google_plus      : "donaldboulton"
-  keybase          :
-  instagram        :
-  lastfm           :
-  linkedin         : # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
-  pinterest        :
-  soundcloud       :
-  stackoverflow    : # none
-  steam            : # "steamId" (the last part of your profile url, e.g. https://steamcommunity.com/id/steamId/)
-  tumblr           :
-  twitter          : "donboulton"
-  vine             :
-  weibo            :
-  xing             :
-  youtube          : # None
+  name                   : "Donald Boulton"
+  avatar                 : "/assets/images/pages/donald-boulton-100.jpg"
+  bio                    : "Away from Asp. Anything."
+  location               : "OKC Oklahoma"
+  email                  : "donaldboulton@gmail.com"
+  uri                    : "http://donboulton.github.io/DWB/"
+  home                   : "http://donboulton.github.io/DWB/"
+  bitbucket              :
+  codepen                :
+  dribbble               :
+  flickr                 :
+  facebook               :
+  foursquare             :
+  github                 : "donaldboulton"
+  gitlab                 :
+  google_plus            : "donaldboulton"
+  keybase                :
+  instagram              :
+  lastfm                 :
+  linkedin               : "don-boulton-3a10972b"
+  pinterest              :
+  soundcloud             :
+  stackoverflow          : # none
+  steam                  : # "steamId" (the last part of your profile url, e.g. https://steamcommunity.com/id/steamId/)
+  tumblr                 :
+  twitter                : "donboulton"
+  vine                   :
+  weibo                  :
+  xing                   :
+  youtube                : # None
 
 # Reading Files
 include:

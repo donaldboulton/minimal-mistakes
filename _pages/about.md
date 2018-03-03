@@ -18,8 +18,8 @@ category:
   - Donald Boulton
 
 header:
-  image: /assets/images/pages/letter-avatar-header.png
-  teaser: /assets/images/pages/letter-avatar-header.png
+  image: /assets/images/pages/digital_box_1400-compressor.jpg
+  teaser: /assets/images/pages/digital_box_1400-compressor.jpg
 
 header:
   overlay_color: "#5e616c"

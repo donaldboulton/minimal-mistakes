@@ -61,7 +61,7 @@ comments:
   #   type: "comment"
 
   # Name of the site. Used in notification emails.
-  name: "Donald Boulto"
+  name: "Donald Boulton"
 
   # Notification settings. When enabled, users can choose to receive notifications
   # via email when someone adds a reply or a new comment. This requires an account
