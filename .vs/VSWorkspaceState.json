@@ -4,9 +4,11 @@
     "\\assets",
     "\\assets\\images",
     "\\assets\\images\\pages",
-    "\\assets\\images\\pages\\svg",
-    "\\_posts"
+    "\\assets\\js\\github",
+    "\\_posts",
+    "\\_sass\\minimal-mistakes",
+    "\\_site\\assets\\css"
   ],
-  "SelectedNode": "\\_posts\\2018-02-25-post-Mobile-Colorbox.md",
+  "SelectedNode": "\\_posts\\2018-02-23-post-SQL-Fragmentation.md",
   "PreviewInSolutionExplorer": false
 }
