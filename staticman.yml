@@ -52,8 +52,8 @@ comments:
   moderation: true
 
   # Akismet spam detection.
-  # akismet:
-  #   enabled: true
+  akismet:
+    enabled: false
   #   author: "name"
   #   authorEmail: "email"
   #   authorUrl: "url"
@@ -66,14 +66,13 @@ comments:
   # Notification settings. When enabled, users can choose to receive notifications
   # via email when someone adds a reply or a new comment. This requires an account
   # with Mailgun, which you can get for free at http://mailgun.com.
-  # notifications:
-    # Enable notifications
-    # enabled: true
+  notifications:
+    enabled: true
 
     # (!) ENCRYPTED
     #
   Mailgun API key:
-    apiKey: "key-c47c18b3f05454dc9e56db92f2d641e9"
+    apiKey: "H5EZw3wcgp0MVFVT9xj1T2bjagHUmxotILm4KbnXTHE5MtyHj+1pk+kQQGQuVdH8U/rgnth/4kvm/4lWRmxgu3vNAotPpg5VcmZsd7A44D/+sLNrZCXU7q5+YZ6VHYMjQpbHTBOsdebxq3Tog/3x3ONuR5XL/kRQNvD9tdjmdFw="
 
     # (!) ENCRYPTED
     #
