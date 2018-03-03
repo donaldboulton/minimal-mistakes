@@ -42,8 +42,6 @@ Ruby, Jeckyll, Gihub pages, and even liquid are super simple; Or "Super Logical,
 
 > Go Sooners!
 
-## Github Activity and Repos
-
 {% include github.html %}
 
 
