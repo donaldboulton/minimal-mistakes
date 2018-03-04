@@ -7,14 +7,13 @@
   margin-bottom: 4em;
   padding-left: 4.5em;
   font-size: 0.8em;
-
   // comment replies
   &.child {
     margin-left: 4.5em;
   }
 }
 
-.comment__timestamp {
+.comment-timestamp {
   font-size: 0.8em;
 
   a {
@@ -23,7 +22,7 @@
   }
 }
 
-.comment__content {
+.comment-content {
   margin-top: 1em;
 
   > p,
@@ -63,7 +62,7 @@
   }
 }
 
-.comment__avatar {
+.comment-avatar {
   position: absolute;
   top: 0;
   left: 0;
@@ -83,7 +82,7 @@
   }
 }
 
-.comment__author-name {
+.comment-author-name {
   display: inline-block;
   margin: 0 0 0.25em;
   font-size: 1.25em;
@@ -95,7 +94,7 @@
   }
 }
 
-.comment__reply {
+.comment-reply {
 
   a {
     text-decoration: none;
@@ -106,7 +105,7 @@
   }
 }
 
-.comment__reply-notifications {
+.comment-reply-notifications {
   margin: 1rem 0;
 }
 
@@ -114,13 +113,13 @@
   margin-left: 1em;
 }
 
-#comment__form {
+#comment-form {
   margin-bottom: 3em;
 }
 
 /* Site author specific */
 .admin {
-  .comment-__-name {
+  .comment-author-name {
     box-shadow: inset 0 -0.25em 0 rgba($warning-color, 0.5);
   }
 }
