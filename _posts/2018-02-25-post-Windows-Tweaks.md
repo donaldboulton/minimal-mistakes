@@ -74,7 +74,7 @@ My second partition I set to 2069 and 4069 which was the best min & max for XP P
 
 [Top](#Top)
 
-#### Advanced Visual Effects
+## Advanced Visual Effects
 
 Go to the Visual effects tab and click on CUSTOM = click on Desktop compression, smooth screen fonts, Folder background images, drop shadows, visual styles = which will still give you the Vista look without the Glass which eats up system resources along with allot of visual additions not really needed, You can play with this for the look you want.
 
@@ -85,7 +85,7 @@ On remote tab uncheck allow remote assistance unless needed = this allows Micros
 Close out all windows and Restart Computer = VS Express and SQL express problem  fixed and/or and 64 bit slowness or problems.
 Page Filing was = 2063, now 6118 on two drives.
 
-### Defragment Boot Sector
+## Defragment Boot Sector
 
 Defragment Your Hard Drives after a new Upgrades, "before doing anything else". Defragment after installation or un-installations of several Programs or if they are very large = a good example is Visual Studio, Office suites and others. Defrag after updates and after moving or copying allot of files.        
 
@@ -137,7 +137,7 @@ The only indication you will get is a blinking cursor. This means that the proce
 
 You can read more here on Defrag Options & Command line switches.
 
-#### Defragmenter does not run
+### Defragmenter does not run
 
 If you find that you are unable to defragment or cannot run the defragment utility in Windows or that a drive or volume has been marked  as having errors, run chdsk by entering
 
@@ -161,11 +161,11 @@ defrag -c -v
         
  [Top](#Top)
 
-### Clear temp files
+## Clear temp files
 
 Go to start then click run, and type in the test field %temp% and hit enter. When it open up highlight all temp files and delete.
 
-### 32 & 64 bit Explorer
+## 32 & 64 bit Explorer
 
 For all that are having Flash and SilverLight problems.
 
@@ -285,7 +285,7 @@ Action Type: Modified
 ```
 A ADDED VALUE!
 
-### Turn off NV Cache.
+### Turn off NV Cache
 
 Turn off for faster boot and resume time feature.
 
