@@ -125,3 +125,20 @@
     box-shadow: inset 0 -0.25em 0 rgba($warning-color, 0.5);
   }
 }
+
+.am-checkbox input[type="checkbox"] ~ label:before, .am-radio input[type="checkbox"] ~ label:before, .am-checkbox input[type="radio"] ~ label:before, .am-radio input[type="radio"] ~ label:before {
+  content: "";
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  border: 2px solid #1faaaa;
+  margin-right: 5px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 19px;
+  vertical-align: bottom;
+  text-align: center;
+  background-color: transparent;
+  cursor: pointer;
+}
+
