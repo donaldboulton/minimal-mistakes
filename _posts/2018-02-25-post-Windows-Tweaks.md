@@ -41,51 +41,24 @@ gallery:
 
 {% include octo-arm.html %}
 
-### Windows 10 Win 7, 8, Xp & Vista Fixes & Tweaks
+### Windows 10, 8, 7, Vista, Xp
 
-#### For most basic tweaks go to: [Tweak-Vista](http://www.tweakvista.com/)
-        
-[TweakHounds](http://www.tweakhound.com/vista/tweakguide/page_3.htm) 
+Basic Tweaks Sites:        
+
+[TweakHounds](http://www.tweakhound.com/vista/tweakguide/page_3.htm), 
 [PcTuneUpTips](http://pctuneuptips.com/tips/vista_tweaks/),
-[H Enthusiasts](http://enthusiast.hardocp.com/article.html?art=MTMyNywxLCxoZW50aHVzaWFzdA==)
+[H Enthusiasts](http://enthusiast.hardocp.com/article.html?art=MTMyNywxLCxoZW50aHVzaWFzdA==),
 [Windows Fanatics](http://www.lockergnome.com/windows/)
 
 #### Windows Fanatics at TechNet 
 
- [Tech Net 1](http://technet.microsoft.com/en-us/magazine/cc162494)
- [Tech Net 2](http://technet.microsoft.com/en-us/magazine/cc162480.aspx)
- [Tech Net 3](http://technet.microsoft.com/en-us/magazine/cc162480.aspx),
+ [Tech Net 1,](http://technet.microsoft.com/en-us/magazine/cc162494)
+ [Tech Net 2,](http://technet.microsoft.com/en-us/magazine/cc162480.aspx)
+ [Tech Net 3](http://technet.microsoft.com/en-us/magazine/cc162480.aspx)
 
-Below is My testing and Opinions, "try at you own risk". I tried all the below.
+Below is My testing and Opinions, "try at you own risk". 
 
-       
-#### Internal Page Links to Vista Fixes & Tweaks
-
-[Service Packs Clean Install done correctly](#Service)
-[Advanced System Settings](#Advanced-System-Settings)
-[Virtual Memory](#Virtual-Memory)
-[Physical Memory In Vista Editions](#Physical-Memory)
-[Advanced Visual Effects](#Advanced-Visual-Effects)
-[Registry, Visual Tweaks, & Icon Shortcut to](#Registry)
-[Multiple OS no Boot Managers](#Multiple-OSs)
-Separate Drives and OS's
-[Change Icon Spacing in Vista](#Icon-Spacing)
-[Indexing Problems and Fixes](#Indexing-problems) = Search and Indexing are the file renaming problems
-[Start Explorer In A Different Folder or Drive In Windows Vista](#Start-Explorer-In-A-Different-Folder)
-[Vista Has 32 bit and 64 bit Explorer](#32-bit-and-64-bit-Explorer) Flash, SilverLight FIX
-[Turn Off User Account Control](#UAC) [Defragment](#Defragment)
-[Defrag Boot Sector](#Defragment-Boot-Sector)
-[Registry Tweaks](#regedit)
-
-#### Advanced Users
-
-[Turned off Windows Defender](#Turned-off-Windows-Defender)
-[Processor Scheduling](#Processor-Scheduling)
-[Processor Level 2 Cash](#Processor-Level-2-Cash)
-[Change the behavior of Superfetcher](#Superfetcher)
-[Change the behavior of Prefetcher](#Change-the-behavior-of-Prefetcher)
-
-Reset Properties that SP1 changes, "read the below".
+I tried all the below.       
 
 #### Advanced System Settings
 
@@ -101,119 +74,6 @@ My second partition I set to 2069 and 4069 which was the best min & max for XP P
 
 [Top](#Top)
 
-Physical Memory In Vista and 7 Editions" name="Phyisical Memory" title="">Physical Memory In Vista and 7 Editions
-
-#### Physical Memory Limits: Windows Vista
-
-The following table specifies the limits on physical memory for Windows Vista.
-
-| Version | Limit on X86 | Limit on X64 |
-| --- | --- | --- |
-| Windows Vista Ultimate | 
-|4 GB| 
-128 GB
- |
-| Windows Vista Enterprise | 
-   4 GB
-| 
-128 GB
-
-                     |
-| Windows Vista Business | 
-
-                        4 GB
-
-                     | 
-
-                        128 GB
-
-                     |
-| Windows Vista Home Premium | 
-
-                        4 GB
-
-                     | 
-
-                        16 GB
-
-                     |
-| Windows Vista Home Basic | 
-
-                        4 GB
-
-                     | 
-
-                        8 GB
-
-                     |
-| Windows Vista Starter | 
-
-                        1 GB
-
-                     |   |
-
-#### Physical Memory Limits: Windows 7
-
-The following table specifies the limits on physical memory for Windows 7.
-
-       | Version | Limit on X86 | Limit on X64      |
-| --- | --- | --- |
-| Windows 7 Ultimate | 
-
-                        4 GB
-
-                     | 
-
-                        192 GB
-
-                     |
-| Windows 7 Enterprise | 
-
-                        4 GB
-
-                     | 
-
-                        192 GB
-
-                     |
-| Windows 7 Professional | 
-
-                        4 GB
-
-                     | 
-
-                        192 GB
-
-                     |
-| Windows 7 Home Premium | 
-
-                        4 GB
-
-                     | 
-
-                        16 GB
-
-                     |
-| Windows 7 Home Basic | 
-
-                        4 GB
-
-                     | 
-
-                        8 GB
-
-                     |
-| Windows 7 Starter | 
-
-                        2 GB
-
-                     | 
-
-                        N/A
-
-                     |
-
-
 #### Advanced Visual Effects
 
 Go to the Visual effects tab and click on CUSTOM = click on Desktop compression, smooth screen fonts, Folder background images, drop shadows, visual styles = which will still give you the Vista look without the Glass which eats up system resources along with allot of visual additions not really needed, You can play with this for the look you want.
@@ -225,15 +85,15 @@ On remote tab uncheck allow remote assistance unless needed = this allows Micros
 Close out all windows and Restart Computer = VS Express and SQL express problem  fixed and/or and 64 bit slowness or problems.
 Page Filing was = 2063, now 6118 on two drives.
 
-Defragment Your Hard Drives after a new Upgrades, "before doing anything else". Defragment after installation or un-installations of several Programs or if they are very large = a good example is Visual Studio, Office suites and others. Defrag after updates and after moving or copying allot of files.        
+### Defragment Boot Sector
 
-### Defragment Windows Boot Sector
+Defragment Your Hard Drives after a new Upgrades, "before doing anything else". Defragment after installation or un-installations of several Programs or if they are very large = a good example is Visual Studio, Office suites and others. Defrag after updates and after moving or copying allot of files.        
 
 Is Windows Vista taking a long time to startup? You can try defragmenting the boot files by using the Command Prompt in Windows Vista.
 
-#### 1\. Go to Start/All Programs/Accessories/Command Prompt
+1\. Go to Start/All Programs/Accessories/Command Prompt
 
-#### 2\. At the prompt, type defrag c: -b
+2\. At the prompt, type defrag c: -b
 
 Disk Defragmenter does not defragment files in the Recycle Bin. It is best to run Disk Cleaner first and then empty the Recycle Bin, before defragmenting
 
@@ -254,6 +114,7 @@ Doing it verbos instead of with the numbering system
 Disk Defragmenter does not defragment files in the Recycle Bin. It is best to run Disk Cleaner first and then empty the Recycle Bin, before defragmenting
 
 You can use the following parameters or switches with the Defrag command to further fine-tune your control:
+
 ```sql
 -r  This is the default setting and defragments file fragments that less than 64 MB.
 
@@ -276,7 +137,7 @@ The only indication you will get is a blinking cursor. This means that the proce
 
 You can read more here on Defrag Options & Command line switches.
 
-Disk defragmenter does not run
+#### Defragmenter does not run
 
 If you find that you are unable to defragment or cannot run the defragment utility in Windows or that a drive or volume has been marked  as having errors, run chdsk by entering
 
@@ -296,7 +157,7 @@ defrag c: -a -v
 
 defrag -c -v
 
-#### 3\. Exit Dos Window when defrag has completed., you will see the original prompt when it is finished = as in mine it's C:\Users\donboulton
+3\. Exit Dos Window when defrag has completed., you will see the original prompt when it is finished = as in mine it's C:\Users\donboulton
         
  [Top](#Top)
 
@@ -304,13 +165,15 @@ defrag -c -v
 
 Go to start then click run, and type in the test field %temp% and hit enter. When it open up highlight all temp files and delete.
 
-### 32 bit and 64 bit Explorer" name="32 bit and 64 bit Explorer" title="">For all that are having Flash and SilverLight problems.
+### 32 & 64 bit Explorer
+
+For all that are having Flash and SilverLight problems.
 
 In Vista X64 you should have two versions of Internet Explorer a 32 bit version and a 64 bit version the 32 bit allows you to view Flash and SilverLight if installed while using your X86 = 32bit IE. You can forget using Flash and SilverLight on X64 and I do not see it coming soon. P. S. you do not need any other browsers like Firefox unless you want it for some reason. Firefox and all Mozilla and AOL browsers eat up your memory, and you cannot get it back by closing out these programs, you have to restart your computer.
 
 You can Turn off UAC if you are the only one using your computer UAC is a pain, and if are the only one using your computer it should not be needed. Go To Start > Control Panel > User Accounts, Administrator Account >  At the Bottom of the left list click turn User Account Control on or off > New Window, uncheck UAC and click OK > Reboot, and/or restart computer for these setting to take effect.
 
-### Regedit
+## Regedit
 
 Vista Registry Fixes,  on classic start menu, go to start and then run and type in the text box field regedit.exe and click OK, or enter on keyboard.
 
@@ -321,41 +184,48 @@ Regedit Tweaks below. and the links to the details on how to do each one of them
 
 A ADDED VALUE!
 
-### Turned off Windows Defender. Links for regedit below.
+### Turned off Defender
+
+Links for regedit below.
 
 [Added registry entry for 32 bit not 64 bit](http://www.liutilities.com/products/registrybooster/tweaklibrary/tweaks/11423/)
 
-        [Path: [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\]
-        Location: Local Machine
-        Value Name: Windows Defender
-        Data Type: Key Enabled Value:
-        Disabled Value:
-        Action Type: Add an Entry Path: [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\]
-        Location: Local Machine
-        Value Name: DisableAntiSpyware Data Type: DWORD (DWORD Value)
-        Enabled Value: 1 >
-        Disabled Value: 0
-        Action Type: Add an Entry](http://www.liutilities.com/products/registrybooster/tweaklibrary/tweaks/11423/)
+```sql
+[Path: [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\]
+Location: Local Machine
+Value Name: Windows Defender
+Data Type: Key Enabled Value:
+Disabled Value:
+Action Type: Add an Entry Path: [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\]
+Location: Local Machine
+Value Name: DisableAntiSpyware Data Type: DWORD (DWORD Value)
+Enabled Value: 1 >
+Disabled Value: 0
+Action Type: Add an Entry](http://www.liutilities.com/products/registrybooster/tweaklibrary/tweaks/11423/)
+```
 
+A Changed Value!
+
+### Processor Scheduling 
+
+I set to 12
+
+```sql
+Path: [HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\PriorityControl\]
+Location: Local Machine
+Value Name: Win32PrioritySeparation
+Data Type: DWORD (DWORD Value)
+Enabled Value: 12
+Disabled Value: 26
+Action Type: Modified
+```
 [Top](#Top)
 
 A Changed Value!
 
-### Processor Scheduling I set to 12
+### Level 2 Cash settings
 
-        Path: [HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\PriorityControl\]
-        Location: Local Machine
-        Value Name: Win32PrioritySeparation
-        Data Type: DWORD (DWORD Value)
-        Enabled Value: 12
-        Disabled Value: 26
-        Action Type: Modified
-
-[Top](#Top)
-
-A Changed Value!
-
-#### Processor Level 2 Cash settings
+Processor Settings
 
 Set to 400 for L2 1024 was 0 = HAL was sick. 
 
@@ -363,19 +233,21 @@ L2 common settings 80 for 128, 100 for 256, 200 for 512, 400 for 1024 and so on.
 
 Most Xp and Vista Machines have this setting to 0 Check AMD or Intel for you processor L2 cash and set this value accordingly.
 
-        Path: [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\]
-        Location: Local Machine
-        Value Name: SecondLevelDataCache
-        Data Type: DWORD (DWORD Value)
-        Enabled Value: 80 / 100 / 200
-        Disabled Value: 0
-        Action Type: Modified
+```sql
+Path: [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\]
+Location: Local Machine
+Value Name: SecondLevelDataCache
+Data Type: DWORD (DWORD Value)
+Enabled Value: 80 / 100 / 200
+Disabled Value: 0
+Action Type: Modified
+```
 
-#### Change the  Behavior of Superfetcher
+### Superfetcher Behavior
 
 A Changed Value!
 
-Superfetch is a new feature in vista that understands which applications you use most, and preloads these applications into memory, so your system is more responsive. Superfetch uses a complex prioritization scheme that can even differentiate which applications you use most often and when you use them. Now, you can change the way that superfetch behaves by making a change in the registry. This is helpful when you want to alter superfetch or disable superfetch completely.
+Superfetch is a new feature in window since vista that understands which applications you use most, and preloads these applications into memory, so your system is more responsive. Superfetch uses a complex prioritization scheme that can even differentiate which applications you use most often and when you use them. Now, you can change the way that superfetch behaves by making a change in the registry. This is helpful when you want to alter superfetch or disable superfetch completely.
 
 For this, go to start > run menu, enter regedit and navigate to the registry path listed below. Now, right-click and modify the dword value enable prefetcher, in the right panel, to the suitable value given above. However, if you want to get the default value back, change the value data to 2\. The changes take effect after a restart or logoff.
 
@@ -383,17 +255,19 @@ My value was 3, I changed it to 1 as stated below!
 
 Set a user defined value like "1" to alter the behavior of Prefetcher and click 'OK'.
 
-        Path: [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters\]
-        Location: Local Machine
-        Value Name: EnableSuperfetch
-        Data Type: DWORD (DWORD Value)
-        Enabled Value:
-        Disabled Value:
-        Action Type: Modified
+```sql
+Path: [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters\]
+Location: Local Machine
+Value Name: EnableSuperfetch
+Data Type: DWORD (DWORD Value)
+Enabled Value:
+Disabled Value:
+Action Type: Modified
+```
 
- [Top](#Top)
+[Top](#Top)
 
- #### Change the  Behavior of Prefetcher
+### Prefetcher Behavior
 
 A Changed Value!
 
@@ -401,32 +275,37 @@ Change the behavior of Prefetcher = I set it to 1 was set to 3\. Still allot of 
 
 Prefetcher in most of the sites and tweaks you will find that they suggest that you do not mess with this feature, but it worked great for me. Tweak It for less memory usage.
 
-        Path: [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters\]
-        Location: Local Machine Value Name: EnablePrefetcher
-        Data Type: DWORD (DWORD Value)
-        Enabled Value:
-        Disabled Value:
-        Action Type: Modified     
-
+```sql
+Path: [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters\]
+Location: Local Machine Value Name: EnablePrefetcher
+Data Type: DWORD (DWORD Value)
+Enabled Value:
+Disabled Value:
+Action Type: Modified     
+```
 A ADDED VALUE!
 
-### Turn off for faster boot and resume time feature. Turn off NV Cache.
+### Turn off NV Cache.
+
+Turn off for faster boot and resume time feature.
 
 Added registry entry for 32bit not 64 bit
 
-        Path: [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\]
-        Location: Local Machine
-        Value Name: NvCache
-        Data Type: Key Enabled Value:
-        Disabled Value: Action Type:
-        Add an Entry Path: [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\NvCache\] Location: Local Machine Value Name: OptimizeBootAndResume
-        Data Type: DWORD (DWORD Value) Enabled Value: 0
-        Disabled Value: 1
-        Action Type: Add an Entry
+```sql
+Path: [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\]
+Location: Local Machine
+Value Name: NvCache
+Data Type: Key Enabled Value:
+Disabled Value: Action Type:
+Add an Entry Path: [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\NvCache\] Location: Local Machine Value Name: OptimizeBootAndResume
+Data Type: DWORD (DWORD Value) Enabled Value: 0
+Disabled Value: 1
+Action Type: Add an Entry
+```
 
- [Top](#Top)
+[Top](#Top)
 
-### Other  Registry, Visual Tweaks
+## More Registry, Tweaks
 
 Get rid of the shortcut arrow on the Vista desktop. Frameworkx, it work's.
 
@@ -438,7 +317,9 @@ Tweak for the Registry Desktop Icon. The Icon Size is to large, my registry size
 
 A trick to change Icon sizes that works till reboot is. While on your desktop, hold down the CTRL key and scroll your mouse up for larger and down for smaller icons.  You can make your icons very small or extremely large.
 
- ### To Rename Recycle Bin to whatever you want
+### Rename Recycle Bin
+
+To whatever you want.
 
 Navigate to the following branch:
 
@@ -448,7 +329,7 @@ Double-click **(default)** and replace the existing text ("Recycle Bin") with yo
 
 [Top](#Top)                 
 
-### Change Desktop Icon Spacing Vista
+### Change Desktop Icon Spacing
 
 Changing Desktop Icon Spacing in Vista, "ALL Versions", adjustments can be made to horizontal and vertical alignment spacing.
            
@@ -470,7 +351,9 @@ I made the choice 16 for Horizontal and 30 for Vertical mainly because Recycle b
         
 A Changed Value!
 
-#### For Vista Indexing problems, or it will not start or stay running. = Indexing and search are file renaming problems
+### For Indexing problems,
+
+Or indexing will not start or stay running. = Indexing and search are file renaming problems
 
 Set the registry value <span style="FONT-FAMILY: 'Trebuchet MS', sans-serif">**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Search\SetupCompletedSuccessfully** ( set it to 0 and try restarting the Windows Search service.
 
