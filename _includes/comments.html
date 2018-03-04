@@ -47,8 +47,7 @@
           {% assign url         = comment.url %}
           {% assign date        = comment.date %}
           {% assign message     = comment.message %}
-          {% assign rating      = comment.rating %}
-          {% include comment.html index=index replying_to=replying_to avatar=avatar email=email name=name url=url date=date message=message rating=rating %}
+          {% include comment.html index=index replying_to=replying_to avatar=avatar email=email name=name url=url date=date message=message %}
           {% endfor %}
         </div>
           <!-- End static comments -->
@@ -86,35 +85,7 @@
                 <input type="text" id="comment-form-location" name="fields[hidden]" autocomplete="off" />
                 <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.reCaptcha.siteKey }}">
                 <input type="hidden" name="options[reCaptcha][secret]" value="{{ site.reCaptcha.secret }}">
-              </div>
-              <div class="field-group rating-select rating__wrapper">
-                <span>Rating:</span>
-                <!-- Rating stars -->
-                <label class="rating-radio-label" for="comment-form[star-1]">
-                  <i class="far fa-star fa-solid rating-star rating-radio-star--on"></i>
-                </label>
-                <input class="rating-radio" type="radio" value="1" name="fields[rating]" id="comment-form[star-1]" checked>
-                <label class="rating-radio-label" for="comment-form[star-2]">
-                  <i class="far fa-star rating-star rating-radio-star--off"></i>
-                  <i class="far fa-star fa-solid rating-star rating-radio-star--on"></i>
-                </label>
-                <input class="rating-radio" type="radio" value="2" name="fields[rating]" id="comment-form[star-2]">
-                <label class="rating-radio-label" for="comment-form[star-3]">
-                  <i class="far fa-star rating-star rating-radio-star--off"></i>
-                  <i class="far fa-star fa-solid rating-star rating-radio-star--on"></i>
-                </label>
-                <input class="rating-radio" type="radio" value="3" name="fields[rating]" id="comment-form[star-3]">
-                <label class="rating-radio-label" for="comment-form[star-4]">
-                  <i class="far fa-star rating-star rating-radio-star--off"></i>
-                  <i class="far fa-star fa-solid rating-star rating-radio-star--on"></i>
-                </label>
-                <input class="rating-radio" type="radio" value="4" name="fields[rating]" id="comment-form[star-4]">
-                <label class="rating-radio-label" for="comment-form[star-5]">
-                  <i class="far fa-star rating-star rating-radio-star--off"></i>
-                  <i class="far fa-star fa-solid rating-star rating-radio-star--on"></i>
-                </label>
-                <input class="rating-radio" type="radio" value="5" name="fields[rating]" id="comment-form[star-5]">
-              </div>
+              </div>              
               <!-- Start comment form alert messaging -->
               <p class="hidden js-notice">
                 <strong class="js-notice-text"></strong>
@@ -155,8 +126,7 @@
           {% assign url         = comment.url %}
           {% assign date        = comment.date %}
           {% assign message     = comment.message %}
-          {% assign rating      = comment.rating %}
-          {% include comment.html index=index replying_to=replying_to avatar=avatar email=email name=name url=url date=date message=message rating=rating %}
+          {% include comment.html index=index replying_to=replying_to avatar=avatar email=email name=name url=url date=date message=message %}
           {% endfor %}
         </div>
         <!-- End static comments -->
@@ -191,34 +161,7 @@
               <label for="comment-form-location">Leave blank if you are a human</label>
               <input type="text" id="comment-form-location" name="fields[hidden]" autocomplete="off">
             </fieldset>
-            <fieldset class="field-group rating-select">
-              <span>Rating:</span>
-              <!-- Rating stars -->
-              <label class="rating-radio-label" for="comment-form[star-1]">
-                <i class="far fa-star rating-star rating-radio-star--on">star</i>
-              </label>
-              <input class="rating-radio" type="radio" value="1" name="fields[rating]" id="comment-form[star-1]" checked>
-              <label class="rating-radio-label" for="comment-form[star-2]">
-                <i class="far fa-star rating-star rating-radio-star--off"></i>
-                <i class="far fa-star rating-star rating-radio-star--on">star</i>
-              </label>
-              <input class="rating-radio" type="radio" value="2" name="fields[rating]" id="comment-form[star-2]">
-              <label class="rating-radio-label" for="comment-form[star-3]">
-                <i class="far fa-star rating-star rating-radio-star--off"></i>
-                <i class="far fa-star rating-star rating-radio-star--on">star</i>
-              </label>
-              <input class="rating-radio" type="radio" value="3" name="fields[rating]" id="comment-form[star-3]">
-              <label class="rating-radio-label" for="comment-form[star-4]">
-                <i class="far fa-star rating-star rating-radio-star--off"></i>
-                <i class="far fa-star rating-star rating-radio-star--on">star</i>
-              </label>
-              <input class="rating-radio" type="radio" value="4" name="fields[rating]" id="comment-form[star-4]">
-              <label class="rating-radio-label" for="comment-form[star-5]">
-                <i class="far fa-star rating-star rating-radio-star--off"></i>
-                <i class="far fa-star rating-star rating-radio-star--on">star</i>
-              </label>
-              <input class="rating-radio" type="radio" value="5" name="fields[rating]" id="comment-form[star-5]">
-            </fieldset>
+            
             <!-- Start comment form alert messaging -->
             <p class="hidden js-notice">
               <span class="js-notice-text"></span>
