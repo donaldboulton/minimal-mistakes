@@ -6,19 +6,6 @@ section {
   }
 }
 
-.form {
-  position: relative;
-
-  &:before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 10;
-  }
-}
-
 .form--loading {
   &:before {
     content: '';
@@ -37,7 +24,13 @@ section {
   z-index: 11;
 }
 
-.review {
+.comment__wrapper {
+  position: relative;
+  margin-bottom: 1.5rem;
+  padding: 20px;
+}
+
+.comment {
   width: 100%;
   margin: 20px auto;
   min-height: 0;

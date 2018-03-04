@@ -1,13 +1,7 @@
-/* ==========================================================================
-   REVIEW BOXES
-   ========================================================================== */
-
-.review__wrapper {
+.comments__wrapper {
   position: relative;
   margin-bottom: 1.5rem;
   padding: 20px;
-  border-radius: $border-radius;
-  background-color: #000;
   color: #fff;
 
   a {
@@ -15,19 +9,18 @@
   }
 }
 
-h5.review__title {
+h5.comments__title {
   margin: 0;
-  color: #fff;
   font-size: 1.563rem;
   font-weight: bold;
 }
 
-.review__title-summary {
+.comments__title-summary {
   font-size: 1.25rem;
   font-weight: bold;
 }
 
-.review__list {
+.comments__list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -43,8 +36,8 @@ h5.review__title {
   }
 }
 
-.review__description {
+.comments__message {
   a {
-    color: #fff;
+    color: $text-color;
   }
 }

@@ -1,14 +1,15 @@
 {
   "ExpandedNodes": [
     "",
-    "\\assets\\images\\pages",
-    "\\assets\\images\\pages\\svg",
-    "\\_data",
+    "\\docs\\_data",
+    "\\docs\\_data\\comments",
+    "\\docs\\_data\\comments\\welcome-to-jekyll",
     "\\_data\\comments",
     "\\_data\\comments\\post-Windows-Tweaks",
     "\\_includes",
+    "\\_sass",
     "\\_sass\\minimal-mistakes"
   ],
-  "SelectedNode": "\\_config.yml",
+  "SelectedNode": "\\_sass\\minimal-mistakes\\_review-box.scss",
   "PreviewInSolutionExplorer": false
 }
