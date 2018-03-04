@@ -132,7 +132,6 @@ You can use the following parameters or switches with the Defrag command to furt
 
 -b  It optimizes boot files and applications only.
 ```
-
 The only indication you will get is a blinking cursor. This means that the process is going. To interrupt the defragmentation process, press Ctrl + C in the command window.
 
 You can read more here on Defrag Options & Command line switches.
