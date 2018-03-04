@@ -54,5 +54,6 @@
   {% assign url         = reply.url %}
   {% assign date        = reply.date %}
   {% assign message     = reply.message %}
-  {% include comment.html index=index replying_to=replying_to avatar=avatar email=email name=name url=url date=date message=message %}
+  {% assign rating      = reply.rating %}
+  {% include comment.html index=index replying_to=replying_to avatar=avatar email=email name=name url=url date=date message=message rating=rating %}
 {% endfor %}

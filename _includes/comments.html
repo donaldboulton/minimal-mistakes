@@ -120,7 +120,8 @@
           {% assign url         = comment.url %}
           {% assign date        = comment.date %}
           {% assign message     = comment.message %}
-          {% include comment.html index=index replying_to=replying_to avatar=avatar email=email name=name url=url date=date message=message %}
+          {% assign rating      = comment.rating %}
+          {% include comment.html index=index replying_to=replying_to avatar=avatar email=email name=name url=url date=date message=message rating=rating %}
           {% endfor %}
         </div>
         <!-- End static comments -->

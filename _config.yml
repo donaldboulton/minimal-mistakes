@@ -30,7 +30,7 @@ comments:
     num_posts            : # 5 (default)
     colorscheme          : "dark"
 staticman:
-  allowedFields          : ['name', 'email', 'url', 'message', 'replying_to']
+  allowedFields          : ['name', 'email', 'url', 'message', 'replying_to', 'rating']
   branch                 : "master"
   commitMessage          : "New comment."
   filename               : "comment-{@timestamp}"
@@ -214,6 +214,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-archives
   - jekyll-paginate-v2
+  - jekyll-octicons
   - jekyll-admin
   - jemoji
 
