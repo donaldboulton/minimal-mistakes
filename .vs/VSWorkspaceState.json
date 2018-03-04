@@ -1,12 +1,14 @@
 {
   "ExpandedNodes": [
     "",
-    "\\assets",
-    "\\assets\\js",
-    "\\_includes\\comments-providers",
-    "\\_sass",
+    "\\assets\\images\\pages",
+    "\\assets\\images\\pages\\svg",
+    "\\_data",
+    "\\_data\\comments",
+    "\\_data\\comments\\post-Windows-Tweaks",
+    "\\_includes",
     "\\_sass\\minimal-mistakes"
   ],
-  "SelectedNode": "\\_sass\\minimal-mistakes.scss",
+  "SelectedNode": "\\_config.yml",
   "PreviewInSolutionExplorer": false
 }
