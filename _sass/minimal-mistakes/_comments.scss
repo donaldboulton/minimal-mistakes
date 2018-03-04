@@ -25,6 +25,7 @@
 
 .comment-content {
   margin-top: 1em;
+  margin-left: 40px;
 
   > p,
   > ul,
@@ -97,7 +98,7 @@
 }
 
 .comment-reply {
-
+    margin-left: 40px;
   a {
     text-decoration: none;
 
@@ -140,5 +141,10 @@
   text-align: center;
   background-color: transparent;
   cursor: pointer;
+}
+.am-checkbox {
+  width: 22px;
+  height: 22px;
+  border: 2px solid #1faaaa;
 }
 
