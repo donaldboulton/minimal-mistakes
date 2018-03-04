@@ -43,7 +43,7 @@ section {
   min-height: 0;
 }
 
-.review__description {
+.rating__description {
   margin-top: 1em;
 }
 
@@ -93,4 +93,29 @@ section {
   margin-top: -150px;
   min-height: 0;
   z-index: 9999;
+}
+.fontawsome-icons {
+  font-family: 'Font Awesome\ 5 Free';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+.mdl-textfield {
+  position: relative;
+  font-size: 16px;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 300px;
+  max-width: 100%;
+  margin: 0;
+  padding: 20px 0;
 }
