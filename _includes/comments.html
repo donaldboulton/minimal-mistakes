@@ -155,6 +155,34 @@
               <label for="comment-form-location">Leave blank if you are a human</label>
               <input type="text" id="comment-form-location" name="fields[hidden]" autocomplete="off">
             </fieldset>
+            <fieldset class="field-group rating-select">
+              <span>Rating:</span>
+              <!-- Rating stars -->
+              <label class="rating-radio-label" for="comment-form[star-1]">
+                <i class="far fa-star rating-star rating-radio-star--on">star</i>
+              </label>
+              <input class="rating-radio" type="radio" value="1" name="fields[rating]" id="comment-form[star-1]" checked>
+              <label class="rating-radio-label" for="comment-form[star-2]">
+                <i class="far fa-star rating-star rating-radio-star--off">star_border</i>
+                <i class="far fa-star rating-star rating-radio-star--on">star</i>
+              </label>
+              <input class="rating-radio" type="radio" value="2" name="fields[rating]" id="comment-form[star-2]">
+              <label class="rating-radio-label" for="comment-form[star-3]">
+                <i class="far fa-star rating-star rating-radio-star--off">star_border</i>
+                <i class="far fa-star rating-star rating-radio-star--on">star</i>
+              </label>
+              <input class="rating-radio" type="radio" value="3" name="fields[rating]" id="comment-form[star-3]">
+              <label class="rating-radio-label" for="comment-form[star-4]">
+                <i class="far fa-star rating-star rating-radio-star--off">star_border</i>
+                <i class="far fa-star rating-star rating-radio-star--on">star</i>
+              </label>
+              <input class="rating-radio" type="radio" value="4" name="fields[rating]" id="comment-form[star-4]">
+              <label class="rating-radio-label" for="comment-form[star-5]">
+                <i class="far fa-star rating-star rating-radio-star--off">star_border</i>
+                <i class="far fa-star rating-star rating-radio-star--on">star</i>
+              </label>
+              <input class="rating-radio" type="radio" value="5" name="fields[rating]" id="comment-form[star-5]">
+            </fieldset>
             <!-- Start comment form alert messaging -->
             <p class="hidden js-notice">
               <span class="js-notice-text"></span>

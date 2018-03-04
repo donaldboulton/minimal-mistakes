@@ -33,7 +33,7 @@ gallery:
   - url: /assets/images/pages/svg/colorbox-html-1400.png
     image_path: /assets/images/pages/svg/colorbox-html.png
     alt: "Colorbox HTML"
-  - url: /assets/images/pages/svg/colorbox800.png
+  - url: /assets/images/pages/svg/colorbox-800.png
     image_path: /assets/images/pages/svg/colorbox.png
     alt: "Colorbox Images"
   - url: /assets/images/pages/svg/colorbox-logon-800.png

@@ -3,10 +3,10 @@
     "",
     "\\assets",
     "\\assets\\js",
-    "\\_includes",
     "\\_includes\\comments-providers",
+    "\\_sass",
     "\\_sass\\minimal-mistakes"
   ],
-  "SelectedNode": "\\_includes\\page__comments.html",
+  "SelectedNode": "\\_sass\\minimal-mistakes.scss",
   "PreviewInSolutionExplorer": false
 }
