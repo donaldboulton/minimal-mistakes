@@ -29,21 +29,28 @@
       <section id="static-comments">
         {% if site.repository and site.staticman.branch %}
           <!-- Start static comments -->
-          <div class="js-comments">
-            {% if site.data.comments[page.slug] %}
-              <h4 class="page__comments-title">{{ site.data.ui-text[site.locale].comments_title | default: "Comments" }}</h4>
-              {% assign comments = site.data.comments[page.slug] | sort %}
-
-              {% for comment in comments %}
-                {% assign email = comment[1].email %}
-                {% assign name = comment[1].name %}
-                {% assign url = comment[1].url %}
-                {% assign date = comment[1].date %}
-                {% assign message = comment[1].message %}
-                {% include comment.html index=forloop.index email=email name=name url=url date=date message=message %}
-              {% endfor %}
+          <div id="comments" class="js-comments">
+          <h2 class="page__section-label">
+            {% if site.data.comments[page.slug].size > 1 %}
+            {{ site.data.comments[page.slug] | size }}
             {% endif %}
-          </div>
+            Comments
+          </h2>
+          {% assign comments = site.data.comments[page.slug] | where_exp: 'item', 'item.replying_to == blank' %}
+          {% for comment in comments %}
+          {% assign index       = forloop.index %}
+          {% assign r           = comment.replying_to %}
+          {% assign replying_to = r | to_integer %}
+          {% assign avatar      = comment.avatar %}
+          {% assign email       = comment.email %}
+          {% assign name        = comment.name %}
+          {% assign url         = comment.url %}
+          {% assign date        = comment.date %}
+          {% assign message     = comment.message %}
+          {% assign rating      = comment.rating %}
+          {% include comment.html index=index replying_to=replying_to avatar=avatar email=email name=name url=url date=date message=message rating=rating %}
+          {% endfor %}
+        </div>
           <!-- End static comments -->
 
           <!-- Start new comment form -->
@@ -71,15 +78,43 @@
               </div>
               <div class="form-group">
                 <label for="comment-form-url">{{ site.data.ui-text[site.locale].comment_form_website_label | default: "Website (optional)" }}</label>
-                <input type="url" id="comment-form-url" name="fields[url]" tabindex="4"/>
+                <input type="url" id="comment-form-url" name="fields[url]" tabindex="4" />
               </div>
               <div class="form-group hidden" style="display: none;">
                 <input type="hidden" name="options[slug]" value="{{ page.slug }}">
                 <label for="comment-form-location">Not used. Leave blank if you are a human.</label>
-                <input type="text" id="comment-form-location" name="fields[hidden]" autocomplete="off"/>
+                <input type="text" id="comment-form-location" name="fields[hidden]" autocomplete="off" />
                 <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.reCaptcha.siteKey }}">
                 <input type="hidden" name="options[reCaptcha][secret]" value="{{ site.reCaptcha.secret }}">
               </div>
+              <fieldset class="field-group rating-select">
+                <span>Rating:</span>
+                <!-- Rating stars -->
+                <label class="rating-radio-label" for="comment-form[star-1]">
+                  <i class="far fa-star rating-star rating-radio-star--on">star</i>
+                </label>
+                <input class="rating-radio" type="radio" value="1" name="fields[rating]" id="comment-form[star-1]" checked>
+                <label class="rating-radio-label" for="comment-form[star-2]">
+                  <i class="far fa-star rating-star rating-radio-star--off">star_border</i>
+                  <i class="far fa-star rating-star rating-radio-star--on">star</i>
+                </label>
+                <input class="rating-radio" type="radio" value="2" name="fields[rating]" id="comment-form[star-2]">
+                <label class="rating-radio-label" for="comment-form[star-3]">
+                  <i class="far fa-star rating-star rating-radio-star--off">star_border</i>
+                  <i class="far fa-star rating-star rating-radio-star--on">star</i>
+                </label>
+                <input class="rating-radio" type="radio" value="3" name="fields[rating]" id="comment-form[star-3]">
+                <label class="rating-radio-label" for="comment-form[star-4]">
+                  <i class="far fa-star rating-star rating-radio-star--off">star_border</i>
+                  <i class="far fa-star rating-star rating-radio-star--on">star</i>
+                </label>
+                <input class="rating-radio" type="radio" value="4" name="fields[rating]" id="comment-form[star-4]">
+                <label class="rating-radio-label" for="comment-form[star-5]">
+                  <i class="far fa-star rating-star rating-radio-star--off">star_border</i>
+                  <i class="far fa-star rating-star rating-radio-star--on">star</i>
+                </label>
+                <input class="rating-radio" type="radio" value="5" name="fields[rating]" id="comment-form[star-5]">
+              </fieldset>
               <!-- Start comment form alert messaging -->
               <p class="hidden js-notice">
                 <strong class="js-notice-text"></strong>

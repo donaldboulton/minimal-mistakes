@@ -29,12 +29,12 @@
   <div class="comment__content">
     {{ include.message | markdownify }}
   </div>
-  <p>
+  <div class="comment__rating">
     <strong>Rating:</strong>
     {% for i in (1..commentData.rating) %}
     <i class="far fa-star"></i>
     {% endfor %}
-  </p>
+  </div>
   {% unless include.replying_to != 0 or page.comments_locked == true %}
   <div class="comment__reply">
     <a rel="nofollow" class="btn btn--primary btn--small" href="#comment-{{ include.index }}" onclick="return addComment.moveForm('comment-{{ include.index }}', '{{ include.index }}', 'respond', '{{ page.slug }}')">Reply to {{ include.name }}</a>
