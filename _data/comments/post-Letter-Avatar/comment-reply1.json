@@ -1,0 +1,17 @@
+// 20180304182053
+// https://api.staticman.net/v2/entry/donaldboulton/DWB/master/comments
+
+{
+  "success": true,
+  "fields": {
+    "name": "Try Letter Avatar Now",
+    "email": "ad4f5ee0053963bd494a51d55dbb0654",
+    "url": "https://publiuslogic.com",
+    "message": "## Understand this\r\n\r\nTime is of the essence.",
+    "replying_to": "1",
+    "hidden": "",
+    "date": "2018-03-05T00:20:50.188Z",
+    "data": "2018-03-05T00:20:50.188Z",
+    "uuid": "{@id}"
+  }
+}
