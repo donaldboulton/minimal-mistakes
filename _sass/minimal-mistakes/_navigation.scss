@@ -169,6 +169,73 @@
   border-top: 1px solid $border-color;
 }
 
+.pager {
+  @include clearfix();
+  margin: 2rem 0;
+
+  .icon {
+    fill: $text-color;
+  }
+
+  ul {
+    @include list-unstyled;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint($medium) {
+      flex-direction: row;
+    }
+
+    > li {
+      flex: 1;
+    }
+
+    li + li {
+      margin-top: 0.125em;
+
+      @include breakpoint($medium) {
+        margin-top: 0;
+        margin-left: 0.125em;
+      }
+    }
+  }
+
+  a {
+    display: block;
+    line-height: 1.5;
+    text-decoration: none;
+
+    &:hover {
+      .icon {
+        fill: $primary-color;
+      }
+    }
+
+    &.previous {
+      text-align: left;
+    }
+
+    &.next {
+      text-align: right;
+    }
+  }
+}
+
+.pager-label,
+.pager-title {
+  display: block;
+}
+
+.pager-label {
+  color: $text-color;
+  font-weight: bold;
+}
+
+.pager-title {
+  color: tint($text-color, 40%);
+  font-size: 0.8em;
+}
+
 /*
      Priority plus navigation
      ========================================================================== */
