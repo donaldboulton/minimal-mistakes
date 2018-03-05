@@ -327,7 +327,10 @@ autopages:
   categories:
     enabled: false
   collections:
-    enabled: false
+    layouts: 
+      - 'autopage_collection.html'
+    title: 'Posts in collection :coll' # :coll is replaced by the collection name
+    permalink: '/collection/:coll'
   tags:
     enabled: true
     slugify:

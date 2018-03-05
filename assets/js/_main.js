@@ -61,6 +61,7 @@ $(document).ready(function() {
     }, 400);
   });
 
+  svg4everybody();
   // init smooth scroll
   $("a").smoothScroll({ offset: -20 });
 

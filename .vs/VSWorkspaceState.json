@@ -1,14 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\assets\\images",
+    "\\assets",
     "\\assets\\images\\pages",
-    "\\_data\\comments",
-    "\\_data\\comments\\post-Letter-Avatar",
-    "\\_data\\comments\\post-Windows-Tweaks",
-    "\\_includes",
-    "\\_sass\\minimal-mistakes"
+    "\\assets\\js",
+    "\\assets\\js\\plugins"
   ],
-  "SelectedNode": "\\_includes\\seo.html",
+  "SelectedNode": "\\_config.yml",
   "PreviewInSolutionExplorer": false
 }
