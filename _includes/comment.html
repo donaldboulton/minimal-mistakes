@@ -2,10 +2,10 @@
   <div class="comment__avatar">
     {% if include.avatar %}
     <img src="{{ include.avatar }}" alt="{{ include.name | escape }}">
-    {% else %}
-    <img avatar="{{ include.name | escape }}" alt="{{ include.name | escape }}">
     {% elsif include.email %}
     <img src="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=60" srcset="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=120 2x" alt="{{ include.name | escape }}">
+    {% else %}
+    <img avatar="{{ include.name }}" alt="{{ include.name }}" />
     {% endif %}
   </div>
   <h3 class="comment-author-name">
