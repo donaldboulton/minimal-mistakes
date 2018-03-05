@@ -191,45 +191,42 @@ kramdown:
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
 
-
 # Sass/SCSS
 sass:
   sass_dir: _sass
   style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
 
-
-# Outputting
-permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-
-
 # Plugins (previously gems:)
 plugins:
-  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-archives
   - jekyll-paginate-v2
+  - jekyll-figure
+  - jekyll-jekyll-typogrify
+  - jekyll-tagging-related_posts
   - jekyll-octicons
   - jekyll-admin
   - jemoji
+  - json
 
 # mimic GitHub Pages with --safe
 whitelist:
-  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-archives
   - jekyll-paginate-v2
+  - jekyll-figure
+  - jekyll-jekyll-typogrify
+  - jekyll-tagging-related_posts
   - jekyll-octicons
   - jekyll-admin
   - jemoji
+  - json
 
 # Archives
 #  Type
