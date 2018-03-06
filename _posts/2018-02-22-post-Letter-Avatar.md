@@ -214,7 +214,7 @@ Removed src="..." and srcset="..."
 Added
 
 ```html
-avatar="include.name | escape" class="identicon" alt="include.name | escape"
+avatar="include.name | escape" class="avatar" alt="include.name | escape"
 ```
 Then the link to the Gravatar image you have to change for yur own genertic image, orLetter Avatar generated.
 

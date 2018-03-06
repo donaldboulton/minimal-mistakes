@@ -266,9 +266,6 @@ collections:
   pets:
     output: true
     permalink: /pets/:path/
-  posts:
-    output: true
-    permalink: /posts/:path/
 
 # Defaults
 defaults:
@@ -327,7 +324,7 @@ autopages:
   collections:
     layouts: 
       - 'autopage_collection.html'
-    title: 'Posts in collection :coll' # :coll is replaced by the collection name
+    title: 'Pets in collection :coll' # :coll is replaced by the collection name
     permalink: '/collection/:coll'
   tags:
     enabled: true
