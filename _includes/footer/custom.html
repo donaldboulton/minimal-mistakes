@@ -1,11 +1,21 @@
-<!-- start custom footer snippets -->
-<div class="back-to-top-wrapper" id="back_top">
-  <a href="#top" data-scroll="#top" class="back-to-top" title="Back to top">
-    <svg viewBox="0 0 100 100" width="25px" height="25px" tabindex="-1" role="img" aria-labelledby="title">
-      <title id="title">Back to top</title>
-      <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" transform="translate(0 0) rotate(90 50 50)" fill="#fff" stroke="#fff"></path>
-      <image src="/assets/images/back-to-top-arrow.png" alt="Back to top arrow" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" width="100%" height="100%"></image>
-    </svg>
-  </a>
-</div>
-<!-- end custom footer snippets -->
+<a class="back-to-top-wrapper" data-scroll="#top" href="#top"></a>
+<script>
+  $(document).ready(function () {
+
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 100) {
+        $('.back-to-top-wrapper').fadeIn();
+      } else {
+        $('.back-to-top-wrapper').fadeOut();
+      }
+    });
+
+    $('.back-to-top-wrapper').click(function () {
+      $("html, body").animate({
+        scrollTop: 0
+      }, 600);
+      return false;
+    });
+
+  });
+</script>

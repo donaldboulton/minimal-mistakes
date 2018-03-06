@@ -5,7 +5,7 @@
   transition: transform .2s;
 }
 
-.js-cart-items .back-to-top-wrapper {
+.js-cart-items back-to-top-wrapper {
   transform: translateY(150px);
 }
 
@@ -28,7 +28,9 @@ a.back-to-top {
 .back-to-top-wrapper {
   width: 50px;
   height: 50px;
-  display: none;
+  background-image: url(/DWB/assets/images/back-to-top-arrow.png);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
   position: relative;
   position: fixed;
   bottom: .5em;

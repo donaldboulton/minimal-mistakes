@@ -2,10 +2,14 @@
   "ExpandedNodes": [
     "",
     "\\assets",
-    "\\assets\\images\\pages",
+    "\\assets\\images",
+    "\\assets\\images\\pages\\svg",
     "\\assets\\js",
-    "\\assets\\js\\plugins"
+    "\\_includes",
+    "\\_includes\\footer",
+    "\\_sass",
+    "\\_sass\\minimal-mistakes"
   ],
-  "SelectedNode": "\\_config.yml",
+  "SelectedNode": "\\_sass\\minimal-mistakes\\_top.scss",
   "PreviewInSolutionExplorer": false
 }
