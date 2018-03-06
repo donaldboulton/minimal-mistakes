@@ -5,7 +5,7 @@
     {% elsif include.email %}
     <img src="https://www.gravatar.com/avatar/{{ include.email }}" alt="{{ include.name | escape }}">
     {% else %}
-    <img class="avatar" avatar="{{ include.name }}" alt="{{ include.name | escape }}" />
+    <img id="avatar" class="avatar" avatar="{{ include.name }}" alt="{{ include.name | escape }}" />
     {% endif %}
   </div>
   <h3 class="comment-author-name">
