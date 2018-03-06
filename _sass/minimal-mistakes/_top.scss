@@ -1,73 +1,46 @@
-.back-to-top-wrapper {
-  will-change: transform;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  transition: transform .2s;
-}
-
-.js-cart-items back-to-top-wrapper {
-  transform: translateY(150px);
-}
-
-.back-to-top:focus {
-  background-color: #282634;
-  opacity: 1;
-}
-
-a.back-to-top {
-  &:hover {
-    background-color: #282634;
-    opacity: 1;
-  }
-
-  svg {
-    display: block;
-  }
-}
-
-.back-to-top-wrapper {
-  width: 50px;
-  height: 50px;
-  background-image: url(/DWB/assets/images/back-to-top-arrow.png);
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  position: relative;
+.scrolltop {
+  display: none;
+  width: 100%;
+  margin: 0 auto;
   position: fixed;
-  bottom: .5em;
-  right: 1em;
-  z-index: 9;
-
-  &::before {
-    display: block;
-    content: "";
-    height: 90%;
-    width: 160%;
-    position: absolute;
-    background-image: url(/DWB/assets/images/shadow.png);
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    top: 89%;
-    left: -30%;
-    right: 0;
-    transition: all .1s ease-out;
-    transform-origin: 30% 50%;
-    pointer-events: none;
-  }
-
-  &:hover {
-    a {
-      transform: rotate(0);
-    }
-
-    &::before {
-      opacity: 0;
-      transform: scaleX(0);
-    }
-  }
+  bottom: 20px;
+  right: 10px;
 }
 
-@media (min-height: 600px) {
-  .back-to-top-wrapper {
-    display: block;
+.scroll {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  background: #b2b2b2;
+  background: rgba(178,178,178,0.7);
+  padding: 20px;
+  text-align: center;
+  margin: 0 0 0 0;
+  cursor: pointer;
+  transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+
+  &:hover {
+    background: rgba(178,178,178,1.0);
+    transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+
+    .fa {
+      padding-top: -10px;
+    }
+  }
+
+  .fa {
+    font-size: 30px;
+    margin-top: -5px;
+    margin-left: 1px;
+    transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
   }
 }
