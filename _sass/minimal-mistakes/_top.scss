@@ -11,8 +11,7 @@
   position: absolute;
   right: 20px;
   bottom: 20px;
-  background: #b2b2b2;
-  background: rgba(178,178,178,0.7);
+  background: rgb(128, 128, 128);
   padding: 20px;
   text-align: center;
   margin: 0 0 0 0;
@@ -29,12 +28,12 @@
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
 
-    .fa {
+    .fas {
       padding-top: -10px;
     }
   }
 
-  .fa {
+  .fas {
     font-size: 30px;
     margin-top: -5px;
     margin-left: 1px;
