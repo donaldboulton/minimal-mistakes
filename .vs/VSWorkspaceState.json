@@ -1,14 +1,14 @@
 {
   "ExpandedNodes": [
     "",
-    "\\assets\\images",
+    "\\assets",
     "\\assets\\js",
     "\\_includes",
-    "\\_includes\\footer",
-    "\\_includes\\head",
+    "\\_includes\\analytics-providers",
     "\\_layouts",
+    "\\_posts",
     "\\_sass\\minimal-mistakes"
   ],
-  "SelectedNode": "\\_config.yml",
+  "SelectedNode": "\\_includes\\scripts.html",
   "PreviewInSolutionExplorer": false
 }

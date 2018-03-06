@@ -151,7 +151,7 @@ context.fillText(initials, canvasCssWidth / 2, canvasCssHeight / 1.5);
             canvas = null;
 
             return dataURI;
-        }
+        },
 
         LetterAvatar.transform = function () {
 
@@ -195,21 +195,18 @@ context.fillText(initials, canvasCssWidth / 2, canvasCssHeight / 1.5);
 
 Lets take a look a Minimal Mistakes post on Staticman Comments, at [Improving Jekyll Staticman Comments](https://mademistakes.com/articles/improving-jekyll-static-comments/)
 
-The comments include form in: _includes/comment.html, lines 
+The comments include form in: _includes/comment.html, line 8
 
 ```html
-<img src="/assets/images/avatar-60.png" srcset="/assets/images/avatar-120.png 2x" alt="{{ include.name | escape }}">
+8 <img src="/assets/images/avatar-60.png" srcset="/assets/images/avatar-120.png 2x" alt="{{ include.name | escape }}">
 ```
 
 ### Image changes
 
 Modifying the Image link From:
 ```html
-<img src="/assets/images/avatar-60.png" srcset="/assets/images/avatar-120.png 2x; 
+8 <img src="/assets/images/avatar-60.png" srcset="/assets/images/avatar-120.png 2x; 
 ```
-
-I am sure this will work just fine in Minimal Mistakes - Staticman Comments form.
-
 Changed To: Letter Avatar
 
 Removed src="..." and srcset="..." 
@@ -217,14 +214,57 @@ Removed src="..." and srcset="..."
 Added
 
 ```html
-avatar="include.name | escape" alt="include.name | escape"
+avatar="include.name | escape" class="identicon" alt="include.name | escape"
+```
+Then the link to the Gravatar image you have to change for yur own genertic image, orLetter Avatar generated.
+
+As discribed at [Stack Overflow](https://stackoverflow.com/questions/2683803/gravatar-is-there-a-default-image)
+
+I will Change Line 6
+
+```html
+<img src="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=60" srcset="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=120 2x" alt="{{ include.name | escape }}">
+```
+From:
+```html
+?d=mm&s=60 
+and also 
+?d=mm&s=120 2x
+```
+To:
+```html
+?d=avatar
+on both links.
+```
+### Add avatar.js
+
+Adding the modified MVC Letter Avatar.js to my /assets/js/avatar.js.
+
+Link to it in scripts.html
+
+```html
+<script src="{{ '/assets/js/avatar.js' | absolute_url }}"></script>
+```
+Or in a mardown page as.
+
+```html
+footer:
+  - /assets/js/avatar.js
+```
+### Adding Scripts Site wide in _config.yaml
+
+To add scripts to the <head> or closing </body> elements by adding paths to following arrays in _config.yml.
+
+```yaml
+head_scripts:
+  - https://code.jquery.com/jquery-3.3.1.min.js
+  - /assets/js/your-custom-head-script.js
+
+footer_scripts:
+  - /assets/js/your-custom-footer-script.js
 ```
 
-### Modify _main.js_
-
-Adding the modified MVC .js to my _main.js.
-
-Then create and register avatar.scss file in minimal-mistakes.scss, for width, height and rounded images.
+Then create avatar.scss and register the avatar.scss file in minimal-mistakes.scss, for width, height and rounded images.
 
 {% include gallery caption="Gravtar, Avatar, Letter Avatar." %}
  
