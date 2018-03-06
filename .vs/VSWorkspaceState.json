@@ -1,15 +1,14 @@
 {
   "ExpandedNodes": [
     "",
-    "\\assets",
     "\\assets\\images",
-    "\\assets\\images\\pages\\svg",
     "\\assets\\js",
     "\\_includes",
     "\\_includes\\footer",
-    "\\_sass",
+    "\\_includes\\head",
+    "\\_layouts",
     "\\_sass\\minimal-mistakes"
   ],
-  "SelectedNode": "\\_sass\\minimal-mistakes\\_top.scss",
+  "SelectedNode": "\\_config.yml",
   "PreviewInSolutionExplorer": false
 }
