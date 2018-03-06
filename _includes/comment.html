@@ -3,7 +3,7 @@
     {% if include.avatar %}
     <img src="{{ include.avatar }}" alt="{{ include.name | escape }}">
     {% elsif include.email %}
-    <img src="https://www.gravatar.com/avatar/{{ include.email }}?d=avatar" srcset="https://www.gravatar.com/avatar/{{ include.email }}?d=avatar=120 2x" alt="{{ include.name | escape }}">
+    <img src="https://www.gravatar.com/avatar/{{ include.email }}" srcset="https://www.gravatar.com/avatar/{{ include.email }}" alt="{{ include.name | escape }}">
     {% else %}
     <img class="avatar" avatar="{{ include.name | escape }}" alt="{{ include.name | escape }}" />
     {% endif %}

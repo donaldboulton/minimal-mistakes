@@ -231,11 +231,15 @@ From:
 and also 
 ?d=mm&s=120 2x
 ```
-To:
+To nothing for fallback image in gravatar links, then it falls back to 
+
 ```html
-?d=avatar
-on both links.
+    <img src="https://www.gravatar.com/avatar/{{ include.email }}?d=avatar" srcset="https://www.gravatar.com/avatar/{{ include.email }}?d=avatar=120 2x" alt="{{ include.name | escape }}">
+% else %
+    <img class="avatar" avatar="{{ include.name | escape }}" alt="{{ include.name | escape }}" />
+% endif %
 ```
+
 ### Add avatar.js
 
 Adding the modified MVC Letter Avatar.js to my /assets/js/avatar.js.

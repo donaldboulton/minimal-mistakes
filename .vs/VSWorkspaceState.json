@@ -3,12 +3,9 @@
     "",
     "\\assets",
     "\\assets\\js",
-    "\\_includes",
-    "\\_includes\\analytics-providers",
-    "\\_layouts",
     "\\_posts",
-    "\\_sass\\minimal-mistakes"
+    "\\_site\\assets\\js"
   ],
-  "SelectedNode": "\\_includes\\scripts.html",
+  "SelectedNode": "\\assets\\js\\avatar.js",
   "PreviewInSolutionExplorer": false
 }
