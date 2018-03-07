@@ -14,6 +14,8 @@ body {
   color: $text-color;
   font-family: $global-font-family;
   line-height: 1.5;
+  background-image: url(/DWB/assets/images/pages/bg10-min.png);
+  background-repeat: repeat;
 
   &.overflow--hidden {
     /* when primary navigation is visible, the content in the background won't scroll */

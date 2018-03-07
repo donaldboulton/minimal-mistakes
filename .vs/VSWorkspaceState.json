@@ -1,18 +1,15 @@
 {
   "ExpandedNodes": [
     "",
-    "\\_includes",
     "\\_includes\\comments-providers",
-    "\\_pages",
-    "\\_plugins",
+    "\\_sass",
+    "\\_sass\\minimal-mistakes",
     "\\_site\\collection",
     "\\_site\\collection-archive",
     "\\_site\\collection\\pets",
     "\\_site\\collection\\posts",
-    "\\_site\\programing\\2018",
-    "\\_site\\programing\\2018\\02",
-    "\\_site\\programing\\2018\\02\\23"
+    "\\_site\\programing\\2018"
   ],
-  "SelectedNode": "\\_includes\\comments-providers\\google-plus.html",
+  "SelectedNode": "\\_sass\\minimal-mistakes.scss",
   "PreviewInSolutionExplorer": false
 }

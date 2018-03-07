@@ -29,6 +29,7 @@ toc_icon: "file"
 
 <!-- Place this render call where appropriate. -->
 <script type="text/javascript">gapi.person.go();</script>
+
 ## Facebook
 
 <div id="fb-root"></div>
