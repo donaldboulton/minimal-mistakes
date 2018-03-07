@@ -52,6 +52,7 @@ curl -X POST \
 ```
 ### Create a webhook
 Click on the github project Settings>Webhooks>Add webhook, Payload URLfill in the link above and add parameters, for example
-
+```html
 https://gitlab.com/api/v3/projects/1400576/trigger/builds?token=5e763611ads5fb89598220414e334b&ref=master
+```
 Notice that the token is replaced
