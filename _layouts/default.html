@@ -22,6 +22,12 @@
   <div class="initial-content">
     {{ content }}
   </div>
+
+  {% if site.search == true %}
+  <div class="search-content">
+    {% include search/search_form.html %}
+  </div>
+  {% endif %}
   <div class="text-center">
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <ins class="adsbygoogle"
@@ -33,12 +39,6 @@
       (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
   </div>
-  {% if site.search == true %}
-  <div class="search-content">
-    {% include search/search_form.html %}
-  </div>
-  {% endif %}
-
   <div class="page__footer">
     <footer>
       {% include footer/custom.html %}
