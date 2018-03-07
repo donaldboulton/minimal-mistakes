@@ -1,11 +1,18 @@
 {
   "ExpandedNodes": [
     "",
-    "\\assets\\images\\icons",
-    "\\assets\\images\\pages\\svg",
-    "\\collections\\_pets",
     "\\_includes",
-    "\\_sass\\minimal-mistakes"
+    "\\_includes\\comments-providers",
+    "\\_pages",
+    "\\_plugins",
+    "\\_site\\collection",
+    "\\_site\\collection-archive",
+    "\\_site\\collection\\pets",
+    "\\_site\\collection\\posts",
+    "\\_site\\programing\\2018",
+    "\\_site\\programing\\2018\\02",
+    "\\_site\\programing\\2018\\02\\23"
   ],
+  "SelectedNode": "\\_includes\\comments-providers\\google-plus.html",
   "PreviewInSolutionExplorer": false
 }

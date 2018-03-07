@@ -96,7 +96,7 @@ Google Adsense, a third party affiliate marketing network, uses cookies to help 
 
 You can read: [Google Adsense Privacy Policy](http://support.google.com/adsense/bin/answer.py?hl=en&answer=48182).
 
-### Disclosure Policy
+# Disclosure Policy
 
 I make money on this website through affiliate programs. If you click an affiliate link or ad banner and buy the product, you help support this website because I'll get a percentage of that sale.
 
