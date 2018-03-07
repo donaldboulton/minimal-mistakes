@@ -30,6 +30,8 @@ header:
   teaser: /assets/images/pages/staticman-github-gitlab.png
 ---
 
+{% include octo-arm.html %}
+
 ## Use staticman For Gitlab Comments
 
 Taken From [Zong Ren's blog](https://zongren.me/2016/09/23/use-staticman-in-gitlab-pages/#%E5%88%9B%E5%BB%BAstaticmanapp)
