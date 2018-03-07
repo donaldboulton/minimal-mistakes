@@ -1,5 +1,4 @@
 $color___1: initial;
-$font_family___1: Helvetica,Calibri,Arial,sans-serif;
 $background_color___1: transparent;
 $border_color_1: transparent;
 
@@ -9,7 +8,6 @@ $border_color_1: transparent;
   position: fixed;
   overflow: hidden;
   box-sizing: border-box;
-  font-family: $font_family___1;
   font-size: 16px;
   line-height: 1.5em;
   display: -ms-flexbox;
@@ -52,7 +50,6 @@ $border_color_1: transparent;
   position: fixed;
   overflow: hidden;
   box-sizing: border-box;
-  font-family: $font_family___1;
   font-size: 16px;
   line-height: 1.5em;
   display: -ms-flexbox;
@@ -301,7 +298,7 @@ $border_color_1: transparent;
     margin: 2em 2em 1.5em;
   }
 
-  .cc-btn& + .cc-btn {
+  .cc-btn {
     margin-left: 0;
   }
 }
