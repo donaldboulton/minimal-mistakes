@@ -26,4 +26,10 @@
   &::-webkit-scrollbar-thumb:horizontal {
     background-color: #000000;
   }
+
+  &::-webkit-scrollbar-corner {
+    display: none;
+    height: 0px;
+    width: 0px;
+  }
 }
