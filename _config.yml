@@ -205,8 +205,8 @@ plugins:
   - jekyll-figure
   - jekyll-jekyll-typogrify
   - jekyll-tagging-related_posts
-  - jekyll-octicons
   - jekyll-admin
+  - jekyll-mentions
   - jemoji
   - json
 
@@ -221,7 +221,7 @@ whitelist:
   - jekyll-figure
   - jekyll-jekyll-typogrify
   - jekyll-tagging-related_posts
-  - jekyll-octicons
+  - jekyll-mentions
   - jekyll-admin
   - jemoji
   - json
