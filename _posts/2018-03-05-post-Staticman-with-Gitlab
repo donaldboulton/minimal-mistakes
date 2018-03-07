@@ -16,6 +16,7 @@ tags:
   - Staticman
   - Github
   - Gitlab
+
 category:
   - Staticman
 
@@ -25,11 +26,11 @@ toc_icon: "file"
 
 excerpt: "Use Staticman push to Gitlab"
 header:
-  image: /assets/images/pages/staticman-github-gitlab.jpeg
-  teaser: /assets/images/pages/staticman-github-gitlab.jpeg
+  image: /assets/images/pages/staticman-github-gitlab.png
+  teaser: /assets/images/pages/staticman-github-gitlab.png
 ---
 
-## Use staticman in gitlab pages
+## Use staticman For Gitlab Comments
 
 Taken From [Zong Ren's blog](https://zongren.me/2016/09/23/use-staticman-in-gitlab-pages/#%E5%88%9B%E5%BB%BAstaticmanapp)
 
