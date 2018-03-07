@@ -100,7 +100,9 @@ You can read: [Google Adsense Privacy Policy](http://support.google.com/adsense/
 
 I make money on this website through affiliate programs. If you click an affiliate link or ad banner and buy the product, you help support this website because I'll get a percentage of that sale.
 
-Currently I'm an affiliate for Amazon and Google Adsense.
+Currently Michael Rose is affiliate for Amazon and Google Adsense.
+
+Donald Boulton and this Donald Boulton Website is a Affiliate for Google Adsense.
 
 What this means for you:
 
@@ -117,4 +119,4 @@ All original content (e.g. articles, blog posts, illustrations, artwork, and pho
 
 ### Attribution
 
-If you're inclined to give credit --- a link back to the source article attributed to either [Donald Boulton](https://github.com/donaldboulton) or [donboulton.com](https://donaldboulton.github.io/DWB/) is good enough for me. If you don't want to attribute my content, hey that's cool too. Just don't go stealing stuff and republishing it as your own.
+If you're inclined to give credit --- a link back to the source article attributed to either [Made Mistakes](https://mmistakes.github.io/minimal-mistakes/terms/) or [Michael Rose](https://mademistakes.com/about/) or this website designer [Donald Boulton](https://github.com/donaldboulton) or [donboulton.com](https://donaldboulton.github.io/DWB/) is good enough for me. If you don't want to attribute our content, hey that's cool too. Just don't go using our stuff and republishing it as your own.

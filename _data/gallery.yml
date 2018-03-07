@@ -35,9 +35,9 @@ galleries:
   # if the gallery is listed it uses specified values except for defaults
   Hidden Gallery:
     hidden: true # don't generate index file - it's still on the web though
-  Shows 2018:
-    title: Shows in November # name used in the navigation bar and headers
-    description: Where I've been, what I've done in 2018
+  Pets 2018:
+    title: My Cats # name used in the navigation bar and headers
+    description: What I've been taking care of, Kittys in 2018
     #hidden: true
     #sort_field: name # rule for sorting images within galleries.
     #best_image: MoonLight.jpg
@@ -45,11 +45,10 @@ galleries:
     Super1.jpg: Set one
     SSDa2.jpg: All in two
     scale_method: crop_bottom
-  Paintings:
-    description: Egg tempera, acrylic and gold leaf on wood.
-    best_image: Soob.jpg
-    header_image: paintings_header.jpg
+  Pictures:
+    description: Tiger Kitty, Egyption Mau
+    best_image: Tiger.jpg
+    header_image: Kittys.jpg
     scale_method: crop_bottom
-    paintings.jpg: Nevy
 
 #symlink: true # to avoid copying big files into the generated site folder - does not work with stripping EXIF
