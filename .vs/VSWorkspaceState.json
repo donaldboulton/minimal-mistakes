@@ -1,11 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\assets",
-    "\\assets\\js",
-    "\\_posts",
-    "\\_site\\assets\\js"
+    "\\assets\\images\\icons",
+    "\\assets\\images\\pages\\svg",
+    "\\collections\\_pets",
+    "\\_includes",
+    "\\_sass\\minimal-mistakes"
   ],
-  "SelectedNode": "\\assets\\js\\avatar.js",
   "PreviewInSolutionExplorer": false
 }
