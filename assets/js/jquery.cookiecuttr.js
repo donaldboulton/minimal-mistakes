@@ -84,11 +84,11 @@
         var cookieDiscreetPosition = options.cookieDiscreetPosition;
         var cookieNoMessage = options.cookieNoMessage;
         // cookie identifier
-        var $cookieAccepted = $.cookie('cc_cookie_accept') == "cc_cookie_accept";
+        var $cookieAccepted = $.cookie('cc_cookie_accept') === "cc_cookie_accept";
         $.cookieAccepted = function () {
             return $cookieAccepted;
         };
-        var $cookieDeclined = $.cookie('cc_cookie_decline') == "cc_cookie_decline";
+        var $cookieDeclined = $.cookie('cc_cookie_decline') === "cc_cookie_decline";
         $.cookieDeclined = function () {
             return $cookieDeclined;
         };
@@ -111,7 +111,7 @@
             var cookieOverlay = "";
         }
         // to prepend or append, that is the question?
-        if ((cookieNotificationLocationBottom) || (cookieDiscreetPosition == "bottomright") || (cookieDiscreetPosition == "bottomleft")) {
+        if ((cookieNotificationLocationBottom) || (cookieDiscreetPosition === "bottomright") || (cookieDiscreetPosition === "bottomleft")) {
             var appOrPre = true;
         } else {
             var appOrPre = false;
@@ -125,19 +125,19 @@
                     $('body').prepend('<div class="cc-cookies cc-discreet"><a class="cc-cookie-reset" href="#" title="' + cookieResetButtonText + '">' + cookieResetButtonText + '</a></div>');
                 }
                 //add appropriate CSS depending on position chosen
-                if (cookieDiscreetPosition == "topleft") {
+                if (cookieDiscreetPosition === "topleft") {
                     $('div.cc-cookies').css("top", "0");
                     $('div.cc-cookies').css("left", "0");
                 }
-                if (cookieDiscreetPosition == "topright") {
+                if (cookieDiscreetPosition === "topright") {
                     $('div.cc-cookies').css("top", "0");
                     $('div.cc-cookies').css("right", "0");
                 }
-                if (cookieDiscreetPosition == "bottomleft") {
+                if (cookieDiscreetPosition === "bottomleft") {
                     $('div.cc-cookies').css("bottom", "0");
                     $('div.cc-cookies').css("left", "0");
                 }
-                if (cookieDiscreetPosition == "bottomright") {
+                if (cookieDiscreetPosition === "bottomright") {
                     $('div.cc-cookies').css("bottom", "0");
                     $('div.cc-cookies').css("right", "0");
                 }
@@ -161,19 +161,19 @@
                     $('body').prepend('<div class="cc-cookies cc-discreet"><a href="' + cookiePolicyLinkIn + '" title="' + cookieDiscreetLinkText + '">' + cookieDiscreetLinkText + '</a></div>');
                 }
                 //add appropriate CSS depending on position chosen
-                if (cookieDiscreetPosition == "topleft") {
+                if (cookieDiscreetPosition === "topleft") {
                     $('div.cc-cookies').css("top", "0");
                     $('div.cc-cookies').css("left", "0");
                 }
-                if (cookieDiscreetPosition == "topright") {
+                if (cookieDiscreetPosition === "topright") {
                     $('div.cc-cookies').css("top", "0");
                     $('div.cc-cookies').css("right", "0");
                 }
-                if (cookieDiscreetPosition == "bottomleft") {
+                if (cookieDiscreetPosition === "bottomleft") {
                     $('div.cc-cookies').css("bottom", "0");
                     $('div.cc-cookies').css("left", "0");
                 }
-                if (cookieDiscreetPosition == "bottomright") {
+                if (cookieDiscreetPosition === "bottomright") {
                     $('div.cc-cookies').css("bottom", "0");
                     $('div.cc-cookies').css("right", "0");
                 }
