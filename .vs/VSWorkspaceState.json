@@ -1,15 +1,15 @@
 {
   "ExpandedNodes": [
     "",
-    "\\_includes\\comments-providers",
+    "\\assets",
+    "\\assets\\css",
+    "\\assets\\images",
+    "\\assets\\images\\icons",
+    "\\_includes\\footer",
+    "\\_portfolio",
     "\\_sass",
-    "\\_sass\\minimal-mistakes",
-    "\\_site\\collection",
-    "\\_site\\collection-archive",
-    "\\_site\\collection\\pets",
-    "\\_site\\collection\\posts",
-    "\\_site\\programing\\2018"
+    "\\_sass\\minimal-mistakes"
   ],
-  "SelectedNode": "\\_sass\\minimal-mistakes.scss",
+  "SelectedNode": "\\_sass\\minimal-mistakes\\_scrollbar.scss",
   "PreviewInSolutionExplorer": false
 }

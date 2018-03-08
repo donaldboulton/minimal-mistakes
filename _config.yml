@@ -280,6 +280,7 @@ defaults:
       comments: true
       share: true
       related: true
+      pagnation_path: "/posts/page:num/"
   # _pages
   - scope:
       path: "_pages"
