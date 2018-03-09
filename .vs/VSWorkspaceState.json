@@ -1,15 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\assets",
     "\\assets\\css",
     "\\assets\\images",
     "\\assets\\images\\icons",
-    "\\_includes\\footer",
-    "\\_portfolio",
+    "\\_pages",
     "\\_sass",
     "\\_sass\\minimal-mistakes"
   ],
-  "SelectedNode": "\\_sass\\minimal-mistakes\\_scrollbar.scss",
+  "SelectedNode": "\\_pages\\terms.md",
   "PreviewInSolutionExplorer": false
 }

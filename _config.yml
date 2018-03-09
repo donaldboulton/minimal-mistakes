@@ -119,7 +119,7 @@ author:
   foursquare             :
   github                 : "donaldboulton"
   gitlab                 : "donaldboulton"
-  google_plus            : "+DonaldBoulton"
+  google_plus            : "DonaldBoulton"
   keybase                :
   instagram              :
   lastfm                 :
@@ -196,34 +196,20 @@ sass:
 
 # Plugins (previously gems:)
 plugins:
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
   - jekyll-seo-tag
   - jekyll-archives
-  - jekyll-paginate-v2
   - jekyll-figure
-  - jekyll-jekyll-typogrify
   - jekyll-tagging-related_posts
   - jekyll-admin
-  - jekyll-mentions
-  - jemoji
   - json
 
 # mimic GitHub Pages with --safe
 whitelist:
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
   - jekyll-seo-tag
   - jekyll-archives
-  - jekyll-paginate-v2
   - jekyll-figure
-  - jekyll-jekyll-typogrify
   - jekyll-tagging-related_posts
-  - jekyll-mentions
   - jekyll-admin
-  - jemoji
   - json
 
 # Archives
