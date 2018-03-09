@@ -115,15 +115,15 @@ author:
   codepen                :
   dribbble               :
   flickr                 :
-  facebook               : 
+  facebook               :
   foursquare             :
   github                 : "donaldboulton"
-  gitlab                 : "donaldboulton"
-  google_plus            : "DonaldBoulton"
+  gitlab                 :
+  google_plus            : "donaldboulton"
   keybase                :
   instagram              :
   lastfm                 :
-  linkedin               : 
+  linkedin               : "don-boulton-3a10972b"
   pinterest              :
   soundcloud             :
   stackoverflow          : # none
@@ -171,12 +171,14 @@ keep_files:
 encoding: "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
+
 # Conversion
 markdown: kramdown
 highlighter: rouge
 lsi: false
 excerpt_separator: "\n\n"
 incremental: false
+
 
 # Markdown Processing
 kramdown:
@@ -196,20 +198,34 @@ sass:
 
 # Plugins (previously gems:)
 plugins:
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
   - jekyll-seo-tag
   - jekyll-archives
+  - jekyll-paginate-v2
   - jekyll-figure
+  - jekyll-jekyll-typogrify
   - jekyll-tagging-related_posts
+  - jekyll-octicons
   - jekyll-admin
+  - jemoji
   - json
 
 # mimic GitHub Pages with --safe
 whitelist:
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
   - jekyll-seo-tag
   - jekyll-archives
+  - jekyll-paginate-v2
   - jekyll-figure
+  - jekyll-jekyll-typogrify
   - jekyll-tagging-related_posts
+  - jekyll-octicons
   - jekyll-admin
+  - jemoji
   - json
 
 # Archives
@@ -252,6 +268,9 @@ collections:
   pets:
     output: true
     permalink: /pets/:path/
+  posts:
+    output: true
+    permalink: /posts/:path/
 
 # Defaults
 defaults:
@@ -266,7 +285,6 @@ defaults:
       comments: true
       share: true
       related: true
-      pagnation_path: "/posts/page:num/"
   # _pages
   - scope:
       path: "_pages"
@@ -311,7 +329,7 @@ autopages:
   collections:
     layouts: 
       - 'autopage_collection.html'
-    title: 'Pets in collection :coll' # :coll is replaced by the collection name
+    title: 'Posts in collection :coll' # :coll is replaced by the collection name
     permalink: '/collection/:coll'
   tags:
     enabled: true

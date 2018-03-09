@@ -1,13 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\assets\\css",
-    "\\assets\\images",
-    "\\assets\\images\\icons",
-    "\\_pages",
+    "\\assets",
+    "\\assets\\js",
+    "\\assets\\js\\plugins",
+    "\\assets\\js\\vendor\\jquery",
     "\\_sass",
     "\\_sass\\minimal-mistakes"
   ],
-  "SelectedNode": "\\_pages\\terms.md",
+  "SelectedNode": "\\_includes",
   "PreviewInSolutionExplorer": false
 }
