@@ -28,7 +28,7 @@ All of this information is not linked to anything that is personally identifiabl
 
 ## Cookies and Web Beacons
 
-![Cookie](/DWB/assets/images/pages/svg/cookies.svg)
+![Cookie](/bibwoe/assets/images/pages/svg/cookies.svg)
 
 {% include video id="yoE9-tNvhRs" provider="youtube" %}
 
@@ -89,6 +89,7 @@ This cookie is used to determine the traffic source, medium, campaign name and c
 * __utmc
 
 This Cookie waits 30 minutes, and then it expires. You see, __utmc has no way of knowing when a user closes their browser or leaves a website, so it waits 30 minutes for another pageview to happen, and if it doesn’t, it expires.
+And is used to store information, such as what time your current visit occurred, whether you have been to the site before, and what site referred you to the web page.
 
 From Stackoverflow: [What does __utma mean?](https://stackoverflow.com/questions/1823406/what-does-utma-mean)
 
@@ -98,8 +99,6 @@ This cookie is used for storing visitor-level custom variable data.  It is creat
 
 Although each of these cookies has a set expiration time, each time the ga.js library is executed and the expiration time has not been met  the cookie is updated, resetting the expiration date to its original value.
 
-For those of you who are already aware of cookies you may have noticed that I have left out _utmc.  This is because strictly speaking it is not used within the ga.js library.  This cookie expires when the browser is closed, therefore, for the purpose of this blog post I am going to overlook this cookie.
-These cookies are used to store information, such as what time your current visit occurred, whether you have been to the site before, and what site referred you to the web page.
 
 These cookies contain no personally identifiable information but they will use your computer's IP address to know from where in the world you are accessing the Internet.
 
@@ -148,4 +147,4 @@ All original content (e.g. articles, blog posts, illustrations, artwork, and pho
 
 ### Attribution
 
-If you're inclined to give credit --- a link back to the source article attributed to either [Made Mistakes](https://mmistakes.github.io/minimal-mistakes/terms/) or [Michael Rose](https://mademistakes.com/about/) or this website designer [Donald Boulton](https://github.com/donaldboulton) or [donboulton.com](https://donaldboulton.github.io/DWB/) is good enough for me. If you don't want to attribute our content, hey that's cool too. Just don't go using our stuff and republishing it as your own.
+If you're inclined to give credit --- a link back to the source article attributed to either [Made Mistakes](https://mmistakes.github.io/minimal-mistakes/terms/) or [Michael Rose](https://mademistakes.com/about/) or this website designer [Donald Boulton](https://github.com/bibwoe) or [donboulton.com](https://donaldboulton.github.io/bibwoe/) is good enough for me. If you don't want to attribute our content, hey that's cool too. Just don't go using our stuff and republishing it as your own.

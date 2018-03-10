@@ -1,13 +1,7 @@
 {
   "ExpandedNodes": [
     "",
-    "\\assets",
-    "\\assets\\js",
-    "\\assets\\js\\plugins",
-    "\\assets\\js\\vendor\\jquery",
-    "\\_sass",
-    "\\_sass\\minimal-mistakes"
+    "\\_includes"
   ],
-  "SelectedNode": "\\_includes",
   "PreviewInSolutionExplorer": false
 }
