@@ -1,0 +1,103 @@
+# Name of the property. You can have multiple properties with completely
+# different config blocks for different sections of your site.
+# For example, you can have one property to handle comment submission and
+# another one to handle posts.
+# To encrypt strings use the following endpoint:
+# https://api.staticman.net/v2/encrypt/{TEXT TO BE ENCRYPTED}
+
+comments:
+  # (*) REQUIRED
+  #
+  # Names of the fields the form is allowed to submit. If a field that is
+  # not here is part of the request, an error will be thrown.
+  allowedFields: ["name", "email", "url", "message", "replying_to"]
+
+  # (*) REQUIRED WHEN USING NOTIFICATIONS
+  #
+  # When allowedOrigins is defined, only requests sent from one of the domains
+  # listed will be accepted. The origin is sent as part as the `options` object
+  # (e.g. <input name="options[origin]" value="http://yourdomain.com/post1")
+  allowedOrigins: ["https://donboulton.com"]
+
+  # (*) REQUIRED
+  #
+  # Name of the branch being used. Must match the one sent in the URL of the
+  # request.
+  branch: "master"
+
+  commitMessage: "New comment"
+
+  # (*) REQUIRED
+  #
+  # Destination path (filename) for the data files. Accepts placeholders.
+  filename: "comment-{@timestamp}"
+
+  # The format of the generated data files. Accepted values are "json", "yaml"
+  # or "frontmatter"
+  format: "yaml"
+
+  # List of fields to be populated automatically by Staticman and included in
+  # the data file. Keys are the name of the field. The value can be an object
+  # with a `type` property, which configures the generated field, or any value
+  # to be used directly (e.g. a string, number or array)
+  generatedFields:
+    date:
+      type: "date"
+      options:
+        format: "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
+
+  # Whether entries need to be approved before they are published to the main
+  # branch. If set to `true`, a pull request will be created for your approval.
+  # Otherwise, entries will be published to the main branch automatically.
+  moderation: false
+
+  # Akismet spam detection.
+  akismet:
+    enabled: false
+  #   author: "name"
+  #   authorEmail: "email"
+  #   authorUrl: "url"
+  #   content: "message"
+  #   type: "comment"
+
+  # Name of the site. Used in notification emails.
+  name: "Donald Boulton"
+
+  # Notification settings. When enabled, users can choose to receive notifications
+  # via email when someone adds a reply or a new comment. This requires an account
+  # with Mailgun, which you can get for free at http://mailgun.com.
+  notifications:
+    enabled: true
+
+    # (!) ENCRYPTED
+    #
+  Mailgun API key:
+    apiKey: "H5EZw3wcgp0MVFVT9xj1T2bjagHUmxotILm4KbnXTHE5MtyHj+1pk+kQQGQuVdH8U/rgnth/4kvm/4lWRmxgu3vNAotPpg5VcmZsd7A44D/+sLNrZCXU7q5+YZ6VHYMjQpbHTBOsdebxq3Tog/3x3ONuR5XL/kRQNvD9tdjmdFw="
+
+    # (!) ENCRYPTED
+    #
+  Mailgun domain:
+    domain: "https://api.mailgun.net/v3/donboulton.com"
+
+  # (*) REQUIRED
+  #
+  # Destination path (directory) for the data files. Accepts placeholders.
+  path: "_data/comments/{options.slug}" # "/_data/comments/{options.slug}" (default)
+
+  # Names of required files. If any of these isn't in the request or is empty,
+  # an error will be thrown.
+  requiredFields: ["name", "email", "message"]
+
+  # List of transformations to apply to any of the fields supplied. Keys are
+  # the name of the field and values are possible transformation types.
+  transforms:
+    email: md5
+
+  # reCaptcha
+  # Register your domain at https://www.google.com/recaptcha/ and choose reCAPTCHA V2
+  reCaptcha:
+    enabled: true
+    siteKey: "6Lf15UcUAAAAALh_yk6LPPErNxT-Qd-k2efKcJxR"
+    # Encrypt reCaptcha secret key using Staticman /encrypt endpoint
+    # For more information, https://staticman.net/docs/encryption
+    secret: "q0fksxUG8S3yendptK4byPIrlKUWhVPPn+zMA+2hjPd3ekaOPrwK04Ig0hHlyneN3z6zfH6edP7zk4kQEIHy8OOYADVmBAOX8US4dKusdXvoxHBFbdZPdC9o/FgS1eUkcrsn4g8cuXr4HUxz9/hoiMg2gHn0+5W99KoxR8pL+54="

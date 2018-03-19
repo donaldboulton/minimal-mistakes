@@ -1,0 +1,342 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your entire site, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# `jekyll serve`. If you change this file, please restart the server process.
+
+minimal_mistakes_skin    : "neon" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+
+# Site Settings
+locale                   : "en-US"
+title                    : "Donald Boulton"
+title_separator          : "-"
+name                     : "Donald W. Boulton II"
+description              : "DWB's Jekyll website."
+url                      : "https://donboulton.com"
+baseurl                  : "/"
+repository               : "donaldboulton/DWB"
+teaser                   : "/assets/images/pages/digital_box_1400-compressor.jpg"
+# breadcrumbs            : true # true, false (default)
+words_per_minute         : 200
+comments:
+  provider               : "staticman_v2" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
+  disqus:
+    shortname            : "donald-boulton"
+  discourse:
+    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
+  facebook:
+    appid                : "322180367845124"
+    num_posts            : # 5 (default)
+    colorscheme          : "dark"
+staticman:
+  allowedFields          : ['name', 'email', 'url', 'message', 'replying_to']
+  branch                 : "master"
+  commitMessage          : "New comment."
+  filename               : "comment-{@timestamp}"
+  format                 : "yml"
+  moderation             : false
+  path                   : "/_data/comments/{options.slug}"
+  requiredFields         : ['name', 'email', 'message']
+  transforms:
+    email                : "md5"
+  generatedFields:
+    date:
+      type               : "date"
+      options:
+        format           : "iso8601"
+reCaptcha:
+  siteKey                : "6Lf15UcUAAAAALh_yk6LPPErNxT-Qd-k2efKcJxR"
+  secret                 : "q0fksxUG8S3yendptK4byPIrlKUWhVPPn+zMA+2hjPd3ekaOPrwK04Ig0hHlyneN3z6zfH6edP7zk4kQEIHy8OOYADVmBAOX8US4dKusdXvoxHBFbdZPdC9o/FgS1eUkcrsn4g8cuXr4HUxz9/hoiMg2gHn0+5W99KoxR8pL+54="
+atom_feed:
+  path                   : # blank (default) uses feed.xml
+search                   : true
+search_full_content      : true
+search_provider          : lunr
+
+algolia:
+  application_id         : "G34JUR3EB9"
+  index_name             : "donald_boulton"
+  search_only_api_key    : "68c60968e03d06ce61d592425b22c6bd"
+  algolia_api_key        : "KLAOJmvpl1yZhCrno50lgSpRVJrrTtPKi98521LaL8X62hajFubs8IHB5eLjrcG5DOQJdfB6Dca9XluHQQQCWVJhQVAD7aqzfivz5/AlYEYukabDmEOw6Efd8RzNhlsFvVTa0t2/oxYWL66Xo9LtRbC0Lfpkf/u/RpA55pn5CkE="
+  powered_by             : true
+
+Mailgun:
+  smtp_Hostname          : "smtp.mailgun.org"
+  api_Base_Url           : "https://api.mailgun.net/v3/donboulton.com"
+  api_key                : "H5EZw3wcgp0MVFVT9xj1T2bjagHUmxotILm4KbnXTHE5MtyHj+1pk+kQQGQuVdH8U/rgnth/4kvm/4lWRmxgu3vNAotPpg5VcmZsd7A44D/+sLNrZCXU7q5+YZ6VHYMjQpbHTBOsdebxq3Tog/3x3ONuR5XL/kRQNvD9tdjmdFw="
+  smtp_login             : "postmaster@donboulton.com"
+
+github                   : [metadata]
+
+head_scripts:
+  - https://www.googletagmanager.com/gtag/js?id=UA-30162465-2
+
+# SEO Related
+google_site_verification : "DKp8oxWR5F4kbaJJ9uowH1ySMttXrrUjIknx1OfUHc8"
+bing_site_verification   : "361016BEC0F67F6A834D6186E897D9EC"
+yandex_site_verification :
+naver_site_verification  :
+
+# Social Sharing
+twitter:
+  username               : "donboulton"
+facebook:
+  username               : "donboulton"
+  app_id                 :
+  publisher              :
+og_image                 : "favicon.png" # Open Graph/Twitter default site image
+# For specifying social profiles
+# - https://developers.google.com/structured-data/customize/social-profiles
+social:
+  type                   : # Person or Organization (defaults to Person)
+  name                   : # If the user or organization name differs from the site's name
+  links: # An array of links to social media profiles
+    - "https://twitter.com/donboulton"
+    - "https://facebook.com/donboulton"
+
+# Analytics
+analytics:
+  provider               : "google"
+  google:
+    tracking_id          : "UA-30162465-2"
+
+
+# Site Author
+author:
+  name                   : "Donald Boulton"
+  avatar                 : "/assets/images/pages/donald-boulton-100.jpg"
+  bio                    : "Away from Asp. Anything."
+  location               : "OKC Oklahoma"
+  email                  : "donaldboulton@gmail.com"
+  uri                    : "https://donboulton.com"
+  home                   : "https://donboulton.com/"
+  bitbucket              :
+  codepen                :
+  dribbble               :
+  flickr                 :
+  facebook               :
+  foursquare             :
+  github                 : "donaldboulton"
+  gitlab                 :
+  google_plus            : "donaldboulton"
+  keybase                :
+  instagram              :
+  lastfm                 :
+  linkedin               : "don-boulton-3a10972b"
+  pinterest              :
+  soundcloud             :
+  stackoverflow          : # none
+  steam                  : # "steamId" (the last part of your profile url, e.g. https://steamcommunity.com/id/steamId/)
+  tumblr                 :
+  twitter                : "donboulton"
+  vine                   :
+  weibo                  :
+  xing                   :
+  youtube                : # None
+
+# Reading Files
+include:
+  - .htaccess
+  - _pages
+exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - vendor
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - assets/js/plugins
+  - assets/js/_main.js
+  - assets/js/vendor
+  - Capfile
+  - CHANGELOG
+  - config
+  - Gemfile
+  - Gruntfile.js
+  - gulpfile.js
+  - LICENSE
+  - log
+  - node_modules
+  - package.json
+  - Rakefile
+  - README
+  - tmp
+  - /docs # ignore Minimal Mistakes /docs
+  - /test # ignore Minimal Mistakes /test
+keep_files:
+  - .git
+  - .svn
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+
+# Plugins (previously gems:)
+plugins:
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-archives
+  - jekyll-paginate-v2
+  - jekyll-figure
+  - jekyll-jekyll-typogrify
+  - jekyll-tagging-related_posts
+  - jekyll-octicons
+  - jekyll-admin
+  - jemoji
+  - json
+
+# mimic GitHub Pages with --safe
+whitelist:
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-archives
+  - jekyll-paginate-v2
+  - jekyll-figure
+  - jekyll-jekyll-typogrify
+  - jekyll-tagging-related_posts
+  - jekyll-octicons
+  - jekyll-admin
+  - jemoji
+  - json
+
+# Archives
+#  Type
+#  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)
+#  - Jekyll Archives plugin archive pages ~> type: jekyll-archives
+#  Path (examples)
+#  - Archive page should exist at path when using Liquid method or you can
+#    expect broken links (especially with breadcrumbs enabled)
+#  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
+#  - <base_path/categories/my-awesome-category/index.html ~> path: /categories/
+#  - <base_path/my-awesome-category/index.html ~> path: /
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+# https://github.com/jekyll/jekyll-archives
+jekyll-archives:
+   enabled:
+     - categories
+     - tags
+   layouts:
+     category: archive-taxonomy
+     tag: archive-taxonomy
+   permalinks:
+     category: /categories/:name/
+     tag: /tags/:name/
+
+# HTML Compression
+# - http://jch.penibelst.de/
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
+
+# Collections
+collections:
+  pets:
+    output: true
+    permalink: /pets/:path/
+  posts:
+    output: true
+    permalink: /posts/:path/
+
+# Defaults
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+  # _pets
+  - scope:
+      path: ""
+      type: pets
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comment: true
+  # _portfolio
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: single
+      author_profile: false
+      share: true
+
+# Plugin: Pagination (jekyll-paginate-v2)
+pagination:
+  enabled: true
+  debug: false
+  per_page: 15
+  permalink: "/page/:num/"
+  title: ":title - Page :num of :max"
+  limit: 0
+  sort_field: "date"
+  sort_reverse: true
+
+# Plugin: Auto Pages (jekyll-paginate-v2)
+autopages:
+  enabled: true
+  categories:
+    enabled: false
+  collections:
+    layouts: 
+      - 'autopage_collection.html'
+    title: 'Posts in collection :coll' # :coll is replaced by the collection name
+    permalink: '/collection/:coll'
+  tags:
+    enabled: true
+    slugify:
+      mode: raw
+      cased: true
+    layouts:
+      - "autopage_tags.html"
+    title: ":tag" # :tag is replaced by the tag name
+    permalink: "/tag/:tag"

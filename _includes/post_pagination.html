@@ -1,0 +1,34 @@
+{% if page.previous or page.next %}
+<nav class="pager">
+  <ul>
+    {% if page.previous %}
+    <li>
+      <a href="{{ page.previous.url | relative_url }}" class="previous">
+        <span class="pager-title">
+          <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 10.666667 10.666667" height="10.666667" width="10.666667" class="icon icon--arrow-left" id="svg825" version="1.1">
+            <defs id="defs829" />
+            <image y="0" x="0" id="image833" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACx jwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAu MjHxIGmVAAAAb0lEQVQ4T+XTMQrAIBBEUe9/LwUvISKsgoJXMAw7AYtA3DLkdSLzC0F3qpSyvPeL R5sxxrrFGG2RfQwppfNA750zhRiv3n10LCKcKdMYaq2cKnMA5pycq9ba7yN4yB0+Fa/O7ZEQgj0A OeeHn+jcBayMFQxiOewpAAAAAElFTkSuQmCC " style="image-rendering:optimizeQuality" preserveAspectRatio="none" height="10.666667" width="10.666667" />
+          </svg>
+          {{ page.previous.title | markdownify | remove: '<p>' | remove: '</p>' }}
+        </span>
+      </a>
+    </li>
+    {% endif %}
+    {% if page.next %}
+    <li>
+      <a href="{{ page.next.url | relative_url }}" class="next">
+        <span class="pager-title">
+          {{ page.next.title | markdownify | remove: '<p>' | remove: '</p>' }}
+          <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 10.666667 10.666667" height="10.666667" width="10.666667" class="icon icon--arrow-right" id="svg835" version="1.1">
+            <defs id="defs839" />
+            <image y="0" x="0" id="image843" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACx jwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAu MjHxIGmVAAAAa0lEQVQ4T+WTQQoAIQgA+/+/EvpEhFBBgV9wkRSWLpt73J2byMxBMOyklLiUwjr6 AAA25pz+CCKqvngV6b2rviCi30fkkHdaa77IHqi1ngd2eYzxeTnnrNpCYro6Qz7RcMtGjJHlqXR8 IIQL00wVDDxxbLQAAAAASUVORK5CYII= " style="image-rendering:optimizeQuality" preserveAspectRatio="none" height="10.666667" width="10.666667" />
+          </svg>
+        </span>
+      </a>
+    </li>
+    {% endif %}
+  </ul>
+</nav>
+{% endif %}

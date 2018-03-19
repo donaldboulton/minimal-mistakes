@@ -1,0 +1,44 @@
+.scrolltop {
+  width: 100%;
+  margin: 0 auto;
+  position: fixed;
+  bottom: 6px;
+  right: 7px;
+}
+
+.scroll {
+  position: absolute;
+  right: 14px;
+  bottom: 5px;
+  padding: 10px;
+  text-align: center;
+  margin: 0 0 0 0;
+  cursor: pointer;
+  transition: 0.5s;
+  border-radius: 2px;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+
+  &:hover {
+    background: rgba(178,178,178,1.0);
+    transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+
+    .fas {
+      padding-top: -10px;
+    }
+  }
+
+  .fas {
+    font-size: 25px;
+    margin-top: -5px;
+    margin-left: 1px;
+    transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+  }
+}

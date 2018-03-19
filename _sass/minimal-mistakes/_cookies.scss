@@ -1,0 +1,420 @@
+$color___1: initial;
+$background_color___1: transparent;
+$border_color___1: transparent;
+
+.cc-window {
+  opacity: 1;
+  transition: opacity 1s ease;
+  position: fixed;
+  overflow: hidden;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 1.5em;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  z-index: 9999;
+}
+
+.cc-window.cc-invisible {
+  opacity: 0;
+}
+
+.cc-animate.cc-revoke {
+  transition: transform 1s ease;
+}
+
+.cc-animate.cc-revoke.cc-top {
+  transform: translateY(-2em);
+}
+
+.cc-animate.cc-revoke.cc-bottom {
+  transform: translateY(2em);
+}
+
+.cc-animate.cc-revoke.cc-active.cc-bottom {
+  transform: translateY(0);
+}
+
+.cc-animate.cc-revoke.cc-active.cc-top {
+  transform: translateY(0);
+}
+
+.cc-revoke {
+  &:hover {
+    transform: translateY(0);
+    text-decoration: underline;
+  }
+
+  position: fixed;
+  overflow: hidden;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 1.5em;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  z-index: 9999;
+  padding: .5em;
+  cursor: pointer;
+}
+
+.cc-grower {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s;
+}
+
+.cc-link {
+  text-decoration: none;
+  cursor: pointer;
+  opacity: .8;
+  display: inline-block;
+  padding: .2em;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active {
+    color: $color___1;
+  }
+
+  &:visited {
+    color: $color___1;
+  }
+}
+
+.cc-window.cc-static {
+  position: static;
+}
+
+.cc-window.cc-floating {
+  padding: 2em;
+  max-width: 24em;
+  -ms-flex-direction: column;
+  flex-direction: column;
+
+  .cc-compliance {
+    -ms-flex: 1;
+    flex: 1;
+  }
+}
+
+.cc-window.cc-banner {
+  padding: 1em 1.8em;
+  width: 100%;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.cc-header {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.cc-btn {
+  cursor: pointer;
+  display: block;
+  padding: .4em .8em;
+  font-size: .9em;
+  font-weight: 700;
+  border-width: 2px;
+  border-style: solid;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.cc-close {
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  top: .5em;
+  right: .5em;
+  font-size: 1.6em;
+  opacity: .9;
+  line-height: .75;
+
+  &:focus {
+    opacity: 1;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.cc-banner {
+  .cc-btn {
+    &:last-child {
+      min-width: 140px;
+    }
+  }
+
+  .cc-message {
+    -ms-flex: 1;
+    flex: 1;
+  }
+}
+
+.cc-highlight {
+  .cc-btn {
+    &:first-child {
+      background-color: $background_color___1;
+      border-color: $border_color_1;
+
+      &:focus {
+        background-color: $background_color___1;
+        text-decoration: underline;
+      }
+
+      &:hover {
+        background-color: $background_color___1;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.cc-revoke.cc-top {
+  top: 0;
+  left: 3em;
+  border-bottom-left-radius: .5em;
+  border-bottom-right-radius: .5em;
+}
+
+.cc-revoke.cc-bottom {
+  bottom: 0;
+  left: 3em;
+  border-top-left-radius: .5em;
+  border-top-right-radius: .5em;
+}
+
+.cc-revoke.cc-left {
+  left: 3em;
+  right: unset;
+}
+
+.cc-revoke.cc-right {
+  right: 3em;
+  left: unset;
+}
+
+.cc-top {
+  top: 1em;
+}
+
+.cc-left {
+  left: 1em;
+}
+
+.cc-right {
+  right: 1em;
+}
+
+.cc-bottom {
+  bottom: 1em;
+}
+
+.cc-floating {
+  > .cc-link {
+    margin-bottom: 1em;
+  }
+
+  .cc-message {
+    display: block;
+    margin-bottom: 1em;
+  }
+}
+
+.cc-banner.cc-top {
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.cc-banner.cc-bottom {
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.cc-compliance {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-line-pack: justify;
+  align-content: space-between;
+
+  > .cc-btn {
+    -ms-flex: 1;
+    flex: 1;
+  }
+}
+
+.cc-btn {
+  margin-left: .5em;
+}
+
+.cc-floating.cc-theme-classic {
+  padding: 1.2em;
+  border-radius: 5px;
+}
+
+.cc-floating.cc-type-info.cc-theme-classic {
+  .cc-compliance {
+    text-align: center;
+    display: inline;
+    -ms-flex: none;
+    flex: none;
+  }
+
+  .cc-btn {
+    display: inline-block;
+  }
+}
+
+.cc-theme-classic {
+  .cc-btn {
+    border-radius: 5px;
+
+    &:last-child {
+      min-width: 140px;
+    }
+  }
+}
+
+.cc-theme-edgeless.cc-window {
+  padding: 0;
+}
+
+.cc-floating.cc-theme-edgeless {
+  .cc-message {
+    margin: 2em 2em 1.5em;
+  }
+
+  .cc-btn {
+    margin-left: 0;
+  }
+}
+
+.cc-banner.cc-theme-edgeless {
+  .cc-btn {
+    margin: 0;
+    padding: .8em 1.8em;
+    height: 100%;
+  }
+
+  .cc-message {
+    margin-left: 1em;
+  }
+}
+
+@media print {
+  .cc-revoke {
+    display: none;
+  }
+
+  .cc-window {
+    display: none;
+  }
+}
+
+@media screen and (max-width:900px) {
+  .cc-btn {
+    white-space: normal;
+  }
+}
+
+@media screen and (max-width:414px) and (orientation:portrait) {
+  .cc-window.cc-top {
+    top: 0;
+  }
+
+  .cc-window.cc-bottom {
+    bottom: 0;
+  }
+
+  .cc-window.cc-banner {
+    left: 0;
+    right: 0;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: unset;
+    align-items: unset;
+
+    .cc-compliance {
+      -ms-flex: 1;
+      flex: 1;
+    }
+  }
+
+  .cc-window.cc-left {
+    left: 0;
+    right: 0;
+  }
+
+  .cc-window.cc-right {
+    left: 0;
+    right: 0;
+  }
+
+  .cc-window.cc-floating {
+    max-width: none;
+  }
+
+  .cc-window {
+    .cc-message {
+      margin-bottom: 1em;
+    }
+  }
+}
+
+@media screen and (max-width:736px) and (orientation:landscape) {
+  .cc-window.cc-top {
+    top: 0;
+  }
+
+  .cc-window.cc-bottom {
+    bottom: 0;
+  }
+
+  .cc-window.cc-banner {
+    left: 0;
+    right: 0;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: unset;
+    align-items: unset;
+
+    .cc-compliance {
+      -ms-flex: 1;
+      flex: 1;
+    }
+  }
+
+  .cc-window.cc-left {
+    left: 0;
+    right: 0;
+  }
+
+  .cc-window.cc-right {
+    left: 0;
+    right: 0;
+  }
+
+  .cc-window.cc-floating {
+    max-width: none;
+  }
+
+  .cc-window {
+    .cc-message {
+      margin-bottom: 1em;
+    }
+  }
+}

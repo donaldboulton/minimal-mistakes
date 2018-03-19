@@ -1,0 +1,127 @@
+/* ==========================================================================
+   Comments
+   ========================================================================== */
+
+.comment {
+  position: relative;
+  margin-bottom: 3em;
+  padding-left: 1.5em;
+  font-size: 0.8em;
+  // comment replies
+  &.child {
+    margin-left: 3.5em;
+  }
+}
+
+.comment-timestamp {
+  font-size: 0.8em;
+  padding-left:40px;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.comment-content {
+  margin-top: 1em;
+  margin-left: 40px;
+
+  > p,
+  > ul,
+  > ol,
+  > figure,
+  > table {
+    margin-bottom: 1.5em;
+  }
+
+  ul {
+    list-style-type: square;
+  }
+
+  li {
+    margin-bottom: 0.5em;
+  }
+
+  li > ul,
+  li > ol {
+    margin-top: 0.5em;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .highlighter-rouge {
+    .highlight {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .highlight code {
+      font-size: 0.8em;
+    }
+  }
+}
+
+.comment__avatar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3.25em;
+  height: 3.25em;
+
+  &::after {
+    position: absolute;
+    right: 0.5em;
+    bottom: 0.5em;
+    width: 3.25em;
+    height: 3.25em;
+    content: "";
+    z-index: -1;
+  }
+}
+
+.comment-author-name {
+  display: inline-block;
+  margin: 0 0 0.25em;
+  font-size: 1.25em;
+  line-height: 1;
+  padding-left:40px;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.comment-reply {
+    margin-left: 40px;
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.comment-reply-notifications {
+  margin: 1rem 0;
+}
+
+#cancel-comment-reply-link {
+  margin-left: 1em;
+}
+
+#comment-form {
+  margin-bottom: 2em;
+}
+
+/* Site author specific */
+.admin {
+  .comment-author-name {
+    box-shadow: inset 0 -0.25em 0 rgba($warning-color, 0.5);
+  }
+}
+

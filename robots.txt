@@ -1,0 +1,23 @@
+---
+---
+User-agent: *
+
+Allow: /
+Disallow: /collection-archive/
+Disallow: /page-archive/
+Disallow: /tag/
+Disallow: /tags/
+Disallow: /year-archive/
+Disallow: /cdn-cgi/
+
+User-agent: Twitterbot
+
+Allow: /
+Disallow: /collection-archive/
+Disallow: /page-archive/
+Disallow: /tag/
+Disallow: /tags/
+Disallow: /year-archive/
+Disallow: /cdn-cgi/
+
+Sitemap: https://donboulton.com/sitemap.xml
