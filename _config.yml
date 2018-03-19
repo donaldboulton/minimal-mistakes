@@ -73,7 +73,7 @@ head_scripts:
   - https://www.googletagmanager.com/gtag/js?id=UA-30162465-2
 
 # SEO Related
-google_site_verification : "9uC-GgFFGwTqC8ERkfG6jgWN0LQvBJWAatcFa8EkAT0"
+google_site_verification : "DKp8oxWR5F4kbaJJ9uowH1ySMttXrrUjIknx1OfUHc8"
 bing_site_verification   : "361016BEC0F67F6A834D6186E897D9EC"
 yandex_site_verification :
 naver_site_verification  :
@@ -109,8 +109,8 @@ author:
   bio                    : "Away from Asp. Anything."
   location               : "OKC Oklahoma"
   email                  : "donaldboulton@gmail.com"
-  uri                    : "http://donboulton.github.io/DWB/"
-  home                   : "http://donboulton.github.io/DWB/"
+  uri                    : "https://donboulton.com"
+  home                   : "https://donboulton.com/"
   bitbucket              :
   codepen                :
   dribbble               :
