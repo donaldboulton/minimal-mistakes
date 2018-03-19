@@ -20,4 +20,4 @@ Disallow: /tags/
 Disallow: /year-archive/
 Disallow: /cdn-cgi/
 
-Sitemap: https://donaldboulton.github.io/DWB/sitemap.xml
+Sitemap: https://donboulton.com/sitemap.xml
