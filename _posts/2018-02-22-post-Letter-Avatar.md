@@ -1,46 +1,42 @@
 ---
+title: Letter Avatar
+date: 2018-02-22 22:16:01 Z
+permalink: "/2018-02-22-post-Letter-Avatar/"
+categories:
+- Programing
+tags:
+- Gravatar
+- Letter Avatar
+- Staticman
+- MMistakes
 layout: single
-title: "Letter Avatar"
-permalink: /2018-02-22-post-Letter-Avatar/
-date: 2018-02-22 16:16:01 -0600
-last_modified_at: 2018-02-28T12:42:38-04:00
+last_modified_at: 2018-02-28 16:42:38 Z
 search: true
 author: Donald Boulton
 author_profile: true
-tags:
-  - Gravatar
-  - Letter Avatar
-  - Staticman
-  - MMistakes
-category:
-  - Programing
-
 toc: true
-toc_label: "Page Contents"
-toc_icon: "file"
-
+toc_label: Page Contents
+toc_icon: file
 read_time: true
 comments: true
 share: true
 related: true
-
-excerpt: "Many of us got really tired of the Gravatar Service being down or slow and having multiple server calls to download the Gravatar. 
-Alot of people do not even know about gravatar and your get a generic image for the User Avatar."
+excerpt: Many of us got really tired of the Gravatar Service being down or slow and
+  having multiple server calls to download the Gravatar. Alot of people do not even
+  know about gravatar and your get a generic image for the User Avatar.
 header:
-  image: /assets/images/pages/letter-avatar-header.png
-  teaser: /assets/images/pages/letter-avatar-header.png
-
+  image: "/assets/images/pages/letter-avatar-header.png"
+  teaser: "/assets/images/pages/letter-avatar-header.png"
 gallery:
-  - url: /assets/images/pages/gravatar-icon-600.jpeg
-    image_path: /assets/images/pages/gravatar-icon-256.jpg
-    alt: "Gravtar Image"
-  - url: /assets/images/pages/avatar-600.png
-    image_path: /assets/images/pages/avatar-225.png
-    alt: "Gravtar Generic Image"
-  - url: /assets/images/pages/myLetterAvatar-600.png
-    image_path: /assets/images/pages/myLetterAvatar-225.png
-    alt: "Letter Avatar"
-
+- url: "/assets/images/pages/gravatar-icon-600.jpeg"
+  image_path: "/assets/images/pages/gravatar-icon-256.jpg"
+  alt: Gravtar Image
+- url: "/assets/images/pages/avatar-600.png"
+  image_path: "/assets/images/pages/avatar-225.png"
+  alt: Gravtar Generic Image
+- url: "/assets/images/pages/myLetterAvatar-600.png"
+  image_path: "/assets/images/pages/myLetterAvatar-225.png"
+  alt: Letter Avatar
 ---
 
 {% include octo-arm.html %}

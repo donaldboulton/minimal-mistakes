@@ -1,33 +1,32 @@
 ---
+title: About
+permalink: "/about/"
 layout: splash
-permalink: /about/
-title: "About"
 author_profile: false
 classes: wide
 toc: false
 author: Donald BOulton
-tags: 
-  - God
-  - Ruby
-  - Jekyll
-  - Github Pages
-  - MMistakes
-
+tags:
+- God
+- Ruby
+- Jekyll
+- Github Pages
+- MMistakes
 category:
-  - About
-  - Donald Boulton
-
-header:
-  image: /assets/images/pages/digital_box_1400-compressor.jpg
-  teaser: /assets/images/pages/digital_box_1400-compressor.jpg
-
+- About
+- Donald Boulton
 header:
   overlay_color: "#5e616c"
-  overlay_image: /assets/images/pages/digital_box_1400-compressor.jpg
+  overlay_image: "/assets/images/pages/digital_box_1400-compressor.jpg"
   cta_label: "<i class='fas fa-file-alt'></i> Posts"
   cta_url: "/year-archive/"
   caption: Lost In a Digatal Box
-excerpt: 'Donald Boulton, hosted on GitHub.<br /> <small><a href="https://github.com/donaldboulton/DWB/">Github Build</a></small><br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
+excerpt: 'Donald Boulton, hosted on GitHub.<br /> <small><a href="https://github.com/donaldboulton/DWB/">Github
+  Build</a></small><br /><br /> {::nomarkdown}<iframe style="display: inline-block;"
+  src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=star&count=true&size=large"
+  frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display:
+  inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=fork&count=true&size=large"
+  frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
 ---
 
 ## Working for Father God

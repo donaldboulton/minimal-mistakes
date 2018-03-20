@@ -1,42 +1,39 @@
 ---
+title: Windows Tweaks
+date: 2018-02-26 22:16:01 Z
+permalink: "/2018-02-26-post-Windows-Tweaks/"
+categories:
+- Windows
+tags:
+- Windows Tweaks
+- Windows 10
 layout: single
-title: "Windows Tweaks"
-permalink: /2018-02-26-post-Windows-Tweaks/
-date: 2018-02-26 16:16:01 -0600
-last_modified_at: 2018-03-02T12:42:38-04:00
+last_modified_at: 2018-03-02 16:42:38 Z
 search: true
 author: Donald Boulton
 author_profile: true
-tags:
-  - Windows Tweaks
-  - Windows 10
-category:
-  - Windows
-
 toc: true
-toc_label: "Page Contents"
-toc_icon: "file"
-
+toc_label: Page Contents
+toc_icon: file
 read_time: true
 comments: true
 share: true
 related: true
-
-excerpt: "This Tweaks page has evolved from Windows XP to Now upgrading this to Windows 10."
+excerpt: This Tweaks page has evolved from Windows XP to Now upgrading this to Windows
+  10.
 header:
-  image: /assets/images/pages/windows-tweaks.png
-  teaser: /assets/images/pages/windows-tweaks.png
-
+  image: "/assets/images/pages/windows-tweaks.png"
+  teaser: "/assets/images/pages/windows-tweaks.png"
 gallery:
-  - url: /assets/images/pages/Windows_XP_logo.png
-    image_path: /assets/images/pages/Windows_XP_logo.png
-    alt: "Windows XP"
-  - url: /assets/images/pages/windows_vista_logo.png
-    image_path: /assets/images/pages/windows_vista_logo.png
-    alt: "Vista"
-  - url: /assets/images/pages/Windows_10.png
-    image_path: /assets/images/pages/Windows_10.png
-    alt: "Windows 10"
+- url: "/assets/images/pages/Windows_XP_logo.png"
+  image_path: "/assets/images/pages/Windows_XP_logo.png"
+  alt: Windows XP
+- url: "/assets/images/pages/windows_vista_logo.png"
+  image_path: "/assets/images/pages/windows_vista_logo.png"
+  alt: Vista
+- url: "/assets/images/pages/Windows_10.png"
+  image_path: "/assets/images/pages/Windows_10.png"
+  alt: Windows 10
 ---
 
 {% include octo-arm.html %}

@@ -1,43 +1,38 @@
 ---
+title: Defrag SQL
+date: 2018-02-25 22:16:01 Z
+permalink: "/2018-02-25-post-Defrag-SQL/"
+categories:
+- Programing
+tags:
+- SQL Server
+- SQL Defragment
 layout: single
-title: "Defrag SQL"
-permalink: /2018-02-25-post-Defrag-SQL/
-date: 2018-02-25 16:16:01 -0600
-last_modified_at: 2018-03-01T12:42:38-04:00
+last_modified_at: 2018-03-01 16:42:38 Z
 search: true
 author: Donald Boulton
 author_profile: true
-tags:
-  - SQL Server
-  - SQL Defragment
-category:
-  - Programing
-
 toc: true
-toc_label: "Page Contents"
-toc_icon: "file"
-
+toc_label: Page Contents
+toc_icon: file
 read_time: true
 comments: true
 share: true
 related: true
-
-excerpt: "Defrag Sql 2008 to 2016"
+excerpt: Defrag Sql 2008 to 2016
 header:
-  image: /assets/images/pages/defrag-sql-2014-1400-min.png
-  teaser: /assets/images/pages/defrag-sql-2014-1400-min.png
-
+  image: "/assets/images/pages/defrag-sql-2014-1400-min.png"
+  teaser: "/assets/images/pages/defrag-sql-2014-1400-min.png"
 gallery:
-  - url: /assets/images/pages/page-splitting.png
-    image_path: /assets/images/pages/page-splitting-256.png
-    alt: "Page Splitting"
-  - url: /assets/images/pages/index_heatmap.jpeg
-    image_path: /assets/images/pages/index_heatmap-256.png
-    alt: "Index Heatmap"
-  - url: /assets/images/pages/windows-xp-defragment-hard-drive.jpeg
-    image_path: /assets/images/pages/windows-xp-defragment-hard-drive-256.jpeg
-    alt: "Clusters"
-
+- url: "/assets/images/pages/page-splitting.png"
+  image_path: "/assets/images/pages/page-splitting-256.png"
+  alt: Page Splitting
+- url: "/assets/images/pages/index_heatmap.jpeg"
+  image_path: "/assets/images/pages/index_heatmap-256.png"
+  alt: Index Heatmap
+- url: "/assets/images/pages/windows-xp-defragment-hard-drive.jpeg"
+  image_path: "/assets/images/pages/windows-xp-defragment-hard-drive-256.jpeg"
+  alt: Clusters
 ---
 
 {% include octo-arm.html %}

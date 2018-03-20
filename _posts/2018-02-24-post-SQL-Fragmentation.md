@@ -1,43 +1,37 @@
 ---
-title: "SQL Fragmentation"
-date: 2018-02-23 16:16:01 -0900
-last_modified_at: 2018-03-01T12:42:38-04:00
+title: SQL Fragmentation
+date: 2018-02-24 01:16:01 Z
+categories:
+- Programing
+tags:
+- SQL
+- Fragmentation
+- Defrag
+last_modified_at: 2018-03-01 16:42:38 Z
 search: true
 author: Donald Boulton
 author_profile: true
-tags:
-  - SQL
-  - Fragmentation
-  - Defrag
-
-category:
-  - Programing
-
 toc: true
-toc_label: "Page Contents"
-toc_icon: "file"
-
+toc_label: Page Contents
+toc_icon: file
 read_time: true
 comments: true
 share: true
 related: true
-
 excerpt: Check SQL Server a specified database index fragmentation percentage (SQL)
 header:
-  image: /assets/images/pages/check_sql_fragmentation-1400.png
-  teaser: /assets/images/pages/check_sql_fragmentation-1400.png
-
+  image: "/assets/images/pages/check_sql_fragmentation-1400.png"
+  teaser: "/assets/images/pages/check_sql_fragmentation-1400.png"
 gallery:
-  - url: /assets/images/pages/page-splitting.png
-    image_path: /assets/images/pages/page-splitting-256.png
-    alt: "Page Splitting"
-  - url: /assets/images/pages/index_heatmap.jpeg
-    image_path: /assets/images/pages/index_heatmap-256.png
-    alt: "Index Heatmap"
-  - url: /assets/images/pages/windows-xp-defragment-hard-drive.jpeg
-    image_path: /assets/images/pages/windows-xp-defragment-hard-drive-256.jpeg
-    alt: "Clusters"
-
+- url: "/assets/images/pages/page-splitting.png"
+  image_path: "/assets/images/pages/page-splitting-256.png"
+  alt: Page Splitting
+- url: "/assets/images/pages/index_heatmap.jpeg"
+  image_path: "/assets/images/pages/index_heatmap-256.png"
+  alt: Index Heatmap
+- url: "/assets/images/pages/windows-xp-defragment-hard-drive.jpeg"
+  image_path: "/assets/images/pages/windows-xp-defragment-hard-drive-256.jpeg"
+  alt: Clusters
 ---
 
 {% include octo-arm.html %}

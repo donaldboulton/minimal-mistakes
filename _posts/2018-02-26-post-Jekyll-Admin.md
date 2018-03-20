@@ -1,43 +1,38 @@
 ---
+title: Jekyll Admin
+date: 2018-02-26 22:16:01 Z
+categories:
+- Jekyll
+tags:
+- Jekyll
+- Jekyll Admin
 layout: single
 author_profile: true
 read_time: true
 comments: true
 share: true
 related: true
-title: Jekyll Admin
-date: 2018-02-26 16:16:01 -0600
-last_modified_at: 2018-02-27T12:42:38-04:00
+last_modified_at: 2018-02-27 16:42:38 Z
 search: true
 author: Donald Boulton
-
-tags:
-  - Jekyll
-  - Jekyll Admin
-category:
-  - Jekyll
-
 toc: true
-toc_label: "Page Contents"
-toc_icon: "file"
-
-excerpt: "Administer your Jekyll site Locally with Jekyll Admin"
+toc_label: Page Contents
+toc_icon: file
+excerpt: Jekyll admin makes it so easy for me to add new pages, posts or any type
+  of content, including file management, adding images to .md pages and Changing Configuration.
 header:
-  image: /assets/images/pages/jekyll-admin-1400.jpeg
-  teaser: /assets/images/pages/jekyll-admin-1400.jpeg
-
+  image: "/assets/images/pages/jekyll-admin-1400.jpeg"
+  teaser: "/assets/images/pages/jekyll-admin-1400.jpeg"
 gallery:
-  - url: /assets/images/pages/gravatar-icon-600.jpeg
-    image_path: /assets/images/pages/gravatar-icon-225.jpeg
-    alt: "Gravtar Image"
-  - url: /assets/images/pages/avatar-600.png
-    image_path: /assets/images/pages/avatar-225.png
-    alt: "Gravtar Generic Image"
-  - url: /assets/images/pages/myLetterAvatar-600.png
-    image_path: /assets/images/pages/myLetterAvatar-225.png
-    alt: "Letter Avatar"
-
-excerpt: "Jekyll admin makes it so easy for me to add new pages, posts or any type of content, including file management, adding images to .md pages and Changing Configuration."
+- url: "/assets/images/pages/gravatar-icon-600.jpeg"
+  image_path: "/assets/images/pages/gravatar-icon-225.jpeg"
+  alt: Gravtar Image
+- url: "/assets/images/pages/avatar-600.png"
+  image_path: "/assets/images/pages/avatar-225.png"
+  alt: Gravtar Generic Image
+- url: "/assets/images/pages/myLetterAvatar-600.png"
+  image_path: "/assets/images/pages/myLetterAvatar-225.png"
+  alt: Letter Avatar
 ---
 
 {% include octo-arm.html %}

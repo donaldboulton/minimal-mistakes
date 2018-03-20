@@ -1,32 +1,28 @@
 ---
+title: Staticman with Gitlab
+date: 2018-03-05 22:16:01 Z
+categories:
+- Staticman
+tags:
+- Staticman
+- Github
+- Gitlab
 layout: single
 author_profile: true
 read_time: true
 comments: true
 share: true
 related: true
-title: Staticman with Gitlab
-date: 2018-03-05 16:16:01 -0600
-last_modified_at: 2018-03-06T12:42:38-04:00
+last_modified_at: 2018-03-06 16:42:38 Z
 search: true
 author: Donald Boulton
-
-tags:
-  - Staticman
-  - Github
-  - Gitlab
-
-category:
-  - Staticman
-
 toc: true
-toc_label: "Page Contents"
-toc_icon: "file"
-
-excerpt: "Use Staticman push to Gitlab"
+toc_label: Page Contents
+toc_icon: file
+excerpt: Use Staticman push to Gitlab
 header:
-  image: /assets/images/pages/staticman-github-gitlab.png
-  teaser: /assets/images/pages/staticman-github-gitlab.png
+  image: "/assets/images/pages/staticman-github-gitlab.png"
+  teaser: "/assets/images/pages/staticman-github-gitlab.png"
 ---
 
 {% include octo-arm.html %}

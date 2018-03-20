@@ -1,44 +1,39 @@
 ---
+title: Mobile Colorbox
+date: 2018-02-25 21:16:01 Z
+permalink: "/2018-02-25-post-Mobile-Colorbox/"
+categories:
+- Programing
+tags:
+- Colorbox
+- Mobile Colorbox
 layout: single
-title: "Mobile Colorbox"
-permalink: /2018-02-25-post-Mobile-Colorbox/
-date: 2018-02-25 15:16:01 -0600
-last_modified_at: 2018-02-28T12:42:38-04:00
+last_modified_at: 2018-02-28 16:42:38 Z
 search: true
 author: Donald Boulton
 author_profile: true
-tags:
-  - Colorbox
-  - Mobile Colorbox
-category:
-  - Programing
-
 toc: true
-toc_label: "Page Contents"
-toc_icon: "file"
-
+toc_label: Page Contents
+toc_icon: file
 read_time: true
 comments: true
 share: true
 related: true
-
-excerpt: "I use colorbox in my ASP.Core2 apps. 
-Alot of developers still do in their applications"
-
+excerpt: I use colorbox in my ASP.Core2 apps. Alot of developers still do in their
+  applications
 header:
-  image: /assets/images/pages/svg/colorbox-html-1400.png
-  teaser: /assets/images/pages/svg/colorbox-html-1400.png
-
+  image: "/assets/images/pages/svg/colorbox-html-1400.png"
+  teaser: "/assets/images/pages/svg/colorbox-html-1400.png"
 gallery:
-  - url: /assets/images/pages/svg/colorbox-html-1400.png
-    image_path: /assets/images/pages/svg/colorbox-html.png
-    alt: "Colorbox HTML"
-  - url: /assets/images/pages/svg/colorbox-800.png
-    image_path: /assets/images/pages/svg/colorbox.png
-    alt: "Colorbox Images"
-  - url: /assets/images/pages/svg/colorbox-logon-800.png
-    image_path: /assets/images/pages/svg/colorbox-logon.png
-    alt: "Colorbox Logon"
+- url: "/assets/images/pages/svg/colorbox-html-1400.png"
+  image_path: "/assets/images/pages/svg/colorbox-html.png"
+  alt: Colorbox HTML
+- url: "/assets/images/pages/svg/colorbox-800.png"
+  image_path: "/assets/images/pages/svg/colorbox.png"
+  alt: Colorbox Images
+- url: "/assets/images/pages/svg/colorbox-logon-800.png"
+  image_path: "/assets/images/pages/svg/colorbox-logon.png"
+  alt: Colorbox Logon
 ---
 
 {% include octo-arm.html %}
