@@ -54,6 +54,11 @@ search                   : true
 search_full_content      : true
 search_provider          : lunr
 
+siteleaf:
+  site-id                : "5ab05d47552cde487f135f56"
+  api-key                : "598283c4e4db7bcdc42a367c732e22bb"
+  api-secret             : "DD9rRDh9UGZFrUZWEwvhtMDOyiRCM99pmq0mjfKaUb5Yzkr8U/6mTNyv9AXa2yKqkYnNYG9uwhl1LZZeDxs8YUon4QmZ9i89qsZ9EaA0+T8sC+5Yn6+fJcMX2DYt6pfybacXbJN/OR3UJVIfIM6TBhMz1/JyNme9DPMdnq3GG4w="
+
 algolia:
   application_id         : "G34JUR3EB9"
   index_name             : "donald_boulton"
@@ -276,7 +281,7 @@ collections:
 defaults:
   # _posts
   - scope:
-      path: ""
+      path: "_posts"
       type: posts
     values:
       layout: single
@@ -285,6 +290,7 @@ defaults:
       comments: true
       share: true
       related: true
+      toc: true
   # _pages
   - scope:
       path: "_pages"
@@ -294,7 +300,7 @@ defaults:
       author_profile: true
   # _pets
   - scope:
-      path: ""
+      path: "_pets"
       type: pets
     values:
       layout: single
@@ -303,7 +309,7 @@ defaults:
       comment: true
   # _portfolio
   - scope:
-      path: ""
+      path: "_portfolio"
       type: portfolio
     values:
       layout: single
