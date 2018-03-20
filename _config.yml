@@ -214,6 +214,7 @@ plugins:
   - jekyll-tagging-related_posts
   - jekyll-octicons
   - jekyll-admin
+  - mail
   - jemoji
   - json
 
@@ -230,6 +231,7 @@ whitelist:
   - jekyll-tagging-related_posts
   - jekyll-octicons
   - jekyll-admin
+  - mail
   - jemoji
   - json
 
