@@ -1,6 +1,6 @@
 ---
 title: Donald Boulton
-timezone: UTC
+timezone: America/Chicago
 collections:
   pets:
     title: Pets
@@ -61,7 +61,7 @@ comments:
   discourse:
     server: 
   facebook:
-    appid: '322180367845124'
+    appid: 322180367845124
     num_posts: 
     colorscheme: dark
 staticman:
