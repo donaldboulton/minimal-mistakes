@@ -21,6 +21,8 @@ group :jekyll_plugins do
   gem 'jemoji'
   gem 'mail'
   gem 'mailgun-ruby', '~>1.1.6'
+  gem 'rest-client'
   gem 'json'
   gem 'jekyll-admin'
 end
+
