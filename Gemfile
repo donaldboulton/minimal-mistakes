@@ -16,8 +16,11 @@ group :jekyll_plugins do
   gem 'jekyll-paginate-v2'
   gem 'jekyll-typogrify'
   gem 'jekyll-tagging-related_posts'
-  gem 'jekyll-figure', :git => 'https://github.com/mmistakes/jekyll-figure.git'
+  gem 'jekyll-figure'
+  gem 'siteleaf', '~>2'
   gem 'jemoji'
+  gem 'mail'
+  gem 'mailgun-ruby', '~>1.1.6'
   gem 'json'
   gem 'jekyll-admin'
 end
