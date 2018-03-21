@@ -28,7 +28,7 @@ All of this information is not linked to anything that is personally identifiabl
 
 ## Cookies and Web Beacons
 
-![Cookie](/bibwoe/assets/images/pages/svg/cookies.svg)
+![Cookie](/assets/images/pages/svg/cookies.svg)
 
 {% include video id="yoE9-tNvhRs" provider="youtube" %}
 
