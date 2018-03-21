@@ -26,9 +26,9 @@ Like many other websites, this site uses log files to help learn about when, fro
 
 All of this information is not linked to anything that is personally identifiable.
 
-## Cookies and Web Beacons
+## Cookies & Beacons
 
-![Cookie](/bibwoe/assets/images/pages/svg/cookies.svg)
+![Cookie](/assets/images/pages/svg/cookies.svg)
 
 {% include video id="yoE9-tNvhRs" provider="youtube" %}
 
@@ -130,7 +130,7 @@ I make money on this website through affiliate programs. If you click an affilia
 
 Currently Michael Rose is affiliate for Amazon and Google Adsense.
 
-Donald Boulton and this [donboulton.com](http://donboulton.com) Website is a Affiliate for Google Adsense.
+Donald Boulton and this [donboulton.com](https://donboulton.com) Website is a Affiliate for Google Adsense.
 
 What this means for you:
 

@@ -47,7 +47,7 @@ layout: null
         "title": {{ post.title | smartify | strip_html | normalize_whitespace | jsonify }},
         {% capture post_content %}
           {% if post.gallery %}
-            {% capture post_gallery %}{% include gallery.html %}{% endcapture %}
+            {% capture post_gallery %}{% include image-gallery.html %}{% endcapture %}
             {{ post_gallery }}
           {% endif %}
           {{ post.content }}

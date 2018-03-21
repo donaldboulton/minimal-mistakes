@@ -1,0 +1,19 @@
+---
+---
+_  ________ ____   _  ______________  _________
+|\/||__||  \|___   |\/||[__  | |__||_/ |___[__
+|  ||  ||__/|___   |  ||___] | |  || \_|______]
+
+/* DONBOULTON.COM */
+
+  Designer:     Donald Boulton
+  Twitter:      @donboulton
+  Location:     OKC, Oklahoma
+
+  Last updated: {{ site.time }}
+  Language:     English
+  Built with:   Jekyll {{ jekyll.version }} <https://jekyllrb.com>
+                Visual Studio Code <https://code.visualstudio.com>e
+                Gulp <https://gulpjs.com>
+                Travis CI <https://travis-ci.org>
+                Algolia <https://www.algolia.com>
