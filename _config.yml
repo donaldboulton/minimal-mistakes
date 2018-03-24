@@ -31,7 +31,7 @@ comments:
     colorscheme          : "dark"
 staticman:
   allowedFields          : ['name', 'email', 'url', 'message', 'replying_to']
-  branch                 : "master"
+  branch                 : "gh-pages"
   commitMessage          : "New comment."
   filename               : "comment-{@timestamp}"
   format                 : "json"
@@ -203,6 +203,10 @@ sass:
 
 # Plugins (previously gems:)
 plugins:
+  - jekyll-typography
+  - sort_name
+  - gallery_creator
+  - jekyll-seo-assets
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
@@ -210,16 +214,22 @@ plugins:
   - jekyll-archives
   - jekyll-paginate-v2
   - jekyll-figure
-  - jekyll-jekyll-typogrify
+  - jekyll-tagging
   - jekyll-tagging-related_posts
-  - jekyll-octicons
   - jekyll-admin
   - mail
+  - mailgun-ruby
+  - rest-client
+  - siteleaf
   - jemoji
   - json
 
 # mimic GitHub Pages with --safe
 whitelist:
+  - jekyll-typography
+  - sort_name
+  - gallery_creator
+  - jekyll-seo-assets
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
@@ -227,11 +237,13 @@ whitelist:
   - jekyll-archives
   - jekyll-paginate-v2
   - jekyll-figure
-  - jekyll-jekyll-typogrify
+  - jekyll-tagging
   - jekyll-tagging-related_posts
-  - jekyll-octicons
   - jekyll-admin
   - mail
+  - mailgun-ruby
+  - rest-client
+  - siteleaf
   - jemoji
   - json
 
@@ -248,6 +260,9 @@ whitelist:
 category_archive:
   type: liquid
   path: /categories/
+portfolio_archive:
+  type: liquid
+  path: /portfolio-archive/
 tag_archive:
   type: liquid
   path: /tags/
@@ -272,15 +287,23 @@ compress_html:
 
 # Collections
 collections:
-  pets:
+  photography:
     output: true
-    permalink: /pets/:path/
-  posts:
-    output: true
-    permalink: /posts/:path/
+    permalink: /:photography/:name/
 
 # Defaults
 defaults:
+  - scope:
+      path: "photography"
+      type: "photograpny"
+    values:
+      layout: single
+      author_profile: 
+      read_time: true
+      comments: true
+      share: true
+      related: true
+      permalink: /:path/:basename:output_ext
   # _posts
   - scope:
       path: "_posts"
@@ -300,24 +323,8 @@ defaults:
     values:
       layout: single
       author_profile: true
-  # _pets
-  - scope:
-      path: "_pets"
-      type: pets
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comment: true
-  # _portfolio
-  - scope:
-      path: "_portfolio"
-      type: portfolio
-    values:
-      layout: single
-      author_profile: false
-      share: true
 
+posts_json_path: posts.json
 # Plugin: Pagination (jekyll-paginate-v2)
 pagination:
   enabled: true

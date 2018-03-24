@@ -1,8 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\_pages"
+    "\\assets",
+    "\\assets\\css",
+    "\\assets\\photography",
+    "\\assets\\photography\\cats\\my-cats",
+    "\\assets\\photography\\cats\\stray-cats",
+    "\\photography",
+    "\\_data",
+    "\\_plugins",
+    "\\_sass\\minimal-mistakes"
   ],
-  "SelectedNode": "\\_pages\\collection-archive.html",
+  "SelectedNode": "\\_plugins\\sort_name.rb",
   "PreviewInSolutionExplorer": false
 }

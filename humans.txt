@@ -1,8 +1,5 @@
 ---
 ---
-_  ________ ____   _  ______________  _________
-|\/||__||  \|___   |\/||[__  | |__||_/ |___[__
-|  ||  ||__/|___   |  ||___] | |  || \_|______]
 
 /* DONBOULTON.COM */
 
@@ -13,7 +10,7 @@ _  ________ ____   _  ______________  _________
   Last updated: {{ site.time }}
   Language:     English
   Built with:   Jekyll {{ jekyll.version }} <https://jekyllrb.com>
-                Visual Studio Code <https://code.visualstudio.com>e
+                Visual Studio Code <https://code.visualstudio.com>
                 Gulp <https://gulpjs.com>
                 Travis CI <https://travis-ci.org>
                 Algolia <https://www.algolia.com>
