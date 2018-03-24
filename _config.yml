@@ -71,10 +71,10 @@ staticman:
   - url
   - message
   - replying_to
-  branch: master
+  branch: gh-pages
   commitMessage: New comment.
   filename: comment-{@timestamp}
-  format: yml
+  format: json
   moderation: false
   path: "/_data/comments/{options.slug}"
   requiredFields:
