@@ -2,7 +2,7 @@
 layout: single
 title: "Website Tweaks"
 permalink: /2018-03-27-post-Website-Tweaks/
-date: 2018-02-25 15:16:01 -0600
+date: 2018-03-27 15:16:01 -0600
 last_modified_at: 2018-03-27T12:42:38-04:00
 search: true
 author: Donald Boulton
@@ -251,7 +251,7 @@ Lets assume 120 seconds have passed since our initial fetch and the browser has 
 
 Thats the problem that validation tokens, as specified in the ETag header, are designed to solve: the server generates and returns an arbitrary token which is typically a hash or some other fingerprint of the contents of the file. The client does not need to know how the fingerprint is generated, it only needs to send it to the server on the next request: if the fingerprint is still the same then the resource has not changed and we can skip the download.
 
-![Cache Control](/assets/images/pages/performance/performance/http-cache-control.png)
+![Cache Control](/assets/images/pages/performance/http-cache-control.png)
 
 In above example the client automatically provides the ETag token within the If-None-Match HTTP request header, the server checks the token against the current resource, and if it has not changed returns a 304 Not Modified response which tells the browser that the response it has in cache has not changed and can be renewed for another 120 seconds. Note that we do not have to download the response once more - this saves time and bandwidth.
 
