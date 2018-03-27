@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Mobile Colorbox"
+title: "Website Tweaks"
 permalink: /2018-03-27-post-Website-Tweaks/
 date: 2018-02-25 15:16:01 -0600
 last_modified_at: 2018-03-27T12:42:38-04:00
@@ -553,3 +553,5 @@ My tabs are pjaxed and I added this to Zone after content so the origional pjax 
 ```html
 <div id="tabs-container" class="data-pjax-container" data-pjax-container>
 ```
+
+{% include gallery caption="Website Performance." %}
