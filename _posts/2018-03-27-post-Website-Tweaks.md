@@ -1,9 +1,9 @@
 ---
 layout: single
 title: "Website Tweaks"
-permalink: /2018-03-27-post-Website-Tweaks/
-date: 2018-03-27 15:16:01 -0600
-last_modified_at: 2018-03-27T12:42:38-04:00
+permalink: /2018-03-26-post-Website-Tweaks/
+date: 2018-03-26 15:16:01 -0600
+last_modified_at: 2018-03-26T12:42:38-04:00
 search: true
 author: Donald Boulton
 author_profile: true
@@ -30,8 +30,8 @@ header:
   teaser: /assets/images/pages/performance/speedtest_donboulton.jpg
 
 gallery:
-  - url: /assets/images/pages/performance/speedtest_donboulton.jpg
-    image_path: /assets/images/pages/performance/speedtest_donboulton.jpg
+  - url: /assets/images/pages/performance/speedtest_donboulton-th.jpg
+    image_path: /assets/images/pages/performance/speedtest_donboulton-th.jpg
     alt: "World Speed Test"
   - url: /assets/images/pages/performance/Speed-Test-Domains-min.jpg
     image_path: /assets/images/pages/performance/Speed-Test-Domains-min.jpg
