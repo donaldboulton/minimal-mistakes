@@ -67,10 +67,20 @@ algolia:
   powered_by             : true
 
 Mailgun:
+  domain                 : "donboulton.com"
   smtp_Hostname          : "smtp.mailgun.org"
   api_Base_Url           : "https://api.mailgun.net/v3/donboulton.com"
   api_key                : "H5EZw3wcgp0MVFVT9xj1T2bjagHUmxotILm4KbnXTHE5MtyHj+1pk+kQQGQuVdH8U/rgnth/4kvm/4lWRmxgu3vNAotPpg5VcmZsd7A44D/+sLNrZCXU7q5+YZ6VHYMjQpbHTBOsdebxq3Tog/3x3ONuR5XL/kRQNvD9tdjmdFw="
   smtp_login             : "postmaster@donboulton.com"
+  sandbox                : False
+
+notify:
+  - name: donboulton
+    platform: twitter
+    consumer_key: Wicpx8XkPT8tHijl4MKH7w
+    consumer_secret: WWYv+fj1vn4foC7aTTwELPLM22XfxAT9wu01NdvOhtJWGhrV8wy0DzES5bCGxxFqtMi1kxTq9vGsbwH/e/9QzuNZGnHV2YeqxVKvXwWVxC700m+GZsFJXvehUdsHHUBgxe0MFzxkhEFpRK6y9QIUGofN+yH1+DqYn+iaNMVO964=
+    access_token: 105217183-OZnpTgm0Ug9T1XUQLefhzKzEdyHkckWX1Z6nHONO
+    access_token_secret: Sl/KluM2Asg0B+g8YmYJmZeyH1yONSMu/enIbX7+m56ADUKVL8yl+141eT3j5GOsnPBH40yfADg/ZBUDmejHq/+uB+SvYvoYwhm5V1F4ru8HzYjYlbYt95w2oMQbQQp2DQVNeqL7tQAbkWmmEbUFzr88NFkSLjYwKMG0W1e3Vos=
 
 github                   : [metadata]
 
@@ -288,7 +298,7 @@ compress_html:
 # Collections
 collections:
   photography:
-    output: true
+    output: false
     permalink: /:photography/:name/
 
 # Defaults
