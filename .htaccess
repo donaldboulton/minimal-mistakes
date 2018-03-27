@@ -949,7 +949,7 @@ FileETag None
 # ----------------------------------------------------------------------
 
 RewriteEngine on
-RewriteCond %{HTTP_REFERER} http\://donboulton\.com/11m\.php [NC]
+RewriteCond %{HTTP_REFERER} http\://donboulton\.com/11m\.html [NC]
 RewriteRule .* - [F]
 
 # ----------------------------------------------------------------------
@@ -1000,3 +1000,11 @@ redirect 301 /sitemap.xml.gz https://donboulton.com/sitemap.xml
 # Page redirects
 # ----------------------------------------------------------------------
 
+RedirectMatch permanent https://donboulton.com/blogs/ https://donboulton.com/year-archive/
+redirect 301 https://donboulton.com/blogs/letter-avatar/ https://donboulton.com/2018-02-22-post-Letter-Avatar/
+redirect 301 https://donboulton.com/blogs/orchard-performance https://donboulton.com/2018-03-27-Website-Tweaks/
+redirect 301 https://donboulton.com/blogs/colorbox https://donboulton.com/2018-02-25-post-Mobile-Colorbox/
+redirect 301 https://donboulton.com/blogs/colorboxlogin https://donboulton.com/2018-02-25-post-Mobile-Colorbox/
+redirect 301 https://donboulton.com/blogs/sqldefrag https://donboulton.com/2018-02-25-post-Defrag-SQL/
+redirect 301 https://donboulton.com/blogs/sqlfragmentation https://donboulton.com/programing/2018/02/24/post-SQL-Fragmentation.html
+redirect 301 https://donboulton.com/blogs/mobilefirstcolorbox https://donboulton.com/2018-02-25-post-Mobile-Colorbox/

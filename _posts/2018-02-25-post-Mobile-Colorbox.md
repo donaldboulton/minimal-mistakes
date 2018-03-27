@@ -43,7 +43,7 @@ gallery:
 
 {% include octo-arm.html %}
 
-### Mobile First Colorbox
+# Mobile First Colorbox
 
 Mobile First Responsive Colorbox Window to open a link, div, code, about anything. Including a iframe using external data.
 
@@ -60,24 +60,26 @@ I searched around and found similar posts and came up with a small addition to t
 Colorbox now is working perfect on my Android and some other phone's I have tried. It now makes the colorbox windows 90% of the view on a normal website, and 90% on mobile.
 
 I am building Mobile First sites now and it way to easy with Core 2 framework, with a Mobile First Agency Theme based on Bootstrap 4 beta 3 using colorbox for some internal views.
+Click to open the Page Code block or anything in a Colorbox Window
 
-#### Click to open the Page Code block or anything in a Colorbox Window.
-
-To use the Colorbox window by clicking a link that uses a class as class="inline" and link it to the div with href="#profiles"</div>
+To use the Colorbox window by clicking a link that uses a class as class="inline" and link it to the div with href="#profiles"
 
 ```html
-<a class="inline" href="#profiles" title="Colorbox">Click to open in a Colorbox Window.</a>    
+<a class="inline" href="#profiles" title="Colorbox">Click to open in a Colorbox Window.</a>
 ```
+
 Hide Content in a hidden div class="hidden"
 
 The css for hidden
+
 ```css
 .hidden{display:none}
 ```
+
 The link is to a div with id="profiles"
 Add Colorbox Content in the div with profiles
 
-### The Inline Code for inline code.
+## The Inline Code for inline code
 
 ```javascript
 $(".inline").colorbox({
@@ -95,7 +97,7 @@ $('.inline_content').on('click', function() {
 
 Below is the changed javascript  with additions highlighted.
 
-#### The Javascript
+### The Javascript
 
 ```javascript
   $(".group1").colorbox({

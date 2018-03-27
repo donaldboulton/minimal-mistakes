@@ -9,4 +9,4 @@ rvm:
   github-token: $HjMgqmARBXgHt0EpbSzf8Q  # Set in travis-ci.org dashboard, marked secure
   keep-history: true
   on:
-    branch: master
+    branch: gh-pages
