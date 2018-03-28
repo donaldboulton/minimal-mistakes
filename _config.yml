@@ -223,6 +223,7 @@ plugins:
   - sort_name
   - gallery_creator
   - posts_json
+  - video_embed
   - notice
   - jekyll-seo-assets
   - jekyll-sitemap
@@ -249,6 +250,7 @@ whitelist:
   - sort_name
   - gallery_creator
   - posts_json
+  - video_embed
   - notice
   - jekyll-seo-assets
   - jekyll-sitemap
