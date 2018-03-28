@@ -220,6 +220,8 @@ plugins:
   - jekyll-typography
   - sort_name
   - gallery_creator
+  - posts_json
+  - notice
   - jekyll-seo-assets
   - jekyll-sitemap
   - jekyll-gist
@@ -231,6 +233,7 @@ plugins:
   - jekyll-tagging
   - jekyll-tagging-related_posts
   - jekyll-admin
+  - lazyload
   - mail
   - mailgun-ruby
   - rest-client
@@ -243,6 +246,8 @@ whitelist:
   - jekyll-typography
   - sort_name
   - gallery_creator
+  - posts_json
+  - notice
   - jekyll-seo-assets
   - jekyll-sitemap
   - jekyll-gist
