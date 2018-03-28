@@ -8,13 +8,13 @@ paths.iconFolderName     = 'icons';
 paths.includesFolderName = '_includes';
 paths.imageFolderName    = 'images';
 paths.layoutsFolderName  = '_layouts';
-paths.scriptFolderName   = 'javascripts';
+paths.scriptFolderName   = 'js';
 paths.siteFolderName     = 'dist';
 paths.sourceFolderName   = 'src';
-paths.stylesFolderName   = 'stylesheets';
+paths.stylesFolderName   = 'css';
 paths.tempFolderName     = '.tmp';
 
-paths.prodUrl            = 'https://mademistakes.com';
+paths.prodUrl            = 'https://donaldboulton.com';
 
 // Directory locations.
 paths.sourceDir          = paths.sourceFolderName + '/';
