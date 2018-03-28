@@ -32,7 +32,7 @@ All of this information is not linked to anything that is personally identifiabl
 
 ![Cookie](/assets/images/pages/svg/cookies.svg)
 
-{% youtube yoE9-tNvhRs %}
+{% include video id="yoE9-tNvhRs" provider="youtube" %}
 
 When you visit this site "convenience" cookies are stored on your computer when you submit a comment to help you log in faster to [Twitter](https://twitter.com/donboulton) the next time you do a tweet.
 
@@ -115,13 +115,13 @@ For more information on the usage of cookies by Google Analytics please see the 
 
 [Privacy Google](http://www.google.com/analytics/learn/privacy.html)
 
-Google Analytics is a web analytics tool I use to help understand how visitors engage with this website. It reports website trends using cookies and web beacons without identifying individual visitors. 
+Google Analytics is a web analytics tool I use to help understand how visitors engage with this website. It reports website trends using cookies and web beacons without identifying individual visitors.
 
 You can read: [Google Analytics Privacy Policy](http://www.google.com/analytics/learn/privacy.html).
 
 ## Google Adsense
 
-Google Adsense, a third party affiliate marketing network, uses cookies to help make sure I get a commission when you buy a product after clicking on a link or ad banner that takes you to the site of one of their merchants. 
+Google Adsense, a third party affiliate marketing network, uses cookies to help make sure I get a commission when you buy a product after clicking on a link or ad banner that takes you to the site of one of their merchants.
 
 You can read: [Google Adsense Privacy Policy](http://support.google.com/adsense/bin/answer.py?hl=en&answer=48182).
 
