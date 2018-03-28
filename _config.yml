@@ -186,6 +186,9 @@ keep_files:
 encoding: "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
+/*
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
 
 # Conversion
 markdown: kramdown
@@ -292,6 +295,8 @@ jekyll-archives:
 # - http://jch.penibelst.de/
 compress_html:
   clippings: all
+  comments:  ["<!-- ", " -->"]
+  endings:   all
   ignore:
     envs: development
 
