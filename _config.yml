@@ -169,6 +169,8 @@ exclude:
   - CHANGELOG
   - config
   - Gemfile
+  - Gemfile.lock
+  - .vs
   - Gruntfile.js
   - gulpfile.js
   - LICENSE
