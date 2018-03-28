@@ -186,9 +186,8 @@ keep_files:
 encoding: "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
-## A path:
-/index.html
-  # Headers for that path:
+webrick:
+  headers:
   X-Frame-Options: SAMEORIGIN
   X-XSS-Protection: 1; mode=block
 
