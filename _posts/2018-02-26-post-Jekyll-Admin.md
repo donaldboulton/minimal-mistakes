@@ -18,7 +18,7 @@ category:
   - Jekyll
 
 toc: true
-toc_label: "Page Contents"
+toc_label: "Contents"
 toc_icon: "file"
 
 excerpt: "Administer your Jekyll site Locally with Jekyll Admin"

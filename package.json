@@ -1,7 +1,7 @@
 {
   "name": "donaldboulton",
   "version": "4.10.0",
-  "description": "Minimal Mistakes Jekyll theme npm build scripts",
+  "description": "Donald Boulton theme npm build scripts",
   "repository": {
     "type": "git",
     "url": "git://github.com/donaldboulton/DWB.git"
@@ -63,6 +63,7 @@
     "yargs": "^4.7.0"
   },
   "dependencies": {
+    "gulp-update": "0.0.2",
     "postcss": "^6.0.13"
   },
   "browserslist": [
@@ -71,4 +72,3 @@
     "IE 9"
   ]
 }
-

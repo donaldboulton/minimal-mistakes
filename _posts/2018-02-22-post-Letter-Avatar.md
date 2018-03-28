@@ -16,7 +16,7 @@ category:
   - Programing
 
 toc: true
-toc_label: "Page Contents"
+toc_label: "Contents"
 toc_icon: "file"
 
 read_time: true
