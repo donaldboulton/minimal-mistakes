@@ -154,6 +154,8 @@ author:
 include:
   - .htaccess
   - _pages
+  - assets/fonts
+  - assets/fonts/webfonts
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
