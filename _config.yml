@@ -171,6 +171,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - .vs
+  - .vscode
   - Gruntfile.js
   - gulpfile.js
   - LICENSE
