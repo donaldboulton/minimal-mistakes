@@ -222,13 +222,9 @@ sass:
 
 # Plugins (previously gems:)
 plugins:
-  - jekyll-typography
   - sort_name
-  - gallery_creator
   - posts_json
-  - video_embed
   - notice
-  - jekyll-seo-assets
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
@@ -242,20 +238,15 @@ plugins:
   - lazyload
   - mail
   - mailgun-ruby
-  - rest-client
   - siteleaf
   - jemoji
   - json
 
 # mimic GitHub Pages with --safe
 whitelist:
-  - jekyll-typography
   - sort_name
-  - gallery_creator
   - posts_json
-  - video_embed
   - notice
-  - jekyll-seo-assets
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
@@ -268,7 +259,6 @@ whitelist:
   - jekyll-admin
   - mail
   - mailgun-ruby
-  - rest-client
   - siteleaf
   - jemoji
   - json

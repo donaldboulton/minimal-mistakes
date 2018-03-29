@@ -7,7 +7,6 @@ gem "wdm", "~> 0.1.0"
 
 group :jekyll_plugins do
   gem 'jekyll-archives'
-  gem 'jekyll-sitemap'
   gem 'jekyll-gist'
   gem 'jekyll-feed'
   gem 'jekyll-paginate-v2'
@@ -15,7 +14,6 @@ group :jekyll_plugins do
   gem 'jekyll-tagging'
   gem 'jekyll-tagging-related_posts'
   gem 'siteleaf', '~>2'
-  gem 'jemoji'
   gem 'mail'
   gem 'mailgun-ruby', '~>1.1.6'
   gem 'rest-client'
