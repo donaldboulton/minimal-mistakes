@@ -5,6 +5,7 @@ last_modified_at: 2018-03-27T12:42:38-04:00
 toc: true
 toc_label: "Contents"
 toc_icon: "file"
+youtubeId: yoE9-tNvhRs
 ---
 
 {% include octo-arm.html %}
@@ -32,7 +33,7 @@ All of this information is not linked to anything that is personally identifiabl
 
 ![Cookie](/assets/images/pages/svg/cookies.svg)
 
-{% include video id="yoE9-tNvhRs" provider="youtube" %}
+{% include youtubePlayer.html id=page.youtubeId %}
 
 When you visit this site "convenience" cookies are stored on your computer when you submit a comment to help you log in faster to [Twitter](https://twitter.com/donboulton) the next time you do a tweet.
 
