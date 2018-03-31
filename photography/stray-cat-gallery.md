@@ -2,7 +2,7 @@
 layout: gallery
 title: Stray Cats
 no_menu_item: true # required only for this example website because of menu construction
-support: [jquery, gallery]
+support: [gallery]
 ---
 
 Stray cats I take care of every day, and have since 1999.

@@ -2,6 +2,7 @@
 layout: splash
 title: Photography
 permalink: /photography/
+support: [gallery]
 ---
 {% if include.id %}
   {% assign gallery = page[include.id] %}
@@ -24,12 +25,12 @@ permalink: /photography/
 {% assign count = 0 %}
 {% assign align = "left" %}
 {% for gallery in site.data.galleries.overview %}
-<div class="row">
-  <figure class="gallery-3-col">
+<div class="row">  
+  <div class="gallery-3-col">
     <h1>{{ gallery.title }}</h1>
     <a href="{{ site.url }}{{ site.baseurl }}/photography/{{ gallery.directory }}.html">
       <img alt="{{ gallery.title }}" src="{{ site.url }}{{ site.baseurl }}/assets/photography/{% if gallery.picture_path %}{{ gallery.picture_path }}{% else %}{{ gallery.directory }}{% endif %}/{{ gallery.preview.thumbnail }}" />
     </a>
-  </figure>
+  </div>
 </div>
 {% endfor %}
