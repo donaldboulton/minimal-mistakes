@@ -25,7 +25,7 @@ permalink: /photography/
 {% assign align = "left" %}
 {% for gallery in site.data.galleries.overview %}
 <div class="row">
-  <figure class="third">
+  <figure class="gallery-3-col third {{ align }}">
     <h1>{{ gallery.title }}</h1>
     <a href="{{ site.url }}{{ site.baseurl }}/photography/{{ gallery.directory }}.html">
       <img alt="{{ gallery.title }}" src="{{ site.url }}{{ site.baseurl }}/assets/photography/{% if gallery.picture_path %}{{ gallery.picture_path }}{% else %}{{ gallery.directory }}{% endif %}/{{ gallery.preview.thumbnail }}" />
