@@ -3,9 +3,11 @@ layout: default
 support: [gallery]
 ---
 
-<h1 class="gallery-title">{{ page.title }}</h1>
-<div id="lightgallery">
-    {{ content }}
+<div id="main" role="main">
+  <h1 class="gallery-title page__title">{{ page.title }}</h1>
+  <div id="lightgallery">
+      {{ content }}
+  </div>
 </div>
 <script type="text/javascript">
     $(document).ready(function() {
