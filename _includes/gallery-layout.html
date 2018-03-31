@@ -1,4 +1,4 @@
-<figure id="image-gallery{% if include.id_number %}-{{ include.id_number }}{% endif %}" class="image-gallery">
+<figure id="image-gallery{% if include.id_number %}-{{ include.id_number }}{% endif %}" class="image-gallery">  
   {% for picture in include.gallery.pictures %}
   <div id="gallery-sizer" class="image-wrapper">
     <a href="{{ site.url }}{{ site.baseurl }}/assets/photography/{{ include.gallery.picture_path }}/{{ picture.original }}"
