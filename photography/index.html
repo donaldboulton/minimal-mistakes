@@ -23,14 +23,14 @@ support: [gallery]
 <p>Below are my cat and travels gallerys. Cat Gallerys are broken into my house cats, past cats and stray cats I take care of. .</p>
 
 {% assign count = 0 %}
-{% assign align = "left" %}
-{% for gallery in site.data.galleries.overview %}
-<div class="row">  
-  <div class="gallery-3-col">
+<div class="gallery-3-col"> 
+  {% for gallery in site.data.galleries.overview %} 
+  <div>
     <h1>{{ gallery.title }}</h1>
     <a href="{{ site.url }}{{ site.baseurl }}/photography/{{ gallery.directory }}.html">
       <img alt="{{ gallery.title }}" src="{{ site.url }}{{ site.baseurl }}/assets/photography/{% if gallery.picture_path %}{{ gallery.picture_path }}{% else %}{{ gallery.directory }}{% endif %}/{{ gallery.preview.thumbnail }}" />
     </a>
   </div>
+  {% endfor %}
 </div>
-{% endfor %}
+
