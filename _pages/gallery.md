@@ -26,4 +26,4 @@ excerpt: 'Donald Boulton, hosted on GitHub'
 Pictures of my Kitty Cats and Travels.
 Alot of old Pics taken from old slides so the quality is not so good, but still memorys reside in them.
 
-{% include external-images.html %}
+{% include external.html %}

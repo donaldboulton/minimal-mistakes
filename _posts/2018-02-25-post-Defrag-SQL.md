@@ -15,7 +15,6 @@ category:
 
 toc: true
 toc_label: "Contents"
-toc_icon: "file"
 
 read_time: true
 comments: true
