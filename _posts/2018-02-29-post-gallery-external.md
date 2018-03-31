@@ -1,7 +1,8 @@
 ---
 title: Gallery
 layout: splash
-external_site: image-gallery
+external_url: http://robots.thoughtbot.com/post/12345/external-posts-in-jekyll
+external_site: thoughtbot
 read_time: true
 comments: true
 share: true
