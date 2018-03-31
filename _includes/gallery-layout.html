@@ -1,6 +1,6 @@
-<figure id="image-gallery{% if include.id_number %}-{{ include.id_number }}{% endif %}" class="grid">
+<figure id="image-gallery{% if include.id_number %}-{{ include.id_number }}{% endif %}" class="image-gallery">
   {% for picture in include.gallery.pictures %}
-  <div id="gallery-sizer" class="grid-item">
+  <div id="gallery-sizer" class="image-wrapper">
     <a href="{{ site.url }}{{ site.baseurl }}/assets/photography/{{ include.gallery.picture_path }}/{{ picture.original }}"
     data-responsive="{% for size in picture.sizes %} {{ site.url}}{{ site.baseurl }}/assets/photography/{{ include.gallery.picture_path }}/{{ size }} {{ size | split: '-' | last | split: '.' | first | split: 'x' | first | strip }}{% unless forloop.last %},{% endunless %}{% endfor %}" class="img"
     {% if picture.title %} data-sub-html="<div class='lg-toolbar caption'><h4>{{ picture.title | escape }}</h4>{% if picture.caption %}<p>{{ picture.caption | escape }}</p>{% endif %}</div>"{% endif %}>
@@ -32,12 +32,5 @@ var $grid{% if include.id_number %}{{ include.id_number }}{% endif %} = $('#imag
 // layout Isotope after each image loads
 $grid{% if include.id_number %}{{ include.id_number }}{% endif %}.imagesLoaded().progress( function() {
   $grid{% if include.id_number %}{{ include.id_number }}{% endif %}.masonry();
-});
-
-$('.grid').isotope({
-  itemSelector: '.grid-item',
-  masonry: {
-    columnWidth: 320
-  }
 });
 </script>
