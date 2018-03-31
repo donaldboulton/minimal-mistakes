@@ -1,0 +1,111 @@
+picture_path: cat-gallery/part1
+preview:
+  filename: Boys-Idabel-bed
+  original: Boys-Idabel-bed.jpg
+  sizes:
+  - Boys-Idabel-bed.jpg
+  - Boys-Idabel-bed-800.jpg
+  thumbnail: Boys-Idabel-bed-th.jpg
+pictures:
+- filename: Bango-bar-chair
+  original: Bango-bar-chair.jpg
+  sizes:
+  - Bango-bar-chair.jpg
+  - Bango-bar-chair-800.jpg
+  thumbnail: Bango-bar-chair-th.jpg
+- filename: Banjo-bed
+  original: Banjo-bed.jpg
+  sizes:
+  - Banjo-bed.jpg
+  - Banjo-bed-800.jpg
+  thumbnail: Banjo-bed-800.jpg
+- filename: Banjo-on-the-Bed
+  original: Banjo-on-the-Bed.jpg
+  sizes:
+  - Banjo-on-the-Bed.jpg
+  - Banjo-on-the-Bed-800.jpg
+  thumbnail: Banjo-on-the-Bed-th.jpg
+- filename: Banjo-under-the-covers
+  original: Banjo-under-the-covers.jpg
+  sizes:
+  - Banjo-under-the-covers.jpg
+  - Banjo-under-the-covers-800.jpg
+  thumbnail: Banjo-under-the-covers-800.jpg
+- filename: Boys-Idabel-bed
+  original: Boys-Idabel-bed.jpg
+  sizes:
+  - Boys-Idabel-bed.jpg
+  - Boys-Idabel-bed-800.jpg
+  thumbnail: Boys-Idabel-bed-th.jpg
+- filename: Casper
+  original: Casper.jpg
+  sizes:
+  - Casper.jpg
+  - Casper-800.jpg
+  thumbnail: Casper-th.jpg
+- filename: Casper-Mousee
+  original: Casper-Mousee.jpg
+  sizes:
+  - Casper-Mousee.jpg
+  - Casper-Mousee-800.jpg
+  thumbnail: Casper-Mousee-th.jpg
+- filename: DSCN1450
+  original: DSCN1450.jpg
+  sizes:
+  - DSCN1450.jpg
+  - DSCN1450-800.jpg
+  thumbnail: DSCN1450-th.jpg
+- filename: DSCN1461
+  original: DSCN1461.jpg
+  sizes:
+  - DSCN1461.jpg
+  - DSCN1461-800.jpg
+  thumbnail: DSCN1461-th.jpg
+- filename: DSCN1464
+  original: DSCN1464.jpg
+  sizes:
+  - DSCN1464.jpg
+  - DSCN1464-800.jpg
+  thumbnail: DSCN1464-th.jpg
+- filename: DSCN1558
+  original: DSCN1558.jpg
+  sizes:
+  - DSCN1558.jpg
+  - DSCN1558-800.jpg
+  thumbnail: DSCN1558-th.jpg
+- filename: DSCN1560
+  original: DSCN1560.jpg
+  sizes:
+  - DSCN1560.jpg
+  - DSCN1560-800.jpg
+  thumbnail: DSCN1560-th.jpg
+- filename: DSCN1563
+  original: DSCN1563.jpg
+  sizes:
+  - DSCN1563.jpg
+  - DSCN1563-800.jpg
+  thumbnail: DSCN1563-th.jpg
+- filename: Einstein-at-14-mo
+  original: Einstein-at-14-mo.jpg
+  sizes:
+  - Einstein-at-14-mo.jpg
+  - Einstein-at-14-mo-800.jpg
+  thumbnail: Einstein-at-14-mo-th.jpg
+- filename: einstine1
+  original: einstine1.jpg
+  sizes:
+  - einstine1.jpg
+  - einstine1-800.jpg
+  thumbnail: einstine1-th.jpg
+- filename: Einstein-at-14-mo
+  original: Einstein-at-14-mo.jpg
+  sizes:
+  - Einstein-at-14-mo.jpg
+  - Einstein-at-14-mo-800.jpg
+  thumbnail: Einstein-at-14-mo-th.jpg
+- filename: einstine1
+  original: einstine1.jpg
+  sizes:
+  - einstine1.jpg
+  - einstine1-800.jpg
+  thumbnail: einstine1-th.jpg

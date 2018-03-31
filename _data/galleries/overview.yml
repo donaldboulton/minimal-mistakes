@@ -1,0 +1,44 @@
+-
+ title: My Cats
+ directory: cat-gallery/part1
+ preview:
+  filename: Boys-Idabel-bed
+  original: Boys-Idabel-bed.jpg
+  sizes:
+  - Boys-Idabel-bed.jpg
+  - Boys-Idabel-bed-800.jpg
+  thumbnail: Boys-Idabel-bed-th.jpg
+-
+ title: Stray Cats
+ directory: stray-cat-gallery
+ picture_path: stray-cat-gallery
+ preview:
+  filename: Boys-Kittens
+  original: Boys-Kittens.jpg
+  sizes:
+  - Boys-Kittens.jpg
+  - Boys-Kittens-800.jpg
+  thumbnail: Boys-Kittens-th.jpg
+-
+ title: Old Cats
+ directory: cat-gallery/part2
+ picture_path: cat-gallery/part2
+ preview:
+  filename: Boys-Kittens
+  original: Boys-Kittens.jpg
+  sizes:
+  - Boys-Kittens.jpg
+  - Boys-Kittens-800.jpg
+  thumbnail: Boys-Kittens-th.jpg
+-
+ title: San Francisco
+ directory: san-francisco
+ picture_path: san-francisco
+ preview:
+  filename: VS-2012-5948-4242x2828
+  original: VS-2012-6013-6000x4000.jpg
+  sizes:
+  - VS-2012-5948-4242x2828.jpg
+  - VS-2012-5948-2121x1414.jpg
+  - VS-2012-5948-2999x1999.jpg
+  thumbnail: VS-2012-5948-320-thumbnail.jpg

@@ -3,6 +3,7 @@
    ========================================================================== */
 
 // 2 Column Gallery
+$default-width: 80%;
 
 .gallery-2-col {
   display: grid;
@@ -74,6 +75,35 @@
   }
 }
 
+// Gallery collection
+
+.image-wrapper,
+.gallery-sizer {
+  width: $default-width;
+}
+
+.image-gallery {
+
+  display: block;
+
+  .image-wrapper {
+    float: left;
+    padding: 3px;
+
+    // hack required if no padding
+    .image {
+      width: 100.1%;
+      width: calc( 100% + 1px );
+      height: 100%;
+    }
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
 // Thumbnail Gallery
 
 .gallery-thumbnails {

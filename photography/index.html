@@ -1,0 +1,35 @@
+---
+layout: single
+title: Photography
+permalink: /photography/
+---
+{% if include.id %}
+  {% assign gallery = page[include.id] %}
+{% else %}
+  {% assign gallery = page.gallery %}
+{% endif %}
+
+{% if gallery.size == 2 %}
+  {% assign gallery_layout = 'half' %}
+{% elsif gallery.size >= 3 %}
+  {% assign gallery_layout = 'third' %}
+{% else %}
+  {% assign gallery_layout = '' %}
+{% endif %}
+
+<h1>{{ page.title }}</h1>
+
+<p>Below are my cat and travels gallerys. Cat Gallerys are broken into my house cats, past cats and stray cats I take care of. .</p>
+
+{% assign count = 0 %}
+{% assign align = "left" %}
+{% for gallery in site.data.galleries.overview %}
+<div class="row">
+  <figure class="third">
+    <h1>{{ gallery.title }}</h1>
+    <a href="{{ site.url }}{{ site.baseurl }}/photography/{{ gallery.directory }}.html">
+      <img alt="{{ gallery.title }}" src="{{ site.url }}{{ site.baseurl }}/assets/photography/{% if gallery.picture_path %}{{ gallery.picture_path }}{% else %}{{ gallery.directory }}{% endif %}/{{ gallery.preview.thumbnail }}" />
+    </a>
+  </figure>
+</div>
+{% endfor %}

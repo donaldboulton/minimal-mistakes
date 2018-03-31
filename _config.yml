@@ -316,7 +316,7 @@ defaults:
       type: "photograpny"
     values:
       layout: single
-      author_profile: 
+      author_profile: false
       read_time: true
       comments: true
       share: true
