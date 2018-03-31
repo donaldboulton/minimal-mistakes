@@ -1,6 +1,6 @@
-<figure id="image-gallery{% if include.id_number %}-{{ include.id_number }}{% endif %}" class="gallery-3-col">
+<figure id="image-gallery{% if include.id_number %}-{{ include.id_number }}{% endif %}" class="grid">
   {% for picture in include.gallery.pictures %}
-  <div id="gallery-sizer" class="image-wrapper">
+  <div id="gallery-sizer" class="grid-item">
     <a href="{{ site.url }}{{ site.baseurl }}/assets/photography/{{ include.gallery.picture_path }}/{{ picture.original }}"
     data-responsive="{% for size in picture.sizes %} {{ site.url}}{{ site.baseurl }}/assets/photography/{{ include.gallery.picture_path }}/{{ size }} {{ size | split: '-' | last | split: '.' | first | split: 'x' | first | strip }}{% unless forloop.last %},{% endunless %}{% endfor %}" class="img"
     {% if picture.title %} data-sub-html="<div class='lg-toolbar caption'><h4>{{ picture.title | escape }}</h4>{% if picture.caption %}<p>{{ picture.caption | escape }}</p>{% endif %}</div>"{% endif %}>
@@ -34,4 +34,10 @@ $grid{% if include.id_number %}{{ include.id_number }}{% endif %}.imagesLoaded()
   $grid{% if include.id_number %}{{ include.id_number }}{% endif %}.masonry();
 });
 
+$('.grid').isotope({
+  itemSelector: '.grid-item',
+  masonry: {
+    columnWidth: 320
+  }
+});
 </script>
