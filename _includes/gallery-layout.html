@@ -7,12 +7,11 @@
 			{% if picture.title %} data-sub-html="<div class='caption'><h4>{{ picture.title | escape }}</figcaption>{% if picture.caption %}<p>{{ picture.caption | escape }}</p>{% endif %}</div>"{% endif %}>
 				<img alt="{{ picture.title }}" src="{{ site.url }}{{ site.baseurl }}/assets/photography/{{ include.gallery.picture_path }}/{{ picture.thumbnail }}" />
 			</a>
-			<meta itemprop="width" content="1200">
-			<meta itemprop="height" content="900">		
+			<meta itemprop="width" content="320">
+			<meta itemprop="height" content="240">		
 		</figure>
 		{% endfor %}
-	</div>
-	{% layout pswp-init.html %}
+	</div>	
 <script>
 	var $gallery{% if include.id_number %}{{ include.id_number }}{% endif %} = $("#image-gallery{% if include.id_number %}-{{ include.id_number }}{% endif %}").lightGallery({
 		thumbnail: true,

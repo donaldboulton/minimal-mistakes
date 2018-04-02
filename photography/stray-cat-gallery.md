@@ -36,7 +36,7 @@ gallery:
     alt: "Top Cat"
     caption: Top Cat
 
-support: [gallery]
+support: [jquery, gallery]
 ---
 
 Stray cats I take care of every day, and have since 1999.

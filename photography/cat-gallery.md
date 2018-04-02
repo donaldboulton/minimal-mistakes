@@ -24,7 +24,7 @@ gallery:
     image_path: /assets/photography/cat-gallery/part1/Banjo-on-the-Bed-th.jpg
     alt: "Banjo on the Bed"
 
-support: [gallery]
+support: [jquery, gallery]
 ---
 
 My kitty cats past and present. House cats and my past cats I take care of every day and have since 1999.
