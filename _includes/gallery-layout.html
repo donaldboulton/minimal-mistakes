@@ -30,5 +30,7 @@
 	$grid{% if include.id_number %}{{ include.id_number }}{% endif %}.imagesLoaded().progress( function() {
 		$grid{% if include.id_number %}{{ include.id_number }}{% endif %}.masonry();
 	});
+	var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+    gallery.init();
 </script>
 	

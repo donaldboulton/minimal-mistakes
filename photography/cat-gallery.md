@@ -39,8 +39,6 @@ Past Cats:
 
 {% include gallery-layout.html gallery=site.data.galleries.cat-gallery-2 id_number=2 %}
 
-{% for gallery in site.photography %}
   {% include archive-single.html %}
-{% endfor %}
 
 {% include gallery caption="This is a Kitty Gallery." %}
