@@ -1,8 +1,26 @@
 ---
 layout: splash
-title: Photography
+title: Gallery
 permalink: /photography/
-support: [gallery]
+
+sidebar:
+  - title: "Kitty Daddy"
+    image: /assets/photography/cat-gallery/part1/Little-Hun-th.jpg
+    image_alt: "Hun Kitty"
+    text: "Hun at 3 weaks"
+  - title: "Responsibilities"
+    text: "I take care of any kitty that comes my way."
+
+    gallery:
+  - url: /assets/images/gallery-1/Little Hun.jpg
+    image_path: assets/images/gallery-1/Little Hun-th.jpg
+    alt: "My Hun Kitty"
+  - url: /assets/images/gallery-1/Boys-Idabel-bed.jpg
+    image_path: assets/images/gallery-1/Boys-Idabel-bed-th.jpg
+    alt: "Boys on the Bed"
+  - url: /assets/images/gallery-1/Banjo-on-the-Bed.jpg
+    image_path: assets/images/gallery-1/Banjo-on-the-Bed-th.jpg
+    alt: "Banjo on the Bed"
 ---
 {% if include.id %}
   {% assign gallery = page[include.id] %}
@@ -23,12 +41,12 @@ support: [gallery]
 <p>Below are my cat and travels gallerys. Cat Gallerys are broken into my house cats, past cats and stray cats I take care of. .</p>
 
 {% assign count = 0 %}
-<div class="gallery-3-col"> 
+  <div class="gallery-3-col"> 
   {% for gallery in site.data.galleries.overview %} 
-  <div>
+   <div>
     <h2 class="page__title">{{ gallery.title }}</h2>
-    <a href="{{ site.url }}{{ site.baseurl }}/photography/{{ gallery.directory }}.html">
-      <img alt="{{ gallery.title }}" src="{{ site.url }}{{ site.baseurl }}/assets/photography/{% if gallery.picture_path %}{{ gallery.picture_path }}{% else %}{{ gallery.directory }}{% endif %}/{{ gallery.preview.thumbnail }}" />
+    <a  class="pswp-ignore" href="{{ site.url }}{{ site.baseurl }}/photography/{{ gallery.directory }}.html">
+      <img  class="pswp-ignore" alt="{{ gallery.title }}" src="{{ site.url }}{{ site.baseurl }}/assets/photography/{% if gallery.picture_path %}{{ gallery.picture_path }}{% else %}{{ gallery.directory }}{% endif %}/{{ gallery.preview.thumbnail }}" />
     </a>
   </div>
   {% endfor %}
