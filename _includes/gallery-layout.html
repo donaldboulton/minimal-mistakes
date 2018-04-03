@@ -1,18 +1,36 @@
-<div id="gallery{% if include.id_number %}-{{ include.id_number }}{% endif %}" class="grid">
-		{% for picture in include.gallery.pictures %}
-		<div class="grid-item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">			
-			<a itemprop="contentUrl" href="{{ site.url }}{{ site.baseurl }}/assets/photography/{{ include.gallery.picture_path }}/{{ picture.original }}"
-			data-author="Donald Boulton" data-size="1200x900" data-med-size="800x600" data-author="Donald Boulton" data-responsive="{% for size in picture.sizes %} {{ site.url}}{{ site.baseurl }}/assets/photography/{{ include.gallery.picture_path }}{% endfor %}"
-			{% if picture.title %} title="<p class='caption'>{{ picture.title | escape }}</p>"{% endif %}>
-				<img itemprop="thumbnail" class="thumb" alt="{{ picture.title }}" src="{{ site.url }}{{ site.baseurl }}/assets/photography/{{ include.gallery.picture_path }}/{{ picture.thumbnail }}" />
-			</a>	
-		</div>
-		{% endfor %}
-</div>	
-<script>	
-	// layout Isotope after each image loads
-	$grid{% if include.id_number %}{{ include.id_number }}{% endif %}.imagesLoaded().progress( function() {
-		$grid{% if include.id_number %}{{ include.id_number }}{% endif %}.packery();
+<div id="image-gallery{% if include.id_number %}-{{ include.id_number }}{% endif %}" class="grid">
+	<div id="grid-sizer{% if include.id_number %}-{{ include.id_number }}{% endif %}" class="grid-sizer"></div>
+	{% for picture in include.gallery.pictures %}
+	<div class="grid-item">
+	  <a href="{{ site.url }}{{ site.baseurl }}/assets/photography/{{ include.gallery.picture_path }}/{{ picture.original }}"
+	  data-responsive="{% for size in picture.sizes %} {{ site.url}}{{ site.baseurl }}/assets/photography/{{ include.gallery.picture_path }}/{{ size }} {{ size | split: '-' | last | split: '.' | first | split: 'x' | first | strip }}{% unless forloop.last %},{% endunless %}{% endfor %}" class="thumb"
+	  {% if picture.title %} data-sub-html="<div class='lg-toolbar caption'><h4>{{ picture.title | escape }}</h4>{% if picture.caption %}<p>{{ picture.caption | escape }}</p>{% endif %}</div>"{% endif %}>
+		<img alt="{{ picture.title }}" src="{{ site.url }}{{ site.baseurl }}/assets/photography/{{ include.gallery.picture_path }}/{{ picture.thumbnail }}" />
+	  </a>
+	</div>
+	{% endfor %}
+  </div>
+  
+  <script>
+  $(document).ready(function() {
+	var $gallery{% if include.id_number %}{{ include.id_number }}{% endif %} = $("#image-gallery{% if include.id_number %}-{{ include.id_number }}{% endif %}").lightGallery({
+	  thumbnail: false,
+	  selector: '.thumb'
 	});
-</script>
-	
+  });
+  
+  // init isotope
+  var $grid{% if include.id_number %}{{ include.id_number }}{% endif %} = $('#image-gallery{% if include.id_number %}-{{ include.id_number }}{% endif %}').isotope({
+	percentPosition: true,
+	columnWidth: '#grid-sizer{% if include.id_number %}-{{ include.id_number }}{% endif %}',
+	itemSelector: '.grid-item',
+	layoutMode: "packery"
+  });
+  
+  // layout Isotope after each image loads
+  $grid{% if include.id_number %}{{ include.id_number }}{% endif %}.imagesLoaded().progress( function() {
+	$grid{% if include.id_number %}{{ include.id_number }}{% endif %}.packery();
+  });
+  
+  </script>
+  

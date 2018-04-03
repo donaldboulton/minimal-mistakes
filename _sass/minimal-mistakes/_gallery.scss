@@ -4,6 +4,7 @@
 
 // 2 Column Gallery
 
+$default-width: 25%;
 $on-palm: 600px;
 $on-laptop: 800px;
 
@@ -79,6 +80,10 @@ $on-laptop: 800px;
 
 // Gallery collection
 
+.grid,
+.grid-sizer {
+  width: $default-width;
+}
 .grid {
 
   max-width: 1200px;
