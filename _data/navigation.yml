@@ -4,6 +4,13 @@ main:
     url: /about/
   - title: "Posts"
     url: /year-archive/
+    children:
+       - title: "Letter Avatar"
+         url: /2018-02-22-post-Letter-Avatar/
+       - title: "Windows-Tweaks"
+         url: /2018-02-26-post-Windows-Tweaks/
+       - title: "WebSIte Tweaks"
+         url: /2018-03-26-post-Website-Tweaks/
   - title: "Gallery"
     url: /photography/
   - title: "Sitemap"

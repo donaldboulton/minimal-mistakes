@@ -16,7 +16,7 @@ var paths       = require('../paths');
 
 // 'gulp images:optimize' -- optimize images
 gulp.task('images:optimize', () => {
-  return gulp.src([paths.imageFilesGlob, '!src/assets/images/{feature,feature/**,lazyload,lazyload/**}']) // do not process feature images
+  return gulp.src([paths.imageFilesGlob, '!assets/images/{pages,pages/**,photography,photography/**}']) // do not process feature images
     .pipe(newer(paths.imageFilesSite))
     .pipe(imagemin([
       imagemin.gifsicle({interlaced: true}),
@@ -29,14 +29,14 @@ gulp.task('images:optimize', () => {
 });
 
 // 'gulp images:lazyload' -- resize and optimize lazyload images
-gulp.task('images:lazyload', () => {
-  return gulp.src([paths.imageFiles + '/lazyload' + paths.imagePattern, '!' + paths.imageFiles + '/lazyload/**/*.{gif,svg}'])
+gulp.task('images:pages', () => {
+  return gulp.src([paths.imageFiles + '/pages' + paths.imagePattern, '!' + paths.imageFiles + '/pages/**/*.{jpg,svg}'])
     .pipe(changed(paths.imageFilesSite))
     .pipe(responsive({
       // resize all images
       '*.*': [{
-        width: 20,
-        rename: { suffix: '-lq' },
+        width: 320,
+        rename: { suffix: '-th' },
       }, {
         // copy original image
         width: '100%',
@@ -52,8 +52,8 @@ gulp.task('images:lazyload', () => {
 });
 
 // 'gulp images:feature' -- resize images
-gulp.task('images:feature', () => {
-  return gulp.src([paths.imageFiles + '/feature' + paths.imagePattern, '!' + paths.imageFiles + '/feature/**/*.{gif,svg}'])
+gulp.task('images:photography', () => {
+  return gulp.src([paths.imageFiles + '/photography' + paths.imagePattern, '!' + paths.imageFiles + '/photography/**/*.{jpg,svg}'])
     .pipe(changed(paths.imageFilesSite))
     .pipe(responsive({
       // resize all images
@@ -62,13 +62,13 @@ gulp.task('images:feature', () => {
         rename: { suffix: '-lq' },
       }, {
         width: 320,
-        rename: { suffix: '-320' },
+        rename: { suffix: '-th' },
       }, {
-        width: 768,
-        rename: { suffix: '-768' },
+        width: 800,
+        rename: { suffix: '-800' },
       }, {
-        width: 1024,
-        rename: { suffix: '-1024' },
+        width: 1200,
+        rename: { suffix: '-1200' },
       }, {
         width: 1920,
         rename: { suffix: '' },
