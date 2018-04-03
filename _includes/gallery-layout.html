@@ -11,12 +11,6 @@
 		{% endfor %}
 </div>	
 <script>
-var $gallery{% if include.id_number %}{{ include.id_number }}{% endif %} = $("#gallery{% if include.id_number %}-{{ include.id_number }}{% endif %}").image({
-		thumbnail: true,
-		selector: '.image'
-	});
-	
-	// init isotope
 	var $grid{% if include.id_number %}{{ include.id_number }}{% endif %} = $('#gallery{% if include.id_number %}-{{ include.id_number }}{% endif %}').isotope({
 		percentPosition: true,
 		columnWidth: '#gallery-sizer{% if include.id_number %}-{{ include.id_number }}{% endif %}',
