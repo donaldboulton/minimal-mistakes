@@ -81,7 +81,7 @@ $on-laptop: 800px;
 
 .grid {
 
-  display: block;
+  max-width: 1200px;
 
   .grid-item {
     float: left;
