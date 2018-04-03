@@ -43,6 +43,12 @@ pictures:
   - DSCN1450.jpg
   - DSCN1450-800.jpg
   thumbnail: DSCN1450-th.jpg
+- filename: DSCN1450
+  original: DSCN1450.jpg
+  sizes:
+  - DSCN1450.jpg
+  - DSCN1450-800.jpg
+  thumbnail: DSCN1450-th.jpg
 - filename: DSCN1461
   original: DSCN1461.jpg
   sizes:
@@ -73,27 +79,51 @@ pictures:
   - DSCN1563.jpg
   - DSCN1563-800.jpg
   thumbnail: DSCN1563-th.jpg
-- filename: Einstein-at-14-mo
-  original: Einstein-at-14-mo.jpg
+- filename: DSCN1461
+  original: DSCN1461.jpg
   sizes:
-  - Einstein-at-14-mo.jpg
-  - Einstein-at-14-mo-800.jpg
-  thumbnail: Einstein-at-14-mo-th.jpg
-- filename: einstine1
-  original: einstine1.jpg
+  - DSCN1461.jpg
+  - DSCN1461-800.jpg
+  thumbnail: DSCN1461-th.jpg
+- filename: DSCN1464
+  original: DSCN1464.jpg
   sizes:
-  - einstine1.jpg
-  - einstine1-800.jpg
-  thumbnail: einstine1-th.jpg
-- filename: Einstein-at-14-mo
-  original: Einstein-at-14-mo.jpg
+  - DSCN1464.jpg
+  - DSCN1464-800.jpg
+  thumbnail: DSCN1464-th.jpg
+- filename: DSCN1558
+  original: DSCN1558.jpg
   sizes:
-  - Einstein-at-14-mo.jpg
-  - Einstein-at-14-mo-800.jpg
-  thumbnail: Einstein-at-14-mo-th.jpg
-- filename: einstine1
-  original: einstine1.jpg
+  - DSCN1558.jpg
+  - DSCN1558-800.jpg
+  thumbnail: DSCN1558-th.jpg
+- filename: DSCN1560
+  original: DSCN1560.jpg
   sizes:
-  - einstine1.jpg
-  - einstine1-800.jpg
-  thumbnail: einstine1-th.jpg
+  - DSCN1560.jpg
+  - DSCN1560-800.jpg
+  thumbnail: DSCN1560-th.jpg
+- filename: DSCN1563
+  original: DSCN1563.jpg
+  sizes:
+  - DSCN1563.jpg
+  - DSCN1563-800.jpg
+  thumbnail: DSCN1563-th.jpg
+- filename: DSCN1261
+  original: DSCN1261.jpg
+  sizes:
+  - DSCN1261.jpg
+  - DSCN1261-800.jpg
+  thumbnail: DSCN1261-th.jpg
+- filename: Banjo-under-the-covers
+  original: Banjo-under-the-covers.jpg
+  sizes:
+  - Banjo-under-the-covers.jpg
+  - Banjo-under-the-covers-800.jpg
+  thumbnail: Banjo-under-the-covers-800.jpg
+- filename: Boys-Idabel-bed
+  original: Boys-Idabel-bed.jpg
+  sizes:
+  - Boys-Idabel-bed.jpg
+  - Boys-Idabel-bed-800.jpg
+  thumbnail: Boys-Idabel-bed-th.jpg
