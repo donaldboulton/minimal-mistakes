@@ -262,11 +262,3 @@
     initPhotoSwipeFromDOM('.grid');
 
 })();
-
-$('.grid').isotope({
-    layoutMode: 'packery',
-    itemSelector: '.grid-item',
-    packery: {
-      gutter: 2
-    }
-  });
