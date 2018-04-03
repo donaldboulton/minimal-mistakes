@@ -1,23 +1,15 @@
 <div id="gallery{% if include.id_number %}-{{ include.id_number }}{% endif %}" class="grid">
 		{% for picture in include.gallery.pictures %}
-		<figure class="grid-item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">			
+		<div class="grid-item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">			
 			<a itemprop="contentUrl" href="{{ site.url }}{{ site.baseurl }}/assets/photography/{{ include.gallery.picture_path }}/{{ picture.original }}"
-			data-author="Donald Boulton" data-size="1200x900" data-author="Donald Boulton" data-responsive="{% for size in picture.sizes %} {{ site.url}}{{ site.baseurl }}/assets/photography/{{ include.gallery.picture_path }}{% endfor %}"
-			{% if picture.title %} title="<figcaption class='caption'>{{ picture.title | escape }}</figcaption>"{% endif %}>
+			data-author="Donald Boulton" data-size="1200x900" data-med-size="800x600" data-author="Donald Boulton" data-responsive="{% for size in picture.sizes %} {{ site.url}}{{ site.baseurl }}/assets/photography/{{ include.gallery.picture_path }}{% endfor %}"
+			{% if picture.title %} title="<p class='caption'>{{ picture.title | escape }}</p>"{% endif %}>
 				<img itemprop="thumbnail" class="thumb" alt="{{ picture.title }}" src="{{ site.url }}{{ site.baseurl }}/assets/photography/{{ include.gallery.picture_path }}/{{ picture.thumbnail }}" />
 			</a>	
-		</figure>
+		</div>
 		{% endfor %}
 </div>	
-<script>
-	$('.grid').isotope({
-      layoutMode: 'packery',
-      itemSelector: '.grid-item',
-      packery: {
-        gutter: 2
-      }
-    });
-	
+<script>	
 	// layout Isotope after each image loads
 	$grid{% if include.id_number %}{{ include.id_number }}{% endif %}.imagesLoaded().progress( function() {
 		$grid{% if include.id_number %}{{ include.id_number }}{% endif %}.packery();
