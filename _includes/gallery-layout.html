@@ -1,9 +1,9 @@
 <div id="gallery{% if include.id_number %}-{{ include.id_number }}{% endif %}" class="gallery">
 		<div id="gallery-sizer{% if include.id_number %}-{{ include.id_number }}{% endif %}" class="gallery-sizer"></div>
 		{% for picture in include.gallery.pictures %}
-		<figure class="image-wrapper img-desc" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">			
+		<figure class="image-wrapper" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">			
 			<a itemprop="contentUrl" href="{{ site.url }}{{ site.baseurl }}/assets/photography/{{ include.gallery.picture_path }}/{{ picture.original }}"
-			data-author="Donald Boulton" data-size="1200x900" data-med-size="800x600" data-author="Donald Boulton" data-responsive="{% for size in picture.sizes %} {{ site.url}}{{ site.baseurl }}/assets/photography/{{ include.gallery.picture_path }}/{{ size }} {{ size | split: '-' | last | split: '.' | first | split: 'x' | first | strip }}{% unless forloop.last %},{% endunless %}{% endfor %}" class="image"
+			data-author="Donald Boulton" data-author="Donald Boulton" data-responsive="{% for size in picture.sizes %} {{ site.url}}{{ site.baseurl }}/assets/photography/{{ include.gallery.picture_path }}/{{ size }} {{ size | split: '-' | last | split: '.' | first | split: 'x' | first | strip }}{% unless forloop.last %},{% endunless %}{% endfor %}"
 			{% if picture.title %} data-title="<figcaption class='caption'><h4>{{ picture.title | escape }}</figcaption>{% if picture.caption %}<p>{{ picture.caption | escape }}</p>{% endif %}</figcaption>"{% endif %}>
 				<img itemprop="thumbnail" alt="{{ picture.title }}" src="{{ site.url }}{{ site.baseurl }}/assets/photography/{{ include.gallery.picture_path }}/{{ picture.thumbnail }}" />
 			</a>	
