@@ -1,14 +1,12 @@
-<div id="gallery{% if include.id_number %}-{{ include.id_number }}{% endif %}" class="picture image-gallery">
+<div id="gallery{% if include.id_number %}-{{ include.id_number }}{% endif %}" class="picture">
 		<div id="gallery-sizer{% if include.id_number %}-{{ include.id_number }}{% endif %}" class="gallery-sizer"></div>
 		{% for picture in include.gallery.pictures %}
 		<figure class="image-wrapper" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">			
 			<a href="{{ site.url }}{{ site.baseurl }}/assets/photography/{{ include.gallery.picture_path }}/{{ picture.original }}"
 			data-med-size="800x600" data-author="Donald Boulton" data-responsive="{% for size in picture.sizes %} {{ site.url}}{{ site.baseurl }}/assets/photography/{{ include.gallery.picture_path }}/{{ size }} {{ size | split: '-' | last | split: '.' | first | split: 'x' | first | strip }}{% unless forloop.last %},{% endunless %}{% endfor %}" class="image" data-size="1200x900"
 			{% if picture.title %} data-title="<figcaption class='caption'><h4>{{ picture.title | escape }}</figcaption>{% if picture.caption %}<p>{{ picture.caption | escape }}</p>{% endif %}</figcaption>"{% endif %}>
-				<img alt="{{ picture.title }}" src="{{ site.url }}{{ site.baseurl }}/assets/photography/{{ include.gallery.picture_path }}/{{ picture.thumbnail }}" />
-			</a>
-			<meta itemprop="width" content="320">
-			<meta itemprop="height" content="240">		
+				<img itemprop="thumbnail" width="320" height="240" alt="{{ picture.title }}" src="{{ site.url }}{{ site.baseurl }}/assets/photography/{{ include.gallery.picture_path }}/{{ picture.thumbnail }}" />
+			</a>	
 		</figure>
 		{% endfor %}
 </div>	
@@ -53,7 +51,7 @@ $pic.on('click', 'figure', function(event) {
     lightBox.init();
 });
 
-var $gallery{% if include.id_number %}{{ include.id_number }}{% endif %} = $("#gallery{% if include.id_number %}-{{ include.id_number }}{% endif %}").lightGallery({
+var $gallery{% if include.id_number %}{{ include.id_number }}{% endif %} = $("#gallery{% if include.id_number %}-{{ include.id_number }}{% endif %}").image({
 		thumbnail: true,
 		selector: '.image'
 	});
