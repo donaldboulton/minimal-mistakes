@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/donaldboulton/DWB/issues"
   },
-  "homepage": "https://donaldboulton.github.io/DWB/",
+  "homepage": "https://donboulton.com",
   "engines": {
     "node": ">= 0.10.0"
   },
@@ -64,6 +64,15 @@
   },
   "dependencies": {
     "gulp-update": "0.0.2",
+    "lg-autoplay": "^1.0.4",
+    "lg-fullscreen": "^1.0.1",
+    "lg-hash": "^1.0.4",
+    "lg-pager": "^1.0.2",
+    "lg-share": "^1.1.0",
+    "lg-thumbnail": "^1.1.0",
+    "lg-video": "^1.2.1",
+    "lg-zoom": "^1.1.0",
+    "lightgallery": "^1.6.9",
     "postcss": "^6.0.13"
   },
   "browserslist": [

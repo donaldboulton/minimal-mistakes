@@ -8,8 +8,6 @@ $default-width: 25%;
 $on-palm: 600px;
 $on-laptop: 800px;
 
-$default-width: 50%;
-
 * {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
@@ -22,7 +20,7 @@ $default-width: 50%;
   width: $default-width;
 }
 
-.aniimated-thumbnials {
+.responsive-images {
 
   display: block;
 
@@ -79,10 +77,6 @@ $default-width: 50%;
   }
 }
 
-.caption {
-  position: static;
-  color: #AAA;
-}
 // Thumbnail Gallery
 
 .gallery-thumbnails {
