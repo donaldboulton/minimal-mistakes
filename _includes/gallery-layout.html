@@ -4,7 +4,7 @@
 			<a itemprop="contentUrl" href="{{ site.url }}{{ site.baseurl }}/assets/photography/{{ include.gallery.picture_path }}/{{ picture.original }}"
 			data-author="Donald Boulton" data-size="1200x900" data-author="Donald Boulton" data-responsive="{% for size in picture.sizes %} {{ site.url}}{{ site.baseurl }}/assets/photography/{{ include.gallery.picture_path }}{% endfor %}"
 			{% if picture.title %} title="<figcaption class='caption'>{{ picture.title | escape }}</figcaption>"{% endif %}>
-				<img itemprop="thumbnail" alt="{{ picture.title }}" src="{{ site.url }}{{ site.baseurl }}/assets/photography/{{ include.gallery.picture_path }}/{{ picture.thumbnail }}" />
+				<img itemprop="thumbnail" class="image" alt="{{ picture.title }}" src="{{ site.url }}{{ site.baseurl }}/assets/photography/{{ include.gallery.picture_path }}/{{ picture.thumbnail }}" />
 			</a>	
 		</figure>
 		{% endfor %}

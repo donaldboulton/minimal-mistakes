@@ -83,11 +83,18 @@ $on-laptop: 800px;
 
   max-width: 1200px;
 
-  .grid-item {
+  .gallery-item {
     float: left;
-    padding: 3px;
     width: 320px;
-    height: 240px;
+    padding: 3px;
+
+    // hack required if no padding
+    .image {
+      width: 100.1%;
+      width: calc( 100% + 1px );
+      height: 100%;
+    }
+  }
 
   &:after {
     content: '';
