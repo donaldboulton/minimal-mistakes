@@ -86,14 +86,8 @@ $on-laptop: 800px;
   .grid-item {
     float: left;
     padding: 3px;
-
-    // hack required if no padding
-    .image {
-      width: 100.1%;
-      width: calc( 100% + 1px );
-      height: 100%;
-    }
-  }
+    width: 320px;
+    height: 240px;
 
   &:after {
     content: '';
