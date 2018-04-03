@@ -3,7 +3,7 @@
    ========================================================================== */
 
 // 2 Column Gallery
-$default-width: 25%;
+
 $on-palm: 600px;
 $on-laptop: 800px;
 
@@ -79,16 +79,11 @@ $on-laptop: 800px;
 
 // Gallery collection
 
-.image-wrapper,
-.gallery-sizer {
-  width: $default-width;
-}
-
-.gallery {
+.grid {
 
   display: block;
 
-  .image-wrapper {
+  .grid-item {
     float: left;
     padding: 3px;
 
@@ -106,6 +101,7 @@ $on-laptop: 800px;
     clear: both;
   }
 }
+
 // Thumbnail Gallery
 
 .gallery-thumbnails {
