@@ -1,6 +1,6 @@
 -
  title: My Cats
- directory: cat-gallery/part1
+ directory: cat-gallery
  preview:
   filename: Boys-Idabel-bed
   original: Boys-Idabel-bed.jpg
@@ -21,8 +21,8 @@
   thumbnail: Boys-Kittens-th.jpg
 -
  title: Old Cats
- directory: cat-gallery/part2
- picture_path: cat-gallery/part2
+ directory: old-cat-gallery
+ picture_path: old-cat-gallery
  preview:
   filename: Boys-Kittens
   original: Boys-Kittens.jpg

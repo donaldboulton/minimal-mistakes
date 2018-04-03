@@ -33,11 +33,11 @@ Its my passion as I love kitty cats.
 
 House cats:
 
-{% include gallery-layout.html gallery=site.data.galleries.cat-gallery-1 id_number=1 %}
+{% include gallery-layout.html gallery=site.data.galleries.cat-gallery %}
 
 Past Cats:
 
-{% include gallery-layout.html gallery=site.data.galleries.cat-gallery-2 id_number=2 %}
+{% include gallery-layout.html gallery=site.data.galleries.old-cat-gallery %}
 
   {% include archive-single.html %}
 

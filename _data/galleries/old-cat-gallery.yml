@@ -1,4 +1,4 @@
-picture_path: cat-gallery/part2
+picture_path: old-cat-gallery
 preview:
   filename: Boys-Kittens
   original: Boys-Kittens.jpg
@@ -19,6 +19,18 @@ pictures:
   - DSCN1260.jpg
   - DSCN1260-800.jpg
   thumbnail: DSCN1260-th.jpg
+- filename: Casper
+  original: Casper.jpg
+  sizes:
+  - Casper.jpg
+  - Casper-800.jpg
+  thumbnail: Casper-th.jpg
+- filename: Casper-Mousee
+  original: Casper-Mousee.jpg
+  sizes:
+  - Casper-Mousee.jpg
+  - Casper-Mousee-800.jpg
+  thumbnail: Casper-Mousee-th.jpg
 - filename: DSCN1261
   original: DSCN1261.jpg
   sizes:

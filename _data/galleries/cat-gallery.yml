@@ -1,4 +1,4 @@
-picture_path: cat-gallery/part1
+picture_path: cat-gallery
 preview:
   filename: Boys-Idabel-bed
   original: Boys-Idabel-bed.jpg
@@ -37,18 +37,6 @@ pictures:
   - Boys-Idabel-bed.jpg
   - Boys-Idabel-bed-800.jpg
   thumbnail: Boys-Idabel-bed-th.jpg
-- filename: Casper
-  original: Casper.jpg
-  sizes:
-  - Casper.jpg
-  - Casper-800.jpg
-  thumbnail: Casper-th.jpg
-- filename: Casper-Mousee
-  original: Casper-Mousee.jpg
-  sizes:
-  - Casper-Mousee.jpg
-  - Casper-Mousee-800.jpg
-  thumbnail: Casper-Mousee-th.jpg
 - filename: DSCN1450
   original: DSCN1450.jpg
   sizes:
