@@ -15,7 +15,6 @@ header:
 
 support: [gallery]
 ---
-Past Cats:
 
 {% include gallery-layout.html gallery=site.data.galleries.old-cat-gallery %}
 
