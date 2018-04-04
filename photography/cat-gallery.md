@@ -16,11 +16,9 @@ header:
 support: [gallery]
 ---
 
-My kitty cats past and present. House cats and my past cats I take care of every day and have since 1999.
+My kitty cats, Tiger the Tabby, Banjo the black Kitty, and The Father and Son Team Mr. Einstein and Jr. Einstein who look and act allot alike.
 
-Its my passion as I love kitty cats.
-
-House cats:
+Cats my passion as I love kitty cats.
 
 {% include gallery-layout.html gallery=site.data.galleries.cat-gallery %}
 
