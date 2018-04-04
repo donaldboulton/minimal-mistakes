@@ -22,7 +22,6 @@ sidebar:
 
 support: [gallery]
 ---
-# Stray Cats
 
 Stray cats I take care of every day, and have since 1999.
 Its my passion as I love kitty cats.
