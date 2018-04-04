@@ -2,11 +2,11 @@ $(document).ready(function() {
 
     window.prettyPrint && prettyPrint()
 
-    // Animated thumbnails
-    $('#aniimated-thumbnials').lightGallery({
-        thumbnail:true
+    var $gallery = $("#aniimated-thumbnials").lightGallery({
+        thumbnail: true,
+        selector: '.image'
     });
-
+      
     //thumbnails without animation
     var $thumb = $('#thumbnials-without-animation');
     if ($thumb.length) {
@@ -168,6 +168,13 @@ $(document).ready(function() {
     });
 
 });
+
+$(document).ready(function() {
+    var $gallery = $("#aniimated-thumbnials").lightGallery({
+      thumbnail: true,
+      selector: '.image'
+    });
+  });
 
 // init isotope
 var $grid = $('#aniimated-thumbnials').isotope({
