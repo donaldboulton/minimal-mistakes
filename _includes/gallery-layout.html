@@ -1,12 +1,23 @@
-<div id="responsive-images{% if include.id_number %}-{{ include.id_number }}{% endif %}" class="responsive">
+<div id="gallery{% if include.id_number %}-{{ include.id_number }}{% endif %}" class="gallery">
   <div id="gallery-sizer{% if include.id_number %}-{{ include.id_number }}{% endif %}" class="gallery-sizer"></div>
   {% for picture in include.gallery.pictures %}
-  <ul class="image-wrapper">
+  <ul id="responsive-images" class="image-wrapper list-unstyled">
     <li data-src="{{ site.url }}{{ site.baseurl }}/assets/photography/{{ include.gallery.picture_path }}/{{ picture.original }}"
     data-responsive="{% for size in picture.sizes %} {{ site.url}}{{ site.baseurl }}/assets/photography/{{ include.gallery.picture_path }}/{{ size }} {{ size | split: '-' | last | split: '.' | first | split: 'x' | first | strip }}{% unless forloop.last %},{% endunless %}{% endfor %}" class="image"
     {% if picture.title %} data-sub-html="<div class='lg-toolbar caption'><h4>{{ picture.title | escape }}</h4>{% if picture.caption %}<p>{{ picture.caption | escape }}</p>{% endif %}</div>"{% endif %}>
-      <img alt="{{ picture.title }}" src="{{ site.url }}{{ site.baseurl }}/assets/photography/{{ include.gallery.picture_path }}/{{ picture.thumbnail }}" />
+    <a href="{{ site.url }}{{ site.baseurl }}/assets/photography/{{ include.gallery.picture_path }}/{{ picture.original }}">
+       <img alt="{{ picture.title }}" src="{{ site.url }}{{ site.baseurl }}/assets/photography/{{ include.gallery.picture_path }}/{{ picture.thumbnail }}" />
+       <div class="demo-gallery-poster">
+          <img src="/assets/dist/img/zoom.png">
+       </div>
+    </a>
     </li>
   </ul>
   {% endfor %}
 </div>
+<script>
+  var $gallery{% if include.id_number %}{{ include.id_number }}{% endif %} = $("#responsive-images{% if include.id_number %}-{{ include.id_number }}{% endif %}").lightGallery({
+    thumbnail: false,
+    selector: '.image'
+});
+</script>
