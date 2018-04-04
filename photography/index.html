@@ -1,6 +1,22 @@
 ---
 layout: single
 permalink: /photography/
+search: true
+author: Donald Boulton
+author_profile: false
+tags:
+  - Cats
+  - God
+category:
+  - Gallerys
+
+toc: true
+toc_label: "Gallerys"
+
+read_time: false
+comments: true
+share: true
+related: true
 
 sidebar:
   - title: "My Hun Kitty"
@@ -10,16 +26,9 @@ sidebar:
   - title: "Responsibilities"
     text: "I take care of any kitty that comes my way."
 
-gallery:
-  - url: /assets/photography/old-cat-gallery/Little Hun.jpg
-    image_path: /assets/photography/old-cat-gallery/Little Hun-th.jpg
-    alt: "My Hun Kitty"
-  - url: /assets/photography/cat-gallery/Boys-Idabel-bed.jpg
-    image_path: /assets/photography/cat-gallery/Boys-Idabel-bed-th.jpg
-    alt: "Boys on the Bed"
-  - url: /assets/photography/cat-gallery/Banjo-on-the-Bed.jpg
-    image_path: /assets/photography/cat-gallery//Banjo-on-the-Bed-th.jpg
-    alt: "Banjo on the Bed"
+header:
+  image: /assets/photography/cat-gallery/einstine-1200.jpg
+  teaser: /assets/photography/cat-gallery/einstine-th.jpg"
 ---
 {% if include.id %}
   {% assign gallery = page[include.id] %}
@@ -35,7 +44,7 @@ gallery:
   {% assign gallery_layout = '' %}
 {% endif %}
 
-<h1>{{ page.title }}</h1>
+<h1 class="page__title">{{ page.title }}</h1>
 
 <p>Below are my cat and travels gallerys. Cat Gallerys are broken into my house cats, past cats and stray cats I take care of. .</p>
 
