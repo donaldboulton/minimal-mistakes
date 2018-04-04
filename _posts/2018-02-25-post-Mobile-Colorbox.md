@@ -27,17 +27,6 @@ Alot of developers still do in their applications"
 header:
   image: /assets/images/pages/svg/colorbox-html-1400.png
   teaser: /assets/images/pages/svg/colorbox-html-1400.png
-
-gallery:
-  - url: /assets/images/pages/svg/colorbox-html-1400.png
-    image_path: /assets/images/pages/svg/colorbox-html.png
-    alt: "Colorbox HTML"
-  - url: /assets/images/pages/svg/colorbox-800.png
-    image_path: /assets/images/pages/svg/colorbox.png
-    alt: "Colorbox Images"
-  - url: /assets/images/pages/svg/colorbox-logon-800.png
-    image_path: /assets/images/pages/svg/colorbox-logon.png
-    alt: "Colorbox Logon"
 ---
 
 {% include octo-arm.html %}
@@ -185,5 +174,3 @@ Below is the changed javascript  with additions highlighted.
   jQuery(window).resize(resizeColorBox);
   window.addEventListener("orientationchange", resizeColorBox, false);
 ```
-
-{% include gallery caption="Colorbox HTML, Colorbox Images, Colorbox Logon." %}

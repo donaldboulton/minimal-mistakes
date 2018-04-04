@@ -25,29 +25,17 @@ excerpt: "Defrag Sql 2008 to 2016"
 header:
   image: /assets/images/pages/defrag-sql-2014-1400-min.png
   teaser: /assets/images/pages/defrag-sql-2014-1400-min.png
-
-gallery:
-  - url: /assets/images/pages/page-splitting.png
-    image_path: /assets/images/pages/page-splitting-256.png
-    alt: "Page Splitting"
-  - url: /assets/images/pages/index_heatmap.jpeg
-    image_path: /assets/images/pages/index_heatmap-256.png
-    alt: "Index Heatmap"
-  - url: /assets/images/pages/windows-xp-defragment-hard-drive.jpeg
-    image_path: /assets/images/pages/windows-xp-defragment-hard-drive-256.jpeg
-    alt: "Clusters"
-
 ---
 
 {% include octo-arm.html %}
 
-## Defragment SQL Server
+# Defragment SQL Server
 
 In any SQl database and one that updates through migrations like Orchard CMS get defragmented and I have notice over the years dealing with SQL server that it needs defraging occasionaly, keeping the performance optimized.
 
 I have included this in my blog as a notice to pay attention and defrag your SQL database.
 
-#### Microsoft Post
+## Microsoft Post
 
 [Microsoft Docs](https://docs.microsoft.com/en-us/sql/t-sql/database-console-commands/dbcc-indexdefrag-transact-sql)
 
@@ -55,21 +43,21 @@ It’s been quite some time since my last index defrag script update. A big part
 
 Change Log
 
-*   Bug fix for databases containing spaces or special characters
-*   Support for case-sensitive databases
-*   Re-executable CREATE script (for those who want to re-run the whole script)
-*   Comma-delimited list of databases is now supported for the @database parameter
+* Bug fix for databases containing spaces or special characters
+* Support for case-sensitive databases
+* Re-executable CREATE script (for those who want to re-run the whole script)
+* Comma-delimited list of databases is now supported for the @database parameter
 
 Feature List:
 
-*   Defrag a single database, a list of databases, or all databases (@database)
-*   Time Limitations: stop defragging after the specified amount of time has elapsed (@timeLimit). Please note, it will not kill a defrag that is currently in process, even if it exceeds the threshold.
-*   Optional stop-and-resume functionality: pick up where your defrag last left off without having to rescan sys.dm_db_index_physical_stats. (@forceRescan)
-*   Defrag scheduling: choose which days to defrag certain indexes, or exclude certain indexes altogether, by using the dbo.dba_indexDefragExclusion table.
-*   Defrag priority: choose whether to defrag indexes in ascending or descending order by range_scan_count (default), fragmentation, or page_count.
-*   Current partition exclusion: choose whether or not to exclude the right-most populated partition from the defrag process, common for sliding-window tables (@excludeMaxPartition)
-*   Commands-only mode: Choose to just log the current defrag status and print the defrag commands, rather than executing them, by using @executeSQL.
-*   … and tons more! Please read the parameter list and notes section for details of all the options available.
+* Defrag a single database, a list of databases, or all databases (@database)
+* Time Limitations: stop defragging after the specified amount of time has elapsed (@timeLimit). Please note, it will not kill a defrag that is currently in process, even if it exceeds the threshold.
+* Optional stop-and-resume functionality: pick up where your defrag last left off without having to rescan sys.dm_db_index_physical_stats. (@forceRescan)
+* Defrag scheduling: choose which days to defrag certain indexes, or exclude certain indexes altogether, by using the dbo.dba_indexDefragExclusion table.
+* Defrag priority: choose whether to defrag indexes in ascending or descending order by range_scan_count (default), fragmentation, or page_count.
+* Current partition exclusion: choose whether or not to exclude the right-most populated partition from the defrag process, common for sliding-window tables (@excludeMaxPartition)
+* Commands-only mode: Choose to just log the current defrag status and print the defrag commands, rather than executing them, by using @executeSQL.
+* And tons more! Please read the parameter list and notes section for details of all the options available.
 
 FAQ:
 
@@ -325,7 +313,7 @@ Note
 
 When DBCC INDEXDEFRAG is run, index defragmentation occurs serially. This means that the operation on a single index is performed using a single thread. No parallelism occurs. Also, operations on multiple indexes from the same DBCC INDEXDEFRAG statement are performed on one index at a time.
 
-DBCC INDEXDEFRAG also compacts the pages of an index, taking into consideration the fill factor specified when the index was created. Any empty pages created because of this compaction are removed. For more information, see <span>[Specify Fill Factor for an Index](http://msdn.microsoft.com/en-us/library/ms177459.aspx)</span>.
+DBCC INDEXDEFRAG also compacts the pages of an index, taking into consideration the fill factor specified when the index was created. Any empty pages created because of this compaction are removed. For more information, see [Specify Fill Factor for an Index](http://msdn.microsoft.com/en-us/library/ms177459.aspx).
 
 If an index spans more than one file, DBCC INDEXDEFRAG defragments one file at a time. Pages do not migrate between files.
 
@@ -333,7 +321,9 @@ DBCC INDEXDEFRAG reports the estimated percentage completed every five minutes. 
 
 Unlike DBCC DBREINDEX, or the index building operation generally, DBCC INDEXDEFRAG is an online operation. It does not hold locks long term. Therefore, DBCC INDEXDEFRAG does not block running queries or updates. Because the time to defragment is related to the level of fragmentation, a relatively unfragmented index can be defragmented faster than a new index can be built. A very fragmented index might take considerably longer to defragment than to rebuild.
 
-The defragmentation is always fully logged, regardless of the database recovery model setting. For more information, see <span>[ALTER DATABASE (Transact-SQL)](http://msdn.microsoft.com/en-us/library/ms174269.aspx)</span>. The defragmentation of a very fragmented index can generate more log than a fully logged index creation. However, the defragmentation is performed as a series of short transactions, so a large log is unnecessary if log backups are taken frequently or if the recovery model setting is SIMPLE.
+The defragmentation is always fully logged, regardless of the database recovery model setting. For more information, see [ALTER DATABASE (Transact-SQL)](http://msdn.microsoft.com/en-us/library/ms174269.aspx)
+
+The defragmentation of a very fragmented index can generate more log than a fully logged index creation. However, the defragmentation is performed as a series of short transactions, so a large log is unnecessary if log backups are taken frequently or if the recovery model setting is SIMPLE.
 
 ### Restrictions
 
@@ -341,12 +331,10 @@ DBCC INDEXDEFRAG shuffles index leaf pages in place. Therefore, if an index is i
 
 DBCC INDEXDEFRAG cannot be used to defragment the following indexes:
 
-*   A disabled index.
+* A disabled index.
 
-*   An index with page locking set to OFF.
+* An index with page locking set to OFF.
 
-*   A spatial index.
+* A spatial index.
 
 DBCC INDEXDEFRAG is not supported for use on system tables.
-
-{% include gallery caption="Old XP Defragmentation, Page Splitting, Web Matrix Defrag." %}

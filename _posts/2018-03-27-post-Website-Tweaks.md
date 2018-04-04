@@ -27,17 +27,6 @@ Including Pajax"
 header:
   image: /assets/images/pages/performance/speedtest_donboulton.jpg
   teaser: /assets/images/pages/performance/speedtest_donboulton.jpg
-
-gallery:
-  - url: /assets/images/pages/performance/speedtest_donboulton-th.jpg
-    image_path: /assets/images/pages/performance/speedtest_donboulton-th.jpg
-    alt: "World Speed Test"
-  - url: /assets/images/pages/performance/Speed-Test-Domains-min.jpg
-    image_path: /assets/images/pages/performance/Speed-Test-Domains-min.jpg
-    alt: "Speed test domains"
-  - url: /assets/images/pages/performance/structured-data-test.jpg
-    image_path: /assets/images/pages/performance/structured-data-test.jpg
-    alt: "Structured data"
 ---
 
 {% include octo-arm.html %}
@@ -552,5 +541,3 @@ My tabs are pjaxed and I added this to Zone after content so the origional pjax 
 ```html
 <div id="tabs-container" class="data-pjax-container" data-pjax-container>
 ```
-
-{% include gallery caption="Website Performance." %}

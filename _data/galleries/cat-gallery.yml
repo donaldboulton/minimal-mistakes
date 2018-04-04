@@ -1,129 +1,157 @@
 picture_path: cat-gallery
 preview:
   filename: Boys-Idabel-bed
-  original: Boys-Idabel-bed.jpg
+  original: Boys-Idabel-bed-1200.jpg
   sizes:
-  - Boys-Idabel-bed.jpg
+  - Boys-Idabel-bed-1200.jpg
   - Boys-Idabel-bed-800.jpg
+  - Boys-Idabel-bed-320.jpg
   thumbnail: Boys-Idabel-bed-th.jpg
 pictures:
 - filename: Bango-bar-chair
-  original: Bango-bar-chair.jpg
+  original: Bango-bar-chair-1200.jpg
   sizes:
-  - Bango-bar-chair.jpg
+  - Bango-bar-chair-1200.jpg
   - Bango-bar-chair-800.jpg
+  - Bango-bar-chair-320.jpg
   thumbnail: Bango-bar-chair-th.jpg
 - filename: Banjo-bed
-  original: Banjo-bed.jpg
+  original: Banjo-bed-1200.jpg
   sizes:
-  - Banjo-bed.jpg
+  - Banjo-bed-1200.jpg
   - Banjo-bed-800.jpg
-  thumbnail: Banjo-bed-800.jpg
+  - Banjo-bed-320.jpg
+  thumbnail: Banjo-bed-th.jpg
 - filename: Banjo-on-the-Bed
-  original: Banjo-on-the-Bed.jpg
+  original: Banjo-on-the-Bed-1200.jpg
   sizes:
-  - Banjo-on-the-Bed.jpg
+  - Banjo-on-the-Bed-1200.jpg
   - Banjo-on-the-Bed-800.jpg
+  - Banjo-on-the-Bed-320.jpg
   thumbnail: Banjo-on-the-Bed-th.jpg
 - filename: Banjo-under-the-covers
-  original: Banjo-under-the-covers.jpg
+  original: Banjo-under-the-covers-1200.jpg
   sizes:
-  - Banjo-under-the-covers.jpg
+  - Banjo-under-the-covers-1200.jpg
   - Banjo-under-the-covers-800.jpg
-  thumbnail: Banjo-under-the-covers-800.jpg
+  - Banjo-under-the-covers-320.jpg
+  thumbnail: Banjo-under-the-covers-th.jpg
 - filename: Boys-Idabel-bed
-  original: Boys-Idabel-bed.jpg
+  original: Boys-Idabel-bed-1200.jpg
   sizes:
-  - Boys-Idabel-bed.jpg
+  - Boys-Idabel-bed-1200.jpg
+  - Boys-Idabel-bed-800.jpg
   - Boys-Idabel-bed-800.jpg
   thumbnail: Boys-Idabel-bed-th.jpg
 - filename: DSCN1450
-  original: DSCN1450.jpg
+  original: DSCN1450-1200.jpg
   sizes:
-  - DSCN1450.jpg
+  - DSCN1450-1200.jpg
   - DSCN1450-800.jpg
+  - DSCN1450-320.jpg
   thumbnail: DSCN1450-th.jpg
-- filename: DSCN1450
-  original: DSCN1450.jpg
+- filename: einstine-1200
+  original: einstine-1200.jpg
   sizes:
-  - DSCN1450.jpg
-  - DSCN1450-800.jpg
-  thumbnail: DSCN1450-th.jpg
+  - einstine-1200.jpg
+  - einstine-800.jpg
+  - einstine-320.jpg
+  thumbnail: einstine-th.jpg
+- filename: einstine-rolling
+  original: einstine-rolling-1200.jpg
+  sizes:
+  - einstine-rolling-1200.jpg
+  - einstine-rolling-800.jpg
+  - einstine-rolling-320.jpg
+  thumbnail: einstine-rolling-th.jpg
 - filename: DSCN1461
-  original: DSCN1461.jpg
+  original: DSCN1461-1200.jpg
   sizes:
-  - DSCN1461.jpg
+  - DSCN1461-1200.jpg
   - DSCN1461-800.jpg
+  - DSCN1461-320.jpg
   thumbnail: DSCN1461-th.jpg
 - filename: DSCN1464
-  original: DSCN1464.jpg
+  original: DSCN1464-1200.jpg
   sizes:
-  - DSCN1464.jpg
+  - DSCN1464-1200.jpg
   - DSCN1464-800.jpg
+  - DSCN1464-320.jpg
   thumbnail: DSCN1464-th.jpg
 - filename: DSCN1558
-  original: DSCN1558.jpg
+  original: DSCN1558-1200.jpg
   sizes:
-  - DSCN1558.jpg
+  - DSCN1558-1200.jpg
   - DSCN1558-800.jpg
+  - DSCN1558-320.jpg
   thumbnail: DSCN1558-th.jpg
 - filename: DSCN1560
-  original: DSCN1560.jpg
+  original: DSCN1560-1200.jpg
   sizes:
-  - DSCN1560.jpg
+  - DSCN1560-1200.jpg
   - DSCN1560-800.jpg
+  - DSCN1560-320.jpg
   thumbnail: DSCN1560-th.jpg
 - filename: DSCN1563
-  original: DSCN1563.jpg
+  original: DSCN1563-1200.jpg
   sizes:
-  - DSCN1563.jpg
+  - DSCN1563-1200.jpg
   - DSCN1563-800.jpg
+  - DSCN1563-320.jpg
   thumbnail: DSCN1563-th.jpg
 - filename: DSCN1461
-  original: DSCN1461.jpg
+  original: DSCN1461-1200.jpg
   sizes:
-  - DSCN1461.jpg
+  - DSCN1461-1200.jpg
   - DSCN1461-800.jpg
+  - DSCN1461-320.jpg
   thumbnail: DSCN1461-th.jpg
 - filename: DSCN1464
-  original: DSCN1464.jpg
+  original: DSCN1464-1200.jpg
   sizes:
-  - DSCN1464.jpg
+  - DSCN1464-1200.jpg
   - DSCN1464-800.jpg
+  - DSCN1464-320.jpg
   thumbnail: DSCN1464-th.jpg
 - filename: DSCN1558
-  original: DSCN1558.jpg
+  original: DSCN1558-1200.jpg
   sizes:
-  - DSCN1558.jpg
+  - DSCN1558-1200.jpg
   - DSCN1558-800.jpg
+  - DSCN1558-320.jpg
   thumbnail: DSCN1558-th.jpg
 - filename: DSCN1560
-  original: DSCN1560.jpg
+  original: DSCN1560-1200.jpg
   sizes:
-  - DSCN1560.jpg
+  - DSCN1560-1200.jpg
   - DSCN1560-800.jpg
+  - DSCN1560-320.jpg
   thumbnail: DSCN1560-th.jpg
 - filename: DSCN1563
-  original: DSCN1563.jpg
+  original: DSCN1563-1200.jpg
   sizes:
-  - DSCN1563.jpg
+  - DSCN1563-1200.jpg
   - DSCN1563-800.jpg
+  - DSCN1563-320.jpg
   thumbnail: DSCN1563-th.jpg
-- filename: DSCN1261
-  original: DSCN1261.jpg
+- filename: IMG_20170923_175722
+  original: IMG_20170923_175722-1200.jpg
   sizes:
-  - DSCN1261.jpg
-  - DSCN1261-800.jpg
-  thumbnail: DSCN1261-th.jpg
-- filename: Banjo-under-the-covers
-  original: Banjo-under-the-covers.jpg
+  - IMG_20170923_175722-1200.jpg
+  - IMG_20170923_175722-800.jpg
+  - IMG_20170923_175722-320.jpg
+  thumbnail: IMG_20170923_175722-th.jpg
+- filename: Hun-Kitty-1200
+  original: Hun-Kitty-1200.jpg
   sizes:
-  - Banjo-under-the-covers.jpg
-  - Banjo-under-the-covers-800.jpg
-  thumbnail: Banjo-under-the-covers-800.jpg
-- filename: Boys-Idabel-bed
-  original: Boys-Idabel-bed.jpg
+  - Hun-Kitty-1200.jpg
+  - Hun-Kitty-800.jpg
+  - Hun-Kitty-320.jpg
+  thumbnail: Hun-Kitty-th.jpg
+- filename: Hun-Stubby-tail2
+  original: Hun-Stubby-tail2-1200.jpg
   sizes:
-  - Boys-Idabel-bed.jpg
-  - Boys-Idabel-bed-800.jpg
-  thumbnail: Boys-Idabel-bed-th.jpg
+  - Hun-Stubby-tail2-1200.jpg
+  - Hun-Stubby-tail2-800.jpg
+  - Hun-Stubby-tail2-320.jpg
+  thumbnail: Hun-Stubby-tail2-th.jpg

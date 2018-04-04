@@ -28,18 +28,6 @@ Alot of people do not even know about gravatar and your get a generic image for 
 header:
   image: /assets/images/pages/letter-avatar-header.png
   teaser: /assets/images/pages/letter-avatar-header.png
-
-gallery:
-  - url: /assets/images/pages/gravatar-icon-600.jpeg
-    image_path: /assets/images/pages/gravatar-icon-256.jpg
-    alt: "Gravtar Image"
-  - url: /assets/images/pages/avatar-600.png
-    image_path: /assets/images/pages/avatar-225.png
-    alt: "Gravtar Generic Image"
-  - url: /assets/images/pages/myLetterAvatar-600.png
-    image_path: /assets/images/pages/myLetterAvatar-225.png
-    alt: "Letter Avatar"
-
 ---
 
 {% include octo-arm.html %}
@@ -54,7 +42,7 @@ Avatar Generator from - Commenter name as - (first name and surname) as input an
 
 The background colours are from from [Flat Ui Colors](http://flatuicolors.com/) Now with retina support.
 
-### The Canvas html snippet. 
+### The Canvas html snippet
 
 ```html
 <canvas id="user-icon" width="60" height="60"></canvas>
@@ -203,9 +191,11 @@ The comments include form in: _includes/comment.html, line 8
 ### Image changes
 
 Modifying the Image link From:
+
 ```html
-8 <img src="/assets/images/avatar-60.png" srcset="/assets/images/avatar-120.png 2x; 
+<img src="/assets/images/avatar-60.png" srcset="/assets/images/avatar-120.png 2x; 
 ```
+
 Changed To: Letter Avatar
 
 Removed src="..." and srcset="..." 
@@ -215,6 +205,7 @@ Added
 ```html
 avatar="include.name | escape" class="avatar" alt="include.name | escape"
 ```
+
 Then the link to the Gravatar image you have to change for yur own genertic image, orLetter Avatar generated.
 
 As discribed at [Stack Overflow](https://stackoverflow.com/questions/2683803/gravatar-is-there-a-default-image)
@@ -224,13 +215,16 @@ I will Change Line 6
 ```html
 <img src="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=60" srcset="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=120 2x" alt="{{ include.name | escape }}">
 ```
+
 From:
+
 ```html
 ?d=mm&s=60 
 and also 
 ?d=mm&s=120 2x
 ```
-To nothing for fallback image in gravatar links, then it falls back to 
+
+To nothing for fallback image in gravatar links, then it falls back to
 
 ```html
     <img src="https://www.gravatar.com/avatar/{{ include.email }}?d=avatar" srcset="https://www.gravatar.com/avatar/{{ include.email }}?d=avatar=120 2x" alt="{{ include.name | escape }}">
@@ -248,12 +242,14 @@ Link to it in scripts.html
 ```html
 <script src="{{ '/assets/js/avatar.js' | absolute_url }}"></script>
 ```
+
 Or in a mardown page as.
 
 ```html
 footer:
   - /assets/js/avatar.js
 ```
+
 ### Adding Scripts Site wide in _config.yaml
 
 To add scripts to the <head> or closing </body> elements by adding paths to following arrays in _config.yml.
@@ -269,9 +265,7 @@ footer_scripts:
 
 Then create avatar.scss and register the avatar.scss file in minimal-mistakes.scss, for width, height and rounded images.
 
-{% include gallery caption="Gravtar, Avatar, Letter Avatar." %}
- 
-## Pre implementation comments.
+## Pre implementation comments
 
 If your reading this before I get Staticman working. I need to see if this is really works or not.
 Use disqus below to comment or add ideas to this conception.

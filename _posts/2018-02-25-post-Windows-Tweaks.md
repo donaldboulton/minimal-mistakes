@@ -25,31 +25,20 @@ excerpt: "This Tweaks page has evolved from Windows XP to Now upgrading this to 
 header:
   image: /assets/images/pages/windows-tweaks.png
   teaser: /assets/images/pages/windows-tweaks.png
-
-gallery:
-  - url: /assets/images/pages/Windows_XP_logo.png
-    image_path: /assets/images/pages/Windows_XP_logo.png
-    alt: "Windows XP"
-  - url: /assets/images/pages/windows_vista_logo.png
-    image_path: /assets/images/pages/windows_vista_logo.png
-    alt: "Vista"
-  - url: /assets/images/pages/Windows_10.png
-    image_path: /assets/images/pages/Windows_10.png
-    alt: "Windows 10"
 ---
 
 {% include octo-arm.html %}
 
-### Windows 10, 8, 7, Vista, Xp
+# Windows 10, 8, 7, Vista, Xp
 
-Basic Tweaks Sites:        
+Basic Tweaks Sites:
 
 [TweakHounds](http://www.tweakhound.com/vista/tweakguide/page_3.htm), 
 [PcTuneUpTips](http://pctuneuptips.com/tips/vista_tweaks/),
 [H Enthusiasts](http://enthusiast.hardocp.com/article.html?art=MTMyNywxLCxoZW50aHVzaWFzdA==),
 [Windows Fanatics](http://www.lockergnome.com/windows/)
 
-#### Windows Fanatics at TechNet 
+## Windows Fanatics at TechNet 
 
  [Tech Net 1,](http://technet.microsoft.com/en-us/magazine/cc162494)
  [Tech Net 2,](http://technet.microsoft.com/en-us/magazine/cc162480.aspx)
@@ -57,9 +46,9 @@ Basic Tweaks Sites:
 
 Below is My testing and Opinions, "try at you own risk". 
 
-I tried all the below.       
+I tried all the below.
 
-#### Advanced System Settings
+### Advanced System Settings
 
 Go to Control Panel, Click System, Go to advanced System settings in left pane, click on system property's, it will come up in a new Window, click on the advanced tab and click on Performance,  and new Window saying Performance options will appear, click on advanced tab, make sure it is not set to background services = set it to programs.
 
@@ -86,7 +75,7 @@ Page Filing was = 2063, now 6118 on two drives.
 
 ## Defragment Boot Sector
 
-Defragment Your Hard Drives after a new Upgrades, "before doing anything else". Defragment after installation or un-installations of several Programs or if they are very large = a good example is Visual Studio, Office suites and others. Defrag after updates and after moving or copying allot of files.        
+Defragment Your Hard Drives after a new Upgrades, "before doing anything else". Defragment after installation or un-installations of several Programs or if they are very large = a good example is Visual Studio, Office suites and others. Defrag after updates and after moving or copying allot of files.
 
 Is Windows Vista taking a long time to startup? You can try defragmenting the boot files by using the Command Prompt in Windows Vista.
 
@@ -131,6 +120,7 @@ You can use the following parameters or switches with the Defrag command to furt
 
 -b  It optimizes boot files and applications only.
 ```
+
 The only indication you will get is a blinking cursor. This means that the process is going. To interrupt the defragmentation process, press Ctrl + C in the command window.
 
 You can read more here on Defrag Options & Command line switches.
@@ -156,7 +146,7 @@ defrag c: -a -v
 defrag -c -v
 
 3\. Exit Dos Window when defrag has completed., you will see the original prompt when it is finished = as in mine it's C:\Users\donboulton
-        
+
  [Top](#Top)
 
 ## Clear temp files
@@ -217,6 +207,7 @@ Enabled Value: 12
 Disabled Value: 26
 Action Type: Modified
 ```
+
 [Top](#Top)
 
 A Changed Value!
@@ -279,8 +270,9 @@ Location: Local Machine Value Name: EnablePrefetcher
 Data Type: DWORD (DWORD Value)
 Enabled Value:
 Disabled Value:
-Action Type: Modified     
+Action Type: Modified
 ```
+
 A ADDED VALUE!
 
 ### Turn off NV Cache
@@ -325,14 +317,14 @@ HKEY_CURRENT_USER \ Software \ Microsoft \ Windows \ CurrentVersion \ Explorer \
 
 Double-click **(default)** and replace the existing text ("Recycle Bin") with your preferred text.
 
-[Top](#Top)                 
+[Top](#Top)
 
 ### Change Desktop Icon Spacing
 
 Changing Desktop Icon Spacing in Vista, "ALL Versions", adjustments can be made to horizontal and vertical alignment spacing.
-           
+
 Steps for spacing desktop icons horizontal and vertical. Also you can change Desktop, Explorer and Most Vista Program Fonts and sizes here also.**
-                
+
 1\. Right Click Desktop + Choose “Personalize”
 
 2\. At the top + Choose "Window Color and Appearance".
@@ -343,17 +335,18 @@ Steps for spacing desktop icons horizontal and vertical. Also you can change Des
 
 5\. In the Advanced Appearance + Choose Item and select Icon Spacing (Horizontal) and to the right of the Item selection set the + spacing you desire =  Repeat this step 5 for Icon Spacing (Vertical), Then click OK in the Advanced Appearance Window , and the click Apply and then OK in the Appearance Settings Window and close the Personalization window and you are done.
 
-I made the choice 16 for Horizontal and 30 for Vertical mainly because Recycle bin overlaps the bottom of other icons because of its large size, even though I made it smaller as in the above Visual Tweaks section of this document or you can put it on top or other icons and change Vertical to what ever works, CAUTION do not overlap icons as when you click on them it will activate both that are overlapped. Note this will change Icon spacing in Explorer also.  You will notice the size and spacing in the Print Screen of my desktop on bottom right next to the sidebar.    
-        
+I made the choice 16 for Horizontal and 30 for Vertical mainly because Recycle bin overlaps the bottom of other icons because of its large size, even though I made it smaller as in the above Visual Tweaks section of this document or you can put it on top or other icons and change Vertical to what ever works, CAUTION do not overlap icons as when you click on them it will activate both that are overlapped. Note this will change Icon spacing in Explorer also.  You will notice the size and spacing in the Print Screen of my desktop on bottom right next to the sidebar.
+
 [Top](#Top)
-        
+
 A Changed Value!
 
 ### For Indexing problems,
 
 Or indexing will not start or stay running. = Indexing and search are file renaming problems
 
-Set the registry value <span style="FONT-FAMILY: 'Trebuchet MS', sans-serif">**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Search\SetupCompletedSuccessfully** ( set it to 0 and try restarting the Windows Search service.
+Set the registry value
+**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Search\SetupCompletedSuccessfully** ( set it to 0 and try restarting the Windows Search service.
 
 See this post in MSDN
 
@@ -369,7 +362,7 @@ If you use the Windows Explorer shortcut on your Start Menu, you probably notice
 
 If you find this to be an annoyance, Explorer always opening to the Documents folder, you can configure it to open to a folder of your choice. You can do so by editing the properties of the Windows Explorer shortcut.
 
-Open [Windows Explorer](http://www.lockergnome.com/windows/2007/08/27/start-explorer-in-a-different-folder-in-windows-vista/#)and locate your Start Menu folder. Right click the shortcut to Windows Explorer and click Properties. From the Shortcut tab, change the target so it reads as follows: %systemroot%\explorer.exe /n, /e, x:\folder where x:\folder is the path to the folder that you want Explorer to open in. Click OK. Now when you launch Windows Explorer from the Start Menu, it will open in the folder that you specified.
+Open [Windows Explorer](http://www.lockergnome.com/windows/2007/08/27/start-explorer-in-a-different-folder-in-windows-vista/)and locate your Start Menu folder. Right click the shortcut to Windows Explorer and click Properties. From the Shortcut tab, change the target so it reads as follows: %systemroot%\explorer.exe /n, /e, x:\folder where x:\folder is the path to the folder that you want Explorer to open in. Click OK. Now when you launch Windows Explorer from the Start Menu, it will open in the folder that you specified.
 
 This is located in my computer in the Explorer Location Bar at:
 
@@ -382,7 +375,7 @@ For this to Work you have to put a shortcut to Windows Explorer on your desktop,
 YOU CAN PUT AS MANY OF THESE EXPLORER SHORTCUTS ON YOU DESKTOP AS YOU WANT.
 
 Make sure after you create each one you rename it. I call One D for D Drive I call on Doc for documents on another Drive or Folder that My Documents are stored; est.
-        
+
 Right Click the Explorer shortcut and a drop down list will appear go to send to and create a shortcut to the desktop.
 
 Then you will see the shortcut to Windows Explorer, right click on it and you will see target, change you link in this field.
@@ -396,5 +389,3 @@ Sometimes if you use a different drive as explained above for [Loading Multiple 
 This can be done in my system to %SystemRoot%\explorer.exe /n, /e, E:\Downloads, or whichever drive letter you have for the separate Hard Drive and/or Partition's, better on a separate Hard Drive.
 
 Thanks To:, Dana Huggins at [Windows Fanatics](http://www.lockergnome.com/windows/).
-
-{% include gallery caption="Windows XP, Vista, Windows 10." %}
