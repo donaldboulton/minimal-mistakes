@@ -22,11 +22,13 @@
   {%- endcase -%}
 {% endif %}
 
-{% if page.support contains 'gallery' %}
-  <script src="{{ '/assets/dist/js/lightgallery-all.min.js' | absolute_url }}"></script>
+{% if page.support contains 'gallery' %}  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.5/isotope.pkgd.min.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" crossorigin="anonymous"></script>  
+  <script src="{{ '/assets/dist/js/imagesloaded.pkgd.min.js' | absolute_url }}"></script>
+  <script src="{{ '/assets/dist/modules/lg-autoplay.min.js' | absolute_url }}"></script>
+  <script src="{{ '/assets/dist/modules/lg-fullscreen.min.js' | absolute_url }}"></script>
+  <script src="{{ '/assets/dist/js/init-lightgallery.js' | absolute_url }}"></script>
 {% endif %}
 
 {% include analytics.html %}

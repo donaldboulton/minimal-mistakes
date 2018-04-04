@@ -1,6 +1,6 @@
 ---
 layout: gallery
-title: MY Cats
+title: MY Past Cats
 no_menu_item: true # required only for this example website because of menu construction
 author: Donald Boulton
 author_profile: false
@@ -26,15 +26,6 @@ gallery:
 
 support: [gallery]
 ---
+Past Cats:
 
-My kitty cats past and present. House cats and my past cats I take care of every day and have since 1999.
-
-Its my passion as I love kitty cats.
-
-House cats:
-
-{% include gallery-layout.html gallery=site.data.galleries.cat-gallery %}
-
-  {% include archive-single.html %}
-
-{% include gallery caption="This is a Kitty Gallery." %}
+{% include gallery-layout.html gallery=site.data.galleries.old-cat-gallery %}
