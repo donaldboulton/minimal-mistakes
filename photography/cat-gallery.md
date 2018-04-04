@@ -27,5 +27,3 @@ House cats:
 {% for gallery in site.photography %}
   {% include archive-single.html %}
 {% endfor %}
-
-{% include gallery caption="This is a Kitty Gallery." %}
