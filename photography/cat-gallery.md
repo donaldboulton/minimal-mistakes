@@ -15,8 +15,9 @@ header:
 
 support: [gallery]
 ---
+# My kitty Cats
 
-My kitty cats, Tiger the Tabby, Banjo the black Kitty, and The Father and Son Team Mr. Einstein and Jr. Einstein who look and act allot alike.
+I have Tiger the Tabby, Banjo the black Kitty, and The Father and Son Team Mr. Einstein and Jr. Einstein who look and act allot alike.
 
 Cats my passion as I love kitty cats.
 
