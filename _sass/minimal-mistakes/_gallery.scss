@@ -48,18 +48,6 @@ $on-laptop: 800px;
   color: #AAA;
 }
 
-.gallery > ul > li a .gallery-poster {
-  background-color: rgba(0, 0, 0, 0.1);
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  -webkit-transition: background-color 0.15s ease 0s;
-  -o-transition: background-color 0.15s ease 0s;
-  transition: background-color 0.15s ease 0s;
-}
-
 .grid,
 .grid-sizer {
   width: $default-width;
@@ -90,7 +78,7 @@ $on-laptop: 800px;
 }
 
 .list-unstyled {
-  padding: 0px!important;
+  padding: 3px!important;
   margin: 0px!important;
   list-style: none;
 }
