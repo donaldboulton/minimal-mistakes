@@ -1,25 +1,6 @@
-/* ==========================================================================
-   Gallery
-   ========================================================================== */
-
-// 2 Column Gallery
-
-$default-width: 25%;
-$on-palm: 600px;
-$on-laptop: 800px;
-$large: 20px;
-$small: 10px;
-
-* {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-// Gallery collection
 .image-wrapper,
 .gallery-sizer {
-  width: $default-width;
+  width: 25%;
 }
 
 .gallery {
