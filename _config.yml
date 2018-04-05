@@ -154,8 +154,6 @@ author:
 include:
   - .htaccess
   - _pages
-  - assets/fonts
-  - assets/fonts/webfonts
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -203,7 +201,6 @@ lsi: false
 excerpt_separator: "\n\n"
 incremental: false
 
-
 # Markdown Processing
 kramdown:
   input: GFM
@@ -222,9 +219,7 @@ sass:
 
 # Plugins (previously gems:)
 plugins:
-  - sort_name
   - posts_json
-  - notice
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
@@ -236,17 +231,12 @@ plugins:
   - jekyll-tagging-related_posts
   - jekyll-admin
   - lazyload
-  - mail
-  - mailgun-ruby
-  - siteleaf
   - jemoji
   - json
 
 # mimic GitHub Pages with --safe
 whitelist:
-  - sort_name
   - posts_json
-  - notice
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
@@ -257,9 +247,6 @@ whitelist:
   - jekyll-tagging
   - jekyll-tagging-related_posts
   - jekyll-admin
-  - mail
-  - mailgun-ruby
-  - siteleaf
   - jemoji
   - json
 

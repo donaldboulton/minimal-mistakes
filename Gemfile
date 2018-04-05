@@ -13,10 +13,6 @@ group :jekyll_plugins do
   gem 'jekyll-typogrify'
   gem 'jekyll-tagging'
   gem 'jekyll-tagging-related_posts'
-  gem 'siteleaf', '~>2'
-  gem 'mail'
-  gem 'mailgun-ruby', '~>1.1.6'
-  gem 'rest-client'
   gem 'json'
   gem 'jekyll-admin'
 end
