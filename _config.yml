@@ -224,6 +224,7 @@ plugins:
   - jekyll-figure
   - jekyll-tagging
   - jekyll-tagging-related_posts
+  - jekyll-redirect-from
   - jekyll-admin
   - lazyload
   - jemoji
@@ -241,6 +242,7 @@ whitelist:
   - jekyll-figure
   - jekyll-tagging
   - jekyll-tagging-related_posts
+  - jekyll-redirect-from
   - jekyll-admin
   - jemoji
   - json
