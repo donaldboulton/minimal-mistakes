@@ -14,7 +14,7 @@ header:
   teaser: /assets/photography/stray-cat-gallery/ Pretty-Girl-th.jpg
 sidebar:
   - title: "Role"
-    image: /assets/photography/stray-cat-gallery/ Pretty-Girl-th.jpg
+    image: /assets/photography/stray-cat-gallery/GrandPaw-My-Cats-th.jpg
     image_alt: "Idabel Girls"
     text: "Pretty Girl and Visitor"
   - title: "Responsibilities"

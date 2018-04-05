@@ -1,12 +1,12 @@
 picture_path: stray-cat-gallery
 preview:
-  filename: Boys-Kittens
-  original: Boys-Kittens-1200.jpg
+  filename: GrandPaw-My-Cats
+  original: GrandPaw-My-Cats-1200.jpg
   sizes:
-  - Boys-Kittens-1200.jpg
-  - Boys-Kittens-800.jpg
-  - Boys-Kittens-320.jpg
-  thumbnail: Boys-Kittens-th.jpg
+  - GrandPaw-My-Cats-1200.jpg
+  - GrandPaw-My-Cats-800.jpg
+  - GrandPaw-My-Cats-320.jpg
+  thumbnail: GrandPaw-My-Cats-th.jpg
 pictures:
 - filename: DSCN1252
   original: DSCN1252-1200.jpg
