@@ -9,10 +9,10 @@ group :jekyll_plugins do
   gem 'jekyll-archives'
   gem 'jekyll-gist'
   gem 'jekyll-feed'
-  gem 'jekyll-paginate-v2'
-  gem 'jekyll-typogrify'
   gem 'jekyll-tagging'
   gem 'jekyll-tagging-related_posts'
   gem 'json'
-  gem 'jekyll-admin'
+  gem 'jemoji'
+  gem 'jekyll-optional-front-matter'
+  gem 'jekyll-avatar'
 end

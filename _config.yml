@@ -189,11 +189,6 @@ keep_files:
 encoding: "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
-jekyll:
-  headers:
-  X-Frame-Options: SAMEORIGIN
-  X-XSS-Protection: 1; mode=block
-
 # Conversion
 markdown: kramdown
 highlighter: rouge
@@ -219,34 +214,27 @@ sass:
 
 # Plugins (previously gems:)
 plugins:
-  - posts_json
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-archives
-  - jekyll-paginate-v2
-  - jekyll-figure
-  - jekyll-tagging
-  - jekyll-tagging-related_posts
-  - jekyll-admin
-  - lazyload
+  - jekyll-avatar
+  - jekyll-mentions
+  - jekyll-optional-front-matter
   - jemoji
   - json
 
 # mimic GitHub Pages with --safe
 whitelist:
-  - posts_json
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-archives
-  - jekyll-paginate-v2
-  - jekyll-figure
-  - jekyll-tagging
-  - jekyll-tagging-related_posts
-  - jekyll-admin
+  - jekyll-avatar
+  - jekyll-mentions
+  - jekyll-optional-front-matter
   - jemoji
   - json
 
@@ -263,9 +251,6 @@ whitelist:
 category_archive:
   type: liquid
   path: /categories/
-portfolio_archive:
-  type: liquid
-  path: /portfolio-archive/
 tag_archive:
   type: liquid
   path: /tags/
@@ -289,6 +274,12 @@ compress_html:
   endings:   all
   ignore:
     envs: development
+
+# Outputting
+permalink: /:categories/:title/
+paginate: 5 # amount of posts to show
+paginate_path: /page:num/
+timezone: America/Chicago
 
 # Collections
 collections:
@@ -329,34 +320,3 @@ defaults:
       layout: single
       author_profile: true
 
-posts_json_path: posts.json
-# Plugin: Pagination (jekyll-paginate-v2)
-pagination:
-  enabled: true
-  debug: false
-  per_page: 15
-  permalink: "/page/:num/"
-  title: ":title - Page :num of :max"
-  limit: 0
-  sort_field: "date"
-  sort_reverse: true
-
-# Plugin: Auto Pages (jekyll-paginate-v2)
-autopages:
-  enabled: true
-  categories:
-    enabled: false
-  collections:
-    layouts: 
-      - 'autopage_collection.html'
-    title: 'Posts in collection :coll' # :coll is replaced by the collection name
-    permalink: '/collection/:coll'
-  tags:
-    enabled: true
-    slugify:
-      mode: raw
-      cased: true
-    layouts:
-      - "autopage_tags.html"
-    title: ":tag" # :tag is replaced by the tag name
-    permalink: "/tag/:tag"
