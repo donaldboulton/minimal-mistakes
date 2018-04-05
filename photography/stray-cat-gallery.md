@@ -10,11 +10,11 @@ share: true
 related: true
 
 header:
-  image: /assets/photography/stray-cat-gallery/DSCN1260.jpg
-  teaser: /assets/photography/stray-cat-gallery/DSCN1260-th.jpg
+  image: /assets/photography/stray-cat-gallery/Pretty-Girl-1200.jpg
+  teaser: /assets/photography/stray-cat-gallery/ Pretty-Girl-th.jpg
 sidebar:
   - title: "Role"
-    image: /assets/photography/stray-cat-gallery/DSCN1260-th.jpg
+    image: /assets/photography/stray-cat-gallery/ Pretty-Girl-th.jpg
     image_alt: "Idabel Girls"
     text: "Pretty Girl and Visitor"
   - title: "Responsibilities"
@@ -31,5 +31,3 @@ Its my passion as I love kitty cats.
 {% for gallery in site.photography %}
   {% include archive-single.html %}
 {% endfor %}
-
-{% include gallery caption="This is a Kitty Gallery." %}
