@@ -1,117 +1,185 @@
 picture_path: stray-cat-gallery
 preview:
   filename: Boys-Kittens
-  original: Boys-Kittens.jpg
+  original: Boys-Kittens-1200.jpg
   sizes:
-  - Boys-Kittens.jpg
+  - Boys-Kittens-1200.jpg
   - Boys-Kittens-800.jpg
+  - Boys-Kittens-320.jpg
   thumbnail: Boys-Kittens-th.jpg
 pictures:
 - filename: DSCN1252
-  original: DSCN1252.jpg
+  original: DSCN1252-1200.jpg
   sizes:
-  - DSCN1252.jpg
+  - DSCN1252-1200.jpg
   - DSCN1252-800.jpg
+  - DSCN1252-320.jpg
   thumbnail: DSCN1252-th.jpg
-- filename: DSCN1260
-  original: DSCN1260.jpg
-  sizes:
-  - DSCN1260.jpg
-  - DSCN1260-800.jpg
-  thumbnail: DSCN1260-th.jpg
 - filename: DSCN1261
-  original: DSCN1261.jpg
+  original: DSCN1261-1200.jpg
   sizes:
-  - DSCN1261.jpg
+  - DSCN1261-1200.jpg
   - DSCN1261-800.jpg
+  - DSCN1261-320.jpg
   thumbnail: DSCN1261-th.jpg
-- filename: Banjo-under-the-covers
-  original: Banjo-under-the-covers.jpg
+- filename: DSCN1260
+  original: DSCN1260-1200.jpg
   sizes:
-  - Banjo-under-the-covers.jpg
-  - Banjo-under-the-covers-800.jpg
-  thumbnail: Banjo-under-the-covers-800.jpg
-- filename: Boys-Idabel-bed
-  original: Boys-Idabel-bed.jpg
-  sizes:
-  - Boys-Idabel-bed.jpg
-  - Boys-Idabel-bed-800.jpg
-  thumbnail: Boys-Idabel-bed-th.jpg
+  - DSCN1260-1200.jpg
+  - DSCN1260-800.jpg
+  - DSCN1260-320.jpg
+  thumbnail: DSCN1260-th.jpg
 - filename: Casper
-  original: Casper.jpg
+  original: Casper-1200.jpg
   sizes:
-  - Casper.jpg
+  - Casper-1200.jpg
   - Casper-800.jpg
+  - Casper-320.jpg
   thumbnail: Casper-th.jpg
 - filename: Casper-Mousee
-  original: Casper-Mousee.jpg
+  original: Casper-Mousee-1200.jpg
   sizes:
-  - Casper-Mousee.jpg
+  - Casper-Mousee-1200.jpg
   - Casper-Mousee-800.jpg
+  - Casper-Mousee-320.jpg
   thumbnail: Casper-Mousee-th.jpg
-- filename: DSCN1450
-  original: DSCN1450.jpg
+- filename: DSCN1269
+  original: DSCN1269-1200.jpg
   sizes:
-  - DSCN1450.jpg
-  - DSCN1450-800.jpg
-  thumbnail: DSCN1450-th.jpg
-- filename: DSCN1461
-  original: DSCN1461.jpg
+  - DSCN1269-1200.jpg
+  - DSCN1269-800.jpg
+  - DSCN1269-320.jpg
+  thumbnail: DSCN1269-th.jpg
+- filename: DSCN1477
+  original: DSCN1477-1200.jpg
   sizes:
-  - DSCN1461.jpg
-  - DSCN1461-800.jpg
-  thumbnail: DSCN1461-th.jpg
-- filename: DSCN1464
-  original: DSCN1464.jpg
-  sizes:
-  - DSCN1464.jpg
-  - DSCN1464-800.jpg
-  thumbnail: DSCN1464-th.jpg
-- filename: DSCN1558
-  original: DSCN1558.jpg
-  sizes:
-  - DSCN1558.jpg
-  - DSCN1558-800.jpg
-  thumbnail: DSCN1558-th.jpg
-- filename: DSCN1560
-  original: DSCN1560.jpg
-  sizes:
-  - DSCN1560.jpg
-  - DSCN1560-800.jpg
-  thumbnail: DSCN1560-th.jpg
-- filename: DSCN1563
-  original: DSCN1563.jpg
-  sizes:
-  - DSCN1563.jpg
-  - DSCN1563-800.jpg
-  thumbnail: DSCN1563-th.jpg
+  - DSCN1477-1200.jpg
+  - DSCN1477-800.jpg
+  - DSCN1477-1320.jpg
+  thumbnail: DSCN1477-th.jpg
 - filename: Einstein-at-14-mo
-  original: Einstein-at-14-mo.jpg
+  original: Einstein-at-14-mo-1200.jpg
   sizes:
-  - Einstein-at-14-mo.jpg
+  - Einstein-at-14-mo-1200.jpg
   - Einstein-at-14-mo-800.jpg
+  - Einstein-at-14-mo-320.jpg
   thumbnail: Einstein-at-14-mo-th.jpg
 - filename: einstine1
-  original: einstine1.jpg
+  original: einstine1-1200.jpg
   sizes:
-  - einstine1.jpg
+  - einstine1-1200.jpg
   - einstine1-800.jpg
+  - einstine1-320.jpg
   thumbnail: einstine1-th.jpg
-- filename: DSCN1563
-  original: DSCN1563.jpg
+- filename: einstine-1-van
+  original: einstine-1-van-1200.jpg
   sizes:
-  - DSCN1563.jpg
-  - DSCN1563-800.jpg
-  thumbnail: DSCN1563-th.jpg
-- filename: Einstein-at-14-mo
-  original: Einstein-at-14-mo.jpg
+  - einstine-1-van-1200.jpg
+  - einstine-1-van-800.jpg
+  - einstine-1-van-320.jpg
+  thumbnail: einstine-1-van-th.jpg
+- filename: kitttens-tiger einstein
+  original: kitttens-tiger einstein-1200.jpg
   sizes:
-  - Einstein-at-14-mo.jpg
-  - Einstein-at-14-mo-800.jpg
-  thumbnail: Einstein-at-14-mo-th.jpg
-- filename: einstine1
-  original: einstine1.jpg
+  - kitttens-tiger einstein-1200.jpg
+  - kitttens-tiger einstein-800.jpg
+  - kitttens-tiger einstein-320.jpg
+  thumbnail: kitttens-tiger einstein-th.jpg
+- filename: little-einstine
+  original: little-einstine-1200.jpg
   sizes:
-  - einstine1.jpg
-  - einstine1-800.jpg
-  thumbnail: einstine1-th.jpg
+  - little-einstine-1200.jpg
+  - little-einstine-800.jpg
+  - little-einstine-320.jpg
+  thumbnail: little-einstine-th.jpg
+- filename: Little-Hun
+  original: Little-Hun-1200.jpg
+  sizes:
+  - Little-Hun-1200.jpg
+  - Little-Hun-800.jpg
+  - Little-Hun-320.jpg
+  thumbnail: Little-Hun-th.jpg
+- filename: My-Boys
+  original: My-Boys-1200.jpg
+  sizes:
+  - My-Boys-1200.jpg
+  - My-Boys-800.jpg
+  - My-Boys-320.jpg
+  thumbnail: My-Boys-th.jpg
+- filename: my-little tiggger
+  original: my-little tiggger-1200.jpg
+  sizes:
+  - my-little tiggger-1200.jpg
+  - my-little tiggger-800.jpg
+  - my-little tiggger-320.jpg
+  thumbnail: my-little tiggger-th.jpg
+- filename: Picture-021
+  original: Picture-021-1200.jpg
+  sizes:
+  - Picture-021-1200.jpg
+  - Picture-021-800.jpg
+  - Picture-021-320.jpg
+  thumbnail: Picture-021-th.jpg
+- filename: Pretty-Girl-1200
+  original: Pretty-Girl-1200.jpg
+  sizes:
+  - Pretty-Girl-1200.jpg
+  - Pretty-Girl-800.jpg
+  - Pretty-Girl-320.jpg
+  thumbnail: Pretty-Girl-th.jpg
+- filename: tiger_2
+  original: tiger_2-1200.jpg
+  sizes:
+  - tiger_2-1200.jpg
+  - tiger_2-800.jpg
+  - tiger_2-320.jpg
+  thumbnail: tiger_2-th.jpg
+- filename: tiger_and_sisters
+  original: tiger_and_sisters-1200.jpg
+  sizes:
+  - My-Boys-1200.jpg
+  - My-Boys-800.jpg
+  - My-Boys-320.jpg
+  thumbnail: My-Boys-th.jpg
+- filename: tiger_and_sisters
+  original: tiger_and_sisters-1200.jpg
+  sizes:
+  - tiger_and_sisters-1200.jpg
+  - tiger_and_sisters-800.jpg
+  - tiger_and_sisters-320.jpg
+  thumbnail: tiger_and_sisters-th.jpg
+- filename: tiger_kittens
+  original: tiger_kittens-1200.jpg
+  sizes:
+  - tiger_kittens-1200.jpg
+  - tiger_kittens-800.jpg
+  - tiger_kittens-320.jpg
+  thumbnail: tiger_kittens-th.jpg
+- filename: tiger_van
+  original: tiger_van-1200.jpg
+  sizes:
+  - tiger_van-1200.jpg
+  - tiger_van-800.jpg
+  - tiger_van-320.jpg
+  thumbnail: tiger_van-th.jpg
+- filename: Tiger
+  original: Tiger-1200.jpg
+  sizes:
+  - Tiger-1200.jpg
+  - Tiger-800.jpg
+  - Tiger-320.jpg
+  thumbnail: Tiger-th.jpg
+- filename: Tiger-at-14-mo
+  original: Tiger-at-14-mo-1200.jpg
+  sizes:
+  - Tiger-at-14-mo-1200.jpg
+  - Tiger-at-14-mo-800.jpg
+  - Tiger-at-14-mo-800.jpg
+  thumbnail: Tiger-at-14-mo-th.jpg
+- filename: Tiger-at-storage
+  original: Tiger-at-storage-1200.jpg
+  sizes:
+  - Tiger-at-storage-1200.jpg
+  - Tiger-at-storage-800.jpg
+  - Tiger-at-storage-320.jpg
+  thumbnail: Tiger-at-storage-th.jpg

@@ -174,7 +174,8 @@ pictures:
   sizes:
   - Tiger-at-14-mo-1200.jpg
   - Tiger-at-14-mo-800.jpg
-  thumbnail: Tiger-at-14-motiger_kittens-th.jpg
+  - Tiger-at-14-mo-800.jpg
+  thumbnail: Tiger-at-14-mo-th.jpg
 - filename: Tiger-at-storage
   original: Tiger-at-storage-1200.jpg
   sizes:
