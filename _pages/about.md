@@ -55,7 +55,7 @@ feature_row:
     alt: "Staticman Comments"
     title: "Comments push"
     excerpt: "Staticman Comments cause a regeneration of a static site. Good for Remote Work."
-    url: "https://github.com/donaldboulton/DWB"
+    url: "https://staticman.net/"
     btn_class: "btn--primary"
     btn_label: "Learn More"
   - image_path: /assets/images/demo/michael-rose-320.jpg
