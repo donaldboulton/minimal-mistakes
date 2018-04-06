@@ -53,14 +53,14 @@ feature_row:
     btn_label: "Learn More"
   - image_path: /assets/images/pages/staticman.svg
     alt: "Staticman Comments"
-    title: "Responsive Layouts"
+    title: "Comments push"
     excerpt: "Staticman Comments cause a regeneration of a static site. Good for Remote Work."
     url: "https://github.com/donaldboulton/DWB"
     btn_class: "btn--primary"
     btn_label: "Learn More"
   - image_path: /assets/images/demo/michael-rose-320.jpg
     alt: "Michael Rose"
-    title: "100% Free"
+    title: "Developer"
     excerpt: "Free to use but under a MIT License. Clone it, fork it, customize it, whatever!"
     url: "https://mmistakes.github.io/minimal-mistakes/terms/"
     btn_class: "btn--primary"
