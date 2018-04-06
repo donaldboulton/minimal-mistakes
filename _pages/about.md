@@ -5,7 +5,11 @@ title: "About"
 author_profile: false
 classes: wide
 toc: false
-author: Donald BOulton
+author: Donald Boulton
+read_time: false
+comments: true
+share: true
+
 tags: 
   - Rockwell RV
   - Staticman
@@ -43,7 +47,7 @@ feature_row:
   - image_path: /assets/images/pages/octocat.svg
     alt: "Cool and Free"
     title: "Cool and Free"
-    excerpt: "Hosted on Gihub Pages, Driven bu CloudFlare, SSL and No Bots by CloudFlare."
+    excerpt: "Hosted on Gihub Pages, Driven by CloudFlare, SSL and No Bots by CloudFlare."
     url: "https://github.com/donaldboulton/DWB"
     btn_class: "btn--primary"
     btn_label: "Learn More"
@@ -60,8 +64,11 @@ feature_row:
     excerpt: "Free to use but under a MIT License. Clone it, fork it, customize it, whatever!"
     url: "https://mmistakes.github.io/minimal-mistakes/terms/"
     btn_class: "btn--primary"
-    btn_label: "Learn More
+    btn_label: "Learn More"
 ---
+
+{% include octo-arm.html %}
+
 # Working for Father God
 
 Always worked for Father Creator since the beginning of time. Just hanging out watching our children play; till my day then playtime ends, to my new way.
@@ -80,10 +87,10 @@ Ruby, Jeckyll, Gihub pages, and even liquid are super simple; Or "Super Logical,
 
 ## Credits
 
-Links to CloudFlare this github repo, StaticMan and things I use in this site.
+Links to CloudFlare this Github repo, Staticman Comments, MMistakes Framework Designer Michael Rose.
 
 {% include credits.html %}
 
-{% include feature_row id="intro" type="center" %}
+{% include feature_row %}
 
 {% include github.html %}
