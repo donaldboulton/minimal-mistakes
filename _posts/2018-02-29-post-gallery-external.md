@@ -1,12 +1,12 @@
 ---
-title: Gallery
+title: gallery
 layout: single
 redirect_to:
   - /photography/
 read_time: true
 comments: true
 share: true
-date: 2018-03-29 16:16:01 -0600
+date: 2018-03-28 16:16:01 -0600
 last_modified_at: 2018-03-29T12:42:38-04:00
 search: true
 author: false
@@ -43,7 +43,7 @@ I have my 15th Tabby cat Which is Tiger.
 
 The Father and Son Mr. Einstein and Jr. Einstein who look and act allot alike.
 
-Cats my passion, I love kitty cats.
+Computers Cats are my passion, I love kitty cats.
 
 This is a positioning redirect page for seo on Gallerys. All Gallery Search Terms included
 

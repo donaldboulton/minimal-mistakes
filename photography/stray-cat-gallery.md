@@ -1,8 +1,8 @@
 ---
 layout: gallery
 title: Stray Cats
-no_menu_item: true # required only for this example website because of menu construction
-date: 2018-04-05 16:16:01 -0600
+no_menu_item: true
+date: 2018-04-04 16:16:01 -0600
 last_modified_at: 2018-04-05T12:42:38-04:0
 author: Donald Boulton
 author_profile: false
@@ -13,7 +13,7 @@ related: true
 
 header:
   image: /assets/photography/stray-cat-gallery/Pretty-Girl-1200.jpg
-  teaser: /assets/photography/stray-cat-gallery/ Pretty-Girl-th.jpg
+  teaser: /assets/photography/stray-cat-gallery/Pretty-Girl-th.jpg
 
 support: [gallery]
 ---
