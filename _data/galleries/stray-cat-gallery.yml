@@ -1,12 +1,12 @@
 picture_path: stray-cat-gallery
 preview:
   filename: GrandPaw-My-Cats
-  original: GrandPaw-My-Cats-1200.jpg
+  original: GrandPaw-My-Cats-1200.JPG
   sizes:
-  - GrandPaw-My-Cats-1200.jpg
-  - GrandPaw-My-Cats-800.jpg
-  - GrandPaw-My-Cats-320.jpg
-  thumbnail: GrandPaw-My-Cats-th.jpg
+  - GrandPaw-My-Cats-1200.JPG
+  - GrandPaw-My-Cats-800.JPG
+  - GrandPaw-My-Cats-320.JPG
+  thumbnail: GrandPaw-My-Cats-th.JPG
 pictures:
 - filename: DSCN1252
   original: DSCN1252-1200.jpg
@@ -30,12 +30,12 @@ pictures:
   - DSCN1260-320.jpg
   thumbnail: DSCN1260-th.jpg
 - filename: Casper
-  original: Casper-1200.jpg
+  original: Casper-1200.JPG
   sizes:
-  - Casper-1200.jpg
-  - Casper-800.jpg
-  - Casper-320.jpg
-  thumbnail: Casper-th.jpg
+  - Casper-1200.JPG
+  - Casper-800.JPG
+  - Casper-320.JPG
+  thumbnail: Casper-th.JPG
 - filename: Casper-Mousee
   original: Casper-Mousee-1200.jpg
   sizes:
@@ -65,19 +65,19 @@ pictures:
   - Einstein-at-14-mo-320.jpg
   thumbnail: Einstein-at-14-mo-th.jpg
 - filename: einstine1
-  original: einstine1-1200.jpg
+  original: einstine1-1200.JPG
   sizes:
-  - einstine1-1200.jpg
-  - einstine1-800.jpg
-  - einstine1-320.jpg
-  thumbnail: einstine1-th.jpg
+  - einstine1-1200.JPG
+  - einstine1-800.JPG
+  - einstine1-320.JPG
+  thumbnail: einstine1-th.JPG
 - filename: einstine-1-van
-  original: einstine-1-van-1200.jpg
+  original: einstine-1-van-1200.JPG
   sizes:
-  - einstine-1-van-1200.jpg
-  - einstine-1-van-800.jpg
-  - einstine-1-van-320.jpg
-  thumbnail: einstine-1-van-th.jpg
+  - einstine-1-van-1200.JPG
+  - einstine-1-van-800.JPG
+  - einstine-1-van-320.JPG
+  thumbnail: einstine-1-van-th.JPG
 - filename: kitttens-tiger einstein
   original: kitttens-tiger einstein-1200.jpg
   sizes:
@@ -86,19 +86,19 @@ pictures:
   - kitttens-tiger einstein-320.jpg
   thumbnail: kitttens-tiger einstein-th.jpg
 - filename: little-einstine
-  original: little-einstine-1200.jpg
+  original: little-einstine-1200.JPG
   sizes:
-  - little-einstine-1200.jpg
-  - little-einstine-800.jpg
-  - little-einstine-320.jpg
-  thumbnail: little-einstine-th.jpg
+  - little-einstine-1200.JPG
+  - little-einstine-800.JPG
+  - little-einstine-320.JPG
+  thumbnail: little-einstine-th.JPG
 - filename: Little-Hun
-  original: Little-Hun-1200.jpg
+  original: Little-Hun-1200.JPG
   sizes:
-  - Little-Hun-1200.jpg
-  - Little-Hun-800.jpg
-  - Little-Hun-320.jpg
-  thumbnail: Little-Hun-th.jpg
+  - Little-Hun-1200.JPG
+  - Little-Hun-800.JPG
+  - Little-Hun-320.JPG
+  thumbnail: Little-Hun-th.JPG
 - filename: My-Boys
   original: My-Boys-1200.jpg
   sizes:
@@ -107,19 +107,19 @@ pictures:
   - My-Boys-320.jpg
   thumbnail: My-Boys-th.jpg
 - filename: my-little tiggger
-  original: my-little tiggger-1200.jpg
+  original: my-little tiggger-1200.JPG
   sizes:
-  - my-little tiggger-1200.jpg
-  - my-little tiggger-800.jpg
-  - my-little tiggger-320.jpg
-  thumbnail: my-little tiggger-th.jpg
+  - my-little tiggger-1200.JPG
+  - my-little tiggger-800.JPG
+  - my-little tiggger-320.JPG
+  thumbnail: my-little tiggger-th.JPG
 - filename: Picture-021
-  original: Picture-021-1200.jpg
+  original: Picture-021-1200.JPG
   sizes:
-  - Picture-021-1200.jpg
-  - Picture-021-800.jpg
-  - Picture-021-320.jpg
-  thumbnail: Picture-021-th.jpg
+  - Picture-021-1200.JPG
+  - Picture-021-800.JPG
+  - Picture-021-320.JPG
+  thumbnail: Picture-021-th.JPG
 - filename: Pretty-Girl-1200
   original: Pretty-Girl-1200.jpg
   sizes:
@@ -128,26 +128,26 @@ pictures:
   - Pretty-Girl-320.jpg
   thumbnail: Pretty-Girl-th.jpg
 - filename: tiger_2
-  original: tiger_2-1200.jpg
+  original: tiger_2-1200.JPG
   sizes:
-  - tiger_2-1200.jpg
-  - tiger_2-800.jpg
-  - tiger_2-320.jpg
-  thumbnail: tiger_2-th.jpg
+  - tiger_2-1200.JPG
+  - tiger_2-800.JPG
+  - tiger_2-320.JPG
+  thumbnail: tiger_2-th.JPG
+- filename: My-Boys
+  original: My-Boys-1200.JPG
+  sizes:
+  - My-Boys-1200.JPG
+  - My-Boys-800.JPG
+  - My-Boys-320.JPG
+  thumbnail: My-Boys-th.JPG
 - filename: tiger_and_sisters
-  original: tiger_and_sisters-1200.jpg
+  original: tiger_and_sisters-1200.JPG
   sizes:
-  - My-Boys-1200.jpg
-  - My-Boys-800.jpg
-  - My-Boys-320.jpg
-  thumbnail: My-Boys-th.jpg
-- filename: tiger_and_sisters
-  original: tiger_and_sisters-1200.jpg
-  sizes:
-  - tiger_and_sisters-1200.jpg
-  - tiger_and_sisters-800.jpg
-  - tiger_and_sisters-320.jpg
-  thumbnail: tiger_and_sisters-th.jpg
+  - tiger_and_sisters-1200.JPG
+  - tiger_and_sisters-800.JPG
+  - tiger_and_sisters-320.JPG
+  thumbnail: tiger_and_sisters-th.JPG
 - filename: tiger_kittens
   original: tiger_kittens-1200.jpg
   sizes:
@@ -156,12 +156,12 @@ pictures:
   - tiger_kittens-320.jpg
   thumbnail: tiger_kittens-th.jpg
 - filename: tiger_van
-  original: tiger_van-1200.jpg
+  original: tiger_van-1200.JPG
   sizes:
-  - tiger_van-1200.jpg
-  - tiger_van-800.jpg
-  - tiger_van-320.jpg
-  thumbnail: tiger_van-th.jpg
+  - tiger_van-1200.JPG
+  - tiger_van-800.JPG
+  - tiger_van-320.JPG
+  thumbnail: tiger_van-th.JPG
 - filename: Tiger
   original: Tiger-1200.jpg
   sizes:
@@ -170,16 +170,16 @@ pictures:
   - Tiger-320.jpg
   thumbnail: Tiger-th.jpg
 - filename: Tiger-at-14-mo
-  original: Tiger-at-14-mo-1200.jpg
+  original: Tiger-at-14-mo-1200.JPG
   sizes:
-  - Tiger-at-14-mo-1200.jpg
-  - Tiger-at-14-mo-800.jpg
-  - Tiger-at-14-mo-800.jpg
-  thumbnail: Tiger-at-14-mo-th.jpg
+  - Tiger-at-14-mo-1200.JPG
+  - Tiger-at-14-mo-800.JPG
+  - Tiger-at-14-mo-800.JPG
+  thumbnail: Tiger-at-14-mo-th.JPG
 - filename: Tiger-at-storage
-  original: Tiger-at-storage-1200.jpg
+  original: Tiger-at-storage-1200.JPG
   sizes:
-  - Tiger-at-storage-1200.jpg
-  - Tiger-at-storage-800.jpg
-  - Tiger-at-storage-320.jpg
-  thumbnail: Tiger-at-storage-th.jpg
+  - Tiger-at-storage-1200.JPG
+  - Tiger-at-storage-800.JPG
+  - Tiger-at-storage-320.JPG
+  thumbnail: Tiger-at-storage-th.JPG
