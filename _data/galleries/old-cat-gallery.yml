@@ -82,8 +82,8 @@ pictures:
   original: kitttens-tiger einstein-1200.jpg
   sizes:
   - kitttens-tiger einstein-1200.jpg
-  - kitttens-tiger einstein-800.jpg
-  - kitttens-tiger einstein-320.jpg
+  - kitttens-tiger-einstein-800.jpg
+  - kitttens-tiger-einstein-320.jpg
   thumbnail: kitttens-tiger einstein-th.jpg
 - filename: little-einstine
   original: little-einstine-1200.jpg
@@ -106,13 +106,13 @@ pictures:
   - My-Boys-800.jpg
   - My-Boys-320.jpg
   thumbnail: My-Boys-th.jpg
-- filename: my-little tiggger
-  original: my-little tiggger-1200.jpg
+- filename: my-little-tiggger
+  original: my-little-tiggger-1200.jpg
   sizes:
-  - my-little tiggger-1200.jpg
-  - my-little tiggger-800.jpg
-  - my-little tiggger-320.jpg
-  thumbnail: my-little tiggger-th.jpg
+  - my-little-tiggger-1200.jpg
+  - my-little-tiggger-800.jpg
+  - my-little-tiggger-320.jpg
+  thumbnail: my-little-tiggger-th.jpg
 - filename: Picture-021
   original: Picture-021-1200.jpg
   sizes:
