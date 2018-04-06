@@ -1,15 +1,13 @@
 ---
 title: Gallery
-layout: splash
-external_url: https://doboulton.com/photography
-external_site: donboulton
+layout: single
 redirect_to:
   - https://donboulton.com/photography/
 read_time: true
 comments: true
 share: true
-date: 2018-02-29 16:16:01 -0600
-last_modified_at: 2018-02-29T12:42:38-04:00
+date: 2018-03-29 16:16:01 -0600
+last_modified_at: 2018-03-29T12:42:38-04:00
 search: true
 author: false
 
@@ -24,7 +22,7 @@ category:
 excerpt: "Kitty Gallery"
 sidebar:
   - title: "My Hun Kitty"
-    image: /assets/photography/old-cat-gallery/Little-Hun-th.jpg
+    image: /assets/photography/cat-gallery/Little-Hun-th.jpg
     image_alt: "Hun Kitty"
     text: "Hun at 3 weaks"
   - title: "Responsibilities"
