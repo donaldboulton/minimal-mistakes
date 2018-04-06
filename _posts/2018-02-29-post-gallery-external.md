@@ -2,7 +2,7 @@
 title: Gallery
 layout: single
 redirect_to:
-  - https://donboulton.com/photography/
+  - /photography/
 read_time: true
 comments: true
 share: true

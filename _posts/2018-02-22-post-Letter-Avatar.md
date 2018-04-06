@@ -14,15 +14,15 @@ tags:
   - MMistakes
 category:
   - Programing
-
+locations:
+  - OKC Oklahoma
+  - Rockwell Rv Park
 toc: true
 toc_label: "Contents"
-
 read_time: true
 comments: true
 share: true
 related: true
-
 excerpt: "Many of us got really tired of the Gravatar Service being down or slow and having multiple server calls to download the Gravatar. 
 Alot of people do not even know about gravatar and your get a generic image for the User Avatar."
 header:
@@ -32,13 +32,13 @@ header:
 
 {% include octo-arm.html %}
 
-## Letter Avatar
+# Letter Avatar
 
 How to easily create Letter Avatars for your comments in Minimal Mistakes. This coversion is a work in progress as I am just learning liquid.
 
-### Gihub code as a Gihub Gist, by [Lee Crossly](https://gist.github.com/leecrossley/6027780)
+## Gihub code as a Gihub Gist, by [Lee Crossly](https://gist.github.com/leecrossley/6027780)
 
-Avatar Generator from - Commenter name as - (first name and surname) as input and a canvas element as output using the initials from the name and a background colour (based on the first name & surname first letter). 
+Avatar Generator from - Commenter name as - (first name and surname) as input and a canvas element as output using the initials from the name and a background colour (based on the first name & surname first letter).
 
 The background colours are from from [Flat Ui Colors](http://flatuicolors.com/) Now with retina support.
 
@@ -185,7 +185,7 @@ Lets take a look a Minimal Mistakes post on Staticman Comments, at [Improving Je
 The comments include form in: _includes/comment.html, line 8
 
 ```html
-8 <img src="/assets/images/avatar-60.png" srcset="/assets/images/avatar-120.png 2x" alt="{{ include.name | escape }}">
+<img src="/assets/images/avatar-60.png" srcset="/assets/images/avatar-120.png 2x" alt="{{ include.name | escape }}">
 ```
 
 ### Image changes
@@ -193,12 +193,12 @@ The comments include form in: _includes/comment.html, line 8
 Modifying the Image link From:
 
 ```html
-<img src="/assets/images/avatar-60.png" srcset="/assets/images/avatar-120.png 2x; 
+<img src="/assets/images/avatar-60.png" srcset="/assets/images/avatar-120.png 2x;
 ```
 
 Changed To: Letter Avatar
 
-Removed src="..." and srcset="..." 
+Removed src="..." and srcset="..."
 
 Added
 
@@ -206,7 +206,7 @@ Added
 avatar="include.name | escape" class="avatar" alt="include.name | escape"
 ```
 
-Then the link to the Gravatar image you have to change for yur own genertic image, orLetter Avatar generated.
+Then the link to the Gravatar image you have to change for yur own genertic image, or Letter Avatar generated.
 
 As discribed at [Stack Overflow](https://stackoverflow.com/questions/2683803/gravatar-is-there-a-default-image)
 
@@ -219,8 +219,8 @@ I will Change Line 6
 From:
 
 ```html
-?d=mm&s=60 
-and also 
+?d=mm&s=60
+and also
 ?d=mm&s=120 2x
 ```
 
@@ -252,7 +252,7 @@ footer:
 
 ### Adding Scripts Site wide in _config.yaml
 
-To add scripts to the <head> or closing </body> elements by adding paths to following arrays in _config.yml.
+To add scripts to the head or closing </body> elements by adding paths to following arrays in _config.yml.
 
 ```yaml
 head_scripts:

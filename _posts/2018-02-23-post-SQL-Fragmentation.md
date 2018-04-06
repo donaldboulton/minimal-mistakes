@@ -20,7 +20,8 @@ read_time: true
 comments: true
 share: true
 related: true
-
+locations:
+  - Idable OKlahoma
 excerpt: Check SQL Server a specified database index fragmentation percentage (SQL)
 header:
   image: /assets/images/pages/check_sql_fragmentation-1400.png
