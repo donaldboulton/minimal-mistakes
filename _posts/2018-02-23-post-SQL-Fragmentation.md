@@ -31,6 +31,7 @@ header:
 {% include octo-arm.html %}
 
 {% include page-intro.html %}
+
 # Introduction
 
 This T-SQL sample script illustrates how to check index fragmentation of a specified database in SQL Server.

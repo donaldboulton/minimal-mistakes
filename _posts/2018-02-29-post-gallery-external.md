@@ -1,5 +1,5 @@
 ---
-title: gallery
+title: Gallerys
 layout: single
 redirect_to:
   - /photography/
@@ -32,6 +32,9 @@ header:
   image: /assets/photography/cat-gallery/einstine-1200.jpg
   teaser: /assets/photography/cat-gallery/einstine-th.jpg
 ---
+
+{% include page-intro.html %}
+
 # Picture Gallery
 
 Pictures of my Kitty Cats and Travels.
