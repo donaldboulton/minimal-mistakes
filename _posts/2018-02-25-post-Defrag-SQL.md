@@ -29,6 +29,8 @@ header:
 
 {% include octo-arm.html %}
 
+{% include page-intro.html %}
+
 # Defragment SQL Server
 
 In any SQl database and one that updates through migrations like Orchard CMS get defragmented and I have notice over the years dealing with SQL server that it needs defraging occasionaly, keeping the performance optimized.

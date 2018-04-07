@@ -37,11 +37,11 @@ header:
 
 {% include octo-arm.html %}
 
-# Letter Avatar
-
 {% include page-intro.html %}
 
 How to easily create Letter Avatars for your comments in Minimal Mistakes. This coversion is a work in progress as I am just learning liquid.
+
+# Letter Avatar Origional gist
 
 ## Gihub code as a Gihub Gist, by [Lee Crossly](https://gist.github.com/leecrossley/6027780)
 

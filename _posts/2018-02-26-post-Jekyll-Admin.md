@@ -29,6 +29,7 @@ excerpt: "Jekyll admin makes it so easy for me to add new pages, posts or any ty
 ---
 
 {% include octo-arm.html %}
+{% include page-intro.html %}
 
 # Jekyll Admin for Local Host
 

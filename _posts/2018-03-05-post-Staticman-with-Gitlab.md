@@ -35,6 +35,7 @@ related: true
 ---
 
 {% include octo-arm.html %}
+{% include page-intro.html %}
 
 # Use staticman For Gitlab Comments
 

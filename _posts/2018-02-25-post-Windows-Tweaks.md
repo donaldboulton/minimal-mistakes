@@ -28,6 +28,7 @@ header:
 ---
 
 {% include octo-arm.html %}
+{% include page-intro.html %}
 
 # Windows 10, 8, 7, Vista, Xp
 

@@ -30,6 +30,7 @@ header:
 ---
 
 {% include octo-arm.html %}
+{% include page-intro.html %}
 
 # Mobile First Colorbox
 
