@@ -64,7 +64,6 @@
     text-shadow: 1px 01px 1px rgba($text-color, 0.75);
 
     &::before {
-      @include scrimgradient("to right", $text-color);
       position: absolute;
       top: 0;
       left: 0;
