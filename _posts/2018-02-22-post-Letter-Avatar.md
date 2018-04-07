@@ -25,6 +25,11 @@ share: true
 related: true
 excerpt: "Many of us got really tired of the Gravatar Service being down or slow and having multiple server calls to download the Gravatar. 
 Alot of people do not even know about gravatar and your get a generic image for the User Avatar."
+image:
+  cover: true
+  path: &image /assets/images/pages/letter-avatar-header.png
+  feature: *image
+  thumbnail: /assets/images/letter-avatar-single-letter.png
 header:
   image: /assets/images/pages/letter-avatar-header.png
   teaser: /assets/images/pages/letter-avatar-header.png
@@ -33,6 +38,8 @@ header:
 {% include octo-arm.html %}
 
 # Letter Avatar
+
+{% include page-intro.html %}
 
 How to easily create Letter Avatars for your comments in Minimal Mistakes. This coversion is a work in progress as I am just learning liquid.
 

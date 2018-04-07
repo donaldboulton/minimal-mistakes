@@ -22,7 +22,7 @@ category:
 excerpt: "Kitty Gallery"
 sidebar:
   - title: "My Hun Kitty"
-    image: /assets/photography/cat-gallery/Little-Hun-th.jpg
+    image: /assets/photography/old-cat-gallery/Little-Hun-th.jpg
     image_alt: "Hun Kitty"
     text: "Hun at 3 weaks"
   - title: "Responsibilities"
@@ -30,7 +30,7 @@ sidebar:
 
 header:
   image: /assets/photography/cat-gallery/einstine-1200.jpg
-  teaser: /assets/photography/cat-gallery/einstine-th.jpg"
+  teaser: /assets/photography/cat-gallery/einstine-th.jpg
 ---
 # Picture Gallery
 

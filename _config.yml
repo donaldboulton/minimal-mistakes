@@ -17,7 +17,7 @@ url                      : "https://donboulton.com"
 baseurl                  : "/"
 repository               : "donaldboulton/DWB"
 teaser                   : "/assets/images/pages/digital_box_1400-compressor.jpg"
-# breadcrumbs            : true # true, false (default)
+breadcrumbs              : true
 words_per_minute         : 200
 comments:
   provider               : "staticman_v2" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
@@ -84,6 +84,8 @@ notify:
 
 github                   : [metadata]
 
+google-maps-api-key      : "AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA"
+
 head_scripts:
   - https://www.googletagmanager.com/gtag/js?id=UA-30162465-2
 
@@ -121,10 +123,12 @@ analytics:
 author:
   name                   : "Donald Boulton"
   avatar                 : "/assets/images/pages/donald-boulton-100.jpg"
+  picture                : "/assets/images/pages/donald-boulton-100.jpg"
   bio                    : "Away from Asp. Anything."
   location               : "OKC Oklahoma"
   email                  : "donaldboulton@gmail.com"
-  uri                    : "https://donboulton.com"
+  uri                    : &uri "https://donboulton.com/about/"
+  url                    : *uri
   home                   : "https://donboulton.com/"
   bitbucket              :
   codepen                :
@@ -182,7 +186,6 @@ exclude:
   - README
   - tmp
   - /docs # ignore Minimal Mistakes /docs
-  - /test # ignore Minimal Mistakes /test
 keep_files:
   - .git
   - .svn
@@ -305,6 +308,9 @@ defaults:
       comments: true
       share: true
       related: true
+      breadcrumbs:
+        - label: "Photo Gallerys"
+          url: /photograpny/
       permalink: /:path/:basename:output_ext
   # _posts
   - scope:
@@ -318,6 +324,9 @@ defaults:
       share: true
       related: true
       toc: true
+      breadcrumbs:
+        - label: "Blog Posts"
+          url: /year-archive/
   # _pages
   - scope:
       path: "_pages"

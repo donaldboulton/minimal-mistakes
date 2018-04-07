@@ -11,7 +11,6 @@
 @import "minimal-mistakes/vendor/breakpoint/breakpoint";
 @include breakpoint-set("to ems", true);
 @import "minimal-mistakes/vendor/susy/susy";
-@import "minimal-mistakes/mixins";
 
 /* Core CSS */
 @import "minimal-mistakes/reset";
@@ -38,10 +37,10 @@
 @import "minimal-mistakes/sidebar";
 @import "minimal-mistakes/print";
 @import "minimal-mistakes/scrollbar";
-@import "minimal-mistakes/top";
 @import "minimal-mistakes/githubwidget";
 @import "minimal-mistakes/comments";
 @import "minimal-mistakes/octoarm";
 @import "minimal-mistakes/lazyload";
+@import "minimal-mistakes/intro";
 @import "minimal-mistakes/gallery";
 @import "minimal-mistakes/video";
