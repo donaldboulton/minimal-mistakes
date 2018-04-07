@@ -12,7 +12,6 @@
 @include breakpoint-set("to ems", true);
 @import "minimal-mistakes/vendor/susy/susy";
 @import "minimal-mistakes/mixins";
-@import "minimal-mistakes/fluid-type";
 
 /* Core CSS */
 @import "minimal-mistakes/reset";
