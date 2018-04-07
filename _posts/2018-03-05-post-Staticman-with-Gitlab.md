@@ -37,7 +37,7 @@ related: true
 {% include octo-arm.html %}
 {% include page-intro.html %}
 
-# Use staticman For Gitlab Comments
+# Use webhooks
 
 Taken From [Zong Ren's blog](https://zongren.me/2016/09/23/use-staticman-in-gitlab-pages/#%E5%88%9B%E5%BB%BAstaticmanapp)
 

@@ -32,7 +32,7 @@ header:
 {% include octo-arm.html %}
 {% include page-intro.html %}
 
-# Website Tweaks
+# Any Site, Orchard CMS
 
 Discussions on changes to Orchard 1.10 web.config, zipping files for AWS to Cloud-front, Proper Response and Request headers.
 
