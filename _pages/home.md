@@ -39,8 +39,8 @@ feature_row:
     btn_class: "btn--primary"
     btn_label: "Learn More"
   - image_path: /assets/images/demo/mm-free-feature.png
-    alt: "100% free"
-    title: "100% Free"
+    alt: "Cool & 100% free"
+    title: "Cool & 100% Free"
     excerpt: "Free to use however you want under the MIT License. Clone it, fork it, customize it, whatever!"
     url: "https://mmistakes.github.io/minimal-mistakes/terms/"
     btn_class: "btn--primary"
