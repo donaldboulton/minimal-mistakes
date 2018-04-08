@@ -1,12 +1,12 @@
 picture_path: stray-cat-gallery
 preview:
-  filename: Boys-Kittens
-  original: Boys-Kittens-1200.jpg
+  filename: DSCN1261
+  original: DSCN1261-1200.jpg
   sizes:
-  - Boys-Kittens-1200.jpg
-  - Boys-Kittens-800.jpg
-  - Boys-Kittens-320.jpg
-  thumbnail: Boys-Kittens-th.jpg
+  - DSCN1261-1200.jpg
+  - DSCN1261-800.jpg
+  - DSCN1261-320.jpg
+  thumbnail: DSCN1261-th.jpg
 pictures:
 - filename: DSCN1252
   original: DSCN1252-1200.jpg
@@ -15,13 +15,6 @@ pictures:
   - DSCN1252-800.jpg
   - DSCN1252-320.jpg
   thumbnail: DSCN1252-th.jpg
-- filename: DSCN1261
-  original: DSCN1261-1200.jpg
-  sizes:
-  - DSCN1261-1200.jpg
-  - DSCN1261-800.jpg
-  - DSCN1261-320.jpg
-  thumbnail: DSCN1261-th.jpg
 - filename: DSCN1260
   original: DSCN1260-1200.jpg
   sizes:
