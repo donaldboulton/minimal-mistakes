@@ -1,12 +1,12 @@
 picture_path: stray-cat-gallery
 preview:
-  filename: GrandPaw-My-Cats
-  original: GrandPaw-My-Cats-1200.jpg
+  filename: Boys-Kittens
+  original: Boys-Kittens-1200.jpg
   sizes:
-  - GrandPaw-My-Cats-1200.jpg
-  - GrandPaw-My-Cats-800.jpg
-  - GrandPaw-My-Cats-320.jpg
-  thumbnail: GrandPaw-My-Cats-th.jpg
+  - Boys-Kittens-1200.jpg
+  - Boys-Kittens-800.jpg
+  - Boys-Kittens-320.jpg
+  thumbnail: Boys-Kittens-th.jpg
 pictures:
 - filename: DSCN1252
   original: DSCN1252-1200.jpg
@@ -57,41 +57,41 @@ pictures:
   - DSCN1477-800.jpg
   - DSCN1477-1320.jpg
   thumbnail: DSCN1477-th.jpg
-- filename: Einstein-at-14-mo
-  original: Einstein-at-14-mo-1200.jpg
+- filename: DSCN1479
+  original: DSCN1479-1200.jpg
   sizes:
-  - Einstein-at-14-mo-1200.jpg
-  - Einstein-at-14-mo-800.jpg
+  - DSCN1479-1200.jpg
+  - DSCN1479-800.jpg
   - Einstein-at-14-mo-320.jpg
-  thumbnail: Einstein-at-14-mo-th.jpg
-- filename: einstine1
-  original: einstine1-1200.jpg
+  thumbnail: DSCN1479-th.jpg
+- filename: GrandPaw-My-Cats
+  original: GrandPaw-My-Cats-1200.jpg
   sizes:
-  - einstine1-1200.jpg
-  - einstine1-800.jpg
-  - einstine1-320.jpg
-  thumbnail: einstine1-th.jpg
-- filename: einstine-1-van
-  original: einstine-1-van-1200.jpg
+  - GrandPaw-My-Cats-1200.jpg
+  - GrandPaw-My-Cats-800.jpg
+  - GrandPaw-My-Cats-320.jpg
+  thumbnail: GrandPaw-My-Cats-th.jpg
+- filename: Grandpaw
+  original: Grandpaw-1200.jpg
   sizes:
-  - einstine-1-van-1200.jpg
-  - einstine-1-van-800.jpg
-  - einstine-1-van-320.jpg
-  thumbnail: einstine-1-van-th.jpg
-- filename: kitttens-tiger einstein
-  original: kitttens-tiger einstein-1200.jpg
+  - Grandpaw-1200.jpg
+  - Grandpaw-800.jpg
+  - Grandpaw-320.jpg
+  thumbnail: Grandpaw-th.jpg
+- filename: Pretty-Girl
+  original: Pretty-Girl-1200.jpg
   sizes:
-  - kitttens-tiger einstein-1200.jpg
-  - kitttens-tiger einstein-800.jpg
-  - kitttens-tiger einstein-320.jpg
-  thumbnail: kitttens-tiger einstein-th.jpg
-- filename: little-einstine
-  original: little-einstine-1200.jpg
+  - Pretty-Girl-1200.jpg
+  - Pretty-Girl-800.jpg
+  - Pretty-Girl-320.jpg
+  thumbnail: Pretty-Girl-th.jpg
+- filename: Pretty-Girl-kittens
+  original: Pretty-Girl-kittens-1200.jpg
   sizes:
-  - little-einstine-1200.jpg
-  - little-einstine-800.jpg
-  - little-einstine-320.jpg
-  thumbnail: little-einstine-th.jpg
+  - Pretty-Girl-kittens-1200.jpg
+  - Pretty-Girl-kittens-800.jpg
+  - Pretty-Girl-kittens-320.jpg
+  thumbnail: Pretty-Girl-kittens-th.jpg
 - filename: Little-Hun
   original: Little-Hun-1200.jpg
   sizes:
@@ -127,62 +127,6 @@ pictures:
   - Pretty-Girl-800.jpg
   - Pretty-Girl-320.jpg
   thumbnail: Pretty-Girl-th.jpg
-- filename: tiger_2
-  original: tiger_2-1200.jpg
-  sizes:
-  - tiger_2-1200.jpg
-  - tiger_2-800.jpg
-  - tiger_2-320.jpg
-  thumbnail: tiger_2-th.jpg
-- filename: tiger_and_sisters
-  original: tiger_and_sisters-1200.jpg
-  sizes:
-  - My-Boys-1200.jpg
-  - My-Boys-800.jpg
-  - My-Boys-320.jpg
-  thumbnail: My-Boys-th.jpg
-- filename: tiger_and_sisters
-  original: tiger_and_sisters-1200.jpg
-  sizes:
-  - tiger_and_sisters-1200.jpg
-  - tiger_and_sisters-800.jpg
-  - tiger_and_sisters-320.jpg
-  thumbnail: tiger_and_sisters-th.jpg
-- filename: tiger_kittens
-  original: tiger_kittens-1200.jpg
-  sizes:
-  - tiger_kittens-1200.jpg
-  - tiger_kittens-800.jpg
-  - tiger_kittens-320.jpg
-  thumbnail: tiger_kittens-th.jpg
-- filename: tiger_van
-  original: tiger_van-1200.jpg
-  sizes:
-  - tiger_van-1200.jpg
-  - tiger_van-800.jpg
-  - tiger_van-320.jpg
-  thumbnail: tiger_van-th.jpg
-- filename: Tiger
-  original: Tiger-1200.jpg
-  sizes:
-  - Tiger-1200.jpg
-  - Tiger-800.jpg
-  - Tiger-320.jpg
-  thumbnail: Tiger-th.jpg
-- filename: Tiger-at-14-mo
-  original: Tiger-at-14-mo-1200.jpg
-  sizes:
-  - Tiger-at-14-mo-1200.jpg
-  - Tiger-at-14-mo-800.jpg
-  - Tiger-at-14-mo-320.jpg
-  thumbnail: Tiger-at-14-mo-th.jpg
-- filename: Tiger-at-storage
-  original: Tiger-at-storage-1200.jpg
-  sizes:
-  - Tiger-at-storage-1200.jpg
-  - Tiger-at-storage-800.jpg
-  - Tiger-at-storage-320.jpg
-  thumbnail: Tiger-at-storage-th.jpg
 - filename: topcat-storage
   original: topcat-storage-1200.jpg
   sizes:
