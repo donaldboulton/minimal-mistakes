@@ -1,5 +1,6 @@
 ---
 title: "SQL Fragmentation"
+permalink: /posts/2018-02-22-post-SQL-Fragmentation/
 date: 2018-02-23 16:16:01 -0900
 last_modified_at: 2018-03-01T12:42:38-04:00
 search: true
@@ -50,7 +51,7 @@ The following steps use SQL Server 2008 R2 and AdventureWorks2008 sample databas
 
 Step 1\. Open Microsoft SQL Server 2008 R2
 
-Step 2\. Open Microsoft SQL Server Management Studio  
+Step 2\. Open Microsoft SQL Server Management Studio
 Start- All programs- Microsoft SQL Server 2008 R2- Microsoft SQL Server Management Studio
 
 ![SQL Management](/assets/images/pages/sql_management.png){: .align-left}
@@ -63,13 +64,13 @@ indexstats.avg_fragmentation_in_percent: In the script the  indexstats.avg_frag
 
 Step 5\. Run the script
 
-The below script selects AdventureWorks2008. 
-
-After the script executing, we will get a result as the following figure shows:
-
 ![Script Results](/assets/images/pages/script-results.jpg){: .align-left}
 
-### Web Matrix is what I use to check Fragmentation.
+This script selects AdventureWorks2008.
+
+After the script executing, we will get this result:
+
+### Web Matrix is what I use to check Fragmentation
 
 Open Web Matrix select databases and logon to your database, Select new query and paste IndexDefrag query in workspace the execute.
 
@@ -87,4 +88,4 @@ See My post on how to fix this at: [Defrag SQl](https://donaldboulton.gihub.io/D
 
 ### Download this script .zip file
 
-[Check Index Defragmentation](https://drive.google.com/open?id=1_BAytAHtcqp23dw-mOFSRjiIRzqPjmnX).
+[Check Index Defragmentation](https://drive.google.com/open?id=1_BAytAHtcqp23dw-mOFSRjiIRzqPjmnX)

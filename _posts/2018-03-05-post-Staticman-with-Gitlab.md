@@ -1,6 +1,7 @@
 ---
 layout: single
 author_profile: true
+permalink: /posts/2018-02-26-post-Staticman-with-Gitlab/
 read_time: true
 comments: true
 share: true

@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Defrag SQL"
-permalink: /2018-02-25-post-Defrag-SQL/
+permalink: /posts/2018-02-25-post-Defrag-SQL/
 date: 2018-02-25 16:16:01 -0600
 last_modified_at: 2018-03-01T12:42:38-04:00
 search: true
@@ -70,7 +70,7 @@ This is most likely a very small index. Here’s what Microsoft has to say:
 
 In general, fragmentation on small indexes is often not controllable. The pages of small indexes are stored on mixed extents. Mixed extents are shared by up to eight objects, so the fragmentation in a small index might not be reduced after reorganizing or rebuilding the index. For more information about mixed extents, see Understanding Pages and Extents.
 
-What database should I create it in? or Can I create this in the MASTER database? 
+What database should I create it in? or Can I create this in the MASTER database?
 It’s up to you where you create it. You could technically create it in the MASTER database, but I recommend creating a utility database for your DBA administrative tasks.
 
 Can I run this against a SharePoint database?
@@ -82,112 +82,112 @@ You need to be on SQL Server 2005 SP2 or higher.
 ### SQL Server 2008 R2 or higher
 
 ```sql
-/*Perform a 'USE <database name>' to select the database in which to run the script.*/  
--- Declare variables  
-SET NOCOUNT ON;  
-DECLARE @tablename varchar(255);  
-DECLARE @execstr   varchar(400);  
-DECLARE @objectid  int;  
-DECLARE @indexid   int;  
-DECLARE @frag      decimal;  
-DECLARE @maxfrag   decimal;  
+/*Perform a 'USE <database name>' to select the database in which to run the script.*/
+-- Declare variables
+SET NOCOUNT ON;
+DECLARE @tablename varchar(255);
+DECLARE @execstr   varchar(400);
+DECLARE @objectid  int;
+DECLARE @indexid   int;
+DECLARE @frag      decimal;
+DECLARE @maxfrag   decimal;
 
--- Decide on the maximum fragmentation to allow for.  
-SELECT @maxfrag = 30.0;  
+-- Decide on the maximum fragmentation to allow for.
+SELECT @maxfrag = 30.0;
 
--- Declare a cursor.  
-DECLARE tables CURSOR FOR  
-   SELECT TABLE_SCHEMA + '.' + TABLE_NAME  
-   FROM INFORMATION_SCHEMA.TABLES  
-   WHERE TABLE_TYPE = 'BASE TABLE';  
+-- Declare a cursor.
+DECLARE tables CURSOR FOR
+   SELECT TABLE_SCHEMA + '.' + TABLE_NAME
+   FROM INFORMATION_SCHEMA.TABLES
+   WHERE TABLE_TYPE = 'BASE TABLE';
 
--- Create the table.  
-CREATE TABLE #fraglist (  
-   ObjectName char(255),  
-   ObjectId int,  
-   IndexName char(255),  
-   IndexId int,  
-   Lvl int,  
-   CountPages int,  
-   CountRows int,  
-   MinRecSize int,  
-   MaxRecSize int,  
-   AvgRecSize int,  
-   ForRecCount int,  
-   Extents int,  
-   ExtentSwitches int,  
-   AvgFreeBytes int,  
-   AvgPageDensity int,  
-   ScanDensity decimal,  
-   BestCount int,  
-   ActualCount int,  
-   LogicalFrag decimal,  
-   ExtentFrag decimal);  
+-- Create the table.
+CREATE TABLE #fraglist (
+   ObjectName char(255),
+   ObjectId int,
+   IndexName char(255),
+   IndexId int,
+   Lvl int,
+   CountPages int,
+   CountRows int,
+   MinRecSize int,
+   MaxRecSize int,
+   AvgRecSize int,
+   ForRecCount int,
+   Extents int,
+   ExtentSwitches int,
+   AvgFreeBytes int,
+   AvgPageDensity int,
+   ScanDensity decimal,
+   BestCount int,
+   ActualCount int,
+   LogicalFrag decimal,
+   ExtentFrag decimal);
 
--- Open the cursor.  
-OPEN tables;  
+-- Open the cursor.
+OPEN tables;
 
--- Loop through all the tables in the database.  
-FETCH NEXT  
-   FROM tables  
-   INTO @tablename;  
+-- Loop through all the tables in the database.
+FETCH NEXT
+   FROM tables
+   INTO @tablename;
 
-WHILE @@FETCH_STATUS = 0  
-BEGIN  
--- Do the showcontig of all indexes of the table  
-   INSERT INTO #fraglist   
-   EXEC ('DBCC SHOWCONTIG (''' + @tablename + ''')   
-      WITH FAST, TABLERESULTS, ALL_INDEXES, NO_INFOMSGS');  
-   FETCH NEXT  
-      FROM tables  
-      INTO @tablename;  
-END;  
+WHILE @@FETCH_STATUS = 0
+BEGIN
+-- Do the showcontig of all indexes of the table
+   INSERT INTO #fraglist
+   EXEC ('DBCC SHOWCONTIG (''' + @tablename + ''')
+      WITH FAST, TABLERESULTS, ALL_INDEXES, NO_INFOMSGS')
+   FETCH NEXT
+      FROM tables
+      INTO @tablename;
+END;
 
--- Close and deallocate the cursor.  
-CLOSE tables;  
-DEALLOCATE tables;  
+-- Close and deallocate the cursor.
+CLOSE tables;
+DEALLOCATE tables;
 
--- Declare the cursor for the list of indexes to be defragged.  
-DECLARE indexes CURSOR FOR  
-   SELECT ObjectName, ObjectId, IndexId, LogicalFrag  
-   FROM #fraglist  
-   WHERE LogicalFrag >= @maxfrag  
-      AND INDEXPROPERTY (ObjectId, IndexName, 'IndexDepth') > 0;  
+-- Declare the cursor for the list of indexes to be defragged.
+DECLARE indexes CURSOR FOR
+   SELECT ObjectName, ObjectId, IndexId, LogicalFrag
+   FROM #fraglist
+   WHERE LogicalFrag >= @maxfrag
+      AND INDEXPROPERTY (ObjectId, IndexName, 'IndexDepth') > 0;
 
--- Open the cursor.  
-OPEN indexes;  
+-- Open the cursor.
+OPEN indexes;
 
--- Loop through the indexes.  
-FETCH NEXT  
-   FROM indexes  
-   INTO @tablename, @objectid, @indexid, @frag;  
+-- Loop through the indexes.
+FETCH NEXT
+   FROM indexes
+   INTO @tablename, @objectid, @indexid, @frag;
 
-WHILE @@FETCH_STATUS = 0  
-BEGIN  
-   PRINT 'Executing DBCC INDEXDEFRAG (0, ' + RTRIM(@tablename) + ',  
-      ' + RTRIM(@indexid) + ') - fragmentation currently '  
-       + RTRIM(CONVERT(varchar(15),@frag)) + '%';  
-   SELECT @execstr = 'DBCC INDEXDEFRAG (0, ' + RTRIM(@objectid) + ',  
-       ' + RTRIM(@indexid) + ')';  
-   EXEC (@execstr);  
+WHILE @@FETCH_STATUS = 0
+BEGIN
+   PRINT 'Executing DBCC INDEXDEFRAG (0, ' + RTRIM(@tablename) + ',
+      ' + RTRIM(@indexid) + ') - fragmentation currently '
+       + RTRIM(CONVERT(varchar(15),@frag)) + '%';
+   SELECT @execstr = 'DBCC INDEXDEFRAG (0, ' + RTRIM(@objectid) + ',
+       ' + RTRIM(@indexid) + ')';
+   EXEC (@execstr);
 
-   FETCH NEXT  
-      FROM indexes  
-      INTO @tablename, @objectid, @indexid, @frag;  
-END;  
+   FETCH NEXT
+      FROM indexes
+      INTO @tablename, @objectid, @indexid, @frag;
+END;
 
--- Close and deallocate the cursor.  
-CLOSE indexes;  
-DEALLOCATE indexes;  
+-- Close and deallocate the cursor.
+CLOSE indexes;
+DEALLOCATE indexes;
 
--- Delete the temporary table.  
-DROP TABLE #fraglist;  
+-- Delete the temporary table.
+DROP TABLE #fraglist;
 GO
 ```
 
 #### SQL 2005 - 2008 code
 
-Originally created by Microsoft 
+Originally created by Microsoft
 
 [Error corrected by Pinal Dave](http://www.SQLAuthority.com)
 
@@ -260,7 +260,7 @@ WHILE @@FETCH_STATUS = 0
 BEGIN
 -- Do the showcontig of all indexes of the table
    INSERT INTO #fraglist 
-   EXEC ('DBCC SHOWCONTIG (''' + @tablename + ''') 
+   EXEC ('DBCC SHOWCONTIG (''' + @tablename + ''')
       WITH FAST, TABLERESULTS, ALL_INDEXES, NO_INFOMSGS');
    FETCH NEXT
       FROM tables
