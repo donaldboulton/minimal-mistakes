@@ -1,16 +1,16 @@
-<article id="comment{% unless include.r %}{{ index | prepend: '-' }}{% else %}{{ include.index | prepend: '-' }}{% endunless %}" class="js-comment comment {% if include.name == site.author.name %}admin{% endif %} {% unless include.replying_to == 0 %}child{% endunless %}">
+<article itemprop="comment" itemscope itemtype="http://schema.org/Comment"  id="comment{% unless include.r %}{{ index | prepend: '-' }}{% else %}{{ include.index | prepend: '-' }}{% endunless %}" class="js-comment comment {% if include.name == site.author.name %}admin{% endif %} {% unless include.replying_to == 0 %}child{% endunless %}">
   <div class="comment__avatar">
     {% if include.avatar %}
-    <img class="comment-avatar-img" src="{{ include.avatar }}" alt="{{ include.name | escape }}">
+    <img itemporp="img" class="comment-avatar-img" src="{{ include.avatar }}" alt="{{ include.name | escape }}">
     {% elsif include.email %}
-    <img class="comment-avatar-img" src="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=60" srcset="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=120 2x" alt="{{ include.name | escape }}">
+    <img itemporp="img" class="comment-avatar-img" src="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=60" srcset="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=120 2x" alt="{{ include.name | escape }}">
     {% else %}
-    <img class="comment-avatar-img" avatar="{{ include.name }}" alt="{{ include.name }}" />
+    <img itemporp="img" class="comment-avatar-img" avatar="{{ include.name }}" alt="{{ include.name }}" />
     {% endif %}
   </div>
   <h3 class="comment-author-name">
     {% unless include.url == blank %}
-    <a rel="external nofollow" href="{{ include.url }}">{{ include.name | strip_html }}</a>
+    <a itemprop="creator" rel="external nofollow" href="{{ include.url }}">{{ include.name | strip_html }}</a>
     {% else %}
     {{ include.name | strip_html }}
     {% endunless %}
@@ -19,17 +19,17 @@
     {% if include.date %}
     {% if include.index %}<a href="#comment{% if r %}{{ index | prepend: '-' }}{% else %}{{ include.index | prepend: '-' }}{% endif %}" title="Permalink to this comment">
       {% endif %}
-      <time datetime="{{ include.date | date_to_xmlschema }}">{{ include.date | date: '%B %d, %Y' }}</time>
+      <time itemprop="commentTime" datetime="{{ include.date | date_to_xmlschema }}">{{ include.date | date: '%B %d, %Y' }}</time>
       {% if include.index %}
     </a>{% endif %}
     {% endif %}
   </div>
-  <div class="comment-content">
+  <div itemprop="commentText" class="comment-content">
     {{ include.message | markdownify }}
   </div>
   {% unless include.replying_to != 0 or page.comments_locked == true %}
   <div class="comment-reply">
-    <a rel="nofollow" class="btn btn--primary" href="#comment-{{ include.index }}" onclick="return addComment.moveForm('comment-{{ include.index }}', '{{ include.index }}', 'respond', '{{ page.slug }}')"><i class="fas fa-share"></i> Reply to {{ include.name }}</a>
+    <a itemprop="replyToUrl" rel="nofollow" class="btn btn--primary" href="#comment-{{ include.index }}" onclick="return addComment.moveForm('comment-{{ include.index }}', '{{ include.index }}', 'respond', '{{ page.slug }}')"><i class="fas fa-share"></i> Reply to {{ include.name }}</a>
   </div>
   {% endunless %}
 </article>
