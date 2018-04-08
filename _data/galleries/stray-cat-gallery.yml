@@ -62,7 +62,7 @@ pictures:
   sizes:
   - DSCN1479-1200.jpg
   - DSCN1479-800.jpg
-  - Einstein-at-14-mo-320.jpg
+  - DSCN1479-320.jpg
   thumbnail: DSCN1479-th.jpg
 - filename: GrandPaw-My-Cats
   original: GrandPaw-My-Cats-1200.jpg
@@ -92,34 +92,6 @@ pictures:
   - Pretty-Girl-kittens-800.jpg
   - Pretty-Girl-kittens-320.jpg
   thumbnail: Pretty-Girl-kittens-th.jpg
-- filename: Little-Hun
-  original: Little-Hun-1200.jpg
-  sizes:
-  - Little-Hun-1200.jpg
-  - Little-Hun-800.jpg
-  - Little-Hun-320.jpg
-  thumbnail: Little-Hun-th.jpg
-- filename: My-Boys
-  original: My-Boys-1200.jpg
-  sizes:
-  - My-Boys-1200.jpg
-  - My-Boys-800.jpg
-  - My-Boys-320.jpg
-  thumbnail: My-Boys-th.jpg
-- filename: my-little tiggger
-  original: my-little tiggger-1200.jpg
-  sizes:
-  - my-little tiggger-1200.jpg
-  - my-little tiggger-800.jpg
-  - my-little tiggger-320.jpg
-  thumbnail: my-little tiggger-th.jpg
-- filename: Picture-021
-  original: Picture-021-1200.jpg
-  sizes:
-  - Picture-021-1200.jpg
-  - Picture-021-800.jpg
-  - Picture-021-320.jpg
-  thumbnail: Picture-021-th.jpg
 - filename: Pretty-Girl-1200
   original: Pretty-Girl-1200.jpg
   sizes:
