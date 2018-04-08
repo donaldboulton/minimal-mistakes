@@ -68,15 +68,18 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 3.25em;
-  height: 3.25em;
+  width: 80px;
+  height: 80px;
+  padding: 5px;
+  border: 1px solid #f2f3f3;
+  border-radius: 50%;
 
   &::after {
     position: absolute;
     right: 0.5em;
     bottom: 0.5em;
-    width: 3.25em;
-    height: 3.25em;
+    width: 80px;
+    height: 80px;
     content: "";
     z-index: -1;
   }
