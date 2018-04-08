@@ -1,6 +1,7 @@
 ---
 layout: gallery
 title: San Francisco
+permalink: /photography/San Franscisco/
 no_menu_item: true # required only for this example website because of menu construction
 support: [gallery]
 ---

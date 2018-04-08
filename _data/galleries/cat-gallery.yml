@@ -1,6 +1,7 @@
 picture_path: cat-gallery
 preview:
   filename: Boys-Idabel-bed
+  title: Boys in Idabel
   original: Boys-Idabel-bed-1200.jpg
   sizes:
   - Boys-Idabel-bed-1200.jpg
@@ -9,6 +10,7 @@ preview:
   thumbnail: Boys-Idabel-bed-th.jpg
 pictures:
 - filename: Bango-bar-chair
+  title: Banjo bar Chair
   original: Bango-bar-chair-1200.jpg
   sizes:
   - Bango-bar-chair-1200.jpg
@@ -16,6 +18,7 @@ pictures:
   - Bango-bar-chair-320.jpg
   thumbnail: Bango-bar-chair-th.jpg
 - filename: Banjo-bed
+  title: Banjo Bed
   original: Banjo-bed-1200.jpg
   sizes:
   - Banjo-bed-1200.jpg
@@ -23,6 +26,7 @@ pictures:
   - Banjo-bed-320.jpg
   thumbnail: Banjo-bed-th.jpg
 - filename: Banjo-on-the-Bed
+  title: Banjo on the Bead
   original: Banjo-on-the-Bed-1200.jpg
   sizes:
   - Banjo-on-the-Bed-1200.jpg
@@ -30,6 +34,7 @@ pictures:
   - Banjo-on-the-Bed-320.jpg
   thumbnail: Banjo-on-the-Bed-th.jpg
 - filename: Banjo-under-the-covers
+  title: Banjo under the covers
   original: Banjo-under-the-covers-1200.jpg
   sizes:
   - Banjo-under-the-covers-1200.jpg
@@ -37,6 +42,7 @@ pictures:
   - Banjo-under-the-covers-320.jpg
   thumbnail: Banjo-under-the-covers-th.jpg
 - filename: Boys-Idabel-bed
+  title: Boys in Idabel
   original: Boys-Idabel-bed-1200.jpg
   sizes:
   - Boys-Idabel-bed-1200.jpg
@@ -44,6 +50,7 @@ pictures:
   - Boys-Idabel-bed-800.jpg
   thumbnail: Boys-Idabel-bed-th.jpg
 - filename: DSCN1450
+  tilte: Hun on the Bead
   original: DSCN1450-1200.jpg
   sizes:
   - DSCN1450-1200.jpg
@@ -51,6 +58,7 @@ pictures:
   - DSCN1450-320.jpg
   thumbnail: DSCN1450-th.jpg
 - filename: einstine-1200
+  title: Mr. Einstein
   original: einstine-1200.jpg
   sizes:
   - einstine-1200.jpg
@@ -58,6 +66,7 @@ pictures:
   - einstine-320.jpg
   thumbnail: einstine-th.jpg
 - filename: einstine-rolling
+  title: Mr Einstein Rolling
   original: einstine-rolling-1200.jpg
   sizes:
   - einstine-rolling-1200.jpg
@@ -65,6 +74,7 @@ pictures:
   - einstine-rolling-320.jpg
   thumbnail: einstine-rolling-th.jpg
 - filename: DSCN1461
+  title: Tiger Banjo
   original: DSCN1461-1200.jpg
   sizes:
   - DSCN1461-1200.jpg
@@ -72,6 +82,7 @@ pictures:
   - DSCN1461-320.jpg
   thumbnail: DSCN1461-th.jpg
 - filename: DSCN1464
+  title: Tiger Hidding
   original: DSCN1464-1200.jpg
   sizes:
   - DSCN1464-1200.jpg
@@ -79,6 +90,7 @@ pictures:
   - DSCN1464-320.jpg
   thumbnail: DSCN1464-th.jpg
 - filename: DSCN1558
+  title: Banjo Action
   original: DSCN1558-1200.jpg
   sizes:
   - DSCN1558-1200.jpg
@@ -86,6 +98,7 @@ pictures:
   - DSCN1558-320.jpg
   thumbnail: DSCN1558-th.jpg
 - filename: DSCN1560
+  title: Tiger and JR
   original: DSCN1560-1200.jpg
   sizes:
   - DSCN1560-1200.jpg
@@ -93,6 +106,7 @@ pictures:
   - DSCN1560-320.jpg
   thumbnail: DSCN1560-th.jpg
 - filename: DSCN1563
+  title: Boys Chillin
   original: DSCN1563-1200.jpg
   sizes:
   - DSCN1563-1200.jpg
@@ -100,6 +114,7 @@ pictures:
   - DSCN1563-320.jpg
   thumbnail: DSCN1563-th.jpg
 - filename: DSCN1461
+  title: Tiger
   original: DSCN1461-1200.jpg
   sizes:
   - DSCN1461-1200.jpg
@@ -107,6 +122,7 @@ pictures:
   - DSCN1461-320.jpg
   thumbnail: DSCN1461-th.jpg
 - filename: DSCN1464
+  title: Tiger Covers
   original: DSCN1464-1200.jpg
   sizes:
   - DSCN1464-1200.jpg
@@ -114,6 +130,7 @@ pictures:
   - DSCN1464-320.jpg
   thumbnail: DSCN1464-th.jpg
 - filename: DSCN1465
+  title: Boys Playing
   original: DSCN1465-1200.jpg
   sizes:
   - DSCN1465-1200.jpg
@@ -121,6 +138,7 @@ pictures:
   - DSCN1465-320.jpg
   thumbnail: DSCN1464-th.jpg
 - filename: DSCN1466
+  title: Boys Again
   original: DSCN1466-1200.jpg
   sizes:
   - DSCN1466-1200.jpg
