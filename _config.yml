@@ -147,8 +147,8 @@ author:
   bio                    : "Away from Asp. Anything."
   location               : "OKC Oklahoma"
   email                  : "donaldboulton@gmail.com"
-  uri                    : &uri "https://donboulton.com/about/"
-  url                    : *uri
+  uri                    : "https://donboulton.com/about/"
+  url                    : "https://donboulton.com/"
   home                   : "https://donboulton.com/"
   bitbucket              :
   codepen                :

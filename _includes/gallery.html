@@ -7,8 +7,8 @@
   {% else %}
   <div class="gallery-2-col">
   {% endif %}
-    {% capture picture_url %}/img/{{year}}/{{month}}/{{picture.url}}{% endcapture %}
-    <a href="{{picture_url | absolute_url }}" data-srcset="{{include.gallery_id}}" title="{{picture.caption}}">
+    {% capture picture_url %}{{picture.url}}{% endcapture %}
+    <a href="{{picture_url | absolute_url }}" title="{{picture.caption}}">
       {% if site.developer_mode %}
         <img src="{{picture_url | absolute_url }}"/>
       {% else %}
