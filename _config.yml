@@ -84,6 +84,17 @@ notify:
 
 github                   : [metadata]
 
+cloudinary:
+  cloud_name: "mansbooks"
+  verbose: true
+  presets:
+    default:
+      min_width: 320
+      max_width: 1200
+      fallback_max_width: 800
+      steps: 5
+      sizes: "(min-width: 50rem) 50rem, 90vw"
+
 google-maps-api-key      : "AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA"
 
 head_scripts:
@@ -230,7 +241,11 @@ plugins:
   - jekyll-redirect-from
   - jekyll-admin
   - lazyload
+  - mail
+  - mailgun
+  - notice
   - jemoji
+  - jekyll-cloudinary
   - json
 
 # mimic GitHub Pages with --safe
@@ -247,7 +262,11 @@ whitelist:
   - jekyll-tagging-related_posts
   - jekyll-redirect-from
   - jekyll-admin
+  - mail
+  - mailgun
+  - notice
   - jemoji
+  - jekyll-cloudinary
   - json
 
 # Archives
@@ -293,7 +312,7 @@ compress_html:
 # Collections
 collections:
   photography:
-    output: false
+    output: true
     permalink: /:photography/:name/
 
 # Defaults
@@ -309,8 +328,8 @@ defaults:
       share: true
       related: true
       breadcrumbs:
-        - label: "Photo Gallerys"
-          url: /photograpny/
+        - label: "Gallery"
+          url: /photography/
       permalink: /:path/:basename:output_ext
   # _posts
   - scope:
@@ -325,7 +344,7 @@ defaults:
       related: true
       toc: true
       breadcrumbs:
-        - label: "Blog Posts"
+        - label: "Posts"
           url: /year-archive/
   # _pages
   - scope:

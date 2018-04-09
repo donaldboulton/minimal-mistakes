@@ -1,0 +1,5 @@
+url: http://0.0.0.0:4000
+sass:
+  style: uncompressed
+environment: development
+developer_mode: true

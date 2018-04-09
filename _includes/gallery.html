@@ -1,20 +1,21 @@
 {% assign gallery = post.gallery | default: page.gallery %}
 {% if gallery %}
-  <div class="gallery-vertical">
-    {% for img in gallery %}
-      {% if img.url contains '://' %}
-        {% assign url = img.url %}
+<div id="srcset" class="gallery-3-col">
+{% for picture in page.galleries[include.gallery_id].pictures %}
+  {% if page.galleries[include.gallery_id].pictures.size > 1 %}
+  <div class="gallery-2-col">
+  {% else %}
+  <div class="gallery-3-col">
+  {% endif %}
+    {% capture picture_url %}/img/{{year}}/{{month}}/{{picture.url}}{% endcapture %}
+    <a href="{{picture_url}}" data-srcset="{{include.gallery_id}}" title="{{picture.caption}}">
+      {% if site.developer_mode %}
+        <img src="{{picture_url}}"/>
       {% else %}
-        {% assign url = img.url | relative_url %}
+        {% cloudinary {{picture_url}} %}
       {% endif %}
-
-      {% if img.url %}
-        <a class="gallery-img" href="{{ url }}" {% if img.title %}title="{{ img.title }}"{% endif %}>
-          {% lazyload data-src="{{ img.image_path }}" src="{{ img.image_lq_path }}" alt="{{ img.alt }}" %}
-        </a>
-      {% else %}
-        {% lazyload data-src="{{ img.image_path }}" src="{{ img.image_lq_path }}" alt="{{ img.alt }}" %}
-      {% endif %}
-    {% endfor %}
+    </a>
   </div>
+{% endfor %}
+</div>
 {% endif %}
