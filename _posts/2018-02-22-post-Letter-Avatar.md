@@ -275,7 +275,7 @@ To add scripts to the head or closing </body> elements by adding paths to follow
 
 ```yaml
 head_scripts:
-  - https://code.jquery.com/jquery-3.3.1.min.js
+  - https://code.jquery.com/jquery-3.2.1.min.js
   - /assets/js/your-custom-head-script.js
 
 footer_scripts:
@@ -290,3 +290,4 @@ If your reading this before I get Staticman working. I need to see if this is re
 Use disqus below to comment or add ideas to this conception.
 
 {% include gallery.html gallery_id="gallery1" %}
+{% include galleries caption="Gravtar, Avatar, Letter Avatar." %}

@@ -1,16 +1,16 @@
-{% assign gallery = post.gallery | default: page.gallery %}
-{% if gallery %}
+{% assign galleries = post.galleries | default: page.galleries %}
+{% if galleries %}
 <div id="srcset" class="gallery-3-col">
 {% for picture in page.galleries[include.gallery_id].pictures %}
   {% if page.galleries[include.gallery_id].pictures.size > 1 %}
-  <div class="gallery-2-col">
+  <div class="gallery">
   {% else %}
-  <div class="gallery-3-col">
+  <div class="gallery-2-col">
   {% endif %}
     {% capture picture_url %}/img/{{year}}/{{month}}/{{picture.url}}{% endcapture %}
-    <a href="{{picture_url}}" data-srcset="{{include.gallery_id}}" title="{{picture.caption}}">
+    <a href="{{picture_url | absolute_url }}" data-srcset="{{include.gallery_id}}" title="{{picture.caption}}">
       {% if site.developer_mode %}
-        <img src="{{picture_url}}"/>
+        <img src="{{picture_url | absolute_url }}"/>
       {% else %}
         {% cloudinary {{picture_url}} %}
       {% endif %}
