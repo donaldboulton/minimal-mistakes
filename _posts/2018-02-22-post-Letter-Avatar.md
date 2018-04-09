@@ -290,4 +290,4 @@ If your reading this before I get Staticman working. I need to see if this is re
 Use disqus below to comment or add ideas to this conception.
 
 {% include gallery.html gallery_id="gallery1" %}
-{% include galleries caption="Gravtar, Avatar, Letter Avatar." %}
+{% include gallery caption="Gravtar, Avatar, Letter Avatar." %}
