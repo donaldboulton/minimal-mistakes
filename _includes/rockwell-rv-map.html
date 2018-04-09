@@ -9,7 +9,7 @@
 <meta name="geo.region" content="US-Oklahoma" />
 <meta name="ICBM" content="35.4582062, -97.6338859" />
 <div clas="container">
-<button class="btn btn--primary" data-iframe="true" id="google-map" data-src="https://goo.gl/maps/Sdvmk">Google Directions</button>
+<button class="btn btn--primary" data-iframe="true" id="google-map" data-src="https://www.google.com/maps/place/720+S+Rockwell+Ave,+Oklahoma+City,+OK+73128/@35.4580357,-97.6319494,16z/data=!4m5!3m4!1s0x87b20fb59e4acc97:0xe26648b7412f0d75!8m2!3d35.458429!4d-97.634299">Google Directions</button>
 <div id="map" data-iframe="true"></div>
 <script>
         function initMap() {
@@ -23,6 +23,12 @@
             map: map
           });
         }
+</script>
+<script>
+  $('#google-map').lightGallery({
+    selector: 'this',
+    iframeMaxWidth: '80%'
+  });
 </script>
 </div>
 <script async defer

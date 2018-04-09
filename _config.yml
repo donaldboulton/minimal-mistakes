@@ -94,6 +94,16 @@ cloudinary:
       fallback_max_width: 800
       steps: 5
       sizes: "(min-width: 50rem) 50rem, 90vw"
+      figure: always
+    logo:
+      min_width: 80
+      max_width: 400
+      fallback_max_width: 200
+      steps: 3
+      sizes: '(min-width: 50rem) 13rem, (min-width: 40rem) 25vw, 45vw'
+      figure: never
+      attributes:
+        class: logo
 
 google-maps-api-key      : "AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA"
 
@@ -128,7 +138,6 @@ analytics:
   provider               : "google"
   google:
     tracking_id          : "UA-30162465-2"
-
 
 # Site Author
 author:
