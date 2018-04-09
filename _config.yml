@@ -250,8 +250,6 @@ plugins:
   - jekyll-redirect-from
   - jekyll-admin
   - lazyload
-  - mail
-  - mailgun
   - notice
   - jemoji
   - json
@@ -270,8 +268,6 @@ whitelist:
   - jekyll-tagging-related_posts
   - jekyll-redirect-from
   - jekyll-admin
-  - mail
-  - mailgun
   - notice
   - jemoji
   - json
