@@ -32,19 +32,7 @@ image:
   thumbnail: /assets/images/letter-avatar-single-letter.png
 header:
   image: /assets/images/pages/letter-avatar-header.png
-  teaser: /assets/images/pages/letter-avatar-header.png
-
-galleries:
-  gallery1:
-    pictures:
-      - url: "/assets/images/pages/gravatar-icon-600.jpeg"
-        caption: "Gravtar Image."
-      - url: "/assets/images/pages/avatar-600.png"
-        caption: "Gravtar Generic Image"
-      - url: "/assets/images/pages/myLetterAvatar-600.png"
-        caption: "Letter Avatar"
-
-support: [gallery]        
+  teaser: /assets/images/pages/letter-avatar-header.png        
 ---
 
 {% include octo-arm.html %}
@@ -288,6 +276,3 @@ Then create avatar.scss and register the avatar.scss file in minimal-mistakes.sc
 
 If your reading this before I get Staticman working. I need to see if this is really works or not.
 Use disqus below to comment or add ideas to this conception.
-
-{% include gallery.html gallery_id="gallery1" %}
-{% include gallery caption="Gravtar, Avatar, Letter Avatar." %}
