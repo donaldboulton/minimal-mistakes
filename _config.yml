@@ -254,7 +254,6 @@ plugins:
   - mailgun
   - notice
   - jemoji
-  - jekyll-cloudinary
   - json
 
 # mimic GitHub Pages with --safe
@@ -275,7 +274,6 @@ whitelist:
   - mailgun
   - notice
   - jemoji
-  - jekyll-cloudinary
   - json
 
 # Archives
