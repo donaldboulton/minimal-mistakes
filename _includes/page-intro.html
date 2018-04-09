@@ -1,7 +1,7 @@
 {% assign taxonomy = page.autopages.display_name | downcase | slugify %}
 {% assign tag = site.data.taxonomy[taxonomy] %}
 
-<header class="intro">
+<div class="intro">
   <div class="inner">
     <div class="intro-text">
 
@@ -24,4 +24,4 @@
       {% endunless %}
     </div>
   </div>
-</header>
+</div>
