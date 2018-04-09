@@ -9,13 +9,13 @@
 <meta name="geo.region" content="US-Oklahoma" />
 <meta name="ICBM" content="35.4582062, -97.6338859" />
 <div clas="container">
-<button class="btn btn--primary" data-iframe="true" id="google-map" data-src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA&q=720+S+Rockwell+Ave,+Oklahoma+City,+OK+73128/@35.4580357,-97.6319494,16z/data=!4m5!3m4!1s0x87b20fb59e4acc97:0xe26648b7412f0d75!8m2!3d35.458429!4d-97.634299">Google Directions</button>
+<button class="btn btn--primary" data-iframe="true" id="google-map" data-src="https://www.google.com/maps/embed?pb=!4m5!3m4!1s0x87b20fb59e4acc97:0xe26648b7412f0d75!8m2!3d35.458429!4d-97.634299">Google Directions</button>
 <div id="map"></div>
 <script>
         function initMap() {
           var uluru = {lat: 35.458429035, lng: -97.634299097};
           var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 18,
+            zoom: 16,
             center: uluru
           });
           var marker = new google.maps.Marker({
