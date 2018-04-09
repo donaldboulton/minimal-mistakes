@@ -1,7 +1,7 @@
 ---
 layout: gallery
-title: My House Cat Gallery
-no_menu_item: true # required only for this example website because of menu construction
+title: Cat Gallery
+no_menu_item: true
 date: 2018-04-03 16:16:01 -0600
 last_modified_at: 2018-04-04T12:42:38-04:0
 author: Donald Boulton
@@ -10,7 +10,7 @@ author_profile: false
 comments: true
 share: true
 related: true
-
+breadcrumb: true
 header:
   image: /assets/photography/cat-gallery/Little-Hun-1200.jpg
   teaser: /assets/photography/cat-gallery/Little-Hun-th.jpg"

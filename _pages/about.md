@@ -65,8 +65,6 @@ feature_row:
     url: "https://mmistakes.github.io/minimal-mistakes/terms/"
     btn_class: "btn--primary"
     btn_label: "Learn More"
-
-support: [gallery]
 ---
 
 {% include octo-arm.html %}

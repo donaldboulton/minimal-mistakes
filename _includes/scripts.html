@@ -3,12 +3,12 @@
     {% if script contains "://" %}
       {% capture script_path %}{{ script }}{% endcapture %}
     {% else %}
-      {% capture script_path %}{{ script | absolute_url }}{% endcapture %}
+      {% capture script_path %}{{ script | relative_url }}{% endcapture %}
     {% endif %}
 <script src="{{ script_path }}"></script>
   {% endfor %}
 {% else %}
-<script src="{{ '/assets/js/main.min.js' | absolute_url }}"></script>
+<script src="{{ '/assets/js/main.min.js' | relative_url }}"></script>
 {% endif %}
 <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
 <script>
@@ -29,13 +29,13 @@ window.addEventListener("load",function(){window.cookieconsent.initialise({"pale
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.5/isotope.pkgd.min.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js" crossorigin="anonymous"></script>
-  <script src="{{ '/assets/dist/js/imagesloaded.pkgd.min.js' | absolute_url }}"></script>
-  <script src="{{ '/assets/dist/modules/lg-autoplay.min.js' | absolute_url }}"></script>
-  <script src="{{ '/assets/dist/modules/lg-fullscreen.min.js' | absolute_url }}"></script>
-  <script src="{{ '/assets/dist/modules/lg-share.min.js' | absolute_url }}"></script>
-  <script src="{{ '/assets/dist/modules/lg-thumbnail.min.js' | absolute_url }}"></script>
-  <script src="{{ '/assets/dist/modules/lg-zoom.min.js' | absolute_url }}"></script>
-  <script src="{{ '/assets/dist/js/init-lightgallery.js' | absolute_url }}"></script>
+  <script src="{{ '/assets/dist/js/imagesloaded.pkgd.min.js' | relative_url }}"></script>
+  <script src="{{ '/assets/dist/modules/lg-autoplay.min.js' | relative_url }}"></script>
+  <script src="{{ '/assets/dist/modules/lg-fullscreen.min.js' | relative_url }}"></script>
+  <script src="{{ '/assets/dist/modules/lg-share.min.js' | relative_url }}"></script>
+  <script src="{{ '/assets/dist/modules/lg-thumbnail.min.js' | relative_url }}"></script>
+  <script src="{{ '/assets/dist/modules/lg-zoom.min.js' | relative_url }}"></script>
+  <script src="{{ '/assets/dist/js/init-lightgallery.js' | relative_url }}"></script>
 {% endif %}
 
 {% include analytics.html %}
