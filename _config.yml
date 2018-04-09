@@ -359,7 +359,7 @@ defaults:
       share: true
       related: true
       breadcrumbs:
-        - label: "Gallery"
+        - label: "photography"
           url: /photography/
       permalink: /:path/:basename:output_ext
   # _posts
