@@ -1,5 +1,3 @@
-{% assign galleries = post.galleries | default: page.galleries %}
-{% if galleries %}
 <div id="srcset" class="gallery-3-col">
 {% for picture in page.galleries[include.gallery_id].pictures %}
   {% if page.galleries[include.gallery_id].pictures.size > 1 %}
@@ -9,13 +7,8 @@
   {% endif %}
     {% capture picture_url %}{{picture.url}}{% endcapture %}
     <a href="{{picture_url | absolute_url }}" title="{{picture.caption}}">
-      {% if site.developer_mode %}
-        <img src="{{picture_url | absolute_url }}"/>
-      {% else %}
         {% cloudinary {{picture_url}} %}
-      {% endif %}
     </a>
   </div>
 {% endfor %}
 </div>
-{% endif %}
