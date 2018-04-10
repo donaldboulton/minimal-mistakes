@@ -53,7 +53,7 @@ How to use gzip on a shared server when they deny access to gzip.dll.
 
 Follow the below content and test things locally first.
 
-{% cloudinary /assets/images/pages/performance/orchard-performance.jpg caption = "Performance" %}
+{% cloudinary /assets/images/pages/performance/orchard-performance.jpg alt="Performance" %}
 
 My full test results: [http://www.webpagetest.org/result/160227_P1_4P4/1/details/](http://www.webpagetest.org/result/160227_P1_4P4/1/details/)
 
@@ -73,13 +73,13 @@ First Orchard caching still messes up .xml files like your sitemap.xml and the n
 
 Cache settings of 259200 seconds or 72 hours on duration and max age. And a Accept-Encoding: gzip, deflate, sdhc = response header.
 
-{% cloudinary onehalf /assets/images/pages/performance/cache-settings-min.jpg caption = "Cache Settings" %}
+{% cloudinary onehalf /assets/images/pages/performance/cache-settings-min.jpg alt="Cache Settings" %}
 
 Default Grace time of 600 so I get a Grace time of 10 minutes, fine for me as I have nothing changing in 10 min.
 
 Ignoring url /sitemap.xml
 
-{% cloudinary /assets/images/pages/performance/cache-duration-min.jpg caption = "Cache Duration" %}
+{% cloudinary /assets/images/pages/performance/cache-duration-min.jpg alt="Cache Duration" %}
 
 ## Web.config
 
@@ -227,7 +227,7 @@ Remember
 
 If you are using a Webview to fetch and display web content in your application, you may need to provide additional configuration flags to ensure that the HTTP cache is enabled, its size is set to a reasonable number to match your use case, and that the cache is persisted. Check the platform documentation and confirm your settings!
 
-{% cloudinary onethird /assets/images/pages/performance/http-request.png caption = "Http-request" %}
+{% cloudinary onethird /assets/images/pages/performance/http-request.png alt="Http-request" %}
 
 When the server returns a response it also emits a collection of HTTP headers, describing its content-type, length, caching directives, validation token, and more. For example, in the above exchange the server returns a 1024 byte response, instructs the client to cache it for up to 120 seconds, and provides a validation token (x234dff) that can be used after the response has expired to check if the resource has been modified.
 
@@ -240,7 +240,7 @@ Lets assume 120 seconds have passed since our initial fetch and the browser has 
 
 Thats the problem that validation tokens, as specified in the ETag header, are designed to solve: the server generates and returns an arbitrary token which is typically a hash or some other fingerprint of the contents of the file. The client does not need to know how the fingerprint is generated, it only needs to send it to the server on the next request: if the fingerprint is still the same then the resource has not changed and we can skip the download.
 
-{% cloudinary onethird /assets/images/pages/performance/http-cache-control.png caption = "Cache Control" %}
+{% cloudinary onethird /assets/images/pages/performance/http-cache-control.png alt="Cache Control" %}
 
 In above example the client automatically provides the ETag token within the If-None-Match HTTP request header, the server checks the token against the current resource, and if it has not changed returns a 304 Not Modified response which tells the browser that the response it has in cache has not changed and can be renewed for another 120 seconds. Note that we do not have to download the response once more - this saves time and bandwidth.
 
@@ -261,7 +261,7 @@ Remember
 
 Cache-Control header was defined as part of the HTTP/1.1 specification and supersedes previous headers (e.g. Expires) used to define response caching policies. All modern browsers support Cache-Control, hence that is all we will need.
 
-{% cloudinary onethird /assets/images/pages/performance/http-cache-control-highlight.png caption = "Cache Control" %}
+{% cloudinary onethird /assets/images/pages/performance/http-cache-control-highlight.png alt="Cache Control" %}
 
 no-cache and no-store
 
@@ -281,7 +281,7 @@ This directive specifies the maximum time in seconds that the fetched response i
 
 Defining optimal Cache-Control policy
 
-{% cloudinary /assets/images/pages/performance/http-cache-decision-tree.png caption = "Http Cache" %}
+{% cloudinary /assets/images/pages/performance/http-cache-decision-tree.png alt="Http Cache" %}
 
 Follow the decision tree above to determine the optimal caching policy for a particular resource, or a set of resources used by your application. Ideally, you should aim to cache as many responses as possible on the client for the longest possible period, and provide validation tokens for each response to enable efficient revalidation.
 
@@ -308,7 +308,7 @@ Once the response is cached by the browser, the cached version will be used unti
 
 So, how do we get the best of both worlds: client-side caching and quick updates? Simple, we can change the URL of the resource and force the user to download the new response whenever its content changes. Typically, this is done by embedding a fingerprint of the file, or a version number, in its filename - e.g. style.x234dff.css.
 
-{% cloudinary onethird /assets/images/pages/performance/http-cache-hierarchy.png caption = "Cache Hierarchy" %}
+{% cloudinary onethird /assets/images/pages/performance/http-cache-hierarchy.png alt="Cache Hierarchy" %}
 
 The ability to define per-resource caching policies allows us to define cache hierarchies that allow us to control not only how long each is cached for, but also how quickly new versions are seen by visitor. For example, lets analyze the above example:
 
@@ -334,7 +334,7 @@ Minimize churn: some resources are updated more frequently than others. If there
 
 Authors: Ilya Grigorik
 
-{% cloudinary /assets/images/pages/performance/ilyagrigorik.jpg caption = "Profile photo of Ilya Grigorik" %}
+{% cloudinary /assets/images/pages/performance/ilyagrigorik.jpg alt="Profile photo of Ilya Grigorik" %}
 
 Ilya is a Developer Advocate and Web Perf Guru for Google
 

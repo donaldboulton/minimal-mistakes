@@ -5,6 +5,7 @@ gem "github-pages", group: :jekyll_plugins
 gem "rake", "~> 12"
 gem "tzinfo-data"
 gem "wdm", "~> 0.1.0"
+gem "html-proofer"
 
 group :jekyll_plugins do
   gem 'jekyll-archives'
