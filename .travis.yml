@@ -8,7 +8,7 @@ install:
 deploy:
   provider: pages
   skip-cleanup: true
-  github-token: $fc5d35cca2c5eaaba33bc3d254f90d5db506a3f9
+  github-token: $g/KPkZ35QrQDOBsSFwZfUhn4fw0o+MBcoxrXualp+3/HpdaVS5fazIq9bZoEE2Tpvnge8Nu8/y46wFxA+3ehca8YekHdNdMD5jUNaR5nV7+sVhQr5Tff14cvgJV/CPf6v6dHoLAgiynogD2ou2n3K1krv2ZnFBvAcySgMp7sXNs=
   keep-history: true
   on:
     branch: gh-pages
