@@ -57,7 +57,7 @@ Follow the below content and test things locally first.
 
 My full test results: [http://www.webpagetest.org/result/160227_P1_4P4/1/details/](http://www.webpagetest.org/result/160227_P1_4P4/1/details/)
 
-[I](http://www.webpagetest.org/result/160227_P1_4P4/1/details/) am getting a repeat view of 0kb and�initially 380kb which is 1gb lower that a stock Orchard site with bootstrap and some images.
+[I](http://www.webpagetest.org/result/160227_P1_4P4/1/details/) am getting a repeat view of 0kb and initially 380kb which is 1gb lower that a stock Orchard site with bootstrap and some images.
 
 * [Cache](#cache)
 * [Web Config](#webconfig)
@@ -69,7 +69,7 @@ My full test results: [http://www.webpagetest.org/result/160227_P1_4P4/1/details
 
 ## Orchard Cache settings
 
-First Orchard caching still messes up .xml files like your sitemap.xml and the needed changes so caching in IIS or Orchard leaves it in the correct format. Then I add sitemap.xml at the root of my site, hard coding is pain in the ass, use a sitemap generator to do it for ya.
+First Orchard caching still messes up .xml files like your sitemap.xml and the needed changes so caching in IIS or Orchard leaves it in the correct format. Then I add sitemap.xml at the root of my site, hard coding is pain in the ass, use a sitemap generator to do it for you.
 
 Cache settings of 259200 seconds or 72 hours on duration and max age. And a Accept-Encoding: gzip, deflate, sdhc = response header.
 
@@ -419,7 +419,7 @@ There is one important component in the above browsing experience, these website
 How do we implement this function? Here we introduce one open source project named pjax which can realize this. The project URL is:
 
 ```html
-https://github.com/defunkt/jquery-pjax�
+https://github.com/defunkt/jquery-pjax
 ```
 
 The demo page is:
