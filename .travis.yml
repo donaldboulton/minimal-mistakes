@@ -1,13 +1,17 @@
 language: ruby
 rvm:
  - 2.3.7
- - jruby
- - rbx-3
 install:
-- bundle install
+  - bundle install
+cache:
+  bundler: true
+  yarn: true
+  directories:
+    - node_modules # NPM packages
 deploy:
-  provider: pages
+  provider: script
   skip-cleanup: true
+  script: gulp deploy
   github-token: $g/KPkZ35QrQDOBsSFwZfUhn4fw0o+MBcoxrXualp+3/HpdaVS5fazIq9bZoEE2Tpvnge8Nu8/y46wFxA+3ehca8YekHdNdMD5jUNaR5nV7+sVhQr5Tff14cvgJV/CPf6v6dHoLAgiynogD2ou2n3K1krv2ZnFBvAcySgMp7sXNs=
   keep-history: true
   on:

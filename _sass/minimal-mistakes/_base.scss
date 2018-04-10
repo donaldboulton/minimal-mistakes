@@ -221,6 +221,7 @@ figure {
   align-items: flex-start;
   flex-wrap: wrap;
   margin: 2em 0;
+  height: auto;
 
   img,
   iframe,
@@ -284,6 +285,18 @@ figcaption {
   }
 }
 
+.logo {
+  display: block;
+  margin: 1em auto;
+  max-width: 50%;
+  height: auto;
+
+  @media (min-width: 40em) {
+    max-width: 25%;
+    float: right;
+    margin: 0 0 1em 1em;
+  }
+}
 /* Fix IE9 SVG bug */
 
 svg:not(:root) {
