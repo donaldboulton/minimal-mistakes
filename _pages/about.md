@@ -2,13 +2,13 @@
 layout: single
 permalink: /about/
 title: "About"
-author_profile: false
-classes: wide
+author_profile: true
 toc: false
 author: Donald Boulton
 read_time: false
 comments: true
 share: true
+classes: wide
 
 tags: 
   - Rockwell RV
@@ -117,9 +117,9 @@ Ruby, Jeckyll, Gihub pages, and even liquid are super simple; Or "Super Logical,
 
 ## Credits
 
-Links to CloudFlare this Github repo, Staticman Comments, MMistakes Framework Designer Michael Rose.
-
 {% include credits.html %}
+
+Links to CloudFlare this Github repo, Staticman Comments, MMistakes Framework Designer Michael Rose.
 
 {% include feature_row id="intro" type="center" %}
 
