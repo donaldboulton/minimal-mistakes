@@ -18,6 +18,7 @@ group :jekyll_plugins do
   gem 'json'
   gem 'jemoji'
   gem 'jekyll-redirect-from', '~> 0.13.0'
+  gem 'jekyll-figure'
   gem 'mailgun-ruby', '~>1.1.6'
   gem 'jekyll-admin'
 end
