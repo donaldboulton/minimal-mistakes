@@ -1,3 +1,7 @@
+{% for post in pagination.posts %}
+{% include entry.html %}
+{% endfor %}
+
 {% if page.previous or page.next %}
 <nav class="pager">
   <ul>
