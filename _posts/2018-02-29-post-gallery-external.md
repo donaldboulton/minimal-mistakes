@@ -22,9 +22,9 @@ category:
 excerpt: "Kitty Gallery. My 4 male House Cats, Past Cats and the 20 or so strays I feed every day."
 image:
   cover: true
-  path: &image /assets/photography/cat-gallery/einstine.png
+  path: &image /assets/photography/cat-gallery/einstine.jpg
   feature: *image
-  thumbnail: /assets/photography/cat-gallery/einstine-320.png
+  thumbnail: /assets/photography/cat-gallery/einstine-320.jpg
 sidebar:
   - title: "My Hun Kitty"
     image: /assets/photography/old-cat-gallery/Little-Hun-th.jpg

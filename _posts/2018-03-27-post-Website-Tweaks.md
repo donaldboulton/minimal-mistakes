@@ -25,9 +25,9 @@ excerpt: "Website Tweaks in my ASP.Core2 apps.
 Including Pajax"
 image:
   cover: true
-  path: &image /assets/images/pages/performance/speedtest_donboulton.png
+  path: &image /assets/images/pages/performance/speedtest_donboulton.jpg
   feature: *image
-  thumbnail: /assets/images/pages/performance/speedtest_donboulton-320.png
+  thumbnail: /assets/images/pages/performance/speedtest_donboulton-320.jpg
 
 header:
   image: /assets/images/pages/performance/speedtest_donboulton.jpg
