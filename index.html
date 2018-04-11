@@ -21,8 +21,6 @@ excerpt: 'Donald Boulton, hosted on GitHub.<br /> <small><a href="https://github
 
 <h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
 
-{% for post in paginated.posts %}
-  {% include archive-single-main.html %}
-{% endfor %}
+{% include archive-single-main.html %}}
 
 {% include post_pagination.html %}
