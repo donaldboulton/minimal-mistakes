@@ -37,7 +37,16 @@ staticman:
   format                 : "json"
   moderation             : false
   path                   : "/_data/comments/{options.slug}"
-  requiredFields         : ['name', 'email', 'message']
+  requiredFields         : ['name', 'email', 'message']  
+  notifications:
+    enabled: true
+  #Mailgun
+    domain               : "donboulton.com"
+    smtp_Hostname        : "smtp.mailgun.org"
+    api_Base_Url         : "https://api.mailgun.net/v3/donboulton.com"
+    api_key              : "H5EZw3wcgp0MVFVT9xj1T2bjagHUmxotILm4KbnXTHE5MtyHj+1pk+kQQGQuVdH8U/rgnth/4kvm/4lWRmxgu3vNAotPpg5VcmZsd7A44D/+sLNrZCXU7q5+YZ6VHYMjQpbHTBOsdebxq3Tog/3x3ONuR5XL/kRQNvD9tdjmdFw="
+    smtp_login           : "postmaster@donboulton.com"
+    sandbox              : False
   transforms:
     email                : "md5"
   generatedFields:
@@ -45,6 +54,14 @@ staticman:
       type               : "date"
       options:
         format           : "iso8601"
+  notify:
+    - name: donboulton
+      platform: twitter
+      consumer_key: Wicpx8XkPT8tHijl4MKH7w
+      consumer_secret: WWYv+fj1vn4foC7aTTwELPLM22XfxAT9wu01NdvOhtJWGhrV8wy0DzES5bCGxxFqtMi1kxTq9vGsbwH/e/9QzuNZGnHV2YeqxVKvXwWVxC700m+GZsFJXvehUdsHHUBgxe0MFzxkhEFpRK6y9QIUGofN+yH1+DqYn+iaNMVO964=
+      access_token: 105217183-OZnpTgm0Ug9T1XUQLefhzKzEdyHkckWX1Z6nHONO
+      access_token_secret: Sl/KluM2Asg0B+g8YmYJmZeyH1yONSMu/enIbX7+m56ADUKVL8yl+141eT3j5GOsnPBH40yfADg/ZBUDmejHq/+uB+SvYvoYwhm5V1F4ru8HzYjYlbYt95w2oMQbQQp2DQVNeqL7tQAbkWmmEbUFzr88NFkSLjYwKMG0W1e3Vos=
+
 reCaptcha:
   siteKey                : "6Lf15UcUAAAAALh_yk6LPPErNxT-Qd-k2efKcJxR"
   secret                 : "q0fksxUG8S3yendptK4byPIrlKUWhVPPn+zMA+2hjPd3ekaOPrwK04Ig0hHlyneN3z6zfH6edP7zk4kQEIHy8OOYADVmBAOX8US4dKusdXvoxHBFbdZPdC9o/FgS1eUkcrsn4g8cuXr4HUxz9/hoiMg2gHn0+5W99KoxR8pL+54="
@@ -65,22 +82,6 @@ algolia:
   search_only_api_key    : "68c60968e03d06ce61d592425b22c6bd"
   algolia_api_key        : "KLAOJmvpl1yZhCrno50lgSpRVJrrTtPKi98521LaL8X62hajFubs8IHB5eLjrcG5DOQJdfB6Dca9XluHQQQCWVJhQVAD7aqzfivz5/AlYEYukabDmEOw6Efd8RzNhlsFvVTa0t2/oxYWL66Xo9LtRbC0Lfpkf/u/RpA55pn5CkE="
   powered_by             : true
-
-Mailgun:
-  domain                 : "donboulton.com"
-  smtp_Hostname          : "smtp.mailgun.org"
-  api_Base_Url           : "https://api.mailgun.net/v3/donboulton.com"
-  api_key                : "H5EZw3wcgp0MVFVT9xj1T2bjagHUmxotILm4KbnXTHE5MtyHj+1pk+kQQGQuVdH8U/rgnth/4kvm/4lWRmxgu3vNAotPpg5VcmZsd7A44D/+sLNrZCXU7q5+YZ6VHYMjQpbHTBOsdebxq3Tog/3x3ONuR5XL/kRQNvD9tdjmdFw="
-  smtp_login             : "postmaster@donboulton.com"
-  sandbox                : False
-
-notify:
-  - name: donboulton
-    platform: twitter
-    consumer_key: Wicpx8XkPT8tHijl4MKH7w
-    consumer_secret: WWYv+fj1vn4foC7aTTwELPLM22XfxAT9wu01NdvOhtJWGhrV8wy0DzES5bCGxxFqtMi1kxTq9vGsbwH/e/9QzuNZGnHV2YeqxVKvXwWVxC700m+GZsFJXvehUdsHHUBgxe0MFzxkhEFpRK6y9QIUGofN+yH1+DqYn+iaNMVO964=
-    access_token: 105217183-OZnpTgm0Ug9T1XUQLefhzKzEdyHkckWX1Z6nHONO
-    access_token_secret: Sl/KluM2Asg0B+g8YmYJmZeyH1yONSMu/enIbX7+m56ADUKVL8yl+141eT3j5GOsnPBH40yfADg/ZBUDmejHq/+uB+SvYvoYwhm5V1F4ru8HzYjYlbYt95w2oMQbQQp2DQVNeqL7tQAbkWmmEbUFzr88NFkSLjYwKMG0W1e3Vos=
 
 github                   : [metadata]
 
@@ -155,8 +156,8 @@ og_image                 : "favicon.png" # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
+  type                   : person
+  name                   : Donald Boulton
   links: # An array of links to social media profiles
     - "https://twitter.com/donboulton"
     - "https://facebook.com/donboulton"
@@ -277,7 +278,6 @@ plugins:
   - jekyll-tagging-related_posts
   - jekyll-redirect-from
   - jekyll-admin
-  - jekyll-cloudinary
   - lazyload
   - notice
   - jemoji
@@ -297,7 +297,6 @@ whitelist:
   - jekyll-tagging-related_posts
   - jekyll-redirect-from
   - jekyll-admin
-  - jekyll-cloudinary
   - notice
   - jemoji
   - json

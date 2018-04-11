@@ -39,7 +39,7 @@ Discussions on changes to Orchard 1.10 web.config, zipping files for AWS to Clou
 Web.config additions and changes, with different performance alternatives.
 
 Most of this post is specific For Orchard CMS
-Orchard Cache, iDeliverable widgets, HTML Minified settings will be discussed. Conjugation routines of .css and .js before 7-zipping them with a gzip Ultra format.
+Orchard Cache, iDeliverable widgets, HTML Minified settings will be discussed. Conjugation routines of .css and .js before 7-zipping� them with gzip Ultra format.
 
 This page is always under development. Web .config section is questionable.
 
@@ -53,7 +53,9 @@ How to use gzip on a shared server when they deny access to gzip.dll.
 
 Follow the below content and test things locally first.
 
-{% cloudinary /assets/images/pages/performance/orchard-performance.jpg alt="Performance" %}
+{% figure caption:"Performance" class:"align-left" %}
+![Performance](/assets/images/pages/performance/orchard-performance.jpg)
+{% endfigure %}
 
 My full test results: [http://www.webpagetest.org/result/160227_P1_4P4/1/details/](http://www.webpagetest.org/result/160227_P1_4P4/1/details/)
 
@@ -69,17 +71,21 @@ My full test results: [http://www.webpagetest.org/result/160227_P1_4P4/1/details
 
 ## Orchard Cache settings
 
-First Orchard caching still messes up .xml files like your sitemap.xml and the needed changes so caching in IIS or Orchard leaves it in the correct format. Then I add sitemap.xml at the root of my site, hard coding is pain in the ass, use a sitemap generator to do it for you.
+First Orchard caching still messes up .xml files like your sitemap.xml and the needed changes so caching in IIS or Orchard leaves it in the correct format. Then I add sitemap.xml at the root of my site, hard coding is pain in the ass, use a sitemap generator to do it for ya.
 
 Cache settings of 259200 seconds or 72 hours on duration and max age. And a Accept-Encoding: gzip, deflate, sdhc = response header.
 
-{% cloudinary onehalf /assets/images/pages/performance/cache-settings-min.jpg alt="Cache Settings" %}
+{% figure caption:"Performance" class:"align-center" %}
+![img](/assets/images/pages/performance/cache-settings-min.jpg)
+{% endfigure %}
 
 Default Grace time of 600 so I get a Grace time of 10 minutes, fine for me as I have nothing changing in 10 min.
 
 Ignoring url /sitemap.xml
 
-{% cloudinary /assets/images/pages/performance/cache-duration-min.jpg alt="Cache Duration" %}
+{% figure caption:"Cache duration" class:"align-center" %}
+![Cache duration](/assets/images/pages/performance/cache-duration-min.jpg)
+{% endfigure %}
 
 ## Web.config
 
@@ -185,7 +191,7 @@ Content-Encoding set to gzip
 
 The files uploaded will still have the extenshion like site-slate.min.css.gz so just rename them like site-slate.min.css no .gz.
 
-Now if you read about this you should have one file gzipped and one file not, if you do not have the correct HTTP Request and Resopnse header for older browsers = I do not care anything about older browsers. so judge for yourself
+Now if you read about this you should have one file gzipped and one file not, if you do not have the correct HTTP Request and� Resopnse header for older browsers = I do not care anything about older browsers. so judge for yourself
 
 ## AWS S3
 
@@ -227,7 +233,9 @@ Remember
 
 If you are using a Webview to fetch and display web content in your application, you may need to provide additional configuration flags to ensure that the HTTP cache is enabled, its size is set to a reasonable number to match your use case, and that the cache is persisted. Check the platform documentation and confirm your settings!
 
-{% cloudinary onethird /assets/images/pages/performance/http-request.png alt="Http-request" %}
+{% figure caption:"Http-request" class:"align-left" %}
+![Http-request](/assets/images/pages/performance/http-request.png)
+{% endfigure %}
 
 When the server returns a response it also emits a collection of HTTP headers, describing its content-type, length, caching directives, validation token, and more. For example, in the above exchange the server returns a 1024 byte response, instructs the client to cache it for up to 120 seconds, and provides a validation token (x234dff) that can be used after the response has expired to check if the resource has been modified.
 
@@ -240,7 +248,9 @@ Lets assume 120 seconds have passed since our initial fetch and the browser has 
 
 Thats the problem that validation tokens, as specified in the ETag header, are designed to solve: the server generates and returns an arbitrary token which is typically a hash or some other fingerprint of the contents of the file. The client does not need to know how the fingerprint is generated, it only needs to send it to the server on the next request: if the fingerprint is still the same then the resource has not changed and we can skip the download.
 
-{% cloudinary onethird /assets/images/pages/performance/http-cache-control.png alt="Cache Control" %}
+{% figure caption:"Cache Control" class:"align-left" %}
+![Cache Control](/assets/images/pages/performance/http-cache-control.png)
+{% endfigure %}
 
 In above example the client automatically provides the ETag token within the If-None-Match HTTP request header, the server checks the token against the current resource, and if it has not changed returns a 304 Not Modified response which tells the browser that the response it has in cache has not changed and can be renewed for another 120 seconds. Note that we do not have to download the response once more - this saves time and bandwidth.
 
@@ -261,7 +271,9 @@ Remember
 
 Cache-Control header was defined as part of the HTTP/1.1 specification and supersedes previous headers (e.g. Expires) used to define response caching policies. All modern browsers support Cache-Control, hence that is all we will need.
 
-{% cloudinary onethird /assets/images/pages/performance/http-cache-control-highlight.png alt="Cache Control" %}
+{% figure caption:"Cache Control" class:"align-left" %}
+![Cach Control](/assets/images/pages/performance/http-cache-control-highlight.png)
+{% endfigure %}
 
 no-cache and no-store
 
@@ -281,7 +293,9 @@ This directive specifies the maximum time in seconds that the fetched response i
 
 Defining optimal Cache-Control policy
 
-{% cloudinary /assets/images/pages/performance/http-cache-decision-tree.png alt="Http Cache" %}
+{% figure caption:"Http Cache" class:"align-center" %}
+![Http Cache](/assets/images/pages/performance/http-cache-decision-tree.png)
+{% endfigure %}
 
 Follow the decision tree above to determine the optimal caching policy for a particular resource, or a set of resources used by your application. Ideally, you should aim to cache as many responses as possible on the client for the longest possible period, and provide validation tokens for each response to enable efficient revalidation.
 
@@ -308,7 +322,9 @@ Once the response is cached by the browser, the cached version will be used unti
 
 So, how do we get the best of both worlds: client-side caching and quick updates? Simple, we can change the URL of the resource and force the user to download the new response whenever its content changes. Typically, this is done by embedding a fingerprint of the file, or a version number, in its filename - e.g. style.x234dff.css.
 
-{% cloudinary onethird /assets/images/pages/performance/http-cache-hierarchy.png alt="Cache Hierarchy" %}
+{% figure caption:"Http Cache Hierarchy" class:"align-left" %}
+![Cache Hierarchy](/assets/images/pages/performance/http-cache-hierarchy.png)
+{% endfigure %}
 
 The ability to define per-resource caching policies allows us to define cache hierarchies that allow us to control not only how long each is cached for, but also how quickly new versions are seen by visitor. For example, lets analyze the above example:
 
@@ -333,10 +349,11 @@ Determine the best cache hierarchy for your site: the combination of resource UR
 Minimize churn: some resources are updated more frequently than others. If there is a particular part of resource (e.g. JavaScript function, or set of CSS styles) that are often updated, consider delivering that code as a separate file. Doing so allows the remainder of the content (e.g. library code that does not change very often), to be fetched from cache and minimizes the amount of downloaded content whenever an update is fetched.
 
 Authors: Ilya Grigorik
+{% figure caption:"Profile photo of Ilya Grigorik" class:"align-left" %}
+[Profile photo of Ilya Grigorik](/assets/images/pages/performance/ilyagrigorik.jpg)
+{% endfigure %}
 
-{% cloudinary /assets/images/pages/performance/ilyagrigorik.jpg alt="Profile photo of Ilya Grigorik" %}
-
-Ilya is a Developer Advocate and Web Perf Guru for Google
+Ilya is a Developer Advocate and Web Perf Guru
 
 ## My HTTP Headers
 
@@ -382,7 +399,7 @@ allowKeepAlive: true
 
 Cache-Control: public, max-age=258425
 
-Connection: close
+Connection: closev
 
 Content-Length: 66745
 
@@ -419,7 +436,7 @@ There is one important component in the above browsing experience, these website
 How do we implement this function? Here we introduce one open source project named pjax which can realize this. The project URL is:
 
 ```html
-https://github.com/defunkt/jquery-pjax
+https://github.com/defunkt/jquery-pjax�
 ```
 
 The demo page is:
