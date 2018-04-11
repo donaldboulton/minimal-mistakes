@@ -65,6 +65,36 @@ feature_row:
     url: "https://mmistakes.github.io/minimal-mistakes/terms/"
     btn_class: "btn--primary"
     btn_label: "Learn More"
+    feature_row:
+  - image_path: /assets/images/demo/mm-customizable-feature.png
+    alt: "customizable"
+    title: "Super Customizable"
+    excerpt: "Everything from the menus, sidebars, comments, and more can be configured or set with YAML Front Matter."
+    url: "https://mademistakes.com/work/minimal-mistakes-jekyll-theme/"
+    btn_class: "btn--primary"
+    btn_label: "Learn More"
+  - image_path: /assets/images/demo/mm-responsive-feature.png
+    alt: "fully responsive"
+    title: "Responsive Layouts"
+    excerpt: "Built on HTML5 + CSS3. All layouts are fully responsive with helpers to augment your content."
+    url: "https://github.com/mmistakes/minimal-mistakes"
+    btn_class: "btn--primary"
+    btn_label: "Learn More"
+  - image_path: /assets/images/demo/mm-free-feature.png
+    alt: "100% free"
+    title: "100% Free"
+    excerpt: "Free to use however you want under the MIT License. Clone it, fork it, customize it, whatever!"
+    url: "https://mmistakes.github.io/minimal-mistakes/terms/"
+    btn_class: "btn--primary"
+    btn_label: "Learn More"
+github:
+  - excerpt: '{::nomarkdown}<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
+intro:
+  - excerpt: 'Showing Off My Version of Minimal Mistakes Ruby, Jekyll at Github'
+  - excerpt: 'Just Learning Ruby, Jekyll, Gihub Pages with liquid, see any mistakes please feel free to go to one of the post pages and comment on site issues.'
+  - excerpt: 'Notifications & Tips for Michael Rose -- Just another boring, tattooed, time traveling, designer of Minimal Mistakes.'
+  - excerpt: 'Get notified when Michael Rose; "MMistakes" adds new stuff &nbsp; [<i class="fab fa-twitter"></i> @mmistakes](https://twitter.com/mmistakes){: .btn .btn--twitter} [<svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M111.4 295.9c-3.5 19.2-17.4 108.7-21.5 134-.3 1.8-1 2.5-3 2.5H12.3c-7.6 0-13.1-6.6-12.1-13.9L58.8 46.6c1.5-9.6 10.1-16.9 20-16.9 152.3 0 165.1-3.7 204 11.4 60.1 23.3 65.6 79.5 44 140.3-21.5 62.6-72.5 89.5-140.1 90.3-43.4.7-69.5-7-75.3 24.2zM357.1 152c-1.8-1.3-2.5-1.8-3 1.3-2 11.4-5.1 22.5-8.8 33.6-39.9 113.8-150.5 103.9-204.5 103.9-6.1 0-10.1 3.3-10.9 9.4-22.6 140.4-27.1 169.7-27.1 169.7-1 7.1 3.5 12.9 10.6 12.9h63.5c8.6 0 15.7-6.3 17.4-14.9.7-5.4-1.1 6.1 14.4-91.3 4.6-22 14.3-19.7 29.3-19.7 71 0 126.4-28.8 142.9-112.3 6.5-34.8 4.6-71.4-23.8-92.6z"/></svg> Tip Me](https://www.paypal.me/mmistakes){: .btn .btn--primary}'
+
 ---
 
 {% include octo-arm.html %}
@@ -90,6 +120,8 @@ Ruby, Jeckyll, Gihub pages, and even liquid are super simple; Or "Super Logical,
 Links to CloudFlare this Github repo, Staticman Comments, MMistakes Framework Designer Michael Rose.
 
 {% include credits.html %}
+
+{% include feature_row id="intro" type="center" %}
 
 {% include feature_row %}
 
