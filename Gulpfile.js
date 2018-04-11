@@ -1,6 +1,7 @@
 // modified from generator-jekyllized 1.0.0-rc.6
 'use strict';
 var gulp       = require('gulp');
+var responsive = require('gulp-responsive');
 var requireDir = require('require-dir');
 var tasks      = requireDir('./gulp/tasks', {recurse: true}); // eslint-disable-line
 
@@ -13,7 +14,7 @@ gulp.task('build:site', gulp.series('site:tmp', 'site', 'copy:site'));
 // 'gulp assets' -- removes assets and rebuilds them
 // 'gulp assets --prod' -- same as above but with production settings
 gulp.task('assets', gulp.series(
-  gulp.series('scripts', 'styles', 'fonts', 'icons'),
+  gulp.series('scripts', 'styles', 'icons'),
   gulp.series('scripts:gzip', 'styles:gzip', 'images:demo', 'images:pages', 'images:icons', 'copy:assets', 'copy:images', 'copy:icons', 'copy:manifest')
 ));
 
@@ -42,3 +43,4 @@ gulp.task('check', gulp.series('site:check'));
 //   in includes or layouts, builds site, serves site
 // 'gulp --prod' -- same as above but with production settings
 gulp.task('default', gulp.series('build', 'serve'));
+

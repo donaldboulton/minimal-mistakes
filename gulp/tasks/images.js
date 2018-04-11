@@ -38,6 +38,12 @@ gulp.task('images:pages', () => {
         width: 320,
         rename: { suffix: '-th' },
       }, {
+        width: 800,
+        rename: { suffix: '-800' },
+      }, {
+        width: 1200,
+        rename: { suffix: '-1200' },
+      }, {
         // copy original image
         width: '100%',
         rename: { suffix: '' },

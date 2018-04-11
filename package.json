@@ -44,7 +44,7 @@
     "gulp-postcss": "^7.0.0",
     "gulp-pretty-data": "^0.1.1",
     "gulp-rename": "^1.2.2",
-    "gulp-responsive": "^2.9.0",
+    "gulp-responsive": "^2.10.0",
     "gulp-rev": "^7.0.0",
     "gulp-rsync": "^0.0.8",
     "gulp-sass": "^3.1.0",
@@ -74,6 +74,7 @@
     "lg-zoom": "^1.1.0",
     "lightgallery": "^1.6.9",
     "postcss": "^6.0.13",
+    "sharp": "^0.20.1",
     "yarn": "^1.5.1"
   },
   "browserslist": [
