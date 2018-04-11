@@ -23,10 +23,15 @@ related: true
 
 excerpt: "Website Tweaks in my ASP.Core2 apps. 
 Including Pajax"
+image:
+  cover: true
+  path: &image /assets/images/pages/performance/speedtest_donboulton.png
+  feature: *image
+  thumbnail: /assets/images/pages/performance/speedtest_donboulton-320.png
 
 header:
   image: /assets/images/pages/performance/speedtest_donboulton.jpg
-  teaser: /assets/images/pages/performance/speedtest_donboulton.jpg
+  teaser: /assets/images/pages/performance/speedtest_donboulton-320.jpg
 ---
 
 {% include octo-arm.html %}

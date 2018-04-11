@@ -8,6 +8,7 @@ var newer       = require('gulp-newer');
 var notify      = require('gulp-notify');
 var rename      = require('gulp-rename');
 var responsive  = require('gulp-responsive');
+var gulpSharp   = require('gulp-sharp');
 var size        = require('gulp-size');
 var util        = require('gulp-util');
 
@@ -30,7 +31,7 @@ gulp.task('images:optimize', () => {
 
 // 'gulp images:lazyload' -- resize and optimize lazyload images
 gulp.task('images:pages', () => {
-  return gulp.src([paths.imageFiles + '/pages' + paths.imagePattern, '!' + paths.imageFiles + '/pages/**/*.{jpg,svg}'])
+  return gulp.src([paths.imageFiles + '/pages' + paths.imagePattern, '!' + paths.imageFiles + '/pages/**/*.{jpg,png}'])
     .pipe(changed(paths.imageFilesSite))
     .pipe(responsive({
       // resize all images
@@ -46,7 +47,7 @@ gulp.task('images:pages', () => {
       }, {
         // copy original image
         width: '100%',
-        rename: { suffix: '' },
+        rename: { suffix: '-origional' },
       }]
     }, {
       // global configuration for all images
@@ -77,7 +78,7 @@ gulp.task('images:photography', () => {
         rename: { suffix: '-1200' },
       }, {
         width: 1920,
-        rename: { suffix: '' },
+        rename: { suffix: '-origional' },
       }]
     }, {
       // global configuration for all images

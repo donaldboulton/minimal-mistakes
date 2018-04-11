@@ -2,6 +2,7 @@
 'use strict';
 var gulp       = require('gulp');
 var responsive = require('gulp-responsive');
+var gulpSharp  = require('gulp-sharp');
 var requireDir = require('require-dir');
 var tasks      = requireDir('./gulp/tasks', {recurse: true}); // eslint-disable-line
 

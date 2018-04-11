@@ -29,10 +29,10 @@ image:
   cover: true
   path: &image /assets/images/pages/letter-avatar-header.png
   feature: *image
-  thumbnail: /assets/images/letter-avatar-single-letter.png
+  thumbnail: /assets/images/pages/letter-avatar-single-letter-320.png
 header:
-  image: /assets/images/pages/letter-avatar-header.png
-  teaser: /assets/images/pages/letter-avatar-header.png        
+  image: /assets/images/pages/letter-avatar-header-1200.png
+  teaser: /assets/images/pages/letter-avatar-header-320.png        
 ---
 
 {% include octo-arm.html %}

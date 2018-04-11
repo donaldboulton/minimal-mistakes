@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+{% include page-intro.html %}
+{% include gallery-entry.html %}
+
+<main id="main" class="page-content" aria-label="Content">
+  <div class="inner">
+    <article class="entry-wrap">
+      <div class="entry-content">
+        {{ content }}
+      </div>
+      {% if page.support == true %}
+        {% include support.html %}
+      {% endif %}
+    </article>
+
+    {% if site.related_posts.size >= 1 %}
+      {% include related.html %}
+    {% endif %}
+
+    {% if page.comments == true %}
+      {% include comments.html %}
+    {% endif %}
+
+    {% include pager.html %}
+
+    {% include footer.html %}
+  </div>
+</main>

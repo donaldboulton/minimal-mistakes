@@ -24,9 +24,14 @@ related: true
 locations:
   - Idable OKlahoma
 excerpt: Check SQL Server a specified database index fragmentation percentage (SQL)
+image:
+  cover: true
+  path: &image /assets/images/pages/check_sql_fragmentation.png
+  feature: *image
+  thumbnail: /assets/images/pages/check_sql_fragmentation-320.png
 header:
-  image: /assets/images/pages/check_sql_fragmentation-1400.png
-  teaser: /assets/images/pages/check_sql_fragmentation-1400.png
+  image: /assets/images/pages/check_sql_fragmentation-1200.png
+  teaser: /assets/images/pages/check_sql_fragmentation-320.png
 ---
 
 {% include octo-arm.html %}

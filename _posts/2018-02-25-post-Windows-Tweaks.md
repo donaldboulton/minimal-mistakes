@@ -22,9 +22,14 @@ share: true
 related: true
 
 excerpt: "This Tweaks page has evolved from Windows XP to Now upgrading this to Windows 10."
+image:
+  cover: true
+  path: &image /assets/images/pages/windows-tweaks.png
+  feature: *image
+  thumbnail: /assets/images/pages/windows-tweaks-320.png
 header:
-  image: /assets/images/pages/windows-tweaks.png
-  teaser: /assets/images/pages/windows-tweaks.png
+  image: /assets/images/pages/windows-tweaks-1200.png
+  teaser: /assets/images/pages/windows-tweaks-320.png
 ---
 
 {% include octo-arm.html %}

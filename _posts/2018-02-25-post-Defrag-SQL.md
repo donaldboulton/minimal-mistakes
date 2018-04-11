@@ -22,9 +22,14 @@ share: true
 related: true
 
 excerpt: "Defrag Sql 2008 to 2016"
+image:
+  cover: true
+  path: &image /assets/images/pages/defrag-sql-2014.png
+  feature: *image
+  thumbnail: /assets/images/pages/defrag-sql-2014-320.png
 header:
-  image: /assets/images/pages/defrag-sql-2014-1400-min.png
-  teaser: /assets/images/pages/defrag-sql-2014-1400-min.png
+  image: /assets/images/pages/defrag-sql-2014-1200.png
+  teaser: /assets/images/pages/defrag-sql-2014-320.png
 ---
 
 {% include octo-arm.html %}

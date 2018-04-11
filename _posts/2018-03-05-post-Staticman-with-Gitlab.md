@@ -25,9 +25,14 @@ toc_label: "Contents"
 toc_icon: "file"
 
 excerpt: "Use Staticman push to Gitlab"
+image:
+  cover: true
+  path: &image /assets/images/pages/staticman-github-gitlab.png
+  feature: *image
+  thumbnail: /assets/images/pages/staticman-github-gitlab-320.png
 header:
   image: /assets/images/pages/staticman-github-gitlab.png
-  teaser: /assets/images/pages/staticman-github-gitlab.png
+  teaser: /assets/images/pages/staticman-github-gitlab-320.png
  
 read_time: true
 comments: true

@@ -23,10 +23,14 @@ related: true
 
 excerpt: "I use colorbox in my ASP.Core2 apps. 
 Alot of developers still do in their applications"
-
+image:
+  cover: true
+  path: &image /assets/images/pages/svg/colorbox-html.png
+  feature: *image
+  thumbnail: /assets/images/pages/svg/colorbox-html-320.png
 header:
-  image: /assets/images/pages/svg/colorbox-html-1400.png
-  teaser: /assets/images/pages/svg/colorbox-html-1400.png
+  image: /assets/images/pages/svg/colorbox-html-1200.png
+  teaser: /assets/images/pages/svg/colorbox-html-320.png
 ---
 
 {% include octo-arm.html %}

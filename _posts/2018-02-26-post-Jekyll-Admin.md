@@ -22,9 +22,14 @@ toc: true
 toc_label: "Contents"
 
 excerpt: "Administer your Jekyll site Locally with Jekyll Admin"
+image:
+  cover: true
+  path: &image /assets/images/pages/jekyll-admin.png
+  feature: *image
+  thumbnail: /assets/images/pages/jekyll-admin-320.png
 header:
-  image: /assets/images/pages/jekyll-admin-1400.jpeg
-  teaser: /assets/images/pages/jekyll-admin-1400.jpeg
+  image: /assets/images/pages/jekyll-admin-1200.jpeg
+  teaser: /assets/images/pages/jekyll-admin-320.jpeg
 
 excerpt: "Jekyll admin makes it so easy for me to add new pages, posts or any type of content, including file management, adding images to .md pages and Changing Configuration."
 ---
