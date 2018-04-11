@@ -344,7 +344,7 @@ Authors: Ilya Grigorik
 
 {% include figure image_path="/assets/images/pages/performance/ilyagrigorik.jpg" alt="Profile photo of Ilya Grigorik" caption="Profile photo of Ilya Grigorik" class="align-left" %}
 
-Ilya is a Developer Advocate and Web Perf Guru
+Ilya is a Developer Advocate and Web Perf Guru at Google
 
 ## My HTTP Headers
 
