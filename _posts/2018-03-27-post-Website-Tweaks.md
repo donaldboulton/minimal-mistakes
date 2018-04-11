@@ -53,9 +53,7 @@ How to use gzip on a shared server when they deny access to gzip.dll.
 
 Follow the below content and test things locally first.
 
-{% figure caption:"Performance" class:"align-left" %}
-![Performance](/assets/images/pages/performance/orchard-performance.jpg)
-{% endfigure %}
+{% include figure image_path="/assets/images/pages/performance/orchard-performance.jpg" alt="Performance" caption="Performance" class="align-center" %}
 
 My full test results: [http://www.webpagetest.org/result/160227_P1_4P4/1/details/](http://www.webpagetest.org/result/160227_P1_4P4/1/details/)
 
@@ -75,17 +73,13 @@ First Orchard caching still messes up .xml files like your sitemap.xml and the n
 
 Cache settings of 259200 seconds or 72 hours on duration and max age. And a Accept-Encoding: gzip, deflate, sdhc = response header.
 
-{% figure caption:"Performance" class:"align-center" %}
-![img](/assets/images/pages/performance/cache-settings-min.jpg)
-{% endfigure %}
+{% include figure image_path="/assets/images/pages/performance/cache-settings-min.jpg" alt="Cache Settings" caption="Cache Settings" class="align-center" %}
 
 Default Grace time of 600 so I get a Grace time of 10 minutes, fine for me as I have nothing changing in 10 min.
 
 Ignoring url /sitemap.xml
 
-{% figure caption:"Cache duration" class:"align-center" %}
-![Cache duration](/assets/images/pages/performance/cache-duration-min.jpg)
-{% endfigure %}
+{% include figure image_path="/assets/images/pages/performance/cache-duration-min.jpg" alt="Cache Duration" caption="Cache Duration" class="align-center" %}
 
 ## Web.config
 
@@ -233,9 +227,7 @@ Remember
 
 If you are using a Webview to fetch and display web content in your application, you may need to provide additional configuration flags to ensure that the HTTP cache is enabled, its size is set to a reasonable number to match your use case, and that the cache is persisted. Check the platform documentation and confirm your settings!
 
-{% figure caption:"Http-request" class:"align-left" %}
-![Http-request](/assets/images/pages/performance/http-request.png)
-{% endfigure %}
+{% include figure image_path="/assets/images/pages/performance/http-request.png" alt="Http-Request" caption="Http-Request" class="align-left" %}
 
 When the server returns a response it also emits a collection of HTTP headers, describing its content-type, length, caching directives, validation token, and more. For example, in the above exchange the server returns a 1024 byte response, instructs the client to cache it for up to 120 seconds, and provides a validation token (x234dff) that can be used after the response has expired to check if the resource has been modified.
 
@@ -340,11 +332,11 @@ Determine the optimal cache lifetime for each resource: different resources may 
 Determine the best cache hierarchy for your site: the combination of resource URLs with content fingerprints, and short or no-cache lifetimes for HTML documents allows you to control how quickly updates are picked up by the client.
 Minimize churn: some resources are updated more frequently than others. If there is a particular part of resource (e.g. JavaScript function, or set of CSS styles) that are often updated, consider delivering that code as a separate file. Doing so allows the remainder of the content (e.g. library code that does not change very often), to be fetched from cache and minimizes the amount of downloaded content whenever an update is fetched.
 
-Authors: Ilya Grigorik
+Authors: [Ilya Grigorik](https://www.igvita.com/)
 
 {% include figure image_path="/assets/images/pages/performance/ilyagrigorik.jpg" alt="Profile photo of Ilya Grigorik" caption="Profile photo of Ilya Grigorik" class="align-left" %}
 
-Ilya is a Developer Advocate and Web Perf Guru at Google
+Ilya Grigorik is a web performance engineer at Google, co-chair of the W3C Web Performance Working group, and author of High Performance Browser Networking (O'Reilly) book. In short, an internet plumber. In off time, you'll find him working on open source projects, exploring the outdoors with a camera, or simply enjoying a good book.
 
 ## My HTTP Headers
 
