@@ -69,7 +69,7 @@ feature_row:
   - image_path: /assets/images/demo/mm-customizable-feature.png
     alt: "customizable"
     title: "Super Customizable"
-    excerpt: "Everything from the menus, sidebars, comments, and more can be configured or set with YAML Front Matter."
+    excerpt: "Everything from the menus, sidebars, comments, and configurations in YAML Front Matter."
     url: "https://mademistakes.com/work/minimal-mistakes-jekyll-theme/"
     btn_class: "btn--primary"
     btn_label: "Learn More"
@@ -81,8 +81,8 @@ feature_row:
     btn_class: "btn--primary"
     btn_label: "Learn More"
   - image_path: /assets/images/demo/mm-free-feature.png
-    alt: "100% free"
-    title: "100% Free"
+    alt: "Cool 100% free"
+    title: "Cool 100% Free"
     excerpt: "Free to use however you want under the MIT License. Clone it, fork it, customize it, whatever!"
     url: "https://mmistakes.github.io/minimal-mistakes/terms/"
     btn_class: "btn--primary"
