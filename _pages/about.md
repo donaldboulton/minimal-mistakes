@@ -69,7 +69,7 @@ feature_row:
   - image_path: /assets/images/demo/mm-customizable-feature.png
     alt: "customizable"
     title: "Super Customizable"
-    excerpt: "Everything from the menus, sidebars, comments, and configurations in YAML Front Matter."
+    excerpt: "Everything from the menus, sidebars, comments, config in YAML Front Matter."
     url: "https://mademistakes.com/work/minimal-mistakes-jekyll-theme/"
     btn_class: "btn--primary"
     btn_label: "Learn More"
