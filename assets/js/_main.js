@@ -84,19 +84,3 @@ $('.gallery').each( function() {
 
   var items = getItems();
 });
-
-var $pswp = $('.pswp')[0];
-$pic.on('click', 'figure', function(event) {
-  event.preventDefault();
-   
-  var $index = $(this).index();
-  var options = {
-      index: $index,
-      bgOpacity: 0.7,
-      showHideOpacity: true
-  }
-   
-  // Initialize PhotoSwipe
-  var lightBox = new PhotoSwipe($pswp, PhotoSwipeUI_Default, items, options);
-  lightBox.init();
-});

@@ -1,8 +1,8 @@
-<object data="https://donaldboulton.github.io/image-gallery/photography/ {{ external_url }}" type="application/html"
-        width="100%" height="1200">
+<object data="https://donaldboulton.github.io/DWB/ {{ external_url }}" type="application/html"
+        width="100%" height="800">
 </object>
 {% if post.external_url %}
-[{{ post.title }}]({{ post.external_url }})
+  [{{ post.title }}]({{ post.external_url }})
 {% else %}
-[{{ post.title }}]({{ post.url }})
+  [{{ post.title }}]({{ post.url }})
 {% endif %}
