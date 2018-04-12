@@ -7,7 +7,7 @@
   {% endif %}
     {% capture picture_url %}{{picture.url}}{% endcapture %}
     <a href="{{picture_url | absolute_url }}" title="{{picture.caption}}">
-        {% cloudinary {{picture_url}} %}
+        {% {{picture_url}} %}
     </a>
   </div>
 {% endfor %}

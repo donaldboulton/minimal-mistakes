@@ -1,6 +1,6 @@
 {% if page.image.feature %}
   {% assign f = page.image.feature | split: '.' %}
-  <img data-src="{{ f[0] | relative_url }}-320.{{ f[1] }}"
+  <img class="lazyload" data-src="{{ f[0] | relative_url }}-320.{{ f[1] }}"
        data-srcset="{{ f[0] | relative_url }}-800.{{ f[1] }} 800w,
                {{ f[0] | relative_url }}-1200.{{ f[1] }} 1200w,
                {{ f[0] | relative_url }}.{{ f[1] }} 1400w"
