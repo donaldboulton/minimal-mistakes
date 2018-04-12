@@ -378,8 +378,7 @@ defaults:
       comments: true
       share: true
       related: true
-      toc: true
-      adds: true
+      toc: true    
       breadcrumbs:
         - label: "Posts"
           url: /year-archive/

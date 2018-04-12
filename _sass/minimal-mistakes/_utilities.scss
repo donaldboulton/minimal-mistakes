@@ -477,7 +477,7 @@ a.reversefootnote {
 }
 
 /*
-   Google Custom Search Engine
+   Google Custom Search Engine and Adds border
    ========================================================================== */
 
 .gsc-control-cse {
@@ -488,6 +488,10 @@ a.reversefootnote {
   }
 }
 
+u, ins {
+  text-decoration: none;
+  border-bottom: 1px solid #1d1d1d!important;
+}
 /*
    Responsive Video Embed
    ========================================================================== */
