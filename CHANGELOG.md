@@ -2,8 +2,36 @@
 
 ### Enhancements
 
+* Update Font Awesome to version `5.0.9`. [#1605](https://github.com/mmistakes/minimal-mistakes/pull/1605)
+* Add Slovak localized UI text strings. [#1613](https://github.com/mmistakes/minimal-mistakes/pull/1613)
+
+### Bug Fixes
+
+* Use correct text string for "Back to Top" link. [#1595](https://github.com/mmistakes/minimal-mistakes/issues/1595)
+* Add conditionals for showing `reCaptcha.siteKey` and `reCaptcha.secret` in Staticman comments form.
+
+## [4.11.1](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.11.1)
+
+### Enhancements
+
+* Add default `theme` and `remote_theme` values to `_config.yml`.
+* Add new layouts (`posts`, `categories`, `tags`, `collection`, `category`, and `tag`) for easier archive page creation.
+
+### Bug Fixes
+
+* Replace `absolute_url` filter with `relative_url` where it makes sense (asset/navigation related paths). [#1588](https://github.com/mmistakes/minimal-mistakes/issues/1588)
+* Fix search excerpts that run together because of implied spaces.
+
+## [4.10.1](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.10.1)
+
+### Enhancements
+
 * Update jQuery to version `3.3.1`. [#1491](https://github.com/mmistakes/minimal-mistakes/issues/1491)
 * Add link to jekyll-algolia's `files_to_exclude` documentation.
+* Update Font Awesome to version [`5.0.8`](https://github.com/FortAwesome/Font-Awesome/blob/master/CHANGELOG.md). [#1561](https://github.com/mmistakes/minimal-mistakes/pull/1561)
+* Activate Algolia search for documentation site. [#1570](https://github.com/mmistakes/minimal-mistakes/issues/1570)
+* Add missing German translations. [#1577](https://github.com/mmistakes/minimal-mistakes/pull/1577)
+* Add support for Google Analytics with global site tag (gtag.js) [#1563](https://github.com/mmistakes/minimal-mistakes/pull/1563)
 
 ### Bug Fixes
 
