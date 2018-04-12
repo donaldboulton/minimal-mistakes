@@ -20,6 +20,7 @@ read_time: true
 comments: true
 share: true
 related: true
+adds: true
 
 excerpt: "Website Tweaks in my ASP.Core2 apps. 
 Including Pajax"
@@ -78,7 +79,7 @@ First Orchard caching still messes up .xml files like your sitemap.xml and the n
 
 Cache settings of 259200 seconds or 72 hours on duration and max age. And a Accept-Encoding: gzip, deflate, sdhc = response header.
 
-{% include figure image_path="/assets/images/pages/performance/cache-settings-min.jpg" alt="Cache Settings" caption="Cache Settings" class="align-center" %}
+{% include figure image_path="/assets/images/pages/performance/cache-settings.jpg" alt="Cache Settings" caption="Cache Settings" class="align-center" %}
 
 Default Grace time of 600 so I get a Grace time of 10 minutes, fine for me as I have nothing changing in 10 min.
 
@@ -93,72 +94,66 @@ Here is my web.config for Orchard 1.9.1 and it Orchard changed alot in 1.10, if 
 Leveraging prefetch cache and Vary policys, and caching on .XML.
 
 ```html
-<span style="color: #4f76ac;"><<span style="color: #823125;">httpHandlers<span style="color: #4f76ac;">>
-                    <span style="color: #4f76ac;"><<span style="color: #823125;">clear <span style="color: #4f76ac;">/>
-                    <span style="color: #4f76ac;"><<span style="color: #823125;">add <span style="color: #cf4820;">verb<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"*" <span style="color: #cf4820;">path<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"sitemap.xml" <span style="color: #cf4820;">type<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"System.Web.StaticFileHandler" <span style="color: #4f76ac;">/>
-                    <span style="color: #4f76ac;"></<span style="color: #823125;">httpHandlers<span style="color: #4f76ac;">>
-                    <span style="color: #4f76ac;"><<span style="color: #823125;">caching<span style="color: #4f76ac;">>
-                    <span style="color: #4f76ac;"><<span style="color: #823125;">outputCache <span style="color: #cf4820;">omitVaryStar<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"true" <span style="color: #4f76ac;">/>
-                    <span style="color: #4f76ac;"><<span style="color: #823125;">outputCacheSettings<span style="color: #4f76ac;">>
-                    <span style="color: #4f76ac;"><<span style="color: #823125;">outputCacheProfiles<span style="color: #4f76ac;">>
-                    <span style="color: #4f76ac;"><<span style="color: #823125;">clientCache <span style="color: #cf4820;">cacheControlCustom<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"public" <span style="color: #cf4820;">cacheControlMode<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"UseMaxAge" <span style="color: #cf4820;">cacheControlMaxAge<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"3.00:00:00" <span style="color: #4f76ac;">/>
-                    <span style="color: #4f76ac;"></<span style="color: #823125;">outputCacheProfiles<span style="color: #4f76ac;">>
-                    <span style="color: #4f76ac;"></<span style="color: #823125;">outputCacheSettings<span style="color: #4f76ac;">>
-                    <span style="color: #4f76ac;"></<span style="color: #823125;">caching<span style="color: #4f76ac;">>
-                    <span style="color: #4f76ac;"></<span style="color: #823125;">system.web<span style="color: #4f76ac;">>
+  <httpHandlers>
+    <clear />
+    <add verb="*" path="sitemap.xml" type="System.Web.StaticFileHandler" />
+  </httpHandlers>
+  <caching>
+    <outputCache omitVaryStar="true" />
+        <outputCacheSettings>
+            <outputCacheProfiles>
+                 <clientCache cacheControlCustom="public" cacheControlMode="UseMaxAge"cacheControlMaxAge="3.00:00:00" />
+            </outputCacheProfiles>
+        </outputCacheSettings>
+  </caching>
+</system.web>
 ```
 
 Under System.WebServer we add the custom headers url compression and caching profiles with .xml exclusion.
 
 ```html
-<span style="color: #4f76ac;"></<span style="color: #823125;">security<span style="color: #4f76ac;">>
-                    <span style="color: #4f76ac;"><<span style="color: #823125;">httpProtocol<span style="color: #4f76ac;">>
-                    <span style="color: #4f76ac;"><<span style="color: #823125;">customHeaders<span style="color: #4f76ac;">>
-                    <span style="color: #4f76ac;"><<span style="color: #823125;">remove <span style="color: #cf4820;">name<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"X-Powered-By" <span style="color: #4f76ac;">/>
-                    <span style="color: #4f76ac;"><<span style="color: #823125;">remove <span style="color: #cf4820;">name<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"X-Aspnet-Version" <span style="color: #4f76ac;">/>
-                    <span style="color: #4f76ac;"><<span style="color: #823125;">remove <span style="color: #cf4820;">name<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"Vary" <span style="color: #4f76ac;">/>
-                    <span style="color: #4f76ac;"><<span style="color: #823125;">add <span style="color: #cf4820;">name<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"Vary" <span style="color: #cf4820;">value<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"Accept-Encoding" <span style="color: #4f76ac;">/>
-                    <span style="color: #4f76ac;"><<span style="color: #823125;">add <span style="color: #cf4820;">name<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"allowKeepAlive" <span style="color: #cf4820;">value<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"true" <span style="color: #4f76ac;">/>
-                    <span style="color: #4f76ac;"><<span style="color: #823125;">add <span style="color: #cf4820;">name<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"Expires" <span style="color: #cf4820;">value<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"Mon, 25 Dec 2017 21:31:12 GMT" <span style="color: #4f76ac;">/>
-                    <span style="color: #4f76ac;"><<span style="color: #823125;">add <span style="color: #cf4820;">name<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"Access-Control-Allow-Origin" <span style="color: #cf4820;">value<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"https://donboulton.com" <span style="color: #4f76ac;">/>
-                    <span style="color: #4f76ac;"><<span style="color: #823125;">add <span style="color: #cf4820;">name<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"Access-Control-Allow-Credentials" <span style="color: #cf4820;">value<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"true" <span style="color: #4f76ac;">/>
-                    <span style="color: #4f76ac;"><<span style="color: #823125;">add <span style="color: #cf4820;">name<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"Accept-Encoding" <span style="color: #cf4820;">value<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"gzip,deflate,sdhc" <span style="color: #4f76ac;">/>
-                    <span style="color: #4f76ac;"></<span style="color: #823125;">customHeaders<span style="color: #4f76ac;">>
-                    <span style="color: #4f76ac;"></<span style="color: #823125;">httpProtocol<span style="color: #4f76ac;">>
-                    <span style="color: #4f76ac;"><<span style="color: #823125;">urlCompression <span style="color: #cf4820;">dynamicCompressionBeforeCache<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"true" <span style="color: #cf4820;">doStaticCompression<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"true" <span style="color: #cf4820;">doDynamicCompression<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"true" <span style="color: #4f76ac;">/>
-                    <span style="color: #4f76ac;"><<span style="color: #823125;">staticContent<span style="color: #4f76ac;">>
-                    <span style="color: #4f76ac;"><<span style="color: #823125;">clientCache <span style="color: #cf4820;">cacheControlCustom<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"public" <span style="color: #cf4820;">cacheControlMode<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"UseMaxAge" <span style="color: #cf4820;">cacheControlMaxAge<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"3.00:00:00" <span style="color: #4f76ac;">/>
-                    <span style="color: #4f76ac;"><<span style="color: #823125;">remove <span style="color: #cf4820;">fileExtension<span style="color: #4f76ac;">=<span style="color: #4f76ac;">".mp3" <span style="color: #4f76ac;">/>
-                    <span style="color: #4f76ac;"><<span style="color: #823125;">mimeMap <span style="color: #cf4820;">fileExtension<span style="color: #4f76ac;">=<span style="color: #4f76ac;">".mp3" <span style="color: #cf4820;">mimeType<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"audio/mpeg" <span style="color: #4f76ac;">/>
-                    <span style="color: #4f76ac;"><<span style="color: #823125;">remove <span style="color: #cf4820;">fileExtension<span style="color: #4f76ac;">=<span style="color: #4f76ac;">".mp4" <span style="color: #4f76ac;">/>
-                    <span style="color: #4f76ac;"><<span style="color: #823125;">mimeMap <span style="color: #cf4820;">fileExtension<span style="color: #4f76ac;">=<span style="color: #4f76ac;">".mp4" <span style="color: #cf4820;">mimeType<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"video/mp4" <span style="color: #4f76ac;">/>
-                    <span style="color: #4f76ac;"><<span style="color: #823125;">remove <span style="color: #cf4820;">fileExtension<span style="color: #4f76ac;">=<span style="color: #4f76ac;">".pdf" <span style="color: #4f76ac;">/>
-                    <span style="color: #4f76ac;"><<span style="color: #823125;">mimeMap <span style="color: #cf4820;">fileExtension<span style="color: #4f76ac;">=<span style="color: #4f76ac;">".pdf" <span style="color: #cf4820;">mimeType<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"application/pdf" <span style="color: #4f76ac;">/>
-                    <span style="color: #4f76ac;"><<span style="color: #823125;">remove <span style="color: #cf4820;">fileExtension<span style="color: #4f76ac;">=<span style="color: #4f76ac;">".svg" <span style="color: #4f76ac;">/>
-                    <span style="color: #4f76ac;"><<span style="color: #823125;">mimeMap <span style="color: #cf4820;">fileExtension<span style="color: #4f76ac;">=<span style="color: #4f76ac;">".svg" <span style="color: #cf4820;">mimeType<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"image/svg+xml" <span style="color: #4f76ac;">/>
-                    <span style="color: #4f76ac;"><<span style="color: #823125;">remove <span style="color: #cf4820;">fileExtension<span style="color: #4f76ac;">=<span style="color: #4f76ac;">".woff"<span style="color: #4f76ac;">/>
-                    <span style="color: #4f76ac;"><<span style="color: #823125;">mimeMap <span style="color: #cf4820;">fileExtension<span style="color: #4f76ac;">=<span style="color: #4f76ac;">".woff" <span style="color: #cf4820;">mimeType<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"application/font-woff"<span style="color: #4f76ac;">/>
-                    <span style="color: #4f76ac;"><<span style="color: #823125;">remove <span style="color: #cf4820;">fileExtension<span style="color: #4f76ac;">=<span style="color: #4f76ac;">".woff2"<span style="color: #4f76ac;">/>
-                    <span style="color: #4f76ac;"><<span style="color: #823125;">mimeMap <span style="color: #cf4820;">fileExtension<span style="color: #4f76ac;">=<span style="color: #4f76ac;">".woff2" <span style="color: #cf4820;">mimeType<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"application/font-woff2" <span style="color: #4f76ac;">/>
-                    <span style="color: #4f76ac;"></<span style="color: #823125;">staticContent<span style="color: #4f76ac;">>
-                    <span style="color: #4f76ac;"><<span style="color: #823125;">caching<span style="color: #4f76ac;">>
-                    <span style="color: #4f76ac;"><<span style="color: #823125;">profiles<span style="color: #4f76ac;">>
-                    <span style="color: #4f76ac;"><<span style="color: #823125;">add <span style="color: #cf4820;">extension<span style="color: #4f76ac;">=<span style="color: #4f76ac;">".js" <span style="color: #cf4820;">policy<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"CacheUntilChange" <span style="color: #cf4820;">kernelCachePolicy<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"CacheUntilChange" <span style="color: #cf4820;">location<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"Any" <span style="color: #cf4820;">varyByHeaders<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"Accept-Encoding" <span style="color: #4f76ac;">/>
-                    <span style="color: #4f76ac;"><<span style="color: #823125;">add <span style="color: #cf4820;">extension<span style="color: #4f76ac;">=<span style="color: #4f76ac;">".css" <span style="color: #cf4820;">policy<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"CacheUntilChange" <span style="color: #cf4820;">kernelCachePolicy<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"CacheUntilChange" <span style="color: #cf4820;">location<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"Any" <span style="color: #cf4820;">varyByHeaders<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"Accept-Encoding" <span style="color: #4f76ac;">/>
-                    <span style="color: #4f76ac;"><<span style="color: #823125;">add <span style="color: #cf4820;">extension<span style="color: #4f76ac;">=<span style="color: #4f76ac;">".jpeg" <span style="color: #cf4820;">policy<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"CacheForTimePeriod" <span style="color: #cf4820;">kernelCachePolicy<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"CacheForTimePeriod" <span style="color: #cf4820;">duration<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"7.00:00:00" <span style="color: #cf4820;">varyByHeaders<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"Accept-Encoding" <span style="color: #4f76ac;">/>
-                    <span style="color: #4f76ac;"><<span style="color: #823125;">add <span style="color: #cf4820;">extension<span style="color: #4f76ac;">=<span style="color: #4f76ac;">".jpg" <span style="color: #cf4820;">policy<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"CacheForTimePeriod" <span style="color: #cf4820;">kernelCachePolicy<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"CacheForTimePeriod" <span style="color: #cf4820;">duration<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"7.00:00:00" <span style="color: #cf4820;">varyByHeaders<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"Accept-Encoding" <span style="color: #4f76ac;">/>
-                    <span style="color: #4f76ac;"><<span style="color: #823125;">add <span style="color: #cf4820;">extension<span style="color: #4f76ac;">=<span style="color: #4f76ac;">".png" <span style="color: #cf4820;">policy<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"CacheForTimePeriod" <span style="color: #cf4820;">kernelCachePolicy<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"CacheForTimePeriod" <span style="color: #cf4820;">duration<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"7.00:00:00" <span style="color: #cf4820;">varyByHeaders<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"Accept-Encoding" <span style="color: #4f76ac;">/>
-                    <span style="color: #4f76ac;"><<span style="color: #823125;">add <span style="color: #cf4820;">extension<span style="color: #4f76ac;">=<span style="color: #4f76ac;">".gif" <span style="color: #cf4820;">policy<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"CacheForTimePeriod" <span style="color: #cf4820;">kernelCachePolicy<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"CacheForTimePeriod" <span style="color: #cf4820;">duration<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"7.00:00:00" <span style="color: #cf4820;">varyByHeaders<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"Accept-Encoding" <span style="color: #4f76ac;">/>
-                    <span style="color: #4f76ac;"><<span style="color: #823125;">add <span style="color: #cf4820;">extension<span style="color: #4f76ac;">=<span style="color: #4f76ac;">".xml" <span style="color: #cf4820;">policy<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"DisableCache" <span style="color: #cf4820;">kernelCachePolicy<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"DisableCache" <span style="color: #4f76ac;">/>
-                    <span style="color: #4f76ac;"></<span style="color: #823125;">profiles<span style="color: #4f76ac;">>
-                    <span style="color: #4f76ac;"></<span style="color: #823125;">caching<span style="color: #4f76ac;">>
-                    <span style="color: #4f76ac;"></<span style="color: #823125;">system.webServer<span style="color: #4f76ac;">>
-```
-
-```html
-<span style="color: #4f76ac;"><<span style="color: #823125;">runtime<span style="color: #4f76ac;">>
-                    <span style="color: #4f76ac;"><<span style="color: #823125;">performanceScenario <span style="color: #cf4820;">value<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"HighDensityWebHosting" <span style="color: #4f76ac;">/>
-                    <span style="color: #4f76ac;"><<span style="color: #823125;">gcServer <span style="color: #cf4820;">enabled<span style="color: #4f76ac;">=<span style="color: #4f76ac;">"true"<span style="color: #4f76ac;">/>
+</security>
+   <httpProtocol>
+      <customHeaders>
+         <remove name="X-Powered-By" />
+         <remove name="X-Aspnet-Version" />
+         <remove name="Vary" />
+         <add name="Vary" value="Accept-Encoding" />
+         <add name="allowKeepAlive" value="true" />
+         <add name="Expires" value="Mon, 25 Dec 2017 21:31:12 GMT" />
+         <add name="Access-Control-Allow-Origin" value="https://donboulton.com" />
+         <add name="Access-Control-Allow-Credentials" value="true" />
+         <add name="Accept-Encoding" value="gzip,deflate,sdhc" />
+      </customHeaders>
+    </httpProtocol>
+    <urlCompression dynamicCompressionBeforeCache="true" doStaticCompression="true" doDynamicCompression="true" />
+    <staticContent>
+      <clientCache cacheControlCustom="public" cacheControlMode="UseMaxAge" cacheControlMaxAge="3.00:00:00" />
+      <remove fileExtension=".mp3" />
+      <mimeMap fileExtension=".mp3" mimeType="audio/mpeg" /> 
+      <remove fileExtension=".mp4" /> 
+      <mimeMap fileExtension=".mp4" mimeType="video/mp4" /> 
+      <remove fileExtension=".pdf" /> 
+      <mimeMap fileExtension=".pdf" mimeType="application/pdf" /> 
+      <remove fileExtension=".svg" /> 
+      <mimeMap fileExtension=".svg" mimeType="image/svg+xml" /> 
+      <remove fileExtension=".woff"/>
+      <mimeMap fileExtension=".woff" mimeType="application/font-woff"/>
+      <remove fileExtension=".woff2"/>
+      <mimeMap fileExtension=".woff2" mimeType="application/font-woff2" />
+    </staticContent>
+    <caching>
+      <profiles>
+         <add extension=".js" policy="CacheUntilChange" kernelCachePolicy="CacheUntilChange" location="Any" varyByHeaders="Accept-Encoding" />
+         <add extension=".css" policy="CacheUntilChange" kernelCachePolicy="CacheUntilChange" location="Any" varyByHeaders="Accept-Encoding" />
+          <add extension=".jpeg" policy="CacheForTimePeriod" kernelCachePolicy="CacheForTimePeriod" duration="7.00:00:00" varyByHeaders="Accept-Encoding" />
+          <add extension=".jpg" policy="CacheForTimePeriod" kernelCachePolicy="CacheForTimePeriod" duration="7.00:00:00" varyByHeaders="Accept-Encoding" />
+          <add extension=".png" policy="CacheForTimePeriod" kernelCachePolicy="CacheForTimePeriod" duration="7.00:00:00" varyByHeaders="Accept-Encoding" />
+          <add extension=".gif" policy="CacheForTimePeriod" kernelCachePolicy="CacheForTimePeriod" duration="7.00:00:00" varyByHeaders="Accept-Encoding" />
+          <add extension=".xml" policy="DisableCache" kernelCachePolicy="DisableCache" />
+     </profiles>
+  </caching>
+</system.webServer>
 ```
 
 ## Minify Html
