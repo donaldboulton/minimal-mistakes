@@ -3,7 +3,9 @@ layout: gallery
 title: San Francisco
 permalink: /photography/San Francisco/
 locations:
-  - San Francisco, California  
+  - San Francisco, California
+category:
+  - Gallerys
 support: [gallery]
 ---
 

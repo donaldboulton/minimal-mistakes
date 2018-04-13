@@ -10,6 +10,8 @@ comments: true
 share: true
 related: true
 breadcrumb: true
+category:
+  - Gallerys
 header:
   image: /assets/photography/cat-gallery/Little-Hun-1200.jpg
   teaser: /assets/photography/cat-gallery/Little-Hun-th.jpg"

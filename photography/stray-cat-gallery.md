@@ -10,6 +10,8 @@ comments: true
 share: true
 related: true
 breadcrumb: true
+category:
+  - Gallerys
 header:
   image: /assets/photography/stray-cat-gallery/Pretty-Girl-1200.jpg
   teaser: /assets/photography/stray-cat-gallery/Pretty-Girl-th.jpg
