@@ -20,7 +20,6 @@ read_time: true
 comments: true
 share: true
 related: true
-adds: true
 
 excerpt: "I use colorbox in my ASP.Core2 apps. 
 Alot of developers still do in their applications"

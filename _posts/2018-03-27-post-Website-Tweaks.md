@@ -20,7 +20,6 @@ read_time: true
 comments: true
 share: true
 related: true
-adds: true
 
 excerpt: "Website Tweaks in my ASP.Core2 apps. 
 Including Pajax"
