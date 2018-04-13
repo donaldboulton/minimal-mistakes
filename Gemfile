@@ -11,6 +11,7 @@ group :jekyll_plugins do
   gem 'jekyll-archives'
   gem 'jekyll-gist'
   gem 'jekyll-feed'
+  gem "jekyll-category-pages"
   gem 'jekyll-paginate-v2'
   gem 'jekyll-typogrify'
   gem 'jekyll-tagging'
