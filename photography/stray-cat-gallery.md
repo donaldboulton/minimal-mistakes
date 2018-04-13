@@ -12,8 +12,7 @@ breadcrumb: true
 header:
   image: /assets/photography/stray-cat-gallery/Pretty-Girl-1200.jpg
   teaser: /assets/photography/stray-cat-gallery/Pretty-Girl-th.jpg
-category:
-  - Gallerys
+
 locations:
   - Idabel Oklahoma
   - 4 Oaks Storaage
