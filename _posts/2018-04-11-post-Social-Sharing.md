@@ -25,12 +25,12 @@ adds: true
 excerpt: "Using just links in Asp.NET Core 2 add like included below  @@Context.Request.GetDisplayUrl(), to get the url of the page your sharing. View the source of this repo to see how to do it in Jekyll"
 image:
   cover: true
-  path: &image /assets/images/pages/letter-avatar-header.png
+  path: &image /assets/images/pages/social-sharing.jpg
   feature: *image
-  thumbnail: /assets/images/pages/letter-avatar-single-letter-320.png
+  thumbnail: /assets/images/pages/social-sharing-320.jpg
 header:
-  image: /assets/images/pages/letter-avatar-header-1200.png
-  teaser: /assets/images/pages/letter-avatar-header-320.png        
+  image: /assets/images/pages/social-sharing-lq.jpg
+  teaser: /assets/images/pages/social-sharing-320.jpg       
 ---
 
 {% include octo-arm.html %}
@@ -64,14 +64,14 @@ Url's Model is buy url=@@Model.Url on each link  and by addingdata-url="@@Model
 ```html
     <div class="postnewtweet pull-left">
         <div class="btn-group" role="group">
-        <a class="btn btn-info btn-sm" data-toggle="tooltip" data-url="@@Model.Url" 
-        href="https://twitter.com/intent/tweet?url=@@Model.Url&text=At Don Boulton.com&via=donboulton" 
+        <a class="btn btn-info btn-sm" data-toggle="tooltip" data-url="@@Model.Url"
+        href="https://twitter.com/intent/tweet?url=@@Model.Url&text=At Don Boulton.com&via=donboulton"
                 data-original-title="Post A New Tweet" data-user-id="105217183">
         <button type="button" class="btn btn-info btn-sm newtweet"></button>Tweet</a>
     <div class="divgplusshare pull-right">
         <div class="btn-group" role="group">
-        <a class="btn btn-danger btn-sm" data-toggle="tooltip" data-url="@@Model.Url" 
-        href="https://plus.google.com/share?url=@@Model.Url" 
+        <a class="btn btn-danger btn-sm" data-toggle="tooltip" data-url="@@Model.Url"
+        href="https://plus.google.com/share?url=@@Model.Url"
         onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" data-original-title="Share on Google+">
 ```
 
@@ -87,11 +87,11 @@ Url's Model is buy url=@@Model.Url on each link  and by addingdata-url="@@Model
         <div id="socialcontainer" class="center">
         <div class="row">
         <span class="btn-group">
-        <a class="iframe btn btn-sm btn-default" data-toggle="tooltip" data-url="@@Model.Url" 
+        <a class="iframe btn btn-sm btn-default" data-toggle="tooltip" data-url="@@Model.Url"
         data-count="horizontal" title="" href="http://feeds.feedburner.com/donboulton/Sohc" data-original-title="Don Boulton Blog RSS">
         <i class="fa fa-rss"></i>
         </a>
-        <a class="btn btn-sm btn-default" data-toggle="tooltip" data-toggle="tooltip" 
+        <a class="btn btn-sm btn-default" data-toggle="tooltip" data-toggle="tooltip"
         data-original-title="Email Donald Boulton at Google + Page" href="mailto:don-boulton-4557@pages.plusgoogle.com" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
         <i class="fa fa-envelope"></i>
         </a> 
@@ -106,87 +106,31 @@ Url's Model is buy url=@@Model.Url on each link  and by addingdata-url="@@Model
         <i class="fa fa-google-plus"></i>
         </a>
         <a class="btn btn-sm btn-default" data-toggle="tooltip" 
-                       data-url="@@Model.Url" href="https://facebook.com/?n=donboulton" 
+                       data-url="@@Model.Url" href="https://facebook.com/?n=donboulton"
         onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" data-original-title="Facebook" >
         <i class="fa fa-facebook"></i>
         </a>
-        <a class="btn btn-sm btn-default" data-toggle="tooltip" data-url="@@Model.Url" 
+        <a class="btn btn-sm btn-default" data-toggle="tooltip" data-url="@@Model.Url"
                        href="http://www.linkedin.com/shareArticle?mini=true&url=@@Model.Url&title=YOUR TITLE%20Website&summary=My%20favorite%20web%20site&source=YOR WEBSITE URL" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" data-original-title="LinkedIn">
         <i class="fa fa-linkedin"></i>
         </a>
-        <a class="btn btn-sm btn-default" data-toggle="tooltip" 
+        <a class="btn btn-sm btn-default" data-toggle="tooltip"
         data-url="@@Model.Url" href="https://onedrive.live.com/redir?resid=BFE52B3504AE372E%21135" 
                        onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" data-original-title="My One Drive">
         <i class="fa fa-windows"></i>
         </a>
-        <a data-toggle="tooltip" data-url="@@Model.Url" 
+        <a data-toggle="tooltip" data-url="@@Model.Url"
                        data-original-title="Proof of God scientifically" class="youtube btn btn-sm btn-default" href="http://www.youtube.com/embed/p00AYijRJy4?feature=player_detailpage">
         <i class="fa fa-youtube"></i>
-        </a> 
+        </a>
         <input value="donboulton/Sohc" name="uri" type="hidden"> //For Feedburner
         <input value="en_US" name="loc" type="hidden"> //For Feedburner
         <meta content="EN" itemprop="InLanguage"> //For LinkedIn
 ```
 
-## The Only Script Twitter
-
-I use web intents for other twitter interactions, and you counld build the above social sharing with out any scripts, Just a brower window in a frame.
-
-```javascript
-    <script>
-        (function() {
-        if (window.__twitterIntentHandler) return;
-        var intentRegex = /twitter\.com(\:\d{2,4})?\/intent\/(\w+)/,
-          windowOptions = 'scrollbars=yes,resizable=yes,toolbar=no,location=yes',
-          width = 550,
-          height = 420,
-          winHeight = screen.height,
-          winWidth = screen.width;
-
-        function handleIntent(e) {
-        e = e || window.event;
-        var target = e.target || e.srcElement,
-            m, left, top;
-
-        while (target && target.nodeName.toLowerCase() !== 'a') {
-          target = target.parentNode;
-        }
-
-        if (target && target.nodeName.toLowerCase() === 'a' && target.href) {
-          m = target.href.match(intentRegex);
-        if (m) {
-            left = Math.round((winWidth / 2) - (width / 2));
-            top = 0;
-
-        if (winHeight > height) {
-              top = Math.round((winHeight / 2) - (height / 2));
-        }
-
-        window.open(target.href, 'intent', windowOptions + ',width=' + width +
-        ',height=' + height + ',left=' + left + ',top=' + top);
-            e.returnValue = false;
-            e.preventDefault && e.preventDefault();
-        }
-        }
-        }
-
-        if (document.addEventListener) {
-        document.addEventListener('click', handleIntent, false);
-        } else if (document.attachEvent) {
-        document.attachEvent('onclick', handleIntent);
-        }
-      window.__twitterIntentHandler = true;
-    }());
-</script>
-```
-
 Attach Mofit.Social Part to Blog Posts and Pages, set positioning with placement.info if you need it to be place anywhere but at the bottom of your post or page.
 
 Add the page link to your post or page in the Mofit.Social Url input, add the full URL.
-
-![](http://donboulton.com/donboulton1/Media/Default/Images/socialurl.jpg)
-
-We will add bootstrap styling in this example
 
 ### Limited Dependencies With Twitter Web Intents
 
