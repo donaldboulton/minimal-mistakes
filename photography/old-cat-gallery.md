@@ -1,6 +1,7 @@
 ---
 layout: gallery
 title: Old Cat Gallery
+permalink: /photography/old-cat-gallery/
 date: 2018-04-03 16:18:01 -0600
 last_modified_at: 2018-04-04T12:42:38-04:0
 author: Donald Boulton

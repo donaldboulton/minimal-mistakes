@@ -1,7 +1,7 @@
 ---
 layout: gallery
 title: San Francisco
-
+permalink: /photography/San Francisco/
 locations:
   - San Francisco, California  
 support: [gallery]
