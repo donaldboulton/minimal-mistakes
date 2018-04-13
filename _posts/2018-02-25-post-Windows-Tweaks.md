@@ -21,7 +21,7 @@ comments: true
 share: true
 related: true
 
-excerpt: "This Tweaks page has evolved from Windows XP to Now upgrading this to Windows 10. Included is My testing and Opinions, "try at you own risk"."
+excerpt: "This Tweaks page has evolved from Windows XP to Now upgrading this to Windows 10. Included is My testing and Opinions, try at you own risk."
 image:
   cover: true
   path: &image /assets/images/pages/windows-tweaks.png
@@ -39,12 +39,12 @@ header:
 
 Basic Tweaks Sites:
 
-[TweakHounds](http://www.tweakhound.com/vista/tweakguide/page_3.htm), 
+[TweakHounds](http://www.tweakhound.com/vista/tweakguide/page_3.htm),
 [PcTuneUpTips](http://pctuneuptips.com/tips/vista_tweaks/),
 [H Enthusiasts](http://enthusiast.hardocp.com/article.html?art=MTMyNywxLCxoZW50aHVzaWFzdA==),
 [Windows Fanatics](http://www.lockergnome.com/windows/)
 
-## Windows Fanatics at TechNet 
+## Windows Fanatics at TechNet
 
  [Tech Net 1,](http://technet.microsoft.com/en-us/magazine/cc162494)
  [Tech Net 2,](http://technet.microsoft.com/en-us/magazine/cc162480.aspx)
@@ -135,7 +135,7 @@ You can read more here on Defrag Options & Command line switches.
 
 If you find that you are unable to defragment or cannot run the defragment utility in Windows or that a drive or volume has been marked  as having errors, run chdsk by entering
 
-chkdsk c: /f 
+chkdsk c: /f
 
 at any command prompt; where c is the drive letter. You will be able to then run Defrag after Chkdsk has repaired the file system. If you still face problems, seee this post on Disk defragmenter could not start or Failed to initialize.
 
@@ -173,7 +173,7 @@ Vista Registry Fixes,  on classic start menu, go to start and then run and type
 
 Caution the below is for Experts only! Pay attention to what you are doing and details.
 
-Some tweaks Curtsey of  
+Some tweaks Curtsey of
 Regedit Tweaks below. and the links to the details on how to do each one of them below.
 
 A ADDED VALUE!
@@ -200,7 +200,7 @@ Action Type: Add an Entry](http://www.liutilities.com/products/registrybooster/t
 
 A Changed Value!
 
-### Processor Scheduling 
+### Processor Scheduling
 
 I set to 12
 
@@ -329,7 +329,7 @@ Double-click **(default)** and replace the existing text ("Recycle Bin") with yo
 
 Changing Desktop Icon Spacing in Vista, "ALL Versions", adjustments can be made to horizontal and vertical alignment spacing.
 
-Steps for spacing desktop icons horizontal and vertical. Also you can change Desktop, Explorer and Most Vista Program Fonts and sizes here also.**
+Steps for spacing desktop icons horizontal and vertical. Also you can change Desktop, Explorer and Most Vista Program Fonts and sizes here also.
 
 1\. Right Click Desktop + Choose “Personalize”
 
@@ -347,12 +347,12 @@ I made the choice 16 for Horizontal and 30 for Vertical mainly because Recycle b
 
 A Changed Value!
 
-### For Indexing problems,
+### For Indexing problems
 
 Or indexing will not start or stay running. = Indexing and search are file renaming problems
 
 Set the registry value
-**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Search\SetupCompletedSuccessfully** ( set it to 0 and try restarting the Windows Search service.
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Search\SetupCompletedSuccessfully ( set it to 0 and try restarting the Windows Search service.
 
 See this post in MSDN
 
