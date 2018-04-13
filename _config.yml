@@ -171,8 +171,8 @@ analytics:
 # Site Author
 author:
   name                   : "Donald Boulton"
-  avatar                 : "/assets/images/pages/donald-boulton-100.jpg"
-  picture                : "/assets/images/pages/donald-boulton-100.jpg"
+  avatar                 : "https://donaboulton.com/assets/images/pages/donald-boulton-100.jpg"
+  picture                : "https://donaboulton.com/assets/images/pages/donald-boulton-100.jpg"
   bio                    : "Away from Asp. Anything."
   location               : "OKC Oklahoma"
   email                  : "donaldboulton@gmail.com"
