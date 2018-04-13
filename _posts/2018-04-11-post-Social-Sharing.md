@@ -29,7 +29,7 @@ image:
   feature: *image
   thumbnail: /assets/images/pages/social-sharing-320.jpg
 header:
-  image: /assets/images/pages/social-sharing-lq.jpg
+  image: /assets/images/pages/social-sharing.jpg
   teaser: /assets/images/pages/social-sharing-320.jpg       
 ---
 
