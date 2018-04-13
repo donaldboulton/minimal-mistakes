@@ -11,7 +11,7 @@ tags:
   - Social Sharing
   - MMistakes
 category:
-  - Programing
+  - Social
 locations:
   - Idabel Oklahoma
   - 4 Oaks Storaage
