@@ -1,8 +1,7 @@
 ---
 layout: gallery
 title: San Francisco
-category:
-  - Gallerys
+
 locations:
   - San Francisco, California  
 support: [gallery]

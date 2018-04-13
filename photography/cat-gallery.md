@@ -15,8 +15,7 @@ header:
 locations:
   - Oklahoma City, Oklahoma
   - Idabel Oklahoma
-category:
-  - Gallerys
+
 support: [gallery]
 ---
 

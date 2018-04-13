@@ -12,8 +12,7 @@ breadcrumb: true
 header:
   image: /assets/photography/cat-gallery/Little-Hun.jpg
   teaser: /assets/photography/cat-gallery/Little-Hun-th.jpg
-category:
-  - Gallerys
+
 locations:
   - Oklahoma City, Oklahoma
   - Idabel Oklahoma
