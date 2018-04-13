@@ -21,8 +21,7 @@ comments: true
 share: true
 related: true
 
-excerpt: "I use colorbox in my ASP.Core2 apps. 
-Alot of developers still do in their applications"
+excerpt: "I use colorbox in my ASP.Core2 apps. Alot of developers still do in their applications. Mobile First Responsive Colorbox Window to open a link, div, code, about anything. Including a iframe using external data."
 image:
   cover: true
   path: &image /assets/images/pages/svg/colorbox-html.png

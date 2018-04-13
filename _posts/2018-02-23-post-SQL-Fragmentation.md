@@ -24,7 +24,7 @@ related: true
 
 locations:
   - Idabel OKlahoma
-excerpt: Check SQL Server a specified database index fragmentation percentage (SQL)
+excerpt: "Check SQL Server a specified database index fragmentation percentage (SQL). A Dynamic CMS using SQL Server most always has fragmentation. When files or data are in the wrong place then SQL Server has to spend time looking for the missing data, slowing the whole process down and increasing load times for your site."
 image:
   cover: true
   path: &image /assets/images/pages/check_sql_fragmentation.png

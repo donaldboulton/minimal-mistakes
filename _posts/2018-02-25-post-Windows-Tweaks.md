@@ -21,7 +21,7 @@ comments: true
 share: true
 related: true
 
-excerpt: "This Tweaks page has evolved from Windows XP to Now upgrading this to Windows 10."
+excerpt: "This Tweaks page has evolved from Windows XP to Now upgrading this to Windows 10. Included is My testing and Opinions, "try at you own risk"."
 image:
   cover: true
   path: &image /assets/images/pages/windows-tweaks.png
@@ -50,7 +50,7 @@ Basic Tweaks Sites:
  [Tech Net 2,](http://technet.microsoft.com/en-us/magazine/cc162480.aspx)
  [Tech Net 3](http://technet.microsoft.com/en-us/magazine/cc162480.aspx)
 
-Below is My testing and Opinions, "try at you own risk". 
+Below is My testing and Opinions, "try at you own risk".
 
 I tried all the below.
 
