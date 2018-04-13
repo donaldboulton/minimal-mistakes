@@ -297,6 +297,19 @@
   }
 }
 
+.taxonomy__index {  
+  display: grid;
+  grid-column-gap: 2em;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 1.414em 0;
+  padding: 0;
+  font-size: 0.75em;
+  list-style: none;
+}
+
+.taxonomy__count {
+  color: #cacdd0;
+}
 /*
    Comments
    ========================================================================== */

@@ -4,7 +4,7 @@ layout: archive
 
 {{ content }}
 
-<ul class="taxonomy__index">
+<ul class="taxonomy__index list-unstyled">
   {% assign categories_max = 0 %}
   {% for category in site.categories %}
     {% if category[1].size > categories_max %}
@@ -14,7 +14,7 @@ layout: archive
   {% for i in (1..categories_max) reversed %}
     {% for category in site.categories %}
       {% if category[1].size == i %}
-        <li>
+        <li class="page__taxonomy-item">
           <a href="#{{ category[0] | slugify }}">
             <strong>{{ category[0] }}</strong> <span class="taxonomy__count">{{ i }}</span>
           </a>

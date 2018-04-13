@@ -4,7 +4,7 @@ layout: archive
 
 {{ content }}
 
-<ul class="taxonomy__index">
+<ul class="taxonomy__index list-unstyled">
   {% assign tags_max = 0 %}
   {% for tag in site.tags %}
     {% if tag[1].size > tags_max %}
