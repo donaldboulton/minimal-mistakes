@@ -1,7 +1,10 @@
 ---
 layout: gallery
 title: San Francisco
-no_menu_item: true # required only for this example website because of menu construction
+category:
+  - Gallerys
+locations:
+  - San Francisco, California  
 support: [gallery]
 ---
 
