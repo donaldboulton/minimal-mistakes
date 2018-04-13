@@ -83,6 +83,24 @@
   }
 }
 
+.sidebar__right-two {
+  margin-bottom: 1em;
+
+  @include breakpoint($large) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 250px;
+    margin-right: -1 * $right-sidebar-width-narrow;
+    z-index: 10;
+  }
+
+  @include breakpoint($x-large) {
+    width: $right-sidebar-width;
+    margin-right: -1 * $right-sidebar-width;
+  }
+}
+
 .splash .sidebar__right {
   @include breakpoint($large) {
     position: relative;
