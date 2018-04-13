@@ -82,6 +82,10 @@ algolia:
   search_only_api_key    : "68c60968e03d06ce61d592425b22c6bd"
   algolia_api_key        : "KLAOJmvpl1yZhCrno50lgSpRVJrrTtPKi98521LaL8X62hajFubs8IHB5eLjrcG5DOQJdfB6Dca9XluHQQQCWVJhQVAD7aqzfivz5/AlYEYukabDmEOw6Efd8RzNhlsFvVTa0t2/oxYWL66Xo9LtRbC0Lfpkf/u/RpA55pn5CkE="
   powered_by             : true
+  files_to_exclude:
+    - index.html
+    - index.md
+    - subdirectory/*.html
 
 github                   : [metadata]
 
