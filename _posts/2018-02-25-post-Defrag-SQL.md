@@ -20,6 +20,7 @@ read_time: true
 comments: true
 share: true
 related: true
+adds: true
 
 excerpt: "Defrag Sql 2008 to 2016"
 image:

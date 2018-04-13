@@ -20,6 +20,7 @@ read_time: true
 comments: true
 share: true
 related: true
+adds: true
 
 excerpt: "This Tweaks page has evolved from Windows XP to Now upgrading this to Windows 10."
 image:

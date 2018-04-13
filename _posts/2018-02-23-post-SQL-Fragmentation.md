@@ -21,8 +21,9 @@ read_time: true
 comments: true
 share: true
 related: true
+adds: true
 locations:
-  - Idable OKlahoma
+  - Idabel OKlahoma
 excerpt: Check SQL Server a specified database index fragmentation percentage (SQL)
 image:
   cover: true
