@@ -61,9 +61,9 @@ Follow the below content and test things locally first.
 
 {% include figure image_path="/assets/images/pages/performance/orchard-performance.jpg" alt="Performance" caption="Performance" class="align-center" %}
 
-My full test results: [http://www.webpagetest.org/result/160227_P1_4P4/1/details/](http://www.webpagetest.org/result/160227_P1_4P4/1/details/)
+My full test results: [Details](http://www.webpagetest.org/result/160227_P1_4P4/1/details/)
 
-[I](http://www.webpagetest.org/result/160227_P1_4P4/1/details/) am getting a repeat view of 0kb and initially 380kb which is 1gb lower that a stock Orchard site with bootstrap and some images.
+I am getting a repeat view of 0kb and initially 380kb which is 1gb lower that a stock Orchard site with bootstrap and some images.
 
 * [Cache](#cache)
 * [Web Config](#webconfig)
@@ -171,7 +171,9 @@ Minification makes full use of Output caching provided by Orchard.OutputCache mo
 
 **Supported versions:** Orchard 1.9+
 
-I use all the stock settings seems to work great and works with Orchard 1.10\. The only thing you might do is set up the `Statistics Info Window Pattern instructions at: [https://github.com/JadeX/Orchard.HtmlMinifier/wiki/Statistics-info-window](https://github.com/JadeX/Orchard.HtmlMinifier/wiki/Statistics-info-window "Stats patterns")`
+I use all the stock settings seems to work great and works with Orchard 1.10\. The only thing you might do is set up the `Statistics Info Window Pattern instructions at:
+
+[Stats patterns](https://github.com/JadeX/Orchard.HtmlMinifier/wiki/Statistics-info-window)
 
 ## Gzip
 
@@ -406,7 +408,7 @@ X-Generator: Orchard
 
 ## Pjax
 
-Using [jQuary-pjaxpjax](https://github.com/defunkt/jquery-pjax "Jquary pjax") is a jQuery plugin that uses ajax and pushState to deliver a fast browsing experience with real permalinks, page titles, and a working back button. pjax works by grabbing html from your server via ajax and replacing the content of a container on your page with the ajax'd html. It then updates the browser's current URL using pushState without reloading your page's layout or any resources (JS, CSS), giving the appearance of a fast, full page load. But really it's just ajax and pushState. Developed by Github Co-Founder [Chris Wanstrath](https://github.com/defunkt "defunkt"), and is in all Github pages.
+Using [jQuary-pjaxpjax](https://github.com/defunkt/jquery-pjax "Jquary pjax") is a jQuery plugin that uses ajax and pushState to deliver a fast browsing experience with real permalinks, page titles, and a working back button. pjax works by grabbing html from your server via ajax and replacing the content of a container on your page with the ajaxed html. It then updates the browser's current URL using pushState without reloading your page's layout or any resources (JS, CSS), giving the appearance of a fast, full page load. But really it's just ajax and pushState. Developed by Github Co-Founder [Chris Wanstrath](https://github.com/defunkt "defunkt"), and is in all Github pages.
 
 ## What is pjax and why we should use it
 
@@ -419,7 +421,7 @@ There is one important component in the above browsing experience, these website
 How do we implement this function? Here we introduce one open source project named pjax which can realize this. The project URL is:
 
 ```html
-https://github.com/defunkt/jquery-pjax�
+https://github.com/defunkt/jquery-pjax
 ```
 
 The demo page is:
@@ -490,7 +492,9 @@ Adding to your root packages.config
  <package id="Pjax.Mvc5" version="0.1.1" targetFramework="net452" />
 ```
 
-Then add jquery.pjax.min.js to your Orchard.Resources or a link to jQuary.pjax CDN at [https://cdnjs.cloudflare.com/ajax/libs/jquery.pjax/1.9.6/jquery.pjax.min.js](https://cdnjs.cloudflare.com/ajax/libs/jquery.pjax/1.9.6/jquery.pjax.min.js)
+Then add jquery.pjax.min.js to your Orchard.Resources or a link to jQuary.pjax CDN at:
+
+[jquery.pjax.min.js](https://cdnjs.cloudflare.com/ajax/libs/jquery.pjax/1.9.6/jquery.pjax.min.js)
 
 Adding to Themes\Views\Layout.cshtml for pjax enabled page to return just the main body contents, as the rest of my page does not change.
 
