@@ -6,7 +6,6 @@ author_profile: true
 toc: true 
 adds: true
 ---
-{% include group-by-array collection=site.posts field="year" %}
 
 {% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'"  %}
 {% for year in postsByYear %}
