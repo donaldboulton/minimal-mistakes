@@ -5,6 +5,8 @@ rvm:
 - 2.3.7
 - jruby-19mode
 - rbx-2
+before_install:
+    openssl aes-256-cbc -K $encrypted_73c56c33471d_key -iv $encrypted_73c56c33471d_iv -in demo-secret-key.enc -out demo-secret-key -d
 install:
   - bundle install
 cache:
@@ -20,3 +22,13 @@ deploy:
   keep-history: true
   on:
     branch: master
+after_success:
+  - eval "$(ssh-agent)"
+  - chmod 600 ./deploy.travis.key
+  - ssh-add ./deploy.travis.key
+  - cd deploy
+  - git checkout -B master
+  - git add -A
+  - git commit --allow-empty -m "$TRAVIS_COMMIT_MSG"
+  - echo "Pushing changes"
+  - git push git@github.com:donaldboulton/DWB.git master
