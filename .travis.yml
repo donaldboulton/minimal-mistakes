@@ -24,8 +24,8 @@ deploy:
     branch: master
 after_success:
   - eval "$(ssh-agent)"
-  - chmod 600 ./deploy.travis.key
-  - ssh-add ./deploy.travis.key
+  - chmod 600 ./deploy.secret.key
+  - ssh-add ./deploy.secret.key
   - cd deploy
   - git checkout -B master
   - git add -A
