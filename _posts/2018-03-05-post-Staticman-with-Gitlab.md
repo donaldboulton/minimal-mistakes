@@ -55,7 +55,7 @@ Staticman is a very handy static blog commenting implementation, but unfortunate
 
 ## Create staticmanapp
 
-The first step is to create staticman app, according to the official document operation, you can also view the repository I created .
+The first step is to create staticman app, according to the official document operation, you can also view the repository I created.
 
 ### Create a trigger
 
@@ -77,3 +77,52 @@ https://gitlab.com/api/v3/projects/1400576/trigger/builds?token=5e763611ads5fb89
 ```
 
 Notice that the token is replaced
+
+### asarkar comment
+
+The target of comment form is https://api.staticman.net/v2/entry/zongren/comment/master/,so there will be not https issues.
+I only maintain my comments on github,and whenever there is a comment pushed to github repository by staticmanapp,it triggers gitlab to run page runner
+The key is gitlab clones from github comment repository
+
+```yaml
+  - npm install hexo-cli -g -s
+  - npm install -s
+  - git clone "https://github.com/zongren/comment.git"
+  - mv comment/_data source/
+  - hexo clean --silent
+  - hexo algolia --silent true --vscode false
+  - hexo deploy --silent --vscode false
+and uses them in theme file
+```
+
+### And uses them in theme file
+
+```yaml
+for(i in site.data){
+    var nameArray = i.split('/');
+        var postName = nameArray[0];
+            if(postName == slug){
+               site.data[i]["fileName"] = nameArray[1];
+                  commentArray.push(site.data[i]);
+        }
+}
+````
+
+## Staticman Issues
+
+Or from: [Staticman issue 22](https://github.com/eduardoboucas/staticman/issues/22)
+
+zburgermeiszter commented on Feb 28, 2017
+For this we should add the git provider domain to the request as a path element.
+so it would look like.
+
+```html
+/v3/entry/<github|gitlab>/<vendor>/<repo>/<branch>/<configKey>
+```
+
+But because one can have it's own GitLab on it's own domain, we should also handle that.
+And GitLab Pages are now available on GitLab Community Edition
+
+Required Node libs for future reference:
+gitlab
+gitlab-webhook
