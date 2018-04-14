@@ -20,7 +20,6 @@ toc_label: "Contents"
 read_time: true
 comments: true
 share: true
-related: true
 adds: true
 excerpt: "Using just links in Asp.NET Core 2 add like included below  @@Context.Request.GetDisplayUrl(), to get the url of the page your sharing. View the source of this repo to see how to do it in Jekyll"
 image:

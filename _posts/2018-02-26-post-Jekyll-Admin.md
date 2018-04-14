@@ -5,7 +5,6 @@ author_profile: true
 read_time: true
 comments: true
 share: true
-related: true
 adds: true
 title: Jekyll Admin
 date: 2018-02-26 16:16:01 -0600

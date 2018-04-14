@@ -19,7 +19,6 @@ toc_label: "Contents"
 read_time: true
 comments: true
 share: true
-related: true
 
 excerpt: "Defrag Sql 2008 to 2016. In any SQl database and one that updates through migrations like Orchard CMS get defragmented and I have notice over the years dealing with SQL server that it needs defraging occasionaly, keeping the performance optimized"
 image:

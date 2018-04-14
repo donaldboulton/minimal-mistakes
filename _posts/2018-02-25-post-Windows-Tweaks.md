@@ -19,7 +19,6 @@ toc_label: "Contents"
 read_time: true
 comments: true
 share: true
-related: true
 
 excerpt: "This Tweaks page has evolved from Windows XP to Now upgrading this to Windows 10. Included is My testing and Opinions, try at you own risk."
 image:
