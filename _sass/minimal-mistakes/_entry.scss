@@ -1,3 +1,17 @@
+.entry {
+  @include clearfix();
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $border-color;
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
 .entry-meta {
     display: block;
     margin-bottom: 1rem;
