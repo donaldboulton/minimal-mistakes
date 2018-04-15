@@ -98,6 +98,7 @@ and uses them in theme file
 ### And uses them in theme file
 
 ```yaml
+
 for(i in site.data){
     var nameArray = i.split('/');
         var postName = nameArray[0];
@@ -106,6 +107,7 @@ for(i in site.data){
                   commentArray.push(site.data[i]);
         }
 }
+
 ````
 
 ## Staticman Issues
