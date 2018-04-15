@@ -6,7 +6,8 @@ rvm:
 - jruby-19mode
 - rbx-2
 before_install:
-    openssl aes-256-cbc -K $encrypted_73c56c33471d_key -iv $encrypted_73c56c33471d_iv -in demo-secret-key.enc -out demo-secret-key -d
+  openssl aes-256-cbc -K $encrypted_73c56c33471d_key -iv $encrypted_73c56c33471d_iv -in demo-secret-key.enc -out demo-secret-key -d
+  - nvm install 8
 install:
   - bundle install
 cache:
