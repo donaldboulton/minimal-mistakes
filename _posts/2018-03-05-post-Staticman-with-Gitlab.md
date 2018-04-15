@@ -23,7 +23,7 @@ toc: true
 toc_label: "Contents"
 toc_icon: "file"
 
-excerpt: "Use Staticman push to Gitlab"
+excerpt: "Use Staticman push to Gitlab. The first step is to create staticman app, according to the official document operation, you can also view the repository I created."
 image:
   cover: true
   path: &image /assets/images/pages/staticman-github-gitlab.png
@@ -82,6 +82,9 @@ Notice that the token is replaced
 
 The target of comment form is https://api.staticman.net/v2/entry/zongren/comment/master/,so there will be not https issues.
 I only maintain my comments on github,and whenever there is a comment pushed to github repository by staticmanapp,it triggers gitlab to run page runner
+
+#### Gitlab Clones
+
 The key is gitlab clones from github comment repository
 
 ```yaml
@@ -95,10 +98,9 @@ The key is gitlab clones from github comment repository
 and uses them in theme file
 ```
 
-### And uses them in theme file
+#### And uses them in theme file
 
 ```yaml
-
 for(i in site.data){
     var nameArray = i.split('/');
         var postName = nameArray[0];
@@ -107,7 +109,6 @@ for(i in site.data){
                   commentArray.push(site.data[i]);
         }
 }
-
 ````
 
 ## Staticman Issues

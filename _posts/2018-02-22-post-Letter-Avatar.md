@@ -22,7 +22,7 @@ toc_label: "Contents"
 read_time: true
 comments: true
 share: true
-
+related: true
 excerpt: "Many of us got really tired of the Gravatar Service being down or slow and having multiple server calls to download the Gravatar. 
 Alot of people do not even know about gravatar and your get a generic image for the User Avatar."
 image:

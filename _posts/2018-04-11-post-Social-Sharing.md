@@ -19,9 +19,10 @@ toc: true
 toc_label: "Contents"
 read_time: true
 comments: true
+related: true
 share: true
 adds: true
-excerpt: "Using just links in Asp.NET Core 2 add like included below  @@Context.Request.GetDisplayUrl(), to get the url of the page your sharing. View the source of this repo to see how to do it in Jekyll"
+excerpt: "Using just links in Asp.NET Core 2 add like included below  @Context.Request.GetDisplayUrl(), to get the url of the page your sharing. View the source of this repo to see how to do it in Jekyll"
 image:
   cover: true
   path: &image /assets/images/pages/social-sharing.jpg

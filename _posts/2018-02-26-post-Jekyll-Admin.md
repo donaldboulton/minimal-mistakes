@@ -8,10 +8,10 @@ share: true
 adds: true
 title: Jekyll Admin
 date: 2018-02-26 16:16:01 -0600
-last_modified_at: 2018-02-27T12:42:38-04:00
+last_modified_at: 2018-04-13T12:42:38-04:00
 search: true
 author: Donald Boulton
-
+related: true
 tags:
   - Jekyll
   - Jekyll Admin
@@ -21,7 +21,6 @@ category:
 toc: true
 toc_label: "Contents"
 
-excerpt: "Administer your Jekyll site Locally with Jekyll Admin"
 image:
   cover: true
   path: &image /assets/images/pages/jekyll-admin.jpg
