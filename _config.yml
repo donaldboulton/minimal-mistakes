@@ -34,7 +34,7 @@ staticman:
   branch                 : "gh-pages"
   commitMessage          : "New comment."
   filename               : "comment-{@timestamp}"
-  format                 : "json"
+  format                 : "yml"
   moderation             : false
   path                   : "/_data/comments/{options.slug}"
   requiredFields         : ['name', 'email', 'message']  
@@ -206,6 +206,10 @@ author:
   weibo                  :
   xing                   :
   youtube                : # None
+
+extlinks:
+  attributes: {rel: nofollow, target: _blank}
+  rel_exclude: ['donaldboulton.github.io/popcorn/', 'twitter.com']
 
 # Reading Files
 include:
