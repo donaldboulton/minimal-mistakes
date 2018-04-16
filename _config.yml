@@ -292,6 +292,7 @@ plugins:
   - jekyll-redirect-from
   - jekyll/figure
   - jekyll-algolia
+  - jekyll-cloudinary
   - jekyll-admin
   - lazyload
   - notice
@@ -313,6 +314,7 @@ whitelist:
   - jekyll-redirect-from
   - jekyll/figure
   - jekyll-algolia
+  - jekyll-cloudinary
   - jekyll-admin
   - notice
   - jemoji

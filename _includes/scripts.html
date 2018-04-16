@@ -38,5 +38,13 @@ window.addEventListener("load",function(){window.cookieconsent.initialise({"pale
   <script src="{{ '/assets/dist/js/init-lightgallery.js' | relative_url }}"></script>
 {% endif %}
 
+{% if page.support contains 'cloudinary' %}
+<script src="https://widget.cloudinary.com/global/all.js" crossorigin="anonymous"></script> 
+<script src="{{ '/assets/js/vendor/jquery-ui/widget.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/vendor/blueimp-file-upload/jquery.iframe-transport.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/vendor/blueimp-file-upload/jquery.fileupload.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/vendor/cloudinary/cloudinary-jquery-file-upload.js' | relative_url }}"></script>
+{% endif %}
+
 {% include analytics.html %}
 {% include /comments-providers/scripts.html %}

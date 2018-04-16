@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: mansbooks
+  api_key: '228989664973733'
+  api_secret: T9WSQ9U5m/3nMvCDYrql76Lk8FzE5zpVB8z8nA2nAHsSMj5s8TvcIvRSo0h1KWUTjc8D7q7yu5O3uPAldHGVOCHcpcjTfCOznMTOpgcUW+DdME7FVPYBx9Baz7in62gqx50MU1WQBusYz3G9au3X/TRgDpmEvgHcOs2tNYNkACU=
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: mansbooks
+  api_key: '228989664973733'
+  api_secret: T9WSQ9U5m/3nMvCDYrql76Lk8FzE5zpVB8z8nA2nAHsSMj5s8TvcIvRSo0h1KWUTjc8D7q7yu5O3uPAldHGVOCHcpcjTfCOznMTOpgcUW+DdME7FVPYBx9Baz7in62gqx50MU1WQBusYz3G9au3X/TRgDpmEvgHcOs2tNYNkACU=
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: mansbooks
+  api_key: '228989664973733'
+  api_secret: T9WSQ9U5m/3nMvCDYrql76Lk8FzE5zpVB8z8nA2nAHsSMj5s8TvcIvRSo0h1KWUTjc8D7q7yu5O3uPAldHGVOCHcpcjTfCOznMTOpgcUW+DdME7FVPYBx9Baz7in62gqx50MU1WQBusYz3G9au3X/TRgDpmEvgHcOs2tNYNkACU=
+  enhance_image_tag: true
+  static_image_support: false

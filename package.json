@@ -63,6 +63,8 @@
     "yargs": "^4.7.0"
   },
   "dependencies": {
+    "blueimp-file-upload": "^9.21.0",
+    "cloudinary-jquery-file-upload": "^2.5.0",
     "gulp-update": "0.0.2",
     "lg-autoplay": "^1.0.4",
     "lg-fullscreen": "^1.0.1",
