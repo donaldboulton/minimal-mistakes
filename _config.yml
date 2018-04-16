@@ -281,6 +281,7 @@ timezone: America/Chicago
 plugins:
   - posts_json
   - jekyll-sitemap
+  - jekyll-paginate
   - jekyll-gist
   - jekyll-feed
   - jekyll-seo-tag
@@ -301,6 +302,7 @@ plugins:
 whitelist:
   - posts_json
   - jekyll-sitemap
+  - jekyll-paginate
   - jekyll-gist
   - jekyll-feed
   - jekyll-seo-tag
