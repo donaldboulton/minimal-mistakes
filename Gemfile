@@ -5,6 +5,7 @@ gem "github-pages", group: :jekyll_plugins
 gem "rake", "~> 12"
 gem "tzinfo-data"
 gem "wdm", "~> 0.1.0"
+gem "nokogiri"
 gem "html-proofer"
 
 group :jekyll_plugins do
@@ -20,6 +21,5 @@ group :jekyll_plugins do
   gem 'jekyll-figure'
   gem 'mailgun-ruby', '~>1.1.6'
   gem 'jekyll-admin'
-  gem 'nokogiri'
   gem 'open-uri'
 end
