@@ -21,5 +21,4 @@ group :jekyll_plugins do
   gem 'jekyll-figure'
   gem 'mailgun-ruby', '~>1.1.6'
   gem 'jekyll-admin'
-  gem 'open-uri'
 end
