@@ -5,7 +5,7 @@
   {%- when "lunr" -%}
     <div itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction">
       <meta itemprop="target" content="https://query.donboulton.com/search?q={search_term_string}"/>
-       <input type="text" id="search" class="search-input" tabindex="-1" itemprop="query-input" required name="query" itemscope itemtype="http://schema.org/PropertyValueSpecification" type="text" name="search_term_string" placeholder="{{ site.data.ui-text[site.locale].search_placeholder_text | default: 'Enter your search term...' }}" />
+       <input type="text" id="search" class="search-input" tabindex="-1" itemprop="query-input" required valueName="query" itemscope itemtype="http://schema.org/PropertyValueSpecification" type="text" name="search_term_string" placeholder="{{ site.data.ui-text[site.locale].search_placeholder_text | default: 'Enter your search term...' }}" />
     </div>
     <div id="results" class="results"></div>
   {%- when "algolia" -%}
