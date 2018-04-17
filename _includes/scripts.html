@@ -11,6 +11,7 @@
 <script src="{{ '/assets/js/main.min.js' | relative_url }}"></script>
 {% endif %}
 <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>
 window.addEventListener("load",function(){window.cookieconsent.initialise({"palette":{"popup":{"background":"#3c404d","text":"#d6d6d6"},"button":{"background":"#8bed4f"}},"theme":"edgeless","position":"bottom-left","content":{"href":"https://donboulton.com/terms/#cookies-and-web-beacons"}})});
 </script>
@@ -36,10 +37,6 @@ window.addEventListener("load",function(){window.cookieconsent.initialise({"pale
   <script src="{{ '/assets/dist/modules/lg-thumbnail.min.js' | relative_url }}"></script>
   <script src="{{ '/assets/dist/modules/lg-zoom.min.js' | relative_url }}"></script>
   <script src="{{ '/assets/dist/js/init-lightgallery.js' | relative_url }}"></script>
-{% endif %}
-
-{% if page.support contains 'adds' %}
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 {% endif %}
 
 {% if page.support contains 'cloudinary' %}
