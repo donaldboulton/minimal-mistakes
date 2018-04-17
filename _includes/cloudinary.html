@@ -11,10 +11,20 @@ var generateSignature = function(callback, params_to_sign){
      success : function(signature, textStatus, xhr) { callback(signature); },
      error   : function(xhr, status, error) { console.log(xhr, status, error); }
     });
-}  
+}
 $('#upload_widget_opener').cloudinary_upload_widget(
   { cloud_name: mansbooks, api_key: 228989664973733,
     cropping: 'server', upload_signature: generateSignature},
     function(error, result) { console.log(error, result) });
+    cloudinary.openUploadWidget({
+        upload_preset: uploadPreset,
+        sources: [ 'local', 'url', 'image_search'],
+        google_api_key: 'AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA',
+        search_by_sites: ["all", "cloudinary.com"],
+        search_by_rights: true
+    },
+    function(error, result) {console.log(error, result)}
+);
+$('.cloudinary-fileupload').cloudinary_fileupload();
 </script>
   
