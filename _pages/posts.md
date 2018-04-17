@@ -7,4 +7,5 @@ author_profile: false
 comments: false
 exclude_from_search: true
 adds: true
+support: [adds]
 ---

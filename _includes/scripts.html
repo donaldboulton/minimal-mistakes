@@ -38,6 +38,10 @@ window.addEventListener("load",function(){window.cookieconsent.initialise({"pale
   <script src="{{ '/assets/dist/js/init-lightgallery.js' | relative_url }}"></script>
 {% endif %}
 
+{% if page.support contains 'adds' %}
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+{% endif %}
+
 {% if page.support contains 'cloudinary' %}
   <script src="https://widget.cloudinary.com/global/all.js" crossorigin="anonymous"></script> 
   <script src="{{ '/assets/js/vendor/jquery-ui/widget.js' | relative_url }}"></script>
