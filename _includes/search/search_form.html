@@ -7,7 +7,6 @@
       <meta itemprop="target" content="https://query.donboulton.com/search?q={search_term_string}"/>
        <input type="text" id="search" class="search-input" tabindex="-1" itemprop="query-input" itemscope itemtype="http://schema.org/PropertyValueSpecification" type="text" name="search_term_string" placeholder="{{ site.data.ui-text[site.locale].search_placeholder_text | default: 'Enter your search term...' }}" />
     </div>
-    <meta itemprop="valueName" content="q"/>
     <div id="results" class="results"></div>
   {%- when "algolia" -%}
     <div class="search-searchbar"></div>
