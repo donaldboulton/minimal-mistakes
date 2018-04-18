@@ -61,7 +61,7 @@ The first step is to create staticman app, according to the official document op
 
 Select in the gitlab project menu Triggers > Add triggerand copy the link below
 
-```curl
+```html
 curl -X POST \
      -F token=TOKEN \
      -F ref=REF_NAME \

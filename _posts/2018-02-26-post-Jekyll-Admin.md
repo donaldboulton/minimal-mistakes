@@ -124,7 +124,13 @@ The below are the documented endpoints of the shared HTTP API. All requests and 
 
 For simplicity, whenever possible, the API mirrors Jekyll internal data structures, meaning, objects are generally the results of calling .to_liquid.to_json on an existing Jekyll model (and the resulting fields).
 
-The API is exposed as http://localhost:4000/_api (or whatever server/port your Jekyll installation is running on).
+The API is exposed as:
+
+```html
+http://localhost:4000/_api
+```
+
+(or whatever server/port your Jekyll installation is running on).
 
 Note: Prior to version 1.0.0, the HTTP API is to be considered a pre-release API, and is subject to breaking changes without notice. You’re welcome (and are encouraged) to build external tools or apps against this API, but as the API is refined and finalized, it may not strictly follow Semantic Versioning standards.
 

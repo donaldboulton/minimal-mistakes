@@ -307,7 +307,7 @@ Get rid of the shortcut arrow on the Vista desktop. Frameworkx, it work's.
 
 A Changed Value!
 
-Tweak for the Registry Desktop Icon. The Icon Size is to large, my registry size was 36, I set it to 16\. Worked great for me. I have dual 32 inch HDTV monitors with 1366 X 786 display resolutions so the icons are now a tolerable size. Smaller displays and resolutions 16 might be to small, and 16 is the smallest size, if you set it smaller than 16 will default and reset to 16.
+Tweak for the Registry Desktop Icon. The Icon Size is to large, my registry size was 36, I set it to 16. Worked great for me. I have dual 32 inch HDTV monitors with 1366 X 786 display resolutions so the icons are now a tolerable size. Smaller displays and resolutions 16 might be to small, and 16 is the smallest size, if you set it smaller than 16 will default and reset to 16.
 
 "HKEY_CURRENT_USER\Control Panel\Desktop\WindowMetrics" and the key is "Shell Icon Size" was set at 36, I set it to 16.
 

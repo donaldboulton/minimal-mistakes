@@ -198,11 +198,11 @@ Originally created by Microsoft
 
 ### Check Fragmentation
 
-```python
+```sql
 DBCC INDEXDEFRAG
 (
     { database_name | database_id | 0 } 
-    , { table_name | table_id | view_name | view_id } 
+    , { table_name | table_id | view_name | view_id }
     [ , { index_name | index_id } [ , { partition_number | 0 } ] ]
 )
     [ WITH NO_INFOMSGS ]

@@ -41,9 +41,9 @@ header:
 
 Using just links in Asp.NET Core 2 add @@Context.Request.GetDisplayUrl() to get the url of the page your sharing.
 
-First download Mofit.Social and install it. Open your site folders Modules/Mofit.Social/Views/Parts/Social.cshtml and deleat everything in the file. and Add [the below](#below) changing it to your own website content. We will be using 
+First download Mofit.Social and install it. Open your site folders Modules/Mofit.Social/Views/Parts/Social.cshtml and deleat everything in the file. and Add [the below](#below) changing it to your own website content.
 
-Font Awesome Icons for social icons on our bootstrap buttons but you could easily use glyph-icons or your own images instead anhd all the links open in a browser friendly window, thus no user gets lost  from your website on a new browser window, tab or page
+We will be using Font Awesome Icons for social icons on our bootstrap buttons but you could easily use glyph-icons or your own images instead anhd all the links open in a browser friendly window, thus no user gets lost  from your website on a new browser window, tab or page.
 
 Not a download of JavaScript or Cookies is required.
 
@@ -59,7 +59,7 @@ How to do this
 
 Add the links below. Changing to Your Titles, Summary and where needed a Discription.
 
-Url's Model is buy url=@@Model.Url on each link  and by addingdata-url="@@Model.Url" so the page your user is on gets shared, instead of your website home url.
+Url's Model is buy url=@Model.Url on each link  and by addingdata-url="@Model.Url" so the page your user is on gets shared, instead of your website home url.
 
 ```html
     <div class="postnewtweet pull-left">
@@ -95,17 +95,17 @@ Url's Model is buy url=@@Model.Url on each link  and by addingdata-url="@@Model
         data-original-title="Email Donald Boulton at Google + Page" href="mailto:don-boulton-4557@pages.plusgoogle.com" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
         <i class="fa fa-envelope"></i>
         </a> 
-        <a class="btn btn-sm btn-default" data-toggle="tooltip" data-count="horizontal" 
-                       href="https://twitter.com/intent/tweet?url=@@Model.Url&text=YOUR TEXT&via=TWITTER USERNAME" 
+        <a class="btn btn-sm btn-default" data-toggle="tooltip" data-count="horizontal"
+                       href="https://twitter.com/intent/tweet?url=@@Model.Url&text=YOUR TEXT&via=TWITTER USERNAME"
                        class="twitter-share-button" data-original-title="Twitter Share" data-user-id="TWITTER USER ID">
         <i class="fa fa-twitter"></i>
         </a>
-        <a class="btn btn-sm btn-default" data-toggle="tooltip" 
-                       data-url="@@Model.Url"  rel="publisher" href="https://plus.google.com/share?url=@@Model.Url" 
+        <a class="btn btn-sm btn-default" data-toggle="tooltip"
+                       data-url="@@Model.Url"  rel="publisher" href="https://plus.google.com/share?url=@@Model.Url"
         onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" data-original-title="Share on Google+">
         <i class="fa fa-google-plus"></i>
         </a>
-        <a class="btn btn-sm btn-default" data-toggle="tooltip" 
+        <a class="btn btn-sm btn-default" data-toggle="tooltip"
                        data-url="@@Model.Url" href="https://facebook.com/?n=donboulton"
         onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" data-original-title="Facebook" >
         <i class="fa fa-facebook"></i>
@@ -115,7 +115,7 @@ Url's Model is buy url=@@Model.Url on each link  and by addingdata-url="@@Model
         <i class="fa fa-linkedin"></i>
         </a>
         <a class="btn btn-sm btn-default" data-toggle="tooltip"
-        data-url="@@Model.Url" href="https://onedrive.live.com/redir?resid=BFE52B3504AE372E%21135" 
+        data-url="@@Model.Url" href="https://onedrive.live.com/redir?resid=BFE52B3504AE372E%21135"
                        onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" data-original-title="My One Drive">
         <i class="fa fa-windows"></i>
         </a>
