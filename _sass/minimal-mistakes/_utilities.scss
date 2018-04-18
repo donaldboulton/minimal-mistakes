@@ -61,10 +61,6 @@ body:hover .visually-hidden button {
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 }
 
-/*
-   Skip links
-   ========================================================================== */
-
 .skip-link {
   position: fixed;
   z-index: 20;
@@ -78,10 +74,6 @@ body:hover .visually-hidden button {
   width: 0;
   list-style: none;
 }
-
-/*
-   Type
-   ========================================================================== */
 
 .text-left {
   text-align: left;
@@ -103,12 +95,6 @@ body:hover .visually-hidden button {
   white-space: nowrap;
 }
 
-/*
-   Alignment
-   ========================================================================== */
-
-/* clearfix */
-
 .cf {
   clear: both;
 }
@@ -118,12 +104,6 @@ body:hover .visually-hidden button {
   margin-right: auto;
   width: 100%;
 }
-
-/*
-   Images
-   ========================================================================== */
-
-/* image align left */
 
 .align-left {
   display: block;
@@ -135,8 +115,6 @@ body:hover .visually-hidden button {
     margin-right: 1em;
   }
 }
-
-/* image align right */
 
 .align-right {
   display: block;
