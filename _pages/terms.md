@@ -6,7 +6,6 @@ toc: true
 toc_label: "Contents"
 youtubeId: yoE9-tNvhRs
 adds: true
-support: [adds]
 ---
 
 {% include octo-arm.html %}
