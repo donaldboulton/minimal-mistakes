@@ -46,7 +46,7 @@ Discussions on changes to Orchard 1.10 web.config, zipping files for AWS to Clou
 Web.config additions and changes, with different performance alternatives.
 
 Most of this post is specific For Orchard CMS
-Orchard Cache, iDeliverable widgets, HTML Minified settings will be discussed. Conjugation routines of .css and .js before 7-zipping� them with gzip Ultra format.
+Orchard Cache, iDeliverable widgets, HTML Minified settings will be discussed. Conjugation routines of .css and .js before 7-zipping them with gzip Ultra format.
 
 This page is always under development. Web .config section is questionable.
 
@@ -92,7 +92,7 @@ Ignoring url /sitemap.xml
 
 Here is my web.config for Orchard 1.9.1 and it Orchard changed alot in 1.10, if using 1.10 check changes carefully. I comment in and on soon.
 
-Leveraging prefetch cache and Vary policys, and caching on .XML.
+Leveraging prefetch cache and Vary policys, and caching on XML.
 
 ```html
   <httpHandlers>
@@ -131,13 +131,13 @@ Under System.WebServer we add the custom headers url compression and caching pro
     <staticContent>
       <clientCache cacheControlCustom="public" cacheControlMode="UseMaxAge" cacheControlMaxAge="3.00:00:00" />
       <remove fileExtension=".mp3" />
-      <mimeMap fileExtension=".mp3" mimeType="audio/mpeg" /> 
-      <remove fileExtension=".mp4" /> 
-      <mimeMap fileExtension=".mp4" mimeType="video/mp4" /> 
-      <remove fileExtension=".pdf" /> 
-      <mimeMap fileExtension=".pdf" mimeType="application/pdf" /> 
-      <remove fileExtension=".svg" /> 
-      <mimeMap fileExtension=".svg" mimeType="image/svg+xml" /> 
+      <mimeMap fileExtension=".mp3" mimeType="audio/mpeg" />
+      <remove fileExtension=".mp4" />
+      <mimeMap fileExtension=".mp4" mimeType="video/mp4" />
+      <remove fileExtension=".pdf" />
+      <mimeMap fileExtension=".pdf" mimeType="application/pdf" />
+      <remove fileExtension=".svg" />
+      <mimeMap fileExtension=".svg" mimeType="image/svg+xml" />
       <remove fileExtension=".woff"/>
       <mimeMap fileExtension=".woff" mimeType="application/font-woff"/>
       <remove fileExtension=".woff2"/>
@@ -172,7 +172,7 @@ Minification makes full use of Output caching provided by Orchard.OutputCache mo
 
 **Supported versions:** Orchard 1.9+
 
-I use all the stock settings seems to work great and works with Orchard 1.10\. The only thing you might do is set up the `Statistics Info Window Pattern instructions at:
+I use all the stock settings seems to work great and works with Orchard 1.10. The only thing you might do is set up the `Statistics Info Window Pattern instructions at:
 
 [Stats patterns](https://github.com/JadeX/Orchard.HtmlMinifier/wiki/Statistics-info-window)
 
@@ -188,11 +188,11 @@ Content-Encoding set to gzip
 
 The files uploaded will still have the extenshion like site-slate.min.css.gz so just rename them like site-slate.min.css no .gz.
 
-Now if you read about this you should have one file gzipped and one file not, if you do not have the correct HTTP Request and� Resopnse header for older browsers = I do not care anything about older browsers. so judge for yourself
+Now if you read about this you should have one file gzipped and one file not, if you do not have the correct HTTP Request and Resopnse header for older browsers = I do not care anything about older browsers. so judge for yourself
 
 ## AWS S3
 
-There is allot of information on setting up AWS� S3 and Cloudfront so I will not go into that; just how I use it for file distribution, and I use my own static cookiesless, "except for oauth cookie from Cloud Front", subweb for my link as static.donboulton.com which can be set up on your server and then on AWS S3 and Cloud Front adding to your web.config
+There is allot of information on setting up AWS S3 and Cloudfront so I will not go into that; just how I use it for file distribution, and I use my own static cookiesless, "except for oauth cookie from Cloud Front", subweb for my link as static.donboulton.com which can be set up on your server and then on AWS S3 and Cloud Front adding to your web.config
 
 ```html
 <add name="Access-Control-Allow-Origin" value="http://yoursite.com" />
