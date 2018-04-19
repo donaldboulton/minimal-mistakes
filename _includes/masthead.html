@@ -36,8 +36,8 @@
           <div class="navicon"></div>
         </button>
         <ul class="hidden-links hidden">
-          {% if link.sublinks %}
-              {% for sublink in link.sublinks %}
+          {% if link.hidden-links %}
+              {% for hidden-link in link.hidden-links %}
                     <li>
                         <a href="{{ site.baseurl }}{{ sublink.url }}">{{ sublink.title }}</a>
                     </li>
