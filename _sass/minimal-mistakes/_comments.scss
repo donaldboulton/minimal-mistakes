@@ -70,24 +70,24 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
 
   &::after {
     position: absolute;
     right: 0.5em;
     bottom: 0.5em;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     content: "";
     z-index: -1;
   }
 }
  .comment-avatar-img {
-  width: 80px;
-  height: 80px;
-  padding: 5px;
-  border: 2px solid #1faaaa;
+  width: 60px;
+  height: 60px;
+  padding: 1.5px;
+  border: 1px solid #434040;
   border-radius: 50%
  }
 .comment-author-name {
@@ -131,7 +131,7 @@
 /* Site author specific */
 .admin {
   .comment-author-name {
-    box-shadow: inset 0 -0.25em 0 rgba($warning-color, 0.5);
+    box-shadow: inset 0 -0.25em 0 rgba($success-color, 0.5);
   }
 }
 
