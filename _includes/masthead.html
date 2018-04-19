@@ -35,7 +35,24 @@
           <span class="visually-hidden">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle Menu" }}</span>
           <div class="navicon"></div>
         </button>
-        <ul class="hidden-links hidden"></ul>
+        <ul class="hidden-links hidden">
+          {% if link.sublinks %}
+          <li class="dropdown {{ class }}">
+              <a href="{{ site.baseurl }}{{ link.url }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ link.title }} <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                  {% for sublink in link.sublinks %}
+                      {% if sublink.title == 'separator' %}
+                          <li role="separator" class="divider"></li>
+                      {% else %}
+                          <li>
+                              <a href="{{ site.baseurl }}{{ sublink.url }}">{{ sublink.title }}</a>
+                          </li>
+                      {% endif %}
+                  {% endfor %}
+              </ul>
+          </li>
+          {% else %}
+        </ul>
       </nav>
     </div>
   </div>
