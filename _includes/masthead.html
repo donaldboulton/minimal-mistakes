@@ -37,21 +37,12 @@
         </button>
         <ul class="hidden-links hidden">
           {% if link.sublinks %}
-          <li class="dropdown {{ class }}">
-              <a href="{{ site.baseurl }}{{ link.url }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ link.title }} <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                  {% for sublink in link.sublinks %}
-                      {% if sublink.title == 'separator' %}
-                          <li role="separator" class="divider"></li>
-                      {% else %}
-                          <li>
-                              <a href="{{ site.baseurl }}{{ sublink.url }}">{{ sublink.title }}</a>
-                          </li>
-                      {% endif %}
-                  {% endfor %}
-              </ul>
-          </li>
-          {% else %}
+              {% for sublink in link.sublinks %}
+                    <li>
+                        <a href="{{ site.baseurl }}{{ sublink.url }}">{{ sublink.title }}</a>
+                    </li>
+              {% endfor %}
+          {% endif %}
         </ul>
       </nav>
     </div>
