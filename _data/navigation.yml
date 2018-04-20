@@ -8,7 +8,7 @@ main:
     url: /photography/
   - title: "Sitemap"
     url: /sitemap/
-hidden-links:
+children:
   - title: FAQ
     url: /faq.html
   - title: Documentation

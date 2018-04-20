@@ -1,8 +1,6 @@
 ---
 title: Reviews
-layout: external
-external_url: https://donaldboulton.github.io/popcorn/
-external_site: popcorn
+layout: single
 read_time: true
 comments: true
 share: true
@@ -27,3 +25,5 @@ excerpt: "External Reviews site, used for Google Positioning Micro data. Using S
 {% include page-intro.html %}
 
 # Site Reviews
+
+{% onebox https://donaldboulton.github.io/popcorn/ %}

@@ -36,10 +36,10 @@
           <div class="navicon"></div>
         </button>
         <ul class="hidden-links hidden">
-          {% if link.hidden-links %}
-              {% for hidden-link in link.hidden-links %}
+          {% if nav.children %}
+              {% for child in nav.children %}
                     <li>
-                        <a href="{{ site.baseurl }}{{ sublink.url }}">{{ sublink.title }}</a>
+                        <a href="{{ site.baseurl }}{{ child.url }}">{{ child.title }}</a>
                     </li>
               {% endfor %}
           {% endif %}
