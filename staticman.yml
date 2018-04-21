@@ -10,7 +10,7 @@ comments:
   #
   # Names of the fields the form is allowed to submit. If a field that is
   # not here is part of the request, an error will be thrown.
-  allowedFields: ["name", "email", "url", "message", "replying_to"]
+  allowedFields: ["name", "email", "url", "title", "message", "replying_to"]
 
   # (*) REQUIRED WHEN USING NOTIFICATIONS
   #
@@ -96,7 +96,7 @@ comments:
 
   # Names of required files. If any of these isn't in the request or is empty,
   # an error will be thrown.
-  requiredFields: ["name", "email", "message"]
+  requiredFields: ["name", "email", "title", "message"]
 
   # List of transformations to apply to any of the fields supplied. Keys are
   # the name of the field and values are possible transformation types.

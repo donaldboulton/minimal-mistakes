@@ -18,6 +18,10 @@
       <input type="url" id="comment-form-url" name="fields[url]" placeholder="Website (optional)">
     </div>
     <div class="form-group">
+      <label class="sr-only" for="comment-form-title"><strong>Title</strong> <small>(required)</small></label>
+      <input type="text" id="comment-form-title" name="fields[title]" required placeholder="Title (required)">
+    </div>
+    <div class="form-group">
       <label class="sr-only" for="comment-form-message"><strong>Comment</strong> <small>(<a href="https://kramdown.gettalong.org/quickref.html">Markdown</a> is allowed)</small></label>
       <textarea type="text" rows="6" id="comment-form-message" name="fields[message]" required spellcheck="true" placeholder="Comment (Markdown is allowed)"></textarea>
     </div>

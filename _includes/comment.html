@@ -24,6 +24,9 @@
     </a>{% endif %}
     {% endif %}
   </div>
+  <div itemprop="title" class="comment-title">
+    {{ include.title | markdownify }}
+  </div>
   <div itemprop="reviewBody" class="comment-content">
     {{ include.message | markdownify }}
   </div>
@@ -45,6 +48,7 @@
   {% assign name        = reply.name %}
   {% assign url         = reply.url %}
   {% assign date        = reply.date %}
+  {% assign date        = comment.title %}
   {% assign message     = reply.message %}
-  {% include comment.html index=index replying_to=replying_to avatar=avatar email=email name=name url=url date=date message=message %}
+  {% include comment.html index=index replying_to=replying_to avatar=avatar email=email name=name url=url date=date title=title message=message %}
 {% endfor %}
