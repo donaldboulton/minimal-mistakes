@@ -4,7 +4,7 @@
 {%- case search_provider -%}
   {%- when "lunr" -%}
     <div itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction">
-      <meta itemprop="target" content="https://query.donboulton.com/search?q={search_term_string}"/>
+       <meta itemprop="target" content="https://query.donboulton.com/search?q={search_term_string}"/>
        <input type="text" id="search" class="search-input" tabindex="-1" required value="search_term_string" name="search_term_string" itemprop="query-input" itemscope itemtype="http://schema.org/PropertyValueSpecification" type="text" placeholder="{{ site.data.ui-text[site.locale].search_placeholder_text | default: 'Enter your search term...' }}" />
     </div>
     <div id="results" class="results"></div>
