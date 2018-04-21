@@ -128,6 +128,9 @@
 
 #cancel-comment-reply-link {
   margin-left: 1em;
+  color: #ffffff;
+  text-decoration: underline;
+  text-decoration-color: rgba($success-color, 0.5);
 }
 
 #comment-form {
