@@ -169,7 +169,8 @@ social:
   name                   : Donald Boulton
   links: # An array of links to social media profiles
     - "https://twitter.com/donboulton"
-    - "https://facebook.com/donboulton"
+    - "https://facebook.com/don-boulton"
+    - "https://plus.google.com/u/0/+DonaldBoulton"
 
 # Analytics
 analytics:
