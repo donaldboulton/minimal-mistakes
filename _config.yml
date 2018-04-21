@@ -302,7 +302,6 @@ plugins:
   - notice
   - jemoji
   - json
-  - jekyll-onebox
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -323,7 +322,6 @@ whitelist:
   - notice
   - jemoji
   - json
-  - jekyll-onebox
 
 # Archives
 #  Type
