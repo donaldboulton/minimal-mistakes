@@ -1,8 +1,6 @@
-$color_999: #EBBD5B;
-
 .rating-star {
 	width: 24px;
-	color: $color_999;
+	color: #EBBD5B;
 	vertical-align: middle;
 }
 .rating-radio {
@@ -24,7 +22,7 @@ $color_999: #EBBD5B;
 	}
 }
 .rating-select {
-	margin-bottom: 2em;
+	margin-bottom: .5em;
 }
 .field-group {
 	display: block;
