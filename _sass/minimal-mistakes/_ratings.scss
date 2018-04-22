@@ -1,0 +1,31 @@
+$color_999: #EBBD5B;
+
+.rating-star {
+	width: 24px;
+	color: $color_999;
+	vertical-align: middle;
+}
+.rating-radio {
+	display: none;
+	&+.rating-radio-label {
+		.rating-radio-star--off {
+			display: none;
+		}
+	}
+	&:checked {
+		&~.rating-radio-label {
+			.rating-radio-star--on {
+				display: none;
+			}
+			.rating-radio-star--off {
+				display: inline-block;
+			}
+		}
+	}
+}
+.rating-select {
+	margin-bottom: 2em;
+}
+.field-group {
+	display: block;
+}

@@ -25,6 +25,10 @@
       {% if include.index %}</a>{% endif %}
     {% endif %}
   </div>
+  <div class="comment-rating text-right"></div>
+    {% for i in (1..commentData.rating) %}
+			<svg class="icon icon--star rating-star rating-radio-star--on"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'assets/icons/' | relative_url }}"></use></svg>
+	  {% endfor %}
   <div class="comment-content">
     {{ include.message | markdownify }}
   </div>
@@ -41,11 +45,12 @@
   {% assign index       = forloop.index | prepend: '-' | prepend: include.index %}
   {% assign replying_to = reply[1].replying_to | to_integer %}
   {% assign avatar      = reply[1].avatar %}
+  {% assign rating      = reply[1].rating %}
   {% assign email       = reply[1].email %}
   {% assign name        = reply[1].name %}
   {% assign url         = reply[1].url %}
   {% assign date        = reply[1].date %}
   {% assign title       = reply[1].title %}
   {% assign message     = reply[1].message %}
-  {% include comment.html index=index replying_to=replying_to avatar=avatar email=email name=name url=url date=date title=title message=message %}
+  {% include comment.html index=index replying_to=replying_to avatar=avatar rating=rating email=email name=name url=url date=date title=title message=message %}
 {% endfor %}

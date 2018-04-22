@@ -5,6 +5,38 @@
     <h3>Leave a Comment <small><a rel="nofollow" id="cancel-comment-reply-link" href="{{ page.url | relative_url }}#respond" style="display:none;">Cancel reply</a></small></h3>
   </header>
   <form id="comment-form" class="page__form js-form form" method="post" action="https://api.staticman.net/v2/entry/{{ site.repository }}/{{ site.staticman.branch }}/comments">
+    <fieldset class="form-group field-group rating-select text-right">
+      <span>Rating:</span>
+      <!-- Rating stars -->
+      <label class="rating-radio-label" for="review-form[star-1]">
+        <svg class="icon icon--star rating-star rating-radio-star--on"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'assets/icons/' | relative_url }}"></use>star</svg>
+      </label>
+      <input class="rating-radio" type="radio" value="1" name="fields[rating]" id="review-form[star-1]" checked>
+  
+      <label class="rating-radio-label" for="review-form[star-2]">
+        <svg class="icon icon--star_border rating-star rating-radio-star--off"><use xlink:href="{{ 'icons.svg#icon-star_border' | prepend: 'assets/icons/' | relative_url }}"></use>star_border</svg>
+        <svg class="icon icon--star rating-star rating-radio-star--on"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'assets/icons/' | relative_url }}"></use>star</svg>
+      </label>
+      <input class="rating-radio" type="radio" value="2" name="fields[rating]" id="review-form[star-2]">
+  
+      <label class="rating-radio-label" for="review-form[star-3]">
+        <svg class="icon icon--star_border rating-star rating-radio-star--off"><use xlink:href="{{ 'icons.svg#icon-star_border' | prepend: 'assets/icons/' | relative_url }}"></use>star_border</svg>
+        <svg class="icon icon--star rating-star rating-radio-star--on"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'assets/icons/' | relative_url }}"></use>star</svg>
+      </label>
+      <input class="rating-radio" type="radio" value="3" name="fields[rating]" id="review-form[star-3]">
+  
+      <label class="rating-radio-label" for="review-form[star-4]">
+        <svg class="icon icon--star_border rating-star rating-radio-star--off"><use xlink:href="{{ 'icons.svg#icon-star_border' | prepend: 'assets/icons/' | relative_url }}"></use>star_border</svg>
+        <svg class="icon icon--star rating-star rating-radio-star--on"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'assets/icons/' | relative_url }}"></use>star</svg>
+      </label>
+      <input class="rating-radio" type="radio" value="4" name="fields[rating]" id="review-form[star-4]">
+  
+      <label class="rating-radio-label" for="review-form[star-5]">
+        <svg class="icon icon--star_border rating-star rating-radio-star--off"><use xlink:href="{{ 'icons.svg#icon-star_border' | prepend: 'assets/icons/' | relative_url }}"></use>star_border</svg>
+        <svg class="icon icon--star rating-star rating-radio-star--on"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'assets/icons/' | relative_url }}"></use>star</svg>
+      </label>
+      <input class="rating-radio" type="radio" value="5" name="fields[rating]" id="review-form[star-5]">
+    </fieldset>
     <div class="form-group">
       <label class="sr-only" for="comment-form-name"><strong>Your Name</strong></label>
       <input type="text" id="comment-form-name" name="fields[name]" required spellcheck="false" placeholder="Your Name (required)">
