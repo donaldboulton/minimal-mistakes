@@ -1,12 +1,12 @@
 <div class="entry-comments">
   {% if site.repository and site.staticman.branch %}
-  {% if site.data.comments[page.slug] %}
-  <!-- Start static comments -->
-  <div id="comments" class="js-comments comment" itemprop="itemReviewed" itemscope itemtype="http://schema.org/Article">
-    <header class="section-title">
-      <h3>{% if site.data.comments[page.slug].size > 1 %}{{ site.data.comments[page.slug] | size | append: ' ' }}{% endif %}Comments</h3>
-    </header>
-    {% assign comments = site.data.comments[page.slug] | sort | where_exp: 'comment', 'comment[1].replying_to == blank' %}
+    {% if site.data.comments[page.slug] %}
+      <!-- Start static comments -->
+      <div id="comments" class="js-comments">
+        <header class="section-title">
+          <h3>{% if site.data.comments[page.slug].size > 1 %}{{ site.data.comments[page.slug] | size | append: ' ' }}{% endif %}Comments</h3>
+        </header>
+        {% assign comments = site.data.comments[page.slug] | sort | where_exp: 'comment', 'comment[1].replying_to == blank' %}
         {% for comment in comments %}
           {% assign index       = forloop.index %}
           {% assign replying_to = comment[1].replying_to | to_integer %}
@@ -19,10 +19,10 @@
           {% assign message     = comment[1].message %}
           {% include comment.html index=index replying_to=replying_to avatar=avatar email=email name=name url=url date=date title=title message=message %}
         {% endfor %}
-  </div>
-  <!-- End static comments -->
-  {% endif %}
+      </div>
+      <!-- End static comments -->
+    {% endif %}
 
-  {% include comment-form.html %}
+    {% include comment-form.html %}
   {% endif %}
 </div>
