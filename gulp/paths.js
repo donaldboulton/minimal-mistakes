@@ -9,8 +9,8 @@ paths.includesFolderName = '_includes';
 paths.imageFolderName    = 'images';
 paths.layoutsFolderName  = '_layouts';
 paths.scriptFolderName   = 'js';
-paths.siteFolderName     = 'dist';
-paths.sourceFolderName   = 'src';
+paths.siteFolderName     = '_site';
+paths.sassFolderName     = '_sass';
 paths.stylesFolderName   = 'css';
 paths.tempFolderName     = '.tmp';
 
@@ -27,7 +27,6 @@ paths.sassFiles          = paths.sourceDir + paths.assetsDir + paths.stylesFolde
 paths.jsFiles            = paths.sourceDir + paths.assetsDir + paths.scriptFolderName;
 paths.iconFiles          = paths.sourceDir + paths.assetsDir + paths.iconFolderName;
 paths.imageFiles         = paths.sourceDir + paths.assetsDir + paths.imageFolderName;
-paths.fontFiles          = paths.sourceDir + paths.assetsDir + paths.fontFolderName;
 
 // Temp asset files locations.
 paths.assetFilesTemp     = paths.tempDir + paths.assetsFolderName
@@ -35,7 +34,6 @@ paths.sassFilesTemp      = paths.tempDir + paths.assetsDir + paths.stylesFolderN
 paths.jsFilesTemp        = paths.tempDir + paths.assetsDir + paths.scriptFolderName;
 paths.iconFilesTemp      = paths.tempDir + paths.assetsDir + paths.iconFolderName;
 paths.imageFilesTemp     = paths.tempDir + paths.assetsDir + paths.imageFolderName;
-paths.fontFilesTemp      = paths.tempDir + paths.assetsDir + paths.fontFolderName;
 
 // Site asset files locations.
 paths.assetFilesSite     = paths.siteDir + paths.assetsFolderName
@@ -43,7 +41,6 @@ paths.sassFilesSite      = paths.siteDir + paths.assetsDir + paths.stylesFolderN
 paths.jsFilesSite        = paths.siteDir + paths.assetsDir + paths.scriptFolderName;
 paths.iconFilesSite      = paths.siteDir + paths.assetsDir + paths.iconFolderName;
 paths.imageFilesSite     = paths.siteDir + paths.assetsDir + paths.imageFolderName;
-paths.fontFilesSite      = paths.siteDir + paths.assetsDir + paths.fontFolderName;
 
 // Glob patterns by file type.
 paths.sassPattern        = '/**/*.scss';

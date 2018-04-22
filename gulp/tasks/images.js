@@ -31,7 +31,7 @@ gulp.task('images:optimize', () => {
 
 // 'gulp images:lazyload' -- resize and optimize lazyload images
 gulp.task('images:pages', () => {
-  return gulp.src([paths.imageFiles + '/pages' + paths.imagePattern, '!' + paths.imageFiles + '/pages/**/*.{jpg,png}'])
+  return gulp.src([paths.imageFiles + '/pages' + paths.imagePattern, '!' + paths.imageFiles + '/pages/**/*.{jpg,svg}'])
     .pipe(changed(paths.imageFilesSite))
     .pipe(responsive({
       // resize all images
@@ -47,7 +47,7 @@ gulp.task('images:pages', () => {
       }, {
         // copy original image
         width: '100%',
-        rename: { suffix: '-origional' },
+        rename: { suffix: '' },
       }]
     }, {
       // global configuration for all images
@@ -78,7 +78,7 @@ gulp.task('images:photography', () => {
         rename: { suffix: '-1200' },
       }, {
         width: 1920,
-        rename: { suffix: '-origional' },
+        rename: { suffix: '' },
       }]
     }, {
       // global configuration for all images
