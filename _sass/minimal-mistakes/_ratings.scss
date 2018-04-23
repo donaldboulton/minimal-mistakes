@@ -1,7 +1,3 @@
-.form {
-	position: relative;
-}
-
 .form--loading:before {
 	content: '';
 }
@@ -29,16 +25,6 @@
 	z-index: 11;
 }
 
-.review {
-	width: 100%;
-	margin: 20px auto;
-	min-height: 0;
-}
-
-.review__description {
-	margin-top: 1em;
-}
-
 .rating-star {
 	width: 24px;
 	color: #EBBD5B;
@@ -62,9 +48,9 @@
 }
 
 .rating-select {
-	margin-bottom: 20px;
+	margin-bottom: .5em;
 }
 
 .field-group {
-	display: block;
+	display: flex;
 }
