@@ -10,7 +10,7 @@ comments:
   #
   # Names of the fields the form is allowed to submit. If a field that is
   # not here is part of the request, an error will be thrown.
-  allowedFields: ["name", "email", "url", "title", "message", "replying_to"]
+  allowedFields: ["name", "email", "url", "title", "rating", "message", "replying_to"]
 
   # (*) REQUIRED WHEN USING NOTIFICATIONS
   #
@@ -87,7 +87,7 @@ comments:
     #Mailgun domain
     domain: "https://api.mailgun.net/v3/e34znvGa3bO/OEQLyxKXl/xsTH5YIuREGWgzhLlKN1VC5oTiY3/XbBknpnmtDvrPFpE+kyOfjtw3KGDRUcGbzZjmfT+22+KvcBo9KVvwlwYp3gllmFAWI9XaIMlvYvD/fnShL433vECUMTx8ZKOc51QHC2Kp4tjReeC0ZOLISHE="
 
-    fromAddress: "postmaster@donboulton.com"
+    fromAddress: "donaldboulton@gmail.com"
 
   # (*) REQUIRED
   #
