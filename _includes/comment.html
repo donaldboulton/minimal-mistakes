@@ -1,8 +1,4 @@
 <div class="js-comments">
-    {% assign comments = site.data.comments | sort %}
-    
-    {% for comment in comments %}
-      {% assign commentData = comment[1] %}
 <article id="comment{% unless include.r %}{{ index | prepend: '-' }}{% else %}{{ include.index | prepend: '-' }}{% endunless %}" class="js-comment comment {% if include.name == site.author.name %}admin{% endif %} {% unless include.replying_to == 0 %}child{% endunless %}">
   <div class="comment-avatar">
     {% if include.avatar %}
@@ -30,7 +26,7 @@
       {% if include.index %}</a>{% endif %}
     {% endif %}
   </div>
-  <div class="comment-timestamp">
+  <div class="field-group rating-select">
     {% for i in (1..commentData.rating) %}
 			<svg class="icon icon--star rating-star rating-radio-star--on"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'assets/icons/' | relative_url }}"></use></svg>
     {% endfor %}
@@ -44,7 +40,6 @@
     </div>
   {% endunless %}
 </article>
-{% endfor %}
 </div>
 
 {% capture i %}{{ include.index }}{% endcapture %}
