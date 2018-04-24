@@ -19,17 +19,22 @@
       {{ include.name | strip_html }}
     {% endunless %}
   </h3>
+  {% assign commentss = site.data.comments | sort %}
+	
+	{% for comment in comments reversed %}
+		{% assign commentData = comment[1] %}
+  <div class="field-group rating-select">
+      {% for i in (1..commentData.rating) %}
+        <svg class="icon icon--star rating-star rating-radio-star--on"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'assets/icons/' | relative_url }}"></use></svg>
+      {% endfor %} 
+  </div>
+  {% endfor %}
   <div class="comment-timestamp">
     {% if include.date %}
       {% if include.index %}<a href="#comment{% if r %}{{ index | prepend: '-' }}{% else %}{{ include.index | prepend: '-' }}{% endif %}" title="Permalink to this comment">{% endif %}
       <time datetime="{{ include.date | date_to_xmlschema }}">{{ include.date | date: '%B %d, %Y' }}</time>
       {% if include.index %}</a>{% endif %}
     {% endif %}
-  </div>
-  <div class="field-group rating-select">
-    {% for i in (1..commentData.rating) %}
-			<svg class="icon icon--star rating-star rating-radio-star--on"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'assets/icons/' | relative_url }}"></use></svg>
-    {% endfor %}
   </div>
   <div class="comment-content">
     {{ include.message | markdownify }}
