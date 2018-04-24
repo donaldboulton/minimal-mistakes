@@ -29,6 +29,7 @@ comments:
     appid                : "322180367845124"
     num_posts            : # 5 (default)
     colorscheme          : "dark"
+   
 staticman:
   allowedFields          : ['name', 'email', 'url', 'title', 'rating', 'message', 'replying_to']
   branch                 : "gh-pages"
@@ -40,7 +41,16 @@ staticman:
   requiredFields         : ['name', 'email', 'title', 'message']  
   notifications:
     enabled: true
-  #Mailgun
+  reviews:
+    allowedFields        : ['name', 'title', 'description', 'rating']
+    branch               : gh-pages
+    commitMessage        : "Hey human, here is a new entry."
+    filename             : "entry{@timestamp}"
+    format               : yml
+    moderation           : false
+    path                 : "_data/reviews/{options.slug}"
+    requiredFields       : ['name', 'title', 'description', 'rating'] 
+    #Mailgun
     domain               : "donboulton.com"
     smtp_Hostname        : "smtp.mailgun.org"
     api_Base_Url         : "https://api.mailgun.net/v3/donboulton.com"
@@ -89,7 +99,7 @@ algolia:
 
 github                   : [metadata]
 google-maps-api-key      : "AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA"
-
+repository               : "https://github.com/donaldboulton/DWB"
 head_scripts:
   - https://www.googletagmanager.com/gtag/js?id=UA-30162465-2
 

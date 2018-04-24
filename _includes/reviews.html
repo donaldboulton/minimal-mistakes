@@ -1,17 +1,18 @@
 <div class="js-comments">
-		{% assign comments = site.data.comments | sort %}
+	  {% if site.repository and site.staticman.branch %}
+      {% if site.data.reviews[page.slug] %}
+	  	{% assign reviews = site.data.reviews | round %}
 	
-	{% for comment in comments %}
-			{% assign commentData = comment[1] %}
-
-		<article class="entry-related">
-		  <div class="comment-rating">
-		    <p><strong>Rating:</strong>
-		      {% for i in (1..commentData.rating) %}
-   					<svg class="icon icon--star rating-star rating-radio-star--on"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'assets/icons/' | relative_url }}"></use></svg>
-		      {% endfor %}
-				</p>
-			</div>
-		</article>
-	{% endfor %}
+	  	{% for review in reviews %}
+		  	{% assign reviewData = review[1] %}
+		    <div class="rating-rating field-group">
+						<p><strong>Rating:</strong>
+							{% for i in (1..reviewData.rating) %}
+							<svg class="icon icon--star rating-star rating-radio-star--on"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'assets/icons/' | relative_url }}"></use></svg>
+							{% endfor %}
+						</p>
+	  		</div>
+    	{% endfor %}
+	{% endif %}
+{% endif %}
 </div>
