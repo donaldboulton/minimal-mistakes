@@ -6,7 +6,7 @@
   </header>
   <form id="comment-form" class="page__form js-form form" method="post" action="https://api.staticman.net/v2/entry/{{ site.repository }}/{{ site.staticman.branch }}/comments">
     <div class="form-group field-group rating-select">
-      <span>Rating:</span>
+      <span>Page Rating:&nbsp;</span>
       <label class="rating-radio-label" for="comment-form[star-1]">
         <svg class="icon icon--star rating-star rating-radio-star--on"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'assets/icons/' | relative_url }}"></use>star</svg>
       </label>
@@ -77,7 +77,7 @@
           <input type="checkbox" id="comment-form-subscribe" name="options[subscribe]" value="email">&nbsp;Notify me of replies by email.        
       </div>
         <button type="submit" id="comment-form-submit" class="btn btn--primary">Comment</button>
-      </div>
+    </div>
 </form>
 </div>
 <!-- End new comment form -->
