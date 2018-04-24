@@ -5,12 +5,13 @@
 			{% assign commentData = comment[1] %}
 
 		<article class="entry-related">
-		  <div class="mdl-card__supporting-text">
+		  <div class="comment-rating">
 		    <p><strong>Rating:</strong>
 		      {% for i in (1..commentData.rating) %}
    					<svg class="icon icon--star rating-star rating-radio-star--on"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'assets/icons/' | relative_url }}"></use></svg>
 		      {% endfor %}
-		    </p>
+				</p>
+			</div>
 		</article>
 	{% endfor %}
 </div>
