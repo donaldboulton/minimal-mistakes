@@ -1,5 +1,16 @@
 <div class="js-comments">
-<article id="comment{% unless include.r %}{{ index | prepend: '-' }}{% else %}{{ include.index | prepend: '-' }}{% endunless %}" class="js-comment comment {% if include.name == site.author.name %}admin{% endif %} {% unless include.replying_to == 0 %}child{% endunless %}">
+  {% assign comments = site.data.comments | sort %}
+	
+	{% for comment in comments %}
+		{% assign commentData = comment[1] %}
+      <div class="field-group comment-rating">
+          <p><strong>Rating:</strong></p>
+          {% for i in (1..commentData.rating) %}
+            <svg class="icon icon--star rating-star rating-radio-star--on"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'assets/icons/' | relative_url }}"></use></svg>
+          {% endfor %} 
+      </div>
+  {% endfor %}
+<article id="comment {% unless include.r %}{{ index | prepend: '-' }}{% else %}{{ include.index | prepend: '-' }}{% endunless %}" class="js-comment comment {% if include.name == site.author.name %}admin{% endif %} {% unless include.replying_to == 0 %}child{% endunless %}">
   <div class="comment-avatar">
     {% if include.avatar %}
       <noscript><img src="{{ include.avatar }}" alt=""></noscript>
@@ -19,16 +30,6 @@
       {{ include.name | strip_html }}
     {% endunless %}
   </h3>
-  {% assign commentss = site.data.comments | sort %}
-	
-	{% for comment in comments reversed %}
-		{% assign commentData = comment[1] %}
-  <div class="field-group rating-select">
-      {% for i in (1..commentData.rating) %}
-        <svg class="icon icon--star rating-star rating-radio-star--on"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'assets/icons/' | relative_url }}"></use></svg>
-      {% endfor %} 
-  </div>
-  {% endfor %}
   <div class="comment-timestamp">
     {% if include.date %}
       {% if include.index %}<a href="#comment{% if r %}{{ index | prepend: '-' }}{% else %}{{ include.index | prepend: '-' }}{% endif %}" title="Permalink to this comment">{% endif %}
@@ -53,12 +54,11 @@
   {% assign index       = forloop.index | prepend: '-' | prepend: include.index %}
   {% assign replying_to = reply[1].replying_to | to_integer %}
   {% assign avatar      = reply[1].avatar %}
-  {% assign rating      = reply[1].rating %}
   {% assign email       = reply[1].email %}
   {% assign name        = reply[1].name %}
   {% assign url         = reply[1].url %}
   {% assign date        = reply[1].date %}
   {% assign title       = reply[1].title %}
   {% assign message     = reply[1].message %}
-  {% include comment.html index=index replying_to=replying_to avatar=avatar rating=rating email=email name=name url=url date=date title=title message=message %}
+  {% include comment.html index=index replying_to=replying_to avatar=avatar email=email name=name url=url date=date title=title message=message %}
 {% endfor %}
