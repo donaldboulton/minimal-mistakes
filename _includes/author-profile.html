@@ -44,14 +44,14 @@
     <ul class="author__urls social-icons">
       {% if author.location %}
         <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place" target="_blank">
-          <svg class="icon icon--location fa-location" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-location | prepend: 'assets/icons/' | relative_url }}"></use></svg><span itemprop="name">{{ author.location }}</span>
+          <svg class="icon icon--location fa-location" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-location' | prepend: 'assets/icons/' | relative_url }}"></use></svg><span itemprop="name">{{ author.location }}</span>
         </li>
       {% endif %}
 
       {% if author.uri %}
         <li>
           <a href="{{ author.uri }}" itemprop="url" target="_blank">
-            <svg class="icon icon--link fa-link" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-link | prepend: 'assets/icons/' | relative_url }}"></use></svg> {{ site.data.ui-text[site.locale].website_label | default: "Website" }}
+            <svg class="icon icon--link fa-link" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-link' | prepend: 'assets/icons/' | relative_url }}"></use></svg> {{ site.data.ui-text[site.locale].website_label | default: "Website" }}
           </a>
         </li>
       {% endif %}
@@ -60,7 +60,7 @@
         <li>
           <a href="mailto:{{ author.email }}">
             <meta itemprop="email" content="{{ author.email }}" />
-            <svg class="icon icon--email fa-email" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-email | prepend: 'assets/icons/' | relative_url }}"></use></svg> {{ site.data.ui-text[site.locale].email_label | default: "Email" }}
+            <svg class="icon icon--email fa-email" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-email' | prepend: 'assets/icons/' | relative_url }}"></use></svg> {{ site.data.ui-text[site.locale].email_label | default: "Email" }}
           </a>
         </li>
       {% endif %}
@@ -76,14 +76,14 @@
       {% if author.twitter %}
         <li>
           <a href="https://twitter.com/intent/tweet?{% if site.twitter.username %}via={{ site.twitter.username | url_encode }}&{% endif %}text={{ page.title | url_encode }}%20{{ page.url | absolute_url | url_encode }}" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} Twitter">
-            <svg class="icon icon--twitter fa-twitter" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-twitter | prepend: 'assets/icons/' | relative_url }}"></use></svg> <span> Twitter</span></a>
+            <svg class="icon icon--twitter fa-twitter" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-twitter' | prepend: 'assets/icons/' | relative_url }}"></use></svg> <span> Twitter</span></a>
         </li>
       {% endif %}
 
       {% if author.facebook %}
         <li>
           <a target="_blank" href="https://www.facebook.com/{{ author.facebook }}" itemprop="sameAs">
-            <svg class="icon icon--email fa-email" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-email | prepend: 'assets/icons/' | relative_url }}"></use></svg>  Facebook
+            <svg class="icon icon--email fa-email" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-facebook' | prepend: 'assets/icons/' | relative_url }}"></use></svg>  Facebook
           </a>
         </li>
       {% endif %}
@@ -91,7 +91,7 @@
       {% if author.google_plus %}
         <li>
           <a href="https://plus.google.com/share?url={{ page.url | absolute_url | url_encode }}" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} Google Plus">
-            <svg class="icon icon--google-plus fa-google-plus" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-google-plus | prepend: 'assets/icons/' | relative_url }}"></use></svg> Google+
+            <svg class="icon icon--google-plus fa-google-plus" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-google-plus' | prepend: 'assets/icons/' | relative_url }}"></use></svg> Google+
           </a>
         </li>
       {% endif %}
@@ -99,7 +99,7 @@
       {% if author.linkedin %}
         <li>
           <a target="_blank" href="https://www.linkedin.com/in/{{ author.linkedin }}" itemprop="sameAs">
-            <svg class="icon icon--linkedin fa-linkedin" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-linkedin | prepend: 'assets/icons/' | relative_url }}"></use></svg> LinkedIn
+            <svg class="icon icon--linkedin fa-linkedin" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-linkedin' | prepend: 'assets/icons/' | relative_url }}"></use></svg> LinkedIn
           </a>
         </li>
       {% endif %}
@@ -115,7 +115,7 @@
       {% if author.instagram %}
         <li>
           <a target="_blank" href="https://instagram.com/{{ author.instagram }}" itemprop="sameAs">
-            <svg class="icon icon--instagram fa-instagram" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-instagram | prepend: 'assets/icons/' | relative_url }}"></use></svg> Instagram
+            <svg class="icon icon--instagram fa-instagram" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-instagram' | prepend: 'assets/icons/' | relative_url }}"></use></svg> Instagram
           </a>
         </li>
       {% endif %}
@@ -139,7 +139,7 @@
       {% if author.github %}
         <li>
           <a href="https://github.com/{{ author.github }}" itemprop="sameAs" target="_blank">
-            <svg class="icon icon--github fa-github" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-github | prepend: 'assets/icons/' | relative_url }}"></use></svg> GitHub
+            <svg class="icon icon--github fa-github" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-github' | prepend: 'assets/icons/' | relative_url }}"></use></svg> GitHub
           </a>
         </li>
       {% endif %}
@@ -147,15 +147,7 @@
       {% if author.gitlab %}
         <li>
           <a href="https://gitlab.com/{{ author.gitlab }}" itemprop="sameAs" target="_blank">
-            <svg width="16" height="16" class="icon tanuki-logo" viewBox="0 0 36 36">
-              <path class="tanuki-shape tanuki-left-ear" fill="#e24329" d="M2 14l9.38 9v-9l-4-12.28c-.205-.632-1.176-.632-1.38 0z"></path>
-              <path class="tanuki-shape tanuki-right-ear" fill="#e24329" d="M34 14l-9.38 9v-9l4-12.28c.205-.632 1.176-.632 1.38 0z"></path>
-              <path class="tanuki-shape tanuki-nose" fill="#e24329" d="M18,34.38 3,14 33,14 Z"></path>
-              <path class="tanuki-shape tanuki-left-eye" fill="#fc6d26" d="M18,34.38 11.38,14 2,14 6,25Z"></path>
-              <path class="tanuki-shape tanuki-right-eye" fill="#fc6d26" d="M18,34.38 24.62,14 34,14 30,25Z"></path>
-              <path class="tanuki-shape tanuki-left-cheek" fill="#fca326" d="M2 14L.1 20.16c-.18.565 0 1.2.5 1.56l17.42 12.66z"></path>
-              <path class="tanuki-shape tanuki-right-cheek" fill="#fca326" d="M34 14l1.9 6.16c.18.565 0 1.2-.5 1.56L18 34.38z"></path>
-            </svg> GitLab
+            <svg class="icon icon--gitlab fa-gitlab" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-gitlab' | prepend: 'assets/icons/' | relative_url }}"></use></svg> GitLab
           </a>
         </li>
       {% endif %}

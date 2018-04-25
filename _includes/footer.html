@@ -4,55 +4,18 @@
       <li><strong>{{ site.data.ui-text[site.locale].follow_label }}</strong></li>
     {% endif %}
     {% if site.twitter.username %}
-      <li><a href="https://twitter.com/{{ site.twitter.username }}" target="_blank"><svg class="icon icon--twitter fa-twitter" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-twitter | prepend: 'assets/icons/' | relative_url }}"></use></svg> Twitter</a></li>
+      <li><a href="https://twitter.com/{{ site.twitter.username }}" target="_blank"><svg class="icon icon--twitter fa-twitter" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-twitter' | prepend: 'assets/icons/' | relative_url }}"></use></svg> Twitter</a></li>
     {% endif %}
     {% if site.facebook.username %}
-      <li><a href="https://join.slack.com/t/mansbooks/signup" target="_blank"><svg version="1.1" class="icon icon--slack" width="16" height="16" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-        viewBox="0 0 270 270" style="enable-background:new 0 0 270 270;" xml:space="preserve">
-     <style type="text/css">
-       .st0{fill:#ECB32D;}
-       .st1{fill:#63C1A0;}
-       .st2{fill:#E01A59;}
-       .st3{fill:#331433;}
-       .st4{fill:#D62027;}
-       .st5{fill:#89D3DF;}
-       .st6{fill:#258B74;}
-       .st7{fill:#819C3C;}
-     </style>
-     <g>
-       <g>
-         <path class="st0" d="M154.3,87.1c-1.9-5.7-8-8.8-13.7-7c-5.7,1.9-8.8,8-7,13.7l28.1,86.4c1.9,5.3,7.7,8.3,13.2,6.7
-           c5.8-1.7,9.3-7.8,7.4-13.4C182.3,173.3,154.3,87.1,154.3,87.1z"/>
-         <path class="st1" d="M110.8,101.2c-1.9-5.7-8-8.8-13.7-7c-5.7,1.9-8.8,8-7,13.7l28.1,86.4c1.9,5.3,7.7,8.3,13.2,6.7
-           c5.8-1.7,9.3-7.8,7.4-13.4C138.8,187.4,110.8,101.2,110.8,101.2z"/>
-         <path class="st2" d="M189.7,158.6c5.7-1.9,8.8-8,7-13.7c-1.9-5.7-8-8.8-13.7-7l-86.5,28.2c-5.3,1.9-8.3,7.7-6.7,13.2
-           c1.7,5.8,7.8,9.3,13.4,7.4C103.4,186.7,189.7,158.6,189.7,158.6z"/>
-         <path class="st3" d="M114.5,183.1c5.6-1.8,12.9-4.2,20.7-6.7c-1.8-5.6-4.2-12.9-6.7-20.7l-20.7,6.7L114.5,183.1z"/>
-         <path class="st4" d="M158.1,168.9c7.8-2.5,15.1-4.9,20.7-6.7c-1.8-5.6-4.2-12.9-6.7-20.7l-20.7,6.7L158.1,168.9z"/>
-         <path class="st5" d="M175.5,115.1c5.7-1.9,8.8-8,7-13.7c-1.9-5.7-8-8.8-13.7-7l-86.4,28.1c-5.3,1.9-8.3,7.7-6.7,13.2
-           c1.7,5.8,7.8,9.3,13.4,7.4C89.3,143.1,175.5,115.1,175.5,115.1z"/>
-         <path class="st6" d="M100.4,139.5c5.6-1.8,12.9-4.2,20.7-6.7c-2.5-7.8-4.9-15.1-6.7-20.7l-20.7,6.7L100.4,139.5z"/>
-         <path class="st7" d="M143.9,125.4c7.8-2.5,15.1-4.9,20.7-6.7c-2.5-7.8-4.9-15.1-6.7-20.7l-20.7,6.7L143.9,125.4z"/>
-       </g>
-     </g>
-     </svg>
-      Slack</a></li>
+      <li><a href="https://join.slack.com/t/mansbooks/signup" target="_blank"><svg class="icon icon--slack fa-slack" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-slack' | prepend: 'assets/icons/' | relative_url }}"></use></svg> Slack</a></li>
     {% endif %}
     {% if site.author.github %}
-      <li><a href="https://github.com/{{ site.author.github }}" target="_blank"><svg class="icon icon--github fa-github" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-github | prepend: 'assets/icons/' | relative_url }}"></use></svg> GitHub</a></li>
+      <li><a href="https://github.com/{{ site.author.github }}" target="_blank"><svg class="icon icon--github fa-github" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-github' | prepend: 'assets/icons/' | relative_url }}"></use></svg> GitHub</a></li>
     {% endif %}
     {% if site.author.gitlab %}
-      <li><a href="https://gitlab.com/{{ site.author.gitlab }}" target="_blank"><svg width="16" height="16" class="icon tanuki-logo" viewBox="0 0 36 36">
-        <path class="tanuki-shape tanuki-left-ear" fill="#e24329" d="M2 14l9.38 9v-9l-4-12.28c-.205-.632-1.176-.632-1.38 0z"></path>
-        <path class="tanuki-shape tanuki-right-ear" fill="#e24329" d="M34 14l-9.38 9v-9l4-12.28c.205-.632 1.176-.632 1.38 0z"></path>
-        <path class="tanuki-shape tanuki-nose" fill="#e24329" d="M18,34.38 3,14 33,14 Z"></path>
-        <path class="tanuki-shape tanuki-left-eye" fill="#fc6d26" d="M18,34.38 11.38,14 2,14 6,25Z"></path>
-        <path class="tanuki-shape tanuki-right-eye" fill="#fc6d26" d="M18,34.38 24.62,14 34,14 30,25Z"></path>
-        <path class="tanuki-shape tanuki-left-cheek" fill="#fca326" d="M2 14L.1 20.16c-.18.565 0 1.2.5 1.56l17.42 12.66z"></path>
-        <path class="tanuki-shape tanuki-right-cheek" fill="#fca326" d="M34 14l1.9 6.16c.18.565 0 1.2-.5 1.56L18 34.38z"></path>
-      </svg> Gitlab</a></li>
+      <li><a href="https://gitlab.com/{{ site.author.gitlab }}" target="_blank"><svg class="icon icon--gitlab fa-gitlab" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-gitlab' | prepend: 'assets/icons/' | relative_url }}"></use></svg> Gitlab</a></li>
     {% endif %}
-    <li><a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | absolute_url }}{% endif %}"> <svg class="icon icon--rss fa-rss" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-rss | prepend: 'assets/icons/' | relative_url }}"></use></svg> {{ site.data.ui-text[site.locale].feed_label | default: "Feed" }}</a></li>
+    <li><a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | absolute_url }}{% endif %}"> <svg class="icon icon--rss fa-rss" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-rss' | prepend: 'assets/icons/' | relative_url }}"></use></svg> {{ site.data.ui-text[site.locale].feed_label | default: "Feed" }}</a></li>
   </ul>
 </div>
 <div class="page__footer-copyright">&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}. {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }} <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a><a class="text-right align-right" href="/terms">Terms & Privacy Policy</a></div>
