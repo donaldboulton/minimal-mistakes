@@ -15,8 +15,8 @@
 
 .comment-timestamp {
   font-size: 0.8em;
-  padding-left:40px;
-  margin-left: 40px;
+  padding-left: 25px;
+  margin-left: 25px;
 
   a {
     color: inherit;
@@ -26,14 +26,14 @@
 
 .comment-title {
   font-size: 0.8em;
-  padding-left:44px;
-  margin-left: 44px;
+  padding-left: 25px;
+  margin-left: 25px;
 }
 
 .comment-content {
   margin-top: 1em;
-  margin-left: 40px;
-  padding-left: 40px;
+  margin-left: 25px;
+  padding-left: 25px;
 
   > p,
   > ul,
@@ -101,8 +101,8 @@
   margin: 0 0 0.25em;
   font-size: 1.25em;
   line-height: 1;
-  padding-left:40px;
-  margin-left: 40px;
+  padding-left: 25px;
+  margin-left: 25px;
 
   a {
     color: inherit;
@@ -145,6 +145,6 @@
 }
 
 .comment-rating {
-	min-width: 300px;
-	margin-left: 200px;
+  min-width: 300px;
+  display: flex;
 }
