@@ -1,8 +1,8 @@
 <div id="comments" class="js-comments">
 	{% if site.data.comments[page.slug] %}
-	  	{% assign comments = site.data.comments | round %}
+	  	{% assign comments = site.data.comments[rating] | round %}
 	
-	  	{% for comment in comments %}
+	  	{% for comment in comments[rating] %}
 		  	{% assign commentData = comment[1] %}
 		    <div class="rating field-group">
 				<p><strong>Rating:</strong>
