@@ -41,15 +41,6 @@ staticman:
   requiredFields         : ['name', 'email', 'title', 'message']  
   notifications:
     enabled: true
-  reviews:
-    allowedFields        : ['name', 'title', 'description', 'rating']
-    branch               : gh-pages
-    commitMessage        : "Hey human, here is a new entry."
-    filename             : "entry{@timestamp}"
-    format               : yml
-    moderation           : false
-    path                 : "_data/reviews/{options.slug}"
-    requiredFields       : ['name', 'title', 'description', 'rating'] 
     #Mailgun
     domain               : "donboulton.com"
     smtp_Hostname        : "smtp.mailgun.org"
