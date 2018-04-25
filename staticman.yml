@@ -25,7 +25,7 @@ comments:
   # request.
   branch: "gh-pages"
 
-  commitMessage: "New comment"
+  commitMessage: "New Comment on donboulton.com"
 
   # (*) REQUIRED
   #
