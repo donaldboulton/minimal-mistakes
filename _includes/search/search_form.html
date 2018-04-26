@@ -1,15 +1,14 @@
 <div class="search-content__inner-wrap">
-    <link itemprop="url" href="https://donboulton.com"/>
 {%- assign search_provider = site.search_provider | default: "lunr" -%}
 {%- case search_provider -%}
   {%- when "lunr" -%}
-    <div itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction">
-       <meta itemprop="target" content="https://query.donboulton.com/search?q={search_term_string}"/>
-       <input type="text" id="search" class="search-input" tabindex="-1" required value="search_term_string" name="search_term_string" itemprop="query-input" itemscope itemtype="http://schema.org/PropertyValueSpecification" type="text" placeholder="{{ site.data.ui-text[site.locale].search_placeholder_text | default: 'Enter your search term...' }}" />
-    </div>
+    <input type="text" id="search" class="search-input" tabindex="-1" placeholder="{{ site.data.ui-text[site.locale].search_placeholder_text | default: 'Enter your search term...' }}" />
     <div id="results" class="results"></div>
   {%- when "algolia" -%}
     <div class="search-searchbar"></div>
     <div class="search-hits"></div>
 {%- endcase -%}
 </div>
+<script type="application/ld+json">
+  [{"@context":"http://schema.org","@type":"WebSite","url":"https://donboulton.com","potentialAction":{"@type":"SearchAction","target":"https://query.conboulton.com/search?q={q}","query-input":"required name=q"}},{"@context":"http://schema.org","@type":"SoftwareApplication","name":"Donald Boulton","operatingSystem":"Jekyll","applicationCategory":"http://schema.org/WebApplication","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.6","ratingCount":"8864"},"offers":{"@type":"Offer","price":"1.00","priceCurrency":"USD"}}]
+</script>
