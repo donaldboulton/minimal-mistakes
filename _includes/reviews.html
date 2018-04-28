@@ -5,8 +5,8 @@
 			{% assign reviewData = review[1] %}
 	
 			<article>
-				<div class="field-group">
-			    		<span>Rating: </span>						
+				<div class="field-group form-group rating-select">
+			    		<span>Rating:</span>						
 		  				{% for i in (1..reviewData.rating) %}
     						<svg class="icon icon--star rating-star rating-radio-star--on"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'assets/icons/' | relative_url }}"></use></svg>
 					  	{% endfor %}
