@@ -1,16 +1,25 @@
-<div id="comments" class="js-comments">
-	{% if site.data.comments[page.slug] %}
-	  	{% assign comments = site.data.comments[rating] | round %}
+<div class="js-comments">
+	{% assign reviews = site.data.reviews | sort %}
+		
+		{% for review in reviews reversed %}
+			{% assign reviewData = review[1] %}
 	
-	  	{% for comment in comments[rating] %}
-		  	{% assign commentData = comment[1] %}
-		    <div class="rating field-group">
-				<p><strong>Rating:</strong>
-					{% for i in (1..commentData.rating) %}
-				    	<svg class="icon icon--star rating-star rating-radio-star--on"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'assets/icons/' | relative_url }}"></use></svg>
-					{% endfor %}
-				</p>
-	  		</div>
-    	{% endfor %}
-	{% endif %}
+			<article>
+				<div class="field-group">
+			    		<span>Rating: </span>						
+		  				{% for i in (1..reviewData.rating) %}
+    						<svg class="icon icon--star rating-star rating-radio-star--on"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'assets/icons/' | relative_url }}"></use></svg>
+					  	{% endfor %}
+				</div>
+				<div class="form-group">
+					<h2 class="title-text">{{ reviewData.title }}</h2>
+				</div>
+				<div class="form-group">
+					<p>Review by: {{ reviewData.name }}</p>
+					<div class="form-group">
+						{{ reviewData.description | markdownify }}
+					</div>
+				</div>
+			</article>
+		{% endfor %}
 </div>

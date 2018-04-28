@@ -30,18 +30,22 @@ layout: default
         </header>
       {% endunless %}
 
-      <section class="page__content" itemprop="text">
-        {% if page.toc %}
+      <section class="page__content" itemprop="text">        
           <aside class="sidebar__right">
-            <nav class="toc">
-              <header><h4 class="nav__title"><svg class="icon icon--file" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-file' | prepend: 'assets/icons/' | relative_url }}"></use></svg> {{ page.toc_label | default: site.data.ui-text[site.locale].toc_label }}</h4></header>
-              {% include toc.html sanitize=true html=content h_min=2 h_max=3 class="toc__menu" %}
-            </nav>
+            {% if page.toc %}
+               <nav class="toc">
+                 <header><h4 class="nav__title"><svg class="icon icon--file" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-file' | prepend: 'assets/icons/' | relative_url }}"></use></svg> {{ page.toc_label | default: site.data.ui-text[site.locale].toc_label }}</h4></header>
+                 {% include toc.html sanitize=true html=content h_min=2 h_max=3 class="toc__menu" %}
+               </nav>
+            {% endif %}
             {% if page.adds %}
                {% include google-adds.html %}
             {% endif %}
-          </aside>
-        {% endif %}
+            {% if page.reviews %}
+               {% include reviews-new.html %}
+               {% include reviews.html %}
+            {% endif %}
+          </aside>        
         {{ content }}
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>

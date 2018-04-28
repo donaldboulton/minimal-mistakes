@@ -4,6 +4,7 @@ title: "Sitemap"
 permalink: /sitemap/
 toc: true
 adds: true
+reviews: true
 support: [adds]
 ---
 

@@ -108,34 +108,16 @@ comments:
   reCaptcha:
     enabled: true
     siteKey: "6Lf15UcUAAAAALh_yk6LPPErNxT-Qd-k2efKcJxR"
-    # Encrypt reCaptcha secret key using Staticman /encrypt endpoint
-    # For more information, https://staticman.net/docs/encryption
     secret: "q0fksxUG8S3yendptK4byPIrlKUWhVPPn+zMA+2hjPd3ekaOPrwK04Ig0hHlyneN3z6zfH6edP7zk4kQEIHy8OOYADVmBAOX8US4dKusdXvoxHBFbdZPdC9o/FgS1eUkcrsn4g8cuXr4HUxz9/hoiMg2gHn0+5W99KoxR8pL+54="
 
 reviews:
   provider: "staticman_v2"
-  # (*) REQUIRED
-  #
-  # Names of the fields the form is allowed to submit. If a field that is
-  # not here is part of the request, an error will be thrown.
   allowedFields: ['name', 'title', 'description', 'rating']
   allowedOrigins: ["https://donboulton.com"]
-
-  # (*) REQUIRED
-  #
-  # Name of the branch being used. Must match the one sent in the URL of the
-  # request.
   branch: "gh-pages"
-
   commitMessage: "New Rating on donboulton.com"
-
-  # (*) REQUIRED
-  #
-  # Destination path (filename) for the data files. Accepts placeholders.
-  filename: "rating-{@timestamp}"
-
+  filename: "entry{@timestamp}"
+  moderation: false
   requiredFields: ['name', 'title', 'description', 'rating']
-  # The format of the generated data files. Accepted values are "json", "yaml"
-  # or "frontmatter"
   format: "yml"
-  path: "_data/reviews/{options.slug}"
+  path: "_data/reviews"
