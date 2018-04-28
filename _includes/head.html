@@ -81,9 +81,12 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
     {% else %}
       {% capture script_path %}{{ script | relative_url }}{% endcapture %}
     {% endif %}
-<script src="{{ script_path }}"></script>
+      <script src="{{ script_path }}"></script>
   {% endfor %}
 {% endif %}
 {% if page.support contains 'gallery' %}
-<link rel="stylesheet" href="{{ '/assets/dist/css/lightgallery.min.css' | relative_url }}">
+   <link rel="stylesheet" href="{{ '/assets/dist/css/lightgallery.min.css' | relative_url }}">
+{% endif %}
+{% if page.support contains 'maps' %}  
+   <link rel="stylesheet" href="{{ '/assets/css/google-places.css' | relative_url }}">
 {% endif %}

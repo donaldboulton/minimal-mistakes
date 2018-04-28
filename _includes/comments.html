@@ -10,7 +10,6 @@
         {% for comment in comments %}
           {% assign index       = forloop.index %}
           {% assign replying_to = comment[1].replying_to | to_integer %}
-          {% assign rating      = comment[1].rating %}
           {% assign avatar      = comment[1].avatar %}
           {% assign email       = comment[1].email %}
           {% assign name        = comment[1].name %}
@@ -18,7 +17,7 @@
           {% assign date        = comment[1].date %}
           {% assign title       = comment[1].title %}
           {% assign message     = comment[1].message %}
-          {% include comment.html index=index replying_to=replying_to rating=rating avatar=avatar email=email name=name url=url date=date title=title message=message %}
+          {% include comment.html index=index replying_to=replying_to avatar=avatar email=email name=name url=url date=date title=title message=message %}
         {% endfor %}
       </div>
       <!-- End static comments -->
