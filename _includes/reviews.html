@@ -5,20 +5,25 @@
 			{% assign reviewData = review[1] %}
 	
 			<article>
-				<div class="field-group form-group rating-select">
-			    		<span>Rating:</span>						
+				<div class="form-group">
+	                <p>Rating:</p>
+     				<div class="field-group">			    								
 		  				{% for i in (1..reviewData.rating) %}
     						<svg class="icon icon--star rating-star rating-radio-star--on"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'assets/icons/' | relative_url }}"></use></svg>
-					  	{% endfor %}
-				</div>
-				<div class="form-group">
-					<h2 class="title-text">{{ reviewData.title }}</h2>
-				</div>
-				<div class="form-group">
-					<p>Review by: {{ reviewData.name }}</p>
-					<div class="form-group">
-						{{ reviewData.description | markdownify }}
+						  {% endfor %}
 					</div>
+				</div>
+				<div class="form-group">
+					<p>Title:</p>
+					<h3 class="title-text">{{ reviewData.title }}</h3>
+				</div>
+				<div class="form-group">
+					<p>Review by:</p>
+					<p>{{ reviewData.name }}</p>
+				<div class="form-group">
+					<p>Description:</p>
+                    <p>{{ reviewData.description | markdownify }}</p>
+				</div>
 				</div>
 			</article>
 		{% endfor %}
