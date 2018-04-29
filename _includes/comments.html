@@ -1,8 +1,8 @@
-<div class="entry-comments">
+<div id="comments" class="entry-comments">
   {% if site.repository and site.staticman.branch %}
     {% if site.data.comments[page.slug] %}
     <!-- Start static comments -->
-      <div id="comments" class="js-comments">
+      <div class="js-comments">
         <header class="section-title">
           <h3>{% if site.data.comments[page.slug].size > 1 %}{{ site.data.comments[page.slug] | size | append: ' ' }}{% endif %}Comments</h3>
         </header>
