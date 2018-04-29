@@ -23,6 +23,12 @@ category:
   - Credits
   - Donald Boulton
 
+image:
+  cover: true
+  path: &image /assets/images/pages/digital_box_1400-compressor.jpg
+  feature: *image
+  thumbnail: /assets/images/pages/digital_box_1400-compressor.jpg
+
 header:
   image: /assets/images/pages/digital_box_1400-compressor.jpg
   teaser: /assets/images/pages/digital_box_1400-compressor.jpg
