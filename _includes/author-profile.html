@@ -96,14 +96,6 @@
         </li>
       {% endif %}
 
-      {% if author.linkedin %}
-        <li>
-          <a rel="me" target="_blank" href="https://www.linkedin.com/in/{{ author.linkedin }}" itemprop="sameAs">
-            <svg class="icon icon--linkedin fa-linkedin" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-linkedin' | prepend: 'assets/icons/' | relative_url }}"></use></svg> LinkedIn
-          </a>
-        </li>
-      {% endif %}
-
       {% if author.xing %}
         <li>
           <a target="_blank" href="https://www.xing.com/profile/{{ author.xing }}" itemprop="sameAs">
