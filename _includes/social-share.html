@@ -5,4 +5,11 @@
   <a rel="me" href="https://twitter.com/intent/tweet?{% if site.twitter.username %}via={{ site.twitter.username | url_encode }}&{% endif %}text={{ page.title | url_encode }}%20{{ page.url | absolute_url | url_encode }}" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} Twitter"> <svg class="icon icon--twitter"><use xlink:href="{{ 'icons.svg#icon-twitter' | prepend: 'assets/icons/' | relative_url }}"></use></svg><span> Twitter</span></a>
   <a rel="me" href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | url_encode }}" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} Facebook"> <svg class="icon icon--facebook"><use xlink:href="{{ 'icons.svg#icon-facebook' | prepend: 'assets/icons/' | relative_url }}"></use></svg><span> Facebook</span></a>
   <a rel="me" href="https://plus.google.com/share?url={{ page.url | absolute_url | url_encode }}" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} Google Plus"><svg class="icon icon--google-plus"><use xlink:href="{{ 'icons.svg#icon-google-plus' | prepend: 'assets/icons/' | relative_url }}"></use></svg><span> Google+</span></a>
+  {% if site.pingback_url %}
+    <link rel="pingback" href="{{ site.pingback_url }}">
+  {% endif %}
+
+  {% if site.webmention_url %}
+    <link rel="webmention" href="{{ site.webmention_url }}">
+  {% endif %}
 </section>

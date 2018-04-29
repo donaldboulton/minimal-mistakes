@@ -29,7 +29,10 @@ comments:
     appid                : "322180367845124"
     num_posts            : # 5 (default)
     colorscheme          : "dark"
-   
+
+reviews:
+  privider               : "staticman_v2"
+  
 staticman:
   allowedFields          : ['name', 'email', 'url', 'title', 'message', 'replying_to']
   branch                 : "gh-pages"
@@ -119,6 +122,9 @@ social:
     - "https://facebook.com/don-boulton"
     - "https://plus.google.com/u/0/+DonaldBoulton"
 
+pingback_url            : "https://webmention.io/donboulton.com/xmlrpc"
+webmention_url          : "https://webmention.io/donboulton.com/webmention"
+micropub_url            : ""
 # Analytics
 analytics:
   provider               : "google"
@@ -163,7 +169,7 @@ author:
 extlinks:
   attributes: {rel: nofollow, target: _blank}
   rel_exclude: ['donaldboulton.github.io/popcorn/', 'twitter.com']
-
+strict_front_matter      : true
 # Reading Files
 include:
   - .htaccess

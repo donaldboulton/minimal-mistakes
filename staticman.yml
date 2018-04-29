@@ -116,8 +116,8 @@ reviews:
   allowedOrigins: ["https://donboulton.com"]
   branch: "gh-pages"
   commitMessage: "New Rating on donboulton.com"
-  filename: "review-{@timestamp}"
+  filename: "entry{@timestamp}"
   moderation: false
   requiredFields: ['name', 'title', 'description', 'rating']
   format: "yml"
-  path: "_data/reviews/{options.slug}"
+  path: "_data/reviews"
