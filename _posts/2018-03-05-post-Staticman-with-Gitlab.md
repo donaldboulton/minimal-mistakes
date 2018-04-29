@@ -38,6 +38,7 @@ comments: true
 share: true
 related: true
 adds: true
+reviews: true
 ---
 
 {% include octo-arm.html %}

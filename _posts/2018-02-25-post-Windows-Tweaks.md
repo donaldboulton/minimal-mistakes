@@ -8,6 +8,7 @@ search: true
 author: Donald Boulton
 author_profile: true
 adds: true
+reviews: true
 tags:
   - Windows Tweaks
   - Windows 10
