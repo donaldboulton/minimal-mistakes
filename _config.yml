@@ -122,6 +122,8 @@ social:
     - "https://facebook.com/don-boulton"
     - "https://plus.google.com/u/0/+DonaldBoulton"
 
+webmention:
+  api_key               : "jZUrcysy0Lrx2JjkchWJuQ"
 pingback_url            : "https://webmention.io/donboulton.com/xmlrpc"
 webmention_url          : "https://webmention.io/donboulton.com/webmention"
 micropub_url            : ""
