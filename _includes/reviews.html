@@ -1,10 +1,13 @@
-<div class="js-comments">
+<div class="js-comments form">
 	{% assign reviews = site.data.reviews | sort %}
 		
 		{% for review in reviews reversed %}
 			{% assign reviewData = review[1] %}
 	
 			<article>
+				<header class="section-title">
+					<h3>Review</h3>
+				</header>
 				<div class="form-group">	            
      				<div class="field-group">			    								
 							<span>Rating:</span>
