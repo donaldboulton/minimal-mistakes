@@ -43,8 +43,13 @@ layout: default
             {% endif %}
             {% if page.reviews %}
                {% include reviews-new.html %}
-               {% include reviews.html %}
-               {% include reviews-page.html %}
+                <div>
+                  <header class="section-title">
+                     <h3>Site Reviews</h3>
+                  </header>
+                  {% include reviews.html %}
+                </div>
+                {% include reviews-page.html %}
             {% endif %}
           </aside>        
         {{ content }}

@@ -5,7 +5,7 @@
 		{% for review in reviews %}
 			{% assign reviewData = review[1] %}
 	
-			<article itemscope itemtype="http://schema.org/Review">
+			<article itemscope itemtype="http://schema.org/Review" class="form">
 				<span style="display: none;" itemprop="itemReviewed" itemscope itemtype="http://schema.org/Thing">
 					<meta itemprop="name">{{ page.url }}</meta>
 				</span>
