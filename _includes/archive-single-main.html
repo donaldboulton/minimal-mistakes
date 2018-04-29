@@ -53,4 +53,20 @@
     <!-- {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 160 }}</p>{% endif %} -->
     {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html }}[&nbsp;<a href="{{ post.url | relative_url }}">Read&nbsp;More...</a>&nbsp;]</p>{% endif %}
   </article>
+  <aside class="sidebar__right">
+    {% if page.toc %}
+       <nav class="toc">
+         <header><h4 class="nav__title"><svg class="icon icon--file" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-file' | prepend: 'assets/icons/' | relative_url }}"></use></svg> {{ page.toc_label | default: site.data.ui-text[site.locale].toc_label }}</h4></header>
+         {% include toc.html sanitize=true html=content h_min=2 h_max=3 class="toc__menu" %}
+       </nav>
+    {% endif %}
+    {% if page.adds %}
+       {% include google-adds.html %}
+    {% endif %}
+    {% if page.reviews %}
+       {% include reviews-new.html %}
+       {% include reviews.html %}
+       {% include reviews-page.html %}
+    {% endif %}
+  </aside>
 </div>
