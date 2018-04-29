@@ -8,6 +8,7 @@ Disallow: /page-archive/
 Disallow: /tag/
 Disallow: /tags/
 Disallow: /year-archive/
+Disallow: /archive/
 Disallow: /cdn-cgi/
 
 User-agent: Twitterbot
