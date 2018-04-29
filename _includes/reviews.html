@@ -21,19 +21,18 @@
     						<svg class="icon icon--star rating-star rating-radio-star--on" itemprop="ratingValue"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'assets/icons/' | relative_url }}"></use></svg>
 						  {% endfor %}
 					</div>
-					<meta style="display: none;" itemprop="bestRating">5</meta>
-					<meta style="display: none;" itemprop="worstRating">1</meta>
+					<meta class="hidden" itemprop="bestRating">5</meta>
+					<meta class="hidden" itemprop="worstRating">1</meta>
 				</div>				
 				<div class="form-group" itemprop="author" itemscope itemtype="http://schema.org/Person">
-					<p>Review by:</p>
-					<p itemprop="name">{{ reviewData.name }}</p>
+					<span> itemprop="name"> {{ reviewData.name }}</span>
 				</div>
 				<div class="form-group">
 					<p>Description:</p>
                     <p>{{ reviewData.description | markdownify }}</p>
 				</div>
 				<span style="display: none;" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-					<meta itemprop="name" content="donboulton.com">
+					<meta class="hidden" itemprop="name" content="donboulton.com">
 				</span>
 			</article>
 		{% endfor %}
