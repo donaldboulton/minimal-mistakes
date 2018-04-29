@@ -66,6 +66,7 @@ staticman:
 reCaptcha:
   siteKey                : "6Lf15UcUAAAAALh_yk6LPPErNxT-Qd-k2efKcJxR"
   secret                 : "q0fksxUG8S3yendptK4byPIrlKUWhVPPn+zMA+2hjPd3ekaOPrwK04Ig0hHlyneN3z6zfH6edP7zk4kQEIHy8OOYADVmBAOX8US4dKusdXvoxHBFbdZPdC9o/FgS1eUkcrsn4g8cuXr4HUxz9/hoiMg2gHn0+5W99KoxR8pL+54="
+  
 atom_feed:
   path                   : # blank (default) uses feed.xml
 search                   : true

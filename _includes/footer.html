@@ -4,16 +4,16 @@
       <li><strong>{{ site.data.ui-text[site.locale].follow_label }}</strong></li>
     {% endif %}
     {% if site.twitter.username %}
-      <li><a href="https://twitter.com/{{ site.twitter.username }}" target="_blank"><svg class="icon icon--twitter fa-twitter" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-twitter' | prepend: 'assets/icons/' | relative_url }}"></use></svg> Twitter</a></li>
+      <li><a rel="me" href="https://twitter.com/{{ site.twitter.username }}" target="_blank"><svg class="icon icon--twitter fa-twitter" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-twitter' | prepend: 'assets/icons/' | relative_url }}"></use></svg> Twitter</a></li>
     {% endif %}
     {% if site.facebook.username %}
-      <li><a href="https://join.slack.com/t/mansbooks/signup" target="_blank"><svg class="icon icon--slack fa-slack" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-slack' | prepend: 'assets/icons/' | relative_url }}"></use></svg> Slack</a></li>
+      <li><a rel="me" href="https://join.slack.com/t/mansbooks/signup" target="_blank"><svg class="icon icon--slack fa-slack" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-slack' | prepend: 'assets/icons/' | relative_url }}"></use></svg> Slack</a></li>
     {% endif %}
     {% if site.author.github %}
-      <li><a href="https://github.com/{{ site.author.github }}" target="_blank"><svg class="icon icon--github fa-github" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-github' | prepend: 'assets/icons/' | relative_url }}"></use></svg> GitHub</a></li>
+      <li><a rel="me" href="https://github.com/{{ site.author.github }}" target="_blank"><svg class="icon icon--github fa-github" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-github' | prepend: 'assets/icons/' | relative_url }}"></use></svg> GitHub</a></li>
     {% endif %}
     {% if site.author.gitlab %}
-      <li><a href="https://gitlab.com/{{ site.author.gitlab }}" target="_blank"><svg class="icon icon--gitlab fa-gitlab" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-gitlab' | prepend: 'assets/icons/' | relative_url }}"></use></svg> Gitlab</a></li>
+      <li><a rel="me" href="https://gitlab.com/{{ site.author.gitlab }}" target="_blank"><svg class="icon icon--gitlab fa-gitlab" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-gitlab' | prepend: 'assets/icons/' | relative_url }}"></use></svg> Gitlab</a></li>
     {% endif %}
     <li><a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | absolute_url }}{% endif %}"> <svg class="icon icon--rss fa-rss" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-rss' | prepend: 'assets/icons/' | relative_url }}"></use></svg> {{ site.data.ui-text[site.locale].feed_label | default: "Feed" }}</a></li>
   </ul>

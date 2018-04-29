@@ -1,7 +1,8 @@
 <div class="js-comments">
-	{% assign reviews = site.data.reviews | sort %}
+	{% if site.data.reviews[page.slug] %}
+	{% assign reviews = site.data.reviews[page.slug] | sort %}
 		
-		{% for review in reviews reversed %}
+		{% for review in reviews %}
 			{% assign reviewData = review[1] %}
 	
 			<article>
@@ -13,7 +14,7 @@
 							<span>Rating:</span>
 		  				{% for i in (1..reviewData.rating) %}
     						<svg class="icon icon--star rating-star rating-radio-star--on"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'assets/icons/' | relative_url }}"></use></svg>
-						  {% endfor %}
+						{% endfor %}
 					</div>
 				</div>
 				<div class="form-group">
@@ -29,4 +30,12 @@
 				</div>
 			</article>
 		{% endfor %}
+		{% for review in reviews %}
+            {% assign rating = review[1].rating %}
+    		{% assign title = review[1].title %}
+            {% assign name = review[1].name %}
+    		{% assign description = review[1].description %}
+	    {% endfor %}
+
+	{% endif %}
 </div>

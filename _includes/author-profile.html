@@ -75,14 +75,14 @@
 
       {% if author.twitter %}
         <li>
-          <a href="https://twitter.com/intent/tweet?{% if site.twitter.username %}via={{ site.twitter.username | url_encode }}&{% endif %}text={{ page.title | url_encode }}%20{{ page.url | absolute_url | url_encode }}" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} Twitter">
+          <a rel="me" href="https://twitter.com/intent/tweet?{% if site.twitter.username %}via={{ site.twitter.username | url_encode }}&{% endif %}text={{ page.title | url_encode }}%20{{ page.url | absolute_url | url_encode }}" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} Twitter">
             <svg class="icon icon--twitter fa-twitter" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-twitter' | prepend: 'assets/icons/' | relative_url }}"></use></svg> <span> Twitter</span></a>
         </li>
       {% endif %}
 
       {% if author.facebook %}
         <li>
-          <a target="_blank" href="https://www.facebook.com/{{ author.facebook }}" itemprop="sameAs">
+          <a rel="me" target="_blank" href="https://www.facebook.com/{{ author.facebook }}" itemprop="sameAs">
             <svg class="icon icon--email fa-email" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-facebook' | prepend: 'assets/icons/' | relative_url }}"></use></svg>  Facebook
           </a>
         </li>
@@ -90,7 +90,7 @@
 
       {% if author.google_plus %}
         <li>
-          <a href="https://plus.google.com/share?url={{ page.url | absolute_url | url_encode }}" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} Google Plus">
+          <a rel="me" href="https://plus.google.com/share?url={{ page.url | absolute_url | url_encode }}" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} Google Plus">
             <svg class="icon icon--google-plus fa-google-plus" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-google-plus' | prepend: 'assets/icons/' | relative_url }}"></use></svg> Google+
           </a>
         </li>
@@ -98,7 +98,7 @@
 
       {% if author.linkedin %}
         <li>
-          <a target="_blank" href="https://www.linkedin.com/in/{{ author.linkedin }}" itemprop="sameAs">
+          <a rel="me" target="_blank" href="https://www.linkedin.com/in/{{ author.linkedin }}" itemprop="sameAs">
             <svg class="icon icon--linkedin fa-linkedin" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-linkedin' | prepend: 'assets/icons/' | relative_url }}"></use></svg> LinkedIn
           </a>
         </li>
@@ -138,7 +138,7 @@
 
       {% if author.github %}
         <li>
-          <a href="https://github.com/{{ author.github }}" itemprop="sameAs" target="_blank">
+          <a rel="me" href="https://github.com/{{ author.github }}" itemprop="sameAs" target="_blank">
             <svg class="icon icon--github fa-github" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-github' | prepend: 'assets/icons/' | relative_url }}"></use></svg> GitHub
           </a>
         </li>
@@ -146,7 +146,7 @@
 
       {% if author.gitlab %}
         <li>
-          <a href="https://gitlab.com/{{ author.gitlab }}" itemprop="sameAs" target="_blank">
+          <a rel="me" href="https://gitlab.com/{{ author.gitlab }}" itemprop="sameAs" target="_blank">
             <svg class="icon icon--gitlab fa-gitlab" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-gitlab' | prepend: 'assets/icons/' | relative_url }}"></use></svg> GitLab
           </a>
         </li>
@@ -154,7 +154,7 @@
 
       {% if author.stackoverflow %}
         <li>
-          <a href="https://www.stackoverflow.com/users/{{ author.stackoverflow }}" itemprop="sameAs" target="_blank">
+          <a rel="me" href="https://www.stackoverflow.com/users/{{ author.stackoverflow }}" itemprop="sameAs" target="_blank">
             <svg class="icon fa-stack-overflow" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M293.7 300l-181.2-84.5 16.7-36.5 181.3 84.7-16.8 36.3zm48-76L188.2 95.7l-25.5 30.8 153.5 128.3 25.5-30.8zm39.6-31.7L262 32l-32 24 119.3 160.3 32-24zM290.7 311L95 269.7 86.8 309l195.7 41 8.2-39zm31.6 129H42.7V320h-40v160h359.5V320h-40v120zm-39.8-80h-200v39.7h200V360z"/></svg> Stack Overflow
           </a>
         </li>
@@ -203,7 +203,7 @@
       {% if author.youtube %}
         {% if author.youtube contains "://" %}
           <li>
-            <a href="{{ author.youtube }}" itemprop="sameAs" target="_blank">
+            <a rel="me" href="{{ author.youtube }}" itemprop="sameAs" target="_blank">
               <svg class="icon fa-youtube" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg> YouTube
             </a>
           </li>
@@ -242,7 +242,7 @@
 
       {% if author.codepen %}
         <li>
-          <a href="https://codepen.io/{{ author.codepen }}" itemprop="sameAs" target="_blank">
+          <a rel="me" href="https://codepen.io/{{ author.codepen }}" itemprop="sameAs" target="_blank">
             <i class="fab fa-fw fa-codepen" aria-hidden="true"></i> CodePen
           </a>
         </li>
