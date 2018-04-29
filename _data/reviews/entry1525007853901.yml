@@ -1,0 +1,12 @@
+_id: ad474810-4baf-11e8-b5e0-f59c1fc4a733
+rating: '5'
+name: Donald Boulton
+title: Testing staticman v2
+description: >-
+  Making this more specific to Jekyll performance using Gulp, Grunt and a Travis
+  build. Using .svg sprite sheets for icons and site specific images
+date: '2018-04-29T13:17:33.813Z'
+pageless: true
+templateKey: comments
+timestamp: 1525007853
+tags: []
