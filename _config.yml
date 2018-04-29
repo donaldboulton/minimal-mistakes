@@ -31,7 +31,7 @@ comments:
     colorscheme          : "dark"
    
 staticman:
-  allowedFields          : ['name', 'email', 'url', 'title', 'rating', 'message', 'replying_to']
+  allowedFields          : ['name', 'email', 'url', 'title', 'message', 'replying_to']
   branch                 : "gh-pages"
   commitMessage          : "New comment."
   filename               : "comment-{@timestamp}"
