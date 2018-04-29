@@ -5,29 +5,37 @@
 		{% for review in reviews %}
 			{% assign reviewData = review[1] %}
 	
-			<article>
+			<article itemscope itemtype="http://schema.org/Review">
+				<span style="display: none;" itemprop="itemReviewed" itemscope itemtype="http://schema.org/Thing">
+					<meta itemprop="name">{{ page.url }}</meta>
+				</span>
 				<header class="section-title">
 					<h3>Reviews</h3>
 				</header>
-				<div class="form-group form">	            
-     				<div class="field-group1">			    								
-							<span>Rating:</span>
-		  				{% for i in (1..reviewData.rating) %}
-    						<svg class="icon icon--star rating-star rating-radio-star--on"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'assets/icons/' | relative_url }}"></use></svg>
-						{% endfor %}
-					</div>
-				</div>
 				<div class="form-group">
 					<h3 class="title-text">{{ reviewData.title }}</h3>
 				</div>
-				<div class="form-group">
+				<div class="form-group form">	            
+					<div class="field-group1" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">			    								
+							<span>Rating:</span>
+		  				{% for i in (1..reviewData.rating) %}
+    						<svg class="icon icon--star rating-star rating-radio-star--on" itemprop="ratingValue"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'assets/icons/' | relative_url }}"></use></svg>
+						{% endfor %}
+					</div>
+					<meta style="display: none;" itemprop="bestRating">5</meta>
+					<meta style="display: none;" itemprop="worstRating">1</meta>
+				</div>
+				<div class="form-group" itemprop="author" itemscope itemtype="http://schema.org/Person">
 					<p>Review by:</p>
-					<p>{{ reviewData.name }}</p>
+					<p itemprop="name">{{ reviewData.name }}</p>
+				</div>
 				<div class="form-group">
 					<p>Description:</p>
                     <p>{{ reviewData.description | markdownify }}</p>
-				</div>
-				</div>
+				</div>				
+				<span style="display: none;" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+					<meta itemprop="name" content="donboulton.com">
+				</span>
 			</article>
 		{% endfor %}
 		{% for review in reviews %}
