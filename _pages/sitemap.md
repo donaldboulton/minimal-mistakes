@@ -17,18 +17,14 @@ header:
   teaser: /assets/images/pages/sitemap-320.png
 ---
 
-A list of all the posts and pages found on this site. For you robots out there is an [XML version]({{ "sitemap.xml" | absolute_url }}) and a [Atom Version]({{ "atom.xml" | absolute_url }}) or a [Json Feed]({{ "feed.json" | absolute_url }}) available for digesting as well.
+A Sitemap Listing of all posts.
+
+For a list of all posts and pages found on this site. Or for your viewing and or all robots out there. Here is an [XML version]({{ "sitemap.xml" | absolute_url }}) and a [Atom Version]({{ "atom.xml" | absolute_url }}) or a [Json Feed]({{ "feed.json" | absolute_url }}) available for digesting as well.
 
 # Posts
 
 {% for post in site.posts %}
   {% include archive-single.html %}
-{% endfor %}
-
-# Pages
-
-{% for pages in site.pages %}
-  {% include archive-page-single.html %}
 {% endfor %}
 
 {% capture written_label %}'None'{% endcapture %}

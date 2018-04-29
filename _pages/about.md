@@ -25,13 +25,13 @@ category:
 
 image:
   cover: true
-  path: &image /assets/images/pages/digital_box_1400-compressor.jpg
+  path: &image /assets/images/pages/digital-box-compressor.jpg
   feature: *image
-  thumbnail: /assets/images/pages/digital_box_1400-compressor.jpg
+  thumbnail: /assets/images/pages/digital-box-compressor-320.jpg
 
 header:
-  image: /assets/images/pages/digital_box_1400-compressor.jpg
-  teaser: /assets/images/pages/digital_box_1400-compressor.jpg
+  image: /assets/images/pages/digital-box-compressor.jpg
+  teaser: /assets/images/pages/digital-box-compressor-320.jpg
 
 sidebar:
   - title: "Rockwell RV"
