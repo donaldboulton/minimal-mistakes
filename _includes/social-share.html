@@ -9,5 +9,4 @@
 
   <a rel="me" href="https://plus.google.com/share?url={{ page.url | absolute_url | url_encode }}" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} Google Plus"><svg class="icon icon--google-plus"><use xlink:href="{{ 'icons.svg#icon-google-plus' | prepend: 'assets/icons/' | relative_url }}"></use></svg><span> Google+</span></a>
 
-  <a rel="me" href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.url | absolute_url | url_encode }}" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} LinkedIn"> <svg class="icon icon--linkedin"><use xlink:href="{{ 'icons.svg#icon-linkedin' | prepend: 'assets/icons/' | relative_url }}"></use></svg><span> LinkedIn</span></a>
 </section>
