@@ -6,10 +6,10 @@
 	
 			<article itemscope itemtype="http://schema.org/Review">
 				<span style="display: none;" itemprop="itemReviewed" itemscope itemtype="http://schema.org/Thing">
-					<meta itemprop="name">{{ page.url }}</meta>
+					<meta class="hidden" itemprop="name">{{ page.url }}</meta>
 				</span>
 				<header class="section-title">
-					<h3>Reviews</h3>
+					<h3>Site Reviews</h3>
 				</header>
 				<div class="form-group">
 					<h3 class="title-text">{{ reviewData.title }}</h3>
@@ -25,7 +25,7 @@
 					<meta class="hidden" itemprop="worstRating">1</meta>
 				</div>				
 				<div class="form-group" itemprop="author" itemscope itemtype="http://schema.org/Person">
-					<span> itemprop="name"> {{ reviewData.name }}</span>
+					<span itemprop="name"> {{ reviewData.name }}</span>
 				</div>
 				<div class="form-group">
 					<p>Description:</p>

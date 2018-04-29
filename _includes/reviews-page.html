@@ -10,7 +10,7 @@
 					<meta itemprop="name">{{ page.url }}</meta>
 				</span>
 				<header class="section-title">
-					<h3>Reviews</h3>
+					<h3>Page Reviews</h3>
 				</header>
 				<div class="form-group">
 					<h3 class="title-text">{{ reviewData.title }}</h3>
@@ -26,8 +26,7 @@
 					<meta class="hidden" itemprop="worstRating">1</meta>
 				</div>
 				<div class="form-group" itemprop="author" itemscope itemtype="http://schema.org/Person">
-					<p>Review by:</p>
-					<p itemprop="name">{{ reviewData.name }}</p>
+					<span itemprop="name">From:{{ reviewData.name }}</span>
 				</div>
 				<div class="form-group">
 					<p>Description:</p>
