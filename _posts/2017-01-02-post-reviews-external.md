@@ -44,5 +44,3 @@ Working on single page reviews that when totaled together give a ratings for eac
 ### Google Reviews
 
 {% include google-reviews.html %}
-
-{% include rockwell-rv-map.html %}
