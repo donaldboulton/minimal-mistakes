@@ -98,16 +98,4 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
 {% endif %}
 {% if page.support contains 'places' %}  
    <link rel="stylesheet" href="{{ '/assets/css/vendor/google-places/google-places.css' | relative_url }}">
-   <script src="{{ '/assets/js/vendor/google-places/google-places.js' | relative_url }}"></script>
-   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA&libraries=places"></script>
-   <script>
-    jQuery(document).ready(function( $ ) {
-       $("#google-reviews").googlePlaces({
-            placeId: 'ChIJl8xKnrUPsocR1zXyyP-1-c4' //Find placeID @: https://developers.google.com/places/place-id
-          , render: ['reviews']
-          , min_rating: 4
-          , max_rows: 3
-       });
-    });
-    </script>
 {% endif %}
