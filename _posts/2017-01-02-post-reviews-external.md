@@ -8,7 +8,7 @@ toc: true
 search: true
 author: Donald Boulton
 author_profile: true
-adds: true
+adds: false
 places: true
 reviews: true
 date: 2017-01-02 16:16:01 -0600
@@ -44,3 +44,5 @@ Working on single page reviews that when totaled together give a ratings for eac
 ### Google Reviews
 
 {% include google-reviews.html %}
+
+{% include rockwell-rv-map.html %}
