@@ -4,12 +4,13 @@ layout: single
 read_time: true
 comments: true
 share: true
-toc: false
+toc: true
 search: true
 author: Donald Boulton
 author_profile: true
 adds: true
 places: true
+reviews: true
 date: 2017-01-02 16:16:01 -0600
 last_modified_at: 2017-01-13T12:42:38-04:00
 
@@ -34,6 +35,12 @@ support: [places]
 
 # Site Reviews
 
-External Reviews site, used for Google Positioning Micro data. Using Staticman's Popcorn Github repo to push reviews from my external popcorn site to my Root site donboulton.com. This is still a work in progress so Leave a Review for any page in donboulton.com and It will show up as a review on that page.
+Reviews [Powered by Staticman](https://staticman.net) and used for Google Positioning Micro data. Using Staticman's Popcorn Github repo to push reviews to my Root site donboulton.com. This is still a work in progress so Leave a Review in any page in donboulton.com and It will show up as a site review on that page.
+
+## Review in the works
+
+Working on single page reviews that when totaled together give a ratings for each post or page and then a overall site total.
+
+### Google Reviews
 
 {% include google-reviews.html %}
