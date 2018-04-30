@@ -1,16 +1,17 @@
 ---
 title: Reviews
 layout: single
+classes: wide
 read_time: true
 comments: true
 share: true
-toc: true
+toc: false
 search: true
 author: Donald Boulton
-author_profile: true
+author_profile: false
 adds: false
 places: true
-reviews: true
+reviews: false
 date: 2017-01-02 16:16:01 -0600
 last_modified_at: 2017-01-13T12:42:38-04:00
 
@@ -42,5 +43,7 @@ Reviews [Powered by Staticman](https://staticman.net) and used for Google Positi
 Working on single page reviews that when totaled together give a ratings for each post or page and then a overall site total.
 
 ### Google Reviews
+
+Google Reviews for where I live.
 
 {% include google-reviews.html %}

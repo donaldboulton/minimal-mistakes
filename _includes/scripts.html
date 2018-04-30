@@ -42,6 +42,41 @@ window.addEventListener("load",function(){window.cookieconsent.initialise({"pale
 {% if page.support contains 'places' %}
   <script src="{{ '/assets/js/vendor/google-places/google-places.js' | relative_url }}"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA&libraries=places"></script>
+  <script>
+    $(document).ready(function() {
+      $("#google-reviews").googlePlaces({
+          placeId: 'ChIJl8xKnrUPsocR1zXyyP-1-c4'
+        , render: ['reviews','address','hours','phone','staticMap']
+        , min_rating: 4
+        , max_rows: 2
+        , map_plug_id: 'ChIJl8xKnrUPsocR1zXyyP-1-c4'
+        , schema:{
+              displayElement: "#schema"
+            , type: 'Article'
+            , beforeText: 'Google Users Have Rated'
+            , middleText: 'based on'
+            , afterText: 'ratings and reviews'
+          }
+        , address:{
+            displayElement: "#custom-address-id"
+          }
+        , staticMap:{
+            displayElement: "#google-static-map"
+          }
+      });
+      function initMap() {
+          var uluru = {lat: 35.458429035, lng: -97.634299097};
+          var map = new google.maps.Map(document.getElementById('google-static-map'), {
+            zoom: 16,
+            center: uluru
+          });
+          var marker = new google.maps.Marker({
+            position: uluru,
+            map: map
+          });
+        }
+    });
+  </script>
 {% endif %}
 
 {% include analytics.html %}
