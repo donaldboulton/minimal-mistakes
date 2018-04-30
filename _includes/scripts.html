@@ -40,18 +40,8 @@ window.addEventListener("load",function(){window.cookieconsent.initialise({"pale
 {% endif %}
 
 {% if page.support contains 'places' %}
-<script src="{{ '/assets/js/vendor/google-places/google-places.js' | relative_url }}"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA&libraries=places"></script>
-<script>
- jQuery(document).ready(function( $ ) {
-    $("#google-reviews").googlePlaces({
-         placeId: 'ChIJl8xKnrUPsocR1zXyyP-1-c4' //Find placeID @: https://developers.google.com/places/place-id
-       , render: ['reviews']
-       , min_rating: 4
-       , max_rows: 3
-    });
- });
- </script>
+  <script src="{{ '/assets/js/vendor/google-places/google-places.js' | relative_url }}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA&libraries=places"></script>
 {% endif %}
 
 {% include analytics.html %}

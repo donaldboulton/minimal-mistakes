@@ -1,1 +1,25 @@
+<div id="schema"><b>Schema - </b></div>
+<div id="custom-address-id"><b>Address - </b></div>
+<div id="google-phone"><b>Phone - </b></div></br>
 <div id="google-reviews"></div>
+
+<script>
+    $(document).ready(function() {
+      $("#google-reviews").googlePlaces({
+          placeId: 'ChIJl8xKnrUPsocR1zXyyP-1-c4'
+        , render: ['reviews','address','phone']
+        , min_rating: 4
+        , max_rows:5
+        , schema:{
+              displayElement: "#schema"
+            , type: 'Article'
+            , beforeText: 'Google Users Have Rated'
+            , middleText: 'based on'
+            , afterText: 'ratings and reviews'
+          }
+        , address:{
+            displayElement: "#custom-address-id"
+          }
+      });
+    });
+  </script>
