@@ -34,11 +34,11 @@ All of this information is not linked to anything that is personally identifiabl
 
 ## Cookies & Beacons
 
-![Cookie](/assets/images/pages/svg/cookies.svg)
-
-{% include youtubePlayer.html id=page.youtubeId %}
+![Cookie](/assets/images/pages/svg/cookies.svg){:.align-left}
 
 When you visit this site "convenience" cookies are stored on your computer when you submit a comment to help you log in faster to [Twitter](https://twitter.com/donboulton) the next time you do a tweet.
+
+{% include youtubePlayer.html id=page.youtubeId %}
 
 Third-party advertisers may also place and read cookies on your browser and/or use web beacons to collect information. This site has no access or control over these cookies. You should review the respective privacy policies on any and all third-party ad servers for more information regarding their practices and how to opt-out.
 
@@ -128,6 +128,10 @@ You can read: [Google Analytics Privacy Policy](http://www.google.com/analytics/
 Google Adsense, a third party affiliate marketing network, uses cookies to help make sure I get a commission when you buy a product after clicking on a link or ad banner that takes you to the site of one of their merchants.
 
 You can read: [Google Adsense Privacy Policy](http://support.google.com/adsense/bin/answer.py?hl=en&answer=48182).
+
+## Donation Policy
+
+All Donations throught our webshop pages or paypal buttons will not be refundable, as they are a donation to a free website designer, that has limited abilitys to do money transfers back to you. Thank You for your donations to donboulton.com.
 
 ## Disclosure Policy
 
