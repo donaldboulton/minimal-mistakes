@@ -96,6 +96,6 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
 {% if page.support contains 'gallery' %}
    <link rel="stylesheet" href="{{ '/assets/dist/css/lightgallery.min.css' | relative_url }}">
 {% endif %}
-{% if page.support contains 'maps' %}  
-   <link rel="stylesheet" href="{{ '/assets/css/google-places.css' | relative_url }}">
+{% if page.support contains 'places' %}  
+   <link rel="stylesheet" href="{{ '/assets/css/vendor/google-places/google-places.css' | relative_url }}">
 {% endif %}

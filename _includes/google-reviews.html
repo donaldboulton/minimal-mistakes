@@ -1,0 +1,12 @@
+<div id="google-reviews"></div>
+
+<script>
+jQuery(document).ready(function( $ ) {
+   $("#google-reviews").googlePlaces({
+        placeId: 'ChIJl8xKnrUPsocR1zXyyP-1-c4' //Find placeID @: https://developers.google.com/places/place-id
+      , render: ['reviews']
+      , min_rating: 4
+      , max_rows: 4
+   });
+});
+</script>
