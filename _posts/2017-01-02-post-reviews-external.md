@@ -1,17 +1,16 @@
 ---
 title: Reviews
 layout: single
-classes: wide
 read_time: true
 comments: true
 share: true
 toc: false
 search: true
 author: Donald Boulton
-author_profile: false
-adds: false
+author_profile: true
+adds: true
 places: true
-reviews: false
+reviews: true
 date: 2017-01-02 16:16:01 -0600
 last_modified_at: 2017-01-13T12:42:38-04:00
 
