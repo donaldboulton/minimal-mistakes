@@ -38,13 +38,12 @@ layout: default
                  {% include toc.html sanitize=true html=content h_min=2 h_max=3 class="toc__menu" %}
                </nav>
             {% endif %}
-            {% if page.adds %}
-               {% include google-adds.html %}
-            {% endif %}
             {% if page.reviews %}
                {% include reviews-new.html %}
                {% include reviews.html %}
-               {% include reviews-page.html %}
+            {% endif %}
+            {% if page.adds %}
+               {% include google-adds.html %}
             {% endif %}
           </aside>        
         {{ content }}
