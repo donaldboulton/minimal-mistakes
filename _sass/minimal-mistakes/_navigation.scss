@@ -571,6 +571,32 @@
   }
 }
 
+toc {
+  font-family: $sans-serif-narrow;
+  color: $gray;
+  text-transform: uppercase;
+  background-color: $background-color;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+
+  .nav__title1 {
+    color: #fff;
+    font-size: $type-size-6;
+    background: $primary-color;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+  }
+}
+
+.nav__title1 {
+  margin: 0;
+  padding: 0.5rem 1rem;
+  font-family: -apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+}
+
 .toc__menu {
   margin: 0;
   padding: 0;
