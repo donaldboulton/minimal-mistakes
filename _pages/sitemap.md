@@ -27,8 +27,6 @@ For a list of all posts and pages found on this site. Or for your viewing and or
   {% include archive-single.html %}
 {% endfor %}
 
-{% for post in site.posts %}
-  {% include tag-archive.html %}
-{% endfor %}
+{% include tag-archive.md %}
 
 {% capture written_label %}'None'{% endcapture %}
