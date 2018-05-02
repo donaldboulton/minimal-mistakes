@@ -23,7 +23,8 @@ header:
 
 "Sitemap with Posts by Catagories, by Tags and by Years".
 
-For a list of all posts and pages found on this site. Or for your viewing and or all robots out there. Here is an [XML version]({{ "sitemap.xml" | absolute_url }}) and a [Atom Version]({{ "atom.xml" | absolute_url }}) or a [Json Feed]({{ "feed.json" | absolute_url }}) available for digesting as well.
+For a list of all posts found on this site.
+For your viewing and or all robots out there. Here is an [XML version]({{ "sitemap.xml" | absolute_url }}) and a [Atom Version]({{ "atom.xml" | absolute_url }}) or a [Json Feed]({{ "feed.json" | absolute_url }}) with a listing of all Pages and Posts, available for digesting as well.
 
 # Posts
 
