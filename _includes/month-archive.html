@@ -47,7 +47,7 @@
     {% endcapture %}
        
     {% if year_text %}        
-      <div class ="archive-year" id="{{ year }}">{{ year_text }}</div>
+    <span><svg class="icon icon--calendar-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-calendar-alt' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;<div class ="archive-year" id="{{ year }}">{{ year_text }}</div></span>
     {% endif %}
     
     {% if year != n_year %}
