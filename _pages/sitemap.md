@@ -21,7 +21,9 @@ header:
 
 {% include octo-arm.html %}
 
-Sitemap with Posts by Catagories, by Tags and by Years.
+# Sitemap Posts by Categories
+
+Links to Posts by Years, Months, Days and Tags.
 
 For your viewing and or all robots out there. Here is an [XML version]({{ "sitemap.xml" | absolute_url }}) and a [Atom Version]({{ "atom.xml" | absolute_url }}) or a [Json Feed]({{ "feed.json" | absolute_url }}) with a listing of all Pages and Posts, available for digesting as well.
 
