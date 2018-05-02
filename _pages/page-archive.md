@@ -1,7 +1,7 @@
 ---
-title: "Posts by Year"
-permalink: /year-archive/
-layout: posts
+title: "Page Archive"
+layout: archive
+permalink: /page-archive/
 author_profile: true
 comments: false
 sidenav: true
