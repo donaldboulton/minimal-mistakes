@@ -19,6 +19,7 @@ tags:
 category:
   - Gallerys
 
+sidenav: true
 adds: true
 reviews: true
 excerpt: "Pictures of my Kitty Cats and Travels. My Kitty Gallery has my 4 male House Cats, Past Cats and the 20 or so strays I feed every day. Computers Cats are my passion, I love kitty cats"

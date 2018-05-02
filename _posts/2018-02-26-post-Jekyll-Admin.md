@@ -5,6 +5,7 @@ author_profile: true
 read_time: true
 comments: true
 share: true
+sidenav: true
 adds: true
 reviews: true
 title: Jekyll Admin

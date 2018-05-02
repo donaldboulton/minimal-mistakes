@@ -37,6 +37,7 @@ read_time: true
 comments: true
 share: true
 related: true
+sidenav: true
 adds: true
 reviews: true
 ---

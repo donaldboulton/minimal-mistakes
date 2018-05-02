@@ -30,7 +30,8 @@ layout: default
         </header>
       {% endunless %}
 
-      <section class="page__content" itemprop="text">        
+      <section class="page__content" itemprop="text">
+          {{ content }}        
           <aside class="sidebar__right">
             {% if page.toc %}
                <nav class="toc">
@@ -48,8 +49,7 @@ layout: default
             {% if page.adds %}
                {% include google-adds.html %}
             {% endif %}
-          </aside>        
-        {{ content }}
+          </aside>                
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
 
