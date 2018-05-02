@@ -318,3 +318,19 @@
     font-size: 1em;
   }
 }
+
+ul.archive-month, ul.archive-item, ul.recent-post {
+  padding: 0px;
+}
+
+ul li.list-month, ul li.list-content {
+  padding-left: 0;
+  list-style: none;
+  margin-left: 20px;
+}
+
+ul li.list-month, ul li.list-content {
+  padding-left: 0;
+  list-style: none;
+  margin-left: 20px;
+}
