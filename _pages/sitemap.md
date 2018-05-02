@@ -5,7 +5,7 @@ permalink: /sitemap/
 toc: false
 adds: true
 reviews: true
-excerpt: "Using just links in Asp.NET Core 2 add like included below  @Context.Request.GetDisplayUrl(), to get the url of the page your sharing. View the source of this repo to see how to do it in Jekyll"
+excerpt: "Sitemap with Post by Catagories, by Tags and by Years"
 
 image:
   cover: true
@@ -24,7 +24,7 @@ For a list of all posts and pages found on this site. Or for your viewing and or
 # Posts
 
 {% for post in site.posts %}
-  {% include archive-single.html %}
+  {% include posts-all.html %}
 {% endfor %}
 
 {% include tag-archive.html %}
