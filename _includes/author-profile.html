@@ -44,7 +44,7 @@
     <ul class="author__urls social-icons">
       {% if author.location %}
         <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place" target="_blank">
-          <svg class="icon icon--location fa-location" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-map-marker-alt' | prepend: 'assets/icons/' | relative_url }}"></use></svg><span itemprop="name">{{ author.location }}</span>
+          <svg class="icon icon--map-marker-alt fa-map-marker-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-map-marker-alt' | prepend: 'assets/icons/' | relative_url }}"></use></svg><span itemprop="name">{{ author.location }}</span>
         </li>
       {% endif %}
 
