@@ -47,7 +47,7 @@
     {% endcapture %}
        
     {% if year_text %}        
-      <div class ="anchor-target archive-year" id="{{ year }}">{{ year_text }}</div>
+      <div class ="archive-year" id="{{ year }}">{{ year_text }}</div>
     {% endif %}
     
     {% if year != n_year %}
@@ -56,7 +56,7 @@
     
     {% if month != n_month %}
       <li class="list-month">
-        <span class ="anchor-target archive-month" 
+        <span class ="archive-month" 
               id="{{ year }}-{{ month }}">
               {{ post.date | date: '%B %Y' }}</span>
           <ul class="archive-item list-unstyled">

@@ -63,7 +63,7 @@
           <ul class="archive-item">
     {% endif %}
           <li class="list-content {{ li_class }}">
-            <time class="pull-right">{{ post.date | date:"%d %b" }}&nbsp;
+            <time class="text-right">{{ post.date | date:"%d %b" }}&nbsp;
             <span><svg class="icon icon--calendar-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-calendar-alt' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;</span></time>        
             <a href="{{ post.url }}">              
               {{ post.title }}
