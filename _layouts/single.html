@@ -38,6 +38,9 @@ layout: default
                  {% include toc.html sanitize=true html=content h_min=2 h_max=3 class="toc__menu" %}
                </nav>
             {% endif %}
+            {% if page.sidenav %}
+               {% include sidenav.html %}
+            {% endif %}
             {% if page.reviews %}
                {% include reviews-new.html %}
                {% include reviews.html %}
