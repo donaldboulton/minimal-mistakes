@@ -13,7 +13,15 @@ related: true
 breadcrumb: true
 category:
   - Gallerys
+image:
+    cover: true
+    path: &image /assets/photography/san-francisco/VS-2012-5930-2999x1999.jpg
+    feature: *image
+    thumbnail: /assets/photography/san-francisco/VS-2012-5930-thumbnail.jpg
 
+header:
+  image: /assets/images/pages/letter-avatar-header-1200.png
+  teaser: /assets/images/pages/letter-avatar-header-320.png
 support: [gallery]
 ---
 
