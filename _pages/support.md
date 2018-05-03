@@ -9,19 +9,17 @@ adds: true
 sidenav: true
 image:
   cover: true
-  path: &image /assets/images/pages/support.png
+  path: &image /assets/images/pages/support.jpg
   feature: *image
-  thumbnail: /assets/images/pages/support-320.png
+  thumbnail: /assets/images/pages/support-320.jpg
 header:
-  image: /assets/images/pages/support-1200.png
-  teaser: /assets/images/pages/support-320.png
+  image: /assets/images/pages/support-1200.jpg
+  teaser: /assets/images/pages/support-320.jpg
 ---
-
-# Support
 
 {% include support.html %}
 
-## Spread the Word
+# Spread the Word
 
 Have a website or use social networking sites like Twitter, Google+ or Facebook? Please consider sharing the content found on **Donald Boulton** or linking to <https://donboulton.com>
 

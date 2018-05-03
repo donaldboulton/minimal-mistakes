@@ -47,6 +47,21 @@
   }
 }
 
+.gallery-3-col-unjustified {
+  display: grid;
+  grid-gap: 0.5em;
+  align-items: stretch;
+
+  @include breakpoint($small) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  caption {
+    width: 100%;
+    grid-column: 1 / -1;
+  }
+}
+
 .grid,
 .grid-sizer {
   width: 25%;
@@ -98,6 +113,20 @@
   }
 }
 
+.gallery-2-col-unjustified {
+  display: grid;
+  grid-gap: 0.5em;
+  align-items: stretch;
+
+  @include breakpoint($small) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  caption {
+    width: 100%;
+    grid-column: 1 / -1;
+  }
+}
 // Vertical Gallery
 
 .gallery-vertical {

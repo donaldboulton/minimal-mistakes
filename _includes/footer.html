@@ -1,8 +1,9 @@
-<div class="page__footer-follow">
+<div class="page__footer-follow gallery-2-col-unjustified">
+  <div class="text-left">  
   <ul class="social-icons">
-    {% if site.data.ui-text[site.locale].follow_label %}
+      {% if site.data.ui-text[site.locale].follow_label %}
       <li><strong>{{ site.data.ui-text[site.locale].follow_label }}</strong></li>
-    {% endif %}
+    {% endif %} 
     {% if site.twitter.username %}
       <li><a rel="me" href="https://twitter.com/{{ site.twitter.username }}" target="_blank"><svg class="icon icon--twitter fa-twitter" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-twitter' | prepend: 'assets/icons/' | relative_url }}"></use></svg> Twitter</a></li>
     {% endif %}
@@ -17,5 +18,17 @@
     {% endif %}
     <li><a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | absolute_url }}{% endif %}"> <svg class="icon icon--rss fa-rss" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-rss' | prepend: 'assets/icons/' | relative_url }}"></use></svg> {{ site.data.ui-text[site.locale].feed_label | default: "Feed" }}</a></li>
   </ul>
+  {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }} <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>
+  </div>
+  <div class="text-right"> 
+    <p>Hosting By Github and CloudFlare</p>
+    <img src="/assets/images/pages/cf-logo-v-rgb-rev.png" alt="CloudFlare logo" class="poweredby" onclick="window.open('http://cloudflare.com');">
+    <img src="/assets/images/pages/github.png" alt="Github logo" class="poweredby align-right" onclick="window.open('http://github.com');">
+  </div>
 </div>
-<div class="page__footer-copyright">&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}. {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }} <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a><a class="text-right align-right" href="/terms">Terms & Privacy</a></div>
+<div class="gallery-3-col">
+  <span>&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}.</span>
+  <span><a href="/support">Tip &amp; Support Me</a></span>
+  <div class="text-right"><a href="/terms">Terms &amp; Privacy</a></div>
+</div>
+

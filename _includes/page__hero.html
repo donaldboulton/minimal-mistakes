@@ -31,8 +31,7 @@
 {% assign image_description = image_description | markdownify | strip_html | strip_newlines | escape_once %}
 
 <div class="page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %}"
-  style="{% if page.header.overlay_color %}background-color: {{ page.header.overlay_color | default: 'transparent' }};{% endif %} {% if overlay_img_path %}background-image: {% if overlay_filter %}linear-gradient({{ overlay_filter }}, {{ overlay_filter }}), {% endif %}url('{{ overlay_img_path }}');{% endif %}"
->
+  style="{% if page.header.overlay_color %}background-color: {{ page.header.overlay_color | default: 'transparent' }};{% endif %} {% if overlay_img_path %}background-image: {% if overlay_filter %}linear-gradient({{ overlay_filter }}, {{ overlay_filter }}), {% endif %}url('{{ overlay_img_path }}');{% endif %}">
   {% if page.header.overlay_color or page.header.overlay_image %}
     <div class="wrapper">
       <h1 class="page__title" itemprop="headline">
@@ -53,15 +52,7 @@
       {% endif %}
     </div>
   {% else %}
-        <noscript><img src="{{ f[0] | relative_url }}-320.{{ f[1] }}" class="page__hero-image"></noscript>
-        <img data-sizes="auto"
-             src="{{ f[0] | relative_url }}-lq.{{ f[1] }}"
-             data-srcset="{{ f[0] | relative_url }}-lq.{{ f[1] }} 20w,
-                          {{ f[0] | relative_url }}-320.{{ f[1] }} 320w,
-                          {{ f[0] | relative_url }}-800.{{ f[1] }} 800w,
-                          {{ f[0] | relative_url }}-1200.{{ f[1] }} 1200w"
-             alt="{{ post.title | strip_html }}"
-             class="lazyload page__hero-image fade-in">
+    <img src="{{ img_path }}" alt="{{ image_description }}" class="lazyload page__hero-image fadein">
   {% endif %}
   {% if page.header.caption %}
     <span class="page__hero-caption">{{ page.header.caption | markdownify | remove: "<p>" | remove: "</p>" }}</span>
