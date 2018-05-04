@@ -8,8 +8,6 @@ adds: false
 sidenav: true
 ---
 
-## Coffee
-
 Buy me a coffee
 
 {% include donate_coffee.html %}
