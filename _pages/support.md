@@ -31,7 +31,7 @@ If these sorts of things interest you, follow along on:
 
 - [Twitter](https://twitter.com/donboulton)
 - [GitHub](https://github.com/donaldboulton)
-- [YouTube](https://www.youtube.com/user/anotherjpeg)
+- [YouTube](https://www.youtube.com/channel/UCHED4RFSxXXNGDDvWpgzHXg)
 - [Facebook](https://www.facebook.com/donboulton)
 - [Google+](https://plus.google.com/+DonaldBoulton)
 
