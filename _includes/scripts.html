@@ -13,7 +13,33 @@
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
 <script>
-window.addEventListener("load",function(){window.cookieconsent.initialise({"palette":{"popup":{"background":"#3c404d","text":"#d6d6d6"},"button":{"background":"#8bed4f"}},"theme":"edgeless","position":"bottom-left","content":{"href":"https://donboulton.com/terms/#cookies-and-web-beacons"}})});
+window.addEventListener("load", function() {
+    window.cookieconsent.initialise({
+        "palette": {
+            "popup": {
+                "background": "#031111",
+                "text": "#d6d6d6"
+            },
+            "button": {
+                "background": "#1faaaa"
+            }
+        },
+        revokable:true,
+        onStatusChange: function(status) {
+          console.log(this.hasConsented() ?
+             'enable cookies' : 'disable cookies');
+         },
+         law: {
+           regionalLaw: false,
+         },
+         location: true,
+        "theme": "edgeless",
+        "position": "bottom-left",
+        "content": {
+            "href": "https://donboulton.com/terms/#cookies-and-web-beacons"
+        }
+    })
+});
 </script>
 
 {% if site.search == true or page.layout == "search" %}
