@@ -366,6 +366,11 @@ defaults:
       type: category
     values:
       layout: "category"
+  - scope:
+      path: ""
+      type: "products" # a collection in your site, in plural form
+    values:
+      layout: "product"
       
 posts_json_path: posts.json
 

@@ -10,6 +10,8 @@
 .cart.table .form-control {vertical-align: middle; width: 50px; text-align: center; display: inline-block;}
 .cart.table a.gray {font-style: italic; text-decoration: none;}
 .cart.table .carttotal {text-align: right; font-size: 200%; line-height: 1.4em;}
+#checkout_progress { display: block; text-align: center;}
+#checkout_progress li {width: 110px;text-align: left; display: inline-block; border-top: 1px solid #dddddd; padding-top: 10px;}
 </style>
 
 <table class="cart table">
@@ -20,10 +22,10 @@
     </tbody>
 </table>
 
-<div style="text-align: right;"><a href="/donate" class="btn btn-secondary" style="border-color: transparent!important; text-decoration: underline!important;">Continue shopping</a> &nbsp;&nbsp; <a href="/checkout" class="btn btn--primary">Proceed to checkout</a></div>
+<div style="text-align: right;"><a href="/donate" class="btn btn--secondary">Continue shopping</a> &nbsp;&nbsp; <a href="/checkout" class="btn btn--primary">Proceed to checkout</a></div>
 
 <div style="margin-top: 50px; position: relative; top: 30px;">
     <ul id="checkout_progress">
-        <li class="current"><span><a href="#">Shopping cart</a></span></li><li><span><span>Checkout</span></span></li><li><span><span>Payment</span></span></li>
+        <li><span><a href="#">Shopping cart</a></span></li><li><span><span>Checkout</span></span></li><li><span><span>Payment</span></span></li>
     </ul>
 </div>   

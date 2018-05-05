@@ -4,8 +4,26 @@
     input[type="checkbox"], input[type="radio"] {position: relative; bottom: 1px;}
     input[type='number'] {-moz-appearance: textfield;}
     input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {-webkit-appearance: none;}
-    select.form-control {-webkit-appearance: none; -moz-appearance: none; appearance: none; background: url("/img/chevron_down.svg") calc(100% - 17px) 60% no-repeat; background-size: auto 11px;}
+    select.form-control {-webkit-appearance: none; -moz-appearance: none; appearance: none; background: url("/assets/icons/chevron-down.svg") calc(100% - 17px) 60% no-repeat; background-size: auto 11px;}
     select.form-control::-ms-expand {display: none;}
+    #checkout_progress {
+    display: block;
+    text-align: center;
+}
+#checkout_progress li {
+    width: 110px;
+    text-align: left;
+    display: inline-block;
+    border-top: 1px solid #dddddd;
+    padding-top: 10px;
+}
+.cart.table img {
+    display: inline-block;
+    vertical-align: center;
+    margin-right: 20px;
+    height: 60px;
+    border-radius: 60px;
+}
 </style>
 
 <div class="row">
@@ -92,7 +110,7 @@
 
 
 
-<div style="margin-top: 50px; max-width: 550px; position: relative; top: 30px;">
+<div class="text-center">
     <ul id="checkout_progress">
         <li class="past"><span><a href="/cart">Shopping cart</a></span></li><li class="current"><span><a href="#">Checkout</a></span></li><li><span><span>Payment</span></span></li>
     </ul>   
