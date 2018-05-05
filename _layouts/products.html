@@ -12,16 +12,16 @@ layout: compress
 
 <body id="style-3" class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}" itemscope itemtype="http://schema.org/WebSite">
 
-  {% include browser-upgrade.html %}
-  {% include masthead.html %}
+{% include browser-upgrade.html %}
+{% include masthead.html %}
 
- <div id="initial-content" class="initial-content" itemscope itemtype="http://schema.org/WebPage">
-{% assign items = site.products | sort: 'price' %}
-{% for item in items %}
-{% assign price_split = item.price | round: 2 | split: "." %}
-{% assign integral = price_split[0] %}
-{% assign fractional = price_split[1] | append: "00" | truncate: 2, "" %}
-{% if fractional == '00' %}{% assign fractional = '-' %}{% endif %}
+<div id="initial-content" class="initial-content" itemscope itemtype="http://schema.org/WebPage">
+  {% assign items = site.products | sort: 'price' %}
+  {% for item in items %}
+  {% assign price_split = item.price | round: 2 | split: "." %}
+  {% assign integral = price_split[0] %}
+  {% assign fractional = price_split[1] | append: "00" | truncate: 2, "" %}
+  {% if fractional == '00' %}{% assign fractional = '-' %}{% endif %}
     <div class="col-md-4 col-sm-4 col-xs-6">
         <a href="{{ item.url }}" {% if item.inactive %}style="color: #777777; text-decoration: none; cursor: text;"{% endif %}>
             <img src="/assets/images/cart/catfood/blank.png" style="width: 100%; background: url('https://images.weserv.nl/?url={{ site.url | replace: 'https://','' | replace: 'http://','' }}{{ item.images[0].image }}&w=500&h=350&output=jpg&q=50') center center no-repeat; background-size: cover;" />  
@@ -29,8 +29,8 @@ layout: compress
                 {% if item.price > 0 %}&dollar; {{ integral }}.{{ fractional }}{% else %}free{% endif %}<br />&nbsp;
         </a>
     </div>
- {% endfor %}
-  </div>
+   {% endfor %}
+</div>
 
   {% if site.search == true %}
   <div class="search-content">
@@ -58,6 +58,3 @@ layout: compress
   {% include webshop.html email="donaldboulton@gmail.com" paymentlink="https://useplink.com/payment/ssMgtkddEzgC4rKKJJ9T" %}
 </body>
 </html>
-
-{% include lightbox.html %}
-{% include webshop.html email="donaldboulton@gmail.com" paymentlink="https://useplink.com/payment/ssMgtkddEzgC4rKKJJ9T" %}
