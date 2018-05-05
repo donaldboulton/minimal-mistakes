@@ -1,82 +1,82 @@
----
-layout: compress
----
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include head.html %}
+  </head>
+  <body class="{{ page.layout }} no-js">
+    <div class="main">
+	    {% include masthead.html %}
+		<div class="container">
+			<div class="row">
+		    	<article class="post page">
+                <div class="col-md-12">
 
-<!doctype html>
-
-<html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
-<head>
-  {% include head.html %}
-  {% include head/custom.html %}
-</head>
-
-<body id="style-3" class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}" itemscope itemtype="http://schema.org/WebSite">
-
-  {% include browser-upgrade.html %}
-  {% include masthead.html %}
-
-  <div id="initial-content" class="initial-content" itemscope itemtype="http://schema.org/WebPage">
-    <div class="product-gallery">
-            {% for item in page.images %}
-                <a href="https://images.weserv.nl/?url={{ site.url | replace: 'https://','' | replace: 'http://','' }}{{ item.image }}&w=1400&output=jpg&q=50" ><img src="https://images.weserv.nl/?url={{ site.url | replace: 'https://','' | replace: 'http://','' }}{{ item.image }}&w={% if forloop.index == 1 %}1400{% else %}350{% endif %}&output=jpg&q=50" /></a>
-            {% endfor %}
-        </div>
-            <header>
-                <h2 class="post__title">{{ page.subtitle }}</h2>
-            </header>                
-    
-        {% assign price_split = page.price | round: 2 | split: "." %}
-        {% assign integral = price_split[0] %}
-        {% assign fractional = price_split[1] | append: "00" | truncate: 2, "" %}
-        {% if fractional == '00' %}{% assign fractional = '-' %}{% endif %}
-        <h2 class="price">{% if page.price > 0 %}&dollar; {{ integral }}.{{ fractional }}{% endif %}</h2>
-    
-                          
-        {% if page.variants[0].name != nil and page.variants[0].name != '' %}
-        <label>Choose a {{ page.variant_name }}: &nbsp; </label>
-            <select name="variant" class="form-control" onchange="updatevariant(this,'{{ page.title }}');">
-            {% for item in page.variants %}
-                {% assign price_split = item.price | round: 2 | split: "." %}
-                {% assign integral = price_split[0] %}
-                {% assign fractional = price_split[1] | append: "00" | truncate: 2, "" %}
-                        <option value="{{ item.name }} | {{ integral }}.{{ fractional }}">{{ item.name }}</option>
-            {% endfor %}
-            </select>
-    
-        {% endif %}
-    
-        {% if page.price > 0 %}
-            {% assign price_split = page.price | round: 2 | split: "." %}
-            {% assign integral = price_split[0] %}
-            {% assign fractional = price_split[1] | append: "00" | truncate: 2, "" %}
-                <a href="/cart/" image="{{ page.images[0].image }}" price="{{ integral }}.{{ fractional }}" description="{{ page.title }}{% if page.variants[0].name != nil and page.variants[0].name != '' %} {{ page.variants[0].name }}{% endif %}" id="shoppingcartbutton" class="btn btn--primary addtocart">Donate</a>
-            {% else %}
-        {% endif %}
-  </div>
+                    <div class="post-header">
+                    {% include breadcrumbs.html %}
+                    <br />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="product-gallery">
+                    {% for item in page.images %}
+                        <a href="https://images.weserv.nl/?url={{ site.url | replace: 'https://','' | replace: 'http://','' }}{{ item.image }}&w=1400&output=jpg&q=50" ><img src="https://images.weserv.nl/?url={{ site.url | replace: 'https://','' | replace: 'http://','' }}{{ item.image }}&w={% if forloop.index == 1 %}1400{% else %}350{% endif %}&output=jpg&q=50" /></a>
+                    {% endfor %}
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
                     
-  {% if site.search == true %}
-  <div class="search-content">
-    {% include search/search_form.html %}
-  </div>
-  {% endif %} 
-  <div class="text-center">        
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-7655495105068461"
-             data-ad-slot="5601054893"
-             data-ad-format="auto"></ins>
-        <script>
-          (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-    </div>
-  <div class="page__footer">
-    <footer>
-      {% include footer.html %}
-      {% include modal.html %}       
-    </footer>
-  </div> 
-  {% include scripts.html %}
-  {% include lightbox.html %}
-  {% include webshop.html email="donaldboulton@gmail.com" paymentlink="https://useplink.com/payment/ssMgtkddEzgC4rKKJJ9T" %}
-</body>
+                    <header>
+                    <h1 class="post-title">{{ page.subtitle }}</h1>
+                    </header>
+                
+                    <div class="post-content">
+                    <article class="post page">
+                    
+                        <div class="post-content">
+
+                        {% assign price_split = page.price | round: 2 | split: "." %}
+                        {% assign integral = price_split[0] %}
+                        {% assign fractional = price_split[1] | append: "00" | truncate: 2, "" %}
+                        {% if fractional == '00' %}{% assign fractional = '-' %}{% endif %}
+                        <h2 class="price">{% if page.price > 0 %}&dollar; {{ integral }}.{{ fractional }}{% endif %}</h2>
+
+                      
+                        {% if page.variants[0].name != nil and page.variants[0].name != '' %}
+                        <label>Choose a {{ page.variant_name }}: &nbsp; </label>
+                        <select name="variant" class="form-control" onchange="updatevariant(this,'{{ page.title }}');">
+                        {% for item in page.variants %}
+                            {% assign price_split = item.price | round: 2 | split: "." %}
+                            {% assign integral = price_split[0] %}
+                            {% assign fractional = price_split[1] | append: "00" | truncate: 2, "" %}
+                            <option value="{{ item.name }} | {{ integral }}.{{ fractional }}">{{ item.name }}</option>
+                        {% endfor %}
+                        </select>
+                        <br />
+                        {% endif %}
+
+                        {% if page.price > 0 %}
+                            {% assign price_split = page.price | round: 2 | split: "." %}
+                            {% assign integral = price_split[0] %}
+                            {% assign fractional = price_split[1] | append: "00" | truncate: 2, "" %}
+                            <a href="/cart/" image="{{ page.images[0].image }}" price="{{ integral }}.{{ fractional }}" description="{{ page.title }}{% if page.variants[0].name != nil and page.variants[0].name != '' %} {{ page.variants[0].name }}{% endif %}" id="shoppingcartbutton" class="btn btn-primary btn-lg addtocart">Donate</a>
+                        {% else %}
+                        {% endif %}
+                        <br /><br />
+                        {{ content }}
+
+                    </div>
+                    
+                    </article>
+                    </div>
+		    	</div>
+                </article>
+		    </div>
+		</div>
+	</div>
+    {% include scripts.html %}
+    {% include products.html %}
+    {% include lightbox.html %}
+    {% include webshop.html email="donaldboulton@gmail.com" paymentlink="https://useplink.com/payment/ssMgtkddEzgC4rKKJJ9T" %}
+  </body>
+
 </html>
