@@ -8,7 +8,9 @@ sidenav: true
 header:
   image: /assets/images/cart/share/share-cover.jpg
   teaser: /assets/images/cart/share/share-320.jpg
-layout: products
+layout: single
+products: true
+support: [products]
 subtitle: Buy me a t-shirt
 images:
   - image: /assets/images/cart/t-shirt/view3.jpeg

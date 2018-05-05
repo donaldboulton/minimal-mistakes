@@ -3,7 +3,9 @@ title: Feature
 subtitle: Sponsor a feature
 excerpt: "Sponser Us."
 no_menu_item: true
-layout: products
+layout: single
+products: true
+support: [products]
 sitemap: false
 author_profile: true
 adds: true

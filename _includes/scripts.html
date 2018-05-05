@@ -104,3 +104,9 @@ window.addEventListener("load", function() {
     });
   </script>
 {% endif %}
+
+{% if page.support contains 'products' %}
+   {% include products-script.html %}
+   {% include lightbox.html %}
+   {% include webshop.html email="donaldboulton@gmail.com" paymentlink="https://useplink.com/payment/ssMgtkddEzgC4rKKJJ9T" %}
+{% endif %}

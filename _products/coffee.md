@@ -2,7 +2,9 @@
 title: "Buy a Coffee"
 excerpt: "Buy me a cup of coffee."
 no_menu_item: true
-layout: products
+layout: single
+products: true
+support: [products]
 sitemap: false
 author_profile: true
 adds: true

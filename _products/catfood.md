@@ -3,14 +3,16 @@ title: "Cat Food"
 excerpt: "Buy my kitty some cat food."
 no_menu_item: true
 sitemap: false
-layout: products
+layout: single
+products: true
+support: [products]
 adds: false
 sidenav: true
 header:
   image: /assets/images/cart/catfood/blue-wilderness.jpg
   teaser: /assets/images/cart/catfood/blue-wilderness-320.jpg
 
-subtitle: Buy me a beer
+subtitle: Buy me some cat food
 images:
   - image: /assets/images/cart/catfood/blue-wilderness.jpg
   - image: /assets/images/cart/catfood/blue-wilderness.jpg

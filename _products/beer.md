@@ -2,11 +2,13 @@
 title: " Buy Me Beer"
 excerpt: "Buy me a bottle of Beer."
 no_menu_item: true
-layout: products
+layout: single
 sitemap: false
 author_profile: true
 adds: true
 sidenav: true
+products: true
+support: [products]
 
 header:
   image: /assets/images/cart/beer/beer-cover.jpg
