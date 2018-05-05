@@ -7,11 +7,7 @@ permalink: /support/
 toc: true
 adds: true
 sidenav: true
-image:
-  cover: true
-  path: &image /assets/images/pages/support.jpg
-  feature: *image
-  thumbnail: /assets/images/pages/support-320.jpg
+
 header:
   image: /assets/images/pages/support-1200.jpg
   teaser: /assets/images/pages/support-320.jpg

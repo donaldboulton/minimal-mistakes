@@ -6,6 +6,9 @@ sitemap: false
 permalink: /share/
 adds: false
 sidenav: true
+header:
+  image: /assets/images/cart/share/share-cover.jpg
+  teaser: /assets/images/cart/share/share-320.jpg
 ---
 
 ## Share

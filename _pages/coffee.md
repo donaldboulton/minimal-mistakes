@@ -9,8 +9,8 @@ adds: false
 sidenav: true
 
 header:
-  image: /assets/images/cart/beer/beer-cover.jpg
-  teaser: /assets/images/cart/beer/beer-cover-320.jpg
+  image: /assets/images/cart/coffee/coffee-cover.jpg
+  teaser: /assets/images/cart/coffee/coffee-cover-320.jpg
 ---
 
 A perfect coffee in the morning absolutely makes my day. Buy me a small one for a good start or a big one to keep going all day!
