@@ -9,7 +9,8 @@ author_profile: true
 adds: true
 sidenav: true
 products: true
-support: [products]
+support: [products, lightbox]
+lightbox: true
 classes: products
 header:
   image: /assets/images/cart/beer/beer-cover.jpg

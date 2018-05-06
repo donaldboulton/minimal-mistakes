@@ -5,7 +5,8 @@ excerpt: "Buy me a cup of coffee."
 no_menu_item: true
 layout: single
 products: true
-support: [products]
+support: [products, lightbox]
+lightbox: true
 sitemap: false
 author_profile: true
 adds: true

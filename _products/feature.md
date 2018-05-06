@@ -6,11 +6,13 @@ no_menu_item: true
 layout: single
 classes: products
 products: true
-support: [products]
+support: [products, lightbox]
 sitemap: false
 author_profile: true
 adds: true
 sidenav: true
+lightbox: true
+toc: false
 
 header:
   image: /assets/images/cart/coffee/coffee-cover.jpg

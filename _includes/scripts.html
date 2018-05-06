@@ -105,8 +105,11 @@ window.addEventListener("load", function() {
   </script>
 {% endif %}
 
-{% if page.support contains 'products' %}
-   {% include products-script.html %}
-   {% include lightbox.html %}
+{% if page.support contains 'products' %}   
    {% include webshop.html email="donaldboulton@gmail.com" paymentlink="https://useplink.com/payment/test_SsUsSzCgxypNgnUD4M3uqeAe8FmCwE" %}
+   {% include products-script.html %}
+{% endif %}
+
+{% if page.support contains 'lightbox' %}
+   {% include lightbox.html %}
 {% endif %}
