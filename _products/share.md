@@ -10,10 +10,11 @@ header:
 classes: product
 layout: single
 products: true
-support: [products]
+lightbox: true
+support: [products, lightbox]
 subtitle: Share the love
 images:
-  - image: /assets/images/cart/share/share.jpg
+  - image: /assets/images/cart/share/share-800.jpg
 variant_name: size
 variants:
   - name:

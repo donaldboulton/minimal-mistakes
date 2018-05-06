@@ -19,7 +19,7 @@ header:
   teaser: /assets/images/cart/share/share-320.jpg
 
 images:
-  - image: /assets/images/cart/share-800.jpg
+  - image: /assets/images/cart/share/share-800.jpg
 variant_name: size
 variants:
   - name:
