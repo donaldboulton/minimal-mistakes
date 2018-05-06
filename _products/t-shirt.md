@@ -11,7 +11,8 @@ header:
   teaser: /assets/images/cart/share/share-320.jpg
 layout: single
 products: true
-support: [products]
+support: [products, lightbox]
+lightbox: true
 subtitle: Buy me a t-shirt
 images:
   - image: /assets/images/cart/t-shirt/view3.jpeg

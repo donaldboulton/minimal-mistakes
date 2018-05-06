@@ -16,23 +16,6 @@
 }
 #checkout_progress li.past > span:before,
 #checkout_progress li.current > span:before {box-shadow: 0px 0px 0.1px 1px #d9230f; background: #d9230f;}
-#instafeed a img, .product-grid a img, .product-gallery a img, .image-gallery a img {
-    -webkit-filter: grayscale(100%) brightness(116%) contrast(83%) opacity(70%);
-    filter: grayscale(100%) brightness(116%) contrast(83%) opacity(70%);
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    transition: all .3s ease;
-}
-.product-gallery {
-    overflow: auto;
-    margin-bottom: 25px;
-}
-.product-gallery a:nth-child(1) {
-    display: block;
-    margin-bottom: 0.85%;
-}
 </style>
 <script>
 
@@ -58,7 +41,7 @@ function submitcheckout(event) {
             var price = item_array[2];
             var image = item_array[3];
             var count = item_array[4];
-            values['Order '+(i+1)] = count + " x " + description + " ($ " + parseFloat(price).toFixed(2) + ")";
+            values['Order '+(i+1)] = count + " x " + description + " (€ " + parseFloat(price).toFixed(2) + ")";
             total = parseFloat(total) + parseFloat((count * price));
     }
     values['Shopping cart'] = parseFloat(total).toFixed(2);
@@ -141,10 +124,10 @@ function updatecart() {
             var image = item_array[3];
             var count = item_array[4];
 
-            $('tbody').append('<tr><td><img src="https://images.weserv.nl/?url={{ site.url | replace: 'https://','' | replace: 'http://','' }}'+image+'&w=120&h=120&t=square&output=jpg&q=50" /><span>'+description+'<br />&dollar; '+price+'<br /><a href="#" class="" onclick="removefromcart(\''+item_index+'\')">remove</a></span></td><td><input type="number" onchange="updateproductamount(\''+item_index+'\',this.value)" class="form-control" value="'+count+'" /></td><td>&dollar; '+(count * price).toFixed(2)+'</td></tr>');
+            $('tbody').append('<tr><td><img src="https://images.weserv.nl/?url={{ site.url | replace: 'https://','' | replace: 'http://','' }}'+image+'&w=120&h=120&t=square&output=jpg&q=50" /><span>'+description+'<br />&euro; '+price+'<br /><a href="#" class="" onclick="removefromcart(\''+item_index+'\')">remove</a></span></td><td><input type="number" onchange="updateproductamount(\''+item_index+'\',this.value)" class="form-control" value="'+count+'" /></td><td>&euro; '+(count * price).toFixed(2)+'</td></tr>');
             total = parseFloat(total) + parseFloat((count * price));
         }
-        $('tbody').append('<tr><td colspan="3" class="carttotal">&dollar; '+total.toFixed(2)+'</td></tr>');
+        $('tbody').append('<tr><td colspan="3" class="carttotal">&euro; '+total.toFixed(2)+'</td></tr>');
         $('#carttotal').remove();
         $('body').append('<input id="carttotal" type="hidden" value="'+total+'" />');
         if(counted_product_array.length>9) $('#cartnumber').show().html("9");
@@ -152,7 +135,7 @@ function updatecart() {
     } else {
         $('tbody > *').remove();
         $('tbody').append('<tr><td colspan="2">Your cart is currently empty...</td><td></td></tr>');
-        $('tbody').append('<tr><td colspan="3" class="carttotal">&dollar; 0.00</td></tr>');
+        $('tbody').append('<tr><td colspan="3" class="carttotal">&euro; 0.00</td></tr>');
         $('body').append('<input id="carttotal" type="hidden" value="0.00" />');
         $('#cartnumber').hide();
     }
@@ -260,18 +243,18 @@ $('body').on('click', '.buy', function() {
 $('form').change(function() {
     var carttotal = parseFloat($('#carttotal').val()).toFixed(2);
     $('#checkoutcalc').html('');
-    $('#checkoutcalc').html("<span style='float: left;'>Shopping cart: </span>&dollar; "+carttotal);
+    $('#checkoutcalc').html("<span style='float: left;'>Shopping cart: </span>&euro; "+carttotal);
     var checkouttotal = carttotal;
     $('input[price]:checked').each( function() {
         var price = parseFloat($(this).attr('price')).toFixed(2);
         var description = $(this).attr('description');
-        $('#checkoutcalc').html($('#checkoutcalc').html() + "<br /><span style='float: left;'>"+description+": </span>&dollar; "+price); 
+        $('#checkoutcalc').html($('#checkoutcalc').html() + "<br /><span style='float: left;'>"+description+": </span>&euro; "+price); 
         checkouttotal = (parseFloat(checkouttotal) + parseFloat(price)).toFixed(2);
     });
     $('#checkouttotal').remove();
     $('body').append('<input id="checkouttotal" type="hidden" value="'+checkouttotal+'" />');
     if(carttotal != checkouttotal) {
-        $('#checkoutcalc').html($('#checkoutcalc').html() + "<div style='border-top: 1px solid #aaa; padding-top: 2px; margin-top: 3px;'><span style='float: left;'>Payment total: </span>&dollar; "+checkouttotal+"</div>"); 
+        $('#checkoutcalc').html($('#checkoutcalc').html() + "<div style='border-top: 1px solid #aaa; padding-top: 2px; margin-top: 3px;'><span style='float: left;'>Payment total: </span>&euro; "+checkouttotal+"</div>"); 
     }
 });
 

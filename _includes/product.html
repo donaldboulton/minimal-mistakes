@@ -14,7 +14,7 @@
                         {% assign integral = price_split[0] %}
                         {% assign fractional = price_split[1] | append: "00" | truncate: 2, "" %}
                         {% if fractional == '00' %}{% assign fractional = '-' %}{% endif %}
-                        <h2 class="price">{% if page.price > 0 %}&dollar; {{ integral }}.{{ fractional }}{% endif %}</h2>
+                        <h2 class="price">{% if page.price > 0 %}&euro; {{ integral }}.{{ fractional }}{% endif %}</h2>
 
                       
                         {% if page.variants[0].name != nil and page.variants[0].name != '' %}

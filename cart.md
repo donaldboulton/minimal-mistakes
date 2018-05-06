@@ -4,9 +4,10 @@ excerpt: "Shopping cart"
 no_menu_item: true
 layout: single
 support: [products]
+lightbox: false
 sitemap: false
 author_profile: true
-adds: true
+adds: false
 sidenav: true
 classes: products
 header:
