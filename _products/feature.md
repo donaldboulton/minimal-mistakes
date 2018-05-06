@@ -9,7 +9,7 @@ products: true
 support: [products, lightbox]
 sitemap: false
 author_profile: true
-adds: true
+adds: false
 sidenav: true
 lightbox: true
 toc: false

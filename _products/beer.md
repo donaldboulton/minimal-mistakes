@@ -6,7 +6,7 @@ no_menu_item: true
 layout: single
 sitemap: false
 author_profile: true
-adds: true
+adds: false
 sidenav: true
 products: true
 support: [products, lightbox]
