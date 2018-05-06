@@ -11,7 +11,7 @@ sitemap: false
 author_profile: true
 adds: false
 sidenav: true
-classes: products
+classes: product
 header:
   image: /assets/images/cart/coffee/coffee-cover.jpg
   teaser: /assets/images/cart/coffee/coffee-cover-320.jpg

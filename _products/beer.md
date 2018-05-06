@@ -11,7 +11,7 @@ sidenav: true
 products: true
 support: [products, lightbox]
 lightbox: true
-classes: products
+classes: product
 header:
   image: /assets/images/cart/beer/beer-cover.jpg
   teaser: /assets/images/cart/beer/beer-cover-320.jpg

@@ -11,7 +11,7 @@ sidenav: true
 header:
   image: /assets/images/cart/catfood/blue-wilderness.jpg
   teaser: /assets/images/cart/catfood/blue-wilderness-320.jpg
-classes: products
+classes: product
 subtitle: Buy me some cat food
 images:
   - image: /assets/images/cart/catfood/blue-wilderness.jpg

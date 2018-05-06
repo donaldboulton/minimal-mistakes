@@ -7,7 +7,7 @@ sidenav: true
 header:
   image: /assets/images/cart/share/share-cover.jpg
   teaser: /assets/images/cart/share/share-320.jpg
-classes: products
+classes: product
 layout: single
 products: true
 support: [products]
