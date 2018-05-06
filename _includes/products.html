@@ -1,5 +1,5 @@
 <div class="post-page">
-    <div class="gallery-3-col-unjustified product-grid">
+    <div class="gallery-2-col-unjustified product-grid">
         {% assign items = site.products | sort: 'price' %}
         {% for item in items %}
         {% assign price_split = item.price | round: 2 | split: "." %}
