@@ -16,6 +16,23 @@
 }
 #checkout_progress li.past > span:before,
 #checkout_progress li.current > span:before {box-shadow: 0px 0px 0.1px 1px #d9230f; background: #d9230f;}
+#instafeed a img, .product-grid a img, .product-gallery a img, .image-gallery a img {
+    -webkit-filter: grayscale(100%) brightness(116%) contrast(83%) opacity(70%);
+    filter: grayscale(100%) brightness(116%) contrast(83%) opacity(70%);
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    transition: all .3s ease;
+}
+.product-gallery {
+    overflow: auto;
+    margin-bottom: 25px;
+}
+.product-gallery a:nth-child(1) {
+    display: block;
+    margin-bottom: 0.85%;
+}
 </style>
 <script>
 

@@ -5,6 +5,7 @@ no_menu_item: true
 sitemap: false
 adds: false
 sidenav: true
+classes: products
 header:
   image: /assets/images/cart/share/share-cover.jpg
   teaser: /assets/images/cart/share/share-320.jpg

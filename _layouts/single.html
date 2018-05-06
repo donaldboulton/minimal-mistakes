@@ -33,7 +33,7 @@ layout: default
       <section class="page__content" itemprop="text">
           {{ content }}        
           {% if page.products %}
-            {% include products.html %}
+            {% include product.html %}
           {% endif %}
           <aside class="sidebar__right">
             {% if page.toc %}
@@ -83,7 +83,7 @@ layout: default
     <div class="page__related">
       <h4 class="page__related-title">{{ site.data.ui-text[site.locale].related_label | default: "You May Also Enjoy" }}</h4>
       <div class="grid__wrapper">
-        {% for post in site.related_posts limit:4 %}
+        {% for post in site.related_posts limit:3 %}
           {% include archive-single.html type="grid" %}
         {% endfor %}
       </div>
@@ -93,7 +93,7 @@ layout: default
     <div class="page__related">
       <h4 class="page__related-title">{{ site.data.ui-text[site.locale].related_label | default: "You May Also Enjoy" }}</h4>
       <div class="grid__wrapper">
-        {% for post in site.posts limit:4 %}
+        {% for post in site.posts limit:3 %}
           {% include archive-single.html type="grid" %}
         {% endfor %}
       </div>

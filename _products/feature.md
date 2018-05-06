@@ -4,6 +4,7 @@ subtitle: Sponsor a feature
 excerpt: "Sponser Us."
 no_menu_item: true
 layout: single
+classes: products
 products: true
 support: [products]
 sitemap: false

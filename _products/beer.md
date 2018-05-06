@@ -1,5 +1,6 @@
 ---
-title: " Buy Me Beer"
+title: "Buy Me Beer"
+subtitle: Buy me a beer
 excerpt: "Buy me a bottle of Beer."
 no_menu_item: true
 layout: single
@@ -9,7 +10,7 @@ adds: true
 sidenav: true
 products: true
 support: [products]
-
+classes: products
 header:
   image: /assets/images/cart/beer/beer-cover.jpg
   teaser: /assets/images/cart/beer/beer-cover-320.jpg

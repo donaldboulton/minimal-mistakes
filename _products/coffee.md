@@ -1,5 +1,6 @@
 ---
-title: "Buy a Coffee"
+title: Buy a Coffee
+subtitle: Buy me a Coffee
 excerpt: "Buy me a cup of coffee."
 no_menu_item: true
 layout: single
@@ -9,7 +10,7 @@ sitemap: false
 author_profile: true
 adds: true
 sidenav: true
-
+classes: products
 header:
   image: /assets/images/cart/coffee/coffee-cover.jpg
   teaser: /assets/images/cart/coffee/coffee-cover-320.jpg
