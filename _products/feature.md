@@ -15,11 +15,11 @@ lightbox: true
 toc: false
 
 header:
-  image: /assets/images/cart/coffee/coffee-cover.jpg
-  teaser: /assets/images/cart/coffee/coffee-cover-320.jpg
+  image: /assets/images/cart/share/share-cover.jpg
+  teaser: /assets/images/cart/share/share-320.jpg
 
 images:
-  - image: /assets/images/cart/sponser-us.png
+  - image: /assets/images/cart/share-800.jpg
 variant_name: size
 variants:
   - name:
