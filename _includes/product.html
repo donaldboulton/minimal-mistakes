@@ -1,6 +1,6 @@
 <div class="post-page gallery-2-col-unjustified">
                 <div>
-                    <div class="product-gallery">
+                    <div class="product-gallery gallery-3-col">
                     {% for item in page.images %}
                         <a href="https://images.weserv.nl/?url={{ site.url | replace: 'https://','' | replace: 'http://','' }}{{ item.image }}&w=1400&output=jpg&q=50" ><img src="https://images.weserv.nl/?url={{ site.url | replace: 'https://','' | replace: 'http://','' }}{{ item.image }}&w={% if forloop.index == 1 %}1400{% else %}350{% endif %}&output=jpg&q=50" /></a>
                     {% endfor %}
