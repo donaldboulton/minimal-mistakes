@@ -7,6 +7,8 @@ toc_label: "Contents"
 youtubeId: yoE9-tNvhRs
 adds: true
 reviews: true
+cookies: true
+support: [adds, cookies]
 ---
 
 {% include octo-arm.html %}

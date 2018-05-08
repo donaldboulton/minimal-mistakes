@@ -9,6 +9,7 @@ author: Donald Boulton
 author_profile: true
 sidenav: true
 adds: true
+cookies: true
 reviews: true
 tags:
   - SQL Server
@@ -32,6 +33,8 @@ image:
 header:
   image: /assets/images/pages/defrag-sql-2014-1200.png
   teaser: /assets/images/pages/defrag-sql-2014-320.png
+
+support: [adds, cookies]  
 ---
 
 {% include octo-arm.html %}

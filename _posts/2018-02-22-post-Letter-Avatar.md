@@ -10,6 +10,7 @@ author_profile: true
 sidenav: true
 reviews: true
 adds: true
+cookies: true
 tags:
   - Gravatar
   - Letter Avatar
@@ -36,6 +37,8 @@ image:
 header:
   image: /assets/images/pages/letter-avatar-header-1200.png
   teaser: /assets/images/pages/letter-avatar-header-320.png        
+
+support: [adds, cookies]  
 ---
 
 {% include octo-arm.html %}

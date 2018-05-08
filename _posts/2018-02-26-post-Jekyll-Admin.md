@@ -7,6 +7,7 @@ comments: true
 share: true
 sidenav: true
 adds: true
+cookies: true
 reviews: true
 title: Jekyll Admin
 date: 2018-02-26 16:16:01 -0600
@@ -33,6 +34,8 @@ header:
   teaser: /assets/images/pages/jekyll-admin-320.jpg
 
 excerpt: "Jekyll admin makes it so easy for me to add new pages, posts or any type of content, including file management, adding images to .md pages and Changing Configuration."
+
+support: [adds, cookies]
 ---
 
 {% include octo-arm.html %}

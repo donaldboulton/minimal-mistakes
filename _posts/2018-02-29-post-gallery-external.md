@@ -21,6 +21,7 @@ category:
 
 sidenav: true
 adds: true
+cookies: true
 reviews: true
 excerpt: "Pictures of my Kitty Cats and Travels. My Kitty Gallery has my 4 male House Cats, Past Cats and the 20 or so strays I feed every day. Computers Cats are my passion, I love kitty cats"
 image:
@@ -39,6 +40,8 @@ sidebar:
 header:
   image: /assets/photography/cat-gallery/einstine-1200.jpg
   teaser: /assets/photography/cat-gallery/einstine-320.jpg
+
+support: [adds, cookies]  
 ---
 
 {% include page-intro.html %}

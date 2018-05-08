@@ -24,9 +24,9 @@ image:
 locations:
   - Idabel OKlahoma
 
-excerpt: "Comments Ratings, TESTING page used for Google Positioning Micro data. Using Staticman's Popcorn Github repo to push reviews from my external popcorn site to my Root site donboulton.com. This is still a work in progress so Leave a Review for any page in donboulton.com and It should in the future, liquid math???, show up as a rating on that page."
+excerpt: "Comments Ratings, TESTING page used for Google Positioning Micro data. Using Staticman's Popcorn Github repo to push reviews to my Root site donboulton.com. This is still a work in progress so Leave a Review for any page in donboulton.com and It should in the future, liquid math???, show up as a rating on that page."
 
-support: [places]
+support: [places, adds, cookies]
 ---
 
 {% include octo-arm.html %}

@@ -11,36 +11,6 @@
 <script src="{{ '/assets/js/main.min.js' | relative_url }}"></script>
 {% endif %}
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
-<script>
-window.addEventListener("load", function() {
-    window.cookieconsent.initialise({
-        "palette": {
-            "popup": {
-                "background": "#031111",
-                "text": "#d6d6d6"
-            },
-            "button": {
-                "background": "#1faaaa"
-            }
-        },
-        revokable:true,
-        onStatusChange: function(status) {
-          console.log(this.hasConsented() ?
-             'enable cookies' : 'disable cookies');
-         },
-         law: {
-           regionalLaw: false,
-         },
-         location: true,
-        "theme": "edgeless",
-        "position": "bottom-left",
-        "content": {
-            "href": "https://donboulton.com/terms/#cookies-and-web-beacons"
-        }
-    })
-});
-</script>
 
 {% if site.search == true or page.layout == "search" %}
   {%- assign search_provider = site.search_provider | default: "lunr" -%}
@@ -108,6 +78,39 @@ window.addEventListener("load", function() {
 {% if page.support contains 'products' %}   
    {% include webshop.html email="donaldboulton@gmail.com" paymentlink="https://useplink.com/payment/test_SsUsSzCgxypNgnUD4M3uqeAe8FmCwE" %}
    {% include products-script.html %}
+{% endif %}
+
+{% if page.support contains 'cookies' %}   
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function() {
+    window.cookieconsent.initialise({
+        "palette": {
+            "popup": {
+                "background": "#031111",
+                "text": "#d6d6d6"
+            },
+            "button": {
+                "background": "#1faaaa"
+            }
+        },
+        revokable:true,
+        onStatusChange: function(status) {
+          console.log(this.hasConsented() ?
+             'enable cookies' : 'disable cookies');
+         },
+         law: {
+           regionalLaw: false,
+         },
+         location: true,
+        "theme": "edgeless",
+        "position": "bottom-left",
+        "content": {
+            "href": "https://donboulton.com/terms/#cookies-and-web-beacons"
+        }
+    })
+});
+</script>
 {% endif %}
 
 {% if page.support contains 'lightbox' %}

@@ -36,6 +36,8 @@ image:
 header:
   image: /assets/images/pages/performance/speedtest_donboulton.jpg
   teaser: /assets/images/pages/performance/speedtest_donboulton-320.jpg
+
+support: [adds, cookies]  
 ---
 
 {% include octo-arm.html %}

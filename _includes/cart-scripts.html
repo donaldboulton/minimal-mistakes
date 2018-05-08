@@ -32,10 +32,8 @@
     $("form").addClass('js');
     var formname = $("form.autofill").first().attr('id');
     
-    //console.log(formname);
     if(formname) {
        
-        // on pageload read the cookie and write the values to the form
         if(readCookie(formname)) {
             form_array = unescape(readCookie(formname)).split(',');
             
@@ -70,12 +68,8 @@
             });
         }
 
-    
-        /* input label helper - blur */
         $( "input[type='text'], input[type='number'], input[type='email'], textarea, select, input[type='radio'], input[type='checkbox']" ).blur( function() {
             
-
-            //store data in cookie
             eraseCookie(formname);
             var form_array = [];
             var i = 0;
@@ -92,19 +86,16 @@
             });
             createCookie(formname,escape(form_array.join(',')),30);
         
-            //remove active class for empty inputs
             if($(this).val()=='') $(this).parent().removeClass('active');
         });
     }  
 
-    /* input label helper - focus */
     $( "input[type='text'], input[type='number'], input[type='email'], textarea" ).focus( function() {
         $(this).parent().addClass('active');
     });
     
     $( "input[type='text'], input[type='number'], input[type='email'], textarea, select, input[type='checkbox']" ).blur( function() {
         if(typeof $(this).attr('required') !== typeof undefined && $(this).attr('required') !== false) {
-        //precheck required fields
         if ($(this).val()!='') {
             if($(this).is("input[type='email']" )) {
             if (validateEmail($(this).val())) {
@@ -123,16 +114,14 @@
         }
     });
     
-    // remove error class on click
     $( "input, textarea" ).click( function() {
         $(this).removeClass('error');
     });
     
-    // javascript errors on submit (instead of HTML5)
     $('form input[type="submit"]').on('click', function(e){
         var error = 0;
         if($('#input_signature').val()!='') {
-        //do nothing
+
         } else {
         $('#signature').addClass('error');
         error = 1;
@@ -142,7 +131,7 @@
             if($(this).val()!='') { 
             if($(this).is("input[type='email']" )) {
                 if (validateEmail($(this).val())) {
-                //do nothing
+
                 } else {
                 $(this).addClass('error');
                 error = 1;
@@ -157,9 +146,8 @@
         if (error==1) {
         e.preventDefault();
         
-        //scroll to the first error
         $('html, body').animate({
-            scrollTop: ($('.error:visible:first').offset().top - 150) // 150px is an arbitrary amount to have the field better centered
+            scrollTop: ($('.error:visible:first').offset().top - 150)
         }, 300);
         }
     });

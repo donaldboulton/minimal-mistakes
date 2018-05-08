@@ -8,6 +8,7 @@ author: Donald Boulton
 author_profile: true
 sidenav: true
 adds: true
+cookies: true
 reviews: true
 tags:
   - SQL
@@ -16,7 +17,7 @@ tags:
 
 category:
   - Programing
-
+  
 toc: true
 toc_label: "Contents"
 
@@ -26,6 +27,7 @@ share: true
 related: true
 locations:
   - Idabel OKlahoma
+
 excerpt: "Check SQL Server a specified database index fragmentation percentage (SQL). A Dynamic CMS using SQL Server most always has fragmentation. When files or data are in the wrong place then SQL Server has to spend time looking for the missing data, slowing the whole process down and increasing load times for your site."
 image:
   cover: true
@@ -35,6 +37,8 @@ image:
 header:
   image: /assets/images/pages/check_sql_fragmentation-1200.png
   teaser: /assets/images/pages/check_sql_fragmentation-320.png
+
+support: [adds, cookies]  
 ---
 
 {% include octo-arm.html %}
