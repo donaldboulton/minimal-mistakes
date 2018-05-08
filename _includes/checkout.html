@@ -47,14 +47,14 @@ form input[type="number"].isvalid,
 }
 </style>
 
-<div class="main">
-    <div class="post-page">
-
+<article class="post page">
+    <div class="post-content gallery-2-col">
+        <div>
         <form id="checkoutform" class="form autofill" method="POST" action="http://formspree.io/donaldboulton@gmail.com" onsubmit="return submitcheckout(event)">
             <input name="_next" value="{{ site.url }}" type="hidden">
             <input name="_gotcha" style="display:none" type="text">
             <input name="_subject" value="New submission!" type="hidden">
-            <div class="row form-group">
+            <div class="gallery-2-col form-group">
                 <div class="col-sm-6">
                     <label for="firstname">First name*</label>
                     <input name="first-name" id="firstname" class="form-control" required="" type="text">
@@ -76,7 +76,7 @@ form input[type="number"].isvalid,
                     <input name="address" id="address" class="form-control" required="" type="text">
                 </div>
             </div>
-            <div class="row form-group">
+            <div class="gallery-2-col form-group">
                     <div class="col-sm-6">
                         <label for="city">City*</label>
                         <input name="city" id="city" class="form-control" required="" type="text">
@@ -118,16 +118,17 @@ form input[type="number"].isvalid,
             </div>
         </form>
 
-    </div>
-    <div class="col-md-4">
-        <label>Payment total</label>
-        <div class="well" style="max-width: 600px;">
-            <div id="checkoutcalc" class="text-right"></div>
         </div>
+        <div class="col-md-4">
+            <label>Payment total</label>
+            <div class="well" style="max-width: 600px;">
+                <div id="checkoutcalc" class="text-right"></div>
+            </div>
 
-        <em>Payments are 100% secure and will be handled by Mollies Paylink service, called Plink. In the next screen you will be redirected to a secure checkout process on useplink.com.</em>
+            <em>Payments are 100% secure and will be handled by Mollies Paylink service, called Plink. In the next screen you will be redirected to a secure checkout process on useplink.com.</em>
+        </div>
     </div>
-</div>
+</article>
 
 
 
