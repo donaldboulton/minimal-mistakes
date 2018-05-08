@@ -1,13 +1,32 @@
 <style>
- #checkout_progress {display: block; text-align: center;} #checkout_progress li {width: 110px; text-align: left; display: inline-block; border-top: 1px solid #dddddd; padding-top: 10px;} #checkout_progress li.past {border-color: #d9230f;} #checkout_progress li:last-child {border: 0; width: 55px;} #checkout_progress li > span > * { white-space: nowrap; display: inline-block; -ms-transform: translateX(-50%); /* IE 9 */ -webkit-transform: translateX(-50%); /* Chrome, Safari, Opera */ transform: translateX(-50%); } #checkout_progress li > *:before {position: absolute; margin: -16px 0 0 -5px; width: 11px; height: 11px; content: ""; border-radius: 99px; border: 2px solid white; box-shadow: 0px 0px 0.1px 1px #bbb; background: white; } #checkout_progress li.past > span:before, #checkout_progress li.current > span:before {box-shadow: 0px 0px 0.1px 1px #d9230f; background: #d9230f;} #instafeed a img, .product-grid a img, .product-gallery a img, .image-gallery a img { -webkit-filter: grayscale(100%) brightness(116%) contrast(83%) opacity(70%); filter: grayscale(100%) brightness(116%) contrast(83%) opacity(70%); -webkit-transition: all .3s ease; -moz-transition: all .3s ease; -o-transition: all .3s ease; -ms-transition: all .3s ease; transition: all .3s ease; } .product-gallery { overflow: auto; margin-bottom: 25px; } .product-gallery a:nth-child(1) { display: block; margin-bottom: 0.85%; }
+#checkout_progress {display: block; text-align: center;}
+#checkout_progress li {width: 110px; text-align: left; display: inline-block; border-top: 1px solid #dddddd; padding-top: 10px;}
+#checkout_progress li.past {border-color: #d9230f;}
+#checkout_progress li:last-child {border: 0; width: 55px;}
+#checkout_progress li > span > * {
+    white-space: nowrap;
+    display: inline-block;
+    -ms-transform: translateX(-50%); /* IE 9 */
+    -webkit-transform: translateX(-50%); /* Chrome, Safari, Opera */
+    transform: translateX(-50%);
+}
+#checkout_progress li > *:before {position: absolute; margin: -16px 0 0 -5px; width: 11px; height: 11px; content: ""; 
+    border-radius: 99px; border: 2px solid white; 
+    box-shadow: 0px 0px 0.1px 1px #bbb; background: white;
+}
+#checkout_progress li.past > span:before,
+#checkout_progress li.current > span:before {box-shadow: 0px 0px 0.1px 1px #d9230f; background: #d9230f;}
 </style>
 <script>
+
+
 var cart_array = [];
 var product_array = [];
 
 function submitcheckout(event) {
     event.preventDefault();
     
+    //get all values from the form
     var values = {};
     $.each($('#checkoutform').serializeArray(), function(i, field) {
         var human_label = field.name[0].toUpperCase() + field.name.substring(1).replace(/-/g, " ");
@@ -64,19 +83,20 @@ function createcountedproductarray() {
     product_array = unescape(readCookie('productcookie')).split(',');
     cart_array = unescape(readCookie('cartcookie')).split(',');
     var counted_cart_array = [];
+    //create counted cart array
     for (var i=0; i<cart_array.length; i++) {
-
+        //check how many times this item exists and add it to the string
         var thiscount = 0;
         for(var j=0;j<cart_array.length;j++){
             if(cart_array[j] == cart_array[i]) thiscount++;
         }
         counted_cart_array.push(cart_array[i]+'|'+thiscount);
     }
-
+    //remove all other occurances of this string
     counted_cart_array = uniq(counted_cart_array);
 
     var counted_product_array = []
-
+    //replace indexes with product strings (merge product array with counted cart array)
     for (var i=0; i<counted_cart_array.length; i++) {
         var item_array = counted_cart_array[i].split('|');
         var item_count = item_array[1];
@@ -85,6 +105,7 @@ function createcountedproductarray() {
         counted_product_array[i] = item_index + "|" +product_string + "|" + item_count;
     }
 
+    //return counted product array
     return counted_product_array;
 }
 
@@ -92,6 +113,7 @@ function updatecart() {
     if(readCookie('cartcookie')) {
         var counted_product_array = createcountedproductarray();
 
+        //toon cart_array
         var total = 0;
         $('tbody > *').remove();
         for (var i=0; i<counted_product_array.length; i++) {
@@ -122,19 +144,23 @@ function updatecart() {
 }
 
 function updateproductamount(item_index,amount){
-
+    //find the index of the productstring
+    //var product_array_index = product_array.indexOf(productstring);
     var product_array_index = item_index;
 
+    //calculate diff with cookie
     cart_array = unescape(readCookie('cartcookie')).split(',');
 
     for (var i=0; i<cart_array.length; i++) {
         if(cart_array[i]==product_array_index) {
 
+            //check how many times this item exists and add it to the string
             var thiscount = 0;
             for(var j=0;j<cart_array.length;j++){
                 if(cart_array[j] == cart_array[i]) thiscount++;
             }
 
+            //add items to the cart cookie
             if(thiscount<amount) {
                 for (var j=0; j<(amount - thiscount); j++) {
                     cart_array.push(product_array_index);
@@ -142,10 +168,10 @@ function updateproductamount(item_index,amount){
                     createCookie('cartcookie',escape(cart_array.join(',')),30);
                 }
             }
-
+            //remove items from the cart cookie
             if(thiscount>amount) {
                 for (var j=0; j<(thiscount - amount); j++) {
-                    var index = cart_array.indexOf(product_array_index.toString());
+                    var index = cart_array.indexOf(product_array_index.toString());    // <-- Not supported in <IE9
                     if (index !== -1) {
                         cart_array.splice(index, 1);
                     }
@@ -163,11 +189,11 @@ function updateproductamount(item_index,amount){
 function removefromcart(string) {
     if(readCookie('cartcookie')) {
         cart_array = unescape(readCookie('cartcookie')).split(',');
-
+        //console.log(string);
         cart_array = cart_array.filter(function(item) { 
             return item !== string;
         });
-
+        //console.log(cart_array);
         eraseCookie('cartcookie');
         createCookie('cartcookie',escape(cart_array.join(',')),30);
         updatecart();
@@ -179,16 +205,16 @@ function isInArray(value, array) {
 
 $('body').on('click', '.addtocart', function() {
     var productstring = $(this).attr('description')+'|'+$(this).attr('price')+'|'+$(this).attr('image');
-
+    //check if product is available in the product_array
     var product_array_index = product_array.indexOf(productstring);
-
+    //if not add product to product_array
     if(product_array_index<0) {
         product_array_index = (product_array.push(productstring) -1);
     }
-
+    //add the index to the cart
     cart_array.push(product_array_index);
 
-
+    //add the item to the cart
     eraseCookie('cartcookie');
     createCookie('cartcookie',escape(cart_array.join(',')),30);
     eraseCookie('productcookie');
@@ -198,12 +224,13 @@ $('body').on('click', '.addtocart', function() {
 
 $('body').on('click', '.buy', function() {
     var productstring = $(this).attr('description')+'|'+$(this).attr('price')+'|'+$(this).attr('image');
-
+    //check if product is available in the product_array
     var product_array_index = product_array.indexOf(productstring);
-
+    //if not add product to product_array
     if(product_array_index<0) {
         product_array_index = (product_array.push(productstring) -1);
     }
+    //clear the cart and add the index
     var cart_array = [product_array_index];
 
     eraseCookie('cartcookie');
