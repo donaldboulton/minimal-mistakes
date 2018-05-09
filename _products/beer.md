@@ -3,19 +3,22 @@ title: "Buy Me Beer"
 subtitle: Buy me a beer
 excerpt: "Buy me a bottle of Beer."
 no_menu_item: true
-layout: single
 sitemap: false
 author_profile: true
 adds: false
 sidenav: true
-products: true
-support: [products, lightbox]
+support: [lightbox]
 lightbox: true
 classes: product
 header:
   image: /assets/images/cart/beer/beer-cover.jpg
   teaser: /assets/images/cart/beer/beer-cover-320.jpg
-
+name: Buy me a beer
+price: 2.75
+slug: Buy me a beer
+sku: BEER
+image: /assets/images/cart/sponser-us.png
+layout: productdetails
 subtitle: Buy me a beer
 images:
   - image: /assets/images/cart/beer/5.jpg
