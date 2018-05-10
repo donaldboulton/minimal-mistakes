@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Defrag SQL"
-permalink: /posts/2018-02-25-post-Defrag-SQL/
+permalink: /posts/2018-02-25-post-Defrag-SQL
 date: 2018-02-25 16:16:01 -0600
 last_modified_at: 2018-03-01T12:42:38-04:00
 search: true
@@ -35,7 +35,7 @@ header:
   teaser: /assets/images/pages/defrag-sql-2014-320.png
 
 support: [adds, cookies]
-
+folder: _posts
 ---
 
 {% include octo-arm.html %}

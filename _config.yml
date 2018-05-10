@@ -81,7 +81,7 @@ siteleaf:
   api-key                : "598283c4e4db7bcdc42a367c732e22bb"
   api-secret             : "DD9rRDh9UGZFrUZWEwvhtMDOyiRCM99pmq0mjfKaUb5Yzkr8U/6mTNyv9AXa2yKqkYnNYG9uwhl1LZZeDxs8YUon4QmZ9i89qsZ9EaA0+T8sC+5Yn6+fJcMX2DYt6pfybacXbJN/OR3UJVIfIM6TBhMz1/JyNme9DPMdnq3GG4w="
 
-github_editme_path       : donaldboulton/DWB/gh-pages/
+github_editme_path       : donaldboulton/DWB/blob/gh-pages
 
 algolia:
   application_id         : "G34JUR3EB9"
@@ -324,7 +324,7 @@ collections:
     permalink: /:photography/:name/
   products:
     output: true
-    permalink: /donate/:path/ 
+    permalink: /products/:name/ 
   category:
     output: true
 # Defaults
@@ -345,7 +345,7 @@ defaults:
       permalink: /:path/:basename:output_ext
   # _posts
   - scope:
-      path: "_posts"
+      path: "posts"
       type: posts
     values:
       layout: single
@@ -354,7 +354,9 @@ defaults:
       comments: true
       share: true
       related: true
-      toc: true    
+      toc: true
+      adds: true
+      reviews: true    
       breadcrumbs:
         - label: "Posts"
           url: /year-archive/
@@ -383,7 +385,7 @@ posts_json_path: posts.json
 autopages:
   enabled: true
   categories:
-    enabled: false
+    enabled: true
   collections:
     layouts: 
       - 'autopage_collection.html'

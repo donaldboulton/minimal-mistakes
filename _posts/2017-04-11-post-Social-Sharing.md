@@ -38,7 +38,7 @@ header:
   teaser: /assets/images/pages/social-sharing-320.jpg       
 
 support: [adds, cookies]
-folder: mydoc 
+folder: _posts
 ---
 
 {% include octo-arm.html %}
