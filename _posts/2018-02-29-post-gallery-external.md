@@ -42,7 +42,7 @@ header:
   teaser: /assets/photography/cat-gallery/einstine-320.jpg
 
 support: [adds, cookies]
-folder: mydoc
+folder: _posts
 ---
 
 {% include page-intro.html %}

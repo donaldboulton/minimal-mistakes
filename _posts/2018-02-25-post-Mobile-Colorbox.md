@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Mobile Colorbox"
-permalink: /posts/2018-02-25-post-Mobile-Colorbox/
+permalink: 2018-02-25-post-Mobile-Colorbox
 date: 2018-02-25 15:16:01 -0600
 last_modified_at: 2018-02-28T12:42:38-04:00
 search: true
@@ -35,7 +35,7 @@ header:
   teaser: /assets/images/pages/svg/colorbox-html-320.png
 
 support: [adds, cookies]
-folder: mydoc  
+folder: _posts  
 ---
 
 {% include octo-arm.html %}

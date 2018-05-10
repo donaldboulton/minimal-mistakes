@@ -1,6 +1,6 @@
 ---
 layout: single
-permalink: /posts/2018-02-26-post-Jekyll-Admin/
+permalink: 2018-02-26-post-Jekyll-Admin
 author_profile: true
 read_time: true
 comments: true
@@ -36,7 +36,7 @@ header:
 excerpt: "Jekyll admin makes it so easy for me to add new pages, posts or any type of content, including file management, adding images to .md pages and Changing Configuration."
 
 support: [adds, cookies]
-folder: mydoc
+folder: _posts
 ---
 
 {% include octo-arm.html %}
