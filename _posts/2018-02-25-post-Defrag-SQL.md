@@ -35,7 +35,7 @@ header:
   teaser: /assets/images/pages/defrag-sql-2014-320.png
 
 support: [adds, cookies]
-folder: mydoc
+
 ---
 
 {% include octo-arm.html %}
