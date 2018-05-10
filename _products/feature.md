@@ -1,9 +1,9 @@
 ---
 title: Feature
 subtitle: Sponsor a feature
-excerpt: "Sponser Us."
+excerpt: "Sponser Us"
 no_menu_item: true
-layout: single
+layout: productdetails
 classes: product
 products: true
 support: [products, lightbox]
@@ -13,11 +13,10 @@ adds: false
 sidenav: true
 lightbox: true
 toc: false
-
 header:
   image: /assets/images/cart/share/share-cover.jpg
   teaser: /assets/images/cart/share/share-320.jpg
-
+image: /assets/images/cart/share/share-800.jpg
 images:
   - image: /assets/images/cart/share/share-800.jpg
 variant_name: size

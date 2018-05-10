@@ -9,11 +9,12 @@ classes: product
 header:
   image: /assets/images/cart/share/share-cover.jpg
   teaser: /assets/images/cart/share/share-320.jpg
-layout: single
+layout: productdetails
 products: true
 support: [products, lightbox]
 lightbox: true
 subtitle: Buy me a t-shirt
+image: /assets/images/cart/t-shirt/view.jpeg
 images:
   - image: /assets/images/cart/t-shirt/view3.jpeg
   - image: /assets/images/cart/t-shirt/view.jpeg

@@ -3,7 +3,7 @@ title: Buy a Coffee
 subtitle: Buy me a Coffee
 excerpt: "Buy me a cup of coffee."
 no_menu_item: true
-layout: single
+layout: productdetails
 products: true
 support: [products, lightbox]
 lightbox: true
@@ -16,6 +16,7 @@ header:
   image: /assets/images/cart/coffee/coffee-cover.jpg
   teaser: /assets/images/cart/coffee/coffee-cover-320.jpg
 subtitle: Buy me a coffee
+image: /assets/images/cart/coffee/coffee-cover-320.jpg
 images:
   - image: /assets/images/cart/coffee/1.jpg
   - image: /assets/images/cart/coffee/2.jpg

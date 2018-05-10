@@ -8,10 +8,10 @@ header:
   image: /assets/images/cart/share/share-cover.jpg
   teaser: /assets/images/cart/share/share-320.jpg
 classes: product
-layout: single
+layout: productdetails
 products: true
 lightbox: true
-support: [products, lightbox]
+support: [products, lightbox, adds]
 subtitle: Share the love
 images:
   - image: /assets/images/cart/share/share-800.jpg
