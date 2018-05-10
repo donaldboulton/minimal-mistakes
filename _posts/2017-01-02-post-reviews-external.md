@@ -10,6 +10,7 @@ author: Donald Boulton
 author_profile: true
 adds: true
 places: true
+cookies: true
 reviews: true
 date: 2017-01-02 16:16:01 -0600
 last_modified_at: 2017-01-13T12:42:38-04:00

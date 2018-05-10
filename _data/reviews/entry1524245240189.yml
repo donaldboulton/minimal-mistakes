@@ -1,7 +1,11 @@
 _id: 142b9410-44c0-11e8-9841-8bcd4bdd45e5
 name: Testing External Reviews
+product: Testing External Reviews
 address: ''
 title: External reviews
 description: Hi is this working
 rating: '2'
 date: '2018-04-20T17:27:20.189Z'
+timestamp: 1518727336
+slug: Testing External Reviews
+sku: SW
