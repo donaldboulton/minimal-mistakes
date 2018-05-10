@@ -38,7 +38,8 @@ header:
   image: /assets/images/pages/letter-avatar-header-1200.png
   teaser: /assets/images/pages/letter-avatar-header-320.png        
 
-support: [adds, cookies]  
+support: [adds, cookies]
+folder: mydoc  
 ---
 
 {% include octo-arm.html %}

@@ -41,7 +41,8 @@ header:
   image: /assets/photography/cat-gallery/einstine-1200.jpg
   teaser: /assets/photography/cat-gallery/einstine-320.jpg
 
-support: [adds, cookies]  
+support: [adds, cookies]
+folder: mydoc
 ---
 
 {% include page-intro.html %}

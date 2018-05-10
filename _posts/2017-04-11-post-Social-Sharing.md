@@ -37,7 +37,8 @@ header:
   image: /assets/images/pages/social-sharing.jpg
   teaser: /assets/images/pages/social-sharing-320.jpg       
 
-support: [adds, cookies]  
+support: [adds, cookies]
+folder: mydoc 
 ---
 
 {% include octo-arm.html %}

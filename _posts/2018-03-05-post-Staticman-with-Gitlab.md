@@ -39,6 +39,7 @@ header:
   teaser: /assets/images/pages/staticman-github-gitlab-320.png
 
 support: [adds, cookies]
+folder: mydoc
 ---
 
 {% include octo-arm.html %}

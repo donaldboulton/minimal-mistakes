@@ -38,7 +38,8 @@ header:
   image: /assets/images/pages/check_sql_fragmentation-1200.png
   teaser: /assets/images/pages/check_sql_fragmentation-320.png
 
-support: [adds, cookies]  
+support: [adds, cookies]
+folder: mydoc 
 ---
 
 {% include octo-arm.html %}
