@@ -1,5 +1,6 @@
 ---
 title: "Donate"
+permalink: /donate.html
 excerpt: "Donate to feed stray cats or me."
 no_menu_item: true
 sitemap: false

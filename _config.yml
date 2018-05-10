@@ -345,7 +345,7 @@ defaults:
       permalink: /:path/:basename:output_ext
   # _posts
   - scope:
-      path: "posts"
+      path: ""
       type: posts
     values:
       layout: single
