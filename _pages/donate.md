@@ -1,6 +1,6 @@
 ---
 title: "Donate"
-permalink: /donate.html
+permalink: /donate/
 excerpt: "Donate to feed stray cats or me."
 no_menu_item: true
 sitemap: false
@@ -9,9 +9,7 @@ author_profile: true
 adds: false
 sidenav: true
 layout: single
-name: Donate
-
-slug: donate
+name: "Donate"
 
 image: /assets/images/cart/sponser-us.png
 layout: productdetails
