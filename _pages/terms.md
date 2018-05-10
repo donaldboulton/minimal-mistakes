@@ -9,6 +9,7 @@ adds: true
 reviews: true
 cookies: true
 support: [adds, cookies]
+folder: _pages
 ---
 
 {% include octo-arm.html %}
