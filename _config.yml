@@ -105,7 +105,8 @@ google_site_verification : "DKp8oxWR5F4kbaJJ9uowH1ySMttXrrUjIknx1OfUHc8"
 bing_site_verification   : "361016BEC0F67F6A834D6186E897D9EC"
 yandex_site_verification :
 naver_site_verification  :
-
+google_maps_javascript_api_key: "AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA"
+snipcart_key             : "NGViODk5ZDAtNmU4OC00MjI5LWIxMGMtZGZmOWEwOGRhM2M1NjM2NjE0Nzc1OTQ2NzMzMTU"
 # Social Sharing
 twitter:
   username               : "donboulton"
@@ -345,7 +346,7 @@ defaults:
       permalink: /:path/:basename:output_ext
   # _posts
   - scope:
-      path: ""
+      path: "_posts"
       type: posts
     values:
       layout: single
