@@ -14,11 +14,11 @@ products: true
 support: [products, lightbox]
 lightbox: true
 subtitle: Buy me a t-shirt
-image: /assets/images/cart/t-shirt/view.jpeg
+image: /assets/images/cart/t-shirt/view.jpg
 images:
-  - image: /assets/images/cart/t-shirt/view3.jpeg
-  - image: /assets/images/cart/t-shirt/view.jpeg
-  - image: /assets/images/cart/t-shirt/view4.jpeg
+  - image: /assets/images/cart/t-shirt/view3.jpg
+  - image: /assets/images/cart/t-shirt/view.jpg
+  - image: /assets/images/cart/t-shirt/view4.jpg
 variant_name: size
 variants:
   - name:
