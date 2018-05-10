@@ -325,7 +325,7 @@ collections:
     permalink: /:photography/:name/
   products:
     output: true
-    permalink: /products/:name/ 
+    permalink: /:products/:name/ 
   category:
     output: true
 # Defaults
