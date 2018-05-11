@@ -22,35 +22,35 @@ support: [cookies, products]
   </div>
 </div>
 <div class="product-reviews">
-  {% assign reviews = site.data.reviews | where:'product',page.slug %}
-  {% assign reviewCount = reviews | size %}
+  {% assign rating = site.data.reviews | where:'product',page.slug %}
+  {% assign ratingCount = ratings | size %}
   {% assign sum = 0 %}
-  {% for review in reviews %}
-    {% assign sum = sum | plus: review.review %}
+  {% for rating in reviews %}
+    {% assign sum = sum | plus: rating.rating %}
   {% endfor %}
 
   <h3>Reviews
-    {% if reviewCount > 0 %}
-      {% assign sum = sum | divided_by:reviewCount %}
+    {% if ratingCount > 0 %}
+      {% assign sum = sum | divided_by:ratingCount %}
       (Average: {{ sum | round: 1 }})
     {% endif %}
   </h3>
   <form method="POST"
-        action="https://api.staticman.net/v2/entry/snipcart/snipcart-jekyll-integration/gh-pages/reviews"
-        oninput="result.value=parseInt(this['fields[review]'].value)">
+        action="https://api.staticman.net/v2/entry/donaldboulton/DWB/gh-pages/reviews"
+        oninput="result.value=parseInt(this['fields[rating]'].value)">
     <input name="fields[product]" type="hidden" value="{{ page.slug }}" />
     <input name="options[redirect]" type="hidden" value="{{site.url}}{{site.baseurl}}{{ page.url }}" />
-    
+
     <h4>Add a review</h4>
     <p><label>Your name: <input type="text" class="form-control" name="fields[name]" /></label></p>
-    <p><label>Review: <input type="range" class="form-control" id="fields-review" name="fields[review]" min="0" max="5" step="0.1" value="5" /></label><output for="fields-review" name="result">5</output>/5</p>
+    <p><label>Rating: <input type="range" class="form-control" id="fields-rating" name="fields[rating]" min="0" max="5" step="0.1" value="5" /></label><output for="fields-rating" name="result">5</output>/5</p>
     <p><label>Comment: <input class="form-control" type="text" name="fields[message]" /></label></p>
     <p><button type="submit" class="btn btn--primary">Save review</button></p>
   </form>
   <ul>
-    {% for review in reviews %}
+    {% for rating in reviews %}
     <li>
-      <b>{{ review.review }}/5</b>  by <b>{{ review.name }}</b> on <i>{{ review.date | date: '%B %d, %Y' }}</i>
+      <b>{{ rating.rating }}/5</b>  by <b>{{ review.name }}</b> on <i>{{ review.date | date: '%B %d, %Y' }}</i>
       {% if review.message %}
       <p>
         {{review.message}}
