@@ -1,7 +1,7 @@
 ---
 layout: single
 author_profile: true
-permalink: 2018-02-26-post-Staticman-with-Gitlab
+permalink: 2018-02-26-post-Staticman-with-Gitlab.html
 read_time: true
 comments: true
 share: true
@@ -82,7 +82,7 @@ Notice that the token is replaced
 
 ### asarkar comment
 
-The target of comment form is https://api.staticman.net/v2/entry/zongren/comment/master/,so there will be not https issues.
+The target of comment form is [Zongren Comments](https://api.staticman.net/v2/entry/zongren/comment/master/) ,so there will be not https issues.
 I only maintain my comments on github,and whenever there is a comment pushed to github repository by staticmanapp,it triggers gitlab to run page runner
 
 #### Gitlab Clones
@@ -131,3 +131,5 @@ And GitLab Pages are now available on GitLab Community Edition
 Required Node libs for future reference:
 gitlab
 gitlab-webhook
+
+{% include links.html %}

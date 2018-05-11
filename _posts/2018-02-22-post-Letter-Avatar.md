@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Letter Avatar"
-permalink: 2018-02-22-post-Letter-Avatar
+permalink: 2018-02-22-post-Letter-Avatar.html
 date: 2018-02-22 16:16:01 -0600
 last_modified_at: 2018-02-28T12:42:38-04:00
 search: true
@@ -279,7 +279,4 @@ footer_scripts:
 
 Then create avatar.scss and register the avatar.scss file in minimal-mistakes.scss, for width, height and rounded images.
 
-## Pre implementation comments
-
-If your reading this before I get Staticman working. I need to see if this is really works or not.
-Use disqus below to comment or add ideas to this conception.
+{% include links.html %}

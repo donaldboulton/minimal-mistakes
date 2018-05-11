@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Windows Tweaks"
-permalink: 2018-02-26-post-Windows-Tweaks
+permalink: 2018-02-26-post-Windows-Tweaks.html
 date: 2018-02-26 16:16:01 -0600
 last_modified_at: 2018-03-02T12:42:38-04:00
 search: true
@@ -228,7 +228,7 @@ A Changed Value!
 
 Processor Settings
 
-Set to 400 for L2 1024 was 0 = HAL was sick. 
+Set to 400 for L2 1024 was 0 = HAL was sick.
 
 L2 common settings 80 for 128, 100 for 256, 200 for 512, 400 for 1024 and so on. Hal not reading AMD 64 X2 Level 2 cash.
 
@@ -400,4 +400,6 @@ Sometimes if you use a different drive as explained above for [Loading Multiple 
 
 This can be done in my system to %SystemRoot%\explorer.exe /n, /e, E:\Downloads, or whichever drive letter you have for the separate Hard Drive and/or Partition's, better on a separate Hard Drive.
 
-Thanks To:, Dana Huggins at [Windows Fanatics](http://www.lockergnome.com/windows/).
+Thanks To:, Dana Huggins at [Windows Fanatics](http://www.lockergnome.com/windows/)
+
+{% include links.html %}

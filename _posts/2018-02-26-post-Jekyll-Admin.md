@@ -1,6 +1,6 @@
 ---
 layout: single
-permalink: 2018-02-26-post-Jekyll-Admin
+permalink: 2018-02-26-post-Jekyll-Admin.html
 author_profile: true
 read_time: true
 comments: true
@@ -53,8 +53,12 @@ A Jekyll plugin that provides users with a traditional CMS-style graphical inter
 ## Installation
 
 To install locally
+
+```html
 git clone https://github.com/jekyll/jekyll-admin && cd jekyll-admin
 script/bootstrap
+```
+
 This will copy down the code and install all Node and Ruby dependencies.
 
 Running tests
@@ -506,3 +510,5 @@ Commit the local changes.
 
 POST /git/push
 Push changes to the remote and branch.
+
+{% include links.html %}

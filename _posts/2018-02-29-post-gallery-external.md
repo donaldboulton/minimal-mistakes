@@ -132,3 +132,5 @@ This is a positioning redirect page for seo on Gallerys. All Gallery Search Term
 {% for gallery in site.photography %}
   {% include archive-single.html %}
 {% endfor %}
+
+{% include links.html %}

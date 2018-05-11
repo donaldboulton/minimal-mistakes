@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Defrag SQL"
-permalink: 2018-02-25-post-Defrag-SQL
+permalink: 2018-02-25-post-Defrag-SQL.html
 date: 2018-02-25 16:16:01 -0600
 last_modified_at: 2018-03-01T12:42:38-04:00
 search: true
@@ -207,7 +207,7 @@ Originally created by Microsoft
 ```sql
 DBCC INDEXDEFRAG
 (
-    { database_name | database_id | 0 } 
+    { database_name | database_id | 0 }
     , { table_name | table_id | view_name | view_id }
     [ , { index_name | index_id } [ , { partition_number | 0 } ] ]
 )
@@ -270,7 +270,7 @@ FETCH NEXT
 WHILE @@FETCH_STATUS = 0
 BEGIN
 -- Do the showcontig of all indexes of the table
-   INSERT INTO #fraglist 
+   INSERT INTO #fraglist
    EXEC ('DBCC SHOWCONTIG (''' + @tablename + ''')
       WITH FAST, TABLERESULTS, ALL_INDEXES, NO_INFOMSGS');
    FETCH NEXT
@@ -351,3 +351,5 @@ DBCC INDEXDEFRAG cannot be used to defragment the following indexes:
 * A spatial index.
 
 DBCC INDEXDEFRAG is not supported for use on system tables.
+
+{% include links.html %}

@@ -552,3 +552,5 @@ My tabs are pjaxed and I added this to Zone after content so the origional pjax 
 ```html
 <div id="tabs-container" class="data-pjax-container" data-pjax-container>
 ```
+
+{% include links.html %}

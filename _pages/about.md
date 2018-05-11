@@ -136,3 +136,5 @@ Links to CloudFlare this Github repo, Staticman Comments, MMistakes Framework De
 {% include feature_row %}
 
 {% include github.html %}
+
+{% include links.html %}
