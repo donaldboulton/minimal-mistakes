@@ -37,6 +37,7 @@ excerpt: "Jekyll admin makes it so easy for me to add new pages, posts or any ty
 
 support: [adds, cookies]
 folder: _posts
+product: Jekyll Admin
 ---
 
 {% include octo-arm.html %}

@@ -43,6 +43,7 @@ header:
 
 support: [adds, cookies]
 folder: _posts
+product: Gallery
 ---
 
 {% include page-intro.html %}

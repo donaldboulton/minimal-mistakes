@@ -39,7 +39,8 @@ header:
   teaser: /assets/images/pages/check_sql_fragmentation-320.png
 
 support: [adds, cookies]
-folder: _posts 
+folder: _posts
+product: SQL-Fragmentation
 ---
 
 {% include octo-arm.html %}

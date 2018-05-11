@@ -1,10 +1,13 @@
 ---
 title: Buy a Coffee
 subtitle: Buy me a Coffee
+name: Coffee
+sku: Coffee
 excerpt: "Buy me a cup of coffee."
 no_menu_item: true
 layout: productdetails
 products: true
+product: Coffee
 support: [products, lightbox]
 lightbox: true
 sitemap: false
@@ -32,6 +35,11 @@ variants:
   - name: venti
     price: 4.30
 price: 2.50
+folder: _products
 ---
 
+# Coffee
+
 A perfect coffee in the morning absolutely makes my day. Buy me a small one for a good start or a big one to keep going all day!
+
+{% include links.html %}

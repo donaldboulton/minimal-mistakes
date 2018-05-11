@@ -10,14 +10,15 @@ sidenav: true
 support: [lightbox]
 lightbox: true
 classes: product
+stock:  10
 header:
   image: /assets/images/cart/beer/beer-cover.jpg
   teaser: /assets/images/cart/beer/beer-cover-320.jpg
-name: Buy me a beer
-price: 2.75
+name: Beer
 slug: Buy me a beer
 sku: BEER
-image: /assets/images/cart/sponser-us.png
+product: Beer
+image: /assets/images/cart/beer/beer-cover-320.jpg
 layout: productdetails
 subtitle: Buy me a beer
 images:
@@ -33,6 +34,11 @@ variants:
   - name: pint
     price: 4.25
 price: 2.75
+folder: _products
 ---
 
+# Cat Food
+
 I like beer a lot! IPA, Guinness, Stout, craft beers... and I love to try new ones. Buy me half-a-pint to get going or a pint to get a good buzz.
+
+{% include links.html %}

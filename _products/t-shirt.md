@@ -1,5 +1,7 @@
 ---
 title: "T-Shirt"
+name: T-Shirt
+sku: T-Shirt
 excerpt: "Buy me a Jekyll T Shirt."
 no_menu_item: true
 sitemap: false
@@ -11,6 +13,7 @@ header:
   teaser: /assets/images/cart/share/share-320.jpg
 layout: productdetails
 products: true
+product: T-Shirt
 support: [products, lightbox]
 lightbox: true
 subtitle: Buy me a t-shirt
@@ -24,6 +27,9 @@ variants:
   - name:
     price: 
 price: 25.70
+folder: _products
 ---
 
 This awesome t-shirt is for sale at [zazzle.com](https://www.zazzle.com/jekyll_t_shirt-235672519224817294). I would really like to have it, but I do not allow myself to spent this much on a single t-shirt. Will you buy me one?
+
+{% include links.html %}

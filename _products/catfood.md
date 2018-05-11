@@ -1,12 +1,14 @@
 ---
 title: "Cat Food"
+name: Cat Food
 excerpt: "Buy my kitty some cat food."
 no_menu_item: true
 sitemap: false
 layout: productdetails
-products: true
+product: Cat Food
 support: [products, adds]
 adds: false
+sku: Cat Food
 sidenav: true
 image: /assets/images/cart/catfood/blue-wilderness-320.jpg
 header:
@@ -30,10 +32,11 @@ variants:
   - name: large bag
     price: 29.99
 price: 12.75
+folder: _products
 ---
 
-## Beer
+# Cat Food
 
 Buy the kittys some cat food
 
-{% include donate_catfood.html %}
+{% include links.html %}
