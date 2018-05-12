@@ -9,5 +9,5 @@ message:
 date: '2018-04-29T13:17:33.813Z'
 review: '5'
 pageless: true
-templateKey: comments
+templateKey: reviews
 timestamp: 1525007853
