@@ -325,7 +325,7 @@ collections:
     permalink: /:photography/:name/
   products:
     output: true
-    permalink: /:products/:product/
+    permalink: /:products/:name/
   category:
     output: true
 # Defaults
@@ -375,10 +375,14 @@ defaults:
       layout: "category"
   # _products
   - scope:
-      path: "_products"
-      type: "product" # a collection in your site, in plural form
+      path: "products"
+      type: "products" # a collection in your site, in plural form
     values:
       layout: "product"
+      breadcrumbs:
+        - label: "products"
+          url: /products/
+      permalink: /:path/:basename:output_ext
 
 posts_json_path: posts.json
 
