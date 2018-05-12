@@ -19,7 +19,7 @@
         <h3>Ratings
           {% if reviewCount > 0 %}
             {% assign sum = sum | divided_by:reviewCount %}
-            (Rating Average: {{ sum | round: 1 }})
+            (Average: {{ sum | round: 1 }})
           {% endif %}
         </h3>
       </div>
@@ -45,6 +45,8 @@
         <input type="hidden" name="options[origin]" value="{{ page.url | relative_url }}">
         <input type="hidden" name="options[parent]" value="{{ page.url | relative_url }}">
         <input type="hidden" id="review-post-id" name="options[slug]" value="{{ page.slug }}">
+        <input name="fields[product]" type="hidden" value="{{ page.slug }}" />
+        <input name="options[redirect]" type="hidden" value="{{site.url}}{{site.baseurl}}{{ page.url }}" />
         <label for="review-form-address">Leave blank if you are a human</label>
         <input type="text" id="review-form-address" name="fields[hidden]" autocomplete="off">
       </div>
