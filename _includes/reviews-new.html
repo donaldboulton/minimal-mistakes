@@ -8,7 +8,11 @@
           </g>
       </svg> Add a Review</h3>
       </header>
-      <div class="product-reviews-rating">
+      {% assign reviews = site.data.reviews | sort %}
+
+      {% for review in reviews reversed limit:3 %}
+        {% assign reviewData = review[1] %}
+      <div class="product-reviews">
         {% assign reviews = site.data.reviews | where:'product',page.slug %}
         {% assign reviewCount = reviews | size %}
         {% assign sum = 0 %}
