@@ -1,15 +1,15 @@
 <div class="product-reviews-rating">
-  {% assign rating = site.data.reviews | where:'product',page.slug %}
-  {% assign ratingCount = ratings | size %}
+  {% assign reviews = site.data.reviews | where:'product',page.slug %}
+  {% assign reviewCount = reviews | size %}
   {% assign sum = 0 %}
-  {% for rating in ratings %}
-    {% assign sum = sum | plus: rating.rating %}
+  {% for review in reviews %}
+    {% assign sum = sum | plus: review.review %}
   {% endfor %}
 
   <h3>Ratings
-    {% if ratingCount > 0 %}
-      {% assign sum = sum | divided_by:ratingCount %}
-      (Average: {{ sum | round: 1 }})
+    {% if reviewCount > 0 %}
+      {% assign sum = sum | divided_by:reviewCount %}
+      (Rating Average: {{ sum | round: 1 }})
     {% endif %}
   </h3>
 </div>

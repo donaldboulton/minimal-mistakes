@@ -76,7 +76,7 @@ comments:
     consumer_secret: WWYv+fj1vn4foC7aTTwELPLM22XfxAT9wu01NdvOhtJWGhrV8wy0DzES5bCGxxFqtMi1kxTq9vGsbwH/e/9QzuNZGnHV2YeqxVKvXwWVxC700m+GZsFJXvehUdsHHUBgxe0MFzxkhEFpRK6y9QIUGofN+yH1+DqYn+iaNMVO964=
     access_token: 105217183-OZnpTgm0Ug9T1XUQLefhzKzEdyHkckWX1Z6nHONO
     access_token_secret: Sl/KluM2Asg0B+g8YmYJmZeyH1yONSMu/enIbX7+m56ADUKVL8yl+141eT3j5GOsnPBH40yfADg/ZBUDmejHq/+uB+SvYvoYwhm5V1F4ru8HzYjYlbYt95w2oMQbQQp2DQVNeqL7tQAbkWmmEbUFzr88NFkSLjYwKMG0W1e3Vos=
-    
+
     # (!) ENCRYPTED
     #
     #Mailgun API key
@@ -112,12 +112,18 @@ comments:
 
 reviews:
   provider: "staticman_v2"
-  allowedFields: ['name', 'title', 'description', 'rating']
+  allowedFields: ['name', 'title', 'message', 'review']
   allowedOrigins: ["https://donboulton.com"]
   branch: "gh-pages"
-  commitMessage: "New Rating on donboulton.com"
-  filename: "entry{@timestamp}"
+  commitMessage: "Add Review from {fields.name}"
+  filename: "review-{fields.product}-{@id}"
   moderation: false
-  requiredFields: ['name', 'title', 'description', 'rating']
+  requiredFields: ['name', 'title', 'message', 'review']
   format: "yml"
   path: "_data/reviews"
+
+  generatedFields:
+    date:
+      type: date
+      options:
+        format: "iso8601"

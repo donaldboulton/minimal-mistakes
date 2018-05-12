@@ -1,10 +1,10 @@
 <div class="js-comments">
 	{% if site.data.reviews[page.slug] %}
 	{% assign reviews = site.data.reviews[page.slug] | sort %}
-		
+
 		{% for review in reviews %}
 			{% assign reviewData = review[1] %}
-	
+
 			<article itemscope itemtype="http://schema.org/Review" class="form">
 				<span style="display: none;" itemprop="itemReviewed" itemscope itemtype="http://schema.org/Thing">
 					<meta itemprop="name">{{ page.url }}</meta>
@@ -15,10 +15,10 @@
 				<div class="form-group">
 					<h3 class="title-text">{{ reviewData.title }}</h3>
 				</div>
-				<div class="form-group form">	            
-					<div class="field-group1" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">			    								
+				<div class="form-group form">
+					<div class="field-group1" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
 							<span>Rating:</span>
-		  				{% for i in (1..reviewData.rating) %}
+		  				{% for i in (1..reviewData.review) %}
     						<svg class="icon icon--star rating-star rating-radio-star--on" itemprop="ratingValue"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'assets/icons/' | relative_url }}"></use></svg>
 						{% endfor %}
 					</div>
@@ -30,18 +30,18 @@
 				</div>
 				<div class="form-group">
 					<p>Description:</p>
-                    <p>{{ reviewData.description | markdownify }}</p>
-				</div>				
+                    <p>{{ reviewData.message | markdownify }}</p>
+				</div>
 				<span style="display: none;" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
 					<meta class="hidden" itemprop="name" content="donboulton.com">
 				</span>
 			</article>
 		{% endfor %}
 		{% for review in reviews %}
-            {% assign rating = review[1].rating %}
+            {% assign review = review[1].review %}
     		{% assign title = review[1].title %}
             {% assign name = review[1].name %}
-    		{% assign description = review[1].description %}
+    		{% assign message = review[1].message %}
 	    {% endfor %}
 
 	{% endif %}

@@ -40,7 +40,7 @@ header:
 
 support: [adds, cookies]
 folder: _posts
-product: Letter-Avatar 
+product: letter-avatar 
 ---
 
 {% include octo-arm.html %}

@@ -1,9 +1,9 @@
 <div id="reviews" class="js-comments">
 	{% assign reviews = site.data.reviews | sort %}
-		
+
 	{% for review in reviews reversed limit:3 %}
 		{% assign reviewData = review[1] %}
-	
+
 		<article itemscope itemtype="http://schema.org/Review" class="toc1">
 				<span style="display: none;" itemprop="itemReviewed" itemscope itemtype="http://schema.org/Thing">
 					<meta class="hidden" itemprop="name">{{ page.url }}</meta>
@@ -21,20 +21,20 @@
 				<div class="form-group">
 					<h3 class="title-text">{{ reviewData.title }}</h3>
 				</div>
-				<div class="form-group form">	 	            
-     				<div class="field-group1" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">			    								
+				<div class="form-group form">
+     				<div class="field-group1" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
 							<span>Rating:</span>
 		  				{% for i in (1..reviewData.rating) %}
     						<svg class="icon icon--star rating-star rating-radio-star--on"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'assets/icons/' | relative_url }}"></use></svg>
 							{% endfor %}
-							<meta class="hidden" itemprop="ratingValue" content="{{ reviewData.rating }}">
-					</div>					
-				</div>				
+							<meta class="hidden" itemprop="ratingValue" content="{{ reviewData.review }}">
+					</div>
+				</div>
 				<div class="form-group" itemprop="author" itemscope itemtype="http://schema.org/Person">
 					<span itemprop="name">By: {{ reviewData.name }}</span>
 				</div>
 				<div class="form-group">
-                    <span>Description :{{ reviewData.description | markdownify }}</span>
+            <span>Message: {{ reviewData.message | markdownify }}</span>
 				</div>
 			</div>
 				<span style="display: none;" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
