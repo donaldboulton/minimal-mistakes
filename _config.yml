@@ -375,14 +375,14 @@ defaults:
       layout: "category"
   # _products
   - scope:
-      path: ""
+      path: "_products"
       type: "products" # a collection in your site, in plural form
     values:
       layout: "product"
       breadcrumbs:
         - label: "products"
           url: /products/
-      permalink: /:path/:basename:output_ext
+      permalink: /:path/:name/
 
 posts_json_path: posts.json
 
