@@ -375,7 +375,7 @@ defaults:
       layout: "category"
   # _products
   - scope:
-      path: "products"
+      path: ""
       type: "products" # a collection in your site, in plural form
     values:
       layout: "product"
