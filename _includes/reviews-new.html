@@ -8,16 +8,12 @@
           </g>
       </svg> Add a Review</h3>
       </header>
-      {% for review in reviews %}
-      {% assign reviewData = review[1] %}
       <div class="product-reviews">
         {% assign reviews = site.data.reviews | where:'product',page.slug %}
         {% assign reviewCount = reviews | size %}
         {% assign sum = 0 %}
         {% for review in reviews %}
           {% assign sum = sum | plus: review.review %}
-        {% endfor %}
-
         <h3>Ratings
           {% if reviewCount > 0 %}
             {% assign sum = sum | divided_by:reviewCount %}
