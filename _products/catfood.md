@@ -6,7 +6,8 @@ no_menu_item: true
 sitemap: false
 layout: productdetails
 product: cat-food
-support: [products, adds]
+products: true
+support: [lightbox, products, adds]
 adds: false
 sku: cat-food
 sidenav: true

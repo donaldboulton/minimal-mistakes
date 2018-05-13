@@ -19,7 +19,8 @@
   <h3>Ratings
     {% if reviewCount > 0 %}
       {% assign sum = sum | divided_by:reviewCount %}
-      (Average: {{ sum | round: 1 }})
+      (Average: {{ sum | round: 1 }})<output for="fields-review" name="result"></output>/5</p>
+
     {% endif %}
   </h3>
   <input name="fields[product]" type="hidden" value="{{ page.slug }}" />

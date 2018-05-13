@@ -7,7 +7,7 @@ sitemap: false
 author_profile: true
 adds: false
 sidenav: true
-support: [lightbox]
+support: [lightbox, products, adds]
 lightbox: true
 classes: product
 stock:  10
@@ -18,6 +18,7 @@ name: beer
 slug: beer
 sku: BEER
 product: Beer
+products: true
 image: /assets/images/cart/beer/beer-cover-320.jpg
 layout: productdetails
 subtitle: Buy me a beer
