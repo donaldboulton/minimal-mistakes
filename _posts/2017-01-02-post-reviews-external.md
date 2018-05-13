@@ -29,9 +29,9 @@ locations:
 excerpt: "Comments Ratings, TESTING page used for Google Positioning Micro data. Using Staticman's Popcorn Github repo to push reviews to my Root site donboulton.com. This is still a work in progress so Leave a Review for any page in donboulton.com and It should in the future, liquid math???, show up as a rating on that page."
 
 support: [places, adds, cookies]
-product: reviews-external
+product: post-reviews-external
 folder: _posts
-slug: reviews-external
+slug: post-reviews-external
 ---
 
 {% include octo-arm.html %}

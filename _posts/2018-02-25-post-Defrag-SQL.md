@@ -36,7 +36,8 @@ header:
 
 support: [adds, cookies]
 folder: _posts
-product: Defrag-SQL
+product: post-defrag-sql
+slug: post-defrag-sql
 ---
 
 {% include octo-arm.html %}

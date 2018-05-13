@@ -40,7 +40,8 @@ header:
 
 support: [adds, cookies]
 folder: _posts
-product: SQL-Fragmentation
+product: post-sql-fragmentation
+slug: post-sql-fragmentation
 ---
 
 {% include octo-arm.html %}
