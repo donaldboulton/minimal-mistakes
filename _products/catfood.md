@@ -5,10 +5,10 @@ excerpt: "Buy my kitty some cat food."
 no_menu_item: true
 sitemap: false
 layout: productdetails
-product: Cat Food
+product: cat-food
 support: [products, adds]
 adds: false
-sku: Cat Food
+sku: cat-food
 sidenav: true
 image: /assets/images/cart/catfood/blue-wilderness-320.jpg
 header:

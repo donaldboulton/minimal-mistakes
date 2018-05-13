@@ -9,7 +9,7 @@
   </svg> Page Rating</h3>
   </header>
 <div class="js-comments product-reviews">
-  {% assign reviews = site.data.reviews | where:'post',page.slug %}
+  {% assign reviews = site.data.reviews | where:'product-reviews',page.slug %}
   {% assign reviewCount = reviews | size %}
   {% assign sum = 0 %}
   {% for review in reviews %}

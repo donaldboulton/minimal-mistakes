@@ -14,8 +14,8 @@ stock:  10
 header:
   image: /assets/images/cart/beer/beer-cover.jpg
   teaser: /assets/images/cart/beer/beer-cover-320.jpg
-name: Beer
-slug: Buy me a beer
+name: beer
+slug: beer
 sku: BEER
 product: Beer
 image: /assets/images/cart/beer/beer-cover-320.jpg
