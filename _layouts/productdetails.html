@@ -1,6 +1,7 @@
 ---
 layout: default
-support: [cookies, products]
+head:
+  snipcart.html
 ---
 <div class="product-details">
   <img src="{{ page.image }}" alt="{{ page.name }}" class="thumbnail"/>
@@ -22,16 +23,16 @@ support: [cookies, products]
   </div>
 </div>
 <div class="product-reviews">
-  {% assign rating = site.data.reviews | where:'product',page.slug %}
-  {% assign ratingCount = ratings | size %}
+  {% assign reviews = site.data.reviews | where:'product',page.slug %}
+  {% assign reviewCount = reviews | size %}
   {% assign sum = 0 %}
-  {% for rating in reviews %}
-    {% assign sum = sum | plus: rating.rating %}
+  {% for review in reviews %}
+    {% assign sum = sum | plus: review.review %}
   {% endfor %}
 
   <h3>Reviews
-    {% if ratingCount > 0 %}
-      {% assign sum = sum | divided_by:ratingCount %}
+    {% if reviewCount > 0 %}
+      {% assign sum = sum | divided_by:reviewCount %}
       (Average: {{ sum | round: 1 }})
     {% endif %}
   </h3>
