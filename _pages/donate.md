@@ -6,7 +6,7 @@ no_menu_item: true
 sitemap: false
 author_profile: true
 adds: true
-reviews: true
+reviews: false
 sidenav: true
 layout: single
 name: "Donate"

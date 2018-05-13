@@ -378,7 +378,8 @@ defaults:
       path: "_products"
       type: "products" # a collection in your site, in plural form
     values:
-      layout: "product"
+      layout: "productdetails"
+      products: true
       breadcrumbs:
         - label: "products"
           url: /products/

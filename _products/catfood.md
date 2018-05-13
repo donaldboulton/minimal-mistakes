@@ -4,7 +4,7 @@ name: Cat Food
 excerpt: "Buy my kitty some cat food."
 no_menu_item: true
 sitemap: false
-layout: productdetails
+layout: single
 product: cat-food
 products: true
 support: [lightbox, products, adds]

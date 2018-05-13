@@ -16,10 +16,10 @@ adds: false
 sidenav: true
 classes: product
 header:
-  image: /assets/images/cart/coffee/coffee-cover.jpg
+  image: /assets/images/cart/coffee/1.jpg
   teaser: /assets/images/cart/coffee/coffee-cover-320.jpg
 subtitle: Buy me a coffee
-image: /assets/images/cart/coffee/coffee-cover-320.jpg
+image: /assets/images/cart/coffee/1.jpg
 images:
   - image: /assets/images/cart/coffee/1.jpg
   - image: /assets/images/cart/coffee/2.jpg

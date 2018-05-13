@@ -3,7 +3,7 @@ title: Feature
 subtitle: Sponsor a feature
 excerpt: "Sponser Us"
 no_menu_item: true
-layout: productdetails
+layout: single
 classes: product
 products: true
 product: Sponser
