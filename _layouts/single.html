@@ -31,7 +31,7 @@ layout: default
       {% endunless %}
 
       <section class="page__content" itemprop="text">
-          {{ content }}        
+          {{ content }}
           {% if page.products %}
             {% include product.html %}
           {% endif %}
@@ -47,12 +47,13 @@ layout: default
             {% endif %}
             {% if page.reviews %}
                {% include reviews-new.html %}
+               {% include reviews-ratings-count.html %}
                {% include reviews.html %}
             {% endif %}
             {% if page.adds %}
                {% include google-adds.html %}
             {% endif %}
-          </aside>                
+          </aside>
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
 
