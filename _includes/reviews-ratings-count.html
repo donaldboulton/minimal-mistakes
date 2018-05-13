@@ -16,7 +16,7 @@
     {% assign sum = sum | plus: review.review %}
   {% endfor %}
 
-  <h3>Reviews
+  <h3>Ratings
     {% if reviewCount > 0 %}
       {% assign sum = sum | divided_by:reviewCount %}
       (Average: {{ sum | round: 1 }})
