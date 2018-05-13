@@ -5,7 +5,8 @@ excerpt: "Donate to feed stray cats or me."
 no_menu_item: true
 sitemap: false
 author_profile: true
-adds: false
+adds: true
+reviews: true
 sidenav: true
 layout: single
 name: "Donate"
@@ -21,6 +22,4 @@ support: [lightbox, products, adds]
 
 Although the primary function of this donation page is to get help feeding stray cats, some tips for my web design and code, would be cool. Thank you, you are the best!
 
-{% for product in site.products %}
-  {% include donate.html %}
-{% endfor %}
+{% include donate.html %}
