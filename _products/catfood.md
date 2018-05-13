@@ -38,6 +38,8 @@ folder: _products
 
 # Cat Food
 
-Buy the kittys some cat food
+Buy the kittys some cat food.
+
+{% include donate_catfood.html %}
 
 {% include links.html %}

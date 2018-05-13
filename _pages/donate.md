@@ -10,7 +10,7 @@ reviews: true
 sidenav: true
 layout: single
 name: "Donate"
-
+products: true
 image: /assets/images/cart/sponser-us.png
 header:
   image: /assets/images/cart/sponser-us.png

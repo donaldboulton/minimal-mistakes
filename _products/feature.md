@@ -32,4 +32,6 @@ folder: _products
 
 You can sponsor a feature from the 'without plugins' page/library. I will not only give you an honourable mention on the site, but I will also let you suggest some additional functionalities of this feature.
 
+{% include donate_feature.html %}
+
 {% include links.html %}
