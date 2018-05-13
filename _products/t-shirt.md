@@ -3,6 +3,7 @@ title: "T-Shirt"
 name: T-Shirt
 sku: T-Shirt
 excerpt: "Buy me a Jekyll T Shirt."
+permalink: /products/t-shirt/
 no_menu_item: true
 sitemap: false
 adds: false
@@ -11,7 +12,7 @@ classes: product
 header:
   image: /assets/images/cart/share/share-cover.jpg
   teaser: /assets/images/cart/share/share-320.jpg
-layout: productdetails
+layout: single
 products: true
 product: T-Shirt
 support: [products, lightbox]

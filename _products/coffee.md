@@ -1,11 +1,12 @@
 ---
 title: Buy a Coffee
 subtitle: Buy me a Coffee
+permalink: /products/coffee/
 name: Coffee
 sku: Coffee
 excerpt: "Buy me a cup of coffee."
 no_menu_item: true
-layout: productdetails
+layout: single
 products: true
 product: Coffee
 support: [products, lightbox]

@@ -2,6 +2,7 @@
 title: Feature
 subtitle: Sponsor a feature
 excerpt: "Sponser Us"
+permalink: /products/feature/
 no_menu_item: true
 layout: single
 classes: product

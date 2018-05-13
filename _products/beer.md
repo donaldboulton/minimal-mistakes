@@ -2,6 +2,7 @@
 title: "Buy Me Beer"
 subtitle: Buy me a beer
 excerpt: "Buy me a bottle of Beer."
+permalink: /products/beer/
 no_menu_item: true
 sitemap: false
 author_profile: true

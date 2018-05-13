@@ -3,13 +3,14 @@ title: "Cat Food"
 name: Cat Food
 excerpt: "Buy my kitty some cat food."
 no_menu_item: true
+permalink: /products/catfood/
 sitemap: false
 layout: single
-product: cat-food
+product: catfood
 products: true
 support: [lightbox, products, adds]
 adds: false
-sku: cat-food
+sku: catfood
 sidenav: true
 image: /assets/images/cart/catfood/blue-wilderness-320.jpg
 header:
