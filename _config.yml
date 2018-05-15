@@ -32,7 +32,7 @@ comments:
 
 reviews:
   privider               : "staticman_v2"
-  
+
 staticman:
   allowedFields          : ['name', 'email', 'url', 'title', 'message', 'replying_to']
   branch                 : "gh-pages"
@@ -41,7 +41,7 @@ staticman:
   format                 : "yml"
   moderation             : false
   path                   : "/_data/comments/{options.slug}"
-  requiredFields         : ['name', 'email', 'title', 'message']  
+  requiredFields         : ['name', 'email', 'title', 'message']
   notifications:
     enabled: true
     #Mailgun
@@ -69,7 +69,7 @@ staticman:
 reCaptcha:
   siteKey                : "6Lf15UcUAAAAALh_yk6LPPErNxT-Qd-k2efKcJxR"
   secret                 : "q0fksxUG8S3yendptK4byPIrlKUWhVPPn+zMA+2hjPd3ekaOPrwK04Ig0hHlyneN3z6zfH6edP7zk4kQEIHy8OOYADVmBAOX8US4dKusdXvoxHBFbdZPdC9o/FgS1eUkcrsn4g8cuXr4HUxz9/hoiMg2gHn0+5W99KoxR8pL+54="
-  
+
 atom_feed:
   path                   : # blank (default) uses feed.xml
 search                   : true
@@ -325,7 +325,6 @@ collections:
     permalink: /:photography/:name/
   products:
     output: true
-    permalink: /:products/:name/ 
   category:
     output: true
 # Defaults
@@ -357,7 +356,7 @@ defaults:
       related: true
       toc: true
       adds: true
-      reviews: true    
+      reviews: true
       breadcrumbs:
         - label: "Posts"
           url: /year-archive/
@@ -379,7 +378,8 @@ defaults:
       type: "products" # a collection in your site, in plural form
     values:
       layout: "product"
-      
+      permalink: /:path/:basename:output_ext
+
 posts_json_path: posts.json
 
 # Plugin: Auto Pages (jekyll-paginate-v2)
@@ -388,7 +388,7 @@ autopages:
   categories:
     enabled: true
   collections:
-    layouts: 
+    layouts:
       - 'autopage_collection.html'
     title: 'Posts in collection :coll' # :coll is replaced by the collection name
     permalink: '/collection/:coll'
