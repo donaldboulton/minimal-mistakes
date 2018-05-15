@@ -6,7 +6,5 @@ main:
     url: /categories/
   - title: "Gallery"
     url: /photography/
-  - title: "Donate"
-    url: /donate/
   - title: "Sitemap"
     url: /sitemap/
