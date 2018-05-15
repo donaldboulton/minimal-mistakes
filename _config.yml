@@ -325,6 +325,7 @@ collections:
     permalink: /:photography/:name/
   products:
     output: true
+    permalink: /:products/:name/
   category:
     output: true
 # Defaults
@@ -381,7 +382,7 @@ defaults:
       breadcrumbs:
         - label: "products"
           url: /products/
-      permalink: /:path/:basename:output_ext
+      permalink: /:products/:name/
 
 posts_json_path: posts.json
 
