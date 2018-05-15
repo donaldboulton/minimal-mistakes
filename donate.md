@@ -20,5 +20,3 @@ support: [lightbox, products, adds]
 ## About this donation page
 
 Although the primary function of this donation page is to get help feeding stray cats, some tips for my web design and code, would be cool. Thank you, you are the best!
-
-{% include donate.html %}
