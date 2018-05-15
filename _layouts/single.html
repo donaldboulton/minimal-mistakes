@@ -32,9 +32,6 @@ layout: default
 
       <section class="page__content" itemprop="text">
           {{ content }}
-          {% if page.products %}
-            {% include product.html %}
-          {% endif %}
           <aside class="sidebar__right">
             {% if page.toc %}
                <nav class="toc">

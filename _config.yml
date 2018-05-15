@@ -32,7 +32,7 @@ comments:
 
 reviews:
   privider               : "staticman_v2"
-
+  
 staticman:
   allowedFields          : ['name', 'email', 'url', 'title', 'message', 'replying_to']
   branch                 : "gh-pages"
@@ -41,7 +41,7 @@ staticman:
   format                 : "yml"
   moderation             : false
   path                   : "/_data/comments/{options.slug}"
-  requiredFields         : ['name', 'email', 'title', 'message']
+  requiredFields         : ['name', 'email', 'title', 'message']  
   notifications:
     enabled: true
     #Mailgun
@@ -69,7 +69,7 @@ staticman:
 reCaptcha:
   siteKey                : "6Lf15UcUAAAAALh_yk6LPPErNxT-Qd-k2efKcJxR"
   secret                 : "q0fksxUG8S3yendptK4byPIrlKUWhVPPn+zMA+2hjPd3ekaOPrwK04Ig0hHlyneN3z6zfH6edP7zk4kQEIHy8OOYADVmBAOX8US4dKusdXvoxHBFbdZPdC9o/FgS1eUkcrsn4g8cuXr4HUxz9/hoiMg2gHn0+5W99KoxR8pL+54="
-
+  
 atom_feed:
   path                   : # blank (default) uses feed.xml
 search                   : true
@@ -80,10 +80,6 @@ siteleaf:
   site-id                : "5ab05d47552cde487f135f56"
   api-key                : "598283c4e4db7bcdc42a367c732e22bb"
   api-secret             : "DD9rRDh9UGZFrUZWEwvhtMDOyiRCM99pmq0mjfKaUb5Yzkr8U/6mTNyv9AXa2yKqkYnNYG9uwhl1LZZeDxs8YUon4QmZ9i89qsZ9EaA0+T8sC+5Yn6+fJcMX2DYt6pfybacXbJN/OR3UJVIfIM6TBhMz1/JyNme9DPMdnq3GG4w="
-
-snipcart_key             : "NGViODk5ZDAtNmU4OC00MjI5LWIxMGMtZGZmOWEwOGRhM2M1NjM2NjE0Nzc1OTQ2NzMzMTU5"
-  api_key                : "NGViODk5ZDAtNmU4OC00MjI5LWIxMGMtZGZmOWEwOGRhM2M1NjM2NjE0Nzc1OTQ2NzMzMTU5"
-  secret                 : "HtnEIjRZVdxeZsqdDGEWgyafIfbTYh2reeK3u2mLYx+fFqo7Gb0I01YptP32B0L2I9vanwVnQYkTLTKxmVqTgiVqMJTWzdGSyZVN5ip2S9cyvpc1lNUxe0oCUhPDgYzj5kkQsAa/mNIjm17tTJ4aExajYgGkLETbUS0esCE53hE="
 
 github_editme_path       : donaldboulton/DWB/blob/gh-pages/
 
@@ -100,7 +96,6 @@ algolia:
 
 github                   : [metadata]
 google-maps-api-key      : "AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA"
-google_maps_javascript_api_key: "AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA"
 repository               : "https://github.com/donaldboulton/DWB"
 head_scripts:
   - https://www.googletagmanager.com/gtag/js?id=UA-30162465-2
@@ -110,7 +105,8 @@ google_site_verification : "DKp8oxWR5F4kbaJJ9uowH1ySMttXrrUjIknx1OfUHc8"
 bing_site_verification   : "361016BEC0F67F6A834D6186E897D9EC"
 yandex_site_verification :
 naver_site_verification  :
-
+google_maps_javascript_api_key: "AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA"
+snipcart_key             : "NGViODk5ZDAtNmU4OC00MjI5LWIxMGMtZGZmOWEwOGRhM2M1NjM2NjE0Nzc1OTQ2NzMzMTU"
 # Social Sharing
 twitter:
   username               : "donboulton"
@@ -329,7 +325,7 @@ collections:
     permalink: /:photography/:name/
   products:
     output: true
-    permalink: /:products/:name/
+    permalink: /:products/:name/ 
   category:
     output: true
 # Defaults
@@ -361,7 +357,7 @@ defaults:
       related: true
       toc: true
       adds: true
-      reviews: true
+      reviews: true    
       breadcrumbs:
         - label: "Posts"
           url: /year-archive/
@@ -382,15 +378,8 @@ defaults:
       path: "_products"
       type: "products" # a collection in your site, in plural form
     values:
-      layout: single
-      author_profile: true
-      sidenav: true
-      products: true
-      breadcrumbs:
-        - label: "products"
-          url: /products/
-      permalink: /:path/:name/
-
+      layout: "product"
+      
 posts_json_path: posts.json
 
 # Plugin: Auto Pages (jekyll-paginate-v2)
@@ -399,7 +388,7 @@ autopages:
   categories:
     enabled: true
   collections:
-    layouts:
+    layouts: 
       - 'autopage_collection.html'
     title: 'Posts in collection :coll' # :coll is replaced by the collection name
     permalink: '/collection/:coll'
