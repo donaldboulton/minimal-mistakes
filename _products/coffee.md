@@ -6,7 +6,7 @@ name: Coffee
 sku: Coffee
 excerpt: "Buy me a cup of coffee."
 no_menu_item: true
-layout: single
+layout: productdetails
 products: true
 product: Coffee
 support: [products, lightbox]

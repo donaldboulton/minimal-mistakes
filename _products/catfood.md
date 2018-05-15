@@ -5,7 +5,7 @@ excerpt: "Buy my kitty some cat food."
 no_menu_item: true
 permalink: /products/catfood/
 sitemap: false
-layout: single
+layout: productdetails
 product: catfood
 products: true
 support: [lightbox, products, adds]

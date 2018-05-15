@@ -11,7 +11,7 @@ header:
   image: /assets/images/cart/share/share-cover.jpg
   teaser: /assets/images/cart/share/share-320.jpg
 classes: product
-layout: single
+layout: productdetails
 products: true
 product: Share
 lightbox: true

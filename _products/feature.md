@@ -4,7 +4,7 @@ subtitle: Sponsor a feature
 excerpt: "Sponser Us"
 permalink: /products/feature/
 no_menu_item: true
-layout: single
+layout: productdetails
 classes: product
 products: true
 product: Sponser

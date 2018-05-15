@@ -12,7 +12,7 @@ classes: product
 header:
   image: /assets/images/cart/share/share-cover.jpg
   teaser: /assets/images/cart/share/share-320.jpg
-layout: single
+layout: productdetails
 products: true
 product: T-Shirt
 support: [products, lightbox]
