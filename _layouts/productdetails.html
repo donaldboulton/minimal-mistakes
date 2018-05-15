@@ -1,9 +1,7 @@
 ---
 layout: default
-head:
-  snipcart.html
 ---
-<div class="product-details gallery-3-col-unjustified products">
+<div class="product-details">
   <img src="{{ page.image }}" alt="{{ page.name }}" class="thumbnail"/>
   <div class="product-description">
     <p>{{ page.name }}</p>
@@ -30,14 +28,14 @@ head:
     {% assign sum = sum | plus: review.review %}
   {% endfor %}
 
-  <h3>Reviews
+  <h3>Ratings
     {% if reviewCount > 0 %}
       {% assign sum = sum | divided_by:reviewCount %}
-      (Average: {{ sum | round: 1 }})
+      (Rating Average: {{ sum | round: 1 }})
     {% endif %}
   </h3>
   <form method="POST"
-        action="https://api.staticman.net/v2/entry/snipcart/snipcart-jekyll-integration/gh-pages/reviews"
+        action="https://api.staticman.net/v2/entry/donaldboulton/DWB/gh-pages/reviews"
         oninput="result.value=parseInt(this['fields[review]'].value)">
     <input name="fields[product]" type="hidden" value="{{ page.slug }}" />
     <input name="options[redirect]" type="hidden" value="{{site.url}}{{site.baseurl}}{{ page.url }}" />
@@ -61,3 +59,4 @@ head:
     {% endfor %}
   </ul>
 </div>
+{% include snipcart.html %}
