@@ -3,8 +3,6 @@ title: "Share"
 name: Share
 sku: Share
 excerpt: "Share on social media this donboulton.com website."
-no_menu_item: true
-permalink: /products/share/
 adds: false
 sidenav: true
 header:
@@ -19,6 +17,7 @@ support: [products, lightbox, adds]
 subtitle: Share the love
 images:
   - image: /assets/images/cart/share/share-800.jpg
+image: /assets/images/cart/share/share-800.jpg
 variant_name: size
 variants:
   - name:

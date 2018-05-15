@@ -2,8 +2,6 @@
 title: "Cat Food"
 name: Cat Food
 excerpt: "Buy my kitty some cat food."
-no_menu_item: true
-permalink: /products/catfood/
 sitemap: false
 layout: productdetails
 product: catfood
