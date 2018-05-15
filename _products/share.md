@@ -31,6 +31,4 @@ folder: _products
 
 If you like this website, but you do not have any money to spare, please share the love by posting something about this website on social media. You can use the buttons below. They will share the homepage. Thank you, you are the best!
 
-{% include donate_share.html %}
-
 {% include links.html %}

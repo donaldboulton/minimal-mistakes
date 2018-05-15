@@ -42,6 +42,4 @@ slug: /products/catfood/
 
 Buy the kittys some cat food.
 
-{% include donate_catfood.html %}
-
 {% include links.html %}
