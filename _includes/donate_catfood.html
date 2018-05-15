@@ -3,17 +3,25 @@
 			<div class="row">
 		    	<article class="post page">>
                 <div class="col-sm-6">
-                    <div class="product-gallery">                    
-                        <a href="https://images.weserv.nl/?url=donboulton.com/assets/images/cart/catfood/blue-wilderness.png&w=1400&output=jpg&q=50" ><img src="https://images.weserv.nl/?url=donboulton.com/assets/images/cart/catfood/blue-wilderness.png&w=1400&output=jpg&q=50" /></a>                    
+                    <div class="product-gallery">
+                        <a href="https://images.weserv.nl/?url=donboulton.com/assets/images/cart/catfood/blue-wilderness.png&w=1400&output=jpg&q=50" ><img src="https://images.weserv.nl/?url=donboulton.com/assets/images/cart/catfood/blue-wilderness.png&w=1400&output=jpg&q=50" /></a>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6">                    
-                    <h2 class="post-title">Help with Some Kitty Food</h2>                
+                <div class="col-md-4 col-sm-6">
+                    <h2 class="post-title">Help with Some Kitty Food</h2>
                     <div class="post-content">
-                    <article class="post page">                    
-                        <div class="post-content">  
-                        <h2 class="price">$19.00</h2>                                                                                                  
-                    </div>                    
+                    <article class="post page">
+                        <div class="post-content">
+                        <h2 class="price">$19.00</h2>
+                    </div>
+                    <button class="snipcart-add-item btn btn--primary"
+                    data-item-name="{{ product.name }}"
+                    data-item-id="{{ product.sku }}"
+                    data-item-image="{{ product.image }}"
+                    data-item-url="{{ site.baseurl }}"
+                    data-item-price="{{ product.price }}">
+                    Buy it for {{ product.price }} $
+                  </button>
                     </article>
                     </div>
 		    	</div>
@@ -22,7 +30,3 @@
 		</div>
 	</div>
 </div>
-
-{% include webshop.html email="donaldboulton@gmail.com" paymentlink="https://useplink.com/payment/test_SsUsSzCgxypNgnUD4M3uqeAe8FmCwE" %}
-
-{% include lightbox.html %}

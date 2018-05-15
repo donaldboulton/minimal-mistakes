@@ -35,6 +35,7 @@ variants:
     price: 29.99
 price: 12.75
 folder: _products
+slug: /products/catfood/
 ---
 
 # Cat Food

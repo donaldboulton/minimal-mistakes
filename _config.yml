@@ -81,7 +81,7 @@ siteleaf:
   api-key                : "598283c4e4db7bcdc42a367c732e22bb"
   api-secret             : "DD9rRDh9UGZFrUZWEwvhtMDOyiRCM99pmq0mjfKaUb5Yzkr8U/6mTNyv9AXa2yKqkYnNYG9uwhl1LZZeDxs8YUon4QmZ9i89qsZ9EaA0+T8sC+5Yn6+fJcMX2DYt6pfybacXbJN/OR3UJVIfIM6TBhMz1/JyNme9DPMdnq3GG4w="
 
-snipcart:
+snipcart_key             : "NGViODk5ZDAtNmU4OC00MjI5LWIxMGMtZGZmOWEwOGRhM2M1NjM2NjE0Nzc1OTQ2NzMzMTU5"
   api_key                : "NGViODk5ZDAtNmU4OC00MjI5LWIxMGMtZGZmOWEwOGRhM2M1NjM2NjE0Nzc1OTQ2NzMzMTU5"
   secret                 : "HtnEIjRZVdxeZsqdDGEWgyafIfbTYh2reeK3u2mLYx+fFqo7Gb0I01YptP32B0L2I9vanwVnQYkTLTKxmVqTgiVqMJTWzdGSyZVN5ip2S9cyvpc1lNUxe0oCUhPDgYzj5kkQsAa/mNIjm17tTJ4aExajYgGkLETbUS0esCE53hE="
 
@@ -100,6 +100,7 @@ algolia:
 
 github                   : [metadata]
 google-maps-api-key      : "AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA"
+google_maps_javascript_api_key: "AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA"
 repository               : "https://github.com/donaldboulton/DWB"
 head_scripts:
   - https://www.googletagmanager.com/gtag/js?id=UA-30162465-2
@@ -109,7 +110,7 @@ google_site_verification : "DKp8oxWR5F4kbaJJ9uowH1ySMttXrrUjIknx1OfUHc8"
 bing_site_verification   : "361016BEC0F67F6A834D6186E897D9EC"
 yandex_site_verification :
 naver_site_verification  :
-google_maps_javascript_api_key: "AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA"
+
 # Social Sharing
 twitter:
   username               : "donboulton"

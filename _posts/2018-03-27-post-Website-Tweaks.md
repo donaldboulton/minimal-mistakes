@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Website Tweaks"
-permalink: 2018-03-26-post-Website-Tweaks
+permalink: 2018-03-26-post-Website-Tweaks.html
 date: 2018-03-26 15:16:01 -0600
 last_modified_at: 2018-03-26T12:42:38-04:00
 search: true
@@ -39,7 +39,8 @@ header:
 
 support: [adds, cookies]  
 folder: _posts
-product: Website-Tweaks
+product: post-website-tweaks
+slug: post-website-tweaks
 ---
 
 {% include octo-arm.html %}

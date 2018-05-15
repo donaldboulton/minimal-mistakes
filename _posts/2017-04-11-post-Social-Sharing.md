@@ -25,8 +25,6 @@ sidenav: true
 reviews: true
 adds: true
 cookies: true
-product: post-social-sharing
-slug: post-social-sharing
 
 excerpt: "Using just links in Asp.NET Core 2 add like included below  @Context.Request.GetDisplayUrl(), to get the url of the page your sharing. View the source of this repo to see how to do it in Jekyll"
 
@@ -41,6 +39,8 @@ header:
 
 support: [adds, cookies]
 folder: _posts
+product: post-social-sharing
+slug: post-social-sharing
 ---
 
 {% include octo-arm.html %}

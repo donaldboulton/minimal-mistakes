@@ -36,7 +36,8 @@ header:
 
 support: [adds, cookies]
 folder: _posts
-product: Windows-Tweaks
+product: post-windows-tweaks
+slug: post-windows-tweaks
 ---
 
 {% include octo-arm.html %}

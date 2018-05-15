@@ -8,7 +8,7 @@ author_profile: true
 adds: true
 reviews: false
 sidenav: true
-layout: single
+layout: productdetails
 name: "Donate"
 products: true
 image: /assets/images/cart/sponser-us.png
