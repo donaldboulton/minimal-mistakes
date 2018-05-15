@@ -14,6 +14,7 @@ author_profile: true
 adds: false
 sidenav: true
 classes: product
+permalink: /products/coffee/
 header:
   image: /assets/images/cart/coffee/1.jpg
   teaser: /assets/images/cart/coffee/coffee-cover-320.jpg

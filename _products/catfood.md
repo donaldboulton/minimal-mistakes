@@ -4,6 +4,7 @@ name: Cat Food
 excerpt: "Buy my kitty some cat food."
 sitemap: false
 layout: productdetails
+permalink: /products/catfood/
 product: catfood
 products: true
 support: [lightbox, products, adds]

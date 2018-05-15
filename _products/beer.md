@@ -9,6 +9,7 @@ sidenav: true
 support: [lightbox, products, adds]
 lightbox: true
 classes: product
+permalink: /products/beer/
 stock:  10
 header:
   image: /assets/images/cart/beer/beer-cover.jpg

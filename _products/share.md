@@ -2,6 +2,7 @@
 title: "Share"
 name: Share
 sku: Share
+permalink: /products/share/
 excerpt: "Share on social media this donboulton.com website."
 adds: false
 sidenav: true

@@ -4,6 +4,7 @@ subtitle: Sponsor a feature
 excerpt: "Sponser Us"
 no_menu_item: true
 layout: productdetails
+permalink: /products/feature/
 classes: product
 products: true
 product: Sponser
