@@ -8,14 +8,9 @@
     {% if image.path contains 'images/pages' %}
     {% if file.extname == '.jpg' or file.extname == '.jpeg' or file.extname == '.JPG' or file.extname == '.JPEG' %}
       <a href="{{ file.path }}">
-        <img src="//images.weserv.nl/?url={{ site.baseurl | replace: 'http://','' | replace: 'https://','' }}{{ file.path }}&w=320&h=320&output=jpg&q=50&t=square" />
+        <img src="//images.weserv.nl/?url={{ site.url | replace: 'http://','' | replace: 'https://','' }}{{ file.path }}&w=320&h=320&output=jpg&q=50&t=square" />
       </a>
     {% endif %}
     {% endif %}
   {% endfor %}
-  {% for image in site.static_files %}
-    {% if image.path contains 'images' %}
-        <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
-    {% endif %}
-{% endfor %}
 </p>
