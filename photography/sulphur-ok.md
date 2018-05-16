@@ -16,7 +16,7 @@ category:
   - Gallerys
 header:
   image: /assets/photography/sulphur-ok-gallery/Bellview-Postcard.jpg
-  teaser: /assets/photography/sulphur-ok-gallery/Bellview-Postcard.jpg
+  teaser: /assets/photography/sulphur-ok-gallery/Belleview-Postcard.jpg
 
 locations:
   - Sulphur, Oklahoma
