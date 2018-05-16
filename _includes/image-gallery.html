@@ -1,20 +1,14 @@
-<style>
-    .image-gallery {overflow: auto; margin-left: -1%!important;}
-    .image-gallery a {float: left; display: block; margin: 0 0 1% 1%; width: 19%;}
-    .image-gallery a img {width: 100%; display: block;}
-</style>
-
-  <div id="aniimated-thumbnials{% if include.id_number %}-{{ include.id_number }}{% endif %}">
+<div id="aniimated-thumbnials{% if include.id_number %}-{{ include.id_number }}{% endif %}" class="gallery">
       <div id="gallery-sizer{% if include.id_number %}-{{ include.id_number }}{% endif %}" class="gallery-sizer"></div>
       {% for file in site.static_files %}
-      {% if file.path contains include.folder %}
-      {% if file.extname == '.jpg' or file.extname == '.jpeg' or file.extname == '.JPG' or file.extname == '.JPEG' %}
-      <div class="image-gallery" itemscope itemtype="http://schema.org/ImageObject">
-          <a itemprop="contentUrl" href="{{ file.path }}">
-             <img itemprop="thumbnail" src="//images.weserv.nl/?url={{ site.url | replace: 'http://','' | replace: 'https://','' }}{{ file.path }}&w=300&h=300&output=jpg&q=50&t=square" />
-          </a>
-      </div>
-      {% endif %}
-      {% endif %}
-  {% endfor %}
+          {% if file.path contains include.folder %}
+          {% if file.extname == '.jpg' or file.extname == '.jpeg' or file.extname == '.JPG' or file.extname == '.JPEG' %}
+          <div class="image-wrapper" itemscope itemtype="http://schema.org/ImageObject">
+              <a itemprop="contentUrl" href="{{ file.path }}" {% if picture.title %} itemprop="name" data-sub-html="<div class='lg-toolbar caption'><h4>{{ picture.title | escape }}</h4>{% if picture.caption %}<p>{{ picture.caption | escape }}</p>{% endif %}</div>"{% endif %} class="image">
+                 <img itemprop="thumbnail" src="//images.weserv.nl/?url={{ site.url | replace: 'http://','' | replace: 'https://','' }}{{ file.path }}&w=300&h=300&output=jpg&q=50&t=square" />
+              </a>
+          </div>
+          {% endif %}
+          {% endif %}
+      {% endfor %}
 </div>

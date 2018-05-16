@@ -3,8 +3,7 @@ layout: galleryloop
 title: Family Gallery
 permalink: /photography/family-gallery/
 picture_path: family-gallery
-gallery: false
-lightbox: true
+gallery: true
 date: 2018-05-03 16:18:01 -0600
 last_modified_at: 2018-05-04T12:42:38-04:0
 author: Donald Boulton
@@ -22,7 +21,7 @@ header:
 locations:
   - Oklahoma City, Oklahoma
   - Idabel Oklahoma
-support: [lightbox]
+support: [gallery]
 ---
 
 ## Family Pics from years 50's - 80's
