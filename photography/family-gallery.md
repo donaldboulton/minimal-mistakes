@@ -1,5 +1,5 @@
 ---
-layout: gallery
+layout: galleryloop
 title: All Images
 permalink: /photography/family-gallery/
 picture_path: family
