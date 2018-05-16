@@ -1,6 +1,6 @@
 ---
 layout: galleryloop
-title: Sulphur-Ok-Gallery
+title: Sulphur Ok Gallery
 permalink: /photography/sulphur-ok-gallery/
 picture_path: sulphur-ok-gallery
 gallery: true
