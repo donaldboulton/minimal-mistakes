@@ -53,3 +53,14 @@
   sizes:
   - First-Grade.jpg
   thumbnail: First-Grade.jpg
+
+-
+ title: Sulphur Ok
+ directory: sulphur-ok-gallery
+ picture_path: sulphur-ok-gallery
+ preview:
+  filename: Bellview Postcard
+  original: Bellview-Postcard.jpg
+  sizes:
+  - Bellview-Postcard.jpg
+  thumbnail: Bellview-Postcard.jpg
