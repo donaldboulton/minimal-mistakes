@@ -2,6 +2,7 @@
 layout: gallery
 title: All Images
 permalink: /photography/all-images/
+picture_path: family
 date: 2018-05-03 16:18:01 -0600
 last_modified_at: 2018-05-04T12:42:38-04:0
 author: Donald Boulton
@@ -22,7 +23,7 @@ locations:
 support: [gallery]
 ---
 
-{% include gallery-layout.html gallery=site.data.galleries.old-cat-gallery %}
+{% include gallery-layout.html gallery=site.data.galleries.family %}
 
 {% for gallery in site.photography %}
   {% include archive-single.html %}
