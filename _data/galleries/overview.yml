@@ -64,3 +64,13 @@
   sizes:
   - Belleview-Postcard.jpg
   thumbnail: Belleview-Postcard.jpg
+-
+ title: Tuson Az
+ directory: Tuson
+ picture_path: Tuson
+ preview:
+  filename: Epic Cafe Corner
+  original: Epic-Cafe-1.jpg
+  sizes:
+  - Epic-Cafe-1.jpg
+  thumbnail: Epic-Cafe-1.jpg
