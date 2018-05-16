@@ -3,8 +3,8 @@
   {% for image in site.static_files %}
     {% if image.path contains 'photography/family' %}
     <div class="image-wrapper" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="{{ site.url }}{{ site.baseurl }}/assets/photography/{{ include.picture_path }}/{{ image.path }}">
-        <img itemprop="thumbnail" alt="{{ image.title }}" src="//images.weserv.nl/?url={{ site.baseurl | replace: 'http://','' | replace: 'https://','' }}{{ file.path }}&w=320&h=320&output=jpg&q=50&t=square" />
+      <a href="https://images.weserv.nl/?url=donboulton.com/assets/photography/{{ include.picture_path }}/{{ file.path }}">
+        <img itemprop="thumbnail" alt="{{ image.title }}" src="https://images.weserv.nl/?url=donboulton.com/assets/photography/{{ include.picture_path }}/{{ file.path }}&w=320&h=320&output=jpg&q=50&t=square" />
       </a>
     </div>
     {% endif %}

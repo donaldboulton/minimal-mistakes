@@ -23,8 +23,6 @@ locations:
 support: [gallery]
 ---
 
-{% include gallery-layout.html gallery=site.data.galleries.family %}
-
 {% for gallery in site.photography %}
   {% include archive-single.html %}
 {% endfor %}
