@@ -42,3 +42,14 @@
   - VS-2012-5948-2121x1414.jpg
   - VS-2012-5948-2999x1999.jpg
   thumbnail: VS-2012-5948-320-thumbnail.jpg
+
+-
+ title: Family
+ directory: family-gallery
+ picture_path: family-gallery
+ preview:
+  filename: first-grade
+  original: First-Grade.jpg
+  sizes:
+  - First-Grade.jpg
+  thumbnail: First-Grade.jpg

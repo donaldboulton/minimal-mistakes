@@ -1,8 +1,8 @@
 ---
 layout: galleryloop
-title: All Images
+title: Family Gallery
 permalink: /photography/family-gallery/
-picture_path: family
+picture_path: family-gallery
 gallery: false
 lightbox: true
 date: 2018-05-03 16:18:01 -0600
@@ -16,8 +16,8 @@ breadcrumb: true
 category:
   - Gallerys
 header:
-  image: /assets/photography/cat-gallery/Little-Hun.jpg
-  teaser: /assets/photography/cat-gallery/Little-Hun-th.jpg
+  image: /assets/photography/family-gallery/First-Grade.jpg
+  teaser: /assets/photography/family-gallery/First-Grade.jpg
 
 locations:
   - Oklahoma City, Oklahoma
@@ -25,8 +25,10 @@ locations:
 support: [lightbox]
 ---
 
+## Family Pics from years 50's - 80's
+
 {% for gallery in site.photography %}
   {% include archive-single.html %}
 {% endfor %}
 
-{% include image-gallery.html folder="/assets/photography/family" %}
+{% include image-gallery.html folder="/assets/photography/family-gallery" %}
