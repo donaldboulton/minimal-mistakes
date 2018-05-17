@@ -119,11 +119,11 @@
  directory: san-diego-gallery
  picture_path: san-diego-gallery
  preview:
-  filename: CC Park Balboa Bridge1
-  original: CC Park Balboa Bridge1.jpg
+  filename: Green flash 2006
+  original: Greenflash06.jpg
   sizes:
-  - CC Park Balboa Bridge1.jpg
-  thumbnail: CC Park Balboa Bridge1.jpg
+  - Greenflash06.jpg
+  thumbnail: Greenflash06.jpg
 -
  title: Santa Barbara
  directory: santa-barbara
@@ -137,7 +137,7 @@
 -
  title: Us Fest 1983
  directory: us-fest-1983-gallery
- picture_path: Us-Fest-1983
+ picture_path: us-fest-1983-gallery
  preview:
   filename: US Fest Stage
   original: US Fest Stage.jpg
