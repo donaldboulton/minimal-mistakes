@@ -27,7 +27,7 @@ reviews: true
 adds: true
 cookies: true
 
-excerpt: "Create a Jekyll images Gallery that loops through all images in a folder. Not Configured by yml Frontmatter, thus much eaiser to create. Using [Images resizing by images.weserv.nl](weserv.nl), which gives a thumnail image displayed in the isotope arranged gallery and the origional images which is opened by lightgallery.
+excerpt: "Create a Jekyll images Gallery that loops through all images in a folder. Not Configured by yml Frontmatter, thus much eaiser to create. Using [Images resizing by images.weserv.nl](weserv.nl), which gives a thumnail image displayed in the isotope arranged gallery and the origional images which is opened by lightgallery."
 
 image:
   cover: true
