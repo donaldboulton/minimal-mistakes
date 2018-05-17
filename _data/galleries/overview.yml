@@ -104,3 +104,53 @@
   sizes:
   - Grand Canyon 1983.jpg
   thumbnail: Grand Canyon 1983.jpg
+-
+ title: Charlottesville Va
+ directory: charlottesville-va
+ picture_path: charlottesville-va
+ preview:
+  filename: Downtown Mall
+  original: Downtown Mall.jpg
+  sizes:
+  - Downtown Mall.jpg
+  thumbnail: Downtown Mall.jpg
+-
+ title: San Diego
+ directory: san-diego
+ picture_path: san-diego
+ preview:
+  filename: CC Park Balboa Bridge1
+  original: CC Park Balboa Bridge1.jpg
+  sizes:
+  - CC Park Balboa Bridge1.jpg
+  thumbnail: CC Park Balboa Bridge1.jpg
+-
+ title: Santa Barbara
+ directory: santa-barbara
+ picture_path: santa-barbara
+ preview:
+  filename: SB Acme Buds
+  original: SB Acme Buds.jpg
+  sizes:
+  - SB Acme Buds.jpg
+  thumbnail: SB Acme Buds.jpg
+-
+ title: Us-Fest-1983
+ directory: Us-Fest-1983
+ picture_path: Us-Fest-1983
+ preview:
+  filename: US Fest Stage
+  original: US Fest Stage.jpg
+  sizes:
+  - US Fest Stage.jpg
+  thumbnail: US Fest Stage.jpg
+-
+ title: Unsorted
+ directory: unsorted
+ picture_path: unsorted
+ preview:
+  filename: Jesus
+  original: jesus_500.jpg
+  sizes:
+  - jesus_500.jpg
+  thumbnail: jesus_500.jpg

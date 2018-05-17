@@ -2,9 +2,12 @@
 layout: single
 permalink: /photography/
 title: Gallerys
+date: 2018-04-101 16:18:01 -0600
+last_modified_at: 2018-05-16T12:42:38-04:0
 redirect_from:
   - /post/2018-02-29-post-gallery-external/
 search: true
+reviews: true
 author: Donald Boulton
 author_profile: false
 tags:
@@ -14,17 +17,20 @@ tags:
   - Tucson
   - Sulphur OK
   - Us Fest
+  - Charlottesville Va
+  - San Diego
 category:
   - Gallerys
+
 toc: true
 toc_label: "Gallerys"
 sidenav: true
-reviews: false
 adds: false
-read_time: false
+read_time: true
 comments: true
 share: true
 related: false
+catagory: true
 
 sidebar:
   - title: "My Hun Kitty"
@@ -60,7 +66,7 @@ header:
 {% endif %}
 
 <p>Below are my Kitty Cat and Travels gallerys.</p>
-<p>Cat Gallerys are broken into my house cats, past cats and stray cats. All Gallerys are built with Isotope and Lightbos2.</p>
+<p>Cat Gallerys are broken into my house cats, past cats and stray cats. All Gallerys are built with [Isotope](https://isotope.metafizzy.co/) and [Lightgallery](http://sachinchoolur.github.io/lightGallery/).</p>
 
 <p>Alot of Travel Pics taken from old slides so the quality is not so good, but still memorys reside in them, Adding them soon.</p>
 
@@ -70,9 +76,12 @@ header:
    <div>
     <h2 class="page__title">{{ gallery.title }}</h2>
     <a href="{{ site.url }}{{ site.baseurl }}/photography/{{ gallery.directory }}">
-      <img alt="{{ gallery.title }}" src="{{ site.url }}{{ site.baseurl }}/assets/photography/{% if gallery.picture_path %}{{ gallery.picture_path }}{% else %}{{ gallery.directory }}{% endif %}/{{ gallery.preview.thumbnail }}" />
+      <img class="gallery-image" alt="{{ gallery.title }}" src="{{ site.url }}{{ site.baseurl }}/assets/photography/{% if gallery.picture_path %}{{ gallery.picture_path }}{% else %}{{ gallery.directory }}{% endif %}/{{ gallery.preview.thumbnail }}" />
     </a>
   </div>
   {% endfor %}
 </div>
-
+<p class="site__title">Current Location</p>
+<p>
+  <a href="https://www.google.com/maps/dir//Rockwell+RV+Park/"><img src="https://maps.googleapis.com/maps/api/staticmap?autoscale=1&size=640x320&maptype=roadmap&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0xff0000%7Clabel:4%7CRockwell+RV+Park" alt="Google Map of Rockwell RV Park"></a>
+</p>

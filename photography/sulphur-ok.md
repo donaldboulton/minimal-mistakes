@@ -1,6 +1,6 @@
 ---
 layout: galleryloop
-title: Sulphur Ok Gallery
+title: Sulphur Ok
 permalink: /photography/sulphur-ok-gallery/
 picture_path: sulphur-ok-gallery
 gallery: true
@@ -23,7 +23,7 @@ locations:
 support: [gallery]
 ---
 
-## Family Pics from years 50's - 80's
+## Sulphur Ok 1920 - 1970
 
 {% for gallery in site.photography %}
   {% include archive-single.html %}
