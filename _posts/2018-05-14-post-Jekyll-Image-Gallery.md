@@ -50,13 +50,13 @@ slug: Jekyll-Image-Gallery
 
 {% include page-intro.html %}
 
-# Jekyll Image Gallery
+# A Simple or Complex Image Gallery
 
 Ther are two ways displayed below to build Image Gallerys with Jekyll using [MetaFuzzy Isotope](https://isotope.metafizzy.co/) and [Sachinchoolur LightGallery](http://sachinchoolur.github.io/lightGallery/demos/).
 
 The First is a Simple Gallery that Loops throught all images in a folder resizing the display image online and using the origional image in LightGallery.
 
-The Second is driven off of a data yml file a hard way to do it but it gives you a mobie responsive srcset, using 5 images sizes.
+The Second is driven off of a data yml file a hard way to do it but it gives you a mobie responsive srcset, using 5 image sizes.
 
 If there is any confusion to the contents of this post add a comment below or go to the repo at: Donald Boultons [Github Repo](https://github.com/donaldboulton/DWB) and view the code, see both my Simple and Complex Gallerys in action on my Gallery Page.
 
@@ -95,40 +95,9 @@ I added images in my assets/images/photography folders for each gallery. as list
 ## Data YML File
 
 Both the simple and Complex Gallerys are driven by the data/gallerys/overview.yml data file as displayed below, this is from my site and gallerys.
+ The fist set is for the complex gallery with 5 images the second is for the simple gallery with just one image listed.
 
 ```yml
--
- title: My Cats
- directory: cat-gallery
- preview:
-  filename: Boys-Idabel-bed
-  original: Boys-Idabel-bed.jpg
-  sizes:
-  - Boys-Idabel-bed.jpg
-  - Boys-Idabel-bed-800.jpg
-  thumbnail: Boys-Idabel-bed-th.jpg
--
- title: Stray Cats
- directory: stray-cat-gallery
- picture_path: stray-cat-gallery
- preview:
-  filename: Boys-Kittens
-  original: Boys-Kittens.jpg
-  sizes:
-  - Boys-Kittens.jpg
-  - Boys-Kittens-800.jpg
-  thumbnail: Boys-Kittens-th.jpg
--
- title: Old Cats
- directory: old-cat-gallery
- picture_path: old-cat-gallery
- preview:
-  filename: Boys-Kittens
-  original: Boys-Kittens.jpg
-  sizes:
-  - Boys-Kittens.jpg
-  - Boys-Kittens-800.jpg
-  thumbnail: Boys-Kittens-th.jpg
 -
  title: San Francisco
  directory: san-francisco
@@ -153,111 +122,11 @@ Both the simple and Complex Gallerys are driven by the data/gallerys/overview.ym
   - First-Grade.jpg
   thumbnail: First-Grade.jpg
 
--
- title: Sulphur Ok
- directory: sulphur-ok-gallery
- picture_path: sulphur-ok-gallery
- preview:
-  filename: Bellview Postcard
-  original: Belleview-Postcard.jpg
-  sizes:
-  - Belleview-Postcard.jpg
-  thumbnail: Belleview-Postcard.jpg
--
- title: Tucson Az
- directory: tucson-gallery
- picture_path: tucson-gallery
- preview:
-  filename: Epic Cafe Corner
-  original: Epic-Cafe-1.jpg
-  sizes:
-  - Epic-Cafe-1.jpg
-  thumbnail: Epic-Cafe-1.jpg
--
- title: Lake Tahoe
- directory: tahoe-gallery
- picture_path: tahoe-gallery
- preview:
-  filename: Rubicon Trail
-  original: Rubicon Trail.jpg
-  sizes:
-  - Rubicon Trail.jpg
-  thumbnail: Rubicon Trail.jpg
--
- title: Okc Ok
- directory: okc-gallery
- picture_path: okc-gallery
- preview:
-  filename: Memorial Chairs
-  original: Memorial Chairs.jpg
-  sizes:
-  - Memorial Chairs.jpg
-  thumbnail: Memorial Chairs.jpg
--
- title: Grand Canyon
- directory: grand-canyon-gallery
- picture_path: grand-canyon-gallery
- preview:
-  filename: Grand Canyon 1983
-  original: Grand Canyon 1983.jpg
-  sizes:
-  - Grand Canyon 1983.jpg
-  thumbnail: Grand Canyon 1983.jpg
--
- title: Charlottesville Va
- directory: charlottesville-va-gallery
- picture_path: charlottesville-va-gallery
- preview:
-  filename: Downtown Mall
-  original: Downtown Mall.jpg
-  sizes:
-  - Downtown Mall.jpg
-  thumbnail: Downtown Mall.jpg
--
- title: San Diego
- directory: san-diego-gallery
- picture_path: san-diego-gallery
- preview:
-  filename: Green flash 2006
-  original: Greenflash06.jpg
-  sizes:
-  - Greenflash06.jpg
-  thumbnail: Greenflash06.jpg
--
- title: Santa Barbara
- directory: santa-barbara-gallery
- picture_path: santa-barbara-gallery
- preview:
-  filename: SB Acme Buds
-  original: SB Acme Buds.jpg
-  sizes:
-  - SB Acme Buds.jpg
-  thumbnail: SB Acme Buds.jpg
--
- title: Us Fest 1983
- directory: us-fest-1983-gallery
- picture_path: us-fest-1983-gallery
- preview:
-  filename: US Fest Stage
-  original: US Fest Stage.jpg
-  sizes:
-  - US Fest Stage.jpg
-  thumbnail: US Fest Stage.jpg
--
- title: Unsorted
- directory: unsorted-gallery
- picture_path: unsorted-gallery
- preview:
-  filename: Jesus
-  original: jesus_500.jpg
-  sizes:
-  - jesus_500.jpg
-  thumbnail: jesus_500.jpg
 ```
 
 ## The Included Js And Css
 
-I Included the [lightgallery.js](https://raw.githubusercontent.com/sachinchoolur/lightGallery/master/src/js/lightgallery.js) minified to my main site main.min.js file as to have it initilized at all time for any page and it makes it work. I included it right after jquery.js and before any other Conjugated scripts.
+I Included the [lightgallery.js](https://raw.githubusercontent.com/sachinchoolur/lightGallery/master/src/js/lightgallery.js) minified to my main site main.min.js file as to have it initilized at all times for any page. I included it right after jquery.js and before any other Conjugated scripts.
 
 Adding all other LightGallery css and scripts in a dist folder under my assets folder. In the same folder structure as in the [lightgallery repo](https://github.com/sachinchoolur/lightGallery), adding isotope.js, mousewheel and picturefill from CloudFlare CDN.
 
@@ -265,7 +134,7 @@ Isotope.js latest at github repo: [isotope.js](https://raw.githubusercontent.com
 
 ### Gallery Assets
 
-To gather the required scripts and css we need to download and add to our assets folder.
+To gather the required scripts and css we need to download and add them to our assets folder.
 Adding included Isotope and LightGallery files as below in my includes/scripts.html
 
 ```html
@@ -283,7 +152,7 @@ Adding included Isotope and LightGallery files as below in my includes/scripts.h
 //endif
 ```
 
-In each Gallery Gallery.md file to use the included above scripts add the below to your gallery page frontmatter. Using a liquid conditional if page.support contains 'gallery' and a endif
+In each Gallery.md file to use the included above scripts add the below to your gallery page frontmatter. Using a liquid conditional if page.support contains 'gallery' and a endif
 
 ```html
 support: [gallery]
@@ -507,9 +376,9 @@ The gallery.scss code below
 
 ## Jekyll Simple Gallery
 
-Create a Jekyll images Gallery that loops through all images in a folder. Displayed with [MetaFuzzy Isotope](https://isotope.metafizzy.co/) and viewed with [Sachinchoolur LightGallery](http://sachinchoolur.github.io/lightGallery/demos/). Not Configured by yml Frontmatter, thus much eaiser to create. Using [Images resizing by images.weserv.nl](weserv.nl), which gives a thumnail image displayed in the Isotope gallery and the origional images which is opened by LightGallery.
+Create a Jekyll images Gallery that loops through all images in a folder. Displayed with [MetaFuzzy Isotope](https://isotope.metafizzy.co/) and viewed with [Sachinchoolur LightGallery](http://sachinchoolur.github.io/lightGallery/demos/). Not Configured by yml Frontmatter, thus much eaiser to create. Using [Images resizing by images.weserv.nl](weserv.nl), which gives a thumnail image displayed in the Isotope gallery and the origional images which are opened by LightGallery.
 
-Below is the image gallery includes file as [image-gallery.html](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_includes/image-gallery.html) for Isotope arranged animated thumnails, resized online by [images.weserv.nl](weserv.nl) and displayed in LightGallery.
+The image gallery includes file as [image-gallery.html](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_includes/image-gallery.html) for Isotope arranged animated thumnails, resized online by [images.weserv.nl](weserv.nl) and displayed in LightGallery.
 
 # The layout file for the gallery
 
