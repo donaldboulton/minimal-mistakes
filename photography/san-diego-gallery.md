@@ -1,8 +1,8 @@
 ---
 layout: galleryloop
-title: Grand Canyon
-permalink: /photography/grand-canyon/
-picture_path: grand-canyon
+title: San Diego Ca
+permalink: /photography/san-diego-gallery/
+picture_path: san-diego-gallery
 gallery: true
 date: 2018-05-13 16:18:01 -0600
 last_modified_at: 2018-05-14T12:42:38-04:0
@@ -15,8 +15,8 @@ breadcrumb: true
 category:
   - Gallerys
 header:
-  image: /assets/photography/grand-canyon/Grand Canyon 1983.jpg
-  teaser: /assets/photography/grand-canyon/Grand Canyon 1983.jpg
+  image: /assets/photography/san-diego-gallery/Greenflash06.jpg
+  teaser: /assets/photography/san-diego-gallery/Greenflash06.jpg
 
 locations:
   - Grand Canyon
@@ -29,4 +29,4 @@ support: [gallery]
   {% include archive-single.html %}
 {% endfor %}
 
-{% include image-gallery.html folder="/assets/photography/grand-canyon" %}
+{% include image-gallery.html folder="/assets/photography/san-diego-gallery" %}

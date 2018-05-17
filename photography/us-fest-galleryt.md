@@ -1,8 +1,8 @@
 ---
 layout: galleryloop
-title: Tucson AZ
-permalink: /photography/tucson/
-picture_path: Tucson
+title: Us Fest 1983
+permalink: /photography/us-fest-gallery/
+picture_path: us-fest-gallery
 gallery: true
 date: 2018-05-05 16:18:01 -0600
 last_modified_at: 2018-05-06T12:42:38-04:0
@@ -15,8 +15,8 @@ breadcrumb: true
 category:
   - Gallerys
 header:
-  image: /assets/photography/tucson-gallery/Epic-Cafe-1.jpg
-  teaser: /assets/photography/tucson-gallery/Epic-Cafe-1.jpg
+  image: /assets/photography/us-fest-gallery/US Fest Stage.jpg
+  teaser: /assets/photography/us-fest-gallery/US Fest Stage.jpg
 
 locations:
   - Tucson AZ
@@ -24,10 +24,10 @@ locations:
 support: [gallery]
 ---
 
-## Tucson Az, 1997
+## Us Fest 1983
 
 {% for gallery in site.photography %}
   {% include archive-single.html %}
 {% endfor %}
 
-{% include image-gallery.html folder="/assets/photography/tucson-gallery" %}
+{% include image-gallery.html folder="/assets/photography/us-fest-gallery" %}

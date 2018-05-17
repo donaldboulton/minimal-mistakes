@@ -1,7 +1,7 @@
 ---
 layout: galleryloop
 title: Unsorted
-permalink: /photography/unsorted/
+permalink: /photography/unsorted-gallery/
 picture_path: unsorted-gallery
 gallery: true
 date: 2018-05-16 16:18:01 -0600

@@ -1,7 +1,7 @@
 ---
 layout: galleryloop
 title: Tahoe Ca
-permalink: /photography/tahoe/
+permalink: /photography/tahoe-gallery/
 picture_path: tahoe-gallery
 gallery: true
 date: 2018-05-03 16:18:01 -0600

@@ -1,8 +1,8 @@
 ---
 layout: galleryloop
-title: Charlottesville Va
-permalink: /photography/charlottesville-va/
-picture_path: charlottesville-va-gallery
+title: Santa Barbara
+permalink: /photography/santa-barbara-gallery/
+picture_path: santa-barbara-gallery
 gallery: true
 date: 2018-05-03 16:18:01 -0600
 last_modified_at: 2018-05-04T12:42:38-04:0
@@ -15,11 +15,11 @@ breadcrumb: true
 category:
   - Gallerys
 header:
-  image: /assets/photography/charlottesville-va-gallery/Downtown Mall.jpg
-  teaser: /assets/photography/charlottesville-va-gallery/Downtown Mall.jpg
+  image: /assets/photography/santa-barbara-gallery/SB%20Acme%20Buds.jpg
+  teaser: /assets/photography/santa-barbara-gallery/SB%20Acme%20Buds.jpg
 
 locations:
-  - Charlottesville Va
+  - Sulphur, Oklahoma
 support: [gallery]
 ---
 
@@ -29,4 +29,4 @@ support: [gallery]
   {% include archive-single.html %}
 {% endfor %}
 
-{% include image-gallery.html folder="/assets/photography/charlottesville-va-gallery" %}
+{% include image-gallery.html folder="/assets/photography/santa-barbara-gallery" %}
