@@ -11,6 +11,7 @@ tags:
   - Jekyll
   - Isotope
   - LightGallery
+  - images.weserv.nl
 category:
   - Jekyll
 locations:
