@@ -39,8 +39,8 @@ header:
 
 support: [adds, cookies]  
 folder: _posts
-product: post-website-tweaks
-slug: post-website-tweaks
+product: website-tweaks
+slug: website-tweaks
 ---
 
 {% include octo-arm.html %}

@@ -40,8 +40,8 @@ header:
 
 support: [adds, cookies]
 folder: _posts
-product: post-staticman-gitlab
-slug: post-staticman-gitlab
+product: staticman-gitlab
+slug: staticman-gitlab
 ---
 
 {% include octo-arm.html %}
