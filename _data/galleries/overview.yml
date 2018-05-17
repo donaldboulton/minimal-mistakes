@@ -96,8 +96,8 @@
   thumbnail: Memorial Chairs.jpg
 -
  title: Grand Canyon
- directory: grand-canyon
- picture_path: grand-canyon
+ directory: grand-canyon-gallery
+ picture_path: grand-canyon-gallery
  preview:
   filename: Grand Canyon 1983
   original: Grand Canyon 1983.jpg
@@ -106,8 +106,8 @@
   thumbnail: Grand Canyon 1983.jpg
 -
  title: Charlottesville Va
- directory: charlottesville-va
- picture_path: charlottesville-va
+ directory: charlottesville-va-gallery
+ picture_path: charlottesville-va-gallery
  preview:
   filename: Downtown Mall
   original: Downtown Mall.jpg
@@ -116,8 +116,8 @@
   thumbnail: Downtown Mall.jpg
 -
  title: San Diego
- directory: san-diego
- picture_path: san-diego
+ directory: san-diego-gallery
+ picture_path: san-diego-gallery
  preview:
   filename: CC Park Balboa Bridge1
   original: CC Park Balboa Bridge1.jpg
@@ -135,8 +135,8 @@
   - SB Acme Buds.jpg
   thumbnail: SB Acme Buds.jpg
 -
- title: Us-Fest-1983
- directory: Us-Fest-1983
+ title: Us Fest 1983
+ directory: us-fest-1983-gallery
  picture_path: Us-Fest-1983
  preview:
   filename: US Fest Stage
@@ -146,8 +146,8 @@
   thumbnail: US Fest Stage.jpg
 -
  title: Unsorted
- directory: unsorted
- picture_path: unsorted
+ directory: unsorted-gallery
+ picture_path: unsorted-gallery
  preview:
   filename: Jesus
   original: jesus_500.jpg

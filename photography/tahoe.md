@@ -1,6 +1,6 @@
 ---
 layout: galleryloop
-title: Tahoe Gallery
+title: Tahoe Ca
 permalink: /photography/tahoe/
 picture_path: tahoe-gallery
 gallery: true
