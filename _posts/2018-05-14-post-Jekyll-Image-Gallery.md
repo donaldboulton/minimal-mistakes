@@ -90,7 +90,7 @@ defaults:
 
 ### Adding Images
 
-I added images in my assets/images/photography folders for each gallery. as listed in my data/overwiew.yml file and configured in each of my /pnopography/Gallery.md files
+I added images in my assets/images/photography folders for each gallery. as listed in my data/overwiew.yml file and configured in each of my /photography/Gallery.md files
 
 ## Data YML File
 
@@ -268,8 +268,8 @@ Isotope.js latest at github repo: [isotope.js](https://raw.githubusercontent.com
 To gather the required scripts and css we need to download and add to our assets folder.
 Adding included Isotope and LightGallery files as below in my includes/scripts.html
 
-```ruby
-{% if page.support contains 'gallery' %}
+```html
+// if page.support contains 'gallery'
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.5/isotope.pkgd.min.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js" crossorigin="anonymous"></script>
@@ -280,21 +280,19 @@ Adding included Isotope and LightGallery files as below in my includes/scripts.h
   <script src="{{ '/assets/dist/modules/lg-thumbnail.min.js' | relative_url }}"></script>
   <script src="{{ '/assets/dist/modules/lg-zoom.min.js' | relative_url }}"></script>
   <script src="{{ '/assets/dist/js/init-lightgallery.js' | relative_url }}"></script>
-{% endif %}
+//endif
 ```
 
-In each Gallery Gallery.md file to use the included above scripts add the below to your gallery page frontmatter.
+In each Gallery Gallery.md file to use the included above scripts add the below to your gallery page frontmatter. Using a liquid conditional if page.support contains 'gallery' and a endif
 
 ```html
 support: [gallery]
 ```
 
-I added the Css theh same way to my /includes/head.html file and the above frontmatter support will include the lightgallery.min.css
+I added the Css theh same way to my /includes/head.html file and the above frontmatter support will include the lightgallery.min.css, with a conditoional if statement% if page.support contains 'gallery' %
 
-```ruby
-{% if page.support contains 'gallery' %}
+```html
    <link rel="stylesheet" href="{{ '/assets/dist/css/lightgallery.min.css' | relative_url }}">
-{% endif %}
 ```
 
 ## The Sass styling
@@ -552,7 +550,7 @@ The code below
 ```html
 <div id="aniimated-thumbnials{% if include.id_number %}-{{ include.id_number }}{% endif %}" class="gallery">
   <div id="gallery-sizer{% if include.id_number %}-{{ include.id_number }}{% endif %}" class="gallery-sizer"></div>
-  {% for picture in include.gallery.pictures %}
+  // for picture in include.gallery.pictures
   <div class="image-wrapper" itemscope itemtype="http://schema.org/ImageObject">
     <a itemprop="contentUrl" href="{{ site.url }}{{ site.baseurl }}/assets/photography/{{ include.gallery.picture_path }}/{{ picture.original }}"
     data-responsive="{% for size in picture.sizes %} {{ site.url}}{{ site.baseurl }}/assets/photography/{{ include.gallery.picture_path }}/{{ size }} {{ size | split: '-' | last | split: '.' | first | split: 'x' | first | strip }}{% unless forloop.last %},{% endunless %}{% endfor %}" class="image"
@@ -560,7 +558,7 @@ The code below
       <img itemprop="thumbnail" alt="{{ picture.title }}" src="{{ site.url }}{{ site.baseurl }}/assets/photography/{{ include.gallery.picture_path }}/{{ picture.thumbnail }}" />
     </a>
   </div>
-  {% endfor %}
+  // endfor
 </div>
 ```
 
@@ -579,7 +577,7 @@ support: [gallery]
 <div id="main" role="main">
   <h1 class="gallery-title page__title">{{ page.title }}</h1>
   <div class="gallery" itemscope itemtype="http://schema.org/ImageGallery">
-      {{ content }}
+      content
   </div>
 </div>
 ```
