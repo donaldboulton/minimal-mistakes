@@ -1,7 +1,7 @@
 ---
 layout: galleryloop
 title: Tucson AZ
-permalink: /photography/tucson-gallery/
+permalink: /photography/tucson/
 picture_path: Tucson
 gallery: true
 date: 2018-05-05 16:18:01 -0600

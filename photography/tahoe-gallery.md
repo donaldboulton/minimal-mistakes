@@ -1,7 +1,7 @@
 ---
 layout: galleryloop
 title: Tahoe Gallery
-permalink: /photography/tahoe-gallery/
+permalink: /photography/tahoe/
 picture_path: tahoe-gallery
 gallery: true
 date: 2018-05-03 16:18:01 -0600

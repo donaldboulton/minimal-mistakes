@@ -2,7 +2,7 @@
 layout: galleryloop
 title: Grand Canyon
 permalink: /photography/grand-canyon/
-picture_path: okc-gallery
+picture_path: grand-canyon
 gallery: true
 date: 2018-05-13 16:18:01 -0600
 last_modified_at: 2018-05-14T12:42:38-04:0

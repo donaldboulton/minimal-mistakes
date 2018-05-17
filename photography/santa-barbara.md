@@ -1,8 +1,8 @@
 ---
 layout: galleryloop
-title: Sulphur Ok
-permalink: /photography/sulphur-ok/
-picture_path: sulphur-ok-gallery
+title: Santa Barbara
+permalink: /photography/santa-barbara/
+picture_path: santa-barbara-gallery
 gallery: true
 date: 2018-05-03 16:18:01 -0600
 last_modified_at: 2018-05-04T12:42:38-04:0
@@ -15,8 +15,8 @@ breadcrumb: true
 category:
   - Gallerys
 header:
-  image: /assets/photography/sulphur-ok-gallery/Bellview-Postcard.jpg
-  teaser: /assets/photography/sulphur-ok-gallery/Belleview-Postcard.jpg
+  image: /assets/photography/santa-barbara-gallery/Bellview-Postcard.jpg
+  teaser: /assets/photography/santa-barbara-gallery/Belleview-Postcard.jpg
 
 locations:
   - Sulphur, Oklahoma
@@ -29,4 +29,4 @@ support: [gallery]
   {% include archive-single.html %}
 {% endfor %}
 
-{% include image-gallery.html folder="/assets/photography/sulphur-ok-gallery" %}
+{% include image-gallery.html folder="/assets/photography/santa-barbara-gallery" %}
