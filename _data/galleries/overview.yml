@@ -126,8 +126,8 @@
   thumbnail: Greenflash06.jpg
 -
  title: Santa Barbara
- directory: santa-barbara
- picture_path: santa-barbara
+ directory: santa-barbara-gallery
+ picture_path: santa-barbara-gallery
  preview:
   filename: SB Acme Buds
   original: SB Acme Buds.jpg
