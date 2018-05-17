@@ -74,3 +74,33 @@
   sizes:
   - Epic-Cafe-1.jpg
   thumbnail: Epic-Cafe-1.jpg
+-
+ title: Lake Tahoe
+ directory: tahoe-gallery
+ picture_path: tahoe-gallery
+ preview:
+  filename: Rubicon Trail
+  original: Rubicon Trail.jpg
+  sizes:
+  - Rubicon Trail.jpg
+  thumbnail: Rubicon Trail.jpg
+-
+ title: Okc Ok
+ directory: okc-gallery
+ picture_path: okc-gallery
+ preview:
+  filename: Memorial Chairs
+  original: Memorial Chairs.jpg
+  sizes:
+  - Memorial Chairs.jpg
+  thumbnail: Memorial Chairs.jpg
+-
+ title: Grand Canyon
+ directory: grand-canyon
+ picture_path: grand-canyon
+ preview:
+  filename: Grand Canyon 1983
+  original: Grand Canyon 1983.jpg
+  sizes:
+  - Grand Canyon 1983.jpg
+  thumbnail: Grand Canyon 1983.jpg
