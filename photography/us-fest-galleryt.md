@@ -23,8 +23,7 @@ locations:
 
 support: [gallery]
 ---
-
-## Us Fest 1983
+# Us Fest 1983
 
 {% for gallery in site.photography %}
   {% include archive-single.html %}

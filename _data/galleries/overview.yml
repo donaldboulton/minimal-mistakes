@@ -136,8 +136,8 @@
   thumbnail: SB Acme Buds.jpg
 -
  title: Us Fest 1983
- directory: us-fest-1983-gallery
- picture_path: us-fest-1983-gallery
+ directory: us-fest-gallery
+ picture_path: us-fest-gallery
  preview:
   filename: US Fest Stage
   original: US Fest Stage.jpg
