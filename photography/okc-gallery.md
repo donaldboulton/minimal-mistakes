@@ -23,7 +23,7 @@ locations:
 support: [gallery]
 ---
 
-## Tahoe Ca in 1983
+## Oklahoma City, OK
 
 {% for gallery in site.photography %}
   {% include archive-single.html %}

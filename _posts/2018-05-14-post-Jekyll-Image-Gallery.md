@@ -9,9 +9,11 @@ author: Donald Boulton
 author_profile: true
 tags:
   - Jekyll
+  - Gallery
   - Isotope
   - LightGallery
   - images.weserv.nl
+
 category:
   - Jekyll
 locations:
@@ -48,54 +50,256 @@ slug: Jekyll-Image-Gallery
 
 {% include page-intro.html %}
 
-# Jekyll Simple Gallery
+# Jekyll Image Gallery
 
-Create a Jekyll images Gallery that loops through all images in a folder. Displayed with [MetaFuzzy Isotope](https://isotope.metafizzy.co/) and viewed with [Sachinchoolur LightGallery](http://sachinchoolur.github.io/lightGallery/demos/). Not Configured by yml Frontmatter, thus much eaiser to create. Using [Images resizing by images.weserv.nl](weserv.nl), which gives a thumnail image displayed in the Isotope gallery and the origional images which is opened by LightGallery.
+Ther are two ways displayed below to build Image Gallerys with Jekyll using [MetaFuzzy Isotope](https://isotope.metafizzy.co/) and [Sachinchoolur LightGallery](http://sachinchoolur.github.io/lightGallery/demos/).
 
-Below is the image gallery includes file as [image-gallery.html](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_includes/image-gallery.html) for Isotope arranged animated thumnails, resized online by [images.weserv.nl](weserv.nl) and displayed in LightGallery.
+The First is a Simple Gallery that Loops throught all images in a folder resizing the display image online and using the origional image in LightGallery.
 
-```html
-<div id="aniimated-thumbnials{% if include.id_number %}-{{ include.id_number }}{% endif %}" class="gallery">
-      <div id="gallery-sizer{% if include.id_number %}-{{ include.id_number }}{% endif %}" class="gallery-sizer"></div>
-      {% for file in site.static_files %}
-          {% if file.path contains include.folder %}
-          {% if file.extname == '.jpg' or file.extname == '.jpeg' or file.extname == '.JPG' or file.extname == '.JPEG' %}
-          <div class="image-wrapper" itemscope itemtype="http://schema.org/ImageObject">
-              <a itemprop="contentUrl" href="{{ file.path }}" {% if picture.title %} itemprop="name" data-sub-html="<div class='lg-toolbar caption'><h4>{{ picture.title | escape }}</h4>{% if picture.caption %}<p>{{ picture.caption | escape }}</p>{% endif %}</div>"{% endif %} class="image">
-                 <img itemprop="thumbnail" src="//images.weserv.nl/?url={{ site.url | replace: 'http://','' | replace: 'https://','' }}{{ file.path }}&w=300&h=300&output=jpg&q=50&t=square" />
-              </a>
-          </div>
-          {% endif %}
-          {% endif %}
-      {% endfor %}
-</div>
+The Second is driven off of a data yml file a hard way to do it but it gives you a mobie responsive srcset, using 5 images sizes.
+
+If there is any confusion to the contents of this post add a comment below or go to the repo at: Donald Boultons [Github Repo](https://github.com/donaldboulton/DWB) and view the code, see both my Simple and Complex Gallerys in action on my Gallery Page.
+
+## Config and folder structure
+
+The config yml should look simular to the below if your gallery.md files are in a folder name photography
+
+```yml
+# Collections
+collections:
+  photography:
+    output: true
+    permalink: /:photography/:name/
 ```
 
-# The layout file for the gallery
+With defaults as:
 
-Gallery layout download [galleryloop.html](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_layouts/galleryloop.html)
+```yml
+# Defaults
+defaults:
+  - scope:
+      path: "photography"
+      type: "photograpny"
+    values:
+      layout: single
+      breadcrumbs:
+        - label: "photography"
+          url: /photography/
+      permalink: /:path/:basename:output_ext
+```
 
-The gallery layout file code
+### Adding Images
+
+I added images in my assets/images/photography folders for each gallery. as listed in my data/overwiew.yml file and configured in each of my /pnopography/Gallery.md files
+
+## Data YML File
+
+Both the simple and Complex Gallerys are driven by the data/gallerys/overview.yml data file as displayed below, this is from my site and gallerys.
+
+```yml
+-
+ title: My Cats
+ directory: cat-gallery
+ preview:
+  filename: Boys-Idabel-bed
+  original: Boys-Idabel-bed.jpg
+  sizes:
+  - Boys-Idabel-bed.jpg
+  - Boys-Idabel-bed-800.jpg
+  thumbnail: Boys-Idabel-bed-th.jpg
+-
+ title: Stray Cats
+ directory: stray-cat-gallery
+ picture_path: stray-cat-gallery
+ preview:
+  filename: Boys-Kittens
+  original: Boys-Kittens.jpg
+  sizes:
+  - Boys-Kittens.jpg
+  - Boys-Kittens-800.jpg
+  thumbnail: Boys-Kittens-th.jpg
+-
+ title: Old Cats
+ directory: old-cat-gallery
+ picture_path: old-cat-gallery
+ preview:
+  filename: Boys-Kittens
+  original: Boys-Kittens.jpg
+  sizes:
+  - Boys-Kittens.jpg
+  - Boys-Kittens-800.jpg
+  thumbnail: Boys-Kittens-th.jpg
+-
+ title: San Francisco
+ directory: san-francisco
+ picture_path: san-francisco
+ preview:
+  filename: VS-2012-5948-4242x2828
+  original: VS-2012-6013-6000x4000.jpg
+  sizes:
+  - VS-2012-5948-4242x2828.jpg
+  - VS-2012-5948-2121x1414.jpg
+  - VS-2012-5948-2999x1999.jpg
+  thumbnail: VS-2012-5948-320-thumbnail.jpg
+
+-
+ title: Family
+ directory: family-gallery
+ picture_path: family-gallery
+ preview:
+  filename: first-grade
+  original: First-Grade.jpg
+  sizes:
+  - First-Grade.jpg
+  thumbnail: First-Grade.jpg
+
+-
+ title: Sulphur Ok
+ directory: sulphur-ok-gallery
+ picture_path: sulphur-ok-gallery
+ preview:
+  filename: Bellview Postcard
+  original: Belleview-Postcard.jpg
+  sizes:
+  - Belleview-Postcard.jpg
+  thumbnail: Belleview-Postcard.jpg
+-
+ title: Tucson Az
+ directory: tucson-gallery
+ picture_path: tucson-gallery
+ preview:
+  filename: Epic Cafe Corner
+  original: Epic-Cafe-1.jpg
+  sizes:
+  - Epic-Cafe-1.jpg
+  thumbnail: Epic-Cafe-1.jpg
+-
+ title: Lake Tahoe
+ directory: tahoe-gallery
+ picture_path: tahoe-gallery
+ preview:
+  filename: Rubicon Trail
+  original: Rubicon Trail.jpg
+  sizes:
+  - Rubicon Trail.jpg
+  thumbnail: Rubicon Trail.jpg
+-
+ title: Okc Ok
+ directory: okc-gallery
+ picture_path: okc-gallery
+ preview:
+  filename: Memorial Chairs
+  original: Memorial Chairs.jpg
+  sizes:
+  - Memorial Chairs.jpg
+  thumbnail: Memorial Chairs.jpg
+-
+ title: Grand Canyon
+ directory: grand-canyon-gallery
+ picture_path: grand-canyon-gallery
+ preview:
+  filename: Grand Canyon 1983
+  original: Grand Canyon 1983.jpg
+  sizes:
+  - Grand Canyon 1983.jpg
+  thumbnail: Grand Canyon 1983.jpg
+-
+ title: Charlottesville Va
+ directory: charlottesville-va-gallery
+ picture_path: charlottesville-va-gallery
+ preview:
+  filename: Downtown Mall
+  original: Downtown Mall.jpg
+  sizes:
+  - Downtown Mall.jpg
+  thumbnail: Downtown Mall.jpg
+-
+ title: San Diego
+ directory: san-diego-gallery
+ picture_path: san-diego-gallery
+ preview:
+  filename: Green flash 2006
+  original: Greenflash06.jpg
+  sizes:
+  - Greenflash06.jpg
+  thumbnail: Greenflash06.jpg
+-
+ title: Santa Barbara
+ directory: santa-barbara-gallery
+ picture_path: santa-barbara-gallery
+ preview:
+  filename: SB Acme Buds
+  original: SB Acme Buds.jpg
+  sizes:
+  - SB Acme Buds.jpg
+  thumbnail: SB Acme Buds.jpg
+-
+ title: Us Fest 1983
+ directory: us-fest-1983-gallery
+ picture_path: us-fest-1983-gallery
+ preview:
+  filename: US Fest Stage
+  original: US Fest Stage.jpg
+  sizes:
+  - US Fest Stage.jpg
+  thumbnail: US Fest Stage.jpg
+-
+ title: Unsorted
+ directory: unsorted-gallery
+ picture_path: unsorted-gallery
+ preview:
+  filename: Jesus
+  original: jesus_500.jpg
+  sizes:
+  - jesus_500.jpg
+  thumbnail: jesus_500.jpg
+```
+
+## The Included Js And Css
+
+I Included the [lightgallery.js](https://raw.githubusercontent.com/sachinchoolur/lightGallery/master/src/js/lightgallery.js) minified to my main site main.min.js file as to have it initilized at all time for any page and it makes it work smooth and fast. I included it right after jquery.js and before any other Conjugated scripts.
+
+Adding all other LightGallery css and scripts in a dist folder under my assets folder. In the same folder structure as in the [lightgallery repo](https://github.com/sachinchoolur/lightGallery), adding isotope.js, mousewheel and picturefill from CloudFlare CDN.
+
+Isotope.js latest at github repo: [isotope.js](https://raw.githubusercontent.com/metafizzy/isotope/master/js/isotope.js) and LightGallery Js and Css at: are required for this gallery including the below gallery.sass file.
+
+### Gallery Assets
+
+To gather the required scripts and css we need to download and add to our assets folder.
+Adding included Isotope and LightGallery files as below in my includes/scripts.html
 
 ```html
----
-layout: default
-author: Donald Boulton
-author_profile: false
-support: [lightbox]
----
+{% if page.support contains 'gallery' %}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.5/isotope.pkgd.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js" crossorigin="anonymous"></script>
+  <script src="{{ '/assets/dist/js/imagesloaded.pkgd.min.js' | relative_url }}"></script>
+  <script src="{{ '/assets/dist/modules/lg-autoplay.min.js' | relative_url }}"></script>
+  <script src="{{ '/assets/dist/modules/lg-fullscreen.min.js' | relative_url }}"></script>
+  <script src="{{ '/assets/dist/modules/lg-share.min.js' | relative_url }}"></script>
+  <script src="{{ '/assets/dist/modules/lg-thumbnail.min.js' | relative_url }}"></script>
+  <script src="{{ '/assets/dist/modules/lg-zoom.min.js' | relative_url }}"></script>
+  <script src="{{ '/assets/dist/js/init-lightgallery.js' | relative_url }}"></script>
+{% endif %}
+```
 
-<div id="main" role="main">
-  <h1 class="gallery-title page__title">{{ page.title }}</h1>
-  <div itemscope itemtype="http://schema.org/ImageGallery">
-      {{ content }}
-  </div>
-</div>
+In each Gallery Gallery.md file to use the included above scripts add the below to your gallery page frontmatter.
+
+```html
+support: [gallery]
+```
+
+I added the Css teh same way to my /includes/head.html file and the above frontmatter support will include the lightgallery.min.css
+
+```html
+{% if page.support contains 'gallery' %}
+   <link rel="stylesheet" href="{{ '/assets/dist/css/lightgallery.min.css' | relative_url }}">
+{% endif %}
 ```
 
 ## The Sass styling
 
-The styling for my site gallery's several are included. The download of [gallery.scss](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_sass/minimal-mistakes/_gallery.scss) file.
+The styling for my site gallery's, several are included. The download of [gallery.scss](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_sass/minimal-mistakes/_gallery.scss) file.
 
 The gallery.scss code below
 
@@ -303,13 +507,98 @@ The gallery.scss code below
 }
 ```
 
+## Jekyll Simple Gallery
+
+Create a Jekyll images Gallery that loops through all images in a folder. Displayed with [MetaFuzzy Isotope](https://isotope.metafizzy.co/) and viewed with [Sachinchoolur LightGallery](http://sachinchoolur.github.io/lightGallery/demos/). Not Configured by yml Frontmatter, thus much eaiser to create. Using [Images resizing by images.weserv.nl](weserv.nl), which gives a thumnail image displayed in the Isotope gallery and the origional images which is opened by LightGallery.
+
+Below is the image gallery includes file as [image-gallery.html](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_includes/image-gallery.html) for Isotope arranged animated thumnails, resized online by [images.weserv.nl](weserv.nl) and displayed in LightGallery.
+
+```html
+<div id="aniimated-thumbnials{% if include.id_number %}-{{ include.id_number }}{% endif %}" class="gallery">
+      <div id="gallery-sizer{% if include.id_number %}-{{ include.id_number }}{% endif %}" class="gallery-sizer"></div>
+      {% for file in site.static_files %}
+          {% if file.path contains include.folder %}
+          {% if file.extname == '.jpg' or file.extname == '.jpeg' or file.extname == '.JPG' or file.extname == '.JPEG' %}
+          <div class="image-wrapper" itemscope itemtype="http://schema.org/ImageObject">
+              <a itemprop="contentUrl" href="{{ file.path }}" {% if picture.title %} itemprop="name" data-sub-html="<div class='lg-toolbar caption'><h4>{{ picture.title | escape }}</h4>{% if picture.caption %}<p>{{ picture.caption | escape }}</p>{% endif %}</div>"{% endif %} class="image">
+                 <img itemprop="thumbnail" src="//images.weserv.nl/?url={{ site.url | replace: 'http://','' | replace: 'https://','' }}{{ file.path }}&w=300&h=300&output=jpg&q=50&t=square" />
+              </a>
+          </div>
+          {% endif %}
+          {% endif %}
+      {% endfor %}
+</div>
+```
+
+# The layout file for the gallery
+
+Gallery layout download [galleryloop.html](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_layouts/galleryloop.html)
+
+The gallery layout file code.
+
+```html
+---
+layout: default
+author: Donald Boulton
+author_profile: false
+support: [gallery]
+---
+
+<div id="main" role="main">
+  <h1 class="gallery-title page__title">{{ page.title }}</h1>
+  <div itemscope itemtype="http://schema.org/ImageGallery">
+      {{ content }}
+  </div>
+</div>
+```
+
 ## Jekyll Complex Gallery
 
-This is a Gallery based on Isotope and LightGallery the same as my Simple Gallery, this on uses data yml and 5 pre configured images for the figure srcset display. Alot of coding is require for this and my cat gallerys are the only ones built like this, but for the best responsiveness and speed this is the way to go.
+This is a Gallery based on Isotope and LightGallery the same as my Simple Gallery, this Complex one uses a data yml file and 5 pre configured images for a figure srcset display. Alot of coding is require for this and my cat gallerys are the only ones built like this, but for the best mobile speed with responsiveness, this is the way to go.
 
-### The Gallery layout file
+### The include file
 
+This include file at: [gallery-layout.html](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_includes/gallery-layout.html)builds a srcset out of Five preconfigured images. Sizes as example image-320.jpg or 320px wide, image-800.jpg or 800px wide, image-1200px or 1200px wide, and the origional image in your stock size twice once with its origional name and once with the extenshion to the file name as above image-lg.WHATEVER .png .jpg .gif...
+
+### The include Code
+
+This code donload at: [gallery-layout.html](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_includes/gallery-layout.html) Uses LightGallery Thumbnails for navigation in a LightGallery Display, Isotope for the grid with a cation if any.
+
+The code below
+
+```html
+<div id="aniimated-thumbnials{% if include.id_number %}-{{ include.id_number }}{% endif %}" class="gallery">
+  <div id="gallery-sizer{% if include.id_number %}-{{ include.id_number }}{% endif %}" class="gallery-sizer"></div>
+  {% for picture in include.gallery.pictures %}
+  <div class="image-wrapper" itemscope itemtype="http://schema.org/ImageObject">
+    <a itemprop="contentUrl" href="{{ site.url }}{{ site.baseurl }}/assets/photography/{{ include.gallery.picture_path }}/{{ picture.original }}"
+    data-responsive="{% for size in picture.sizes %} {{ site.url}}{{ site.baseurl }}/assets/photography/{{ include.gallery.picture_path }}/{{ size }} {{ size | split: '-' | last | split: '.' | first | split: 'x' | first | strip }}{% unless forloop.last %},{% endunless %}{% endfor %}" class="image"
+    {% if picture.title %} itemprop="name" data-sub-html="<div class='lg-toolbar caption'><h4>{{ picture.title | escape }}</h4>{% if picture.caption %}<p>{{ picture.caption | escape }}</p>{% endif %}</div>"{% endif %}>
+      <img itemprop="thumbnail" alt="{{ picture.title }}" src="{{ site.url }}{{ site.baseurl }}/assets/photography/{{ include.gallery.picture_path }}/{{ picture.thumbnail }}" />
+    </a>
+  </div>
+  {% endfor %}
+</div>
 ```
-Working on code display, built on my repo click the Octocat at the top of the page for this page in my Github repo.
+
+### The layout file
+
+The layout file for the Complex Gallery simular to the simple gallery with a added class on the div as class="gallery".
+
+```html
+---
+layout: default
+author: Donald Boulton
+author_profile: false
+support: [gallery]
+---
+
+<div id="main" role="main">
+  <h1 class="gallery-title page__title">{{ page.title }}</h1>
+  <div class="gallery" itemscope itemtype="http://schema.org/ImageGallery">
+      {{ content }}
+  </div>
+</div>
+```
 
 {% include links.html %}

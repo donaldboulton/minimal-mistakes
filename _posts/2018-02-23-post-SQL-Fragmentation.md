@@ -11,7 +11,7 @@ adds: true
 cookies: true
 reviews: true
 tags:
-  - SQL
+  - SQL Server
   - Fragmentation
   - Defrag
 

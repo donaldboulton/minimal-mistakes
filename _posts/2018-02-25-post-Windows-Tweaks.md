@@ -14,6 +14,7 @@ reviews: true
 tags:
   - Windows Tweaks
   - Windows 10
+  - Performance
 category:
   - Windows
 
