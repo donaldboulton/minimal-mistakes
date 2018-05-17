@@ -23,7 +23,7 @@ locations:
 support: [gallery]
 ---
 
-## Sulphur Ok 1920 - 1970
+## Santa Barbara 2001
 
 {% for gallery in site.photography %}
   {% include archive-single.html %}

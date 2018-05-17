@@ -23,7 +23,7 @@ locations:
 support: [gallery]
 ---
 
-## Tahoe Ca in 1983
+## San Diego 1998
 
 {% for gallery in site.photography %}
   {% include archive-single.html %}

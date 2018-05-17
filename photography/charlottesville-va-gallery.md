@@ -23,7 +23,7 @@ locations:
 support: [gallery]
 ---
 
-## Sulphur Ok 1920 - 1970
+## Charlottesville Va 2002
 
 {% for gallery in site.photography %}
   {% include archive-single.html %}
