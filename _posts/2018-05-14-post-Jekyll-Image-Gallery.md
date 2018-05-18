@@ -94,7 +94,7 @@ defaults:
       permalink: /:path/:basename:output_ext
 ```
 
-### Adding Images
+## Adding Images
 
 I added images in my assets/images/photography folders for each gallery. as listed in my data/overwiew.yml file and configured in each of my /photography/Gallery.md files
 
@@ -118,7 +118,6 @@ Both the simple and Complex Gallerys are driven by the data/gallerys/overview.ym
   - VS-2012-5948-2999x1999.jpg
   thumbnail: VS-2012-5948-320-thumbnail.jpg
 
-
 // Simple yml one image and thumbnails provided by online resizing
 -
  title: Family
@@ -137,7 +136,7 @@ Both the simple and Complex Gallerys are driven by the data/gallerys/overview.ym
 
 I Included the [lightgallery.js](https://raw.githubusercontent.com/sachinchoolur/lightGallery/master/src/js/lightgallery.js) minified to my main site main.min.js file as to have it initilized at all times for any page. I included it right after jquery.js and before any other Conjugated scripts.
 
-Adding all other LightGallery css and scripts in a dist folder under my assets folder. In the same folder structure as in the [lightgallery repo](https://github.com/sachinchoolur/lightGallery), adding isotope.js, mousewheel.js and picturefill.js from CloudFlare CDN.
+Adding all other LightGallery css and scripts in a assets/dist folder. In the same folder structure as in the [lightgallery repo](https://github.com/sachinchoolur/lightGallery), adding isotope.js, mousewheel.js and picturefill.js from CloudFlare CDN.
 
 Isotope.js latest at github repo: [isotope.js](https://raw.githubusercontent.com/metafizzy/isotope/master/js/isotope.js) and LightGallery Js and Css are required for this gallery including the below _gallery.sass file.
 
@@ -158,22 +157,22 @@ Adding included Isotope and LightGallery files as below in my includes/scripts.h
   <script src="{{ '/assets/dist/modules/lg-thumbnail.min.js' | relative_url }}"></script>
   <script src="{{ '/assets/dist/modules/lg-zoom.min.js' | relative_url }}"></script>
   <script src="{{ '/assets/dist/js/init-lightgallery.js' | relative_url }}"></script>
-//endif
+//endif using liquid which kills this code block.
 ```
 
-In each Gallery.md file to use the included above scripts add the below to your gallery page frontmatter. Using a liquid conditional if page.support contains 'gallery' and a endif
+In each Gallery.md file to use the included above scripts add the below to your gallery page frontmatter. Using a liquid conditional if page.support contains 'gallery'
 
 ```html
 support: [gallery]
 ```
 
-I added the Css theh same way to my /includes/head.html file and the above frontmatter support will include the lightgallery.min.css, with a conditional if statement% if page.support contains 'gallery' %
+I added the Css theh same way to my /includes/head.html file and the above frontmatter support will include the lightgallery.min.css, with a conditional if statement % if page.support contains 'gallery' %
 
 ```html
    <link rel="stylesheet" href="{{ '/assets/dist/css/lightgallery.min.css' | relative_url }}">
 ```
 
-## The Sass styling
+### The Sass styling
 
 The styling for my site gallery's, several are included. The download of [gallery.scss](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_sass/minimal-mistakes/_gallery.scss) file.
 
@@ -389,7 +388,7 @@ Create a Jekyll images Gallery that loops through all images in a folder. Displa
 
 The image gallery includes file as [image-gallery.html](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_includes/image-gallery.html) for Isotope arranged animated thumnails, resized online by [images.weserv.nl](weserv.nl) and displayed in LightGallery.
 
-# The layout file for the gallery
+### The layout file for the gallery
 
 Gallery layout download [galleryloop.html](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_layouts/galleryloop.html)
 
