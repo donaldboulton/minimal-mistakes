@@ -326,9 +326,6 @@ collections:
   products:
     output: true
     permalink: /:products/:name/
-  posts:
-    output: true
-    permalink: /:posts/:name/
   category:
     output: true
 # Defaults
