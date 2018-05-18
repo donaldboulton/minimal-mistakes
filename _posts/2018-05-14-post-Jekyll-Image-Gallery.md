@@ -29,7 +29,7 @@ reviews: true
 adds: true
 cookies: true
 
-excerpt: "Create a Jekyll images Gallery that loops through all images in a folder. Not Configured by yml Frontmatter, thus much eaiser to create. Using [Images resizing by images.weserv.nl](weserv.nl), which gives a thumnail image displayed in the isotope arranged gallery and the origional images which is opened by lightgallery."
+excerpt: "Create a Jekyll images Gallery that loops through all images in a folder. Not Configured by yml Frontmatter, thus much eaiser to create. Using [Images resizing by images.weserv.nl](weserv.nl), which gives a thumbnail image displayed in the isotope arranged gallery and the origional images which are opened by lightgallery."
 
 image:
   cover: true
@@ -52,17 +52,19 @@ slug: Jekyll-Image-Gallery
 
 # A Simple or Complex Image Gallery
 
-Ther are two ways displayed below to build Image Gallerys with Jekyll using [MetaFuzzy Isotope](https://isotope.metafizzy.co/) and [Sachinchoolur LightGallery](http://sachinchoolur.github.io/lightGallery/demos/).
+Ther are two ways displayed below to build Image Gallerys with Jekyll using [MetaFuzzy Isotope](https://isotope.metafizzy.co/) and [Sachinchoolur LightGallery](http://sachinchoolur.github.io/lightGallery/demos/)
+
+* This post is still a work in progress!
 
 The First is a Simple Gallery that Loops throught all images in a folder resizing the display image online and using the origional image in LightGallery.
 
-The Second is driven off of a data yml file a hard way to do it but it gives you a mobie responsive srcset, using 5 image sizes.
+The Second is driven off of a data yml file, a hard way to do it, but it gives you a mobie responsive data-responsive set of images kind of like a srcset but for a lightgallery responsive display, using 5 image sizes.
 
-If there is any confusion to the contents of this post add a comment below or go to the repo at: Donald Boultons [Github Repo](https://github.com/donaldboulton/DWB) and view the code, see both my Simple and Complex Gallerys in action on my Gallery Page.
+If there is any confusion to the contents of this post add a comment below or go to the repo at: Donald Boultons [Github Repo](https://github.com/donaldboulton/DWB) and view the code, see both my Simple and Complex CAT Gallerys in action on my Gallery Page.
 
 ## Config and folder structure
 
-The config yml should look simular to the below if your gallery.md files are in a folder name photography
+The config yml should look simular to the below if your gallery.md files are in a folder named, photography no underscore as _photography.
 
 ```yml
 # Collections
@@ -138,7 +140,7 @@ To gather the required scripts and css we need to download and add them to our a
 Adding included Isotope and LightGallery files as below in my includes/scripts.html
 
 ```html
-// if page.support contains 'gallery'
+// if page.support contains 'gallery' using liquid which kills this code block.
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.5/isotope.pkgd.min.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js" crossorigin="anonymous"></script>
@@ -384,7 +386,7 @@ The image gallery includes file as [image-gallery.html](https://raw.githubuserco
 
 Gallery layout download [galleryloop.html](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_layouts/galleryloop.html)
 
-The gallery layout file code.
+The gallery layout file code with the tile of my page being in my single layour of your default layout file.
 
 ```html
 ---
@@ -395,7 +397,6 @@ support: [gallery]
 ---
 
 <div id="main" role="main">
-  <h1 class="gallery-title page__title">{{ page.title }}</h1>
   <div itemscope itemtype="http://schema.org/ImageGallery">
       {{ content }}
   </div>
@@ -412,14 +413,14 @@ This include file at: [gallery-layout.html](https://raw.githubusercontent.com/do
 
 ### The include Code
 
-This code donload at: [gallery-layout.html](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_includes/gallery-layout.html) Uses LightGallery Thumbnails for navigation in a LightGallery Display, Isotope for the grid with a cation if any.
+This code donload at: [gallery-layout.html](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_includes/gallery-layout.html) Uses LightGallery Thumbnails for navigation in a LightGallery Display, Isotope for the grid with a caption if any.
 
 The code below
 
 ```html
 <div id="aniimated-thumbnials{% if include.id_number %}-{{ include.id_number }}{% endif %}" class="gallery">
   <div id="gallery-sizer{% if include.id_number %}-{{ include.id_number }}{% endif %}" class="gallery-sizer"></div>
-  // for picture in include.gallery.pictures
+  // for picture in include.gallery.pictures using liquid which kills this code block.
   <div class="image-wrapper" itemscope itemtype="http://schema.org/ImageObject">
     <a itemprop="contentUrl" href="{{ site.url }}{{ site.baseurl }}/assets/photography/{{ include.gallery.picture_path }}/{{ picture.original }}"
     data-responsive="{% for size in picture.sizes %} {{ site.url}}{{ site.baseurl }}/assets/photography/{{ include.gallery.picture_path }}/{{ size }} {{ size | split: '-' | last | split: '.' | first | split: 'x' | first | strip }}{% unless forloop.last %},{% endunless %}{% endfor %}" class="image"
@@ -427,7 +428,7 @@ The code below
       <img itemprop="thumbnail" alt="{{ picture.title }}" src="{{ site.url }}{{ site.baseurl }}/assets/photography/{{ include.gallery.picture_path }}/{{ picture.thumbnail }}" />
     </a>
   </div>
-  // endfor
+  // endfor using liquid which kills this code block.
 </div>
 ```
 
@@ -444,9 +445,8 @@ support: [gallery]
 ---
 
 <div id="main" role="main">
-  <h1 class="gallery-title page__title">{{ page.title }}</h1>
   <div class="gallery" itemscope itemtype="http://schema.org/ImageGallery">
-      content
+      content  //using liquid which kills this code block.
   </div>
 </div>
 ```
