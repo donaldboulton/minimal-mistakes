@@ -11,6 +11,18 @@ comments: true
 share: true
 related: true
 breadcrumb: true
+sidenav: true
+adds: true
+cookies: true
+category:
+  - Gallerys
+sidebar:
+  - title: "Golden Gate"
+    image: /assets/photography/san-francisco-gallery/VS-2012-5948-2999x1999.jpg
+    image_alt: "Golden Gate Bridge"
+    text: "Take a walk across this baby"
+  - title: "Golden Gate Bridge"
+    text: "Drove walked rode a bicycle even took a nap on this bridge."
 category:
   - Gallerys
 image:
@@ -24,6 +36,7 @@ header:
   teaser: /assets/images/pages/letter-avatar-header-320.png
 support: [gallery]
 ---
+# Golden Gate park what a trip
 
 Lived in San Francisco for about a year. Lived and hung out on hippy hill in Golden Gate park, how cool!
 

@@ -10,6 +10,18 @@ comments: true
 share: true
 related: true
 breadcrumb: true
+sidenav: true
+adds: true
+cookies: true
+category:
+  - Gallerys
+sidebar:
+  - title: "My Hun Kitty"
+    image: /assets/photography/old-cat-gallery/Little-Hun-th.jpg
+    image_alt: "Hun Kitty"
+    text: "Hun at 3 weaks"
+  - title: "Responsibilities"
+    text: "I take care of about 20 stray cats in three different parts of OKC and any kitty that comes my way."
 category:
   - Gallerys
 header:
@@ -21,6 +33,7 @@ locations:
   - 4 Oaks Storaage
 support: [gallery]
 ---
+# Feed stray cats every morning
 
 Stray cats I take care of every day, and have since 1999.
 Its my passion as I love kitty cats.

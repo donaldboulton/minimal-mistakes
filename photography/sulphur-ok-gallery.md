@@ -12,6 +12,18 @@ comments: true
 share: true
 related: true
 breadcrumb: true
+sidenav: true
+adds: true
+cookies: true
+category:
+  - Gallerys
+sidebar:
+  - title: "Sulphur Ok"
+    image: /assets/photography/sulphur-ok-gallery/Tommy Fishing.jpg
+    image_alt: "Hun Kitty"
+    text: "Hun at 3 weaks"
+  - title: "Responsibilities"
+    text: "My Uncle Thomas Molaeck owned the two resorts in Sulphur the Vendome and Belview. Spent every summer helping with the pools and resorts started painting the pools with white wash when I was 3."
 category:
   - Gallerys
 header:
@@ -22,8 +34,7 @@ locations:
   - Sulphur, Oklahoma
 support: [gallery]
 ---
-
-## Sulphur Ok 1920 - 1970
+# Sulphur Ok 1920 - 1970
 
 {% for gallery in site.photography %}
   {% include archive-single.html %}

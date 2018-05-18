@@ -12,6 +12,18 @@ comments: true
 share: true
 related: true
 breadcrumb: true
+sidenav: true
+adds: true
+cookies: true
+category:
+  - Gallerys
+sidebar:
+  - title: "Quaterflash"
+    image: /assets/photography/old-cat-gallery/Quarterflash US.jpg
+    image_alt: "Quarter Flash"
+    text: "Cool at the fest"
+  - title: "Four days of fun"
+    text: "Scott Fife and I drove to LA, stayed in Pamona with my Grandparents for the two weekends and 4 days of fun."
 category:
   - Gallerys
 
