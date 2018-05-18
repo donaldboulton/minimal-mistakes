@@ -20,10 +20,10 @@ category:
 sidebar:
   - title: "Sulphur Ok"
     image: /assets/photography/sulphur-ok-gallery/Tommy Fishing.jpg
-    image_alt: "Hun Kitty"
-    text: "Hun at 3 weaks"
-  - title: "Responsibilities"
-    text: "My Uncle Thomas Molaeck owned the two resorts in Sulphur the Vendome and Belview. Spent every summer helping with the pools and resorts started painting the pools with white wash when I was 3."
+    image_alt: "Thomas Molaeck"
+    text: "First Man I knew that fixed all his own stuff."
+  - title: "Thomas Molaeck"
+    text: "My Uncle Thomas Molaeck owned the two resorts in Sulphur the Vendome and Belview. Spent every summer helping with the pools and resorts started painting the pools with white wash when I was 3. First Man I knew that fixed all his own stuff. If you own it you better be able to fix it!"
 category:
   - Gallerys
 header:
