@@ -29,7 +29,7 @@ reviews: true
 adds: true
 cookies: true
 
-excerpt: "Create a Jekyll images Gallery that loops through all images in a folder. Not Configured by yml Frontmatter, thus much eaiser to create. Using [Images resizing by images.weserv.nl](weserv.nl), which gives a thumbnail image displayed in the isotope arranged gallery and the origional images which are opened by lightgallery."
+excerpt: "Create a Jekyll image Gallery that loops through all images in a folder. Not Configured by yml Frontmatter, thus much eaiser to create. Using [Images resizing by images.weserv.nl](weserv.nl), which gives a thumbnail image displayed in the isotope arranged gallery and the origional images which are opened by lightgallery."
 
 image:
   cover: true
@@ -58,7 +58,11 @@ Ther are two ways displayed below to build Image Gallerys with Jekyll using [Met
 
 The First is a Simple Gallery that Loops throught all images in a folder resizing the display image online and using the origional image in LightGallery.
 
-The Second is driven off of a data yml file, a hard way to do it, but it gives you a mobie responsive data-responsive set of images kind of like a srcset but for a lightgallery responsive display, using 5 image sizes.
+The Second is driven off of a data yml file, a hard way to do it, but it gives you a mobie responsive data-responsive set of images kind of like a srcset but for a Isotope - LightGallery responsive display, using 5 image sizes.
+
+## Image sizing
+
+Getting the five image sizes for the complex gallery is alot of work if your on Github Pages as Cloudinary will not work for me so I use Graphics Magic and then add the correct file extenshions for the size as image-thumbnail.jpg and image.jpg with 3 others -320, -800, -1200 and the main display image in lightgallery as image-lq.jpg
 
 If there is any confusion to the contents of this post add a comment below or go to the repo at: Donald Boultons [Github Repo](https://github.com/donaldboulton/DWB) and view the code, see both my Simple and Complex CAT Gallerys in action on my Gallery Page.
 
@@ -100,6 +104,7 @@ Both the simple and Complex Gallerys are driven by the data/gallerys/overview.ym
  The fist set is for the complex gallery with 5 images the second is for the simple gallery with just one image listed.
 
 ```yml
+// Complex yml 5 images
 -
  title: San Francisco
  directory: san-francisco
@@ -113,6 +118,8 @@ Both the simple and Complex Gallerys are driven by the data/gallerys/overview.ym
   - VS-2012-5948-2999x1999.jpg
   thumbnail: VS-2012-5948-320-thumbnail.jpg
 
+
+// Simple yml one image and thumbnailz provided by online resizing
 -
  title: Family
  directory: family-gallery
@@ -130,9 +137,9 @@ Both the simple and Complex Gallerys are driven by the data/gallerys/overview.ym
 
 I Included the [lightgallery.js](https://raw.githubusercontent.com/sachinchoolur/lightGallery/master/src/js/lightgallery.js) minified to my main site main.min.js file as to have it initilized at all times for any page. I included it right after jquery.js and before any other Conjugated scripts.
 
-Adding all other LightGallery css and scripts in a dist folder under my assets folder. In the same folder structure as in the [lightgallery repo](https://github.com/sachinchoolur/lightGallery), adding isotope.js, mousewheel and picturefill from CloudFlare CDN.
+Adding all other LightGallery css and scripts in a dist folder under my assets folder. In the same folder structure as in the [lightgallery repo](https://github.com/sachinchoolur/lightGallery), adding isotope.js, mousewheel.js and picturefill.js from CloudFlare CDN.
 
-Isotope.js latest at github repo: [isotope.js](https://raw.githubusercontent.com/metafizzy/isotope/master/js/isotope.js) and LightGallery Js and Css at: are required for this gallery including the below gallery.sass file.
+Isotope.js latest at github repo: [isotope.js](https://raw.githubusercontent.com/metafizzy/isotope/master/js/isotope.js) and LightGallery Js and Css are required for this gallery including the below _gallery.sass file.
 
 ### Gallery Assets
 
@@ -160,7 +167,7 @@ In each Gallery.md file to use the included above scripts add the below to your 
 support: [gallery]
 ```
 
-I added the Css theh same way to my /includes/head.html file and the above frontmatter support will include the lightgallery.min.css, with a conditoional if statement% if page.support contains 'gallery' %
+I added the Css theh same way to my /includes/head.html file and the above frontmatter support will include the lightgallery.min.css, with a conditional if statement% if page.support contains 'gallery' %
 
 ```html
    <link rel="stylesheet" href="{{ '/assets/dist/css/lightgallery.min.css' | relative_url }}">
