@@ -40,6 +40,9 @@ layout: default
                </nav>
             {% endif %}
             {% if page.sidenav %}
+               {% include sidenav-gallery.html %}
+            {% endif %}
+            {% if page.sidenav %}
                {% include sidenav.html %}
             {% endif %}
             {% if page.reviews %}
