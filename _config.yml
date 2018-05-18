@@ -332,7 +332,7 @@ collections:
 defaults:
   - scope:
       path: "photography"
-      type: "photography"
+      type: "photograpny"
     values:
       layout: single
       author_profile: false
@@ -361,7 +361,6 @@ defaults:
       breadcrumbs:
         - label: "Posts"
           url: /year-archive/
-      permalink: /:posts/:name/
   # _pages
   - scope:
       path: "_pages"
