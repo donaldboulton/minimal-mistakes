@@ -119,7 +119,7 @@ Both the simple and Complex Gallerys are driven by the data/gallerys/overview.ym
   thumbnail: VS-2012-5948-320-thumbnail.jpg
 
 
-// Simple yml one image and thumbnailz provided by online resizing
+// Simple yml one image and thumbnails provided by online resizing
 -
  title: Family
  directory: family-gallery
