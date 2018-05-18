@@ -34,8 +34,7 @@ locations:
   - Oklahoma City, OK
 support: [gallery]
 ---
-
-## Oklahoma City, OK
+# Oklahoma City, OK
 
 {% for gallery in site.photography %}
   {% include archive-single.html %}
