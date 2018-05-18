@@ -326,13 +326,16 @@ collections:
   products:
     output: true
     permalink: /:products/:name/
+  posts:
+    output: true
+    permalink: /:posts/:name/
   category:
     output: true
 # Defaults
 defaults:
   - scope:
       path: "photography"
-      type: "photograpny"
+      type: "photography"
     values:
       layout: single
       author_profile: false
@@ -360,7 +363,7 @@ defaults:
       reviews: true
       breadcrumbs:
         - label: "Posts"
-          url: /year-archive/
+          url: /posts/
   # _pages
   - scope:
       path: "_pages"

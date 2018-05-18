@@ -33,8 +33,7 @@ locations:
   - Idabel Oklahoma
 support: [gallery]
 ---
-
-## Family Pics from years 50's - 80's
+# Family Pics from years 50's - 80's
 
 {% for gallery in site.photography %}
   {% include archive-single.html %}
