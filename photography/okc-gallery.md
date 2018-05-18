@@ -12,6 +12,18 @@ comments: true
 share: true
 related: true
 breadcrumb: true
+sidenav: true
+adds: true
+cookies: true
+category:
+  - Gallerys
+sidebar:
+  - title: "Grew up in OKC"
+    image: /assets/photography/okc-gallery/OKC PC from top.jpg
+    image_alt: "My High School"
+    text: "Putnam City High School"
+  - title: "12 Years at PC"
+    text: "Spen alot of my High School days in the parking lot or across the street riding my dirt bikes in the Sand Pits - Dolise Park."
 category:
   - Gallerys
 header:

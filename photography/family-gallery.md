@@ -12,6 +12,16 @@ comments: true
 share: true
 related: true
 breadcrumb: true
+sidenav: true
+adds: true
+cookies: true
+sidebar:
+  - title: "Raced Motocross from 1971 to 1994"
+    image: /assets/photography/family-gallery/250 Maico 83.jpg
+    image_alt: "Factory 250 Maico"
+    text: "Factory 250 Maico"
+  - title: "Motocross the toughest sport"
+    text: "Had to do the most radical past time there is and thats Motocross - Supercross when I was young, everything else is wimpy."
 category:
   - Gallerys
 header:

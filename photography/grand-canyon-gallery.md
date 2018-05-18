@@ -12,6 +12,16 @@ comments: true
 share: true
 related: true
 breadcrumb: true
+sidenav: true
+adds: true
+cookies: true
+sidebar:
+  - title: "My Hun Kitty"
+    image: /assets/photography/grand-canyon-gallery/Grand Canyon 1983.jpg
+    image_alt: "Grand Canyon"
+    text: "Lost most all my pics of the Canyon, wish I had some from the hike to the bottom"
+  - title: "Majestic"
+    text: "Everyone should go to the Bottom and walk no animal help."
 category:
   - Gallerys
 header:
@@ -22,8 +32,7 @@ locations:
   - Grand Canyon
 support: [gallery]
 ---
-
-## Grand Canyon 1983
+# Grand Canyon 1983
 
 {% for gallery in site.photography %}
   {% include archive-single.html %}
