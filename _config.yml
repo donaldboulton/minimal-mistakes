@@ -363,7 +363,7 @@ defaults:
       reviews: true
       breadcrumbs:
         - label: "Posts"
-          url: /posts/
+          url: /year-archive/
   # _pages
   - scope:
       path: "_pages"
