@@ -392,11 +392,11 @@ The image gallery includes file as [image-gallery.html](https://raw.githubuserco
 
 Gallery layout download [galleryloop.html](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_layouts/galleryloop.html)
 
-The gallery layout file code with the tile of my page being in my single layour of your default layout file.
+The gallery layout file code with the tile of my page being in my single layout or your default layout file.
 
 ```html
 ---
-layout: default
+layout: single
 author: Donald Boulton
 author_profile: false
 support: [gallery]
@@ -404,7 +404,7 @@ support: [gallery]
 
 <div id="main" role="main">
   <div itemscope itemtype="http://schema.org/ImageGallery">
-      {{ content }}
+      content // using liquid which kills this code block.
   </div>
 </div>
 ```
@@ -444,7 +444,7 @@ The layout file for the Complex Gallery simular to the simple gallery with a add
 
 ```html
 ---
-layout: default
+layout: single
 author: Donald Boulton
 author_profile: false
 support: [gallery]
@@ -452,7 +452,7 @@ support: [gallery]
 
 <div id="main" role="main">
   <div class="gallery" itemscope itemtype="http://schema.org/ImageGallery">
-      content  //using liquid which kills this code block.
+      content  // using liquid which kills this code block.
   </div>
 </div>
 ```
