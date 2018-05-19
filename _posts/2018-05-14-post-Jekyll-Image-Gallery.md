@@ -13,7 +13,7 @@ tags:
   - Isotope
   - LightGallery
   - images.weserv.nl
-
+  - Programing
 category:
   - Jekyll
 locations:
@@ -54,17 +54,15 @@ slug: Jekyll-Image-Gallery
 
 Ther are two ways displayed below to build Image Gallerys with Jekyll using [MetaFuzzy Isotope](https://isotope.metafizzy.co/) and [Sachinchoolur LightGallery](http://sachinchoolur.github.io/lightGallery/demos/)
 
-* This post is still a work in progress!
+The First is a Simple Gallery that Loops throught all images in a folder resizing the isotope page gallery display image online, using the origional image opened in LightGallery.
 
-The First is a Simple Gallery that Loops throught all images in a folder resizing the display image online and using the origional image in LightGallery.
-
-The Second is driven off of a data yml file, a hard way to do it, but it gives you a mobie responsive data-responsive set of images kind of like a srcset but for a Isotope - LightGallery responsive display, using 4 image sizes.
+The Second is driven off of a data yml file, a hard way to do it, but it gives you a mobie responsive data-responsive set of images kind of like a data-srcset but for a Isotope - LightGallery responsive display, using 4 or more image sizes.
 
 ## Image sizing
 
 Getting the five image sizes for the complex gallery is alot of work. If your on Github Pages Cloudinary will not work. So I use Graphics Magic and then add the correct file extenshions for the size as image-th.jpg for the thumnail size, I use 320px for the thumbnail size. Including 3 others image-320.jpg, image-800.jpg and image-1200.jpg, the main display image in lightgallery as image-1200.jpg. Your can use different sizes to fit the needs for your site.
 
-If there is any confusion to the contents of this post add a comment below or go to the repo for: Donald Boulton at: [Github Repo](https://github.com/donaldboulton/DWB) and view the code. Both my Simple and Complex Gallerys displayed on my Gallery Page. The only Gallerys that are Comple or yml driven are my CAT Gallerys.
+If there is any confusion to the contents of this post add a comment below or go to the repo for: Donald Boulton at: [Github Repo](https://github.com/donaldboulton/DWB) and view the code. Both my Simple and Complex Gallerys displayed on my Gallery Page. The only Gallerys that are Complex or yml driven are my CAT Gallerys.
 
 ## Config and folder structure
 
@@ -102,7 +100,7 @@ I added images in my /assets/images/photography/ folders for each gallery. as li
 ## Data YML File
 
 Both the simple and Complex Gallerys are driven by the data/gallerys/overview.yml data file as displayed below, this is from my site and gallerys.
- The fist set is for the complex gallery with 5 images the second is for the simple gallery with just one image listed.
+ The fist set is for the complex gallery with 5 images, you only need 4, with different sizes and ending with different size extenshion as -1234. The second is for the simple gallery with just one image listed.
 
 ```yml
 // Complex yml 5 images
@@ -133,6 +131,19 @@ Both the simple and Complex Gallerys are driven by the data/gallerys/overview.ym
 
 ```
 
+## Page Frontmatter
+
+```yml
+---
+layout: gallery
+title: Cat Gallery
+permalink: /photography/cat-gallery/
+category:
+  - Gallerys
+support: [gallery]
+---
+```
+
 ## The Included Js And Css
 
 I Included the [lightgallery.js](https://raw.githubusercontent.com/sachinchoolur/lightGallery/master/src/js/lightgallery.js) minified to my main site main.min.js file as to have it initilized at all times for any page. I included it right after jquery.js and before any other Conjugated scripts.
@@ -144,10 +155,10 @@ Isotope.js latest at github repo: [isotope.js](https://raw.githubusercontent.com
 ### Gallery Assets
 
 To gather the required scripts and css we need to download and add them to our assets folder.
-Adding included Isotope and LightGallery files as below in my includes/scripts.html
+Adding included Isotope and LightGallery files as below seen in my [includes/scripts.html](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_includes/scripts.html) file.
 
 ```html
-// if page.support contains 'gallery' using liquid which kills this code block.
+// if page.support contains 'gallery' using liquid which kills this code block view file in the above link.
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.5/isotope.pkgd.min.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js" crossorigin="anonymous"></script>
@@ -167,7 +178,7 @@ In each Gallery.md file to use the included above scripts add the below to your 
 support: [gallery]
 ```
 
-I added the Css theh same way to my /includes/head.html file and the above frontmatter support will include the lightgallery.min.css, with a conditional if statement % if page.support contains 'gallery' %
+I added the Css  same way to my [/includes/head.html](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_includes/head.html) file and the above frontmatter support will include the lightgallery.min.css, with a conditional if statement % if page.support contains 'gallery' %
 
 ```html
    <link rel="stylesheet" href="{{ '/assets/dist/css/lightgallery.min.css' | relative_url }}">

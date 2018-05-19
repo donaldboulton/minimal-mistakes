@@ -18,17 +18,17 @@ cookies: true
 category:
   - Gallerys
 sidebar:
-  - title: "My Hun Kitty"
-    image: /assets/photography/old-cat-gallery/Little-Hun-th.jpg
-    image_alt: "Hun Kitty"
-    text: "Hun at 3 weaks"
-  - title: "Responsibilities"
-    text: "I take care of about 20 stray cats in three different parts of OKC and any kitty that comes my way."
+  - title: "Santa Barbara Inn"
+    image: /assets/photography/santa-barbara-gallery/santa-barbara-inn-853x480.jpg
+    image_alt: "Santa Barbara Inn"
+    text: "Santa Barbara Inn"
+  - title: "Best food around"
+    text: "Santa Barbara Inn from above."
 category:
   - Gallerys
 header:
-  image: /assets/photography/santa-barbara-gallery/SB%20Acme%20Buds.jpg
-  teaser: /assets/photography/santa-barbara-gallery/SB%20Acme%20Buds.jpg
+  image: /assets/photography/santa-barbara-gallery/State-Street.jpg
+  teaser: /assets/photography/santa-barbara-gallery/State-Street.jpg
 
 locations:
   - Sulphur, Oklahoma
