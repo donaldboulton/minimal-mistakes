@@ -19,7 +19,7 @@ category:
   - Gallerys
 sidebar:
   - title: "Santa Barbara Inn"
-    image: /assets/photography/santa-barbara-gallery/santa-barbara-inn-853x480.jpg
+    image: /assets/photography/santa-barbara-gallery/santa-barbara-inn.jpg
     image_alt: "Santa Barbara Inn"
     text: "Santa Barbara Inn"
   - title: "Best food around"
