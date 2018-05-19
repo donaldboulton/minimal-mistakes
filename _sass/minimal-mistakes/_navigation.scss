@@ -282,6 +282,7 @@
 
     li {
       -webkit-box-flex: 0;
+      box-flex: 0;
       flex: none;
     }
 
@@ -618,7 +619,11 @@
     border-bottom: 1px solid $border-color;
 
     &:hover {
-      color: $text-color;
+      color: $link-color-hover;
+    }
+
+    &:visited {
+      color: $link-color-visited;
     }
   }
 
@@ -633,6 +638,25 @@
     font-weight: normal;
   }
 
+  .toc1__menu {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    list-style: none;
+
+    a {
+      font-size: $type-size-7;
+      font-weight: bold;
+      border-bottom: 1px solid $border-color;
+
+      &:hover {
+        color: $link-color-hover;
+      }
+
+      &:visited {
+        color: $link-color-visited;
+      }
+    }
   /* hide sub sub links on small screens*/
   li > ul li {
     display: none;
@@ -641,4 +665,5 @@
       display: block;
     }
   }
+}
 }
