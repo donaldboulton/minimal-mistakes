@@ -52,15 +52,15 @@ slug: Jekyll-Image-Gallery
 
 # A Simple or Complex Image Gallery
 
-Ther are two ways displayed below to build Image Gallerys with Jekyll using [MetaFuzzy Isotope](https://isotope.metafizzy.co/) and [Sachinchoolur LightGallery](http://sachinchoolur.github.io/lightGallery/demos/)
+There are two ways displayed below to build Image Gallerys with Jekyll using [MetaFuzzy Isotope](https://isotope.metafizzy.co/) and [Sachinchoolur LightGallery](http://sachinchoolur.github.io/lightGallery/demos/)
 
-The First is a Simple Gallery that Loops throught all images in a folder resizing the isotope page gallery display image online, using the origional image opened in LightGallery.
+The First is a Simple Gallery that Loops throught all images in a folder resizing the isotope page gallery display image online, the origional image is opened in LightGallery.
 
-The Second is driven off of a data yml file, a hard way to do it, but it gives you a mobie responsive data-responsive set of images kind of like a data-srcset but for a Isotope - LightGallery responsive display, using 4 or more image sizes.
+The Second is driven off of a data yml file, a hard way to do it, but it gives you a mobile responsive - data-responsive set of images kind of like a data-srcset but for a Isotope - LightGallery responsive display, using 4 or more image sizes.
 
 ## Image sizing
 
-Getting the five image sizes for the complex gallery is alot of work. If your on Github Pages, Cloudinary will not work. So I use Graphics Magic and then add the correct file extenshions for the size as image-th.jpg for the thumnail size, I use 320px for the thumbnail size. Including 3 others image-320.jpg, image-800.jpg and image-1200.jpg, the main display image in lightgallery as image-1200.jpg. You can use different sizes to fit the needs for your site but they must have differing size extenshions as image-1234.jpg or whatever.
+Getting the four or more image sizes for the complex gallery is alot of work. If your on Github Pages, Cloudinary will not work. So I use Graphics Magic locally and then add the correct file extenshions for the size as image-th.jpg for the thumnail size, using 320px for the thumbnail size. Including 3 others image-320.jpg, image-800.jpg and image-1200.jpg, the main display image in lightgallery as image-1200.jpg. You can use different sizes to fit the needs for your site but they must have differing file size extenshions as image-1234.jpg or whatever.
 
 ## Config and folder structure
 
@@ -155,8 +155,9 @@ Isotope.js latest at github repo: [isotope.js](https://raw.githubusercontent.com
 To gather the required scripts and css we need to download and add them to our assets folder.
 Adding included Isotope and LightGallery files as below seen in my [includes/scripts.html](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_includes/scripts.html) file.
 
-```html
+```liquid
 // if page.support contains 'gallery' using liquid which kills this code block view file in the above link.
+{% if page.support contains 'gallery' %}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.5/isotope.pkgd.min.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js" crossorigin="anonymous"></script>
@@ -167,6 +168,7 @@ Adding included Isotope and LightGallery files as below seen in my [includes/scr
   <script src="{{ '/assets/dist/modules/lg-thumbnail.min.js' | relative_url }}"></script>
   <script src="{{ '/assets/dist/modules/lg-zoom.min.js' | relative_url }}"></script>
   <script src="{{ '/assets/dist/js/init-lightgallery.js' | relative_url }}"></script>
+{% endif %}
 //endif using liquid which kills this code block.
 ```
 
