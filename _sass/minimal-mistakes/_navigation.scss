@@ -641,13 +641,16 @@
 
   .toc1__menu {
     margin: 0;
-    padding: .5rem;
+    padding: 0;
     width: 100%;
     list-style: none;
+    font-size: 0.8rem;
 
     a {
+      color: $muted-text-color;
       font-size: $type-size-7;
       font-weight: bold;
+      line-height: 1.5;
       border-bottom: 1px solid $border-color;
 
       &:hover {
@@ -658,6 +661,18 @@
         color: $link-color-visited;
       }
     }
+
+    > li:last-child {
+      a {
+        border-bottom: none;
+      }
+    }
+
+    li ul > li a {
+      padding-left: 1.75rem;
+      font-weight: normal;
+    }
+  }
   /* hide sub sub links on small screens*/
   li > ul li {
     display: none;
@@ -666,5 +681,4 @@
       display: block;
     }
   }
-}
 }
