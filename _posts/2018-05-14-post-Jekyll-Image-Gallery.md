@@ -58,13 +58,13 @@ Ther are two ways displayed below to build Image Gallerys with Jekyll using [Met
 
 The First is a Simple Gallery that Loops throught all images in a folder resizing the display image online and using the origional image in LightGallery.
 
-The Second is driven off of a data yml file, a hard way to do it, but it gives you a mobie responsive data-responsive set of images kind of like a srcset but for a Isotope - LightGallery responsive display, using 5 image sizes.
+The Second is driven off of a data yml file, a hard way to do it, but it gives you a mobie responsive data-responsive set of images kind of like a srcset but for a Isotope - LightGallery responsive display, using 4 image sizes.
 
 ## Image sizing
 
-Getting the five image sizes for the complex gallery is alot of work if your on Github Pages as Cloudinary will not work for me so I use Graphics Magic and then add the correct file extenshions for the size as image-thumbnail.jpg and image.jpg with 3 others -320, -800, -1200 and the main display image in lightgallery as image-lq.jpg
+Getting the five image sizes for the complex gallery is alot of work. If your on Github Pages Cloudinary will not work. So I use Graphics Magic and then add the correct file extenshions for the size as image-th.jpg for the thumnail size, I use 320px for the thumbnail size. Including 3 others image-320.jpg, image-800.jpg and image-1200.jpg, the main display image in lightgallery as image-1200.jpg. Your can use different sizes to fit the needs for your site.
 
-If there is any confusion to the contents of this post add a comment below or go to the repo at: Donald Boultons [Github Repo](https://github.com/donaldboulton/DWB) and view the code, see both my Simple and Complex CAT Gallerys in action on my Gallery Page.
+If there is any confusion to the contents of this post add a comment below or go to the repo for: Donald Boulton at: [Github Repo](https://github.com/donaldboulton/DWB) and view the code. Both my Simple and Complex Gallerys displayed on my Gallery Page. The only Gallerys that are Comple or yml driven are my CAT Gallerys.
 
 ## Config and folder structure
 
@@ -92,11 +92,12 @@ defaults:
         - label: "photography"
           url: /photography/
       permalink: /:path/:basename:output_ext
+      // I use:basename:output_ext for redirection, could be /:photography/:name/
 ```
 
 ## Adding Images
 
-I added images in my assets/images/photography folders for each gallery. as listed in my data/overwiew.yml file and configured in each of my /photography/Gallery.md files
+I added images in my /assets/images/photography/ folders for each gallery. as listed in my data/overwiew.yml file and configured in each of my /photography/Gallery.md files
 
 ## Data YML File
 
