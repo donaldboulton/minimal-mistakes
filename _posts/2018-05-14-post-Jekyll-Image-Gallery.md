@@ -155,9 +155,8 @@ Isotope.js latest at github repo: [isotope.js](https://raw.githubusercontent.com
 To gather the required scripts and css we need to download and add them to our assets folder.
 Adding included Isotope and LightGallery files as below seen in my [includes/scripts.html](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_includes/scripts.html) file.
 
-```liquid
+```javascript
 // if page.support contains 'gallery' using liquid which kills this code block view file in the above link.
-{% if page.support contains 'gallery' %}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.5/isotope.pkgd.min.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js" crossorigin="anonymous"></script>
@@ -168,7 +167,6 @@ Adding included Isotope and LightGallery files as below seen in my [includes/scr
   <script src="{{ '/assets/dist/modules/lg-thumbnail.min.js' | relative_url }}"></script>
   <script src="{{ '/assets/dist/modules/lg-zoom.min.js' | relative_url }}"></script>
   <script src="{{ '/assets/dist/js/init-lightgallery.js' | relative_url }}"></script>
-{% endif %}
 //endif using liquid which kills this code block.
 ```
 
