@@ -361,7 +361,6 @@ defaults:
       breadcrumbs:
         - label: "Posts"
           url: /year-archive/
-      permalink: /:posts/:title/
   # _pages
   - scope:
       path: "_pages"
