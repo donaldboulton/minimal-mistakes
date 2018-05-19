@@ -19,7 +19,7 @@ category:
   - Gallerys
 sidebar:
   - title: "Quaterflash"
-    image: /assets/photography/old-cat-gallery/Quarterflash US.jpg
+    image: /assets/photography/us-fest-gallery/Quarterflash US.jpg
     image_alt: "Quarter Flash"
     text: "Cool at the fest"
   - title: "Four days of fun"

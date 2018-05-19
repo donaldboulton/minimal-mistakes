@@ -1,12 +1,12 @@
 picture_path: old-cat-gallery
 preview:
-  filename: Boys-Kittens
-  original: Boys-Kittens-1200.jpg
+  filename: Tiger
+  original: Tiger-1200.jpg
   sizes:
-  - Boys-Kittens-1200.jpg
-  - Boys-Kittens-800.jpg
-  - Boys-Kittens-320.jpg
-  thumbnail: Boys-Kittens-th.jpg
+  - Tiger-1200.jpg
+  - Tiger-800.jpg
+  - Tiger-320.jpg
+  thumbnail: Tiger-th.jpg
 pictures:
 - filename: DSCN1252
   original: DSCN1252-1200.jpg
