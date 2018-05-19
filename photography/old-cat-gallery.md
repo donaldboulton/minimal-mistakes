@@ -10,7 +10,7 @@ comments: true
 share: true
 related: true
 breadcrumb: true
-sidenav: true
+sidenav-gallery: true
 adds: true
 cookies: true
 category:
