@@ -60,9 +60,7 @@ The Second is driven off of a data yml file, a hard way to do it, but it gives y
 
 ## Image sizing
 
-Getting the five image sizes for the complex gallery is alot of work. If your on Github Pages Cloudinary will not work. So I use Graphics Magic and then add the correct file extenshions for the size as image-th.jpg for the thumnail size, I use 320px for the thumbnail size. Including 3 others image-320.jpg, image-800.jpg and image-1200.jpg, the main display image in lightgallery as image-1200.jpg. Your can use different sizes to fit the needs for your site.
-
-If there is any confusion to the contents of this post add a comment below or go to the repo for: Donald Boulton at: [Github Repo](https://github.com/donaldboulton/DWB) and view the code. Both my Simple and Complex Gallerys displayed on my Gallery Page. The only Gallerys that are Complex or yml driven are my CAT Gallerys.
+Getting the five image sizes for the complex gallery is alot of work. If your on Github Pages, Cloudinary will not work. So I use Graphics Magic and then add the correct file extenshions for the size as image-th.jpg for the thumnail size, I use 320px for the thumbnail size. Including 3 others image-320.jpg, image-800.jpg and image-1200.jpg, the main display image in lightgallery as image-1200.jpg. You can use different sizes to fit the needs for your site but they must have differing size extenshions as image-1234.jpg or whatever.
 
 ## Config and folder structure
 
@@ -468,5 +466,9 @@ support: [gallery]
   </div>
 </div>
 ```
+
+If there is any confusion to the contents of this post add a review, tweet or a comment below, and or go to the repo for, Donald Boulton at: [Github Repo](https://github.com/donaldboulton/DWB) and view the code. Both my Simple and Complex Gallerys displayed on my Gallery Page.
+
+> The only Gallerys that are Complex or yml driven are my CAT Gallerys.
 
 {% include links.html %}
