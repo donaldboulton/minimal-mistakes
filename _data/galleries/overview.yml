@@ -129,11 +129,11 @@
  directory: santa-barbara-gallery
  picture_path: santa-barbara-gallery
  preview:
-  filename: SB Acme Buds
-  original: SB Acme Buds.jpg
+  filename: Santa Barbara Peer
+  original: santa-barbara-peer.jpg
   sizes:
-  - SB Acme Buds.jpg
-  thumbnail: SB Acme Buds.jpg
+  - santa-barbara-peer.jpg
+  thumbnail: santa-barbara-peer.jpg
 -
  title: Us Fest
  directory: us-fest-gallery
