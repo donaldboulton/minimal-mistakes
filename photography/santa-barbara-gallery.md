@@ -17,6 +17,7 @@ adds: true
 cookies: true
 category:
   - Gallerys
+tags: [Gallery, Santa Barbara] 
 sidebar:
   - title: "Santa Barbara Inn"
     image: /assets/photography/santa-barbara-gallery/santa-barbara-inn.jpg
@@ -24,12 +25,9 @@ sidebar:
     text: "Santa Barbara Inn"
   - title: "Best food around"
     text: "Santa Barbara Inn from above."
-category:
-  - Gallerys
 header:
   image: /assets/photography/santa-barbara-gallery/State-Street.jpg
   teaser: /assets/photography/santa-barbara-gallery/State-Street.jpg
-
 locations:
   - Sulphur, Oklahoma
 support: [gallery]

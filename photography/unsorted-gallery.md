@@ -15,8 +15,6 @@ breadcrumb: true
 sidenav-gallery: true
 adds: true
 cookies: true
-category:
-  - Gallerys
 sidebar:
   - title: "My Hun Kitty"
     image: /assets/photography/old-cat-gallery/Little-Hun-th.jpg
@@ -26,13 +24,12 @@ sidebar:
     text: "I take care of about 20 stray cats in three different parts of OKC and any kitty that comes my way."
 category:
   - Gallerys
+tags: [Gallery]
 header:
   image: /assets/photography/unsorted-gallery/jesus_500.jpg
   teaser: /assets/photography/unsorted-gallery/jesus_500.jpg
-
 locations:
   - All
-
 support: [gallery]
 ---
 # Unsorted

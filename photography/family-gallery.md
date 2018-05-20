@@ -24,10 +24,10 @@ sidebar:
     text: "Had to do the most radical past time there is and thats Motocross - Supercross when I was young, everything else is wimpy."
 category:
   - Gallerys
+tags: [Gallery, Family]
 header:
   image: /assets/photography/family-gallery/First-Grade.jpg
   teaser: /assets/photography/family-gallery/First-Grade.jpg
-
 locations:
   - Oklahoma City, Oklahoma
   - Idabel Oklahoma

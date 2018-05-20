@@ -17,19 +17,19 @@ adds: true
 cookies: true
 category:
   - Gallerys
+tags: [Gallery, Tahoe Ca] 
 sidebar:
-  - title: "My Hun Kitty"
-    image: /assets/photography/old-cat-gallery/Little-Hun-th.jpg
-    image_alt: "Hun Kitty"
-    text: "Hun at 3 weaks"
-  - title: "Responsibilities"
-    text: "I take care of about 20 stray cats in three different parts of OKC and any kitty that comes my way."
+  - title: "Tim Ewers"
+    image: /assets/photography/tahoe-gallery/Tim Playing.jpg
+    image_alt: "Tim Ewers"
+    text: "Tim and Friends Jammin"
+  - title: "Tahoe 1983"
+    text: "Lake Tahoe is where I learned to Snow Ski at Squaw Valley."
 category:
   - Gallerys
 header:
   image: /assets/photography/tahoe-gallery/Rubicon Trail.jpg
   teaser: /assets/photography/tahoe-gallery/Rubicon Trail.jpg
-
 locations:
   - Tahoe California
 support: [gallery]

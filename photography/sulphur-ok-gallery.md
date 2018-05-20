@@ -17,6 +17,7 @@ adds: true
 cookies: true
 category:
   - Gallerys
+tags: [Gallery, Sulphur Ok] 
 sidebar:
   - title: "Sulphur Ok"
     image: /assets/photography/sulphur-ok-gallery/Tommy Fishing.jpg
@@ -24,12 +25,9 @@ sidebar:
     text: "First Man I knew that fixed all his own stuff."
   - title: "Thomas Molaeck"
     text: "My Uncle Thomas Molaeck owned the two resorts in Sulphur the Vendome and Belview. Spent every summer helping with the pools and resorts started painting the pools with white wash when I was 3. First Man I knew that fixed all his own stuff. If you own it you better be able to fix it!"
-category:
-  - Gallerys
 header:
   image: /assets/photography/sulphur-ok-gallery/Bellview-Postcard.jpg
   teaser: /assets/photography/sulphur-ok-gallery/Belleview-Postcard.jpg
-
 locations:
   - Sulphur, Oklahoma
 support: [gallery]

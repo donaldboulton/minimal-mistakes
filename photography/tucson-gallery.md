@@ -15,17 +15,16 @@ breadcrumb: true
 sidenav-gallery: true
 adds: true
 cookies: true
-category:
-  - Gallerys
 sidebar:
-  - title: "My Hun Kitty"
-    image: /assets/photography/old-cat-gallery/Little-Hun-th.jpg
-    image_alt: "Hun Kitty"
+  - title: "Epic Care"
+    image: /assets/photography/tuscon-gallery/Epic Cafe 2.jpg
+    image_alt: "Epic Cafe"
     text: "Hun at 3 weaks"
-  - title: "Responsibilities"
-    text: "I take care of about 20 stray cats in three different parts of OKC and any kitty that comes my way."
+  - title: "Tucson 4 ave coffee shop."
+    text: "Hung out alot in Epic Care 4th Ave, worked at western drapery down the street."
 category:
   - Gallerys
+tags: [Gallery, Tucson Az]  
 header:
   image: /assets/photography/tucson-gallery/Epic-Cafe-1.jpg
   teaser: /assets/photography/tucson-gallery/Epic-Cafe-1.jpg

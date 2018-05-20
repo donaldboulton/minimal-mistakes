@@ -27,7 +27,6 @@ category:
 header:
   image: /assets/photography/grand-canyon/Grand Canyon 1983.jpg
   teaser: /assets/photography/grand-canyon/Grand Canyon 1983.jpg
-
 locations:
   - Grand Canyon
 support: [gallery]

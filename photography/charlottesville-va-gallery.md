@@ -22,13 +22,12 @@ sidebar:
     text: "Charlottesville Downtown Mall"
   - title: "Responsibilities"
     text: "Charlottesville Va one of the nicest places I lived at for about 2 months in 2002, while on the way to Washington DC."
-
 category:
   - Gallerys
+tags: [Gallery]
 header:
   image: /assets/photography/charlottesville-va-gallery/Downtown Mall.jpg
   teaser: /assets/photography/charlottesville-va-gallery/Downtown Mall.jpg
-
 locations:
   - Charlottesville Va
 support: [gallery]
