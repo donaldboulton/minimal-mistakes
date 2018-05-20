@@ -1,7 +1,8 @@
-<div id="comments-list" class="entry-comments">
+<div class="entry-comments">
   {% if site.repository and site.staticman.branch %}
     {% if site.data.comments[page.slug] %}
-      <div class="js-comments">
+    <!-- Start static comments -->
+      <div id="comments" class="js-comments">
         <header class="section-title">
           <h3>{% if site.data.comments[page.slug].size > 1 %}{{ site.data.comments[page.slug] | size | append: ' ' }}{% endif %}Comments</h3>
         </header>
@@ -19,6 +20,7 @@
           {% include comment.html index=index replying_to=replying_to avatar=avatar email=email name=name url=url date=date title=title message=message %}
         {% endfor %}
       </div>
+      <!-- End static comments -->
     {% endif %}
     {% include comment-form.html %}
   {% endif %}
