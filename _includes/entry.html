@@ -40,6 +40,21 @@
       <span class="byline-item"><a href="{{ post.url | relative_url }}#comments-list"><svg class="icon icon--comments-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comments-alt' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;{{ site.data.comments[post.slug] | size }} Comment{% if site.data.comments[post.slug].size > 1 %}s{% endif %}</a></span>
       {% endif %}
       </div>
+      <div id="review-count" class="entry-item text-right">
+          {% assign reviews = site.data.reviews | where:'product',page.slug %}
+          {% assign reviewCount = reviews | size %}
+          {% assign sum = 0 %}
+          {% for review in reviews %}
+            {% assign sum = sum | plus: review.review %}
+          {% endfor %}
+          <span class="byline-item text-right"><svg class="icon icon--star" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;Rating
+            {% if reviewCount > 0 %}
+              {% assign sum = sum | divided_by:reviewCount %}
+              (Average: {{ sum | round: 1 }})
+            {% endif %}
+          </span>
+          <input name="fields[product]" type="hidden" value="{{ page.slug }}" />
+        </div>
   </footer>
   <div class="entry-excerpt">
     {% if post.excerpt %}

@@ -26,7 +26,7 @@
             {% for review in reviews %}
               {% assign sum = sum | plus: review.review %}
             {% endfor %}
-            <span class="byline-item text-right"><svg class="icon icon--stopwatch" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-stopwatch' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;Rating
+            <span class="byline-item text-right"><svg class="icon icon--star" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;Rating
               {% if reviewCount > 0 %}
                 {% assign sum = sum | divided_by:reviewCount %}
                 (Average: {{ sum | round: 1 }})
