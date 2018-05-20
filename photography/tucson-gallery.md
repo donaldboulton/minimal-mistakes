@@ -17,7 +17,7 @@ adds: true
 cookies: true
 sidebar:
   - title: "Epic Care"
-    image: /assets/photography/tuscon-gallery/Epic-Cafe2.jpg
+    image: /assets/photography/tuscon-gallery/Epic-Cafe-2.jpg
     image_alt: "Epic Cafe"
     text: "Hun at 3 weaks"
   - title: "Tucson 4 ave coffee shop."
