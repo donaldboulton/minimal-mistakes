@@ -18,8 +18,8 @@
 
   <h3>Ratings
     {% if reviewCount > 0 %}
-      {% assign sum = sum | divided_by:reviewCount %}
-      (Average: {{ sum | round: 1 }})<span><output for="fields-review" name="result"></output>/5</span>
+      {% assign sum = sum | divide:reviewCount %}
+      (Average: {{ sum }})<span><output for="fields-review" name="result"></output>/5</span>
     {% endif %}
   </h3>
 </div>
