@@ -25,8 +25,8 @@ sidebar:
 category:
   - Gallerys
 header:
-  image: /assets/photography/grand-canyon-gallery/Grand-Canyon-1983.jpg
-  teaser: /assets/photography/grand-canyon-gallery/Grand-Canyon-1983.jpg
+  image: /assets/photography/grand-canyon-gallery/lifelist-grand-canyon-631.jpg
+  teaser: /assets/photography/grand-canyon-gallery/lifelist-grand-canyon-631.jpg
 locations:
   - Grand Canyon
 support: [gallery]
