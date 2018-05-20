@@ -15,18 +15,18 @@
             {% if page.read_time %}
               <span class="byline-item"><svg class="icon icon--stopwatch" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-stopwatch' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;{% capture read_time %}{% include read-time.html %}{% endcapture %}{{ read_time | strip }}</span>
             {% endif %}
+          </p>
+          <p id="review-count" class="entry-meta">
             {% if page.comments == true and site.data.comments[page.slug].size > 0 %}
               <span class="byline-item"><a href="#comments-list"><svg class="icon icon--comments-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comments-alt' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;{{ site.data.comments[page.slug] | size }} Comment{% if site.data.comments[page.slug].size > 1 %}s{% endif %}</a></span>
             {% endif %}
-          </p>
-          <p id="review-count" class="entry-item text-right">
             {% assign reviews = site.data.reviews | where:'product',page.slug %}
             {% assign reviewCount = reviews | size %}
             {% assign sum = 0 %}
             {% for review in reviews %}
               {% assign sum = sum | plus: review.review %}
             {% endfor %}
-            <span class="byline-item text-right"><svg class="icon icon--star" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;Rating
+            <span class="byline-item"><svg class="icon icon--star" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;Rating
               {% if reviewCount > 0 %}
                 {% assign sum = sum | divided_by:reviewCount %}
                 (Average: {{ sum | round: 1 }})
