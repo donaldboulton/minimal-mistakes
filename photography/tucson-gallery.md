@@ -17,7 +17,7 @@ adds: true
 cookies: true
 sidebar:
   - title: "Epic Care"
-    image: /assets/photography/tuscon-gallery/Epic Cafe 2.jpg
+    image: /assets/photography/tuscon-gallery/Epic-Cafe2.jpg
     image_alt: "Epic Cafe"
     text: "Hun at 3 weaks"
   - title: "Tucson 4 ave coffee shop."
@@ -26,8 +26,8 @@ category:
   - Gallerys
 tags: [Gallery, Tucson Az]  
 header:
-  image: /assets/photography/tucson-gallery/Epic-Cafe-1.jpg
-  teaser: /assets/photography/tucson-gallery/Epic-Cafe-1.jpg
+  image: /assets/photography/tucson-gallery/Epic-Cafe.jpg
+  teaser: /assets/photography/tucson-gallery/Epic-Cafe.jpg
 
 locations:
   - Tucson AZ
