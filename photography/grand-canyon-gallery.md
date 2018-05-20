@@ -16,8 +16,8 @@ sidenav-gallery: true
 adds: true
 cookies: true
 sidebar:
-  - title: "My Hun Kitty"
-    image: /assets/photography/grand-canyon-gallery/Grand Canyon 1983.jpg
+  - title: Grand Canyon"
+    image: /assets/photography/grand-canyon-gallery/grand-canyon-mather.jpg
     image_alt: "Grand Canyon"
     text: "Lost most all my pics of the Canyon, wish I had some from the hike to the bottom"
   - title: "Majestic"
@@ -25,8 +25,8 @@ sidebar:
 category:
   - Gallerys
 header:
-  image: /assets/photography/grand-canyon/Grand Canyon 1983.jpg
-  teaser: /assets/photography/grand-canyon/Grand Canyon 1983.jpg
+  image: /assets/photography/grand-canyon-gallery/Grand-Canyon-1983.jpg
+  teaser: /assets/photography/grand-canyon-gallery/Grand-Canyon-1983.jpg
 locations:
   - Grand Canyon
 support: [gallery]
@@ -37,4 +37,4 @@ support: [gallery]
   {% include archive-single.html %}
 {% endfor %}
 
-{% include image-gallery.html folder="/assets/photography/grand-canyon" %}
+{% include image-gallery.html folder="/assets/photography/grand-canyon-gallery" %}
