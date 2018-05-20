@@ -1,7 +1,7 @@
 ---
 layout: single
 author_profile: true
-permalink: 2018-02-26-post-Staticman-with-Gitlab.html
+permalink: /posts/2018-02-26-post-Staticman-with-Gitlab/
 read_time: true
 comments: true
 share: true
@@ -41,7 +41,7 @@ header:
 support: [adds, cookies]
 folder: _posts
 product: staticman-gitlab
-slug: staticman-gitlab
+
 ---
 
 {% include octo-arm.html %}
