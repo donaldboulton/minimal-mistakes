@@ -37,7 +37,6 @@ header:
 support: [adds, cookies]
 folder: _posts
 product: post-mobile-colorbox 
-slug: post-mobile-colorbox
 ---
 
 {% include octo-arm.html %}

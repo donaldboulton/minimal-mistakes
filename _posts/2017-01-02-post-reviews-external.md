@@ -16,7 +16,7 @@ reviews: true
 date: 2017-01-02 16:16:01 -0600
 last_modified_at: 2017-01-13T12:42:38-04:00
 
-permalink: 2017-01-02-post-reviews-external
+permalink: /posts/2017-01-02-post-reviews-external/
 image:
   cover: true
   path: &image /assets/images/pages/reviews.jpg
@@ -31,7 +31,6 @@ excerpt: "Comments Ratings, TESTING page used for Google Positioning Micro data.
 support: [places, adds, cookies]
 product: post-reviews-external
 folder: _posts
-slug: post-reviews-external
 ---
 
 {% include octo-arm.html %}

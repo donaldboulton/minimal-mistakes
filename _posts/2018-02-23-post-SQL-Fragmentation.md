@@ -1,6 +1,6 @@
 ---
 title: "SQL Fragmentation"
-permalink: 2018-02-22-post-SQL-Fragmentation.html
+permalink: /posts/2018-02-22-post-SQL-Fragmentation/
 date: 2018-02-23 16:16:01 -0900
 last_modified_at: 2018-03-01T12:42:38-04:00
 search: true

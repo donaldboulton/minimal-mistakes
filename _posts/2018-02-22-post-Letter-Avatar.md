@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Letter Avatar"
-permalink: 2018-02-22-post-Letter-Avatar.html
+permalink: /posts/2018-02-22-post-Letter-Avatar/
 date: 2018-02-22 16:16:01 -0600
 last_modified_at: 2018-02-28T12:42:38-04:00
 search: true
@@ -41,7 +41,6 @@ header:
 support: [adds, cookies]
 folder: _posts
 product: letter-avatar 
-slug: letter-avatar
 ---
 
 {% include octo-arm.html %}
@@ -280,5 +279,3 @@ footer_scripts:
 ```
 
 Then create avatar.scss and register the avatar.scss file in minimal-mistakes.scss, for width, height and rounded images.
-
-{% include links.html %}

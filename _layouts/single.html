@@ -71,10 +71,10 @@ layout: default
       {% if page.share %}{% include social-share.html %}{% endif %}
 
       {% include post_pagination.html %}
-      {% include new-window-fix.html %}
     </div>
 
     {% if page.comments %}
+      {% include comment.html %}
       {% include comments.html %}
     {% endif %}
   </article>
