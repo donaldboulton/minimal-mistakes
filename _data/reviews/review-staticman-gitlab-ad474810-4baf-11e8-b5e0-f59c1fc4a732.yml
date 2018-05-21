@@ -3,7 +3,7 @@ address: ''
 name: Donald Boulton
 title: Testing staticman v2
 product: staticman-gitlab
-date: '2018-04-29T13:17:33.813Z'
+commentDate: '2018-04-29T13:17:33.813Z'
 description:
   Making this more specific to Jekyll performance using Gulp, Grunt and a Travis
   build. Using .svg sprite sheets for icons and site specific images.
