@@ -26,19 +26,18 @@ reviews: true
 adds: true
 excerpt: "Website Tweaks in my ASP.Core2 apps. Discussions on changes to Orchard 1.10 web.config, zipping files for AWS to Cloud-front, Proper Response and Request headers 
 Including jquery-pajax"
-
 image:
   cover: true
   path: &image /assets/images/pages/performance/speedtest_donboulton.jpg
   feature: *image
   thumbnail: /assets/images/pages/performance/speedtest_donboulton-320.jpg
-
 header:
   image: /assets/images/pages/performance/speedtest_donboulton.jpg
   teaser: /assets/images/pages/performance/speedtest_donboulton-320.jpg
-
 support: [adds, cookies]  
-product: website-tweaks
+product: post-website-tweaks
+id: post-website-tweaks
+github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2018-03-27-post-Website-Tweaks.md
 ---
 
 {% include octo-arm.html %}

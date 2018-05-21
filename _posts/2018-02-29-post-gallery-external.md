@@ -44,7 +44,8 @@ header:
 support: [adds, cookies]
 folder: _posts
 product: post-gallery-external
-
+id: post-gallery-external
+github_editme_path: https://github.com/donaldboulton/DWB/blob/gh-pages/_posts/2018-02-29-post-gallery-external.md
 ---
 
 {% include page-intro.html %}

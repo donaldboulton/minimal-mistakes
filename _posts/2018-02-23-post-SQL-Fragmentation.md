@@ -41,7 +41,8 @@ header:
 support: [adds, cookies]
 folder: _posts
 product: post-sql-fragmentation
-slug: post-sql-fragmentation
+id: post-Sql-Fragmentation
+github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2018-02-23-post-SQL-Fragmentation.md
 ---
 
 {% include octo-arm.html %}

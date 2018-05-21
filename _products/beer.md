@@ -15,7 +15,6 @@ header:
   image: /assets/images/cart/beer/beer-cover.jpg
   teaser: /assets/images/cart/beer/beer-cover-320.jpg
 name: beer
-slug: beer
 sku: BEER
 product: Beer
 products: true
@@ -36,8 +35,9 @@ variants:
     price: 4.25
 price: 2.75
 folder: _products
+id: feature
+github_editme_path: donaldboulton/DWB/blob/gh-pages/_products/feature.md
 ---
-
 # Beer
 
 I like beer a lot! IPA, Guinness, Stout, craft beers... and I love to try new ones. Buy me half-a-pint to get going or a pint to get a good buzz.

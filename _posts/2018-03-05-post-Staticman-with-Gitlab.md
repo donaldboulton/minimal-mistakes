@@ -14,20 +14,15 @@ cookies: true
 title: Staticman with Gitlab
 date: 2018-03-05 16:16:01 -0600
 last_modified_at: 2018-03-06T12:42:38-04:00
-
 author: Donald Boulton
-
 tags:
   - Staticman
   - Github
   - Gitlab
-
 category:
   - Staticman
-
 toc: true
 toc_label: "Contents"
-
 excerpt: "Use Staticman push to Gitlab. The first step is to create staticman app, according to the official document operation, you can also view the repository I created."
 image:
   cover: true
@@ -37,11 +32,11 @@ image:
 header:
   image: /assets/images/pages/staticman-github-gitlab.png
   teaser: /assets/images/pages/staticman-github-gitlab-320.png
-
 support: [adds, cookies]
 folder: _posts
-product: staticman-gitlab
-
+product: post-staticman-gitlab
+id: post-staticman-gitlab
+github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2018-03-05-post-Staticman-with-Gitlab.md
 ---
 
 {% include octo-arm.html %}

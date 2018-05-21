@@ -43,8 +43,9 @@ header:
 
 support: [adds, cookies]
 folder: _posts
-product: Jekyll-Image-Gallery
-slug: Jekyll-Image-Gallery
+product: jekyll-image-gallery
+id: jekyll-image-gallery
+github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2018-05-14-post-Jekyll-Image-Gallery.mdd
 ---
 
 {% include octo-arm.html %}

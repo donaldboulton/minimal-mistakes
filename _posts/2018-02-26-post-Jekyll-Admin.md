@@ -38,7 +38,9 @@ excerpt: "Jekyll admin makes it so easy for me to add new pages, posts or any ty
 support: [adds, cookies]
 folder: _posts
 product: post-jekyll-admin
-slug: post-jekyll-admin
+id: post-jekyll-admin
+github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2018-02-26-post-Jekyll-Admin.md
+---
 ---
 
 {% include octo-arm.html %}

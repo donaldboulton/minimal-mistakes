@@ -11,29 +11,24 @@ share: true
 classes: wide
 adds: true
 cookies: true
-
 tags: 
   - Rockwell RV
   - Staticman
   - Jekyll
   - Github Pages
   - MMistakes
-
 category:
   - About
   - Credits
   - Donald Boulton
-
 image:
   cover: true
   path: &image /assets/images/pages/digital-box-compressor.jpg
   feature: *image
   thumbnail: /assets/images/pages/digital-box-compressor-320.jpg
-
 header:
   image: /assets/images/pages/digital-box-compressor.jpg
   teaser: /assets/images/pages/digital-box-compressor-320.jpg
-
 sidebar:
   - title: "Rockwell RV"
     image: /assets/images/pages/rockwell-rv-sitemap-sm.jpg
@@ -105,6 +100,8 @@ intro:
 
 support: [adds, cookies]
 folder: _pages
+id: about
+github_editme_path: donaldboulton/DWB/blob/gh-pages/_pages/about.md
 ---
 
 {% include octo-arm.html %}

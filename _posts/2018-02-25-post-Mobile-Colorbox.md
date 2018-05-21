@@ -37,6 +37,8 @@ header:
 support: [adds, cookies]
 folder: _posts
 product: post-mobile-colorbox 
+id: post-mobile-colorbox
+github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2018-02-25-post-Mobile-Colorbox.md
 ---
 
 {% include octo-arm.html %}

@@ -19,8 +19,8 @@
               <span class="byline-item"><a href="#comments-list"><svg class="icon icon--comments-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comments-alt' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;{{ site.data.comments[page.slug] | size }} Comment{% if site.data.comments[page.slug].size > 1 %}s{% endif %}</a></span>
             {% endif %}
           </p>
-          <p class="entry-meta">
-            {% assign reviews = site.data.reviews | where:'product',page.title %}
+          <p class="entry-meta text-right">
+            {% assign reviews = site.data.reviews | where:'product',page.id %}
             {% assign reviewCount = reviews | size %}
             {% assign sum = 0 %}
             {% for review in reviews %}
@@ -33,6 +33,9 @@
               {% endif %}
             </span>
           </p>
+          <input type="hidden" name="options[origin]" value="{{ page.url | relative_url }}">
+          <input type="hidden" name="options[parent]" value="{{ page.url | relative_url }}">
+          <input type="hidden" id="review-post-id" name="options[slug]" value="{{ page.slug }}">
           <input name="fields[product]" type="hidden" value="{{ page.slug }}" />
         {% endif %}
       {% endunless %}

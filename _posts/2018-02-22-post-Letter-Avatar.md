@@ -37,10 +37,10 @@ image:
 header:
   image: /assets/images/pages/letter-avatar-header-1200.png
   teaser: /assets/images/pages/letter-avatar-header-320.png        
-
 support: [adds, cookies]
-
 product: letter-avatar 
+id: post-Letter-Avatar
+github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2018-02-22-post-Letter-Avatar.md
 ---
 
 {% include octo-arm.html %}

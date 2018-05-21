@@ -7,7 +7,6 @@ layout: productdetails
 permalink: /products/feature/
 classes: product
 products: true
-product: Sponser
 support: [products, lightbox]
 sitemap: false
 author_profile: true
@@ -27,6 +26,7 @@ variants:
     price: 
 price: 150
 folder: _products
+github_editme_path: donaldboulton/DWB/blob/gh-pages/_products/feature.md
 ---
 
 # Sponser a Feature

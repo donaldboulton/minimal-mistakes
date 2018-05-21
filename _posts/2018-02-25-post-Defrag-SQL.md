@@ -37,6 +37,8 @@ header:
 support: [adds, cookies]
 folder: _posts
 product: post-defrag-sql
+id: post-defrag-sql
+github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2018-02-25-post-Defrag-SQL.md
 ---
 
 {% include octo-arm.html %}

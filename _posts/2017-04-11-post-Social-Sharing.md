@@ -40,6 +40,9 @@ header:
 support: [adds, cookies]
 folder: _posts
 product: post-social-sharing
+id: post-Social-Sharing
+github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2017-04-11-post-Social-Sharing.md
+---
 ---
 
 {% include octo-arm.html %}
@@ -103,7 +106,7 @@ Url's Model is buy url=@Model.Url on each link  and by addingdata-url="@Model.U
         <a class="btn btn-sm btn-default" data-toggle="tooltip" data-toggle="tooltip"
         data-original-title="Email Donald Boulton at Google + Page" href="mailto:don-boulton-4557@pages.plusgoogle.com" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
         <i class="fa fa-envelope"></i>
-        </a> 
+        </a>
         <a class="btn btn-sm btn-default" data-toggle="tooltip" data-count="horizontal"
                        href="https://twitter.com/intent/tweet?url=@@Model.Url&text=YOUR TEXT&via=TWITTER USERNAME"
                        class="twitter-share-button" data-original-title="Twitter Share" data-user-id="TWITTER USER ID">

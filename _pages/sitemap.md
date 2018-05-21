@@ -8,7 +8,6 @@ adds: true
 cookies: true
 reviews: true
 excerpt: "Sitemap with Post by Catagories, by Tags and by Years"
-
 image:
   cover: true
   path: &image /assets/images/pages/sitemap.png
@@ -18,8 +17,10 @@ header:
   image: /assets/images/pages/sitemap-1200.png
   teaser: /assets/images/pages/sitemap-320.png
   excerpt: "Sitemap of Posts"
-
 support: [adds, cookies]
+folder: _pages
+id: sitemap
+github_editme_path: donaldboulton/DWB/blob/gh-pages/_pages/sitemap.md
 ---
 
 {% include octo-arm.html %}

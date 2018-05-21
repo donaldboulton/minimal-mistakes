@@ -30,7 +30,9 @@ excerpt: "Comments Ratings, TESTING page used for Google Positioning Micro data.
 
 support: [places, adds, cookies]
 product: post-reviews-external
+id: post-Reviews-External
 folder: _posts
+github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2017-01-02-post-reviews-external.md
 ---
 
 {% include octo-arm.html %}

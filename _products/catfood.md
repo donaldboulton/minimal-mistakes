@@ -5,7 +5,6 @@ excerpt: "Buy my kitty some cat food."
 sitemap: false
 layout: productdetails
 permalink: /products/catfood/
-product: catfood
 products: true
 support: [lightbox, products, adds]
 adds: false
@@ -33,10 +32,11 @@ variants:
   - name: large bag
     price: 29.99
 price: 12.75
+product: catfood
+id: catfood
 folder: _products
-slug: /products/catfood/
+github_editme_path: donaldboulton/DWB/blob/gh-pages/_products/catfood.md
 ---
-
 # Cat Food
 
 Buy the kittys some cat food.

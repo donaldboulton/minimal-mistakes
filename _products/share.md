@@ -25,8 +25,9 @@ variants:
     price:
 price: 0
 folder: _products
+id: share
+github_editme_path: donaldboulton/DWB/blob/gh-pages/_products/share.md
 ---
-
 # Share on Social Media
 
 If you like this website, but you do not have any money to spare, please share the love by posting something about this website on social media. You can use the buttons below. They will share the homepage. Thank you, you are the best!

@@ -2,7 +2,7 @@ _id: ad474810-4baf-11e8-b5e0-f59c1fc4a732
 address: ''
 name: Donald Boulton
 title: Testing staticman v2
-product: staticman-gitlab
+product: post-staticman-gitlab
 commentDate: '2018-04-29T13:17:33.813Z'
 description:
   Making this more specific to Jekyll performance using Gulp, Grunt and a Travis

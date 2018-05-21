@@ -10,6 +10,8 @@ reviews: true
 cookies: true
 support: [adds, cookies]
 folder: _pages
+id: terms
+github_editme_path: donaldboulton/DWB/blob/gh-pages/_pages/terms.md
 ---
 
 {% include octo-arm.html %}
