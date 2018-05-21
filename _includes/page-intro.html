@@ -18,7 +18,7 @@
             {% if page.comments == true and site.data.comments[page.slug].size > 0 %}
               <span class="byline-item"><a href="#comments-list"><svg class="icon icon--comments-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comments-alt' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;{{ site.data.comments[page.slug] | size }} Comment{% if site.data.comments[page.slug].size > 1 %}s{% endif %}</a></span>
             {% endif %}
-            {% if page.comments %}<span class="byline-item"><a href="#comments-list"><svg class="icon icon--comments-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comments-alt' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;<a href="https://sgeos.github.io{{ page.url }}#disqus_thread">0 Comments</a>{% endif %}
+            {% if page.comments %}<span class="byline-item"><a href="#comments-list"><svg class="icon icon--comments-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comments-alt' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;<a href="https://sgeos.github.io{{ page.url }}#disqus_thread">0 Comments</a>{% endif %}</span>
           </p>
           <p class="entry-meta text-right">
             {% assign reviews = site.data.reviews | where:'product',page.slug %}
