@@ -38,7 +38,7 @@ Like many other websites, this site uses log files to help learn about when, fro
 
 All of this information is not linked to anything that is personally identifiable.
 
-## Cookies & Beacons
+# Cookies & Beacons
 
 ![Cookie](/assets/images/pages/svg/cookies.svg){:.align-left}
 
@@ -50,7 +50,7 @@ Third-party advertisers may also place and read cookies on your browser and/or u
 
 If you wish to disable cookies, you may do so through your web browser options. Instructions for doing so can be found on the specific web browsers' websites.
 
-### Cookies in EU Law
+## Cookies in EU Law
 
 * [Is the EU's cookie law confusing you too?](http://www.123-reg.co.uk/blog/security-issues/is-the-eus-cookie-law-confusing-you-too/)
 * [New EU cookie law (e-Privacy Directive)](http://www.ico.gov.uk/for_organisations/privacy_and_electronic_communications/the_guide/cookies.aspx)
@@ -84,7 +84,7 @@ Returning, New Session, Time, Custom Variable Data, Source
 
 * __utmz
 
-### Analytics Cookie Types
+## Analytics Cookie Types
 
 * __utma
 
@@ -135,11 +135,44 @@ Google Adsense, a third party affiliate marketing network, uses cookies to help 
 
 You can read: [Google Adsense Privacy Policy](http://support.google.com/adsense/bin/answer.py?hl=en&answer=48182).
 
-## Donation Policy
+# Donation Policy
 
 All Donations throught our webshop pages or paypal buttons will not be refundable, as they are a donation to a free website designer, that has limited abilitys to do money transfers back to you. Thank You for your donations to donboulton.com.
 
-## Disclosure Policy
+# Comment Policy
+
+We want you to feel at home when you post a comment on donboulton.com. We want everyone to feel at home posting comments on donboulton.com. We don’t know what your home is like, but we know how we expect people to behave when they visit ours. That’s why we reserve the right to delete comments and ban users as needed to keep the comment threads here civil and substantive.
+
+## Our No. 1 house rule is simple
+
+### Don’t be a jerk
+
+Want to be the kind of commenter we’d love to bring home to Thanksgiving dinner? Here’s what we like to see in comments:
+
+Weigh in with smart, informed ideas that contribute further to the story.
+
+Give us useful, constructive criticism. Spot a typo or an error? Let us know and we will correct it.
+
+Demonstrate and share the intelligence, wisdom, and humor we know you possess.
+
+Don’t feed the trolls. You wouldn’t dive into a debate with our ill-informed, weird uncle Gary just for the heck of it. And you definitely wouldn’t feed him. (We told you he was weird.) Downvote and flag comments instead.
+Although we can’t be everywhere at once, here are some of the kinds of comments we’re going to do our best to curtail:
+
+Promoting your own brand, product, or blog. So you’ve got a climate change solution that will simultaneously solve world poverty. Great. Send it through our contact form, you Elon Musk, you.
+
+Impersonating authors or other commenters. We can’t believe we have to say this, but: Don’t do that. It’s weird.
+
+Comments that make it clear you didn’t read the article. Enraged that we didn’t mention X in a story about Y? Slow down, Speedy McFingerson. If you’d made it past paragraph two, you’d see a very well thought-out discussion of that X you hold so dear.
+
+Comments that are completely out of left field. Sometimes discussions veer off a bit, but are still related to the original subject. That is fine. Hijacking the conversation to promote off-topic commentary is not.
+
+Threats — no matter how vague — against the author or other commenters. Things can get heated. Before you casually mention your foe’s home address, think of your Mother Earth. (Bonus points if you never use the phrase “Mother Earth.”)
+
+Racism, sexism, homophobia, you get the drift. Call us the PC Police, fine, but don’t say we didn’t warn you when you get tased. **And by tased, we mean banned or deleted. donboulton.com.org has not — and will not — ever own a taser, and even if we were to own a solar-charged taser, we’d be too scared to use it.
+
+Trolling. If you’re a climate denier just out for a good trolling and are not contributing meaningfully to the conversation, we’ll be pushing you back under the bridge.
+
+# Disclosure Policy
 
 I make money on this website through affiliate programs. If you click an affiliate link or ad banner and buy the product, you help support this website because I'll get a percentage of that sale.
 
@@ -160,6 +193,6 @@ Just like this website, my Disclosure Policy is a work in progress. As the reven
 
 All original content (e.g. articles, blog posts, illustrations, artwork, and photographs) available on donboulton.com is released under a [Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License](http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US) unless otherwise noted. Basically this means you are free to share, transmit, distribute, alter, transform, and build on my work just as long as you don't use it for commercial purposes without my prior written consent.
 
-### Attribution
+## Attribution
 
 If you're inclined to give credit --- a link back to the source article attributed to either [Made Mistakes](https://mmistakes.github.io/minimal-mistakes/terms/) or [Michael Rose](https://mademistakes.com/about/) or this website designer [Donald Boulton](https://github.com/bibwoe) or [donboulton.com](https://donaldboulton.github.io/bibwoe/) is good enough for me. If you don't want to attribute our content, hey that's cool too. Just don't go using our stuff and republishing it as your own.
