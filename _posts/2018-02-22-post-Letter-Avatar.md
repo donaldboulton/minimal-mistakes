@@ -248,7 +248,7 @@ To nothing for fallback image in gravatar links, then it falls back to
 % endif %
 ```
 
-### Add avatar.js
+## Add avatar.js
 
 Adding the modified MVC Letter Avatar.js to my /assets/js/avatar.js.
 
