@@ -10,7 +10,8 @@ reviews: true
 cookies: true
 support: [adds, cookies]
 folder: _pages
-id: terms
+product: terms
+slug: terms
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_pages/terms.md
 ---
 
@@ -162,5 +163,3 @@ All original content (e.g. articles, blog posts, illustrations, artwork, and pho
 ### Attribution
 
 If you're inclined to give credit --- a link back to the source article attributed to either [Made Mistakes](https://mmistakes.github.io/minimal-mistakes/terms/) or [Michael Rose](https://mademistakes.com/about/) or this website designer [Donald Boulton](https://github.com/bibwoe) or [donboulton.com](https://donaldboulton.github.io/bibwoe/) is good enough for me. If you don't want to attribute our content, hey that's cool too. Just don't go using our stuff and republishing it as your own.
-
-{% include links.html %}

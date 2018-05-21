@@ -1,7 +1,7 @@
 ---
 layout: single
 author_profile: true
-permalink: /posts/2018-02-26-post-Staticman-with-Gitlab/
+permalink: 2018-02-26-post-Staticman-with-Gitlab.html
 read_time: true
 comments: true
 share: true
@@ -34,8 +34,8 @@ header:
   teaser: /assets/images/pages/staticman-github-gitlab-320.png
 support: [adds, cookies]
 folder: _posts
-product: post-staticman-gitlab
-id: post-staticman-gitlab
+product: staticman-gitlab
+slug: staticman-gitlab
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2018-03-05-post-Staticman-with-Gitlab.md
 ---
 

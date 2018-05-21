@@ -43,11 +43,12 @@ header:
 
 support: [adds, cookies]
 folder: _posts
-product: post-gallery-external
-id: post-gallery-external
+product: gallery-external
+slug: gallery-external
 github_editme_path: https://github.com/donaldboulton/DWB/blob/gh-pages/_posts/2018-02-29-post-gallery-external.md
 ---
 
+{% include octo-arm.html %}
 {% include page-intro.html %}
 
 # Picture Gallery

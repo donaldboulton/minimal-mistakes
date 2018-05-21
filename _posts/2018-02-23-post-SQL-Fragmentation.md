@@ -1,6 +1,6 @@
 ---
 title: "SQL Fragmentation"
-permalink: /posts/2018-02-22-post-SQL-Fragmentation/
+permalink: 2018-02-22-post-SQL-Fragmentation.html
 date: 2018-02-23 16:16:01 -0900
 last_modified_at: 2018-03-01T12:42:38-04:00
 search: true
@@ -40,8 +40,8 @@ header:
 
 support: [adds, cookies]
 folder: _posts
-product: post-sql-fragmentation
-id: post-Sql-Fragmentation
+product: sql-fragmentation
+slug: sql-fragmentation
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2018-02-23-post-SQL-Fragmentation.md
 ---
 

@@ -32,6 +32,8 @@ support: [places, adds, cookies]
 product: post-reviews-external
 id: post-Reviews-External
 folder: _posts
+product: reviews-external
+slug: reviews-external
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2017-01-02-post-reviews-external.md
 ---
 
@@ -52,4 +54,3 @@ Working on single page reviews that when totaled together give a ratings for eac
 Google Reviews for where I live.
 
 {% include google-reviews.html %}
-{% include links.html %}

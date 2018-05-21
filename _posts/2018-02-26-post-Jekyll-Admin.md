@@ -1,6 +1,6 @@
 ---
 layout: single
-permalink: /posts/2018-02-26-post-Jekyll-Admin/
+permalink: 2018-02-26-post-Jekyll-Admin.html
 author_profile: true
 read_time: true
 comments: true
@@ -37,10 +37,9 @@ excerpt: "Jekyll admin makes it so easy for me to add new pages, posts or any ty
 
 support: [adds, cookies]
 folder: _posts
-product: post-jekyll-admin
-id: post-jekyll-admin
+product: jekyll-admin
+slug: jekyll-admin
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2018-02-26-post-Jekyll-Admin.md
----
 ---
 
 {% include octo-arm.html %}
@@ -514,5 +513,3 @@ Commit the local changes.
 
 POST /git/push
 Push changes to the remote and branch.
-
-{% include links.html %}

@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Social Sharing"
-permalink: /posts/2017-04-11-post-Social-Sharing/
+permalink: 2017-04-11-post-Social-Sharing.html
 date: 2017-04-11 16:16:01 -0600
 last_modified_at: 2017-04-28T12:42:38-04:00
 search: true
@@ -39,8 +39,8 @@ header:
 
 support: [adds, cookies]
 folder: _posts
-product: post-social-sharing
-id: post-Social-Sharing
+product: social-sharing
+slug: social-sharing
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2017-04-11-post-Social-Sharing.md
 ---
 
@@ -194,5 +194,3 @@ Some sites may prefer to embed the unobtrusive Web Intents pop-up Javascript inl
     }());
     </script>
 ```
-
-{% include links.html %}

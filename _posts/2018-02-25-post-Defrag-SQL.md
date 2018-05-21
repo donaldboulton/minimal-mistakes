@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Defrag SQL"
-permalink: /posts/2018-02-25-post-Defrag-SQL/
+permalink: 2018-02-25-post-Defrag-SQL.html
 date: 2018-02-25 16:16:01 -0600
 last_modified_at: 2018-03-01T12:42:38-04:00
 search: true
@@ -36,8 +36,8 @@ header:
 
 support: [adds, cookies]
 folder: _posts
-product: post-defrag-sql
-id: post-defrag-sql
+product: defrag-sql
+slug: defrag-sql
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2018-02-25-post-Defrag-SQL.md
 ---
 
@@ -354,5 +354,3 @@ DBCC INDEXDEFRAG cannot be used to defragment the following indexes:
 * A spatial index.
 
 DBCC INDEXDEFRAG is not supported for use on system tables.
-
-{% include links.html %}

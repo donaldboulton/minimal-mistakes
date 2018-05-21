@@ -19,7 +19,8 @@ header:
   excerpt: "Sitemap of Posts"
 support: [adds, cookies]
 folder: _pages
-id: sitemap
+product: sitemap
+slug: sitemap
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_pages/sitemap.md
 ---
 

@@ -100,7 +100,8 @@ intro:
 
 support: [adds, cookies]
 folder: _pages
-id: about
+slug: about
+product: about
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_pages/about.md
 ---
 
@@ -129,9 +130,5 @@ Ruby, Jeckyll, Gihub pages, and even liquid are super simple; Or "Super Logical,
 Links to CloudFlare this Github repo, Staticman Comments, MMistakes Framework Designer Michael Rose.
 
 {% include feature_row id="intro" type="center" %}
-
 {% include feature_row %}
-
 {% include github.html %}
-
-{% include links.html %}

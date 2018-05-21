@@ -20,7 +20,7 @@ teaser                   : "/assets/images/pages/digital_box_1400-compressor.jpg
 breadcrumbs              : true
 words_per_minute         : 200
 comments:
-  provider               : "staticman_v2" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
+  provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
   disqus:
     shortname            : "donald-boulton"
   discourse:
@@ -44,7 +44,7 @@ siteleaf:
   api-key                : "598283c4e4db7bcdc42a367c732e22bb"
   api-secret             : "DD9rRDh9UGZFrUZWEwvhtMDOyiRCM99pmq0mjfKaUb5Yzkr8U/6mTNyv9AXa2yKqkYnNYG9uwhl1LZZeDxs8YUon4QmZ9i89qsZ9EaA0+T8sC+5Yn6+fJcMX2DYt6pfybacXbJN/OR3UJVIfIM6TBhMz1/JyNme9DPMdnq3GG4w="
 
-github_editme_path       : donaldboulton/DWB/blob/gh-pages
+github_editme_path       : donaldboulton/DWB/blob/gh-pages/
 
 algolia:
   application_id         : "G34JUR3EB9"
