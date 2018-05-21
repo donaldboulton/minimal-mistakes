@@ -39,9 +39,8 @@ header:
   teaser: /assets/images/pages/letter-avatar-header-320.png        
 
 support: [adds, cookies]
-folder: _posts
+
 product: post-letter-avatar 
-slug: post-letter-avatar
 ---
 
 {% include octo-arm.html %}
