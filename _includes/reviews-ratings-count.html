@@ -9,7 +9,7 @@
   </svg> Page Rating</h3>
   </header>
 <div id="reviews" class="js-comments product-reviews">
-  {% assign reviews = site.data.reviews | where:'product',page.slug %}
+  {% assign reviews = site.data.reviews | where:'product',page.id %}
   {% assign reviewCount = reviews | size %}
   {% assign sum = 0 %}
   {% for review in reviews %}
@@ -23,5 +23,5 @@
     {% endif %}
   </h3>
 </div>
-  <input name="fields[product]" type="hidden" value="{{ page.slug }}" />
+  <input name="fields[product]" type="hidden" value="{{ page.id }}" />
 </article>
