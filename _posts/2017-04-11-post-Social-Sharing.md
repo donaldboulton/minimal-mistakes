@@ -43,7 +43,6 @@ product: post-social-sharing
 id: post-Social-Sharing
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2017-04-11-post-Social-Sharing.md
 ---
----
 
 {% include octo-arm.html %}
 

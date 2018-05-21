@@ -48,6 +48,10 @@ image:
 header:
   image: /assets/photography/cat-gallery/einstine-1200.jpg
   teaser: /assets/photography/cat-gallery/einstine-th.jpg"
+folder: photography
+product: gallerys
+id: gallerys
+github_editme_path: donaldboulton/DWB/blob/gh-pages/photography/index.html
 ---
 
 {% if include.id %}
@@ -63,6 +67,10 @@ header:
 {% else %}
   {% assign gallery_layout = '' %}
 {% endif %}
+
+{% include octo-arm.html %}
+
+{% include page-intro.html %}
 
 <p>Below are my Kitty Cat and Travels gallerys.</p>
 <p>Cat Gallerys are broken into my house cats, past cats and stray cats. All Gallerys are built with <a https://isotope.metafizzy.co/> Isotope</a> and displayed with <a target="blank" http://sachinchoolur.github.io/lightGallery/>Light Gallery</a>.</p>
