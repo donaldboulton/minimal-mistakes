@@ -20,7 +20,7 @@
             {% endif %}
           </p>
           <p class="entry-meta">
-            {% assign reviews = site.data.reviews | where:'products',page.slug %}
+            {% assign reviews = site.data.reviews | where:'product',page.slug %}
             {% assign reviewCount = reviews | size %}
             {% assign sum = 0 %}
             {% for review in reviews %}
