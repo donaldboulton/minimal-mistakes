@@ -17,7 +17,7 @@
       <li><a rel="me" href="https://gitlab.com/{{ site.author.gitlab }}" target="_blank"><svg class="icon icon--gitlab icon-footer fa-gitlab" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-gitlab' | prepend: 'assets/icons/' | relative_url }}"></use></svg> Gitlab</a></li>
     {% endif %}
     <li><a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | absolute_url }}{% endif %}"> <svg class="icon icon--rss icon-footer fa-rss" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-rss' | prepend: 'assets/icons/' | relative_url }}"></use></svg> {{ site.data.ui-text[site.locale].feed_label | default: "Feed" }}</a></li>
-  </ul>
+  </ul><svg class="icon icon--power-off fa-power-off" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-power-off' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;
   {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }} <a href="https://jekyllrb.com" rel="nofollow"><img src="/assets/images/red-flask.png" alt="CloudFlare logo" class="icon icon-footer icon--red-flask" onclick="window.open('https://jekyllrb.com');">Jekyll</a>&amp;&nbsp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">
     <svg class="icon icon-footer icon--mmistakes" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
     viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
