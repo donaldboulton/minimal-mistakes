@@ -11,6 +11,7 @@
 <script src="{{ '/assets/js/main.min.js' | relative_url }}"></script>
 {% endif %}
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script async src="https://www.google.com/recaptcha/api.js"></script>
 {% if site.search == true or page.layout == "search" %}
   {%- assign search_provider = site.search_provider | default: "lunr" -%}
   {%- case search_provider -%}
