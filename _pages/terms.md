@@ -25,7 +25,7 @@ This Privacy Policy outlines the types of personal information that is received 
 
 First and foremost, I will never share your email address or any other personal information to anyone without your direct consent.
 
-# Log Files
+## Log Files
 
 Like many other websites, this site uses log files to help learn about when, from where, and how often traffic flows to this site. The information in these log files include:
 
@@ -38,7 +38,7 @@ Like many other websites, this site uses log files to help learn about when, fro
 
 All of this information is not linked to anything that is personally identifiable.
 
-# Cookies & Beacons
+## Cookies & Beacons
 
 ![Cookie](/assets/images/pages/svg/cookies.svg){:.align-left}
 
@@ -50,7 +50,7 @@ Third-party advertisers may also place and read cookies on your browser and/or u
 
 If you wish to disable cookies, you may do so through your web browser options. Instructions for doing so can be found on the specific web browsers' websites.
 
-## Cookies in EU Law
+### Cookies in EU Law
 
 * [Is the EU's cookie law confusing you too?](http://www.123-reg.co.uk/blog/security-issues/is-the-eus-cookie-law-confusing-you-too/)
 * [New EU cookie law (e-Privacy Directive)](http://www.ico.gov.uk/for_organisations/privacy_and_electronic_communications/the_guide/cookies.aspx)
@@ -84,7 +84,7 @@ Returning, New Session, Time, Custom Variable Data, Source
 
 * __utmz
 
-## Analytics Cookie Types
+### Analytics Cookie Types
 
 * __utma
 
@@ -135,15 +135,15 @@ Google Adsense, a third party affiliate marketing network, uses cookies to help 
 
 You can read: [Google Adsense Privacy Policy](http://support.google.com/adsense/bin/answer.py?hl=en&answer=48182).
 
-# Donation Policy
+## Donation Policy
 
 All Donations throught our webshop pages or paypal buttons will not be refundable, as they are a donation to a free website designer, that has limited abilitys to do money transfers back to you. Thank You for your donations to donboulton.com.
 
-# Comment Policy
+## Comment Policy
 
 We want you to feel at home when you post a comment on donboulton.com. We want everyone to feel at home posting comments on donboulton.com. We don’t know what your home is like, but we know how we expect people to behave when they visit ours. That’s why we reserve the right to delete comments and ban users as needed to keep the comment threads here civil and substantive.
 
-## Our No. 1 house rule is simple
+### 1 house rule is simple
 
 ### Don’t be a jerk
 
@@ -172,7 +172,7 @@ Racism, sexism, homophobia, you get the drift. Call us the PC Police, fine, but 
 
 Trolling. If you’re a climate denier just out for a good trolling and are not contributing meaningfully to the conversation, we’ll be pushing you back under the bridge.
 
-# Disclosure Policy
+## Disclosure Policy
 
 I make money on this website through affiliate programs. If you click an affiliate link or ad banner and buy the product, you help support this website because I'll get a percentage of that sale.
 
