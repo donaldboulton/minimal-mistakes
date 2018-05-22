@@ -34,7 +34,7 @@
               {% if reviewCount > 0 %}
                 {% assign sum = sum | divided_by:reviewCount %}
                 (&nbsp;Average:&nbsp;<span>{{ sum | round: 1 }}&nbsp;</span>)
-                <meta class="hidden" itemprop="ratingValue" content="{{ reviewAverage }}">
+                <meta class="hidden" itemprop="ratingValue" content="{{ reviewData.review }}">
               {% endif %}
             </span>
           </p>

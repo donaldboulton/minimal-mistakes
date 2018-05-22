@@ -14,17 +14,21 @@
         <label class="sr-only" for="review-form[name]">Your name</label>
         <input type="text" id="review-form[name]" name="fields[name]" placeholder="Your Name *"/>
       </div>
+      <div class="form-group">
+        <label class="sr-only" for="review-form[email]">Your email</label>
+        <input type="email" id="review-form[email]" name="fields[email]" placeholder="Your Email *"/>
+      </div>
       <div class="form-group hidden" style="display: none">
         <label class="sr-only" for="review-form[address]">Address</label>
         <input type="text" id="review-form[address]" name="fields[address]"/>
       </div>
       <div class="form-group">
-        <label class="sr-only" for="review-form[title]">review title</label>
+        <label class="sr-only" for="review-form[title]">Review Title</label>
         <input type="text" id="review-form[title]" name="fields[title]" placeholder="Review Title *"/>
       </div>
       <div class="form-group">
-        <label for="review-form[description]">200 chars Markdown *</label>
-        <textarea maxlength="200" name="fields[description]" type="text" rows= "3" id="review-form[description]" placeholder="Message *"></textarea>
+        <label for="review-form[description]">Markdown *</label>
+        <textarea maxlength="200" name="fields[description]" type="text" rows= "3" id="review-form[description]" placeholder="200 chars Message *"></textarea>
       </div>
       <div class="form-group" style="display: none;">
         <input type="hidden" name="options[origin]" value="{{ page.url | relative_url }}">

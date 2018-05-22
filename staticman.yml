@@ -112,13 +112,13 @@ comments:
 
 reviews:
   provider: "staticman_v2"
-  allowedFields: ['name', 'title', 'description', 'review', 'product']
+  allowedFields: ['name', "email", 'title', 'description', 'review', 'product']
   allowedOrigins: ["https://donboulton.com"]
   branch: "gh-pages"
   commitMessage: "Add Review from {fields.name}"
   filename: "review-{fields.product}-{@id}"
   moderation: false
-  requiredFields: ['name', 'title', 'description', 'review', "product"]
+  requiredFields: ['name', "email", 'title', 'description', 'review', "product"]
   format: "yaml"
   path: "_data/reviews"
 
