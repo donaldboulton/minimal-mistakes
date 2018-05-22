@@ -26,7 +26,6 @@
         <label class="sr-only" for="review-form[description]">Your review. Markdown is allowed.</label>
         <textarea  name="fields[description]" type="text" rows= "3" id="review-form[description]" placeholder="Message *"></textarea>
       </div>
-      <div class="g-recaptcha" data-theme="dark" data-tabindex="5" data-sitekey="{{ site.reCaptcha.siteKey }}"></div>
       <div class="form-group" style="display: none;">
         <input type="hidden" name="options[origin]" value="{{ page.url | relative_url }}">
         <input type="hidden" name="options[parent]" value="{{ page.url | relative_url }}">
@@ -45,6 +44,9 @@
           <button class="btn btn--primary">
             Submit
           </button>
+          <button class="g-recaptcha btn btn--primary" data-sitekey="6LcyvVoUAAAAANKPJnD7Mjkr3GPHoeyj5L_urdqQ" data-callback="Submit">
+            Submit
+           </button>
         </div>
   </form>
 </div>
