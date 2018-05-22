@@ -66,6 +66,7 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
     ga('require', 'GTM-T2NFHJ');
     ga('send', 'pageview');
     </script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <!-- For all browsers -->
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 <!--[if lte IE 9]>
@@ -96,9 +97,9 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
 {% if page.support contains 'gallery' %}
    <link rel="stylesheet" href="{{ '/assets/dist/css/lightgallery.min.css' | relative_url }}">
 {% endif %}
-{% if page.support contains 'places' %}  
+{% if page.support contains 'places' %}
    <link rel="stylesheet" href="{{ '/assets/css/vendor/google-places/google-places.css' | relative_url }}">
 {% endif %}
-{% if page.support contains 'products' %}  
+{% if page.support contains 'products' %}
    <link rel="stylesheet" href="{{ '/assets/css/vendor/snipcart/snipcart.min.css' | relative_url }}">
 {% endif %}
