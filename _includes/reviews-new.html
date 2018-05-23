@@ -45,11 +45,14 @@
       </p>
       <!-- End comment form alert messaging -->
       <div class="form-group">
-          <button class="g-recaptcha btn btn--primary" data-sitekey="6LcyvVoUAAAAANKPJnD7Mjkr3GPHoeyj5L_urdqQ" data-callback="Submit">
+          <button class="g-recaptcha btn btn--primary" data-sitekey="6LcyvVoUAAAAANKPJnD7Mjkr3GPHoeyj5L_urdqQ" data-callback="Submit" onclick="confirmFunction()">
             Submit
            </button>
         </div>
   </form>
+  <script>
+    function myFunction() {
+        alert("Your Review, Has been submitted! Your review will show after moderation");
+    }
+    </script>
 </div>
-
-{% include better-forms.html %}

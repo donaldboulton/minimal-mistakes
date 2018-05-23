@@ -33,6 +33,27 @@ comments:
 reviews:
   provider               : "staticman_v2"
 
+webmentions:
+  username: donboulton.com
+  cache_folder: _data/webmentions
+  cache_bad_uris_for: 5
+  pause_lookups: false
+  collections:
+    - notes
+  templates:
+    count: _includes/webmentions/count.html
+    likes: _includes/webmentions/likes.html
+    reposts: _includes/webmentions/reposts.html
+    webmentions: _includes/webmentions/webmentions.html
+  js: false
+  legacy_domains:
+    - http://donboulton.com
+  throttle_lookups:
+    last_week: daily
+    last_month: daily
+    last_year: weekly
+    older: every 2 weeks
+
 atom_feed:
   path                   : # blank (default) uses feed.xml
 search                   : true
