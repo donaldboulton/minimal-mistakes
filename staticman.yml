@@ -112,7 +112,7 @@ comments:
 
 reviews:
   provider: "staticman_v2"
-  allowedFields: ['name', "email", 'title', 'description', 'review', 'product']
+  allowedFields: ['name', "email", "url", 'title', 'description', 'review', 'product']
   allowedOrigins: ["https://donboulton.com"]
   branch: "gh-pages"
   commitMessage: "Add Review from {fields.name}"
