@@ -27,7 +27,7 @@
         <input type="text" id="review-form[title]" name="fields[title]" placeholder="Review Title *"/>
       </div>
       <div class="form-group">
-        <label for="review-form[description]">Markdown Ok</label>
+        <label for="review-form[description]"><small>(<a href="https://kramdown.gettalong.org/quickref.html">Markdown</a> ok)</small></label>
         <textarea maxlength="200" name="fields[description]" type="text" rows= "3" id="review-form[description]" placeholder="Message * 200 chars"></textarea>
       </div>
       <div class="form-group" style="display: none;">
@@ -38,6 +38,8 @@
         <input name="options[redirect]" type="hidden" value="{{site.url}}{{site.baseurl}}{{ page.url }}" />
         <label for="review-form-address">Leave blank if you are a human</label>
         <input type="text" id="review-form-address" name="fields[hidden]" autocomplete="off">
+        <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.reCaptcha.siteKey }}">
+        <input type="hidden" name="options[reCaptcha][secret]" value="{{ site.reCaptcha.secret }}">
       </div>
       <!-- Start comment form alert messaging -->
       <p class="hidden js-notice">
