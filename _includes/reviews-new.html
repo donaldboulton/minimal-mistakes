@@ -47,7 +47,10 @@
       </p>
       <!-- End comment form alert messaging -->
       <div class="form-group">
-          <button type="submit" id="review-form-submit" class="g-recaptcha btn btn--primary" data-sitekey="6LcyvVoUAAAAANKPJnD7Mjkr3GPHoeyj5L_urdqQ" data-callback="Submit">
+          <div class="g-recaptcha" data-theme="dark" data-tabindex="5" data-sitekey="{{ site.reCaptcha.siteKey }}"></div>
+      </div>
+      <div class="form-group">
+          <button type="submit" id="review-form-submit" class="g-recaptcha btn btn--primary">
             Submit
            </button>
         </div>

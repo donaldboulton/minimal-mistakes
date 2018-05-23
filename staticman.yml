@@ -107,8 +107,8 @@ comments:
   # Register your domain at https://www.google.com/recaptcha/ and choose reCAPTCHA V2
   reCaptcha:
     enabled: true
-    siteKey: "6LcyvVoUAAAAANKPJnD7Mjkr3GPHoeyj5L_urdqQ"
-    secret: "hKlIUBP1WwLwxAdJkvbFT7xMfPYBgJwk83rPLQSZrQQy/bIkGvtHzWBT84OA4gNP7YIBNZu16vZnGXrW7C5UfW5bGfq5EkmKTGsgdlW0lpIypYIk6r2d966GkqQkxpW7rjxF7g7mZeTcDasnl0U/9Q0aT7cP5/AmP3uY1z0eeow="
+    siteKey: "6LerR1MUAAAAACWH7t30s7V4aApQZaIVVPcvH21X"
+    secret: "l3E2ulfQvk8keC9/tf0O6Znp5pcETtoOK/QIs+cPR5XcyK9yXPY8lXw6uN0HIbpeC4hy0zmSpmpjTzdTSXvlYsvkLMvmg+xQMK9EgL1apg2+z8wveyJbA+CMxpr+xHr7+1uvxW6WirdfcTcYBh3JwEiPLxykdlBc2MJx1EaHHCI="
 
 reviews:
   provider: "staticman_v2"
@@ -129,5 +129,5 @@ reviews:
         format: "iso8601"
   reCaptcha:
     enabled: true
-    siteKey: "6LcyvVoUAAAAANKPJnD7Mjkr3GPHoeyj5L_urdqQ"
-    secret: "hKlIUBP1WwLwxAdJkvbFT7xMfPYBgJwk83rPLQSZrQQy/bIkGvtHzWBT84OA4gNP7YIBNZu16vZnGXrW7C5UfW5bGfq5EkmKTGsgdlW0lpIypYIk6r2d966GkqQkxpW7rjxF7g7mZeTcDasnl0U/9Q0aT7cP5/AmP3uY1z0eeow="
+    siteKey: "6LerR1MUAAAAACWH7t30s7V4aApQZaIVVPcvH21X"
+    secret: "l3E2ulfQvk8keC9/tf0O6Znp5pcETtoOK/QIs+cPR5XcyK9yXPY8lXw6uN0HIbpeC4hy0zmSpmpjTzdTSXvlYsvkLMvmg+xQMK9EgL1apg2+z8wveyJbA+CMxpr+xHr7+1uvxW6WirdfcTcYBh3JwEiPLxykdlBc2MJx1EaHHCI="
