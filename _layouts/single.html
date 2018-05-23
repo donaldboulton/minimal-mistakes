@@ -46,7 +46,6 @@ layout: default
                {% include sidenav.html %}
             {% endif %}
             {% if page.reviews %}
-               {% include reviews-new.html %}
                {% include reviews.html %}
             {% endif %}
             {% if page.adds %}
@@ -72,7 +71,9 @@ layout: default
 
       {% include post_pagination.html %}
     </div>
-
+    {% if page.reviews %}
+      {% include reviews-new-page.html %}
+    {% endif %}
     {% if page.comments %}
       {% include comments.html %}
     {% endif %}
