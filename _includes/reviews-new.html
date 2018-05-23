@@ -27,7 +27,7 @@
         <input type="text" id="review-form[title]" name="fields[title]" placeholder="Review Title *"/>
       </div>
       <div class="form-group">
-        <label for="review-form[description]"><small>(<a href="https://kramdown.gettalong.org/quickref.html">Markdown</a> ok)</small></label>
+        <label for="review-form[description]"><small>(<a href="https://kramdown.gettalong.org/quickref.html">Markdown</a> is ok!)</small></label>
         <textarea maxlength="200" name="fields[description]" type="text" rows= "3" id="review-form[description]" placeholder="Message * 200 chars"></textarea>
       </div>
       <div class="form-group" style="display: none;">
@@ -38,7 +38,7 @@
         <input name="options[redirect]" type="hidden" value="{{site.url}}{{site.baseurl}}{{ page.url }}" />
         <label for="review-form-address">Leave blank if you are a human</label>
         <input type="text" id="review-form-address" name="fields[hidden]" autocomplete="off">
-        <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.reCaptcha.siteKey }}">
+        <input type="hidden" name="options[reCaptcha][siteKey]" value="6LerR1MUAAAAACWH7t30s7V4aApQZaIVVPcvH21X">
         <input type="hidden" name="options[reCaptcha][secret]" value="{{ site.reCaptcha.secret }}">
       </div>
       <!-- Start comment form alert messaging -->
@@ -47,10 +47,10 @@
       </p>
       <!-- End comment form alert messaging -->
       <div class="form-group">
-          <div class="g-recaptcha" data-theme="dark" data-tabindex="5" data-sitekey="{{ site.reCaptcha.siteKey }}"></div>
+          <div class="g-recaptcha" data-theme="dark" data-tabindex="5" data-sitekey="6LerR1MUAAAAACWH7t30s7V4aApQZaIVVPcvH21X"></div>
       </div>
       <div class="form-group">
-          <button type="submit" id="review-form-submit" class="g-recaptcha btn btn--primary">
+          <button type="submit" id="review-form-submit" class="btn btn--primary">
             Submit
            </button>
         </div>
