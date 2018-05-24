@@ -585,10 +585,7 @@
   margin-bottom: 1.5em;
   padding: .5rem;
   white-space: pre-wrap;
-  display: -webkit-flex;
-  -webkit-flex-wrap: wrap;
-  display: flex;
-  flex-wrap: wrap;
+  word-wrap: break-word;
 
   .nav__title1 {
     color: #fff;
