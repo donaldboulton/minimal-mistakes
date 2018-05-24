@@ -120,7 +120,7 @@ reviews:
   moderation: false
   requiredFields: ['name', "email", 'title', 'description', 'review', "product"]
   format: "yaml"
-  path: "_data/reviews"
+  path: "_data/reviews/{options.slug}"
 
   generatedFields:
     date:
