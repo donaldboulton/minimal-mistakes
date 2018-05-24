@@ -31,10 +31,10 @@
 					</div>
 				</div>
         <div class="form-group" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <div class="avatar">
-            <img itemprop="image" avatar="{{ reviewData.name }}" alt="{{ reviewData.name }}" class="review-image" />
+          <div class="review-avatar">
+            <img itemprop="image" avatar="{{ reviewData.name }}" alt="{{ reviewData.name }}" class="review-avatar-image" />
           </div>
-					By:&nbsp;<span itemprop="name">{{ reviewData.name }}</span>
+					By:&nbsp;<span itemprop="name" class="review-author-name">{{ reviewData.name }}</span>
         </div>
         <div class="form-group">
             <span>Url:&nbsp;<small> {{ reviewData.url }} </small></span>
