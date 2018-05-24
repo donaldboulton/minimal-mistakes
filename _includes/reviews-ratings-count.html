@@ -8,7 +8,7 @@
       </g>
   </svg> Page Rating</h3>
   </header>
-<div id="reviews" class="js-comments product-reviews">
+<div id="reviews" class="js-reviews product-reviews">
   {% assign reviews = site.data.reviews | where:'product',page.id %}
   {% assign reviewCount = reviews | size %}
   {% assign sum = 0 %}

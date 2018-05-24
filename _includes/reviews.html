@@ -1,4 +1,4 @@
-<div id="reviews" class="js-comments">
+<div id="reviews" class="js-reviews">
   {% if page.reviews == true and site.data.reviews | where:'product',page.slug.size > 1 %}
   {% assign reviews = site.data.reviews | where:'product',page.slug %}
 	{% assign reviews = site.data.reviews | sort %}
