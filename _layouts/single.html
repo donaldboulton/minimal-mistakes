@@ -71,6 +71,9 @@ layout: default
 
       {% include post_pagination.html %}
     </div>
+    {% if page.reviews %}
+      {% include reviews-new-page.html %}
+    {% endif %}
     {% if page.comments %}
       {% include comments.html %}
     {% endif %}
