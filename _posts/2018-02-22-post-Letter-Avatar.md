@@ -201,7 +201,7 @@ Super simple and added to my reviews [reviews.html](https://github.com/donaldbou
 
 Added to my reviews layout with just a link to avatar="" + reviewData.name, or if your using comments its commentsData.name
 
-```html
+```javascript
 <div itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img itemprop="image" avatar="{{ reviewData.name }}" alt="{{ reviewData.name }}" class="review-avatar-image text-left" />
     &nbsp;<span itemprop="name">{{ reviewData.name }}</span>
@@ -210,19 +210,19 @@ Added to my reviews layout with just a link to avatar="" + reviewData.name, or i
 
 ## Add letter-avatar.js
 
-Adding the modified MVC letter-avatar.js to my /assets/js/vendor/letter-avatar/letter-avatar.js.
+Adding the modified MVC [letter-avatar.js](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/assets/js/vendor/letter-avatar/letter-avatar.js) to my /assets/js/vendor/letter-avatar/letter-avatar.js.
 
 Link to it in scripts.html
 
-```html
+```javascript
 <script src="{{ '/assets/js/vendor/letter-avatar/letter-avatar.js' | absolute_url }}"></script>
 ```
 
-Or in a mardown page as.
+Or in a mardown frontmatter as.
 
 ```html
 footer:
-  - /assets/js/avatar.js
+  - /assets/js/vendor/letter-avatar/letter-avatar.js
 ```
 
 ### Adding Scripts Site wide in _config.yaml
