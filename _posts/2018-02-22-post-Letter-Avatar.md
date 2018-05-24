@@ -3,7 +3,7 @@ layout: single
 title: "Letter Avatar"
 permalink: 2018-02-22-post-Letter-Avatar.html
 date: 2018-02-22 16:16:01 -0600
-last_modified_at: 2018-02-28T12:42:38-04:00
+last_modified_at: 2018-05-23T12:42:38-04:00
 search: true
 author: Donald Boulton
 author_profile: true
@@ -15,7 +15,7 @@ tags:
   - Gravatar
   - Letter Avatar
   - Staticman
-  - MMistakes
+  - Jekyll
 category:
   - Programing
 locations:
@@ -101,6 +101,8 @@ context.fillText(initials, canvasCssWidth / 2, canvasCssHeight / 1.5);
 
 ## MVC Implimentation
 
+I Still Use Asp.Net Core2 for Mansbooks and use letter avatar with the MVC changes.
+
 ### Image tag changes for MVC
 
 ```html
@@ -153,7 +155,7 @@ context.fillText(initials, canvasCssWidth / 2, canvasCssHeight / 1.5);
             canvas = null;
 
             return dataURI;
-        },
+        }
 
         LetterAvatar.transform = function () {
 
@@ -193,69 +195,27 @@ context.fillText(initials, canvasCssWidth / 2, canvasCssHeight / 1.5);
     })(window, document);
 ```
 
-## Liquid Conversion
+## Jekyll Liquid Conversion
 
-Lets take a look a Minimal Mistakes post on Staticman Comments, at [Improving Jekyll Staticman Comments](https://mademistakes.com/articles/improving-jekyll-static-comments/)
+Super simple and added to my reviews [reviews.html](https://github.com/donaldboulton/DWB/blob/gh-pages/_includes/reviews.html)
 
-The comments include form in: _includes/comment.html, line 8
-
-```html
-<img src="/assets/images/avatar-60.png" srcset="/assets/images/avatar-120.png 2x" alt="{{ include.name | escape }}">
-```
-
-### Image changes
-
-Modifying the Image link From:
+Added to my reviews layout with just a link to avatar="" + reviewData.name, or if your using comments its commentsData.name
 
 ```html
-<img src="/assets/images/avatar-60.png" srcset="/assets/images/avatar-120.png 2x;
+<div itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img itemprop="image" avatar="{{ reviewData.name }}" alt="{{ reviewData.name }}" class="review-avatar-image text-left" />
+    &nbsp;<span itemprop="name">{{ reviewData.name }}</span>
+</div>
 ```
 
-Changed To: Letter Avatar
+## Add letter-avatar.js
 
-Removed src="..." and srcset="..."
-
-Added
-
-```html
-avatar="include.name | escape" class="avatar" alt="include.name | escape"
-```
-
-Then the link to the Gravatar image you have to change for yur own genertic image, or Letter Avatar generated.
-
-As discribed at [Stack Overflow](https://stackoverflow.com/questions/2683803/gravatar-is-there-a-default-image)
-
-I will Change Line 6
-
-```html
-<img src="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=60" srcset="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=120 2x" alt="{{ include.name | escape }}">
-```
-
-From:
-
-```html
-?d=mm&s=60
-and also
-?d=mm&s=120 2x
-```
-
-To nothing for fallback image in gravatar links, then it falls back to
-
-```html
-    <img src="https://www.gravatar.com/avatar/{{ include.email }}?d=avatar" srcset="https://www.gravatar.com/avatar/{{ include.email }}?d=avatar=120 2x" alt="{{ include.name | escape }}">
-% else %
-    <img class="avatar" avatar="{{ include.name | escape }}" alt="{{ include.name | escape }}" />
-% endif %
-```
-
-## Add avatar.js
-
-Adding the modified MVC Letter Avatar.js to my /assets/js/avatar.js.
+Adding the modified MVC letter-avatar.js to my /assets/js/vendor/letter-avatar/letter-avatar.js.
 
 Link to it in scripts.html
 
 ```html
-<script src="{{ '/assets/js/avatar.js' | absolute_url }}"></script>
+<script src="{{ '/assets/js/vendor/letter-avatar/letter-avatar.js' | absolute_url }}"></script>
 ```
 
 Or in a mardown page as.
