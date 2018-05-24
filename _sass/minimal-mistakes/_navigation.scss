@@ -584,6 +584,11 @@
   box-shadow: $box-shadow;
   margin-bottom: 1.5em;
   padding: .5rem;
+  white-space: pre-wrap;
+  display: -webkit-flex;
+  -webkit-flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 
   .nav__title1 {
     color: #fff;
