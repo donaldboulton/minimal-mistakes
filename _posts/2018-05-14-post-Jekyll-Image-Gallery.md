@@ -157,8 +157,8 @@ Isotope.js latest at github repo: [isotope.js](https://raw.githubusercontent.com
 To gather the required scripts and css we need to download and add them to our assets folder.
 Adding included Isotope and LightGallery files as below seen in my [includes/scripts.html](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_includes/scripts.html) file.
 
-```javascript
-// if page.support contains 'gallery' using liquid which kills this code block view file in the above link.
+```html
+{{ page.lcb }}% if page.support contains 'gallery' %}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.5/isotope.pkgd.min.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js" crossorigin="anonymous"></script>
@@ -169,7 +169,7 @@ Adding included Isotope and LightGallery files as below seen in my [includes/scr
   <script src="{{ '/assets/dist/modules/lg-thumbnail.min.js' | relative_url }}"></script>
   <script src="{{ '/assets/dist/modules/lg-zoom.min.js' | relative_url }}"></script>
   <script src="{{ '/assets/dist/js/init-lightgallery.js' | relative_url }}"></script>
-//endif using liquid which kills this code block.
+{{ page.lcb }}% endif %}
 ```
 
 In each Gallery.md file to use the included above scripts add the below to your gallery page frontmatter. Using a liquid conditional if page.support contains 'gallery'
@@ -181,7 +181,7 @@ support: [gallery]
 I added the Css  same way to my [/includes/head.html](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_includes/head.html) file and the above frontmatter support will include the lightgallery.min.css, with a conditional if statement % if page.support contains 'gallery' %
 
 ```html
-   <link rel="stylesheet" href="{{ '/assets/dist/css/lightgallery.min.css' | relative_url }}">
+   <link rel="stylesheet" href="{{ page.lcb }}{ '/assets/dist/css/lightgallery.min.css' | relative_url }}">
 ```
 
 ### The Sass styling
@@ -416,7 +416,7 @@ support: [gallery]
 
 <div id="main" role="main">
   <div itemscope itemtype="http://schema.org/ImageGallery">
-      content // using liquid which kills this code block.
+      {{ page.lcb }}{ content }}
   </div>
 </div>
 ```
@@ -436,17 +436,17 @@ This code donload at: [gallery-layout.html](https://raw.githubusercontent.com/do
 The code below
 
 ```html
-<div id="aniimated-thumbnials{% if include.id_number %}-{{ include.id_number }}{% endif %}" class="gallery">
-  <div id="gallery-sizer{% if include.id_number %}-{{ include.id_number }}{% endif %}" class="gallery-sizer"></div>
-  // for picture in include.gallery.pictures using liquid which kills this code block.
+<div id="aniimated-thumbnials{{ page.lcb }}% if include.id_number %}-{{ page.lcb }}{ include.id_number }}{{ page.lcb }}% endif %}" class="gallery">
+  <div id="gallery-sizer{{ page.lcb }}% if include.id_number %}-{{ page.lcb }}{ include.id_number }}{{ page.lcb }}% endif %}" class="gallery-sizer"></div>
+   {{ page.lcb }}% for picture in include.gallery.pictures %}
   <div class="image-wrapper" itemscope itemtype="http://schema.org/ImageObject">
-    <a itemprop="contentUrl" href="{{ site.url }}{{ site.baseurl }}/assets/photography/{{ include.gallery.picture_path }}/{{ picture.original }}"
-    data-responsive="{% for size in picture.sizes %} {{ site.url}}{{ site.baseurl }}/assets/photography/{{ include.gallery.picture_path }}/{{ size }} {{ size | split: '-' | last | split: '.' | first | split: 'x' | first | strip }}{% unless forloop.last %},{% endunless %}{% endfor %}" class="image"
-    {% if picture.title %} itemprop="name" data-sub-html="<div class='lg-toolbar caption'><h4>{{ picture.title | escape }}</h4>{% if picture.caption %}<p>{{ picture.caption | escape }}</p>{% endif %}</div>"{% endif %}>
-      <img itemprop="thumbnail" alt="{{ picture.title }}" src="{{ site.url }}{{ site.baseurl }}/assets/photography/{{ include.gallery.picture_path }}/{{ picture.thumbnail }}" />
+    <a itemprop="contentUrl" href="{{ page.lcb }}{ site.url }}{{ page.lcb }}{ site.baseurl }}/assets/photography/{{ page.lcb }}{ include.gallery.picture_path }}/{{ picture.original }}"
+    data-responsive="{% for size in picture.sizes %} {{ page.lcb }}{ site.url}}{{ page.lcb }}{ site.baseurl }}/assets/photography/{{ page.lcb }}{ include.gallery.picture_path }}/{{ page.lcb }}{ size }} {{ page.lcb }}{ size | split: '-' | last | split: '.' | first | split: 'x' | first | strip }}{{ page.lcb }}% unless forloop.last %},{{ page.lcb }}% endunless %}{% endfor %}" class="image"
+    {{ page.lcb }}% if picture.title %} itemprop="name" data-sub-html="<div class='lg-toolbar caption'><h4>{{ page.lcb }}{ picture.title | escape }}</h4>{{ page.lcb }}% if picture.caption %}<p>{{ page.lcb }}{ picture.caption | escape }}</p>{{ page.lcb }}% endif %}</div>"{{ page.lcb }}% endif %}>
+      <img itemprop="thumbnail" alt="{{ page.lcb }}{ picture.title }}" src="{{ page.lcb }}{ site.url }}{{ page.lcb }}{ site.baseurl }}/assets/photography/{{ page.lcb }}{ include.gallery.picture_path }}/{{ page.lcb }}{ picture.thumbnail }}" />
     </a>
   </div>
-  // endfor using liquid which kills this code block.
+  {% endfor %}
 </div>
 ```
 

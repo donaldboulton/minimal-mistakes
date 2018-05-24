@@ -41,6 +41,7 @@ support: [adds, cookies]
 product: letter-avatar 
 slug: letter-avatar
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2018-02-22-post-Letter-Avatar.md
+lcb: "{"
 ---
 
 {% include octo-arm.html %}
@@ -201,10 +202,10 @@ Super simple and added to my reviews [reviews.html](https://github.com/donaldbou
 
 Added to my reviews layout with just a link to avatar="" + reviewData.name, or if your using comments its commentsData.name
 
-```javascript
+```html
 <div itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img itemprop="image" avatar="{{ reviewData.name }}" alt="{{ reviewData.name }}" class="review-avatar-image text-left" />
-    &nbsp;<span itemprop="name">{{ reviewData.name }}</span>
+    <img itemprop="image" avatar="{{ page.lcb }}{ reviewData.name }}" alt=" {{ page.lcb }}{ reviewData.name }}" class="review-avatar-image text-left" />
+    &nbsp;<span itemprop="name">{{ page.lcb }}{ reviewData.name }}</span>
 </div>
 ```
 
@@ -214,8 +215,8 @@ Adding the modified MVC [letter-avatar.js](https://raw.githubusercontent.com/don
 
 Link to it in scripts.html
 
-```javascript
-<script src="{{ '/assets/js/vendor/letter-avatar/letter-avatar.js' | absolute_url }}"></script>
+```html
+<script src="{{ page.lcb }}{ '/assets/js/vendor/letter-avatar/letter-avatar.js' | absolute_url }}"></script>
 ```
 
 Or in a mardown frontmatter as.
