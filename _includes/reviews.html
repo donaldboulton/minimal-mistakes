@@ -1,4 +1,5 @@
 <div id="reviews" class="js-comments">
+  {% if site.data.reviews | where:'product',page.slug %}
 	{% assign reviews = site.data.reviews | sort %}
 
 	{% for review in reviews limit:4 %}
@@ -34,7 +35,7 @@
 					<span itemprop="name">By: {{ reviewData.name }}</span>
         </div>
         <div class="form-group">
-            <span itemprop="url">Url: {{ reviewData.url }}</span>
+            <span itemprop="url">Url:<small> {{ reviewData.url }} </small></span>
         </div>
 				<div class="form-group">
             <span itemprop="description">Message: {{ reviewData.description | markdownify }}</span>
@@ -44,5 +45,6 @@
 					<meta class="hidden" itemprop="name" content="donboulton.com">
 				</span>
 		</article>
-	{% endfor %}
+  {% endfor %}
+  {% endif %}
 </div>
