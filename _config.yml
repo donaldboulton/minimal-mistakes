@@ -20,7 +20,7 @@ teaser                   : "/assets/images/pages/digital_box_1400-compressor.jpg
 breadcrumbs              : true
 words_per_minute         : 200
 comments:
-  provider               : "staticman_v2" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
+  provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
   disqus:
     shortname            : "donald-boulton"
   discourse:
