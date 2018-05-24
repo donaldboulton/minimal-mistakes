@@ -16,7 +16,7 @@ reviews: true
 date: 2017-01-02 16:16:01 -0600
 last_modified_at: 2017-01-13T12:42:38-04:00
 
-permalink: /posts/2017-01-02-post-reviews-external/
+permalink: 2017-01-02-post-reviews-external.html
 image:
   cover: true
   path: &image /assets/images/pages/reviews.jpg
