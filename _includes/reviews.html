@@ -5,7 +5,6 @@
 
 	{% for review in reviews reversed limit:4 %}
 		{% assign reviewData = review[1] %}
-
 		<article itemscope itemtype="http://schema.org/Review" class="toc1">
 				<span style="display: none;" itemprop="itemReviewed" itemscope itemtype="http://schema.org/Thing">
 					<meta class="hidden" itemprop="name">{{ page.url }}</meta>

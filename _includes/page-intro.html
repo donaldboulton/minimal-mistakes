@@ -34,11 +34,17 @@
               {% if reviewCount > 0 %}
                 {% assign sum = sum | divided_by:reviewCount %}
                 (&nbsp;Average:&nbsp;<span>{{ sum | round: 1 }}&nbsp;</span>)
-                <meta class="hidden" itemprop="ratingValue" content="{{ reviewData.reviewCount }}">
               {% endif %}
+              {% assign reviews = site.data.reviews | sort %}
+
+	            {% for review in reviews %}
+		          {% assign reviewData = review[1] %}
+              <meta class="hidden" itemprop="ratingValue" content="{{ reviewData.review }}">
+              {% endfor %}
             </span>
           </p>
           <input name="fields[product]" type="hidden" value="{{ page.slug }}" />
+          <input name="fields[product]" type="hidden" value="{{ reviewData.review }}" />
         {% endif %}
       {% endunless %}
     </div>
