@@ -8,7 +8,8 @@
           </g>
       </svg> Add a Review</h3>
       </header>
-  <form id="review-form" class="js-form form" method="post" action="https://api.staticman.net/v2/entry/donaldboulton/DWB/gh-pages/reviews" oninput="result.value=parseInt(this['fields[review]'].value)">
+  <div class="page__reviews-form">
+    <form id="review-form" class="js-form form" method="post" action="https://api.staticman.net/v2/entry/donaldboulton/DWB/gh-pages/reviews" oninput="result.value=parseInt(this['fields[review]'].value)">
     <div class="field-group rating-select"> <span>Rate:&nbsp;</span> <label class="rating-radio-label" for="comment-form[star-1]"> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="1" name="fields[review]" id="comment-form[star-1]" checked=""> <label class="rating-radio-label" for="comment-form[star-2]"> <svg class="icon icon--star_border rating-star rating-radio-star--off"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-star_border"></use>star_border</svg> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="2" name="fields[review]" id="comment-form[star-2]"> <label class="rating-radio-label" for="comment-form[star-3]"> <svg class="icon icon--star_border rating-star rating-radio-star--off"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-star_border"></use>star_border</svg> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="3" name="fields[review]" id="comment-form[star-3]"> <label class="rating-radio-label" for="comment-form[star-4]"> <svg class="icon icon--star_border rating-star rating-radio-star--off"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-star_border"></use>star_border</svg> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="4" name="fields[review]" id="comment-form[star-4]"> <label class="rating-radio-label" for="comment-form[star-5]"> <svg class="icon icon--star_border rating-star rating-radio-star--off"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-star_border"></use>star_border</svg> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="5" name="fields[review]" id="comment-form[star-5]"></div>
       <div class="form-group">
         <label class="sr-only" for="review-form[name]">Your name</label>
@@ -47,12 +48,14 @@
       </p>
       <!-- End comment form alert messaging -->
       <div class="form-group">
-          <div class="g-recaptcha" data-theme="dark" data-tabindex="5" data-sitekey="6LerR1MUAAAAACWH7t30s7V4aApQZaIVVPcvH21X"></div>
+          <div id="recaptcha2" class="g-recaptcha" data-theme="dark" data-tabindex="5" data-sitekey="6LerR1MUAAAAACWH7t30s7V4aApQZaIVVPcvH21X"></div>
       </div>
       <div class="form-group">
-          <button type="submit" id="review-form-submit" class="btn btn--primary">
+          <button type="submit" id="review-form-submit" class="btn btn--primary review_btn_submit">
             Submit
            </button>
         </div>
-  </form>
+    </form>
+  </div>
 </div>
+{% include reviews-staticman_v2.html %}
