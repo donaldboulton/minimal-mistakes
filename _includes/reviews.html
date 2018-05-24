@@ -1,5 +1,5 @@
 <div id="reviews" class="js-comments">
-  {% if site.data.reviews | where:'product',page.slug %}
+  {% if page.reviews == true and site.data.reviews | where:'product',page.slug.size > 0 %}
 	{% assign reviews = site.data.reviews | sort %}
 
 	{% for review in reviews limit:4 %}
