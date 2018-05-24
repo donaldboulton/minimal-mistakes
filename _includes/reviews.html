@@ -32,10 +32,10 @@
 					</div>
 				</div>
 				<div class="form-group" itemprop="author" itemscope itemtype="http://schema.org/Person">
-					<span itemprop="name">By: {{ reviewData.name }}</span>
+					By:<span itemprop="name">{{ reviewData.name }}</span>
         </div>
         <div class="form-group">
-            <span itemprop="url">Url:<small> {{ reviewData.url }} </small></span>
+            <span>Url:<small> {{ reviewData.url }} </small></span>
         </div>
 				<div class="form-group">
             <span itemprop="description">Message: {{ reviewData.description | markdownify }}</span>
@@ -43,7 +43,9 @@
 			</div>
 				<span style="display: none;" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
 					<meta class="hidden" itemprop="name" content="donboulton.com">
-				</span>
+        </span>
+        <meta itemprop="url" type="hidden" value="{{ page.url | relative_url }}">
+        <input type="hidden" name="options[parent]" value="{{ page.url | relative_url }}">
 		</article>
   {% endfor %}
   {% endif %}

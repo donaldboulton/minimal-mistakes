@@ -37,10 +37,13 @@
               {% endif %}
             </span>
           </p>
+          <meta class="hidden" itemprop="bestRating" value="5">
+          <meta class="hidden" itemprop="worstRating" value="1">
           <input name="fields[product]" type="hidden" value="{{ page.slug }}" />
           <input name="fields[product]" type="hidden" value="{{ reviewData.review }}" />
-          <input itemprop="name" name="fields[name]" type="hidden" value="{{ reviewData.name }}" />
-            <meta class="hidden" content="donboulton.com">
+          <input type="hidden" name="options[origin]" value="{{ page.url | relative_url }}">
+          <meta itemprop="name" type="hidden" value="{{ page.slug }}">
+          <meta class="hidden" content="donboulton.com">
         {% endif %}
       {% endunless %}
     </div>
