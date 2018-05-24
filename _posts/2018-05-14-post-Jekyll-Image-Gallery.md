@@ -446,7 +446,7 @@ The code below
       <img itemprop="thumbnail" alt="{{ page.lcb }}{ picture.title }}" src="{{ page.lcb }}{ site.url }}{{ page.lcb }}{ site.baseurl }}/assets/photography/{{ page.lcb }}{ include.gallery.picture_path }}/{{ page.lcb }}{ picture.thumbnail }}" />
     </a>
   </div>
-  {% endfor %}
+  {{ page.lcb }}% endfor %}
 </div>
 ```
 
