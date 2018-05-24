@@ -30,14 +30,12 @@
 							<meta class="hidden" itemprop="ratingValue" content="{{ reviewData.review }}">
 					</div>
 				</div>
-        <div class="form-group" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <div class="review-avatar">
-            <img itemprop="image" avatar="{{ reviewData.name }}" alt="{{ reviewData.name }}" class="review-avatar-image" />
-          </div>
-					By:&nbsp;<span itemprop="name" class="review-author-name">{{ reviewData.name }}</span>
+        <div itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <img itemprop="image" avatar="{{ reviewData.name }}" alt="{{ reviewData.name }}" class="review-avatar-image text-left" />
+            &nbsp;<span itemprop="name">{{ reviewData.name }}</span>
         </div>
         <div class="form-group">
-            <span>Url:&nbsp;<small> {{ reviewData.url }} </small></span>
+            <span><small></small>Url:&nbsp; {{ reviewData.url }} </small></span>
         </div>
 				<div class="form-group">
             Message:<span itemprop="description"></span> {{ reviewData.description | markdownify }}</span>
