@@ -98,10 +98,12 @@ defaults:
 
 I added images in my /assets/images/photography/ folders for each gallery. as listed in my data/overwiew.yml file and configured in each of my /photography/Gallery.md files
 
-## Data YML File
+## Data YML Files
 
 Both the simple and Complex Gallerys are driven by the data/gallerys/overview.yml data file as displayed below, this is from my site and gallerys.
  The fist set is for the complex gallery with 5 images, you only need 4, with different sizes and ending with different size extenshion as -1234. The second is for the simple gallery with just one image listed.
+
+### Gallerys main datafile overview.yml
 
 ```yml
 // Complex yml 5 images
@@ -132,6 +134,58 @@ Both the simple and Complex Gallerys are driven by the data/gallerys/overview.ym
 
 ```
 
+### Individual Gallerys Frontmatter
+
+Below the individual gallery frontmatter and the 5th image is not listed as with its extenshion as .jpg but it will be looking for a file with just the name as image.jpg not image-12345.jpg. So it uses 5 images of differing extenshions & sizes.
+
+```yaml
+picture_path: stray-cat-gallery
+preview:
+  filename: DSCN1261
+  original: DSCN1261-1200.jpg
+  sizes:
+  - DSCN1261-1200.jpg
+  - DSCN1261-800.jpg
+  - DSCN1261-320.jpg
+  thumbnail: DSCN1261-th.jpg
+pictures:
+- filename: DSCN1252
+  original: DSCN1252-1200.jpg
+  sizes:
+  - DSCN1252-1200.jpg
+  - DSCN1252-800.jpg
+  - DSCN1252-320.jpg
+  thumbnail: DSCN1252-th.jpg
+- filename: DSCN1260
+  original: DSCN1260-1200.jpg
+  sizes:
+  - DSCN1260-1200.jpg
+  - DSCN1260-800.jpg
+  - DSCN1260-320.jpg
+  thumbnail: DSCN1260-th.jpg
+- filename: Casper
+  original: Casper-1200.jpg
+  sizes:
+  - Casper-1200.jpg
+  - Casper-800.jpg
+  - Casper-320.jpg
+  thumbnail: Casper-th.jpg
+- filename: Casper-Mousee
+  original: Casper-Mousee-1200.jpg
+  sizes:
+  - Casper-Mousee-1200.jpg
+  - Casper-Mousee-800.jpg
+  - Casper-Mousee-320.jpg
+  thumbnail: Casper-Mousee-th.jpg
+- filename: DSCN1269
+  original: DSCN1269-1200.jpg
+  sizes:
+  - DSCN1269-1200.jpg
+  - DSCN1269-800.jpg
+  - DSCN1269-320.jpg
+  thumbnail: DSCN1269-th.jpg
+```
+
 ## Page Frontmatter
 
 ```yml
@@ -147,16 +201,16 @@ support: [gallery]
 
 ## The Included Js And Css
 
-I Included the [lightgallery.js](https://raw.githubusercontent.com/sachinchoolur/lightGallery/master/src/js/lightgallery.js) minified to my main site main.min.js file as to have it initilized at all times for any page. I included it right after jquery.js and before any other Conjugated scripts.
+I Included the [lightgallery.js](https://raw.githubusercontent.com/sachinchoolur/lightGallery/master/src/js/lightgallery.js){:id="open-website" rel="nofollow"} minified to my main site main.min.js file as to have it initilized at all times for any page. I included it right after jquery.js and before any other Conjugated scripts.
 
-Adding all other LightGallery css and scripts in a assets/dist folder. In the same folder structure as in the [lightgallery repo](https://github.com/sachinchoolur/lightGallery), adding isotope.js, mousewheel.js and picturefill.js from CloudFlare CDN.
+Adding all other LightGallery css and scripts in a assets/dist folder. In the same folder structure as in the [lightgallery repo](https://github.com/sachinchoolur/lightGallery){:id="open-website" rel="nofollow"}, adding isotope.js, mousewheel.js and picturefill.js from CloudFlare CDN.
 
-Isotope.js latest at github repo: [isotope.js](https://raw.githubusercontent.com/metafizzy/isotope/master/js/isotope.js) and LightGallery Js and Css are required for this gallery including the below _gallery.sass file.
+Isotope.js latest at github repo: [isotope.js](https://raw.githubusercontent.com/metafizzy/isotope/master/js/isotope.js){:id="open-website" rel="nofollow"} and LightGallery Js and Css are required for this gallery including the below _gallery.sass file.
 
 ### Gallery Assets
 
 To gather the required scripts and css we need to download and add them to our assets folder.
-Adding included Isotope and LightGallery files as below seen in my [includes/scripts.html](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_includes/scripts.html) file.
+Adding included Isotope and LightGallery files as below seen in my [includes/scripts.html](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_includes/scripts.html){:id="open-website" rel="nofollow"} file.
 
 ```html
 {{ page.lcb }}% if page.support contains 'gallery' %}
@@ -173,6 +227,202 @@ Adding included Isotope and LightGallery files as below seen in my [includes/scr
 {{ page.lcb }}% endif %}
 ```
 
+There is one script above init-lightgallery.js that is initializes all of LightGalley resources including links,iframe, maps = all.
+
+## LightGallery init-lightgallery.js
+
+```javascript
+$(document).ready(function() {
+
+    window.prettyPrint && prettyPrint()
+
+    var $gallery = $("#aniimated-thumbnials").lightGallery({
+        thumbnail: true,
+        selector: '.image'
+    });
+    //thumbnails without animation
+    var $thumb = $('#thumbnials-without-animation');
+    if ($thumb.length) {
+        $thumb.justifiedGallery({
+            border: 6
+        }).on('jg.complete', function() {
+            $thumb.lightGallery({
+                thumbnail: true,
+                animateThumb: false,
+                showThumbByDefault: false
+            });
+        });
+    };
+
+    // Fixed size
+    $('#fixed-size').lightGallery({
+        width: '700px',
+        height: '470px',
+        mode: 'lg-fade',
+        addClass: 'fixed-size',
+        counter: false,
+        download: false,
+        startClass: '',
+        enableSwipe: false,
+        enableDrag: false,
+        speed: 500
+    });
+
+    $('#html5-videos').lightGallery({
+        thumbnail: false
+    });
+
+    $('#html5-videos-videojs').lightGallery({
+        videojs: true
+    });
+
+    $('#videos').lightGallery();
+    $('#videos-without-poster').lightGallery();
+    $('#video-player-param').lightGallery({
+        youtubePlayerParams: {
+            modestbranding: 1,
+            showinfo: 0,
+            rel: 0,
+            controls: 0
+        },
+        vimeoPlayerParams: {
+            byline: 0,
+            portrait: 0,
+            color: 'A90707'
+        }
+    });
+
+    $('#video-thumbnails').lightGallery({
+        loadYoutubeThumbnail: true,
+        youtubeThumbSize: 'default',
+        loadVimeoThumbnail: true,
+        vimeoThumbSize: 'thumbnail_medium'
+    });
+
+    function customTransitions(trans) {
+        $('#custom-transitions').lightGallery({
+            mode: trans
+        })
+    }
+
+    customTransitions('lg-slide');
+
+    $('#select-trans').on('change', function() {
+        $('#custom-transitions').data('lightGallery').destroy(true);
+        customTransitions($(this).val());
+    });
+
+    function customEasing(ease) {
+        $('#custom-easing').lightGallery({
+            cssEasing: ease
+        })
+    }
+
+    customEasing('cubic-bezier(0.680, -0.550, 0.265, 1.550)');
+
+    $('#select-ease').on('change', function() {
+
+        var val = $(this).val();
+        prompt('You can copy cubic-bezier from here', val);
+
+        $('#custom-easing').data('lightGallery').destroy(true);
+        customEasing('cubic-bezier(' + val + ')');
+    });
+
+    // Custom events
+    var $customEvents = $('#custom-events');
+    $customEvents.lightGallery();
+
+    var colours = ['rgb(33, 23, 26)', 'rgb(129, 87, 94)', 'rgb(156, 80, 67)', 'rgb(143, 101, 93)'];
+    $customEvents.on('onBeforeSlide.lg', function(event, prevIndex, index) {
+        $('.lg-outer').css('background-color', colours[index])
+    });
+
+    // Responsive images
+    $('#responsive-images').lightGallery();
+    $('#srcset-images').lightGallery();
+
+    // iframe
+    $('#open-website').lightGallery({
+        selector: 'this'
+    });
+
+    // Google map
+    $('#google-map').lightGallery({
+        selector: 'this',
+        iframeMaxWidth: '80%'
+    });
+
+    $('#captions').lightGallery();
+    $('#relative-caption').lightGallery({
+        subHtmlSelectorRelative: true
+    });
+    $('#hash').lightGallery();
+
+    $('#lg-share-demo').lightGallery();
+
+    var $commentBox = $('#comment-box');
+    $commentBox.lightGallery({
+        appendSubHtmlTo: '.lg-item',
+        addClass: 'fb-comments',
+        mode: 'lg-fade',
+        download: false,
+        enableDrag: false,
+        enableSwipe: false
+    });
+    $commentBox.on('onAfterSlide.lg', function(event, prevIndex, index) {
+        if (!$('.lg-outer .lg-item').eq(index).attr('data-fb')) {
+            try {
+                $('.lg-outer .lg-item').eq(index).attr('data-fb', 'loaded');
+                FB.XFBML.parse();
+            } catch (err) {
+                $(window).on('fbAsyncInit', function() {
+                    $('.lg-outer .lg-item').eq(index).attr('data-fb', 'loaded');
+                    FB.XFBML.parse();
+                });
+            }
+        }
+    });
+
+    var $commentBoxSep = $('#comment-box-sep');
+    $commentBoxSep.lightGallery({
+        addClass: 'fb-comments',
+        download: false,
+        galleryId: 2
+    });
+    $commentBoxSep.on('onAfterAppendSubHtml.lg', function() {
+        try {
+            FB.XFBML.parse();
+        } catch (err) {
+            $(window).on('fbAsyncInit', function() {
+                FB.XFBML.parse();
+            });
+        }
+    });
+
+});
+
+$(document).ready(function() {
+    var $gallery = $("#aniimated-thumbnials").lightGallery({
+      thumbnail: true,
+      selector: '.image'
+    });
+  });
+
+// init isotope
+var $grid = $('#aniimated-thumbnials').isotope({
+  percentPosition: true,
+  columnWidth: '#gallery-sizer',
+  itemSelector: '.image-wrapper',
+  layoutMode: "masonry"
+});
+
+// layout Isotope after each image loads
+$grid.imagesLoaded().progress( function() {
+  $grid.masonry();
+});
+```
+
 In each Gallery.md file to use the included above scripts add the below to your gallery page frontmatter. Using a liquid conditional if page.support contains 'gallery'
 
 ```html
@@ -187,7 +437,7 @@ I added the Css  same way to my [/includes/head.html](https://raw.githubusercont
 
 ### The Sass styling
 
-The styling for my site gallery's, several are included. The download of [gallery.scss](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_sass/minimal-mistakes/_gallery.scss) file.
+The styling for my site gallery's, several are included. The download of [gallery.scss](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_sass/minimal-mistakes/_gallery.scss){:id="open-website" rel="nofollow"} file.
 
 The gallery.scss code below
 
@@ -397,15 +647,15 @@ The gallery.scss code below
 
 ## Jekyll Simple Gallery
 
-Create a Jekyll images Gallery that loops through all images in a folder. Displayed with [MetaFuzzy Isotope](https://isotope.metafizzy.co/) and viewed with [Sachinchoolur LightGallery](http://sachinchoolur.github.io/lightGallery/demos/). Not Configured by yml Frontmatter, thus much eaiser to create. Using [Images resizing by images.weserv.nl](weserv.nl), which gives a thumnail image displayed in the Isotope gallery and the origional images which are opened by LightGallery.
+Create a Jekyll images Gallery that loops through all images in a folder. Displayed with [MetaFuzzy Isotope](https://isotope.metafizzy.co/) and viewed with [Sachinchoolur LightGallery](http://sachinchoolur.github.io/lightGallery/demos/){:id="open-website" rel="nofollow"}. Not Configured by yml Frontmatter, thus much eaiser to create. Using [Images resizing by images.weserv.nl](weserv.nl), which gives a thumnail image displayed in the Isotope gallery and the origional images which are opened by LightGallery.
 
 ### The _includes file Simple Gallery
 
-The image gallery includes file as [image-gallery.html](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_includes/image-gallery.html) for Isotope arranged animated thumnails, resized online by [images.weserv.nl](weserv.nl) and displayed in LightGallery.
+The image gallery includes file as [image-gallery.html](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_includes/image-gallery.html){:id="open-website" rel="nofollow"} for Isotope arranged animated thumnails, resized online by [images.weserv.nl](weserv.nl) and displayed in LightGallery.
 
 ### The _layout file Simple Gallery
 
-Gallery layout download [galleryloop.html](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_layouts/galleryloop.html)
+Gallery layout download [galleryloop.html](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_layouts/galleryloop.html){:id="open-website" rel="nofollow"}
 
 The gallery layout file code with the tile of my page being in my single layout or your default layout file.
 
@@ -430,11 +680,11 @@ This is a Gallery based on Isotope and LightGallery the same as my Simple Galler
 
 ### The _include file
 
-This include file at: [gallery-layout.html](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_includes/gallery-layout.html)builds a srcset out of Five preconfigured images. Sizes as example image-320.jpg or 320px wide, image-800.jpg or 800px wide, image-1200px or 1200px wide, and the origional image in your stock size twice once with its origional name and once with the extenshion to the file name as above image-lg.WHATEVER .png .jpg .gif...
+This include file at: [gallery-layout.html](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_includes/gallery-layout.html){:id="open-website" rel="nofollow"} builds a srcset out of Five preconfigured images. Sizes as example image-320.jpg or 320px wide, image-800.jpg or 800px wide, image-1200px or 1200px wide, and the origional image in your stock size twice once with its origional name and once with the extenshion to the file name as above image-lg.WHATEVER .png .jpg .gif...
 
 ### The _layout file
 
-The layout file at: [gallery.html](https://github.com/donaldboulton/DWB/blob/gh-pages/_layouts/gallery.html`) for the Complex Gallery simular to the simple gallery with a added class on the div as class="gallery".
+The layout file at: [gallery.html](https://github.com/donaldboulton/DWB/blob/gh-pages/_layouts/gallery.html`){:id="open-website" rel="nofollow"} for the Complex Gallery simular to the simple gallery with a added class on the div as class="gallery".
 
 ```html
 ---
@@ -451,6 +701,8 @@ support: [gallery]
 </div>
 ```
 
-If there is any confusion to the contents of this post add a review, tweet or a comment below, and or go to the repo for, Donald Boulton at: [Github Repo](https://github.com/donaldboulton/DWB) and view the code. Both my Simple and Complex Gallerys displayed on my Gallery Page.
+If there is any confusion to the contents of this post add a review, tweet or a comment below, and or go to the repo for, Donald Boulton at: [Github Repo](https://github.com/donaldboulton/DWB){:id="open-website" rel="nofollow"} and view the code. Both my Simple and Complex Gallerys displayed on my Gallery Page.
 
 > The only Gallerys that are Complex or yml driven are my CAT Gallerys.
+
+{% include lightgallery-maps-iframe.html %}
