@@ -46,6 +46,7 @@ folder: _posts
 product: jekyll-image-gallery
 slug: jekyll-image-gallery
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2018-05-14-post-Jekyll-Image-Gallery.md
+lcb: "{"
 ---
 
 {% include octo-arm.html %}
@@ -158,18 +159,18 @@ To gather the required scripts and css we need to download and add them to our a
 Adding included Isotope and LightGallery files as below seen in my [includes/scripts.html](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_includes/scripts.html) file.
 
 ```html
-{{ page.lcb }}{% if page.support contains 'gallery' %}
+{{ page.lcb }}% if page.support contains 'gallery' %}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.5/isotope.pkgd.min.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js" crossorigin="anonymous"></script>
-  <script src="{{ '/assets/dist/js/imagesloaded.pkgd.min.js' | relative_url }}"></script>
-  <script src="{{ '/assets/dist/modules/lg-autoplay.min.js' | relative_url }}"></script>
-  <script src="{{ '/assets/dist/modules/lg-fullscreen.min.js' | relative_url }}"></script>
-  <script src="{{ '/assets/dist/modules/lg-share.min.js' | relative_url }}"></script>
-  <script src="{{ '/assets/dist/modules/lg-thumbnail.min.js' | relative_url }}"></script>
-  <script src="{{ '/assets/dist/modules/lg-zoom.min.js' | relative_url }}"></script>
-  <script src="{{ '/assets/dist/js/init-lightgallery.js' | relative_url }}"></script>
-{{ page.lcb }}{% endif %}
+  <script src="{{ page.lcb }}{ '/assets/dist/js/imagesloaded.pkgd.min.js' | relative_url }}"></script>
+  <script src="{{ page.lcb }}{ '/assets/dist/modules/lg-autoplay.min.js' | relative_url }}"></script>
+  <script src="{{ page.lcb }}{ '/assets/dist/modules/lg-fullscreen.min.js' | relative_url }}"></script>
+  <script src="{{ page.lcb }}{ '/assets/dist/modules/lg-share.min.js' | relative_url }}"></script>
+  <script src="{{ page.lcb }}{ '/assets/dist/modules/lg-thumbnail.min.js' | relative_url }}"></script>
+  <script src="{{ page.lcb }}{ '/assets/dist/modules/lg-zoom.min.js' | relative_url }}"></script>
+  <script src="{{ page.lcb }}{ '/assets/dist/js/init-lightgallery.js' | relative_url }}"></script>
+{{ page.lcb }}% endif %}
 ```
 
 In each Gallery.md file to use the included above scripts add the below to your gallery page frontmatter. Using a liquid conditional if page.support contains 'gallery'
@@ -181,7 +182,7 @@ support: [gallery]
 I added the Css  same way to my [/includes/head.html](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_includes/head.html) file and the above frontmatter support will include the lightgallery.min.css, with a conditional if statement % if page.support contains 'gallery' %
 
 ```html
-   <link rel="stylesheet" href="{{ page.lcb }}{{ '/assets/dist/css/lightgallery.min.css' | relative_url }}">
+   <link rel="stylesheet" href="{{ page.lcb }}{ '/assets/dist/css/lightgallery.min.css' | relative_url }}">
 ```
 
 ### The Sass styling
@@ -398,9 +399,11 @@ The gallery.scss code below
 
 Create a Jekyll images Gallery that loops through all images in a folder. Displayed with [MetaFuzzy Isotope](https://isotope.metafizzy.co/) and viewed with [Sachinchoolur LightGallery](http://sachinchoolur.github.io/lightGallery/demos/). Not Configured by yml Frontmatter, thus much eaiser to create. Using [Images resizing by images.weserv.nl](weserv.nl), which gives a thumnail image displayed in the Isotope gallery and the origional images which are opened by LightGallery.
 
+### The _includes file Simple Gallery
+
 The image gallery includes file as [image-gallery.html](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_includes/image-gallery.html) for Isotope arranged animated thumnails, resized online by [images.weserv.nl](weserv.nl) and displayed in LightGallery.
 
-### The layout file for the gallery
+### The _layout file Simple Gallery
 
 Gallery layout download [galleryloop.html](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_layouts/galleryloop.html)
 
@@ -416,7 +419,7 @@ support: [gallery]
 
 <div id="main" role="main">
   <div itemscope itemtype="http://schema.org/ImageGallery">
-      {{ page.lcb }}{{ content }}
+      {{ page.lcb }}{ content }}
   </div>
 </div>
 ```
@@ -425,28 +428,13 @@ support: [gallery]
 
 This is a Gallery based on Isotope and LightGallery the same as my Simple Gallery, this Complex one uses a data yml file and 5 pre configured images for a figure srcset display. Alot of coding is require for this and my cat gallerys are the only ones built like this, but for the best mobile speed with responsiveness, this is the way to go.
 
-### The include file
+### The _include file
 
 This include file at: [gallery-layout.html](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_includes/gallery-layout.html)builds a srcset out of Five preconfigured images. Sizes as example image-320.jpg or 320px wide, image-800.jpg or 800px wide, image-1200px or 1200px wide, and the origional image in your stock size twice once with its origional name and once with the extenshion to the file name as above image-lg.WHATEVER .png .jpg .gif...
 
-```html
-<div id="aniimated-thumbnials{{ page.lcb }}{% if include.id_number %}-{{ page.lcb }}{{ include.id_number }}{{ page.lcb }}{% endif %}" class="gallery">
-  <div id="gallery-sizer{{ page.lcb }}{% if include.id_number %}-{{ page.lcb }}{{ include.id_number }}{{ page.lcb }}{% endif %}" class="gallery-sizer"></div>
-   {{ page.lcb }}{% for picture in include.gallery.pictures %}
-  <div class="image-wrapper" itemscope itemtype="http://schema.org/ImageObject">
-    <a itemprop="contentUrl" href="{{ page.lcb }}{{ site.url }}{{ page.lcb }}{{ site.baseurl }}/assets/photography/{{ page.lcb }}{{ include.gallery.picture_path }}/{{ page.lcb }}{{ picture.original }}"
-    data-responsive="{{ page.lcb }}{% for size in picture.sizes %} {{ page.lcb }}{{ site.url}}{{ page.lcb }}{{ site.baseurl }}/assets/photography/{{ page.lcb }}{{ include.gallery.picture_path }}/{{ page.lcb }}{{ size }} {{ page.lcb }}{{ size | split: '-' | last | split: '.' | first | split: 'x' | first | strip }}{{ page.lcb }}{% unless forloop.last %},{{ page.lcb }}{% endunless %}{{ page.lcb }}{% endfor %}" class="image"
-    {{ page.lcb }}% if picture.title %} itemprop="name" data-sub-html="<div class='lg-toolbar caption'><h4>{{ page.lcb }}{{ picture.title | escape }}</h4>{{ page.lcb }}{% if picture.caption %}<p>{{ page.lcb }}{{ picture.caption | escape }}</p>{{ page.lcb }}{% endif %}</div>"{{ page.lcb }}{% endif %}>
-      <img itemprop="thumbnail" alt="{{ page.lcb }}{{ picture.title }}" src="{{ page.lcb }}{{ site.url }}{{ page.lcb }}{{ site.baseurl }}/assets/photography/{{ page.lcb }}{{ include.gallery.picture_path }}/{{ page.lcb }}{{ picture.thumbnail }}" />
-    </a>
-  </div>
-  {{ page.lcb }}{% endfor %}
-</div>
-```
+### The _layout file
 
-### The layout file
-
-The layout file for the Complex Gallery simular to the simple gallery with a added class on the div as class="gallery".
+The layout file at: [gallery.html](https://github.com/donaldboulton/DWB/blob/gh-pages/_layouts/gallery.html`) for the Complex Gallery simular to the simple gallery with a added class on the div as class="gallery".
 
 ```html
 ---
@@ -458,7 +446,7 @@ support: [gallery]
 
 <div id="main" role="main">
   <div class="gallery" itemscope itemtype="http://schema.org/ImageGallery">
-      {{ page.lcb }}{{ content }}
+      {{ page.lcb }}{ content }}
   </div>
 </div>
 ```
