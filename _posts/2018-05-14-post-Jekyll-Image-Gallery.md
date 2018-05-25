@@ -436,17 +436,17 @@ This code donload at: [gallery-layout.html](https://raw.githubusercontent.com/do
 The code below
 
 ```html
-<div id="aniimated-thumbnials{{ page.lcb }}% if include.id_number %}-{{ page.lcb }}{ include.id_number }}{{ page.lcb }}% endif %}" class="gallery">
-  <div id="gallery-sizer{{ page.lcb }}% if include.id_number %}-{{ page.lcb }}{ include.id_number }}{{ page.lcb }}% endif %}" class="gallery-sizer"></div>
+<div id="aniimated-thumbnials{{ page.lcb }}{% if include.id_number %}-{{ page.lcb }}{ include.id_number }}{{ page.lcb }}{% endif %}" class="gallery">
+  <div id="gallery-sizer{{ page.lcb }}{% if include.id_number %}-{{ page.lcb }}{{ include.id_number }}{{ page.lcb }}{% endif %}" class="gallery-sizer"></div>
    {{ page.lcb }}% for picture in include.gallery.pictures %}
   <div class="image-wrapper" itemscope itemtype="http://schema.org/ImageObject">
-    <a itemprop="contentUrl" href="{{ page.lcb }}{ site.url }}{{ page.lcb }}{ site.baseurl }}/assets/photography/{{ page.lcb }}{ include.gallery.picture_path }}/{{ picture.original }}"
-    data-responsive="{% for size in picture.sizes %} {{ page.lcb }}{ site.url}}{{ page.lcb }}{ site.baseurl }}/assets/photography/{{ page.lcb }}{ include.gallery.picture_path }}/{{ page.lcb }}{ size }} {{ page.lcb }}{ size | split: '-' | last | split: '.' | first | split: 'x' | first | strip }}{{ page.lcb }}% unless forloop.last %},{{ page.lcb }}% endunless %}{% endfor %}" class="image"
-    {{ page.lcb }}% if picture.title %} itemprop="name" data-sub-html="<div class='lg-toolbar caption'><h4>{{ page.lcb }}{ picture.title | escape }}</h4>{{ page.lcb }}% if picture.caption %}<p>{{ page.lcb }}{ picture.caption | escape }}</p>{{ page.lcb }}% endif %}</div>"{{ page.lcb }}% endif %}>
-      <img itemprop="thumbnail" alt="{{ page.lcb }}{ picture.title }}" src="{{ page.lcb }}{ site.url }}{{ page.lcb }}{ site.baseurl }}/assets/photography/{{ page.lcb }}{ include.gallery.picture_path }}/{{ page.lcb }}{ picture.thumbnail }}" />
+    <a itemprop="contentUrl" href="{{ page.lcb }}{{ site.url }}{{ page.lcb }}{{ site.baseurl }}/assets/photography/{{ page.lcb }}{{ include.gallery.picture_path }}/{{ page.lcb }}{{} picture.original }}"
+    data-responsive="{{ page.lcb }}{% for size in picture.sizes %} {{ page.lcb }}{ site.url}}{{ page.lcb }}{ site.baseurl }}/assets/photography/{{ page.lcb }}{{ include.gallery.picture_path }}/{{ page.lcb }}{{ size }} {{ page.lcb }}{{ size | split: '-' | last | split: '.' | first | split: 'x' | first | strip }}{{ page.lcb }}{% unless forloop.last %},{{ page.lcb }}{% endunless %}{{ page.lcb }}{% endfor %}" class="image"
+    {{ page.lcb }}% if picture.title %} itemprop="name" data-sub-html="<div class='lg-toolbar caption'><h4>{{ page.lcb }}{{ picture.title | escape }}</h4>{{ page.lcb }}{{% if picture.caption %}<p>{{ page.lcb }}{{ picture.caption | escape }}</p>{{ page.lcb }}{{% endif %}</div>"{{ page.lcb }}{{% endif %}>
+      <img itemprop="thumbnail" alt="{{ page.lcb }}{{ picture.title }}" src="{{ page.lcb }}{{ site.url }}{{ page.lcb }}{{ site.baseurl }}/assets/photography/{{ page.lcb }}{{ include.gallery.picture_path }}/{{ page.lcb }}{{ picture.thumbnail }}" />
     </a>
   </div>
-  {{ page.lcb }}% endfor %}
+  {{ page.lcb }}{{% endfor %}
 </div>
 ```
 
