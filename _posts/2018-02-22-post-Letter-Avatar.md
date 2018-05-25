@@ -219,7 +219,7 @@ Link to it in scripts.html
 <script src="{{ page.lcb }}{ '/assets/js/vendor/letter-avatar/letter-avatar.js' | absolute_url }}"></script>
 ```
 
-Or in a mardown frontmatter as.
+Or in a pages markdown frontmatter as.
 
 ```html
 footer:
