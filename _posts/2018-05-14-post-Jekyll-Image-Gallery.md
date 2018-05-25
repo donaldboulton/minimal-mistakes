@@ -158,7 +158,7 @@ To gather the required scripts and css we need to download and add them to our a
 Adding included Isotope and LightGallery files as below seen in my [includes/scripts.html](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_includes/scripts.html) file.
 
 ```html
-{{ page.lcb }}% if page.support contains 'gallery' %}
+{{ page.lcb }}{% if page.support contains 'gallery' %}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.5/isotope.pkgd.min.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js" crossorigin="anonymous"></script>
@@ -169,7 +169,7 @@ Adding included Isotope and LightGallery files as below seen in my [includes/scr
   <script src="{{ '/assets/dist/modules/lg-thumbnail.min.js' | relative_url }}"></script>
   <script src="{{ '/assets/dist/modules/lg-zoom.min.js' | relative_url }}"></script>
   <script src="{{ '/assets/dist/js/init-lightgallery.js' | relative_url }}"></script>
-{{ page.lcb }}% endif %}
+{{ page.lcb }}{% endif %}
 ```
 
 In each Gallery.md file to use the included above scripts add the below to your gallery page frontmatter. Using a liquid conditional if page.support contains 'gallery'
@@ -181,7 +181,7 @@ support: [gallery]
 I added the Css  same way to my [/includes/head.html](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_includes/head.html) file and the above frontmatter support will include the lightgallery.min.css, with a conditional if statement % if page.support contains 'gallery' %
 
 ```html
-   <link rel="stylesheet" href="{{ page.lcb }}{ '/assets/dist/css/lightgallery.min.css' | relative_url }}">
+   <link rel="stylesheet" href="{{ page.lcb }}{{ '/assets/dist/css/lightgallery.min.css' | relative_url }}">
 ```
 
 ### The Sass styling
@@ -416,7 +416,7 @@ support: [gallery]
 
 <div id="main" role="main">
   <div itemscope itemtype="http://schema.org/ImageGallery">
-      {{ page.lcb }}{ content }}
+      {{ page.lcb }}{{ content }}
   </div>
 </div>
 ```
@@ -428,12 +428,6 @@ This is a Gallery based on Isotope and LightGallery the same as my Simple Galler
 ### The include file
 
 This include file at: [gallery-layout.html](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_includes/gallery-layout.html)builds a srcset out of Five preconfigured images. Sizes as example image-320.jpg or 320px wide, image-800.jpg or 800px wide, image-1200px or 1200px wide, and the origional image in your stock size twice once with its origional name and once with the extenshion to the file name as above image-lg.WHATEVER .png .jpg .gif...
-
-### The include Code
-
-This code donload at: [gallery-layout.html](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_includes/gallery-layout.html) Uses LightGallery Thumbnails for navigation in a LightGallery Display, Isotope for the grid with a caption if any.
-
-The code below
 
 ```html
 <div id="aniimated-thumbnials{{ page.lcb }}{% if include.id_number %}-{{ page.lcb }}{{ include.id_number }}{{ page.lcb }}{% endif %}" class="gallery">
@@ -464,7 +458,7 @@ support: [gallery]
 
 <div id="main" role="main">
   <div class="gallery" itemscope itemtype="http://schema.org/ImageGallery">
-      content  // using liquid which kills this code block.
+      {{ page.lcb }}{{ content }}
   </div>
 </div>
 ```
