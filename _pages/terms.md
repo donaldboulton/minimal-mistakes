@@ -196,3 +196,5 @@ All original content (e.g. articles, blog posts, illustrations, artwork, and pho
 ## Attribution
 
 If you're inclined to give credit --- a link back to the source article attributed to either [Made Mistakes](https://mmistakes.github.io/minimal-mistakes/terms/){:id="open-website" rel="nofollow"} or [Michael Rose](https://mademistakes.com/about/){:id="open-website" rel="nofollow"} or this website designer [Donald Boulton](https://github.com/bibwoe){:id="open-website" rel="nofollow"} or [donboulton.com](https://donaldboulton.github.io/bibwoe/){:id="open-website" rel="nofollow"} is good enough for me. If you don't want to attribute our content, hey that's cool too. Just don't go using our stuff and republishing it as your own.
+
+{% include lightgallery-maps-iframe.html %}
