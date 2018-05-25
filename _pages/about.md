@@ -113,7 +113,7 @@ Always worked for Father Creator since the beginning of time. Just hanging out w
 
 ## Just Moved from ASP. Everything
 
-Whooo what a relief. Ruby Jekyll and Gihub Pages is the kind, figured this out in a few days with the help of [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/), and lots of documentation on Ruby, Jekyll with Github Pages.
+Whooo what a relief. Ruby Jekyll and Gihub Pages is the kind, figured this out in a few days with the help of [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/){: id="open-website" rel="nofollow"}, and lots of documentation on Ruby, Jekyll with Github Pages.
 
 Ruby, Jeckyll, Gihub pages, and even liquid are super simple; Or "Super Logical, if you think like a human". I've been hitting my head for not using Ruby and the kind much sooner.
 
