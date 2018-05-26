@@ -16,7 +16,7 @@ category:
 
 toc: true
 toc_label: "Contents"
-
+social-share: twitter --twitter-hashtags facebook linkedin
 read_time: true
 comments: true
 share: true

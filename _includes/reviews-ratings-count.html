@@ -25,3 +25,15 @@
 </div>
   <input name="fields[product]" type="hidden" value="{{ page.id }}" />
 </article>
+{% if site.data.comments[post_slug] %}
+    {% assign comments = site.data.comments[post_slug] | sort %}
+
+    {% for comment in comments %}
+        <div class="comment">
+          <h3 class="comment__author"><a href="{{ comment[1].url }}">{{ comment[1].name }}</a></h3
+          <p class="comment__date">{{ comment[1].date }}</p>
+          <img class="comment__avatar" src="https://www.gravatar.com/avatar/{{ comment[1].hash }}?d=mm&s=180">
+          {{ comment[1].message }}
+        </div>
+    {% endfor %}
+{% endif %}

@@ -99,6 +99,9 @@ snipcart_key             : "NGViODk5ZDAtNmU4OC00MjI5LWIxMGMtZGZmOWEwOGRhM2M1NjM2
 # Social Sharing
 twitter:
   username               : "donboulton"
+twitter_format: "@title: @url@tags"
+twitter_url_length: 22
+twitter_max_length: 140
 facebook:
   username               : "donboulton"
   app_id                 :
@@ -140,7 +143,7 @@ author:
   codepen                :
   dribbble               :
   flickr                 :
-  facebook               :
+  facebook               : "don-boulton"
   foursquare             :
   github                 : "donaldboulton"
   gitlab                 :
@@ -162,7 +165,7 @@ author:
 
 extlinks:
   attributes: {rel: nofollow, target: _blank}
-  rel_exclude: ['donaldboulton.github.io/popcorn/', 'twitter.com']
+  rel_exclude: ['facebook.com', 'twitter.com']
 strict_front_matter      : true
 # Reading Files
 include:

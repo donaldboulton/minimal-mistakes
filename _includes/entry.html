@@ -40,7 +40,8 @@
       <span class="byline-item"><a href="{{ post.url | relative_url }}#comments-list"><svg class="icon icon--comments-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comments-alt' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;{{ site.data.comments[post.slug] | size }} Comment{% if site.data.comments[post.slug].size > 1 %}s{% endif %}</a></span>
       {% endif %}
       {% if page.comments %}
-      <span class="byline-item"><svg class="icon icon--comments-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comments-alt' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;<a href="https://donboulton.com{{ page.url }}#disqus_thread">0 Comments</a>{% endif %}</span>
+      <span class="byline-item"><svg class="icon icon--comments-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comments-alt' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;<a href="https://donboulton.com{{ page.url }}#disqus_thread">0 Comments</a></span>
+      {% endif %}
       </div>
   </footer>
   <div class="entry-excerpt">

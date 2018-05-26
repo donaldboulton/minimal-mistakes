@@ -25,6 +25,7 @@ read_time: true
 comments: true
 related: true
 share: true
+social-share: twitter --twitter-hashtags facebook linkedin
 sidenav: true
 reviews: true
 adds: true
@@ -40,7 +41,7 @@ image:
 header:
   image: /assets/images/pages/jekyll.png
   teaser: /assets/images/pages/jekyll.png      
-
+share: twitter --twitter-hashtags facebook linkedin
 support: [adds, cookies]
 folder: _posts
 product: jekyll-image-gallery

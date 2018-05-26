@@ -1,6 +1,6 @@
 <script>
 (function ($) {
-    var $reviews = $('.js-reviews');
+    var $reviews = $('.js-comments');
 
     $('#review-form').submit(function () {
       var form = this;
@@ -19,7 +19,7 @@
           $('#review-form-submit').html('{{ site.data.ui-text[site.locale].review_btn_submitted | default: "Submitted" }}');
           $('.page__reviews-form.js-notice').removeClass('notice--danger');
           $('.page__reviews-form.js-notice').addClass('notice--success');
-          showAlert('{{ site.data.ui-text[site.locale].review_success_msg | default: "Thanks for your reviw and ratings! It will show on the site once it has been approved." }}');
+          showAlert('{{ site.data.ui-text[site.locale].review_success_msg | default: "Thanks for your review and ratings! It will show on the site once it has been approved." }}');
         },
         error: function (err) {
           console.log(err);
