@@ -1,5 +1,6 @@
 ---
-title: thanks
+title: Thanks
+permalink: /thanks/
 description: Thank You For Your Submission
 email: donaldboulton@gmail.com
 hero: Thank You For Your Submission

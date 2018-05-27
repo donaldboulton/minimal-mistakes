@@ -3,6 +3,7 @@ title: Contact
 description: Get in touch
 email: donaldboulton@gmail.com
 hero: Get in touch
+permalink: /contact/
 map:
   latitude: 35.458429035
   longitude: -97.634299097
