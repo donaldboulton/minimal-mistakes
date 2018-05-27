@@ -1,0 +1,61 @@
+<div class="contact-box">
+	<form id="contact-form" action="https://formspree.io/donaldboulton@gmail.com" method="post" class="contact-form">
+    <h3>Send us a message</h3>
+  <div class="form-group">
+		<label for="name">Full Name</label>
+		<input type="text" name="name" id="name" placeholder="Enter your name..." required autofocus>
+  </div>
+  <div class="form-group">
+		<label for="email">Email Address</label>
+		<input type="email" name="_replyto" id="email" placeholder="Enter your email..." required inputmode="email">
+  </div>
+  <div class="form-group">
+		<label for="message">Message</label>
+		<textarea name="message" id="message" placeholder="Enter your message..." required></textarea>
+  </div>
+  <div>
+    <input type="hidden" name="_replyto" value="{{ page.email }}">
+    <input type="hidden" name="_subject" value="Website donboulton New Message" />
+    <input type="hidden" name="_next" value="https://donboulton.com/thanks" />
+		<input type="text" name="_gotcha" style="display: none;">
+  </div>
+  <div class="form-group">
+    <div id="recaptcha" class="g-recaptcha" data-theme="dark" data-tabindex="5" data-sitekey="6LerR1MUAAAAACWH7t30s7V4aApQZaIVVPcvH21X"></div>
+  </div>
+  <div class="form-group">
+    <input type="submit" value="Send Message" class="btn btn--primary">
+  </div>
+	</form>
+
+	<div class="contact-details">
+		<div class="map" id="map"></div>
+</div>
+
+<script type="text/javascript">
+	window.mapData = {{ page.map | jsonify }};
+
+	function initMap() {
+		var myOptions = {
+			scrollwheel: false,
+			draggable: false,
+			panControl: false,
+			disableDefaultUI: true,
+			styles: [{"featureType":"administrative","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"visibility":"simplified"},{"color":"#fcfcfc"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"visibility":"simplified"},{"color":"#fcfcfc"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"visibility":"simplified"},{"color":"#dddddd"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"visibility":"simplified"},{"color":"#dddddd"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"visibility":"simplified"},{"color":"#eeeeee"}]},{"featureType":"water","elementType":"geometry","stylers":[{"visibility":"simplified"},{"color":"#dddddd"}]}],
+			zoom: window.mapData.zoom,
+			maxZoom: window.mapData.zoom,
+			minZoom: window.mapData.zoom,
+			center: new google.maps.LatLng(window.mapData.latitude, window.mapData.longitude),
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		};
+		map = new google.maps.Map(document.getElementById("map"), myOptions);
+		marker = new google.maps.Marker({
+			map: map,
+			position: new google.maps.LatLng(window.mapData.latitude, window.mapData.longitude)
+		});
+
+		google.maps.event.addDomListener(window, "resize", function () {
+			map.setCenter(myOptions.center);
+		});
+	}
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key={{ site.google_maps_javascript_api_key }}&amp;callback=initMap"></script>

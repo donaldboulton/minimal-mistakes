@@ -18,27 +18,28 @@
 			<div class="review-content">
 				<div class="form-group">
             <div itemscope itemtype="http://schema.org/Thing">
-            <span>Review of:&nbsp;</span><span itemprop="itemReviewed">{{ reviewData.title }}</span></div>
-					  <div>Title:&nbsp;</span><span class="title-text">{{ reviewData.title }}</div>
+               <span class="item-reviewed text-center">Item Reviewed</span>
+               <p itemprop="itemReviewed">{{ reviewData.title }}</p>
+            </div>
+					  Title:&nbsp;<span class="title-text">{{ reviewData.title }}</span>
 				</div>
 				<div class="form-group form">
              <div class="field-group1" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
-							<span>Rating:</span>
+							<span>Rating</span>
 		  				{% for i in (1..reviewData.review) %}
     						<svg class="icon icon--star rating-star rating-radio-star--on"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'assets/icons/' | relative_url }}"></use></svg>
 							{% endfor %}
 							<meta class="hidden" itemprop="ratingValue" content="{{ reviewData.review }}">
 					</div>
 				</div>
-        <div itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <div itemprop="author" class="review-author" itemscope itemtype="http://schema.org/Person">
+          <div>Author</div>
             <img itemprop="image" avatar="{{ reviewData.name }}" alt="{{ reviewData.name }}" class="review-avatar-image text-left" />
-            &nbsp;<span itemprop="name">{{ reviewData.name }}</span>
-        </div>
-        <div class="form-group">
-            <span><small></small>Url:&nbsp; {{ reviewData.url }} </small></span>
+            <span itemprop="name" class="review-author-name"><small>{{ reviewData.name }}</small>
+            <small>{{ reviewData.url }}</small></span>
         </div>
 				<div class="form-group">
-            Message:<span itemprop="description"></span> {{ reviewData.description | markdownify }}</span>
+            <span>Message</span><span itemprop="description"></span> {{ reviewData.description | markdownify }}</span>
 				</div>
 			</div>
 				<span style="display: none;" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
