@@ -58,7 +58,7 @@
 
       {% if author.email %}
         <li>
-          <a rel="me" href="/contact.html">
+          <a rel="me" href="/contact/">
             <meta itemprop="email" content="{{ author.email }}" />
             <svg class="icon icon--email fa-email" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-email' | prepend: 'assets/icons/' | relative_url }}"></use></svg> {{ site.data.ui-text[site.locale].email_label | default: "Email" }}
           </a>
