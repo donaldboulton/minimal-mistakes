@@ -75,6 +75,10 @@
   </script>
 {% endif %}
 
+{% if page.support contains 'contact' %}
+% include contact-scripts.html %}
+{% endif %}
+
 {% if page.support contains 'products' %}
 <script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" id="snipcart" data-api-key="NGViODk5ZDAtNmU4OC00MjI5LWIxMGMtZGZmOWEwOGRhM2M1NjM2NjE0Nzc1OTQ2NzMzMTU5"></script>
 {% endif %}
