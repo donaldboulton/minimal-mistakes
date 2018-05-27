@@ -1,0 +1,93 @@
+---
+permalink: /keybase.txt
+---
+==================================================================
+https://keybase.io/donaldboulton
+--------------------------------------------------------------------
+
+### Keybase proof
+
+I hereby claim:
+
+  * I am donaldboulton on github.
+  * I am donaldboulton (https://keybase.io/donaldboulton) on keybase.
+  * I have a public key whose fingerprint is 8407 9EC9 0875 5818 AF1D  E3E4 512F 2AB5 68F3 BC83
+
+To claim this, I am signing this object:
+
+```json
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120177f3ec298f281ccd49629f3aaa9b2ba8c17fa654a677f47c2674717a75bde7f0a",
+      "fingerprint": "84079ec908755818af1de3e4512f2ab568f3bc83",
+      "host": "keybase.io",
+      "key_id": "512f2ab568f3bc83",
+      "kid": "0101055b0e570dbe49b2f6e63493059580dd4eb5a7a41d66a0b33d36babbe65bb0630a",
+      "uid": "76385e003dcec5407fdc92c8bd4b3819",
+      "username": "donaldboulton"
+    },
+    "service": {
+      "name": "github",
+      "username": "donaldboulton"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1527431371,
+  "expire_in": 157680000,
+  "prev": "a1156052ccacf9da97ca358c4ba5801459860e5b72e24350d972208f63d5e268",
+  "seqno": 6,
+  "tag": "signature"
+}
+```
+
+with the key [8407 9EC9 0875 5818 AF1D  E3E4 512F 2AB5 68F3 BC83](https://keybase.io/donaldboulton), yielding the signature:
+
+```
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.77
+Comment: https://keybase.io/crypto
+
+yMNkAnichZJ9UFRVGMYXFhZaVmC0VcskuzONBovdr3M/VpMaShSRrcGiGYL1nHvP
+hQvL7rYfgG5kA46mBcX4EeAHoFGa5ZQ7TY0RhVqSWwTlGkOZOA6lUqLxoYET3WX0
+v2Y6548z5z2/55nnvPOemqXXGaOeeTT145LRjtqoUFeTX1dg/DIUIJBL3kBYA0QZ
+njmwQ8Zen71MlQkrQVI0SfG8wmCJFgWFFihJklmRo0WFgRCKiEZQkChegRxgIaeR
+LC/RHM/yFA95gGTMKyQkLISiOouxx+1RnT7NVmBJXsSSSAo8AAIlQIWSMYNZQNEK
+DRHgBIVBksBowhKXN6LQwiHoxUtVl1bTLvaZeP/B382tbQAQiQFPygizWlKFwxzD
+igwJRCCQssxiBCAPWUrmOEgihpEZDkGEMAcQIjlmJrd/xo7nGAFgkmRkCUtAC6/I
+kkhLApJZxAiUGAG92OOE5VijZZcTOmTk8jt8LidRbSG0pwpVwpHu3kGKVV+JH/2P
+zLfBHalXYmS/42BHqlPWOqkJK7DHq2qcldJIyadGLChA8yxDMTxlIXCVW/Vguxoh
+AM8JpLYshNuDKzRLSFGAIwEtSVBSRBmKvAQZIEgsglprKBaIAqe1DvE0plkGkLLI
+0zQpKBwjA0xzAhH504tOF2HltJiwWLP0qsVO6PN7MFF9ouuFGF2UUWeIjY5MmM54
+T/LduQttSbo9K4//9aX79owdLehnayt/T6QTTH36kcldrRlLftjaIGfFzj0O9MGT
+OdF/Dkr23KFtlev73Bw2rvjtUPb2nrr9qWUB8xOGW2semp2Zc/E1b9SK8rXhyUXr
+P6kyBa+3lV5Iz2n/oHmhfXl7fKFppDG3tnlqbvPhlMzPzH/br1wY9IHrrvG+zGvu
+5srgCXP4ae9e4PjaZKr/MVhYlvbK5Lt/vbPkrSp99I3TkBmSRnsyGmP+6c7gHtYN
+hOt7LlXFEuG3r47uMbXGbWns31fSUltzPnf3U62oZuqLNmvINjhQvNJw+H374JFV
+xv3utXUrRw7sTfZkZV4pVZfXGIqOfpRSGA6+bFg2bJv/Zn2vuYGIHrO2P8L5v9cL
++tWNjO3xbTvafF1X0bl0S3f0ubyt5/+4lLCoKc7Q8Grg+WzZWkJRl/f5y3OpzgNV
+xwI2f+rBrMVK/njvxh2Jp+acVRzD5nuHO6YXrBtKV3onVhfcnD2eZ3xwc/pwHHhy
+46Gx6efYa0kHl51eqtbFd8775quF7K1nJ3euym86o19XNB7ePP1AWtfgVMyxMz2B
+k8fv3+SfMMcnbOrYefPb7vob791+4yz6sHkODlo+H1E7mrsHEj5dcDmxs+ixI9kT
+cUxyy+6J9Glb9k+hFENlzeLXvf7vmuZ3Oy6WdqwJJfdXs/OSqnsdabZCzy9qS/6u
+n/8FZxG9Sw==
+=ERmb
+-----END PGP MESSAGE-----
+
+```
+
+And finally, I am proving ownership of the github account by posting this as a gist.
+
+### My publicly-auditable identity:
+
+https://keybase.io/donaldboulton
+
+### From the command line:
+
+Consider the [keybase command line program](https://keybase.io/download).
+
+```bash
+# look me up
+keybase id donaldboulton
+```
