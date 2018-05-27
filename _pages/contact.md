@@ -29,7 +29,7 @@ support: [adds, cookies]
 folder: /
 slug: contact
 product: contact
-github_editme_path: donaldboulton/DWB/blob/gh-pages/contact.html
+github_editme_path: donaldboulton/DWB/blob/gh-pages/_pages/contact.md
 ---
 
 {% include octo-arm.html %}
