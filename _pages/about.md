@@ -5,6 +5,7 @@ title: "About"
 author_profile: true
 toc: false
 author: Donald Boulton
+email: donaldboulton@gmail.com
 read_time: false
 comments: true
 share: true
@@ -23,12 +24,12 @@ category:
   - Donald Boulton
 image:
   cover: true
-  path: &image /assets/images/pages/digital-box-compressor.jpg
+  path: &image /assets/images/pages/digital.jpg
   feature: *image
-  thumbnail: /assets/images/pages/digital-box-compressor-320.jpg
+  thumbnail: /assets/images/pages/digital-320.jpg
 header:
-  image: /assets/images/pages/digital-box-compressor.jpg
-  teaser: /assets/images/pages/digital-box-compressor-320.jpg
+  image: /assets/images/pages/digital-.jpg
+  teaser: /assets/images/pages/digital-320.jpg
 sidebar:
   - title: "Rockwell RV"
     image: /assets/images/pages/rockwell-rv-sitemap-sm.jpg
@@ -40,18 +41,18 @@ locations:
   - Rockwell+RV+Park+%26+Campground
 header:
   overlay_color: "#5e616c"
-  overlay_image: /assets/images/pages/digital_box_1400-compressor.jpg
+  overlay_image: /assets/images/pages/digital.jpg
   cta_label: "Posts"
   cta_url: "/year-archive/"
-  caption: Lost In a Digatal Box
-excerpt: 'Hosted on GitHub CloudFlare with Full SSL.<br /> <small><a href="https://github.com/donaldboulton/DWB/">Github Jekyll Gulp Travis CI Build</a></small><br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
+  caption: Gods Digital World
+excerpt: 'Hosted on GitHub CloudFlare with Full SSL.<br /> <small><a href="https://donboulton.com">About Donald Boulton at donboulton.com</a></small><br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
 
 feature_row:
   - image_path: /assets/images/pages/octocat.svg
     alt: "Cool and Free"
     title: "Cool and Free"
     excerpt: "Hosted on Gihub Pages, Driven by CloudFlare, SSL and No Bots by CloudFlare."
-    url: "https://github.com/donaldboulton/DWB"
+    url: "https://donboulton.com"
     btn_class: "btn--primary"
     btn_label: "Learn More"
   - image_path: /assets/images/pages/staticman.svg
