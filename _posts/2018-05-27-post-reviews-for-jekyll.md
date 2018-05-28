@@ -5,12 +5,11 @@ layout: single
 read_time: true
 comments: true
 share: true
-toc: false
+toc: true
 search: true
 author: Donald Boulton
 author_profile: true
 adds: true
-places: true
 cookies: true
 reviews: true
 date: 2018-05-27 16:16:01 -0600
@@ -75,7 +74,6 @@ There is not a real good way to do this if it is not data-database javascript dr
 I searched the internet for someone using Jekyll having a page reviews - ratings system. Most all are for Books, Movies or Products. And some I found for products were liquid and "no js" with no external content as a database. But they were built with sliders,"not stars" for ratings and per several products on a single page. And none had aggregate product ratings. So I used Staticman's Popcorn repo, basically the scss and the way he used images for the Stars Ratings without material design styling and images. I added a star.svg and star_border.svg to my icons.svg file for the stars, which needs svg4everybody.js to work.
 
 When I make a repo for this and  I will just include or inline the svg's, not us a sprite so svg4everybody.js, will not be needed.
-
 
 Unlike page or site Comments which Google nor any Search Engine gives no positioning weight to. Comments in a Website are just a page filler unless they are linked to some social media post for search enging access or linked socially. Todays site, page or product commenting should be inclusive with Twitter or other Social Providers.
 
@@ -148,11 +146,11 @@ The svg sprite I use for all icons in my site, ther are two types of star includ
         <input type="hidden" name="options[reCaptcha][siteKey]" value="6LerR1MUAAAAACWH7t30s7V4aApQZaIVVPcvH21X">
         <input type="hidden" name="options[reCaptcha][secret]" value="{{ page.lcb }}{ site.reCaptcha.secret }}">
       </div>
-      <!-- Start comment form alert messaging -->
+      <!-- Start revies form alert messaging -->
       <p class="hidden js-notice">
         <span class="js-notice-text"></span>
       </p>
-      <!-- End comment form alert messaging -->
+      <!-- End review form alert messaging -->
       <div class="form-group">
           <div id="recaptcha2" class="g-recaptcha" data-theme="dark" data-tabindex="5" data-sitekey="6LerR1MUAAAAACWH7t30s7V4aApQZaIVVPcvH21X"></div>
       </div>
@@ -221,57 +219,59 @@ And the loading icon is from the icons.svg file
 
 The code for my reviews page with a [Letter Avatar](https://donboulton.com/2018-02-22-post-Letter-Avatar.html) for the user image.
 
-```html
-<div id="reviews" class="js-comments">
-  {{ page.lcb }}% if page.reviews == true and site.data.reviews | where:'product',page.slug.size > 1 %}
-  {{ page.lcb }}% assign reviews = site.data.reviews | where:'product',page.slug %}
-	{{ page.lcb }}% assign reviews = site.data.reviews | sort %}
+This code below is to be changed to have the reviews show up just on the page that was reviewed.
 
-	{{ page.lcb }}% for review in reviews reversed limit:3 %}
-		{{ page.lcb }}% assign reviewData = review[1] %}
-		<article itemscope itemtype="http://schema.org/Review" class="toc1">
-				<span class="section-title">
-					<h3 class="nav__title1"><svg width="14px" height="16px" class="icon icon--pulse" viewBox="0 0 14 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-						<g id="Octicons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-							<g id="pulse" fill="#ffffff">
-								<polygon id="Shape" points="11.5 8 8.8 5.4 6.6 8.5 5.5 1.6 2.38 8 0 8 0 10 3.6 10 4.5 8.2 5.4 13.6 9 8.5 10.6 10 14 10 14 8"></polygon>
-							</g>
-						</g>
-					</svg> Page Review</span></h3>
-				</span>
-			<div class="review-content">
-				<div class="form-group">
+```liquid
+<div id="reviews" class="js-comments">
+{{ page.lcb }}% if page.reviews == true and site.data.reviews | where:'product',page.slug.size > 1 %}
+{{ page.lcb }}% assign reviews = site.data.reviews | where:'product',page.slug %}
+{{ page.lcb }}% assign reviews = site.data.reviews | sort %}
+
+{{ page.lcb }}% for review in reviews reversed limit:3 %}
+{{ page.lcb }}% assign reviewData = review[1] %}
+<article itemscope itemtype="http://schema.org/Review" class="toc1">
+<span class="section-title">
+<h3 class="nav__title1"><svg width="14px" height="16px" class="icon icon--pulse" viewBox="0 0 14 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Octicons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+<g id="pulse" fill="#ffffff">
+<polygon id="Shape" points="11.5 8 8.8 5.4 6.6 8.5 5.5 1.6 2.38 8 0 8 0 10 3.6 104.5 8.2 5.4 13.6 9 8.5 10.6 10 14 10 14 8"></polygon>
+</g>
+</g>
+</svg> Page Review</span></h3>
+</span>
+<div class="review-content">
+<div class="form-group">
             <div itemscope itemtype="http://schema.org/Thing">
                <span class="item-reviewed text-center">Item Reviewed</span>
                <p itemprop="itemReviewed">{{ page.lcb }}{ reviewData.title }}</p>
             </div>
-					  Title:&nbsp;<span class="title-text">{{ page.lcb }}{ reviewData.title }}</span>
-				</div>
-				<div class="form-group form">
+  Title:&nbsp;<span class="title-text">{{ page.lcb }}{ reviewData.title }}</span>
+</div>
+<div class="form-group form">
              <div class="field-group1" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
-							<span>Rating</span>
-		  				{{ page.lcb }}% for i in (1..reviewData.review) %}
-    						<svg class="icon icon--star rating-star rating-radio-star--on"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'assets/icons/' | relative_url }}"></use></svg>
-							{% endfor %}
-							<meta class="hidden" itemprop="ratingValue" content="{{ page.lcb }}{ reviewData.review }}">
-					</div>
-				</div>
+<span>Rating</span>
+{{ page.lcb }}% for i in (1..reviewData.review) %}
+<svg class="icon icon--star rating-star rating-radio-star--on"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'assets/icons/' | relative_url }}"></use></svg>
+{{ page.lcb }}% endfor %}
+<meta class="hidden" itemprop="ratingValue" content="{{ page.lcb }}{ reviewData.review }}">
+</div>
+</div>
         <div itemprop="author" class="review-author" itemscope itemtype="http://schema.org/Person">
           <div>Author</div>
             <img itemprop="image" avatar="{{ page.lcb }}{ reviewData.name }}" alt="{{ page.lcb }}{ reviewData.name }}" class="review-avatar-image text-left" />
             <span itemprop="name" class="review-author-name"><small>{{ page.lcb }}{ reviewData.name }}</small>
             <small>{{ page.lcb }}{ reviewData.url }}</small></span>
         </div>
-				<div class="form-group">
+<div class="form-group">
             <span>Message</span><span itemprop="description"></span> {{ page.lcb }}{ reviewData.description | markdownify }}</span>
-				</div>
-			</div>
-				<span style="display: none;" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+</div>
+</div>
+<span style="display: none;" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
           <meta class="hidden" itemprop="name" content="donboulton.com">
         </span>
         <meta itemprop="url" type="hidden" value="{{ page.lcb }}{ page.url | absolute_url }}">
         <input type="hidden" name="options[parent]" value="{{ page.lcb }}{ page.url | absolute_url }}">
-		</article>
+</article>
   {{ page.lcb }}% endfor %}
   {{ page.lcb }}% endif %}
 </div>
