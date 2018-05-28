@@ -297,17 +297,19 @@ I use the review count and aggregate rating per page at the top of each post in 
             <span class="byline-item text-right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="icon rating-star"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"/></svg>&nbsp;Page Rating
               {{ page.lcb }}% if reviewCount > 0 %}
                 {{ page.lcb }}% assign sum = sum | divided_by:reviewCount %}
-                (&nbsp;Average:&nbsp;<span itemprop="ratingValue">{{ sum | round: 1 }}&nbsp;</span>)
+                (&nbsp;Average:&nbsp;<span itemprop="ratingValue">{{ page.lcb }}{ sum | round: 1 }}&nbsp;</span>)
               {{ page.lcb }}% endif %}
             </span>
           </p>
           <div style="display:none;">
           <meta class="hidden" itemprop="bestRating" value="5">
           <meta class="hidden" itemprop="worstRating" value="1">
-          <span class="hidden" itemprop="name">{{ page.slug }}</span>
-          <input name="fields[product]" type="hidden" value="{{ page.slug }}" />
-          <input type="hidden" name="options[origin]" value="{{ page.url | relative_url }}">
+          <span class="hidden" itemprop="name">{{ page.lcb }}{ page.slug }}</span>
+          <input name="fields[product]" type="hidden" value="{{ page.lcb }}{ page.slug }}" />
+          <input type="hidden" name="options[origin]" value="{{ page.lcb }}{ page.url | relative_url }}">
           <meta class="hidden" content="donboulton.com">
 ```
 
-Working on examples without the icons.svg file and updating the elsif statement for 0 counts and 0 ratings.
+Working on examples without the icons.svg file and adding a elsif statement for 0 counts and 0 ratings.
+
+Any input on how to finish this would be nice. Leave a review below or use any of the social liks in any page to Question or comment on this page.
