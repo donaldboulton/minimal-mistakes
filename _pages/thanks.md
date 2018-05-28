@@ -35,3 +35,8 @@ github_editme_path: donaldboulton/DWB/blob/gh-pages/thanks.html
 {% include octo-arm.html %}
 
 # Thanks you for your Submission
+
+If a response is required I will try to reply A.S.A.P..
+
+
+{% include thank-you-video.html %}
