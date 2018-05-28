@@ -220,7 +220,7 @@ Taken from:
 
 Fetching something over the network is both slow and expensive: large responses require many roundtrips between the client and server, which delays when they are available and can be processed by the browser, and also incurs data costs for the visitor. As a result, the ability to cache and reuse previously fetched resources is a critical aspect of optimizing for performance.
 
-Contents
+## Contents
 
 Validating cached responses with ETags
 Cache-Control
@@ -230,7 +230,7 @@ Caching checklist
 
 Great news, every browser ships with an implementation of an HTTP cache! All we have to do is ensure that each server response provides correct HTTP header directives to instruct the browser on when and for how long the response can be cached by the browser.
 
-Remember
+### Remember
 
 If you are using a Webview to fetch and display web content in your application, you may need to provide additional configuration flags to ensure that the HTTP cache is enabled, its size is set to a reasonable number to match your use case, and that the cache is persisted. Check the platform documentation and confirm your settings!
 
@@ -238,7 +238,7 @@ If you are using a Webview to fetch and display web content in your application,
 
 When the server returns a response it also emits a collection of HTTP headers, describing its content-type, length, caching directives, validation token, and more. For example, in the above exchange the server returns a 1024 byte response, instructs the client to cache it for up to 120 seconds, and provides a validation token (x234dff) that can be used after the response has expired to check if the resource has been modified.
 
-Validating cached responses with ETags
+## Validating cached responses with ETags
 
 Validation token is communicated by the server via the ETag HTTP header
 Validation token enables efficient resource update checks: no data transfer if the resource has not changed.
@@ -253,30 +253,30 @@ In above example the client automatically provides the ETag token within the If-
 
 As a web developer, how do you take advantage of efficient revalidation? The browser does all the work on our behalf. It will automatically detect if a validation token has been previously specified, it will append it to an outgoing request, and it will update the cache timestamps as necessary based on received response from the server. The only thing thats left for us to do is to ensure that the server is, in fact, providing the necessary ETag tokens: check your server documentation for necessary configuration flags.
 
-Remember
+### Remember
 
 Tip: HTML5 Boilerplate project contains sample configuration files for all the most popular servers with detailed comments for each configuration flag and setting: find your favorite server in the list, look for appropriate settings, and copy / confirm that your server is configured with recommended settings.
 
-Cache-Control
+## Cache-Control
 
 Each resource can define its caching policy via Cache-Control HTTP header
 Cache-Control directives control who can cache the response, under which conditions, and for how long
 
 The best request is a request that does not need to communicate with the server: a local copy of the response allows us to eliminate all network latency and avoid data charges for the data transfer. To achieve this, the HTTP specification allows the server to return a number of different Cache-Control directives that control how, and for how long, the individual response can be cached by the browser and other intermediate caches.
 
-Remember
+### Remember
 
 Cache-Control header was defined as part of the HTTP/1.1 specification and supersedes previous headers (e.g. Expires) used to define response caching policies. All modern browsers support Cache-Control, hence that is all we will need.
 
 {% include figure image_path="/assets/images/pages/performance/http-cache-control-highlight.png" alt="Cache Control" caption="Cache Control" class="align-left" %}
 
-no-cache and no-store
+## no-cache and no-store
 
 no-cache indicates that the returned response cannot be used to satisfy a subsequent request to the same URL without first checking with the server if the response has changed. As a result, if a proper validation token (ETag) is present, no-cache will incur a roundtrip to validate the cached response, but can eliminate the download if the resource has not changed.
 
 By contrast, no-store is much simpler, as it simply disallows the browser and all intermediate caches to store any version of the returned response - e.g. one containing private personal or banking data. Everytime the user requests this asset, a request is sent to the server and a full response is downloaded each and every time.
 
-public vs. private
+## public vs. private
 
 If the response is marked as public then it can be cached, even if it has HTTP authentication associated with it, and even when the response status code isnt normally cacheable. Most of the time, public isnt necessary, because explicit caching information (like max-age) indicates that the response is cacheable anyway.
 
@@ -286,13 +286,14 @@ max-age
 
 This directive specifies the maximum time in seconds that the fetched response is allowed to be reused for from the time of the request - e.g. max-age=60 indicates that the response can be cached and reused for the next 60 seconds.
 
-Defining optimal Cache-Control policy
+## Defining optimal Cache-Control policy
 
 {% include figure image_path="/assets/images/pages/performance/http-cache-decision-tree.png" alt="Http Cache" caption="Cache Http Cache" class="align-center" %}
 
 Follow the decision tree above to determine the optimal caching policy for a particular resource, or a set of resources used by your application. Ideally, you should aim to cache as many responses as possible on the client for the longest possible period, and provide validation tokens for each response to enable efficient revalidation.
 
-Cache-Control directives Explanation
+## Cache-Control directives Explanation
+
 max-age=86400 Response can be cached by browser and any intermediary caches (i.e. it is "public") for up to 1 day (60 seconds x 60 minutes x 24 hours)
 private, max-age=600 Response can be cached by the clients browser only for up to 10 minutes (60 seconds x 10 minutes)
 no-store Response is not allowed to be cached and must be fetched in full on every request.
@@ -301,7 +302,7 @@ According to HTTP Archive, amongst the top 300,000 sites (by Alexa rank), nearly
 
 Audit your pages to identify which resources can be cached and ensure that they are returning appropriate Cache-Control and ETag headers.
 
-Invalidating and updating cached responses
+## Invalidating and updating cached responses
 
 Locally cached responses are used until the resource 'expires'
 Embedding a file content fingerprint in the URL enables us to force the client to update to a new version of the response
@@ -326,7 +327,7 @@ The image is cached without a version or unique fingerprint and is set to expire
 
 The combination of ETag, Cache-Control, and unique URLs allows us to deliver the best of all worlds: long-lived expiry times, control over where the response can be cached, and on-demand updates.
 
-Caching checklist
+## Caching checklist
 
 There is no one best cache policy. Depending on your traffic patterns, type of data served, and application-specific requirements for data freshness, you will have to define and configure the appropriate per-resource settings, as well as the overall caching hierarchy.
 
