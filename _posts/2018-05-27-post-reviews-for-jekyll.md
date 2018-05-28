@@ -13,9 +13,14 @@ adds: true
 places: true
 cookies: true
 reviews: true
-date: 2017-01-02 16:16:01 -0600
-last_modified_at: 2017-01-13T12:42:38-04:00
-
+date: 2018-05-27 16:16:01 -0600
+last_modified_at: 2018-05-28T10:42:38-04:00
+tags:
+  - Jekyll
+  - Reviews
+  - Ratings
+category:
+  - Jekyll
 permalink: 2018-05-27-post-reviews-for-jekyll.html
 image:
   cover: true
@@ -24,16 +29,15 @@ image:
   thumbnail: /assets/images/pages/reviews-320.jpg
 
 locations:
-  - Idabel OKlahoma
+  - OKC, Oklahoma
 
 excerpt: "Comments Ratings, Built because of Google Positioning Micro data for Search Results. Built Using and extending Staticman's Popcorn Github repo. This is still a work in progress so Leave a Review for any page in donboulton.com and the page aggregate rating will increase after a successfull push to my github repo, not quite finished yet learning liquid math??? The aggregate rating and review per page are working review and rate and it soon will show up as a rating on that page."
 
 support: [places, adds, cookies]
-product: post-reviews-external
-id: post-reviews
+product: reviews-for-jekyll
 folder: _posts
-product: reviews
-slug: reviews
+product: reviews-for-jekyll
+slug: reviews-for-jekyll
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2018-05-27-post-reviews-for-jekyll.md
 ---
 
@@ -69,4 +73,3 @@ What I have left to finish is overall site aggregate averaged rating and a overa
 And to have the reviews of that page just show up on that page. With 0 counts and 0 rating if there are none, should be a simple elseif for that.
 
 This is also built with products, books, or movies in mind just change the slug from products to whatever.
-
