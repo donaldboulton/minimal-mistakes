@@ -48,30 +48,48 @@ lcb: "{"
 
 # Site Reviews
 
-Reviews [Powered by Staticman](https://staticman.net) Built for the need of Micro data used for Google Search Results and Search positioning. Built Using and extending Staticman's Popcorn Github repo. This is still a work in progress so Leave a Review for any page in donboulton.com and the page aggregate rating will increase after a successfull push to my github repo. The aggregate rating and review count per page are working, review and ratings for just that page so it show up as a review rating for just that page, its simple reversed for now and not page specific so something will show up for reviews on every page my frontmatter is set to reviews: true
+Reviews [Powered by Staticman](https://staticman.net) Built for the need of Micro data used for Google Search Results and Search positioning. Built Using and extending Staticman's Popcorn Github repo.
+
+This is still a work in progress so Leave a Review for any page in donboulton.com and the page aggregate rating will increase after a successfull push to my github repo. The aggregate rating and review count per page are working, review and ratings for just that page so the reviews show up as a review rating for just that page.
+
+Its simple reversed for now and not page specific so random reviews will show up for reviews on every page my frontmatter is set to reviews: true
+
+## Reviews and the Web
+
+Here are several prespectives on website reviews I found. [Advanced Web Ranking](https://www.advancedwebranking.com/blog/how-to-use-schema-markup-for-reviews/) and [Nick Pierno at Whitespark](https://whitespark.ca/blog/how-to-use-aggregate-review-schema-to-get-stars-in-the-serps/)
+
+There is not a real good way to do this if it is not data-database javascript driven. All the internet examples are hard coded json files which work with google's structured data testing tool, but not what I want to do, I want to get the accurate user review counts and rating sum averages. I could not find any examples of doing it the Jekyll way.
+
+## Google Reviews
+
+My goal is to have my Reviews-Ratings show up on Google search and increase my positioning and show a page review rating in search results, incorporated with Google Reviews.
+Doing so means perfect microdata with aggregate, "Averaged" page and site ratings, or it would be useless for my goal.
+
+Hoping to get somthing like this on search results
+
+{% include figure image_path="/assets/images/pages/google-individual-reviews.png" alt="Search Results" caption="Search Results" %}
 
 ## Site Reviews Count & Ratings Average
 
 Working on single page reviews that show up specific to the page, then overall site aggregate rating and review totals.
 
-## Google Reviews
+### Structured data My site
 
-My goal is to have my Reviews-Ratings show up on Google search and increase my positioning and show a page review rating in search results, incorporated with Google Reviews.
-Doing so ment perfect microdata with aggregate, "Averaged" page and site ratings, or it would be useless for my goal.
+I have perfect nested structured data in my site. Try this.
 
-{% include figure image_path="/assets/images/pages/google-individual-reviews.png" alt="Search Results" caption="Search Results" %}
+{% include figure image_path="/assets/images/pages/review-structured-data-800.jpg" alt="Search Results" caption="Site Test Results" %}
 
-Hoping to get somthing like this on search results
+### Structured data My reviews
 
-## Reviews and the Web
+This is my reviews data fron Google's Structured Data Testing Tool. My microdata is perfect for what I wanted for Reviews with Ratings with review count and aggergate ratings per item as in any Page, Post, Gallery, Gallery Item, and others.
 
-Here are several prespectives on website reviews I found. [Advanced Web Ranking](https://www.advancedwebranking.com/blog/how-to-use-schema-markup-for-reviews/) and [Nick Pierno at Whitespark](https://whitespark.ca/blog/how-to-use-aggregate-review-schema-to-get-stars-in-the-serps/).
-
-There is not a real good way to do this if it is not data-database javascript driven. All the internet examples are hard coded json files which work with google's structured data testing tool, but not what I want to do, I want to get the accurate user review counts and rating sum averages. I could not find any examples of doing it the Jekyll way.
+{% include figure image_path="/assets/images/pages/just-review-structured-data-800.jpg" alt="Search Results" caption="Review Results" %}
 
 ## Jekyll Reviews-Anyone
 
-I searched the internet for someone using Jekyll having a page reviews - ratings system. Most all are for Books, Movies or Products. And some I found for products were liquid and "no js" with no external content as a database. But they were built with sliders,"not stars" for ratings and per several products on a single page. And none had aggregate product ratings. So I used Staticman's Popcorn repo, basically the scss and the way he used images for the Stars Ratings without material design styling and images. I added a star.svg and star_border.svg to my icons.svg file for the stars, which needs svg4everybody.js to work.
+I searched the internet for someone using Jekyll having a page reviews - ratings system. Most all are for Books, Movies or Products. And some I found for products were liquid and "no js" with no external content as a database.
+
+They were built with sliders,"not stars" for ratings and per several products on a single page. And none had aggregate product ratings. So I used Staticman's Popcorn repo, basically the scss and the way he used images for the Stars Ratings without material design styling and images. I added a star.svg and star_border.svg to my icons.svg file for the stars, which needs [svg4everybody.js](https://github.com/jonathantneal/svg4everybody) to work.
 
 When I make a repo for this and  I will just include or inline the svg's, not us a sprite so svg4everybody.js, will not be needed.
 
@@ -87,18 +105,6 @@ And to have the reviews of that page just show up on that page. With 0 counts an
 
 This is also built with products, books, or movies in mind just change the slug from products to whatever.
 
-### Structured data site
-
-I have perfect nested structured data in my site. Try this.
-
-{% include figure image_path="/assets/images/pages/review-structured-data-800.jpg" alt="Search Results" caption="Search Results" %}
-
-### Structured data review
-
-This is my reviews data fron Googles Structured Data Testing Tool.
-
-{% include figure image_path="/assets/images/pages/just-review-strauctured-data-800.jpg" alt="Search Results" caption="Search Results" %
-
 ### The page frontmatter
 
 ```html
@@ -109,9 +115,13 @@ slug: reviews-for-jekyll
 
 ### The Images
 
-The svg sprite I use for all icons in my site, there are two types of stars included fontawsome as icon-ratings-star and icon-ratings-star-open which I chose not to use. Two stars I created with paint in 1999 that I have used in may sites since then as: "star" an "star_border".
+The svg sprite I use for all icons in my site, there are two types of stars included fontawesome as icon-ratings-star and icon-ratings-star-open which I chose not to use. Two stars I created with paint in 1999 that I have used in may sites since then as: "star" an "star_border".
 
-The icon file requires svg4everybody.js to work correctly, mostly with IE and Edge.
+Most of the svgs in this file are from [FontAwesome at github raw-svgs](https://github.com/FortAwesome/Font-Awesome/tree/master/advanced-options/raw-svg)
+
+A few are [Octicons svgs raw](https://octicons.github.com/)
+
+My [icons.svg](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/assets/icons/icons.svg) file requires [svg4everybody.js](https://github.com/jonathantneal/svg4everybody) to work correctly, mostly for or with IE and Edge.
 
 ```html
 <?xml version="1.0" encoding="UTF-8"?>
@@ -119,6 +129,8 @@ The icon file requires svg4everybody.js to work correctly, mostly with IE and Ed
 ```
 
 ## My code for the ratings form
+
+The new Review Rating form as a include [reviews-new-page.html](https://github.com/donaldboulton/DWB/blob/gh-pages/_includes/reviews-new-page.html)
 
 ```html
 <div id="respond" class="js-comments">
@@ -162,7 +174,7 @@ The icon file requires svg4everybody.js to work correctly, mostly with IE and Ed
         <input type="hidden" name="options[parent]" value="{{ page.lcb }}{ page.url | relative_url }}">
         <input type="hidden" id="review-post-id" name="options[slug]" value="{{ page.lcb }}{ page.slug }}">
         <input name="fields[product]" type="hidden" value="{{ page.lcb }}{ page.slug }}" />
-        <input name="options[redirect]" type="hidden" value="{{ page.lcb }}{site.url}}{{ page.lcb }}{site.baseurl}}{{ page.lcb }}{ page.url }}" />
+        <input name="options[redirect]" type="hidden" value="{{ page.lcb }}{site.url}}{{site.baseurl}}{{ page.url }}" />
         <label for="review-form-address">Leave blank if you are a human</label>
         <input type="text" id="review-form-address" name="fields[hidden]" autocomplete="off">
         <input type="hidden" name="options[reCaptcha][siteKey]" value="6LerR1MUAAAAACWH7t30s7V4aApQZaIVVPcvH21X">
@@ -188,7 +200,7 @@ The icon file requires svg4everybody.js to work correctly, mostly with IE and Ed
 
 ### Staticman Code for Posting Reviews
 
-Used as a include reviews-staticman_v2.html
+Used as a include [reviews-staticman_v2.html](https://github.com/donaldboulton/DWB/blob/gh-pages/_includes/reviews-staticman_v2.html)
 
 And the loading icon is from the icons.svg file above
 
@@ -241,7 +253,7 @@ And the loading icon is from the icons.svg file above
 
 The code for my reviews page with a [Letter Avatar](https://donboulton.com/2018-02-22-post-Letter-Avatar.html) for the user image.
 
-This code below is to be changed to have the reviews show up just on the page that was reviewed.
+This code below is to be changed to have the include file [reviews.html](https://github.com/donaldboulton/DWB/blob/gh-pages/_includes/reviews.html) show up on just the page that was reviewed, as required by Google and others for the aggregate rating to have the reviews-ratings for that page in that page.
 
 ```html
 <div id="reviews" class="js-comments">
@@ -262,18 +274,26 @@ This code below is to be changed to have the reviews show up just on the page th
 </svg> Page Review</span></h3>
 </span>
 <div class="review-content">
-<div class="form-group">
-            <div itemscope itemtype="http://schema.org/Thing">
-               <span class="item-reviewed text-center">Item Reviewed</span>
-               <p>{{ page.lcb }}{ reviewData.title }}</p>
-            </div>
+  <div class="form-group">
+    <div itemprop="itemReviewed" itemscope itemtype="http://schema.org/Product">
+         <span class="item-reviewed">Item Reviewed</span>
+         <p><span itemprop="name">{{ page.lcb }}{ reviewData.title }}</span></p>
+      </div>
+      <p class="comment__date">
+        {{ page.lcb }}% if include.date %}
+          {{ page.lcb }}% if include.index %}<a href="#review{{ page.lcb }}{ include.index }}" itemprop="url">{{ page.lcb }}% endif %}
+          <time datetime="{{ page.lcb }}{ include.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.lcb }}{ include.date | date: "%B %d, %Y at %I:%M %p" }}</time>
+          {{ page.lcb }}% if include.index %}</a>{{ page.lcb }}% endif %}
+        {{ page.lcb }}% endif %}
+      </p>
+  </div>
 </div>
 <div class="form-group form">
              <div class="field-group1" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
              Title:&nbsp;<span itemprop="itemReviewed" class="title-text">{{ page.lcb }}{ reviewData.title }}</span>
 <span>Rating</span>
 {{ page.lcb }}% for i in (1..reviewData.review) %}
-<svg class="icon icon--star rating-star rating-radio-star--on"><use xlink:href="{{ page.lcb }}{ 'icons.svg#icon-star' | prepend: 'assets/icons/' | relative_url }}"></use></svg>
+<svg class="icon icon--star rating-star rating-radio-star--on"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'assets/icons/' | relative_url }}"></use></svg>
 {{ page.lcb }}% endfor %}
 <meta class="hidden" itemprop="ratingValue" content="{{ page.lcb }}{ reviewData.review }}">
 </div>
@@ -291,8 +311,8 @@ This code below is to be changed to have the reviews show up just on the page th
 <span style="display: none;" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
           <meta class="hidden" itemprop="name" content="donboulton.com">
         </span>
-        <meta itemprop="url" type="hidden" value="{{ page.lcb }}{ page.url }}">
-        <input type="hidden" name="options[parent]" value="{{ page.lcb }}{ page.url }}">
+        <meta itemprop="url" type="hidden" value="{{ page.lcb }}{ page.url | absolute_url }}">
+        <input type="hidden" name="options[parent]" value="{{ page.lcb }}{ page.url | absolute_url }}">
 </article>
   {{ page.lcb }}% endfor %}
   {{ page.lcb }}% endif %}
@@ -302,7 +322,7 @@ This code below is to be changed to have the reviews show up just on the page th
 ## Review Count & Aggregate Rating
 
 I use the review count and aggregate rating per page at the top of each post in a include page-intro.html file
-`
+
 ### The count and aggregation Code
 
 ```html
@@ -319,7 +339,7 @@ I use the review count and aggregate rating per page at the top of each post in 
             <span class="byline-item text-right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="icon rating-star"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"/></svg>&nbsp;Page Rating
               {{ page.lcb }}% if reviewCount > 0 %}
                 {{ page.lcb }}% assign sum = sum | divided_by:reviewCount %}
-                (&nbsp;Average:&nbsp;<span itemprop="ratingValue">{{ page.lcb }}{ sum | round: 1 }}&nbsp</span>)
+                (&nbsp;Average:&nbsp;<span itemprop="ratingValue">{{ page.lcb }}{ sum | round: 1 }}&nbsp;</span>)
               {{ page.lcb }}% elsif site.data.reviews | where:'product',page.slug.reviewCount.size > 0 %} 0 {{ page.lcb }}% else %}
               {{ page.lcb }}% endif %}
             </span>
@@ -329,7 +349,7 @@ I use the review count and aggregate rating per page at the top of each post in 
           <meta class="hidden" itemprop="worstRating" value="1">
           <span class="hidden" itemprop="name">{{ page.lcb }}{ page.slug }}</span>
           <input name="fields[product]" type="hidden" value="{{ page.lcb }}{ page.slug }}" />
-          <input type="hidden" name="options[origin]" value="{{ page.lcb }}{ page.url }}">
+          <input type="hidden" name="options[origin]" value="{{ page.lcb }}{ page.url | relative_url }}">
           <meta class="hidden" content="donboulton.com">
 ```
 

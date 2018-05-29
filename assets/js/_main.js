@@ -28,7 +28,7 @@ $(document).ready(function() {
   var stickySideBar = function() {
     var show =
       $(".author__urls-wrapper button").length === 0
-        ? $(window).width() > 1024 // width should match $large Sass variable
+        ? $(window).width() > 1024
         : !$(".author__urls-wrapper button").is(":visible");
     if (show) {
       // fix
@@ -75,12 +75,12 @@ $('.gallery').each( function() {
                   src : $href,
                   w   : $width,
                   h   : $height
-              }
+              };
 
               items.push(item);
           });
           return items;
-      }
+      };
 
   var items = getItems();
 });
