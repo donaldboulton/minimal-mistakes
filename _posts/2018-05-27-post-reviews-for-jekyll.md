@@ -298,6 +298,7 @@ I use the review count and aggregate rating per page at the top of each post in 
               {{ page.lcb }}% if reviewCount > 0 %}
                 {{ page.lcb }}% assign sum = sum | divided_by:reviewCount %}
                 (&nbsp;Average:&nbsp;<span itemprop="ratingValue">{{ page.lcb }}{ sum | round: 1 }}&nbsp;</span>)
+              {{ page.lcb }}% elsif site.data.reviews | where:'product',page.slug.reviewCount.size > 0 %} 0 {{ page.lcb }}% else %}
               {{ page.lcb }}% endif %}
             </span>
           </p>
@@ -310,6 +311,6 @@ I use the review count and aggregate rating per page at the top of each post in 
           <meta class="hidden" content="donboulton.com">
 ```
 
-Working on examples without the icons.svg file and adding a elsif statement for 0 counts and 0 ratings.
+Working on examples without the icons.svg file and added a elsif statement for 0 counts and 0 ratings.
 
 Any input on how to finish this would be nice. Leave a review below or use any of the social liks in any page to Question or comment on this page.
