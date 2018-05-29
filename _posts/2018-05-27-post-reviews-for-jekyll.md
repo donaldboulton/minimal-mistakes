@@ -32,7 +32,7 @@ header:
 locations:
   - OKC, Oklahoma
 
-excerpt: "Comments Ratings, Built because I could use it for Google Positioning with correct microdata for Search Results with a page review and aggregate rating. Built Using and extending Staticman's Popcorn Github repo. This is still a work in progress so Leave a Review for any page in donboulton.com and the page aggregate rating will increase after a successfull push to my github repo, not quite finished yet learning liquid math??? The aggregate rating and review per page are working review and rate and it soon will show up as a rating on that page."
+excerpt: "Comments Ratings, Built because I could use it for Google Positioning with correct microdata for Search Results with a page review and aggregate rating. Using and extending Staticman's Popcorn Github repo. This is still a work in progress so Leave a Review for any page in donboulton.com and the page aggregate rating will increase after a successfull push to my github repo, not quite finished yet learning liquid math??? The aggregate rating and review per page are working review and rate and it soon will show up as a review rating on that page."
 
 support: [adds, cookies]
 folder: _posts
@@ -359,7 +359,7 @@ I use the review count and aggregate rating per page at the top of each post in 
           <meta class="hidden" content="donboulton.com">
 ```
 
-## The posts in the _data file
+## The Post Review in the _data file
 
 Here is the review rating final result as: 2018-05-27-post-reviews-for-jekyll.yml
 
