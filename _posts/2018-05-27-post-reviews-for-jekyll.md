@@ -35,7 +35,6 @@ locations:
 excerpt: "Comments Ratings, Built because I could use it for Google Positioning with correct microdata for Search Results with a page review and aggregate rating. Built Using and extending Staticman's Popcorn Github repo. This is still a work in progress so Leave a Review for any page in donboulton.com and the page aggregate rating will increase after a successfull push to my github repo, not quite finished yet learning liquid math??? The aggregate rating and review per page are working review and rate and it soon will show up as a rating on that page."
 
 support: [adds, cookies]
-product: reviews-for-jekyll
 folder: _posts
 product: reviews-for-jekyll
 slug: reviews-for-jekyll
@@ -87,9 +86,19 @@ And to have the reviews of that page just show up on that page. With 0 counts an
 
 This is also built with products, books, or movies in mind just change the slug from products to whatever.
 
-## The Images
+### The page frontmatter
 
-The svg sprite I use for all icons in my site, ther are two types of star included font awsome as icon-ratings-star-open and icon-ratings-star-open which I chose not to use and then two I created with paint in 1999 that I have used in may site since then as star an star_border
+```html
+folder: _posts
+product: reviews-for-jekyll # just change this to whatever post, page, movie, book or item
+slug: reviews-for-jekyll
+```
+
+### The Images
+
+The svg sprite I use for all icons in my site, there are two types of stars included fontawsome as icon-ratings-star and icon-ratings-star-open which I chose not to use. Two stars I created with paint in 1999 that I have used in may sites since then as: "star" an "star_border".
+
+The icon file requires svg4everybody.js to work correctly, mostly with IE and Edge.
 
 ```html
 <?xml version="1.0" encoding="UTF-8"?>
@@ -164,11 +173,11 @@ The svg sprite I use for all icons in my site, ther are two types of star includ
 {{ page.lcb }}% include reviews-staticman_v2.html %}
 ```
 
-## Staticman Code for Posting Reviews
+### Staticman Code for Posting Reviews
 
 Used as a include reviews-staticman_v2.html
 
-And the loading icon is from the icons.svg file
+And the loading icon is from the icons.svg file above
 
 ```javascript
 <script>
@@ -215,7 +224,7 @@ And the loading icon is from the icons.svg file
 </script>
 ```
 
-## The reviews page
+### The reviews page
 
 The code for my reviews page with a [Letter Avatar](https://donboulton.com/2018-02-22-post-Letter-Avatar.html) for the user image.
 
@@ -281,7 +290,7 @@ This code below is to be changed to have the reviews show up just on the page th
 
 I use the review count and aggregate rating per page at the top of each post in a include page-intro.html file
 
-### The Code
+### The count and aggregation Code
 
 ```html
 <p class="entry-meta" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
@@ -297,7 +306,7 @@ I use the review count and aggregate rating per page at the top of each post in 
             <span class="byline-item text-right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="icon rating-star"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"/></svg>&nbsp;Page Rating
               {{ page.lcb }}% if reviewCount > 0 %}
                 {{ page.lcb }}% assign sum = sum | divided_by:reviewCount %}
-                (&nbsp;Average:&nbsp;<span itemprop="ratingValue">{{ page.lcb }}{ sum | round: 1 }}&nbsp;</span>)
+                (&nbsp;Average:&nbsp;<span itemprop="ratingValue">{{ page.lcb }}{ sum | round: 1 }}&nbsp</span>)
               {{ page.lcb }}% elsif site.data.reviews | where:'product',page.slug.reviewCount.size > 0 %} 0 {{ page.lcb }}% else %}
               {{ page.lcb }}% endif %}
             </span>
@@ -309,6 +318,32 @@ I use the review count and aggregate rating per page at the top of each post in 
           <input name="fields[product]" type="hidden" value="{{ page.lcb }}{ page.slug }}" />
           <input type="hidden" name="options[origin]" value="{{ page.lcb }}{ page.url | relative_url }}">
           <meta class="hidden" content="donboulton.com">
+```
+
+## The posts in the _data file
+
+Here is the review rating final result as: 2018-05-27-post-reviews-for-jekyll.yml
+
+```yaml
+_id: e6ac4140-62a3-11e8-afe5-3feaa7bb1d43
+_parent: /2018-05-27-post-reviews-for-jekyll.html
+review: '4'
+name: Donald Boulton
+email: c1e68ec3dd3cc5dad0d017d2930b259c
+url: 'https://donboulton.com'
+address: ''
+title: Reviews
+description: >-
+  Had to add the first review. I gave myself only a 4 because this post nor the
+  reviews system is quite finished.
+product: reviews-for-jekyll
+hidden: ''
+date: '2018-05-28T18:21:12.879Z'
+timestamp: 1527531672
+tags:
+  - comment-subscription
+layout: post
+message: ' '
 ```
 
 Working on examples without the icons.svg file and added a elsif statement for 0 counts and 0 ratings.
