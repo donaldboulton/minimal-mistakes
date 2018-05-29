@@ -1,59 +1,17 @@
-<div class="js-comments">
-  {% if page.reviews == true and site.data.reviews | where:'product',page.slug.size > 1 %}
-  {% assign reviews = site.data.reviews | where:'product',page.slug %}
-	{% assign reviews = site.data.reviews | sort %}
-
-	{% for review in reviews reversed limit:4 %}
-		{% assign reviewData = review[1] %}%}
-    <div class="page__reviews-form"></div>
-			<article itemscope itemtype="http://schema.org/Review" class="form">
-				<span style="display: none;" itemprop="itemReviewed" itemscope itemtype="http://schema.org/Thing">
-					<meta itemprop="name">{{ page.url }}</meta>
-				</span>
-				<header class="section-title">
-					<h3>Page Reviews</h3>
-				</header>
-				<div class="review-content">
-          <div class="form-group">
-              <div itemscope itemtype="http://schema.org/Thing">
-              <span>Review of:&nbsp;</span><span itemprop="itemReviewed">{{ reviewData.title }}</span></div>
-              <div>Title:&nbsp;</span><span class="title-text">{{ reviewData.title }}</div>
-          </div>
-          <div class="form-group form">
-               <div class="field-group1" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
-                <span>Rating:</span>
-                {% for i in (1..reviewData.review) %}
-                  <svg class="icon icon--star rating-star rating-radio-star--on"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'assets/icons/' | relative_url }}"></use></svg>
-                {% endfor %}
-                <meta class="hidden" itemprop="ratingValue" content="{{ reviewData.review }}">
-            </div>
-          </div>
-          <div itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <img itemprop="image" avatar="{{ reviewData.name }}" alt="{{ reviewData.name }}" class="review-avatar-image text-left" />
-            &nbsp;<span itemprop="name">{{ reviewData.name }}</span>
-        </div>
-        <div class="form-group">
-            <span><small></small>Url:&nbsp; {{ reviewData.url }} </small></span>
-        </div>
-          <div class="form-group">
-              Message:<span itemprop="description"></span> {{ reviewData.description | markdownify }}</span>
-          </div>
-        </div>
-          <span style="display: none;" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-            <meta class="hidden" itemprop="name" content="donboulton.com">
-          </span>
-          <meta itemprop="url" type="hidden" value="{{ page.url | absolute_url }}">
-          <input type="hidden" name="options[parent]" value="{{ page.url | absolute_url }}">
-
-			</article>
-		{% endfor %}
-		{% for review in reviews %}
-        {% assign review = review[1].review %}
-        {% assign title = review[1].title %}
-        {% assign url = review[1].url %}
-        {% assign name = review[1].name %}
-    		{% assign description = review[1].description %}
-	  {% endfor %}
-
-	{% endif %}
-</div>
+<section id="static-comments">
+  <div class="js-comments">
+      {% if site.data.reviews[page.slug] %}
+        <h4 class="page__comments-title">{{ site.data.ui-text[site.locale].reviews_title | default: "Reviews" }}</h4>
+        {% assign reviews = site.data.reviews[page.slug] | sort %}
+		    {% for review in reviews %}
+            {% assign review = review[1].review %}
+            {% assign title = review[1].title %}
+            {% assign url = review[1].url %}
+            {% assign name = review[1].name %}
+            {% assign date = review[1].date %}
+            {% assign description = review[1].description %}
+            {% include review.html index=index review=review email=email name=name url=url date=date description=description %}
+    {% endfor %}
+    % endif %}
+  </div>
+</section>
