@@ -50,9 +50,13 @@ lcb: "{"
 
 Reviews [Powered by Staticman](https://staticman.net) Built for the need of Micro data used for Google Search Results and Search positioning. Built Using and extending Staticman's Popcorn Github repo.
 
-This is still a work in progress so Leave a Review for any page in donboulton.com and the page aggregate rating will increase after a successfull push to my github repo. The aggregate rating and review count per page are working, review and ratings for just that page so the reviews show up as a review rating for just that page.
+This is still a work in progress so Leave a Review for any page in donboulton.com and the page aggregate rating will increase after a successfull push to my github repo. The aggregate rating and review count per page are working.
 
-Its simple reversed for now and not page specific so random reviews will show up for reviews on every page my frontmatter is set to reviews: true
+The review and ratings for just that page so the reviews show up as a review rating for just that page I am working on.
+
+Its simplely reversed for now and not page specific so random reviews will show up for reviews on every page when my my frontmatter is set to reviews: true
+
+Gota fix this.
 
 ## Reviews and the Web
 
@@ -93,7 +97,9 @@ They were built with sliders,"not stars" for ratings and per several products on
 
 When I make a repo for this and  I will just include or inline the svg's, not us a sprite so svg4everybody.js, will not be needed.
 
-Unlike page or site Comments which Google nor any Search Engine gives no positioning weight to. Comments in a Website are just a page filler unless they are linked to some social media post for search enging access or linked socially. Todays site, page or product commenting should be inclusive with Twitter or other Social Providers.
+ Reviews unlike page or site Comments which Google nor any Search Engine gives no positioning weight to, reviews cnad its rating cocunt can add to your overall search engine positioning.
+
+ Comments in a Website are just a page filler unless they are linked to some social media post for search spiders access or through the internet linking socially. Todays sites, pages, posts or product commenting should be inclusive with Twitter or other Social Providers.
 
 ## How I built Jekyll Ratings
 
