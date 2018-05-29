@@ -60,6 +60,7 @@ My goal is to have my Reviews-Ratings show up on Google search and increase my p
 Doing so ment perfect microdata with aggregate, "Averaged" page and site ratings, or it would be useless for my goal.
 
 {% include figure image_path="/assets/images/pages/google-individual-reviews.png" alt="Search Results" caption="Search Results" %}
+
 Hoping to get somthing like this on search results
 
 ## Reviews and the Web
@@ -85,6 +86,18 @@ What I have left to finish is overall site aggregate averaged rating and a overa
 And to have the reviews of that page just show up on that page. With 0 counts and 0 rating if there are none, should be a simple elseif for that.
 
 This is also built with products, books, or movies in mind just change the slug from products to whatever.
+
+### Structured data site
+
+I have perfect nested structured data in my site. Try this.
+
+{% include figure image_path="/assets/images/pages/review-structured-data-800.jpg" alt="Search Results" caption="Search Results" %}
+
+### Structured data review
+
+This is my reviews data fron Googles Structured Data Testing Tool.
+
+{% include figure image_path="/assets/images/pages/just-review-strauctured-data-800.jpg" alt="Search Results" caption="Search Results" %
 
 ### The page frontmatter
 
