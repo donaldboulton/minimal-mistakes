@@ -162,7 +162,7 @@ The icon file requires svg4everybody.js to work correctly, mostly with IE and Ed
         <input type="hidden" name="options[parent]" value="{{ page.lcb }}{ page.url | relative_url }}">
         <input type="hidden" id="review-post-id" name="options[slug]" value="{{ page.lcb }}{ page.slug }}">
         <input name="fields[product]" type="hidden" value="{{ page.lcb }}{ page.slug }}" />
-        <input name="options[redirect]" type="hidden" value="{{ page.lcb }}{site.url}}{{site.baseurl}}{{ page.url }}" />
+        <input name="options[redirect]" type="hidden" value="{{ page.lcb }}{site.url}}{{ page.lcb }}{site.baseurl}}{{ page.lcb }}{ page.url }}" />
         <label for="review-form-address">Leave blank if you are a human</label>
         <input type="text" id="review-form-address" name="fields[hidden]" autocomplete="off">
         <input type="hidden" name="options[reCaptcha][siteKey]" value="6LerR1MUAAAAACWH7t30s7V4aApQZaIVVPcvH21X">
@@ -273,7 +273,7 @@ This code below is to be changed to have the reviews show up just on the page th
              Title:&nbsp;<span itemprop="itemReviewed" class="title-text">{{ page.lcb }}{ reviewData.title }}</span>
 <span>Rating</span>
 {{ page.lcb }}% for i in (1..reviewData.review) %}
-<svg class="icon icon--star rating-star rating-radio-star--on"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'assets/icons/' | relative_url }}"></use></svg>
+<svg class="icon icon--star rating-star rating-radio-star--on"><use xlink:href="{{ page.lcb }}{ 'icons.svg#icon-star' | prepend: 'assets/icons/' | relative_url }}"></use></svg>
 {{ page.lcb }}% endfor %}
 <meta class="hidden" itemprop="ratingValue" content="{{ page.lcb }}{ reviewData.review }}">
 </div>
@@ -291,8 +291,8 @@ This code below is to be changed to have the reviews show up just on the page th
 <span style="display: none;" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
           <meta class="hidden" itemprop="name" content="donboulton.com">
         </span>
-        <meta itemprop="url" type="hidden" value="{{ page.lcb }}{ page.url | absolute_url }}">
-        <input type="hidden" name="options[parent]" value="{{ page.lcb }}{ page.url | absolute_url }}">
+        <meta itemprop="url" type="hidden" value="{{ page.lcb }}{ page.url }}">
+        <input type="hidden" name="options[parent]" value="{{ page.lcb }}{ page.url }}">
 </article>
   {{ page.lcb }}% endfor %}
   {{ page.lcb }}% endif %}
@@ -302,7 +302,7 @@ This code below is to be changed to have the reviews show up just on the page th
 ## Review Count & Aggregate Rating
 
 I use the review count and aggregate rating per page at the top of each post in a include page-intro.html file
-
+`
 ### The count and aggregation Code
 
 ```html
@@ -329,7 +329,7 @@ I use the review count and aggregate rating per page at the top of each post in 
           <meta class="hidden" itemprop="worstRating" value="1">
           <span class="hidden" itemprop="name">{{ page.lcb }}{ page.slug }}</span>
           <input name="fields[product]" type="hidden" value="{{ page.lcb }}{ page.slug }}" />
-          <input type="hidden" name="options[origin]" value="{{ page.lcb }}{ page.url | relative_url }}">
+          <input type="hidden" name="options[origin]" value="{{ page.lcb }}{ page.url }}">
           <meta class="hidden" content="donboulton.com">
 ```
 
