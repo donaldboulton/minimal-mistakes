@@ -19,7 +19,7 @@
 				<div class="form-group">
             <div>
                <span class="item-reviewed text-center">Item Reviewed</span>
-               <p><span>{{ page.slug }}</span></p>
+               <p><span>{{ reviewData.title }}</span></p>
                <meta class="hidden" itemprop="itemReviewed" content="{{ page.url | absolute_url }}">
             </div>
 				</div>
@@ -37,7 +37,7 @@
           <div>Author</div>
             <img itemprop="image" avatar="{{ reviewData.name }}" alt="{{ reviewData.name }}" class="review-avatar-image text-left" />
             <span itemprop="name" class="review-author-name"><small>{{ reviewData.name }}</small>
-              <span itemprop="url" class="review-author-name"><small>{{ reviewData.url }}</small></span></span>
+            <span itemprop="url" class="review-author-url"><small>{{ reviewData.url }}</small></span></span>
         </div>
 				<div class="form-group">
             <span>Message</span><span itemprop="description"></span> {{ reviewData.description | markdownify }}</span>
