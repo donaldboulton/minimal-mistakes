@@ -11,7 +11,7 @@
             {% assign date = review[1].date %}
             {% assign description = review[1].description %}
             {% include review.html index=index review=review email=email name=name url=url date=date description=description %}
-    {% endfor %}
-    % endif %}
+        {% endfor %}
+      {% endif %}
   </div>
 </section>
