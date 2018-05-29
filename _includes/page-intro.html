@@ -33,8 +33,8 @@
               {% if reviewCount > 0 %}
                 {% assign sum = sum | divided_by:reviewCount %}
                 (&nbsp;Average:&nbsp;<span itemprop="ratingValue">{{ sum | round: 1 }}&nbsp;</span>)
+              {% elsif site.data.reviews | where:'product',page.slug.reviewCount.size > 0 %} 0 {% else %}
               {% endif %}
-              {% if site.data.reviews | where:'product',page.slug.size > 0 %}&nbsp;0{% endif %}
             </span>
           </p>
           <div style="display:none;">
