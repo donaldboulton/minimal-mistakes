@@ -221,7 +221,7 @@ The code for my reviews page with a [Letter Avatar](https://donboulton.com/2018-
 
 This code below is to be changed to have the reviews show up just on the page that was reviewed.
 
-```liquid
+```html
 <div id="reviews" class="js-comments">
 {{ page.lcb }}% if page.reviews == true and site.data.reviews | where:'product',page.slug.size > 1 %}
 {{ page.lcb }}% assign reviews = site.data.reviews | where:'product',page.slug %}
@@ -243,12 +243,12 @@ This code below is to be changed to have the reviews show up just on the page th
 <div class="form-group">
             <div itemscope itemtype="http://schema.org/Thing">
                <span class="item-reviewed text-center">Item Reviewed</span>
-               <p itemprop="itemReviewed">{{ page.lcb }}{ reviewData.title }}</p>
+               <p>{{ page.lcb }}{ reviewData.title }}</p>
             </div>
-  Title:&nbsp;<span class="title-text">{{ page.lcb }}{ reviewData.title }}</span>
 </div>
 <div class="form-group form">
              <div class="field-group1" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+             Title:&nbsp;<span itemprop="itemReviewed" class="title-text">{{ page.lcb }}{ reviewData.title }}</span>
 <span>Rating</span>
 {{ page.lcb }}% for i in (1..reviewData.review) %}
 <svg class="icon icon--star rating-star rating-radio-star--on"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'assets/icons/' | relative_url }}"></use></svg>

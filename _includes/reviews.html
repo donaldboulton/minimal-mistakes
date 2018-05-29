@@ -19,17 +19,17 @@
 				<div class="form-group">
             <div itemscope itemtype="http://schema.org/Thing">
                <span class="item-reviewed text-center">Item Reviewed</span>
-               <p><span itemprop="itemReviewed">{{ reviewData.title }}</span></p>
+               <p><span>{{ reviewData.title }}</span></p>
             </div>
-					  Title:&nbsp;<span class="title-text">{{ reviewData.title }}</span>
 				</div>
 				<div class="form-group form">
              <div class="field-group1" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+              Title:&nbsp;<span itemprop="itemReviewed" class="title-text">{{ reviewData.title }}</span>
 							<span>Rating</span>
 		  				{% for i in (1..reviewData.review) %}
     						<svg class="icon icon--star rating-star rating-radio-star--on"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'assets/icons/' | relative_url }}"></use></svg>
 							{% endfor %}
-							<meta class="hidden" itemprop="ratingValue" content="{{ reviewData.review }}">
+              <meta class="hidden" itemprop="ratingValue" content="{{ reviewData.review }}">
 					</div>
 				</div>
         <div itemprop="author" class="review-author" itemscope itemtype="http://schema.org/Person">
