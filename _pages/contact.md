@@ -1,8 +1,8 @@
 ---
 title: Contact
 description: Get in touch
-email: donaldboulton@gmail.com
-creator: donaldboulton
+email: donboulton@hotmail.com
+creator: donboulton
 hero: Get in touch
 permalink: /contact/
 map:
@@ -14,7 +14,7 @@ map:
 layout: single
 author_profile: true
 
-category:
+tags:
   - Contact
   - Donald Boulton
 email: donaldboulton@gmail.com

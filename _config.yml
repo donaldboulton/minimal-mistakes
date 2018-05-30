@@ -12,7 +12,7 @@ locale                   : "en-US"
 title                    : "Donald Boulton"
 title_separator          : "-"
 name                     : "Donald Boulton"
-description              : "DWB's Jekyll website."
+description              : "DWB's Jekyll Website."
 url                      : "https://donboulton.com"
 baseurl                  : "/"
 repository               : "donaldboulton/DWB"
@@ -99,14 +99,16 @@ snipcart_key             : "NGViODk5ZDAtNmU4OC00MjI5LWIxMGMtZGZmOWEwOGRhM2M1NjM2
 # Social Sharing
 twitter:
   username               : "donboulton"
-twitter_format: "@title: @url@tags"
-twitter_url_length: 22
-twitter_max_length: 140
+  twitter_api_key        : "Wicpx8XkPT8tHijl4MKH7w"
+  twitter_secret         : "Ugr3ZV9eEXjnuIZgWEi6sXgOji4PHCDjVhAWPLmIeodcDJFhVX/awFB9/NzkN0vI8HdWg0oPxyXUEEarW3YChM5p63Xlfuc+Ax2cMSC6K0/CdG9XAxID0cxfrZ44/DpbcXewwV/tDDWzepjUq3EJiPyIlZnYZfyCtKRi3Nl6iGo="
+  twitter_format         : "@title: @url@tags"
+  twitter_url_length     : 22
+  twitter_max_length     : 140
 facebook:
   username               : "donboulton"
   app_id                 :
   publisher              :
-og_image                 : "favicon.png" # Open Graph/Twitter default site image
+  og_image               : "favicon.png" # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -119,9 +121,9 @@ social:
 
 webmention:
   api_key               : "jZUrcysy0Lrx2JjkchWJuQ"
-pingback_url            : "https://webmention.io/donboulton.com/xmlrpc"
-webmention_url          : "https://webmention.io/donboulton.com/webmention"
-micropub_url            : ""
+  pingback_url          : "https://webmention.io/donboulton.com/xmlrpc"
+  webmention_url        : "https://webmention.io/donboulton.com/webmention"
+  micropub_url          : ""
 # Analytics
 analytics:
   provider               : "google"
@@ -136,7 +138,7 @@ author:
   bio                    : "Away from Asp. Anything."
   location               : "OKC Oklahoma"
   email                  : "donaldboulton@gmail.com"
-  uri                    : "https://donboulton.com/about/"
+  uri                    : "https://donboulton.com"
   url                    : "https://donboulton.com/"
   home                   : "https://donboulton.com/"
   bitbucket              :
