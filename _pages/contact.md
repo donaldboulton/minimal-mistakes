@@ -2,6 +2,7 @@
 title: Contact
 description: Get in touch
 email: donaldboulton@gmail.com
+creator: donaldboulton
 hero: Get in touch
 permalink: /contact/
 map:
@@ -35,3 +36,4 @@ github_editme_path: donaldboulton/DWB/blob/gh-pages/_pages/contact.md
 {% include octo-arm.html %}
 
 {% include contact.html %}
+{% include twitter-cards.html %}
