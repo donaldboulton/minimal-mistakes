@@ -4,10 +4,10 @@ layout: null
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ site.blog_title | xml_escape }}</title>
-    <description>{{ site.blog_description | xml_escape }}</description>
-    <link>{{ site.site_url }}{{ site.blog_url }}</link>
-    <atom:link href="{{ "/feed.xml" | prepend: site.blog_url | prepend: site.site_url }}" rel="self" type="application/rss+xml" />
+    <title>{{ site.post_title | xml_escape }}</title>
+    <description>{{ site.post_description | xml_escape }}</description>
+    <link>{{ site.site_url }}{{ site.post_url }}</link>
+    <atom:link href="{{ "/feed.xml" | prepend: site.posts_url | prepend: site.site_url }}" rel="self" type="application/rss+xml" />
     <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     <generator>Jekyll v{{ jekyll.version }}</generator>
