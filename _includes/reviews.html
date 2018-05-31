@@ -3,7 +3,7 @@
   {% assign reviews = site.data.reviews | where:'product',page.slug %}
 	{% assign reviews = site.data.reviews | sort %}
 
-	{% for review in reviews reversed limit:3 %}
+	{% for review in reviews limit:3 %}
 		{% assign reviewData = review[1] %}
 		<article itemscope itemtype="http://schema.org/Review" class="toc1">
 				<span class="section-title">

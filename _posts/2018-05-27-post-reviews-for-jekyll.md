@@ -32,7 +32,9 @@ header:
 locations:
   - OKC, Oklahoma
 
-excerpt: "Comments Ratings, Built because I could use it for Google Positioning with correct microdata for Search Results with a page review and aggregate rating. Using and extending Staticman's Popcorn Github repo. This is still a work in progress so Leave a Review for any page in donboulton.com and the page aggregate rating will increase after a successfull push to my github repo, not quite finished yet learning liquid math??? The aggregate rating and review per page are working review and rate and it soon will show up as a review rating on that page."
+excerpt: "Comments Ratings, Reviews with ratings unlike comments can increase your Google Positioning with correct microdata. Your site Internet search results will then show page review and aggregate rating.
+
+Got the idea from the Staticman Popcorn repo. This is still a work in progress so Leave a Review for any page in donboulton.com and the page aggregate rating will increase after a successfull push to my github repo. The aggregate rating and review per page are working review and rate and it soon will show up as a review rating on that page."
 
 support: [adds, cookies]
 folder: _posts
@@ -48,7 +50,7 @@ lcb: "{"
 
 # Site Reviews
 
-Reviews [Powered by Staticman](https://staticman.net) Built for the need of Micro data used for Google Search Results and Search positioning. Built Using and extending Staticman's Popcorn Github repo.
+Reviews [Powered by Staticman](https://staticman.net) Built for the need of rating and reviews micro data for Google Search Results and Search positioning. Built Using and extending [Staticman Popcorn repo](https://github.com/eduardoboucas/popcorn).
 
 This is still a work in progress so Leave a Review for any page in donboulton.com and the page aggregate rating will increase after a successfull push to my github repo. The aggregate rating and review count per page are working.
 
@@ -56,7 +58,7 @@ The review and ratings for just that page so the reviews show up as a review rat
 
 Its simplely reversed for now and not page specific so random reviews will show up for reviews on every page when my my frontmatter is set to reviews: true
 
-Gota fix this.
+Gota fix this. The random reviews in the side bar will be changed to ramdom-reviews.html and adding reviews with ratings for each page specific to that page.
 
 ## Reviews and the Web
 
@@ -72,10 +74,6 @@ Doing so means perfect microdata with aggregate, "Averaged" page and site rating
 Hoping to get somthing like this on search results
 
 {% include figure image_path="/assets/images/pages/google-individual-reviews.png" alt="Search Results" caption="Search Results" %}
-
-## Site Reviews Count & Ratings Average
-
-Working on single page reviews that show up specific to the page, then overall site aggregate rating and review totals.
 
 ### Structured data My site
 
