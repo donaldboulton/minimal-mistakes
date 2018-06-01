@@ -122,11 +122,17 @@ $(document).ready(function() {
   $("a").smoothScroll({ offset: -20 });
 });
 </script>
-{% if page.comments %}
+{% case site.comments.provider %}
+ {% when "disqus" %}
   {% include disqus.html %}
   <script id="dsq-count-scr" src="//{{ site.comments.disqus.shortname }}.disqus.com/count.js" async></script>
-{% endif %}
+  {% when "staticman_v2" %}
+  {% include staticman_v2.html %}
+{% endcase %}
 
 {% if page.support contains 'lightbox' %}
    {% include lightbox.html %}
 {% endif %}
+
+{% include reviews-staticman_v2.html %}
+{% include recaptcha-script.html %}
