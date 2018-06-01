@@ -10,14 +10,15 @@
 		<input type="email" name="email" id="email" placeholder="Enter your email..." required inputmode="email">
   </div>
   <div class="form-group">
-		<label for="comments">Message</label>
-		<textarea name="comments" id="comments" placeholder="Enter your message..." required></textarea>
+		<label for="message">Message</label>
+		<textarea name="message" id="message" placeholder="Enter your message..." required></textarea>
   </div>
   <div>
     <input type="hidden" name="_replyto" value="{{ page.email }}">
     <input type="hidden" name="_subject" value="Website donboulton New Message" />
-    <input type="hidden" name="_next" value="https://donboulton.com/thanks" />
+    <input type="hidden" name="_next" value="https://donboulton.com/thanks/" />
     <input type="text" name="_gotcha" style="display: none;">
+    <input type=”hidden” name=”_cc” value=”{{ email }}” />
     <input type="hidden" name="_language" value="en" />
   </div>
   <div class="form-group">
@@ -26,6 +27,5 @@
   </form>
   <div id="card"></div>
   <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Contact <a href="https://t.co/SDMOt5GU7n">https://t.co/SDMOt5GU7n</a> via <a href="https://twitter.com/donboulton?ref_src=twsrc%5Etfw">@donboulton</a><a href="https://t.co/xbuqYoW5b2">https://t.co/xbuqYoW5b2</a> email contact form in <a href="https://t.co/A4Dw14MVjA">https://t.co/A4Dw14MVjA</a></p>&mdash; Don W. Boulton (@donboulton) <a href="https://twitter.com/donboulton/status/1001871264565342208?ref_src=twsrc%5Etfw">May 30, 2018</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>

@@ -29,7 +29,7 @@ support: [adds, cookies]
 folder: _pages
 slug: contact
 product: contact
-github_editme_path: donaldboulton/DWB/blob/gh-pages/thanks.html
+github_editme_path: donaldboulton/DWB/blob/gh-pages/pages/thanks.md
 ---
 
 {% include octo-arm.html %}
@@ -39,3 +39,5 @@ github_editme_path: donaldboulton/DWB/blob/gh-pages/thanks.html
 If a response if required, I will try to reply A.S.A.P..
 
 {% include thank-you-video.html %}
+
+{% include twitter-cards.html %}
