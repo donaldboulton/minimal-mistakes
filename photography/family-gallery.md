@@ -6,6 +6,15 @@ picture_path: family-gallery
 date: 2018-05-03 16:18:01 -0600
 last_modified_at: 2018-05-04T12:42:38-04:0
 author: Donald Boulton
+author_profile: false
+gallery: true
+comments: true
+share: true
+related: true
+sidenav-gallery: true
+adds: true
+cookies: true
+breadcrumb: true
 sidebar:
   - title: "Raced Motocross from 1971 to 1994"
     image: /assets/photography/family-gallery/250 Maico 83.jpg

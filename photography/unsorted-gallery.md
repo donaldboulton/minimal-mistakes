@@ -6,6 +6,15 @@ picture_path: unsorted-gallery
 date: 2018-05-16 16:18:01 -0600
 last_modified_at: 2018-05-16T12:42:38-04:0
 author: Donald Boulton
+author_profile: false
+gallery: true
+comments: true
+share: true
+related: true
+sidenav-gallery: true
+adds: true
+cookies: true
+breadcrumb: true
 sidebar:
   - title: "My Hun Kitty"
     image: /assets/photography/old-cat-gallery/Little-Hun-th.jpg

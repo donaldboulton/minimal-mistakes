@@ -6,6 +6,15 @@ picture_path: tucson-gallery
 date: 2018-05-05 16:18:01 -0600
 last_modified_at: 2018-05-06T12:42:38-04:0
 author: Donald Boulton
+author_profile: false
+gallery: true
+comments: true
+share: true
+related: true
+sidenav-gallery: true
+adds: true
+cookies: true
+breadcrumb: true
 sidebar:
   - title: "Epic Care"
     image: /assets/photography/tuscon-gallery/Epic-Cafe-2.jpg

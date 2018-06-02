@@ -6,6 +6,15 @@ picture_path: santa-barbara-gallery
 date: 2018-05-03 16:18:01 -0600
 last_modified_at: 2018-05-04T12:42:38-04:0
 author: Donald Boulton
+author_profile: false
+gallery: true
+comments: true
+share: true
+related: true
+sidenav-gallery: true
+adds: true
+cookies: true
+breadcrumb: true
 category:
   - Gallerys
 tags: [Gallery, Santa Barbara] 
