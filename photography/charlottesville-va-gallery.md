@@ -7,14 +7,6 @@ gallery: true
 date: 2018-05-03 16:18:01 -0600
 last_modified_at: 2018-05-04T12:42:38-04:0
 author: Donald Boulton
-author_profile: false
-comments: true
-share: true
-related: true
-breadcrumb: true
-sidenav-gallery: true
-adds: true
-cookies: true
 sidebar:
   - title: "The Mall"
     image: /assets/photography/charlottesville-va-gallery/Downtown Mall.jpg

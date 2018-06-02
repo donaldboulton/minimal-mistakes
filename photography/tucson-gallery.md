@@ -3,18 +3,9 @@ layout: galleryloop
 title: Tucson AZ
 permalink: /photography/tucson-gallery/
 picture_path: tucson-gallery
-gallery: true
 date: 2018-05-05 16:18:01 -0600
 last_modified_at: 2018-05-06T12:42:38-04:0
 author: Donald Boulton
-author_profile: false
-comments: true
-share: true
-related: true
-breadcrumb: true
-sidenav-gallery: true
-adds: true
-cookies: true
 sidebar:
   - title: "Epic Care"
     image: /assets/photography/tuscon-gallery/Epic-Cafe-2.jpg

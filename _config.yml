@@ -330,10 +330,14 @@ defaults:
     values:
       layout: single
       author_profile: false
-      read_time: true
+      gallery: true
       comments: true
       share: true
       related: true
+      sidenav-gallery: true
+      adds: true
+      cookies: true
+      breadcrumb: true
       breadcrumbs:
         - label: "photography"
           url: /photography/
@@ -352,6 +356,7 @@ defaults:
       toc: true
       adds: true
       reviews: true
+      cookies: true
       breadcrumbs:
         - label: "Posts"
           url: /year-archive/

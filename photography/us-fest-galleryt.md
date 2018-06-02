@@ -3,18 +3,9 @@ layout: galleryloop
 title: Us Fest 1983
 permalink: /photography/us-fest-gallery/
 picture_path: us-fest-gallery
-gallery: true
 date: 2018-05-05 16:18:01 -0600
 last_modified_at: 2018-05-16T12:42:38-04:0
 author: Donald Boulton
-author_profile: false
-comments: true
-share: true
-related: true
-breadcrumb: true
-sidenav-gallery: true
-adds: true
-cookies: true
 category:
   - Gallerys
 tags: [Gallery, Us Fest]  

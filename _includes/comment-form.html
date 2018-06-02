@@ -1,5 +1,3 @@
-{% unless page.comments_locked == true %}
-
 <div id="respond">
   <header class="section-title">
     <h3>Comments<small><a rel="nofollow" id="cancel-comment-reply-link" href="{{ page.url | relative_url }}#respond" style="display:none;">Cancel reply</a></small></h3>
@@ -55,8 +53,3 @@
 </div>
 </div>
 <!-- End new comment form -->
-{% else %}
-<p><em>Comments are closed. If you have a question concerning the content of this page, please feel free to <a href="/contact/">contact me</a>.</em></p>
-{% endunless %}
-
-{% include staticman_v2.html %}

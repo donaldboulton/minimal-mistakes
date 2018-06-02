@@ -71,13 +71,12 @@ layout: default
 
       {% include post_pagination.html %}
     </div>
+    {% include comments.html %}
     {% if page.reviews == true %}
       {% include reviews-new-page.html %}
       {% include reviews-page.html %}
     {% endif %}
-    {% if page.comments == true %}
-      {% include comments.html %}
-    {% endif %}
+
   </article>
 
   {% comment %}<!-- only show related on a post page when `related: true` -->{% endcomment %}
