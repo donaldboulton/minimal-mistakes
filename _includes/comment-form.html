@@ -33,20 +33,23 @@
       <input type="hidden" id="comment-post-id" name="options[slug]" value="{{ page.slug }}">
       <label for="comment-form-location">Leave blank if you are a human</label>
       <input type="text" id="comment-form-location" name="fields[hidden]" autocomplete="off">
-      <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.reCaptcha.siteKey }}">
-      <input type="hidden" name="options[reCaptcha][secret]" value="{{ site.reCaptcha.secret }}">
     </div>
     <!-- Start comment form alert messaging -->
     <p class="hidden js-notice">
       <span class="js-notice-text"></span>
     </p>
     <!-- End comment form alert messaging -->
+    <input type="checkbox" id="comment-form-subscribe" name="options[subscribe]" value="email">&nbsp;Notify me of replies by email.
     <div class="form-group">
-      <div id="recaptcha1" class="g-recaptcha" data-theme="dark" data-tabindex="5" data-sitekey="{{ site.reCaptcha.siteKey }}"></div>
+        <p id="question"></p>
+        <input id="ans" type="text" class="input-math">
+        <div id="message">Please verify.</div>
+        <div id="success">Validation complete :)</div>
+        <div id="fail">Validation failed :(</div>
       <div>
-          <input type="checkbox" id="comment-form-subscribe" name="options[subscribe]" value="email">&nbsp;Notify me of replies by email.
       </div>
         <button type="submit" id="comment-form-submit" class="btn btn--primary">Comment</button>
+        <button type="reset" id="reset" value="reset" class="btn btn--danger">Reset</button>
     </div>
 </form>
 </div>
@@ -56,5 +59,4 @@
 <p><em>Comments are closed. If you have a question concerning the content of this page, please feel free to <a href="/contact/">contact me</a>.</em></p>
 {% endunless %}
 
-{% include recaptcha-script.html %}
 {% include staticman_v2.html %}

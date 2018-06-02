@@ -143,3 +143,21 @@
     box-shadow: inset 0 -0.25em 0 rgba($success-color, 0.5);
   }
 }
+
+#success,
+#fail {
+  display: none;
+}
+#message,
+#success,
+#fail {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.input-math {
+  border: $danger-color;
+  width: 30px;
+  height: 20px;
+  text-align: center;
+}

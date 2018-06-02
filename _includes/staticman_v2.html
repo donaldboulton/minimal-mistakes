@@ -1,4 +1,3 @@
-{% if site.repository and site.staticman.branch %}
 <script>
  (function ($) {
     var $comments = $('.js-comments');
@@ -127,5 +126,50 @@
     return document.getElementById(id);
   }
 };
+$('button[type=submit]').attr('disabled', 'disabled');
+
+var randomNum1;
+var randomNum2;
+
+var maxNum = 20;
+var total;
+
+randomNum1 = Math.ceil(Math.random() * maxNum);
+randomNum2 = Math.ceil(Math.random() * maxNum);
+total = randomNum1 + randomNum2;
+
+$("#question").prepend(randomNum1 + " + " + randomNum2 + "=");
+
+
+$("#ans").keyup(function() {
+
+  var input = $(this).val();
+  var slideSpeed = 200;
+
+  $('#message').hide();
+
+  if (input == total) {
+
+    $('button[type=submit]').removeAttr('disabled');
+    $('#success').slideDown(slideSpeed);
+    $('#fail').slideUp(slideSpeed);
+
+  } else {
+
+    $('button[type=submit]').attr('disabled', 'disabled');
+    $('#fail').slideDown(slideSpeed);
+    $('#success').slideUp(slideSpeed);
+
+  }
+
+});
+
+$("#reset").on("click", function() {
+  randomNum1 = Math.ceil(Math.random() * maxNum);
+  randomNum2 = Math.ceil(Math.random() * maxNum);
+  total = randomNum1 + randomNum2;
+  $("#question").empty();
+  $("#ans").val('');
+  $("#question").prepend(randomNum1 + " + " + randomNum2 + "=");
+});
 </script>
-{% endif %}
