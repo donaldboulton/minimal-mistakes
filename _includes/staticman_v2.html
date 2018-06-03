@@ -38,9 +38,9 @@
       $('.page__comments-form .js-notice').removeClass('hidden');
       $('.page__comments-form .js-notice-text').html(message);
     }
-    })(jQuery);
+    });
     var addComment = {
-  moveForm: function(commId, parentId, respondId, postId) {
+    moveForm: function(commId, parentId, respondId, postId) {
     var div,
       element,
       style,
@@ -126,59 +126,58 @@
     return document.getElementById(id);
   }
 };
+$(function(){
+  $('#comment-form').ebcaptcha();
+});
+
 (function($){
 
-jQuery.fn.ebcaptcha = function(options){
+	jQuery.fn.ebcaptcha = function(options){
 
-  var element = this;
-  var submit = $(this).find('input[type=submit]');
-  $('<label id="ebcaptchatext"></label>').insertBefore(submit);
-  $('<input type="text" class="textbox" id="ebcaptchainput"/><br/><br/>').insertBefore(submit);
-  var input = this.find('#ebcaptchainput');
-  var label = this.find('#ebcaptchatext');
+		var element = this;
+		var input = this.find('#ebcaptchainput');
+		var label = this.find('#ebcaptchatext');
+				$(element).find('button[type=submit]').attr('disabled','disabled');
 
-  $(element).find('input[type=submit]').attr('disabled','disabled');
-
-
-  var randomNr1 = 0;
-  var randomNr2 = 0;
-  var totalNr = 0;
+		var randomNr1 = 0;
+		var randomNr2 = 0;
+		var totalNr = 0;
 
 
-  randomNr1 = Math.floor(Math.random()*10);
-  randomNr2 = Math.floor(Math.random()*10);
-  totalNr = randomNr1 + randomNr2;
-  var texti = "What is "+randomNr1+" + "+randomNr2;
-  $(label).text(texti);
+		randomNr1 = Math.floor(Math.random()*10);
+		randomNr2 = Math.floor(Math.random()*10);
+		totalNr = randomNr1 + randomNr2;
+		var texti = "What is "+randomNr1+" + "+randomNr2;
+		$(label).text(texti);
 
 
-  $(input).keyup(function(){
+		$(input).keyup(function(){
 
-    var nr = $(this).val();
-    if(nr==totalNr)
-    {
-      $(element).find('input[type=submit]').removeAttr('disabled');
-    }
-    else{
-      $(element).find('input[type=submit]').attr('disabled','disabled');
-    }
+			var nr = $(this).val();
+			if(nr==totalNr)
+			{
+				$(element).find('button[type=submit]').removeAttr('disabled');
+			}
+			else{
+				$(element).find('button[type=submit]').attr('disabled','disabled');
+			}
 
-  });
+		});
 
-  $(document).keypress(function(e)
-  {
-    if(e.which==13)
-    {
-      if((element).find('input[type=submit]').is(':disabled')==true)
-      {
-        e.preventDefault();
-        return false;
-      }
-    }
+		$(document).keypress(function(e)
+		{
+			if(e.which==13)
+			{
+				if((element).find('button[type=submit]').is(':disabled')==true)
+				{
+					e.preventDefault();
+					return false;
+				}
+			}
 
-  });
+		});
 
-};
+	};
 
 })(jQuery);
 </script>

@@ -47,7 +47,8 @@
   </div>
 </div>
 <!-- End new comment form -->
-{% include staticman_v2.html %}
+<script src="{{ '/assets/js/staticman/staticman-comments.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/staticman/ebcaptcha.js' | relative_url }}"></script>
 <script type="text/javascript">
   $(function(){
       $('#comment-form').ebcaptcha();
