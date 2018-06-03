@@ -144,20 +144,17 @@
   }
 }
 
-.captcha {
+.ebcaptcha {
   margin:0 auto;
 }
 
-.captcha label {
+#ebcaptchatext {
   float: left;
   margin-bottom: 10px;
-  font-size:22px;
-  font-family: 'primelight';
-  font-size: 20px;
-  line-height: 30px;
   margin-right: 10px;
 }
 
-.captcha input[type="text"] {
+#ebcaptchainput[type="text"] {
   float: left;
+  width: 200px;
 }
