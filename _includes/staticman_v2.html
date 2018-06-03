@@ -126,50 +126,59 @@
     return document.getElementById(id);
   }
 };
-$('button[type=submit]').attr('disabled', 'disabled');
+(function($){
 
-var randomNum1;
-var randomNum2;
+jQuery.fn.ebcaptcha = function(options){
 
-var maxNum = 20;
-var total;
+  var element = this;
+  var submit = $(this).find('input[type=submit]');
+  $('<label id="ebcaptchatext"></label>').insertBefore(submit);
+  $('<input type="text" class="textbox" id="ebcaptchainput"/><br/><br/>').insertBefore(submit);
+  var input = this.find('#ebcaptchainput');
+  var label = this.find('#ebcaptchatext');
 
-randomNum1 = Math.ceil(Math.random() * maxNum);
-randomNum2 = Math.ceil(Math.random() * maxNum);
-total = randomNum1 + randomNum2;
-
-$("#question").prepend(randomNum1 + " + " + randomNum2 + "=");
+  $(element).find('input[type=submit]').attr('disabled','disabled');
 
 
-$("#ans").keyup(function() {
+  var randomNr1 = 0;
+  var randomNr2 = 0;
+  var totalNr = 0;
 
-  var input = $(this).val();
-  var slideSpeed = 200;
 
-  $('#message').hide();
+  randomNr1 = Math.floor(Math.random()*10);
+  randomNr2 = Math.floor(Math.random()*10);
+  totalNr = randomNr1 + randomNr2;
+  var texti = "What is "+randomNr1+" + "+randomNr2;
+  $(label).text(texti);
 
-  if (input == total) {
 
-    $('button[type=submit]').removeAttr('disabled');
-    $('#success').slideDown(slideSpeed);
-    $('#fail').slideUp(slideSpeed);
+  $(input).keyup(function(){
 
-  } else {
+    var nr = $(this).val();
+    if(nr==totalNr)
+    {
+      $(element).find('input[type=submit]').removeAttr('disabled');
+    }
+    else{
+      $(element).find('input[type=submit]').attr('disabled','disabled');
+    }
 
-    $('button[type=submit]').attr('disabled', 'disabled');
-    $('#fail').slideDown(slideSpeed);
-    $('#success').slideUp(slideSpeed);
+  });
 
-  }
+  $(document).keypress(function(e)
+  {
+    if(e.which==13)
+    {
+      if((element).find('input[type=submit]').is(':disabled')==true)
+      {
+        e.preventDefault();
+        return false;
+      }
+    }
 
-});
+  });
 
-$("#reset").on("click", function() {
-  randomNum1 = Math.ceil(Math.random() * maxNum);
-  randomNum2 = Math.ceil(Math.random() * maxNum);
-  total = randomNum1 + randomNum2;
-  $("#question").empty();
-  $("#ans").val('');
-  $("#question").prepend(randomNum1 + " + " + randomNum2 + "=");
-});
+};
+
+})(jQuery);
 </script>

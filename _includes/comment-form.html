@@ -39,17 +39,19 @@
     <!-- End comment form alert messaging -->
     <input type="checkbox" id="comment-form-subscribe" name="options[subscribe]" value="email">&nbsp;Notify me of replies by email.
     <div class="form-group">
-        <p id="question"></p>
-        <input id="ans" type="text" class="input-math">
-        <div id="message">Please verify.</div>
-        <div id="success">Validation complete :)</div>
-        <div id="fail">Validation failed :(</div>
-      <div>
-      </div>
+    <label id="ebcaptchatext"></label>
+    <input type="text" class="textbox" id="ebcaptchainput"/>
         <button type="submit" id="comment-form-submit" class="btn btn--primary">Comment</button>
-        <button type="reset" id="reset" value="reset" class="btn btn--danger">Reset</button>
     </div>
-</form>
-</div>
+  </form>
+  </div>
 </div>
 <!-- End new comment form -->
+<script type="text/javascript">
+
+  $(function(){
+      $('#form').ebcaptcha();
+  });
+
+</script>
+{% include staticman_v2.html %}

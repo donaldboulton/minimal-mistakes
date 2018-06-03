@@ -144,20 +144,20 @@
   }
 }
 
-#success,
-#fail {
-  display: none;
-}
-#message,
-#success,
-#fail {
-  margin-top: 10px;
-  margin-bottom: 10px;
+.captcha {
+  margin:0 auto;
 }
 
-.input-math {
-  border: $danger-color;
-  width: 30px;
-  height: 20px;
-  text-align: center;
+.captcha label {
+  float: left;
+  margin-bottom: 10px;
+  font-size:22px;
+  font-family: 'primelight';
+  font-size: 20px;
+  line-height: 30px;
+  margin-right: 10px;
+}
+
+.captcha input[type="text"] {
+  float: left;
 }
