@@ -40,18 +40,16 @@
     <input type="checkbox" id="comment-form-subscribe" name="options[subscribe]" value="email">&nbsp;Notify me of replies by email.
     <div class="form-group">
     <label id="ebcaptchatext"></label>
-    <input type="text" class="textbox" id="ebcaptchainput"/>
+    <input type="text" class="textbox text-left" id="ebcaptchainput"/>
         <button type="submit" id="comment-form-submit" class="btn btn--primary">Comment</button>
     </div>
   </form>
   </div>
 </div>
 <!-- End new comment form -->
-<script type="text/javascript">
-
-  $(function(){
-      $('#form').ebcaptcha();
-  });
-
-</script>
 {% include staticman_v2.html %}
+<script type="text/javascript">
+  $(function(){
+      $('#comment-form').ebcaptcha();
+  });
+</script>
