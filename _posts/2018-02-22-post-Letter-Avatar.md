@@ -24,7 +24,7 @@ locations:
 toc: true
 toc_label: "Contents"
 read_time: true
-comments: false
+comments: true
 share: true
 social-share: twitter --twitter-hashtags facebook linkedin
 related: true
