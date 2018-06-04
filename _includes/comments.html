@@ -1,7 +1,7 @@
 <div class="entry-comments">
   {% if site.data.comments[page.slug] %}
   <!-- Start static comments -->
-  <div id="comments" class="js-comments comment" itemscope itemtype="http://schema.org/Article">
+  <div id="comments" class="js-comments comment" itemscope itemtype="http://schema.org/UserComments">
     <header class="section-title">
       <h3>{% if site.data.comments[page.slug].size > 1 %}{{ site.data.comments[page.slug] | size | append: ' ' }}{% endif %}Comments</h3>
     </header>
