@@ -14,7 +14,7 @@
          <span class="item-reviewed">Item Reviewed</span>
          <p><span itemprop="name">{{ reviewData.title }}</span></p>
       </div>
-      <p class="comment__date">
+      <p class="review__date">
         {% if include.date %}
           {% if include.index %}<a href="#review{{ include.index }}" itemprop="url">{% endif %}
           <time datetime="{{ include.date | date_to_xmlschema }}" itemprop="datePublished">{{ include.date | date: "%B %d, %Y at %I:%M %p" }}</time>
