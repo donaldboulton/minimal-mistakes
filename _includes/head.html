@@ -111,3 +111,6 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
 {% if page.support contains 'products' %}
    <link rel="stylesheet" href="{{ '/assets/css/vendor/snipcart/snipcart.min.css' | relative_url }}">
 {% endif %}
+{% if page.support contains 'visualcaptcha' %}
+   <link href="{{ '/assets/css/vendor/visualcaptcha/visualcaptcha.css' | relative_url }}" media="all" rel="stylesheet">
+{% endif %}

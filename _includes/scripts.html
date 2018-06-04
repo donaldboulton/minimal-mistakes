@@ -115,12 +115,32 @@ window.addEventListener("load", function() {
 });
 </script>
 {% endif %}
-<script>
-$(document).ready(function() {
-  svg4everybody();
 
-  $("a").smoothScroll({ offset: -20 });
-});
+{% if page.support contains 'visualcaptcha' %}
+<script src="{{ '/assets/js/vendor/visualcaptcha/visualcaptcha.jquery.js' | relative_url }}"></script>
+<script>
+  var captcha = visualCaptcha( 'comments-captcha', {
+      imgPath: '/assets/images/visualcaptcha/',
+      captcha: {
+          numberOfImages: 5,
+              callbacks: {
+                  loading: function( captcha ){
+                  console.log( 'I am loading.', captcha );
+              },
+              loaded: function( captcha ){
+                  console.log( 'I am loaded.', captcha );
+              }
+          }
+      }
+  });
+</script>
+{% endif %}
+<script>
+  $(document).ready(function() {
+    svg4everybody();
+
+    $("a").smoothScroll({ offset: -20 });
+  });
 </script>
 
 {% if page.support contains 'lightbox' %}
