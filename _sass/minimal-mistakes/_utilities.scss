@@ -512,6 +512,30 @@ u, ins {
   height: 1px;
   overflow: hidden;
   position: absolute;
-  white-space: nowrap; 
+  white-space: nowrap;
   width: 1px;
+}
+
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.collapsible {
+	&:after {
+		content: '\02795';
+		font-size: 13px;
+		float: right;
+    margin-left: 10px;
+    display: block;
+    color: #000000;
+    text-align: center;
+    top: -0.1em;
+	}
+}
+.active {
+	&:after {
+		content: "\2796";
+	}
 }
