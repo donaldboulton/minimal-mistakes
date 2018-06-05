@@ -3,7 +3,7 @@
   <!-- Start static comments -->
   <div id="comments" class="js-comments comment" itemscope itemtype="http://schema.org/UserComments">
     <header class="section-title">
-      <h3>{% if site.data.comments[page.slug].size > 1 %}{{ site.data.comments[page.slug] | size | append: ' ' }}{% endif %}Comments</h3>
+      <h3>{% if site.data.comments[page.slug].size > 1 %}{{ site.data.comments[page.slug] | size | append: ' ' }}{% endif %}<svg class="icon icon--comments-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comments-alt' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;Comments</h3>
     </header>
     {% assign comments = site.data.comments[page.slug] | where_exp: 'item', 'item.replying_to == blank' %}
     {% for comment in comments %}

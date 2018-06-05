@@ -1,8 +1,8 @@
 <div id="respond">
   <header class="section-title">
-    <h3><svg class="icon icon--comments-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comments-alt' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;Comment Form<small><a rel="nofollow" id="cancel-comment-reply-link" href="{{ page.url | relative_url }}#respond" style="display:none;">Cancel reply</a></small></h3>
+    <h3><svg class="icon icon--comment" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comment' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;Comment Form<small><a rel="nofollow" id="cancel-comment-reply-link" href="{{ page.url | relative_url }}#respond" style="display:none;">Cancel reply</a></small></h3>
   </header>
-  <button class="collapsible btn btn--light-outline">Add A Comment</button>
+  <button class="collapsible btn btn--light-outline">Open Comment Form</button>
   <div class="page__comments-form content">
   <form id="comment-form" class="page__form js-form form" method="post" action="https://api.staticman.net/v2/entry/donaldboulton/DWB/gh-pages/comments">
     <div class="form-group">
@@ -33,6 +33,7 @@
       <label for="comment-form-location">Leave blank if you are a human</label>
       <input type="text" id="comment-form-location" name="fields[hidden]" autocomplete="off">
     </div>
+    <label for="comment-form-subscribe" class="sr-only">Subscribe</label>
     <input type="checkbox" id="comment-form-subscribe" name="options[subscribe]" value="email">&nbsp;Notify me of replies by email.
     <div class="form-inline">
       <div id="comments-captcha" data-namespace="comments"></div>

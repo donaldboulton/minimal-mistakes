@@ -525,13 +525,13 @@ u, ins {
 .collapsible {
 	&:after {
 		content: '\02795';
-		font-size: 13px;
+		font-size: 15px;
 		float: right;
     margin-left: 10px;
     display: block;
     color: #000000;
     text-align: center;
-    top: -0.1em;
+    top: .6em;
 	}
 }
 .active {
