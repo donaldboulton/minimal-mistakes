@@ -2,8 +2,10 @@
 <article id="comment{% unless include.r %}{{ index | prepend: '-' }}{% else %}{{ include.index | prepend: '-' }}{% endunless %}" class="js-comment comment {% if include.name == site.author.name %}admin{% endif %} {% unless include.replying_to == 0 %}child{% endunless %}">
 <div itemprop="creator" itemscope itemtype="http://schema.org/Person">
   <div class="comment-avatar">
-    {% if include.email %}
-      <img src="https://www.gravatar.com/avatar/{{ include.email }}" alt="{{ include.name }}" class="lazyload blur-up">
+    {% if include.avatar %}
+      <img itemprop="image" avatar="{{ include.name }}" alt="{{ include.name }}" class="lazyload blur-up" />
+    {% elsif include.email %}
+      <img src="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=60" srcset="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=120 2x" alt="{{ include.name | escape }}">
     {% else %}
       <img itemprop="image" avatar="{{ include.name }}" alt="{{ include.name }}" class="lazyload blur-up" />
     {% endif %}
