@@ -1,13 +1,10 @@
 (function ($) {
-  var $reviews = $('.js-reviews');
+  var $comments = $('.js-comments');
 
-  $('#review-form').submit(function () {
+  $('.js-form').submit(function () {
     var form = this;
 
-    $(form).addClass('disabled');
-    $("#review-form-submit").html(
-      '<svg class="icon spin"><use xlink:href="/assets/icons/icons.svg#icon-loading"></use></svg> Loading...'
-    );
+    $(form).addClass('form--loading');
 
     $.ajax({
       type: $(this).attr('method'),
@@ -15,26 +12,27 @@
       data: $(this).serialize(),
       contentType: 'application/x-www-form-urlencoded',
       success: function (data) {
-        $('#review-form-submit').html('{{ site.data.ui-text[site.locale].review_btn_submitted | default: "Submitted" }}');
-        $('.page__reviews-form.js-notice').removeClass('notice--danger');
-        $('.page__reviews-form.js-notice').addClass('notice--success');
-        showAlert('{{ site.data.ui-text[site.locale].review_success_msg | default: "Thanks for your review and ratings! It will show on the site once it has been approved." }}');
+        showModal('Review submitted', 'Thanks for your review! It will show on the site once it has been approved. You can see the pull request <a href="https://github.com/eduardoboucas/popcorn/pulls">here</a>.');
+        $(form).removeClass('form--loading');
       },
       error: function (err) {
         console.log(err);
-        $('#review-form-submit').html('{{ site.data.ui-text[site.locale].review_btn_submit  | default: "Submit Review" }}');
-        $('.page__reviews-form.js-notice').removeClass('notice--success');
-        $('.page__reviews-form.js-notice').addClass('notice--danger');
-        showAlert('{{ site.data.ui-text[site.locale].review_error_msg | default: "Sorry, there was an error with your submission. Please make sure all required fields have been completed and try again." }}');
-        $(form).removeClass('disabled');
+        showModal('Error', 'Sorry, there was an error with the submission!');
+        $(form).removeClass('form--loading');
       }
     });
 
     return false;
   });
 
-  function showAlert(message) {
-    $('.page__reviews-form.js-notice').removeClass('hidden');
-    $('.page__reviews-form.js-notice-text').html(message);
+  $('.js-close-modal').click(function () {
+    $('body').removeClass('show-modal');
+  });
+
+  function showModal(title, message) {
+    $('.js-modal-title').text(title);
+    $('.js-modal-text').html(message);
+
+    $('body').addClass('show-modal');
   }
-  })(jQuery);
+})(jQuery);
