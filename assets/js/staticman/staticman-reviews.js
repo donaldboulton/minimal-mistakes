@@ -1,11 +1,11 @@
 (function ($) {
-  var $comments = $('.js-reviews');
+  var $reviews = $('.js-reviews');
 
   $('#review-form').submit(function () {
     var form = this;
 
     $(form).addClass('disabled');
-    $("#comment-form-submit").html(
+    $("#review-form-submit").html(
       '<svg class="icon spin"><use xlink:href="/assets/icons/icons.svg#icon-loading"></use></svg> Loading...'
     );
 
