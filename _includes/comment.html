@@ -2,15 +2,10 @@
 <article id="comment{% unless include.r %}{{ index | prepend: '-' }}{% else %}{{ include.index | prepend: '-' }}{% endunless %}" class="js-comment comment {% if include.name == site.author.name %}admin{% endif %} {% unless include.replying_to == 0 %}child{% endunless %}">
 <div itemprop="creator" itemscope itemtype="http://schema.org/Person">
   <div class="comment-avatar">
-    {% if include.avatar %}
-      <noscript><img src="{{ include.avatar }}" alt=""></noscript>
-      <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ include.avatar }}" alt="" class="lazyload blur-up">
-    {% elsif include.email %}
-      <noscript><img itemprop="image" avatar="{{ include.name }}" alt="{{ include.name }}" class="lazyload blur-up" /></noscript>
-      <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=60 1x, https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=120 2x" alt="" class="lazyload blur-up">
+    {% if include.email %}
+      <img src="https://www.gravatar.com/avatar/{{ include.email }}" alt="{{ include.name }}" class="lazyload blur-up">
     {% else %}
-      <noscript><img itemprop="image" avatar="{{ include.name | strip_html }}" alt="{{ include.name | strip_html }}" class="lazyload blur-up" /></noscript>
-      <img itemprop="image" avatar="{{ include.name | strip_html }}" alt="{{ include.name | strip_html }}" class="lazyload blur-up" />
+      <img itemprop="image" avatar="{{ include.name }}" alt="{{ include.name }}" class="lazyload blur-up" />
     {% endif %}
   </div>
   <h3 class="comment-author-name">
