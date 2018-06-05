@@ -1,10 +1,13 @@
 (function ($) {
   var $comments = $('.js-reviews');
 
-  $('.js-form1').submit(function () {
+  $('#review-form').submit(function () {
     var form = this;
 
-    $(form).addClass('form--loading');
+    $(form).addClass('disabled');
+    $("#comment-form-submit").html(
+      '<svg class="icon spin"><use xlink:href="/assets/icons/icons.svg#icon-loading"></use></svg> Loading...'
+    );
 
     $.ajax({
       type: $(this).attr('method'),
