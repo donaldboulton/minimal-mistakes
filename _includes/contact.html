@@ -3,18 +3,19 @@
     <h3>Send us a email message</h3>
   <div class="form-group">
 		<label for="name">Full Name</label>
-		<input type="text" name="name" id="name" placeholder="Enter your name..." required autofocus>
+		<input type="text" name="fields[name]" id="name" placeholder="Enter your name..." required autofocus>
   </div>
   <div class="form-group">
 		<label for="email">Email Address</label>
-		<input type="email" name="email" id="email" placeholder="Enter your email..." required inputmode="email">
+		<input type="email" name="fields[email]" id="email" placeholder="Enter your email..." required inputmode="email">
   </div>
   <div class="form-group">
 		<label for="message">Message</label>
-		<textarea name="message" id="message" placeholder="Enter your message..." required></textarea>
+		<textarea name="fields[message]" id="message" placeholder="Enter your message..." required></textarea>
   </div>
   <div>
     <input type="hidden" name="_replyto" value="{{ page.email }}">
+    <input type="hidden" name="_cc" value="{{ email }}">
     <input type="hidden" name="_subject" value="Website donboulton New Message" />
     <input type="hidden" name="_next" value="https://donboulton.com/thanks/" />
     <input type="text" name="_gotcha" style="display: none;">
