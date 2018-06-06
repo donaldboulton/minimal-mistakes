@@ -5,9 +5,9 @@ email: c1e68ec3dd3cc5dad0d017d2930b259c
 url: 'https://donboulton.com'
 title: Reviews for Jekyll
 message: >-
-  ANyone know how to loop over data file like my reviews, and get the reviews
+  Anyone know how to loop over data file like in my reviews, and get the reviews
   for that page. Trying by variable products, id, slug. Nothing seems to work
-  for page. Getting random reviews for page not page specific.
+  for page. Getting random reviews for any page not page specific.
 replying_to: ''
 hidden: ''
 date: '2018-06-06T20:04:47.711Z'

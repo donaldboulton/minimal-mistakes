@@ -1,5 +1,5 @@
 <div class="js-reviews">
-      {% if page.reviews == true and site.data.reviews | where:'product',page.slug.size > 0 %}
+      {% if page.id and page.reviews == true and site.data.reviews | where:'product',page.slug.size > 1 %}
         <h4 class="page__comments-title">{{ site.data.ui-text[site.locale].reviews_title | default: "Reviews" }}</h4>
         {% assign reviews = site.data.reviews | sort %}
         {% for review in reviews %}
