@@ -24,7 +24,7 @@
             <p class="review__date heading">
               {% if reviewData.date %}
                 {% if reviewData.index %}<a href="#review{{ reviewData.index }}" itemprop="url">{% endif %}
-                <time datetime="{{ reviewData.date | date_to_xmlschema }}" itemprop="datePublished">{{ reviewData.date | date: "%B %d, %Y at %I:%M %p" }}</time>
+                  <span class="heading">Dated:&nbsp;</span><time datetime="{{ reviewData.date | date_to_xmlschema }}" itemprop="datePublished">{{ reviewData.date | date: "%B %d, %Y <p>at: %I:%M %p</p>" }}</time>
                 {% if reviewData.index %}</a>{% endif %}
               {% endif %}
             </p>

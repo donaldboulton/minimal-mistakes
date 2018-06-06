@@ -95,9 +95,11 @@ They were built with sliders,"not stars" for ratings and per several products on
 
 When I make a repo for this and  I will just include or inline the svg's, not us a sprite so svg4everybody.js, will not be needed.
 
- Reviews unlike page or site Comments which Google nor any Search Engine gives no positioning weight to, reviews cnad its rating cocunt can add to your overall search engine positioning.
+ Reviews unlike page or site Comments which Google nor any Search Engine gives 0 positioning weight to, reviews and its rating count can add to an overall search engine positioning increase.
 
  Comments in a Website are just a page filler unless they are linked to some social media post for search spiders access or through the internet linking socially. Todays sites, pages, posts or product commenting should be inclusive with Twitter or other Social Providers.
+
+ My comments and reviews through staticman - mailgun notices, notify twitter and send me email for my subscriber lists.
 
 ## How I built Jekyll Ratings
 
@@ -105,7 +107,13 @@ I have not completed this reviews system. It will post throught Staticman, send 
 
 What I have left to finish is overall site aggregate averaged rating and a overall review total count.
 
+The below code examples may change, as this is a work in progress, click on the links to each code example which goes to the most current working version of the file in my Github repo
+
 And to have the reviews of that page just show up on that page. With 0 counts and 0 rating if there are none, should be a simple elseif for that.
+
+```html
+{{ page.lcb }}% elsif site.data.reviews | where:'product',page.slug.reviewCount.size > 0 %} 0 {{ page.lcb }}% else %}{{ page.lcb }}% endif %}
+```
 
 This is also built with products, books, or movies in mind just change the slug from products to whatever.
 
@@ -383,6 +391,48 @@ layout: post
 message: ' '
 ```
 
-Working on examples without the icons.svg file and added a elsif statement for 0 counts and 0 ratings.
+## Notifications to Twitter
 
-Any input on how to finish this would be nice. Leave a review below or use any of the social liks in any page to Question or comment on this page.
+Both Staticman Comments and Reviews also post to Twitter through my staticman.yml mailgun configuration with notices.
+
+For the comments section all ENCRYPTED
+
+```yaml
+comments:
+  # Notification settings. When enabled, users can choose to receive notifications
+  # via email when someone adds a reply or a new comment. This requires an account
+  # with Mailgun, which you can get for free at http://mailgun.com.
+  notifications:
+    enabled: true
+
+  notify:
+  - name: donboulton
+    platform: twitter
+    consumer_key: Wicpx8XkPT8tHijl4MKH7w
+    consumer_secret: WWYv+fj1vn4foC7aTTwELPLM22XfxAT9wu01NdvOhtJWGhrV8wy0DzES5bCGxxFqtMi1kxTq9vGsbwH/e/9QzuNZGnHV2YeqxVKvXwWVxC700m+GZsFJXvehUdsHHUBgxe0MFzxkhEFpRK6y9QIUGofN+yH1+DqYn+iaNMVO964=
+    access_token: 105217183-OZnpTgm0Ug9T1XUQLefhzKzEdyHkckWX1Z6nHONO
+    access_token_secret: Sl/KluM2Asg0B+g8YmYJmZeyH1yONSMu/enIbX7+m56ADUKVL8yl+141eT3j5GOsnPBH40yfADg/ZBUDmejHq/+uB+SvYvoYwhm5V1F4ru8HzYjYlbYt95w2oMQbQQp2DQVNeqL7tQAbkWmmEbUFzr88NFkSLjYwKMG0W1e3Vos=
+```
+
+For the reviews section all ENCRYPTED.
+
+```yaml
+reviews:
+  # Notification settings. When enabled, users can choose to receive notifications
+  # via email when someone adds a new review. This requires an account
+  # with Mailgun, which you can get for free at http://mailgun.com.
+  notifications:
+    enabled: true
+
+  notify:
+  - name: donboulton
+    platform: twitter
+    consumer_key: Wicpx8XkPT8tHijl4MKH7w
+    consumer_secret: WWYv+fj1vn4foC7aTTwELPLM22XfxAT9wu01NdvOhtJWGhrV8wy0DzES5bCGxxFqtMi1kxTq9vGsbwH/e/9QzuNZGnHV2YeqxVKvXwWVxC700m+GZsFJXvehUdsHHUBgxe0MFzxkhEFpRK6y9QIUGofN+yH1+DqYn+iaNMVO964=
+    access_token: 105217183-OZnpTgm0Ug9T1XUQLefhzKzEdyHkckWX1Z6nHONO
+    access_token_secret: Sl/KluM2Asg0B+g8YmYJmZeyH1yONSMu/enIbX7+m56ADUKVL8yl+141eT3j5GOsnPBH40yfADg/ZBUDmejHq/+uB+SvYvoYwhm5V1F4ru8HzYjYlbYt95w2oMQbQQp2DQVNeqL7tQAbkWmmEbUFzr88NFkSLjYwKMG0W1e3Vos=
+```
+
+Working on examples without the icons.svg file.
+
+Any input on how to finish this would be nice. Leave a comment or a review below or use any of the social liks in any page to Question or comment on this page.
