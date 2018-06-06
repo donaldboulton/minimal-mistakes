@@ -29,11 +29,13 @@
         $(form).removeClass('disabled');
       }
     });
-
+    var frm = document.getElementsByName('review-form')[0];
+    frm.reset();
     return false;
   });
   function showAlert(message) {
     $('.page__reviews-form .js-notice').removeClass('hidden');
     $('.page__reviews-form .js-notice-text').html(message);
   }
+
 })(jQuery);

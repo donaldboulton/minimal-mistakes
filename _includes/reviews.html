@@ -35,8 +35,12 @@
         <div itemprop="author" class="review-author" itemscope itemtype="http://schema.org/Person">
           <div>Author</div>
             <img itemprop="image" avatar="{{ reviewData.name }}" alt="{{ reviewData.name }}" class="review-avatar-image text-left" />
-            <span itemprop="name" class="review-author-name"><small>{{ reviewData.name }}</small>
-            <span itemprop="url" class="review-author-url"><small>{{ reviewData.url }}</small></span></span>
+            {% unless reviewData.url == blank %}
+            <span itemprop="name" class="review-author-name"><small><a rel="external nofollow" itemprop="name" href="{{ reviewData.url }}">{{ reviewData.name | strip_html }}</a></small>
+              {% else %}
+                {{ reviewData.name | strip_html }}
+              {% endunless %}
+            </span>
         </div>
 				<div class="form-group">
             <span>Message</span><span itemprop="reviewBody"></span> {{ reviewData.description | markdownify }}</span>

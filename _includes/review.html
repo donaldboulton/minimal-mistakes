@@ -1,4 +1,5 @@
-<article id="review{{ include.index }}" itemscope itemtype="http://schema.org/Review" class="toc1">
+<article id="review{{ reviewData.product }}" itemscope itemtype="http://schema.org/Review">
+<div class="review-content">
   <span class="section-title">
     <h3><svg width="14px" height="16px" class="icon icon--pulse" viewBox="0 0 14 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <g id="Octicons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -8,18 +9,16 @@
       </g>
     </svg> Page Review</span></h3>
   </span>
-  {% assign reviews = site.data.reviews | where:'slug',page.slug | sort: 'date' %}
-<div class="review-content comment__content-wrapper">
   <div class="form-group">
     <div itemprop="itemReviewed" itemscope itemtype="http://schema.org/Product">
          <span class="item-reviewed">Item Reviewed</span>
-         <p><span itemprop="name">{{ include.title }}</span></p>
+         <p><span itemprop="name">{{ reviewData.title }}</span></p>
       </div>
       <p class="review__date">
-        {% if include.date %}
-          {% if include.index %}<a href="#review{{ include.index }}" itemprop="url">{% endif %}
-          <time datetime="{{ include.date | date_to_xmlschema }}" itemprop="datePublished">{{ include.date | date: "%B %d, %Y at %I:%M %p" }}</time>
-          {% if include.index %}</a>{% endif %}
+        {% if reviewData.date %}
+          {% if reviewData.index %}<a href="#review{{ reviewData.index }}" itemprop="url">{% endif %}
+          <time datetime="{{ reviewData.date | date_to_xmlschema }}" itemprop="datePublished">{{ reviewData.date | date: "%B %d, %Y at %I:%M %p" }}</time>
+          {% if reviewData.index %}</a>{% endif %}
         {% endif %}
       </p>
   </div>
@@ -30,26 +29,24 @@
           <svg class="icon icon--star rating-star rating-radio-star--on"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'assets/icons/' | relative_url }}"></use></svg>
         {% endfor %}
         <meta class="hidden" itemprop="ratingValue" content="{{ reviewData.review }}">
-        Title:&nbsp;<span class="title-text">{{ include.title }}</span>
+        Title:&nbsp;<span class="title-text">{{ reviewData.title }}</span>
     </div>
   </div>
   <div itemprop="author" class="review-author comment__avatar-wrapper" itemscope itemtype="http://schema.org/Person">
     <div>Author</div>
       <img itemprop="image" class="comment__avatar" avatar="{{ reviewData.name }}" alt="{{ reviewData.name }}"/>
-      {% unless include.url == blank %}
-      <span itemprop="name" class="review-author-name"><small><a rel="external nofollow" itemprop="name" href="{{ include.url }}">{{ include.name | strip_html }}</a></small>
+      {% unless reviewData.url == blank %}
+      <span itemprop="name" class="review-author-name"><small><a rel="external nofollow" itemprop="name" href="{{ reviewData.url }}">{{ reviewData.name | strip_html }}</a></small>
         {% else %}
-          {{ include.name | strip_html }}
+          {{ reviewData.name | strip_html }}
         {% endunless %}
       </span>
   </div>
   <div class="form-group">
-      <div>Message</div><div itemprop="reviewBody"> {{ include.description | markdownify }}</div>
+      <div>Message</div><div itemprop="reviewBody"> {{ reviewData.description | markdownify }}</div>
   </div>
 </div>
   <span style="display: none;" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta class="hidden" itemprop="name" content="donboulton.com">
   </span>
-  <meta itemprop="url" type="hidden" value="{{ page.url | absolute_url }}">
-  <input type="hidden" name="options[parent]" value="{{ page.url | absolute_url }}">
 </article>
