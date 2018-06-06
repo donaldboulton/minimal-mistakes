@@ -1,6 +1,6 @@
 <article id="review{{ include.index }}" itemscope itemtype="http://schema.org/Review" class="toc1">
   <span class="section-title">
-    <h3 class="nav__title1"><svg width="14px" height="16px" class="icon icon--pulse" viewBox="0 0 14 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <h3><svg width="14px" height="16px" class="icon icon--pulse" viewBox="0 0 14 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <g id="Octicons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="pulse" fill="#ffffff">
           <polygon id="Shape" points="11.5 8 8.8 5.4 6.6 8.5 5.5 1.6 2.38 8 0 8 0 10 3.6 10 4.5 8.2 5.4 13.6 9 8.5 10.6 10 14 10 14 8"></polygon>
@@ -8,11 +8,12 @@
       </g>
     </svg> Page Review</span></h3>
   </span>
+  {% assign reviews = site.data.reviews | where:'slug',page.slug | sort: 'date' %}
 <div class="review-content comment__content-wrapper">
   <div class="form-group">
     <div itemprop="itemReviewed" itemscope itemtype="http://schema.org/Product">
          <span class="item-reviewed">Item Reviewed</span>
-         <p><span itemprop="name">{{ reviewData.title }}</span></p>
+         <p><span itemprop="name">{{ include.title }}</span></p>
       </div>
       <p class="review__date">
         {% if include.date %}
@@ -29,17 +30,21 @@
           <svg class="icon icon--star rating-star rating-radio-star--on"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'assets/icons/' | relative_url }}"></use></svg>
         {% endfor %}
         <meta class="hidden" itemprop="ratingValue" content="{{ reviewData.review }}">
-        Title:&nbsp;<span class="title-text">{{ reviewData.title }}</span>
+        Title:&nbsp;<span class="title-text">{{ include.title }}</span>
     </div>
   </div>
   <div itemprop="author" class="review-author comment__avatar-wrapper" itemscope itemtype="http://schema.org/Person">
     <div>Author</div>
       <img itemprop="image" class="comment__avatar" avatar="{{ reviewData.name }}" alt="{{ reviewData.name }}"/>
-      <span itemprop="name" class="review-author-name"><small>{{ reviewData.name }}</small>
-      <span itemprop="url" class="review-author-url"><small>{{ reviewData.url }}</small></span></span>
+      {% unless include.url == blank %}
+      <span itemprop="name" class="review-author-name"><small><a rel="external nofollow" itemprop="name" href="{{ include.url }}">{{ include.name | strip_html }}</a></small>
+        {% else %}
+          {{ include.name | strip_html }}
+        {% endunless %}
+      </span>
   </div>
   <div class="form-group">
-      <span>Message</span><span itemprop="reviewBody"></span> {{ reviewData.description | markdownify }}</span>
+      <div>Message</div><div itemprop="reviewBody"> {{ include.description | markdownify }}</div>
   </div>
 </div>
   <span style="display: none;" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
