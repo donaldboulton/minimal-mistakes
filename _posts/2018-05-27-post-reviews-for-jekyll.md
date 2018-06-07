@@ -399,6 +399,11 @@ For the comments section all ENCRYPTED
 
 ```yaml
 comments:
+ # (*) REQUIRED WHEN USING NOTIFICATIONS
+  #
+  # When allowedOrigins is defined, only requests sent from one of the domains
+  # listed will be accepted. The origin is sent as part as the `options` object
+  # (e.g. <input name="options[origin]" value="http://yourdomain.com/post1")
   # Notification settings. When enabled, users can choose to receive notifications
   # via email when someone adds a reply or a new comment. This requires an account
   # with Mailgun, which you can get for free at http://mailgun.com.
@@ -418,6 +423,11 @@ For the reviews section all ENCRYPTED.
 
 ```yaml
 reviews:
+ # (*) REQUIRED WHEN USING NOTIFICATIONS
+  #
+  # When allowedOrigins is defined, only requests sent from one of the domains
+  # listed will be accepted. The origin is sent as part as the `options` object
+  # (e.g. <input name="options[origin]" value="http://yourdomain.com/post1")
   # Notification settings. When enabled, users can choose to receive notifications
   # via email when someone adds a new review. This requires an account
   # with Mailgun, which you can get for free at http://mailgun.com.
@@ -431,6 +441,13 @@ reviews:
     consumer_secret: WWYv+fj1vn4foC7aTTwELPLM22XfxAT9wu01NdvOhtJWGhrV8wy0DzES5bCGxxFqtMi1kxTq9vGsbwH/e/9QzuNZGnHV2YeqxVKvXwWVxC700m+GZsFJXvehUdsHHUBgxe0MFzxkhEFpRK6y9QIUGofN+yH1+DqYn+iaNMVO964=
     access_token: 105217183-OZnpTgm0Ug9T1XUQLefhzKzEdyHkckWX1Z6nHONO
     access_token_secret: Sl/KluM2Asg0B+g8YmYJmZeyH1yONSMu/enIbX7+m56ADUKVL8yl+141eT3j5GOsnPBH40yfADg/ZBUDmejHq/+uB+SvYvoYwhm5V1F4ru8HzYjYlbYt95w2oMQbQQp2DQVNeqL7tQAbkWmmEbUFzr88NFkSLjYwKMG0W1e3Vos=
+```
+
+### Notifications Hidden Form Inputs
+
+```html
+<input type="hidden" name="options[origin]" value="{{ page.url | relative_url }}">
+<input type="hidden" name="options[parent]" value="{{ page.url | relative_url }}">
 ```
 
 Working on examples without the icons.svg file.

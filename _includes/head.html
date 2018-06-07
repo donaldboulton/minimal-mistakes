@@ -114,3 +114,8 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
 {% if page.support contains 'visualcaptcha' %}
    <link href="{{ '/assets/css/vendor/visualcaptcha/visualcaptcha.css' | relative_url }}" media="all" rel="stylesheet">
 {% endif %}
+
+{% if page.support contains 'calendar' %}
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.0.0-alpha/fullcalendar.min.css">
+   <link rel="stylesheet" media="print" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.0.0-alpha/fullcalendar.print.min.css">
+{% endif %

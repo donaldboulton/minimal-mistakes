@@ -1,0 +1,17 @@
+---
+layout:
+title:
+permalink: /calendar-data/
+---
+
+[
+{% for event in page.events %}
+	{
+		"title":"{{page.title}}",
+		"start": "{{page.event_date}}",
+		"allDay":true,
+		"url":"{{page.url}}"
+	}
+	{%unless forloop.last %},{%endunless%}
+{% endfor %}
+]

@@ -64,6 +64,7 @@
   },
   "dependencies": {
     "body-parser": "^1.18.3",
+    "fullcalendar": "^4.0.0-alpha",
     "gulp-update": "0.0.2",
     "lg-autoplay": "^1.0.4",
     "lg-fullscreen": "^1.0.1",

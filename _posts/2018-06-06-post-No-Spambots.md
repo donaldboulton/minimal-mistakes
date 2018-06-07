@@ -12,9 +12,10 @@ author_profile: true
 adds: true
 cookies: true
 reviews: true
+events: true
 date: 2018-06-06 16:16:01 -0600
 last_modified_at: 2018-06-06T10:42:38-04:00
-
+event_date: 2018-06-06
 tags:
   - Jekyll
   - Spam
@@ -34,9 +35,9 @@ locations:
 
 excerpt: "Several times in the past I have had hidden forms though slidng sidebars and hidden forms.
 
-I did not click to the fact that thoes forms did not ever get spamed on comments, except by users that were jerks or malicious."
+I did not click to the fact that these forms did not ever get spamed, except by users that were jerks or malicious."
 
-support: [adds, cookies]
+support: [adds, cookies, events]
 folder: _posts
 product: reviews-for-jekyll
 slug: reviews-for-jekyll
@@ -78,7 +79,7 @@ Taken from [w3schools.com](https://www.w3schools.com/howto/howto_js_collapsible.
 Add a class of content to a div surrounding your form.
 
 ```html
-<div class="content">
+<div class="content hidden">
 ```
 
 ### The Css
@@ -124,6 +125,8 @@ Some css to open and close the form
 .active:after {
     content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
+
+.hidden{display:none}
 ```
 
 ### Animated Collapsible (Slide Down)
