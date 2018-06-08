@@ -1,6 +1,6 @@
 ---
-title: Drag & Drop No Spambots
-name: Drag & Drop No Spambots
+title: Drag Drop No Spambots
+name: Drag Drop No Spambots
 layout: single
 read_time: true
 comments: true
@@ -23,7 +23,7 @@ tags:
   - dragula
 category:
   - Jekyll
-permalink: 2018-06-06-post-Drag-&-Drop-No-Spambots.html
+permalink: 2018-06-06-post-Drag-Drop-No-Spambots.html
 image:
   cover: true
   path: &image /assets/images/pages/stop-spam.png
