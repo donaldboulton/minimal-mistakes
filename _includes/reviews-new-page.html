@@ -1,4 +1,4 @@
-<div id="respond" class="js-comments">
+<div id="respond" class="js-comments parent">
     <header class="section-title">
         <h3><svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" class="icon icon--megaphone" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <g id="Octicons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -8,7 +8,7 @@
           </g>
       </svg> Add A Page Review</h3>
     </header>
- <div class="page__reviews-form">
+ <div class="page__reviews-form wrapper">
   <form id="review-form" class="page__form js-form form" method="post" action="https://dev.staticman.net/v2/entry/donaldboulton/DWB/gh-pages/reviews" oninput="result.value=parseInt(this['fields[review]'].value)">
     <div class="field-group rating-select"> <span>Add A Rating:&nbsp;</span> <label class="rating-radio-label" for="comment-form[star-1]"> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="1" name="fields[review]" id="comment-form[star-1]" checked=""> <label class="rating-radio-label" for="comment-form[star-2]"> <svg class="icon icon--star_border rating-star rating-radio-star--off"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-star_border"></use>star_border</svg> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="2" name="fields[review]" id="comment-form[star-2]"> <label class="rating-radio-label" for="comment-form[star-3]"> <svg class="icon icon--star_border rating-star rating-radio-star--off"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-star_border"></use>star_border</svg> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="3" name="fields[review]" id="comment-form[star-3]"> <label class="rating-radio-label" for="comment-form[star-4]"> <svg class="icon icon--star_border rating-star rating-radio-star--off"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-star_border"></use>star_border</svg> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="4" name="fields[review]" id="comment-form[star-4]"> <label class="rating-radio-label" for="comment-form[star-5]"> <svg class="icon icon--star_border rating-star rating-radio-star--off"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-star_border"></use>star_border</svg> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="5" name="fields[review]" id="comment-form[star-5]"></div>
       <div class="form-group">
@@ -47,12 +47,9 @@
         <input type="hidden" name="options[reCaptcha][secret]" value="{{ site.reCaptcha.secret }}">
       </div>
       <div class="form-group">
-          <div class="g-recaptcha" data-theme="dark" data-tabindex="5" data-sitekey="6LerR1MUAAAAACWH7t30s7V4aApQZaIVVPcvH21X"></div>
-      </div>
-      <div class="form-group">
-          <button type="submit" id="review-form-submit" class="btn btn--primary">
-            Submit Review
-           </button>
+          <div id="left-events" class="container">
+              <div>Move the button, "Post Review", to Submit this form!</div>
+          </div>
           <!-- Start comment form alert messaging -->
           <p class="hidden js-notice">
             <span class="js-notice-text"></span>
@@ -60,6 +57,10 @@
           <!-- End comment form alert messaging -->
       </div>
   </form>
+  <div id="right-events" class="container">
+      Grab and Move this button up to Submit the Review form.
+        <div><input type="submit" id="review-form-submit" value="Post Review" class="btn btn--primary"></div>
+  </div>
  </div>
 </div>
 
