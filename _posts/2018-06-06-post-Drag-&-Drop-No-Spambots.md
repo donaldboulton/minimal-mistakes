@@ -62,7 +62,7 @@ No bot or computer can figure this out so spam is defeated, except by jerks comm
 
 Yea! Goodby recaptcha and honeypots.
 
-## Lets build our draggable button
+## The draggable button
 
 Download [dragula](https://github.com/bevacqua/dragula) from is dist folder in draguala Github Repo.
 Or follow its nmp installation instructions.
