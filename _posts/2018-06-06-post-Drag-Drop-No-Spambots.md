@@ -1,7 +1,7 @@
 ---
+layout: single
 title: Drag Drop No Spambots
 name: Drag Drop No Spambots
-layout: single
 read_time: true
 comments: true
 share: true
@@ -13,7 +13,6 @@ adds: true
 dragula: true
 cookies: true
 reviews: true
-events: true
 date: 2018-06-06 16:16:01 -0600
 last_modified_at: 2018-06-06T10:42:38-04:00
 event_date: 2018-06-06
@@ -35,15 +34,13 @@ header:
 locations:
   - OKC, Oklahoma
 
-excerpt: "This is a simple 13kb with .js its init.js and .scss a simple flawless way to defeat spambots.
+excerpt: "This is a simple 13kb with .js its init.js and .scss a simple flawless way to defeat spambots. Use a submit button that has to be dragged using dragula to its posting position, In the Form, to post any form."
 
-Use a submit button that has to be dragged using dragula to its posting position, "In the Form", to post any form."
-
-support: [adds, cookies, events, dragula]
+support: [adds, cookies, dragula]
 folder: _posts
-product: no-spambots
-slug: no-spambots
-github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2018-06-06-post-Drag-&-Drop-No-Spambots.md
+product: drag-drop-no-spambots
+slug: drag-drop-no-spambots
+github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2018-06-06-post-Drag-Drop-No-Spambots.md
 lcb: "{"
 ---
 
@@ -53,7 +50,7 @@ lcb: "{"
 
 # Defeat Spambots with dragula
 
-{% include figure image_path="/assets/images/pages/dragula-logo.png" alt=dragula" caption="Drag and Drop with Drgaula" class="img" %}
+![Drag and Drop with Drgaula](/assets/images/pages/dragula-logo.png){:class="text-center"}
 
 This is a simple 13kb .js its init.js and .scss using a simple flawless way to defeat spambots.
 
@@ -118,25 +115,25 @@ Adding everything to make this work its scripts, scss, frontmatter and dragula.j
 
 ```css
 .gu-mirror {
-	position: fixed !important;
-	margin: 0 !important;
-	z-index: 9999 !important;
-	opacity: 0.8;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
-	filter: alpha(opacity=80);
+position: fixed !important;
+margin: 0 !important;
+z-index: 9999 !important;
+opacity: 0.8;
+-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+filter: alpha(opacity=80);
 }
 .gu-hide {
-	display: none !important;
+display: none !important;
 }
 .gu-unselectable {
-	-webkit-user-select: none !important;
-	-moz-user-select: none !important;
-	-ms-user-select: none !important;
-	user-select: none !important;
+-webkit-user-select: none !important;
+-moz-user-select: none !important;
+-ms-user-select: none !important;
+user-select: none !important;
 }
 .gu-transit {
-	opacity: 0.2;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
-	filter: alpha(opacity=20);
+opacity: 0.2;
+-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+filter: alpha(opacity=20);
 }
 ```
