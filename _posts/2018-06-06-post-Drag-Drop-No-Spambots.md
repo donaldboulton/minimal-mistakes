@@ -50,7 +50,7 @@ lcb: "{"
 
 # Defeat Spambots with dragula
 
-![Drag and Drop with Drgaula](/assets/images/pages/dragula-logo.png){:class="text-center"}
+![Drag and Drop with Drgaula](/assets/images/pages/dragula-logo.png){:class="align-center"}
 
 This is a simple 13kb .js its init.js and .scss using a simple flawless way to defeat spambots.
 
@@ -146,6 +146,7 @@ opacity: 0.2;
 -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
 filter: alpha(opacity=20);
 }
+<<<<<<< HEAD
 ```
 
 ### Dragula Example
@@ -153,3 +154,6 @@ filter: alpha(opacity=20);
 > Drag any of the contents below within its class .parent and class .wrapper div's
 
 {% include dragula-example.html %}
+=======
+```
+>>>>>>> parent of 1d917321... done
