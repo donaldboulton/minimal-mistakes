@@ -66,7 +66,13 @@ Download [dragula](https://github.com/bevacqua/dragula) from is dist folder in d
 Or follow its nmp installation instructions.
 
 ```html
-<form>
+<div class="wrapper">
+ <form>
+  <div class="form-group">
+		<label for="name">Full Name</label>
+		<input type="text" name="fields[name]" id="name" placeholder="Enter your name..." required autofocus>
+  </div>
+// Other inputs
   <div class="form-group">
       <div id="left-defaults" class="container">
           <div class="">Moving the button here</div>
@@ -77,6 +83,7 @@ Or follow its nmp installation instructions.
         Move this button to submit the contact form.
           <div><input type="submit" value="Send Message" class="btn btn--primary"></div>
       </div>
+</div>
 ```
 
 ### Add javascript
