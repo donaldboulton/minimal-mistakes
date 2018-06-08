@@ -94,7 +94,7 @@ Adding dragula to my scripts.html
 {{ page.lcb }}% if page.support contains 'dragula' %}
 <script src="{{ page.lcb }}{ '/assets/js/vendor/dragula/dragula.min.js' | relative_url }}"></script>
 <script>
-dragula([document.getElementById(left), document.getElementById(right)])
+dragula([document.getElementById(left-defaults), document.getElementById(right-defaults)])
   .on('drag', function (el) {
     el.className = el.className.replace('ex-moved', '');
   }).on('drop', function (el) {
@@ -146,5 +146,7 @@ filter: alpha(opacity=20);
 ```
 
 ### Dragula Example
+
+> Drag any of the contents below withn its parent and wrapper div's
 
 {% include dragula-example.html %}
