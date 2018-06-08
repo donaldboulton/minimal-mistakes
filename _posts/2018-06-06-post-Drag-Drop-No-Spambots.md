@@ -63,26 +63,29 @@ Yea! Goodby recaptcha and honeypots.
 ## The draggable button
 
 Download [dragula](https://github.com/bevacqua/dragula) from is dist folder in draguala Github Repo.
-Or follow its nmp installation instructions.
+Or follow its npm installation instructions.
+
+Note in using this I noticed dragula uses some of the .js files from the node-modules/dragula folder
 
 ```html
-<div class="wrapper">
- <form>
-  <div class="form-group">
-		<label for="name">Full Name</label>
-		<input type="text" name="fields[name]" id="name" placeholder="Enter your name..." required autofocus>
-  </div>
-// Other inputs
-  <div class="form-group">
-      <div id="left-defaults" class="container">
-          <div class="">Moving the button here</div>
-      </div>
-  </div>
-</form> // The button is placed below outside of the form to be dragged to the form
-      <div id="right-defaults" class="container">
-        Move this button to submit the contact form.
+<div class="parent">
+   <div class="wrapper">
+     <form>
+        <div class="form-group">
+           <label for="name">Full Name</label>
+           <input type="text" name="fields[name]" id="name" placeholder="Enter your name..." required autofocus>
+        </div>
+        // Other inputs email, title, message...
+        <div class="form-group">
+           <div id="left-defaults" class="container">
+           <div class="">Moving the button here</div>
+        </div>
+      </form> // The button is placed below outside of the form to be dragged to the form
+        <div id="right-defaults" class="container">
+            Move this button to submit the contact form.
           <div><input type="submit" value="Send Message" class="btn btn--primary"></div>
-      </div>
+        </div>
+    </div>
 </div>
 ```
 
