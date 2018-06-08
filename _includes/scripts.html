@@ -86,33 +86,7 @@
 {% if page.support contains 'cookies' %}
 <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
 <script>
-window.addEventListener("load", function() {
-    window.cookieconsent.initialise({
-        "palette": {
-            "popup": {
-                "background": "#031111",
-                "text": "#d6d6d6"
-            },
-            "button": {
-                "background": "#1faaaa"
-            }
-        },
-        revokable:true,
-        onStatusChange: function(status) {
-          console.log(this.hasConsented() ?
-             'enable cookies' : 'disable cookies');
-         },
-         law: {
-           regionalLaw: false,
-         },
-         location: true,
-        "theme": "edgeless",
-        "position": "bottom-left",
-        "content": {
-            "href": "https://donboulton.com/terms/#cookies-and-web-beacons"
-        }
-    })
-});
+window.addEventListener("load",function(){window.cookieconsent.initialise({"palette":{"popup":{"background":"#031111","text":"#d6d6d6"},"button":{"background":"#1faaaa"}},revokable:true,onStatusChange:function(status){console.log(this.hasConsented() ? 'enable cookies':'disable cookies')},law:{regionalLaw:false,},location:true,"theme":"edgeless","position":"bottom-left","content":{"href":"https://donboulton.com/terms/#cookies-and-web-beacons"}})})
 </script>
 {% endif %}
 
@@ -136,25 +110,7 @@ window.addEventListener("load", function() {
 </script>
 {% endif %}
 <script>
-  $(document).ready(function() {
-    svg4everybody();
-
-    $("a").smoothScroll({ offset: -20 });
-  });
-  var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    }
-  });
-}
+$(document).ready(function(){svg4everybody();$("a").smoothScroll({offset:-20})});var coll=document.getElementsByClassName("collapsible");var i;for(i=0;i<coll.length;i++){coll[i].addEventListener("click",function(){this.classList.toggle("active");var content=this.nextElementSibling;if(content.style.maxHeight){content.style.maxHeight=null}else{content.style.maxHeight=content.scrollHeight+"px"}})}
 </script>
 {% if page.comments == true %}
   <script src="{{ '/assets/js/staticman/staticman-comments.js' | relative_url }}"></script>
@@ -175,11 +131,13 @@ for (i = 0; i < coll.length; i++) {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.0.0-alpha/fullcalendar.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.0.0-alpha/gcal.min.js"></script>
 <script>
+$(document).ready(function() {
  document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
     var calendar = new FullCalendar.Calendar(calendarEl, {
 
   header: {
+    defaultView: 'month',
     left: 'prev,next today',
     center: 'title',
     right: 'month,listYear'
@@ -190,7 +148,6 @@ for (i = 0; i < coll.length; i++) {
   googleCalendarApiKey: 'AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA',
 
   events: 'en.usa#holiday@group.v.calendar.google.com',
-  events: '/calendar-data',
 
   eventClick: function(event) {
 
@@ -205,6 +162,7 @@ for (i = 0; i < coll.length; i++) {
     });
     calendar.render();
   });
+});
 </script>
 {% endif %}
 
