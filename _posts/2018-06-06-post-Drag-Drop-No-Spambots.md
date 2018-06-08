@@ -147,6 +147,6 @@ filter: alpha(opacity=20);
 
 ### Dragula Example
 
-> Drag any of the contents below withn its parent and wrapper div's
+> Drag any of the contents below within its class .parent and class .wrapper div's
 
 {% include dragula-example.html %}
