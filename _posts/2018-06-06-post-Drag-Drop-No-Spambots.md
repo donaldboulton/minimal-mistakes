@@ -144,3 +144,7 @@ opacity: 0.2;
 filter: alpha(opacity=20);
 }
 ```
+
+### Dragula Example
+
+{% include dragula-example.html %}
