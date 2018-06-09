@@ -121,7 +121,7 @@ support: [dragula]
 
 ### The Sass or css
 
-Adding everything to make this work its scripts, scss, frontmatter and dragula.js = < less than 13kb.
+Adding everything to make this work its scripts, scss, frontmatter and dragula.js = less than 13kb.
 
 ```css
 .gu-mirror {
@@ -146,14 +146,10 @@ opacity: 0.2;
 -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
 filter: alpha(opacity=20);
 }
-<<<<<<< HEAD
 ```
 
 ### Dragula Example
 
-> Drag any of the contents below within its class .parent and class .wrapper div's
+> Drag any of the contents below within its class .parent and class .wrapper div's.
 
 {% include dragula-example.html %}
-=======
-```
->>>>>>> parent of 1d917321... done
