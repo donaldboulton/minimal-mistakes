@@ -34,7 +34,7 @@ If these sorts of things interest you, follow along on:
 
 ## Subscribe to the Feeds
 
-The main feed[^feed] for everything on Don Boulton.
+The main feed's for everything on Don Boulton.
 
 - Atom: [{{ 'atom.xml' | relative_url }}]({{ 'atom.xml' | relative_url }})
 - JSON: [{{ 'feed.json' | relative_url }}]({{ 'feed.json' | relative_url }})
