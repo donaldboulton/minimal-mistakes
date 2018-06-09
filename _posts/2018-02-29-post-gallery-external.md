@@ -4,6 +4,7 @@ layout: single
 redirect_to:
   - /photography/
 read_time: true
+youtubeId: IGMCAZk5xlg
 comments: true
 share: true
 date: 2018-03-28 16:16:01 -0600
