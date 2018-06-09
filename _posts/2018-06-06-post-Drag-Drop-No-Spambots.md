@@ -34,7 +34,7 @@ header:
 locations:
   - OKC, Oklahoma
 
-excerpt: "This is a simple 13kb with .js its init.js and .scss a simple flawless way to defeat spambots. Use a submit button that has to be dragged using dragula to its posting position, In the Form, to post any form."
+excerpt: "This is a simple 13kb with .js its init.js and .scss a lightweight flawless way to defeat spambots. Use a submit button that has to be dragged using dragula to its posting position, In the Form, to post any form."
 
 support: [adds, cookies, dragula]
 folder: _posts
@@ -52,7 +52,7 @@ lcb: "{"
 
 ![Drag and Drop with Drgaula](/assets/images/pages/dragula-logo.png){:class="align-center"}
 
-This is a simple 13kb .js its init.js and .scss using a simple flawless way to defeat spambots.
+This is a simple 13kb .js its init.js and .scss using a lightweight flawless way to defeat spambots.
 
 Use a submit button that has to be dragged using dragula to its posting position into the form, to post that form.
 
