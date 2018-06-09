@@ -25,12 +25,12 @@ category:
 permalink: 2018-06-06-post-Drag-Drop-No-Spambots.html
 image:
   cover: true
-  path: &image /assets/images/pages/stop-spam.png
+  path: &image /assets/images/pages/stop-spam.jpg
   feature: *image
-  thumbnail: /assets/images/pages/stop-spam-320.png
+  thumbnail: /assets/images/pages/stop-spam-320.jpg
 header:
-  image: /assets/images/pages/stop-spam.png
-  teaser: /assets/images/pages/stop-spam-320.png
+  image: /assets/images/pages/stop-spam.jpg
+  teaser: /assets/images/pages/stop-spam-320.jpg
 locations:
   - OKC, Oklahoma
 
