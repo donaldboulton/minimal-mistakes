@@ -58,9 +58,9 @@ lcb: "{"
 
 There are two ways displayed below to build Image Gallerys with Jekyll using [MetaFuzzy Isotope](https://isotope.metafizzy.co/) and [Sachinchoolur LightGallery](http://sachinchoolur.github.io/lightGallery/demos/)
 
-The First is a Simple Gallery that Loops throught all images in a folder resizing the isotope page gallery display image online, the origional image is opened in LightGallery.
+The First is a Simple Gallery that Loops throught all images in a folder resizing the isotope gallery page, display image online, the origional image is opened in LightGallery.
 
-The Second is driven off of a data yml file, a hard way to do it, but it gives you a mobile responsive - data-responsive set of images kind of like a data-srcset but for a Isotope - LightGallery responsive display, using 4 or more image sizes.
+The Second is a Complex Gallery is driven off of a data yml file, a hard way to do it, but it gives you a mobile responsive - data-responsive set of images kind of like a data-srcset but for a Isotope - LightGallery responsive display, using 4 or more image sizes.
 
 ## Image sizing
 
