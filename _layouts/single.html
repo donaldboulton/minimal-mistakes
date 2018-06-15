@@ -77,6 +77,7 @@ layout: default
     {% if page.reviews == true %}
       {% include reviews-new-page.html %}
     {% endif %}
+    {% include webmentions.html %}
   </article>
 
   {% comment %}<!-- only show related on a post page when `related: true` -->{% endcomment %}
