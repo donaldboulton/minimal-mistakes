@@ -25,7 +25,7 @@ read_time: true
 comments: true
 related: true
 share: true
-social-share: twitter --twitter-hashtags facebook linkedin
+social-share: twitter --twitter-hashtags facebook
 sidenav: true
 reviews: true
 adds: true

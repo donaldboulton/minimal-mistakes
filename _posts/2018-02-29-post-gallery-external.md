@@ -7,6 +7,7 @@ read_time: true
 youtubeId: IGMCAZk5xlg
 comments: true
 share: true
+social-share: twitter --twitter-hashtags facebook
 date: 2018-03-28 16:16:01 -0600
 last_modified_at: 2018-04-13T12:42:38-04:00
 search: true

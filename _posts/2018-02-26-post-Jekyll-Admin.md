@@ -5,6 +5,7 @@ author_profile: true
 read_time: true
 comments: true
 share: true
+social-share: twitter --twitter-hashtags facebook
 sidenav: true
 adds: true
 cookies: true

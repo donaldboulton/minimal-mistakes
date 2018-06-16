@@ -97,17 +97,16 @@ naver_site_verification  :
 google_maps_javascript_api_key: "AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA"
 snipcart_key             : "NGViODk5ZDAtNmU4OC00MjI5LWIxMGMtZGZmOWEwOGRhM2M1NjM2NjE0Nzc1OTQ2NzMzMTU"
 # Social Sharing
-twitter:
-  username               : "donboulton"
-  twitter_api_key        : "Wicpx8XkPT8tHijl4MKH7w"
-  twitter_secret         : "Ugr3ZV9eEXjnuIZgWEi6sXgOji4PHCDjVhAWPLmIeodcDJFhVX/awFB9/NzkN0vI8HdWg0oPxyXUEEarW3YChM5p63Xlfuc+Ax2cMSC6K0/CdG9XAxID0cxfrZ44/DpbcXewwV/tDDWzepjUq3EJiPyIlZnYZfyCtKRi3Nl6iGo="
-  twitter_format         : "@title: @url@tags"
-  twitter_url_length     : 22
-  twitter_max_length     : 140
+twitter-username         : "donboulton"
+twitter_api_key          : "Wicpx8XkPT8tHijl4MKH7w"
+twitter_secret           : "Ugr3ZV9eEXjnuIZgWEi6sXgOji4PHCDjVhAWPLmIeodcDJFhVX/awFB9/NzkN0vI8HdWg0oPxyXUEEarW3YChM5p63Xlfuc+Ax2cMSC6K0/CdG9XAxID0cxfrZ44/DpbcXewwV/tDDWzepjUq3EJiPyIlZnYZfyCtKRi3Nl6iGo="
+twitter_format           : "@title: @url@tags"
+twitter_url_length       : 22
+twitter_max_length       : 140
 facebook:
-  username               : "donboulton"
-  app_id                 :
-  publisher              :
+  username               : "don-boulton"
+  app_id                 : "322180367845124"
+  publisher              : "don-boulton"
   og_image               : "favicon.png" # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles

@@ -5,6 +5,8 @@ name: Drag Drop No Spambots
 read_time: true
 comments: true
 share: true
+social-share: twitter --twitter-hashtags facebook
+sidenav: true
 toc: true
 search: true
 author: Donald Boulton
@@ -54,9 +56,9 @@ lcb: "{"
 
 This is a simple 13kb .js its init.js and .scss using a lightweight flawless way to defeat spambots.
 
-Use a submit button that has to be dragged using dragula to its posting position into the form, to post that form.
+Use a submit button that has to be dragged using dragula to its posting position into the form, dragging to the left to post that form.
 
-No bot or computer can figure this out so spam is defeated, except by jerks comments or reviews based on non-sense. Then I just blacklist them in cloudflair and that blocks them from cloudflare servers, that will really make there day.
+No bot or computer can figure this out so spam is defeated, except by the jerks comments or reviews based on non-sense. Then I just blacklist them in CloudFlair and that blocks them from CloudFlare servers, that will really make there day.
 
 Yea! Goodby recaptcha and honeypots.
 
@@ -65,22 +67,22 @@ Yea! Goodby recaptcha and honeypots.
 Download [dragula](https://github.com/bevacqua/dragula) from is dist folder in draguala Github Repo.
 Or follow its npm installation instructions.
 
-Note in using this I noticed dragula uses some of the .js files from the node-modules/dragula folder
+Note in using this I noticed dragula uses some of the .js files from the node-modules/dragula,  So the best case normally would be to use the CDN for dragula
 
 ```html
-<div class="parent">
-   <div class="wrapper">
+<div class="parent"> // All movable items with class="parent"
+   <div class="wrapper"> // Then all items need to be in a wrapper
      <form>
         <div class="form-group">
            <label for="name">Full Name</label>
            <input type="text" name="fields[name]" id="name" placeholder="Enter your name..." required autofocus>
         </div>
         // Other inputs email, title, message...
-        <div class="form-group">
+        <div class="form-group"> // Button moved upon the on form
            <div id="left-defaults" class="container">
            <div class="">Moving the button here</div>
         </div>
-      </form> // The button is placed below outside of the form to be dragged to the form
+      </form> // The button is placed anywhere outside of the form to be dragged to the form
         <div id="right-defaults" class="container">
             Move this button to submit the contact form.
           <div><input type="submit" value="Send Message" class="btn btn--primary"></div>

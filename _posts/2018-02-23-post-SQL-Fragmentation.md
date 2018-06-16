@@ -20,10 +20,10 @@ category:
   
 toc: true
 toc_label: "Contents"
-
 read_time: true
 comments: true
 share: true
+social-share: twitter --twitter-hashtags facebook
 related: true
 locations:
   - Idabel OKlahoma

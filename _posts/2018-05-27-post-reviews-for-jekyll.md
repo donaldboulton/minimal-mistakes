@@ -5,6 +5,7 @@ layout: single
 read_time: true
 comments: true
 share: true
+social-share: twitter --twitter-hashtags facebook
 toc: true
 search: true
 author: Donald Boulton
