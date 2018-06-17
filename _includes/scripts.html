@@ -90,25 +90,6 @@ window.addEventListener("load",function(){window.cookieconsent.initialise({"pale
 </script>
 {% endif %}
 
-{% if page.support contains 'visualcaptcha' %}
-<script src="{{ '/assets/js/vendor/visualcaptcha/visualcaptcha.jquery.js' | relative_url }}"></script>
-<script>
-  var captcha = visualCaptcha( 'comments-captcha', {
-      imgPath: '/assets/images/visualcaptcha/',
-      captcha: {
-          numberOfImages: 5,
-              callbacks: {
-                  loading: function( captcha ){
-                  console.log( 'I am loading.', captcha );
-              },
-              loaded: function( captcha ){
-                  console.log( 'I am loaded.', captcha );
-              }
-          }
-      }
-  });
-</script>
-{% endif %}
 <script>
 $(document).ready(function(){svg4everybody();$("a").smoothScroll({offset:-20})});var coll=document.getElementsByClassName("collapsible");var i;for(i=0;i<coll.length;i++){coll[i].addEventListener("click",function(){this.classList.toggle("active");var content=this.nextElementSibling;if(content.style.maxHeight){content.style.maxHeight=null}else{content.style.maxHeight=content.scrollHeight+"px"}})}
 </script>

@@ -176,8 +176,8 @@ include:
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
-  - vendor
   - .asset-cache
+  - vendor
   - .bundle
   - .jekyll-assets-cache
   - .sass-cache
@@ -188,6 +188,11 @@ exclude:
   - config
   - Gemfile
   - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
   - .vs
   - .vscode
   - gulpfile.js
