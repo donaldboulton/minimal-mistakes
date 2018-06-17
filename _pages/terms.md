@@ -138,7 +138,7 @@ You can read: [Google Adsense Privacy Policy](http://support.google.com/adsense/
 
 ## Donation Policy
 
-All Donations throught our webshop pages or paypal buttons will not be refundable, as they are a donation to a free website designer, that has limited abilitys to do money transfers back to you. Thank You for your donations to donboulton.com.
+All Donations throught our external pay sites and or through our paypal buttons will not be refundable, as they are a donation to a free website designer, that has limited abilitys to do money transfers back to you. Thank You for your donations to donboulton.com.
 
 ## Comment Policy
 
