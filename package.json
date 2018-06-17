@@ -63,6 +63,8 @@
     "yargs": "^11.0.0"
   },
   "dependencies": {
+    "ansi-colors": "^2.0.1",
+    "dragula": "^3.7.2",
     "fullcalendar": "^4.0.0-alpha",
     "lg-autoplay": "^1.0.4",
     "lg-fullscreen": "^1.0.1",
@@ -73,7 +75,9 @@
     "lg-video": "^1.2.2",
     "lg-zoom": "^1.1.0",
     "lightgallery": "^1.6.11",
-    "postcss": "^6.0.22"
+    "postcss": "^6.0.22",
+    "replace-ext": "^1.0.0",
+    "vinyl": "^2.1.0"
   },
   "browserslist": [
     "last 2 versions",
