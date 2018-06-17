@@ -199,6 +199,7 @@ exclude:
   - LICENSE
   - log
   - package.json
+  - package-lock.json
   - Rakefile
   - README
   - tmp
