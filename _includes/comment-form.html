@@ -2,7 +2,7 @@
   <header class="section-title">
     <h3><svg class="icon icon--comment" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comment' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;Comment Form<small><a rel="nofollow" id="cancel-comment-reply-link" href="{{ page.url | relative_url }}#respond" style="display:none;">Cancel reply</a></small></h3>
   </header>
-  <div class="page__comments-form wrapper left-form">  
+  <div class="page__comments-form wrapper left-form">
   <form id="comment-form" class="page__form js-form form" method="post" action="https://api.staticman.net/v2/entry/donaldboulton/DWB/gh-pages/comments">
     <div class="form-group">
       <label class="sr-only" for="comment-form-name"><strong>Your Name</strong></label>
@@ -35,19 +35,15 @@
     <label for="comment-form-subscribe" class="sr-only">Subscribe</label>
     <input type="checkbox" id="comment-form-subscribe" name="options[subscribe]" value="email">&nbsp;Notify me of replies by email.
     <div class="form-group">
-      <div id="left-defaults" class="container">
-        <div>Move the button, "Post Comment", to Submit this form!</div>
-      </div>
+        <input type="submit" id="comment-form-submit" value="Post Comment" class="g-recaptcha btn btn--primary" data-sitekey="6LeugF8UAAAAAEZSaOE_K7xm6V2A2uYUBdeqUtCW" data-callback="onSubmit" data-size="invisible">
     </div>
+    <div class="form-group">
     <!-- Start comment form alert messaging -->
     <p class="hidden js-notice">
       <span class="js-notice-text"></span>
     </p>
     <!-- End comment form alert messaging -->
+    </div>
   </form>
-  </div> 
-    <div id="right-defaults" class="right-form container">
-      <svg class="icon icon--back-arrow" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-back-arrow' | prepend: 'assets/icons/' | relative_url }}"></use></svg> Move
-      <div><input type="submit" id="comment-form-submit" value="Post Comment" class="btn btn--primary"></div>
-    </div> 
+  </div>
 </div>
