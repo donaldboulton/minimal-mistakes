@@ -90,6 +90,25 @@ window.addEventListener("load",function(){window.cookieconsent.initialise({"pale
 </script>
 {% endif %}
 
+{% if page.support contains 'visualcaptcha' %}
+<script src="{{ '/assets/js/vendor/visualcaptcha/visualcaptcha.jquery.js' | relative_url }}"></script>
+<script>
+  var captcha = visualCaptcha( 'comments-captcha', {
+      imgPath: '/assets/images/visualcaptcha/',
+      captcha: {
+          numberOfImages: 5,
+              callbacks: {
+                  loading: function( captcha ){
+                  console.log( 'I am loading.', captcha );
+              },
+              loaded: function( captcha ){
+                  console.log( 'I am loaded.', captcha );
+              }
+          }
+      }
+  });
+</script>
+{% endif %}
 <script>
 $(document).ready(function(){svg4everybody();$("a").smoothScroll({offset:-20})});var coll=document.getElementsByClassName("collapsible");var i;for(i=0;i<coll.length;i++){coll[i].addEventListener("click",function(){this.classList.toggle("active");var content=this.nextElementSibling;if(content.style.maxHeight){content.style.maxHeight=null}else{content.style.maxHeight=content.scrollHeight+"px"}})}
 </script>
@@ -145,16 +164,7 @@ $(document).ready(function() {
 });
 </script>
 {% endif %}
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-     <script>
-       function onSubmit(token) {
-         document.getElementById("comment-form").submit();
-       }
-     </script>
-{% if page.support contains 'dragula' %}
-  {% include dragula-scripts.html %}
-{% endif %}
-<script src="{{ '/assets/js/vendor/dragula/dragula.min.js' | relative_url }}"></script>
-<script src="{{ '/assets/js/vendor/dragula/init.dragula.js' | relative_url }}"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js"></script>
+<script src="{{ '/assets/js/vendor/dragula/example.min.js' | relative_url }}"></script>
 
 
