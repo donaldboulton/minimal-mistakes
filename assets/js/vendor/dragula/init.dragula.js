@@ -1,0 +1,1 @@
+dragula([$('left-defaults'), $('right-defaults')]);
