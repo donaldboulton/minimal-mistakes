@@ -33,8 +33,8 @@
     $(function () {
       var timesSubmitted = 0;
       var maxSubmits = 1;
-      var intervalMilliseconds = 10000; // for testing   
-      var interval;   
+      var intervalMilliseconds = 10000;
+      var interval;
        $('input[type=submit]').click(function (event) {
            if (!interval) {
                interval = setTimeout(function () {
@@ -49,8 +49,8 @@
            } else {
                $('div').append('valid<br />');
            }
-           event.preventDefault();        
-           });        
+           event.preventDefault();
+           });
        });
        var frm = document.getElementsByName('comment-form')[0];
        frm.reset();

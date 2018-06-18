@@ -9,7 +9,6 @@
   {% endfor %}
 {% else %}
 <script src="{{ '/assets/js/main.min.js' | relative_url }}"></script>
-<script src="{{ '/assets/js/vendor/letter-avatar/letter-avatar.js' | relative_url }}"></script>
 {% endif %}
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 {% if site.search == true or page.layout == "search" %}
@@ -85,16 +84,6 @@
 
 {% if page.support contains 'cookies' %}
 <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
-<script>
-window.addEventListener("load",function(){window.cookieconsent.initialise({"palette":{"popup":{"background":"#031111","text":"#d6d6d6"},"button":{"background":"#1faaaa"}},revokable:true,onStatusChange:function(status){console.log(this.hasConsented() ? 'enable cookies':'disable cookies')},law:{regionalLaw:false,},location:true,"theme":"edgeless","position":"bottom-left","content":{"href":"https://donboulton.com/terms/#cookies-and-web-beacons"}})})
-</script>
-{% endif %}
-
-<script>
-$(document).ready(function(){svg4everybody();$("a").smoothScroll({offset:-20})});var coll=document.getElementsByClassName("collapsible");var i;for(i=0;i<coll.length;i++){coll[i].addEventListener("click",function(){this.classList.toggle("active");var content=this.nextElementSibling;if(content.style.maxHeight){content.style.maxHeight=null}else{content.style.maxHeight=content.scrollHeight+"px"}})}
-</script>
-{% if page.comments == true %}
-  <script src="{{ '/assets/js/staticman/staticman-comments.js' | relative_url }}"></script>
 {% endif %}
 
 {% if page.reviews == true %}
@@ -146,15 +135,9 @@ $(document).ready(function() {
 </script>
 {% endif %}
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-     <script>
-       function onSubmit(token) {
-         document.getElementById("comment-form").submit();
-       }
-     </script>
 {% if page.support contains 'dragula' %}
   {% include dragula-scripts.html %}
 {% endif %}
-<script src="{{ '/assets/js/vendor/dragula/dragula.min.js' | relative_url }}"></script>
-<script src="{{ '/assets/js/vendor/dragula/init.dragula.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/vendor/dragula/init.main.js' | relative_url }}"></script>
 
 
