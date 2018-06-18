@@ -145,17 +145,12 @@ $(document).ready(function() {
 });
 </script>
 {% endif %}
-<script src="https://www.google.com/recaptcha/api.js />
-<script type="text/javascript">
-  var onLoad = function() {
-    widgetId = grecaptcha.render('componentId', {
-      'sitekey' : '6LeugF8UAAAAAEZSaOE_K7xm6V2A2uYUBdeqUtCW',
-      'callback' : onSubmit,
-    });
-    grecaptcha.execute(widgetId);
-    grecaptcha.getResponse(widgetId);
-  };
-</script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+     <script>
+       function onSubmit(token) {
+         document.getElementById("comment-form").submit();
+       }
+     </script>
 <script src="{{ '/assets/js/vendor/dragula/dragula.min.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/vendor/dragula/example.min.js' | relative_url }}"></script>
 
