@@ -30,7 +30,7 @@ header:
   teaser: /assets/photography/grand-canyon-gallery/lifelist-grand-canyon-631.jpg
 locations:
   - Grand Canyon
-support: [gallery]
+support: [gallery, adds]
 ---
 # Grand Canyon 1983
 

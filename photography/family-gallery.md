@@ -31,7 +31,7 @@ header:
 locations:
   - Oklahoma City, Oklahoma
   - Idabel Oklahoma
-support: [gallery]
+support: [gallery, adds]
 ---
 # Family Pics from years 50's - 80's
 

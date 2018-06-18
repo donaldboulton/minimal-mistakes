@@ -32,7 +32,7 @@ header:
   teaser: /assets/photography/tahoe-gallery/Rubicon Trail.jpg
 locations:
   - Tahoe California
-support: [gallery]
+support: [gallery, adds]
 ---
 # Tahoe Ca in 1983
 

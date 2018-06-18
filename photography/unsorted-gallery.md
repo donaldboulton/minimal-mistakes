@@ -30,7 +30,7 @@ header:
   teaser: /assets/photography/unsorted-gallery/jesus_500.jpg
 locations:
   - All
-support: [gallery]
+support: [gallery, adds]
 ---
 # Unsorted
 

@@ -30,7 +30,7 @@ header:
 locations:
   - Oklahoma City, Oklahoma
   - Idabel Oklahoma
-support: [gallery]
+support: [gallery, adds]
 ---
 # My Four Boys
 

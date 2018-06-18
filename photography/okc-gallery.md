@@ -30,7 +30,7 @@ header:
   teaser: /assets/photography/okc-gallery/Memorial Chairs.jpg
 locations:
   - Oklahoma City, OK
-support: [gallery]
+support: [gallery, adds]
 ---
 # Oklahoma City, OK
 

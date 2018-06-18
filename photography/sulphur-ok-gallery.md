@@ -31,7 +31,7 @@ header:
   teaser: /assets/photography/sulphur-ok-gallery/Belleview-Postcard.jpg
 locations:
   - Sulphur, Oklahoma
-support: [gallery]
+support: [gallery, adds]
 ---
 # Sulphur Ok 1920 - 1970
 

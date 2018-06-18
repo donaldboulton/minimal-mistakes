@@ -35,7 +35,7 @@ image:
 header:
   image: /assets/images/pages/letter-avatar-header-1200.png
   teaser: /assets/images/pages/letter-avatar-header-320.png
-support: [gallery]
+support: [gallery, adds]
 ---
 # Golden Gate park what a trip
 

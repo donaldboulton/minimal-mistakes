@@ -30,8 +30,9 @@ header:
 locations:
   - Idabel Oklahoma
   - 4 Oaks Storaage
-support: [gallery]
+support: [gallery, adds]
 ---
+
 # Feed stray cats every morning
 
 Stray cats I take care of every day, and have since 1999.

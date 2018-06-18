@@ -19,8 +19,6 @@ tags:
   - Github Pages
   - MMistakes
 category:
-  - About
-  - Credits
   - Donald Boulton
 image:
   cover: true

@@ -30,7 +30,7 @@ header:
   teaser: /assets/photography/santa-barbara-gallery/State-Street.jpg
 locations:
   - Sulphur, Oklahoma
-support: [gallery]
+support: [gallery, adds]
 ---
 # Santa Barbara 2001
 

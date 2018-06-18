@@ -5,8 +5,8 @@ permalink: /sitemap/
 toc: false
 sidenav: true
 adds: true
-cookies: true
-reviews: true
+cookies: false
+reviews: false
 excerpt: "Sitemap with Post by Catagories, by Tags and by Years"
 image:
   cover: true

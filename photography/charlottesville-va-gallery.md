@@ -31,7 +31,7 @@ header:
   teaser: /assets/photography/charlottesville-va-gallery/Downtown Mall.jpg
 locations:
   - Charlottesville Va
-support: [gallery]
+support: [gallery, adds]
 ---
 # Charlottesville Va 2002
 

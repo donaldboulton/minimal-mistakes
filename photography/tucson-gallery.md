@@ -32,7 +32,7 @@ header:
 locations:
   - Tucson AZ
 
-support: [gallery]
+support: [gallery, adds]
 ---
 # Tucson Az, 1997
 

@@ -32,7 +32,7 @@ header:
 locations:
   - Glen Helen Recreational Park
   - California
-support: [gallery]
+support: [gallery, adds]
 ---
 # Four days of a great party in 1983
 

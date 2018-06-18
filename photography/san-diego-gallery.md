@@ -30,7 +30,7 @@ header:
   teaser: /assets/photography/san-diego-gallery/Greenflash06.jpg
 locations:
   - San Diego Ca
-support: [gallery]
+support: [gallery, adds]
 ---
 # San Diego 1998
 
