@@ -151,6 +151,9 @@ $(document).ready(function() {
          document.getElementById("comment-form").submit();
        }
      </script>
+{% if page.support contains 'dragula' %}
+  {% include dragula-scripts.html %}
+{% endif %}
 <script src="{{ '/assets/js/vendor/dragula/dragula.min.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/vendor/dragula/init.dragula.js' | relative_url }}"></script>
 
