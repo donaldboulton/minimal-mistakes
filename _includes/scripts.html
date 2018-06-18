@@ -9,7 +9,7 @@
   {% endfor %}
 {% else %}
 <script src="{{ '/assets/js/main.min.js' | relative_url }}"></script>
-<script src="{{ '/assets/js/vendor/letter-avatar/letter-avatar.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/vendor/letter-avatar/letter-avatar.min.js' | relative_url }}"></script>
 {% endif %}
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 {% if site.search == true or page.layout == "search" %}
@@ -164,7 +164,11 @@ $(document).ready(function() {
 });
 </script>
 {% endif %}
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js"></script>
+
+{% if page.support contains 'dragula' %}
 <script src="{{ '/assets/js/vendor/dragula/example.min.js' | relative_url }}"></script>
+{% endif %}
+<script src="{{ '/assets/js/vendor/dragula/dragula.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/vendor/dragula/init.dragula.js' | relative_url }}"></script>
 
 
