@@ -67,16 +67,20 @@ layout: default
         {% endif %}
       </footer>
 
-      {% if page.share %}{% include social-share.html %}{% endif %}
+      {% if page.share %}
+        {% include social-share.html %}
+      {% endif %}
 
       {% include post_pagination.html %}
+      
+      {% if page.comments == true %}
+        {% include comments.html %}
+      {% endif %}
+      
+      {% if page.reviews == true %}
+        {% include reviews-form.html %}
+      {% endif %}
     </div>
-    {% if page.comments == true %}
-      {% include comments.html %}
-    {% endif %}
-    {% if page.reviews == true %}
-      {% include reviews-form.html %}
-    {% endif %}
   </article>
 
   {% comment %}<!-- only show related on a post page when `related: true` -->{% endcomment %}
