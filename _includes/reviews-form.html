@@ -44,9 +44,11 @@
         <label for="review-form-address">Leave blank if you are a human</label>
         <input type="text" id="review-form-address" name="fields[hidden]" autocomplete="off">
       </div>
-      <div class="form-group">
-          <div id="left-defaults" class="container">
-              <div>Move the button, "Post Review", HERE to Submit this form!</div>
+      <div class="form-inline">
+          <div>Move the button, "Post Review",  to Submit this form!</div>
+          <div id="drop-target"><div>HERE</div></div>
+          <div class="drop-right hidden">
+              <div id="post" class="hidden"></div>
           </div>
           <!-- Start comment form alert messaging -->
           <p class="hidden js-notice">
@@ -54,10 +56,9 @@
           </p>
           <!-- End comment form alert messaging -->
       </div>
-  </form>
-  <div id="right-defaults" class="container">
-      Grab and Move this button up to Submit the Review form.
-  <div><input type="submit" id="review-form-submit" value="Post Review" class="btn btn--primary"></div>
+  </form> Grab and Move this button up to Submit the Review form.
+  <div id="drag-elements">
+     <div><button type="submit" id="review-form-submit" class="g-recaptcha btn btn--primary">Submit Review</button></div>
   </div>
  </div>
 </div>
