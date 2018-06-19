@@ -121,7 +121,7 @@ Google stores the information collected by these cookies on servers in the Unite
 
 In order to provide website visitors with more choice on how data is collected by Google Analytics, Google has developed the Google Analytics Opt-out Browser Add-on. The add-on communicates with the Google Analytics JavaScript (ga.js) to stop data being sent to Google Analytics. The Google Analytics Opt-out Browser Add-on does not affect usage of the website in any other way. A link to further information on the Google Analytics Opt-out Browser Add-on is provided below for your convenience.
 
-### [Opt Out](http://tools.google.com/dlpage/gaoptout?hl=None){:id="open-website" rel="nofollow"}
+### [Opt Out Google tools](http://tools.google.com/dlpage/gaoptout?hl=None){:id="open-website" rel="nofollow"}
 
 For more information on the usage of cookies by Google Analytics please see the Google website. A link to the privacy advice for this product is provided below for your convenience.
 
@@ -135,7 +135,7 @@ Google Analytics is a web analytics tool I use to help understand how visitors e
 
 Google Adsense, a third party affiliate marketing network, uses cookies to help make sure I get a commission when you buy a product after clicking on a link or ad banner that takes you to the site of one of their merchants.
 
-You can read: [Google Adsense Privacy Policy](http://support.google.com/adsense/bin/answer.py?hl=en&answer=48182){:id="open-website" rel="nofollow"}.
+### You can read: [Google Adsense Privacy Policy](http://support.google.com/adsense/bin/answer.py?hl=en&answer=48182){:id="open-website" rel="nofollow"}.
 
 ## Donation Policy
 

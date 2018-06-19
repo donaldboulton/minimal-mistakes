@@ -74,7 +74,7 @@ Doing so means perfect microdata with aggregate, "Averaged" page and site rating
 
 Hoping to get somthing like this on search results
 
-{% include figure image_path="/assets/images/pages/google-individual-reviews.png" alt="Search Results" caption="Search Results" %}
+{% include figure image_path="/assets/images/pages/db-reviews-goolgle-search.jpg" alt="Search Results" caption="Search Results" %}
 
 ### Structured data My site
 
