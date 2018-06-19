@@ -4,6 +4,7 @@ layout: single
 redirect_to:
   - /photography/
 read_time: true
+youtube: true
 youtubeId: IGMCAZk5xlg
 comments: true
 share: true

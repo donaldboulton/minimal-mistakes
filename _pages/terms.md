@@ -4,6 +4,7 @@ title: "Terms and Privacy Policy"
 last_modified_at: 2018-03-27T12:42:38-04:00
 toc: true
 toc_label: "Contents"
+youtube: true
 youtubeId: yoE9-tNvhRs
 adds: true
 reviews: true
