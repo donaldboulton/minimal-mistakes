@@ -114,6 +114,12 @@ $(document).ready(function(){svg4everybody();$("a").smoothScroll({offset:-20})})
 </script>
 {% if page.comments == true %}
   <script src="{{ '/assets/js/staticman/staticman-comments.js' | relative_url }}"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script>
+    function onSubmit(token) {
+      document.getElementById("comment-form").submit();
+    }
+  </script>
 {% endif %}
 
 {% if page.reviews == true %}
