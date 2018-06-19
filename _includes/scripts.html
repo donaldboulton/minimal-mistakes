@@ -36,8 +36,8 @@
 {% endif %}
 
 {% if page.support contains 'places' %}
-  <script src="{{ '/assets/js/vendor/google-places/google-places.js' | relative_url }}"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA&libraries=places"></script>
+  <script src="{{ '/assets/js/vendor/google-places/google-places.js' | relative_url }}" crossorigin="anonymous"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA&libraries=places" crossorigin="anonymous"></script>
   <script>
     $(document).ready(function() {
       $("#google-reviews").googlePlaces({
@@ -80,11 +80,11 @@
 {% endif %}
 
 {% if page.support contains 'cart' %}
-<script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" id="snipcart" data-api-key="NGViODk5ZDAtNmU4OC00MjI5LWIxMGMtZGZmOWEwOGRhM2M1NjM2NjE0Nzc1OTQ2NzMzMTU5"></script>
+<script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" id="snipcart" data-api-key="NGViODk5ZDAtNmU4OC00MjI5LWIxMGMtZGZmOWEwOGRhM2M1NjM2NjE0Nzc1OTQ2NzMzMTU5" crossorigin="anonymous"></script>
 {% endif %}
 
 {% if page.support contains 'cookies' %}
-<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js" crossorigin="anonymous"></script>
 <script>
 window.addEventListener("load",function(){window.cookieconsent.initialise({"palette":{"popup":{"background":"#031111","text":"#d6d6d6"},"button":{"background":"#1faaaa"}},revokable:true,onStatusChange:function(status){console.log(this.hasConsented() ? 'enable cookies':'disable cookies')},law:{regionalLaw:false,},location:true,"theme":"edgeless","position":"bottom-left","content":{"href":"https://donboulton.com/terms/#cookies-and-web-beacons"}})})
 </script>
@@ -152,7 +152,7 @@ $(document).ready(function(){svg4everybody();$("a").smoothScroll({offset:-20})})
 {% endif %}
 
 {% if page.support contains 'dragula' %}
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js" crossorigin="anonymous"></script>
   <script src="{{ '/assets/js/vendor/dragula/init.dragula.js' | relative_url }}"></script>
   <script src="{{ '/assets/js/vendor/dragula/example.min.js' | relative_url }}"></script>
 {% endif %}
@@ -162,10 +162,10 @@ $(document).ready(function(){svg4everybody();$("a").smoothScroll({offset:-20})})
 {% endif %}
 
 {% if page.support contains 'calendar' %}
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/superagent/3.8.3/superagent.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.0.0-alpha/fullcalendar.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.0.0-alpha/gcal.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/superagent/3.8.3/superagent.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.0.0-alpha/fullcalendar.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.0.0-alpha/gcal.min.js" crossorigin="anonymous"></script>
 <script>
 $(document).ready(function() {
  document.addEventListener('DOMContentLoaded', function() {
