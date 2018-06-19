@@ -7,12 +7,11 @@ layout: productdetails
 permalink: /products/feature/
 classes: product
 products: true
-support: [products, lightbox]
+support: [products]
 sitemap: false
 author_profile: true
 adds: false
 sidenav: true
-lightbox: true
 toc: false
 header:
   image: /assets/images/cart/share/share-cover.jpg

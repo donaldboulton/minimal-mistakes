@@ -15,8 +15,7 @@ header:
 layout: productdetails
 products: true
 product: t-shirt
-support: [products, lightbox]
-lightbox: true
+support: [products]
 subtitle: Buy me a t-shirt
 image: /assets/images/cart/t-shirt/view.jpg
 images:

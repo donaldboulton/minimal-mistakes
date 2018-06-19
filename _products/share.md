@@ -13,8 +13,7 @@ classes: product
 layout: productdetails
 products: true
 product: Share
-lightbox: true
-support: [products, lightbox, adds]
+support: [products, adds]
 subtitle: Share the love
 images:
   - image: /assets/images/cart/share/share-800.jpg

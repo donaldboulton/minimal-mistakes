@@ -14,7 +14,7 @@ image: /assets/images/cart/sponser-us.png
 header:
   image: /assets/images/cart/sponser-us.png
   teaser: /assets/images/cart/sponser-us-320.png
-support: [lightbox, products, adds]  
+support: [products, adds]  
 ---
 
 ## About this donation page
