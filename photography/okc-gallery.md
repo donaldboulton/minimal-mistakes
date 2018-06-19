@@ -8,12 +8,12 @@ last_modified_at: 2018-05-14T12:42:38-04:0
 author: Donald Boulton
 author_profile: false
 gallery: true
-comments: true
+comments: false
 share: true
 related: true
 sidenav-gallery: true
-adds: true
-cookies: true
+adds: false
+cookies: false
 breadcrumb: true
 category:
   - Gallerys
@@ -30,7 +30,7 @@ header:
   teaser: /assets/photography/okc-gallery/Memorial Chairs.jpg
 locations:
   - Oklahoma City, OK
-support: [gallery, adds]
+support: [gallery]
 ---
 # Oklahoma City, OK
 

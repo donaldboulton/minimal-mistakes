@@ -8,12 +8,12 @@ last_modified_at: 2018-05-06T12:42:38-04:0
 author: Donald Boulton
 author_profile: false
 gallery: true
-comments: true
+comments: false
 share: true
 related: true
 sidenav-gallery: true
-adds: true
-cookies: true
+adds: false
+cookies: false
 breadcrumb: true
 sidebar:
   - title: "Epic Care"
@@ -32,7 +32,7 @@ header:
 locations:
   - Tucson AZ
 
-support: [gallery, adds]
+support: [gallery]
 ---
 # Tucson Az, 1997
 

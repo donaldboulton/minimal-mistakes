@@ -8,12 +8,12 @@ last_modified_at: 2018-05-16T12:42:38-04:0
 author: Donald Boulton
 author_profile: false
 gallery: true
-comments: true
+comments: false
 share: true
 related: true
 sidenav-gallery: true
-adds: true
-cookies: true
+adds: false
+cookies: false
 breadcrumb: true
 category:
   - Gallerys
@@ -32,7 +32,7 @@ header:
 locations:
   - Glen Helen Recreational Park
   - California
-support: [gallery, adds]
+support: [gallery]
 ---
 # Four days of a great party in 1983
 

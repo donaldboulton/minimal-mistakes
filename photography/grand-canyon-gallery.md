@@ -9,12 +9,12 @@ last_modified_at: 2018-05-14T12:42:38-04:0
 author: Donald Boulton
 author_profile: false
 gallery: true
-comments: true
+comments: false
 share: true
 related: true
 sidenav-gallery: true
-adds: true
-cookies: true
+adds: false
+cookies: false
 breadcrumb: true
 sidebar:
   - title: Grand Canyon"
@@ -30,7 +30,7 @@ header:
   teaser: /assets/photography/grand-canyon-gallery/lifelist-grand-canyon-631.jpg
 locations:
   - Grand Canyon
-support: [gallery, adds]
+support: [gallery]
 ---
 # Grand Canyon 1983
 

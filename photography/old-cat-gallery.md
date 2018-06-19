@@ -12,7 +12,7 @@ share: true
 related: true
 sidenav-gallery: true
 adds: false
-cookies: true
+cookies: false
 breadcrumb: true
 category:
   - Gallerys

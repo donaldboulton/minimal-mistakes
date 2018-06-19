@@ -8,12 +8,12 @@ last_modified_at: 2018-05-04T12:42:38-04:0
 author: Donald Boulton
 author_profile: false
 gallery: true
-comments: true
+comments: false
 share: true
 related: true
 sidenav-gallery: true
-adds: true
-cookies: true
+adds: false
+cookies: false
 breadcrumb: true
 category:
   - Gallerys
@@ -30,7 +30,7 @@ header:
   teaser: /assets/photography/santa-barbara-gallery/State-Street.jpg
 locations:
   - Sulphur, Oklahoma
-support: [gallery, adds]
+support: [gallery]
 ---
 # Santa Barbara 2001
 

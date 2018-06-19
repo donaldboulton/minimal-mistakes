@@ -12,8 +12,8 @@ comments: false
 share: true
 related: true
 sidenav-gallery: true
-adds: true
-cookies: true
+adds: false
+cookies: false
 breadcrumb: true
 sidebar:
   - title: "Raced Motocross from 1971 to 1994"

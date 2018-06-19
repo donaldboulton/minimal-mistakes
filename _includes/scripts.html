@@ -118,6 +118,8 @@ $(document).ready(function(){svg4everybody();$("a").smoothScroll({offset:-20})})
 
 {% if page.reviews == true %}
   <script src="{{ '/assets/js/staticman/staticman-reviews.js' | relative_url }}"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js"></script>
+  <script src="{{ '/assets/js/vendor/dragula/init.dragula.js' | relative_url }}"></script>
 {% endif %}
 
 {% if page.support contains 'lightbox' %}
@@ -164,7 +166,6 @@ $(document).ready(function() {
 });
 </script>
 {% endif %}
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js"></script>
-<script src="{{ '/assets/js/vendor/dragula/init.dragula.js' | relative_url }}"></script>
+
 
 
