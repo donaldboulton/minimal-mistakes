@@ -76,7 +76,11 @@
 {% endif %}
 
 {% if page.support contains 'contact' %}
-% include contact-scripts.html %}
+  {% include contact-scripts.html %}
+{% endif %}
+
+{% if page.support contains 'dragula' %}
+  {% include dragula-scripts.html %}
 {% endif %}
 
 {% if page.support contains 'cart' %}
@@ -91,10 +95,37 @@ window.addEventListener("load",function(){window.cookieconsent.initialise({"pale
 {% endif %}
 
 {% if page.support contains 'anchors' %}
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" crossorigin="anonymous"></script>
-  <script>
-    anchors.options.visible = 'always';
-    anchors.add('h2,h3,h4');
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" crossorigin="anonymous"></script>
+<script>
+anchors.options.visible = 'always';
+anchors.add('h2,h3,h4');
+generateTableOfContents(anchors.elements);
+
+// External code for generating a simple dynamic Table of Contents
+function generateTableOfContents(els) {
+	var anchoredElText,
+  		anchoredElHref,
+			ul = document.createElement('UL');
+
+  document.getElementById('table-of-contents').appendChild(ul);
+
+	for (var i = 0; i < els.length; i++) {
+  	anchoredElText = els[i].textContent;
+		anchoredElHref = els[i].querySelector('.anchorjs-link').getAttribute('href');
+  	addNavItem(ul, anchoredElHref, anchoredElText);
+  }
+}
+
+function addNavItem(ul, href, text) {
+  var listItem = document.createElement('LI'),
+		  anchorItem = document.createElement('A'),
+  	  textNode = document.createTextNode(text);
+
+  anchorItem.href = href;
+  ul.appendChild(listItem);
+  listItem.appendChild(anchorItem);
+  anchorItem.appendChild(textNode);
+};
   </script>
 {% endif %}
 <script>

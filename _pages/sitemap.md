@@ -5,7 +5,9 @@ permalink: /sitemap/
 toc: false
 sidenav: true
 comments: false
+anchor: true
 sidenav: true
+sidenav-gen: true
 reviews: false
 adds: true
 excerpt: "Sitemap with Post by Catagories, by Tags and by Years"
@@ -18,7 +20,7 @@ header:
   image: /assets/images/pages/sitemap-1200.png
   teaser: /assets/images/pages/sitemap-320.png
   excerpt: "Sitemap of Posts"
-support: [adds, cookies]
+support: [adds, cookies, anchor]
 folder: _pages
 product: sitemap
 slug: sitemap
