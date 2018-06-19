@@ -7,6 +7,7 @@ toc_label: "Contents"
 youtubeId: yoE9-tNvhRs
 adds: true
 reviews: true
+anchors: true
 comments: true
 cookies: true
 support: [adds, cookies]

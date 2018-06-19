@@ -63,6 +63,7 @@
     "yargs": "^12.0.0-candidate.0"
   },
   "dependencies": {
+    "anchor-js": "^4.1.0",
     "ansi-colors": "^2.0.1",
     "crossvent": "^1.5.5",
     "custom-event": "^1.0.1",
