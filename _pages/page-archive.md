@@ -5,6 +5,7 @@ permalink: /page-archive/
 author_profile: true
 comments: false
 sidenav: true
-reviews: true
+reviews: false
 adds: true
+support: [adds]
 ---

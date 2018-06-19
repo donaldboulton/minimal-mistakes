@@ -11,7 +11,7 @@ comments: true
 share: true
 related: true
 sidenav-gallery: true
-adds: true
+adds: false
 cookies: true
 breadcrumb: true
 category:
@@ -30,7 +30,7 @@ header:
 locations:
   - Oklahoma City, Oklahoma
   - Idabel Oklahoma
-support: [gallery, adds]
+support: [gallery]
 ---
 # My Four Boys
 

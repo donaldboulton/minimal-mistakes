@@ -13,7 +13,7 @@ comments: true
 share: true
 related: true
 sidenav-gallery: true
-adds: true
+adds: false
 cookies: true
 breadcrumb: true
 sidebar:
@@ -31,7 +31,7 @@ header:
   teaser: /assets/photography/charlottesville-va-gallery/Downtown Mall.jpg
 locations:
   - Charlottesville Va
-support: [gallery, adds]
+support: [gallery]
 ---
 # Charlottesville Va 2002
 

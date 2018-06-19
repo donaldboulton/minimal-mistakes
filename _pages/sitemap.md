@@ -4,9 +4,10 @@ title: "Sitemap"
 permalink: /sitemap/
 toc: false
 sidenav: true
-adds: true
-cookies: false
+comments: false
+sidenav: true
 reviews: false
+adds: true
 excerpt: "Sitemap with Post by Catagories, by Tags and by Years"
 image:
   cover: true
