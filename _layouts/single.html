@@ -46,7 +46,7 @@ layout: default
                {% include sidenav.html %}
             {% endif %}
             {% if page.reviews %}
-               {% include reviews.html %}
+               {% include reviews-sidebar.html %}
             {% endif %}
             {% if page.adds %}
                {% include google-adds.html %}
@@ -72,11 +72,11 @@ layout: default
       {% endif %}
 
       {% include post_pagination.html %}
-      
+
       {% if page.comments == true %}
         {% include comments.html %}
       {% endif %}
-      
+
       {% if page.reviews == true %}
         {% include reviews-form.html %}
       {% endif %}
