@@ -49,31 +49,30 @@ Weather.kelvinToCelsius = function (value) {
   return value - 273.15;
 };
 
-Weather.getCurrent = function (city, callback) {
-  var url = "http://api.openweathermap.org/data/2.5/forecast?q=" + encodeURIComponent(city) + "&cnt=1";
+Weather.getCurrentById = function (id, callback) {
+  var url = "http://api.openweathermap.org/data/2.5/forecast?id=" + encodeURIComponent(id) + "&cnt=1";
 
   if (Weather.APIKEY) {
-    url = url + "&APPID=" + Weather.APIKEY;
+  url = url + "&APPID=" + Weather.APIKEY;
   } else {
-    console.log('WARNING: You must set an apiKey for openweathermap');
+  console.log('WARNING: You must set an apiKey for openweathermap');
   }
 
   return this._getJSON(url, function (data) {
-    callback(new Weather.Current(data));
+  callback(new Weather.Current(data));
   } );
 };
 
-Weather.getForecast = function (city, callback) {
-  var url = "http://api.openweathermap.org/data/2.5/forecast?q=" + encodeURIComponent(city) + "&cnt=1";
+Weather.getForecastById = function (id, callback) {
+  var url = "http://api.openweathermap.org/data/2.5/forecast?id=" + encodeURIComponent(id) + "&cnt=1";
 
   if (Weather.APIKEY) {
-    url = url + "&APPID=" + Weather.APIKEY;
-  } else {
-    console.log('WARNING: You must set an apiKey for openweathermap');
+  url = url + "&APPID=" + Weather.APIKEY;
+  } else {    console.log('WARNING: You must set an apiKey for openweathermap');
   }
 
   return this._getJSON(url, function (data) {
-    callback(new Weather.Forecast(data));
+  callback(new Weather.Current(data));
   } );
 };
 

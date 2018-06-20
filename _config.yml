@@ -167,7 +167,9 @@ author:
   weibo                  :
   xing                   :
   youtube                : # None
-
+weather:
+  - platform             : "openweathermap"
+    api_key              : "8f4c1537b5fad3b111dae7b441fd0937"
 extlinks:
   attributes: {rel: nofollow, target: _blank}
   rel_exclude: ['facebook.com', 'twitter.com']

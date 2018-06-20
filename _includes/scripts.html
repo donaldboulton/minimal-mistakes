@@ -164,13 +164,13 @@ $(document).ready(function(){svg4everybody();$("a").smoothScroll({offset:-20})})
 {% if page.support contains 'weather' %}
 <script src="{{ '/assets/js/vendor/weather/weather.js' | relative_url }}"></script>
 <script>
-    Weather.getCurrent( "Oklahoma City", function( current ) {
+    Weather.getCurrent( "4544349", function( current ) {
         $( "#current" ).html( "Temperature: " + current.temperature() + "&deg;K or " +
             Weather.kelvinToFahrenheit( current.temperature() ) + "&deg;F or " +
             Weather.kelvinToCelsius( current.temperature() ) + "&deg;C" +
             "<br />Current Conditions: " + current.conditions() );
     });
-    Weather.getForecast( "Oklahoma City", function ( forecast ) {
+    Weather.getForecast( "4544349", function ( forecast ) {
         $( "#forecast" ).html( "High: " + forecast.high() + "&deg;K or " +
             Weather.kelvinToFahrenheit( forecast.high() ) + "&deg;F or " +
             Weather.kelvinToCelsius( forecast.high() ) + "&deg;C<br />Low: " +
