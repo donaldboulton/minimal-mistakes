@@ -1,37 +1,40 @@
 <script>
-var settings = {
-  "async": true,
-  "crossDomain": true,
-  "url": "http://api.openweathermap.org/data/2.5/forecast?zip=73125%2Cus&appid=8f4c1537b5fad3b111dae7b441fd0937&units=imperial",
-  "method": "GET",
-}
+function checkWind() {
+  var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://api.openweathermap.org/data/2.5/weather?zip=73125%2Cus&appid=8f4c1537b5fad3b111dae7b441fd0937&units=imperial",
+    "method": "GET",
+  }
 
-$.ajax(settings).done(function (response) {
-  console.log(response);
+    $.ajax(settings)
 
-var content = response.temp;
-  $("#temp").append(content);
-var content = response.wind.speed;
-  $("#windSpeed").append(content);
-var content = response.rain;
-  $("#rainForcast").append(content);
+    .done(function (response) {
+      console.log(response);
+
+$("#wind_speed").append (response.wind.speed);
+$("#wind_direction").append (response.wind.deg);
+$("#main_temp").append (response.main.temp);
+$("#weather_conditions").append (response.weather[0].main);
+$("#wind_speed_unit").append (" MPH");
+$("#wind_degree_unit").append (" degrees");
+$("#main_temp_unit").append (" F");
 });
+}
 </script>
 
-<h1>Weather Page</h1>
-<div id="temp">Temp: </div>
-<div id="windSpeed">Wind speed: </div>
-<div id="fainForcast">Rain Forcast: </div>
+<h1>Weather</h1>
+<h2 class="text-center">OKC OK</h2>
 <div class="container">
+  <div id="windSpeed">Wind speed: </div>
   <div class="gallery-2-col-unjustified">
-      <h1 class="text-center">Guntersville, AL</h1>
-      <div class="col-sm-6">
+      <div class="text-left">
           <h2>Current Conditions</h2>
           <h3 id="current"></h3>
       </div>
-      <div class="col-sm-6">
-          <h2>Forecast</h1>
-          <h3 id="forecast"></h2>
+      <div class="text-right">
+          <h2>Forecast</h2>
+          <h3 id="forecast"></h3>
       </div>
   </div>
 </div>
