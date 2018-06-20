@@ -26,7 +26,12 @@ $("#main_temp_unit").append (" F");
 <h1>Weather</h1>
 <h2 class="text-center">OKC OK</h2>
 <div class="container">
-  <div id="windSpeed">Wind speed: </div>
+    <button type="button" onclick="checkWind()" class="btn btn--danger weatherbutton">Check wind conditions</button>
+    <h2>Wind conditions for OKC</h2>
+    <span><b>Temperature: </b></span><span id="main_temp"></span><span id="main_temp_unit"></span><br/>
+    <span><b>Wind speed: </b></span><span id="wind_speed"></span> <span id="wind_speed_unit"></span><br/>
+    <span><b>Wind direction: </b></span><span id="wind_direction"></span><span id="wind_degree_unit"></span><br/>
+    <span><b>Current conditions: </b></span><span id="weather_conditions"></span>
   <div class="gallery-2-col-unjustified">
       <div class="text-left">
           <h2>Current Conditions</h2>
