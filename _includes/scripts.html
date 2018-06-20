@@ -161,6 +161,26 @@ $(document).ready(function(){svg4everybody();$("a").smoothScroll({offset:-20})})
    {% include lightbox.html %}
 {% endif %}
 
+{% if page.support contains 'weather' %}
+<script src="{{ '/assets/js/vendor/weather/weather.js' | relative_url }}"></script>
+<script>
+    Weather.getCurrent( "Oklahoma City", function( current ) {
+        $( "#current" ).html( "Temperature: " + current.temperature() + "&deg;K or " +
+            Weather.kelvinToFahrenheit( current.temperature() ) + "&deg;F or " +
+            Weather.kelvinToCelsius( current.temperature() ) + "&deg;C" +
+            "<br />Current Conditions: " + current.conditions() );
+    });
+    Weather.getForecast( "Oklahoma City", function ( forecast ) {
+        $( "#forecast" ).html( "High: " + forecast.high() + "&deg;K or " +
+            Weather.kelvinToFahrenheit( forecast.high() ) + "&deg;F or " +
+            Weather.kelvinToCelsius( forecast.high() ) + "&deg;C<br />Low: " +
+            forecast.low() + "&deg;K or " +
+            Weather.kelvinToFahrenheit( forecast.low() ) + "&deg;F or " +
+            Weather.kelvinToCelsius( forecast.low() ) + "&deg;C" );
+    });
+</script>
+{% endif %}
+
 {% if page.support contains 'calendar' %}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/superagent/3.8.3/superagent.min.js" crossorigin="anonymous"></script>
