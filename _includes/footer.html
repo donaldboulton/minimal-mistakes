@@ -37,7 +37,7 @@
   </div>
 </div>
 <div class="gallery-3-col">
-  <span>&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}</span>
+  <span>&copy; <span itemprop="copyrightYear">{{ site.time | date: '%Y' }}</span><span itemprop="copyrightHolder" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ site.name | default: site.title }}</span></span></span>
   <span><a href="/support">
     <svg class="icon icon--paypal fa-paypal" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-paypal' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;Tip &amp; Support Me</a></span>
   <div class="text-right"><a href="/terms"><svg class="icon icon--balance-scale fa-balance-scale" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-balance-scale' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;Terms &amp; Privacy</a></div>

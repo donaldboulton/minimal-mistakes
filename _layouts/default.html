@@ -4,19 +4,19 @@ layout: compress
 
 <!doctype html>
 
-<html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
+<html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js" itemscope itemtype="http://schema.org/WebSite">
 <head>
   {% include head.html %}
   {% include head/custom.html %}
 </head>
 
-<body id="style-3" class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}" itemscope itemtype="http://schema.org/WebSite">
+<body id="style-3" class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}" itemscope itemtype="http://schema.org/WebPage">
   <meta itemprop="url" content="{{ site.url }}{{ page.url }}" />
   {% include browser-upgrade.html %}
   {% include masthead.html %}
 
-  <div itemscope itemtype="http://schema.org/WebPage">
-    <div id="initial-content" class="initial-content">
+  <div>
+    <div id="initial-content" class="initial-content" itemscope itemprop="mainContentOfPage">
       {{ content }}
     </div>
     {% if site.search == true %}
@@ -35,7 +35,7 @@ layout: compress
           (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
     </div>
-  <div class="page__footer">
+  <div class="page__footer" itemscope itemtype="http://schema.org/WPFooter">
     <footer>
       {% include footer.html %}
     </footer>
