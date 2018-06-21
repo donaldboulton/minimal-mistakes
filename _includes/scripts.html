@@ -134,15 +134,15 @@ $(document).ready(function(){svg4everybody();$("a").smoothScroll({offset:-20})})
       document.getElementById("comment-form").submit();
     }
     var onSubmit = function(token) {
-          console.log('success!');
-        };
+      console.log('success!');
+    };
 
-        var onloadCallback = function() {
-          grecaptcha.render('submit', {
-            'sitekey' : '6LeugF8UAAAAAEZSaOE_K7xm6V2A2uYUBdeqUtCW',
-            'callback' : onSubmit
-          });
-        };
+    var onloadCallback = function() {
+      grecaptcha.render('submit', {
+        'sitekey' : '6LeugF8UAAAAAEZSaOE_K7xm6V2A2uYUBdeqUtCW',
+        'callback' : onSubmit
+      });
+    };
     </script>
   </script>
 {% endif %}
