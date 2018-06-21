@@ -11,7 +11,7 @@ layout: compress
 </head>
 
 <body id="style-3" class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}" itemscope itemtype="http://schema.org/WebSite">
-
+  <meta itemprop="url" content="{{ site.url }}{{ page.url }}" />
   {% include browser-upgrade.html %}
   {% include masthead.html %}
 

@@ -75,7 +75,7 @@
 
       {% if author.twitter %}
         <li>
-          <a rel="me" href="https://twitter.com/intent/tweet?{% if site.twitter.username %}via={{ site.twitter.username | url_encode }}&{% endif %}text={{ page.title | url_encode }}%20{{ page.url | absolute_url | url_encode }}" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} Twitter">
+          <a rel="me" itemprop="sameAs" href="https://twitter.com/intent/tweet?{% if site.twitter.username %}via={{ site.twitter.username | url_encode }}&{% endif %}text={{ page.title | url_encode }}%20{{ page.url | absolute_url | url_encode }}" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} Twitter">
             <svg class="icon icon--twitter fa-twitter" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-twitter' | prepend: 'assets/icons/' | relative_url }}"></use></svg> <span> Twitter</span></a>
         </li>
       {% endif %}
@@ -90,7 +90,7 @@
 
       {% if author.google_plus %}
         <li>
-          <a rel="me" href="https://plus.google.com/share?url={{ page.url | absolute_url | url_encode }}" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} Google Plus">
+          <a rel="me" itemprop="sameAs" href="https://plus.google.com/share?url={{ page.url | absolute_url | url_encode }}" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} Google Plus">
             <svg class="icon icon--google-plus fa-google-plus" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-google-plus-g' | prepend: 'assets/icons/' | relative_url }}"></use></svg> Google+
           </a>
         </li>
