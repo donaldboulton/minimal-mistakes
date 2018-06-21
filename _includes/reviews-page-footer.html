@@ -1,4 +1,4 @@
-<div id="reviews" class="js-comments gallery-2-col">
+<div id="reviews" class="js-comments gallery">
   {% if page.reviews == true and site.data.reviews | where:'product',page.slug.size > 1 %}
   {% assign reviews = site.data.reviews | where:'product',page.slug %}
 	{% assign reviews = site.data.reviews | sort %}
@@ -57,7 +57,6 @@
           <meta class="hidden" itemprop="name" content="donboulton.com">
         </span>
         <meta itemprop="url" type="hidden" value="{{ page.url | absolute_url }}">
-        <input type="hidden" name="options[parent]" value="{{ page.url | absolute_url }}">
 		</article>
   {% endfor %}
   {% endif %}
