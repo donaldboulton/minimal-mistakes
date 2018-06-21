@@ -16,14 +16,14 @@ layout: compress
   {% include masthead.html %}
 
   <div>
-    <div id="initial-content" class="initial-content" itemscope itemprop="mainContentOfPage">
-      {{ content }}
-    </div>
     {% if site.search == true %}
     <div class="search-content">
       {% include search/search_form.html %}
     </div>
     {% endif %}
+    <div id="initial-content" class="initial-content" itemscope itemprop="mainContentOfPage">
+      {{ content }}
+    </div>
   </div>
   <div class="text-center">
         <ins class="adsbygoogle"
