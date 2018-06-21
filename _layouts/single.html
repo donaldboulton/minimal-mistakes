@@ -25,7 +25,7 @@ layout: default
     <div class="page__inner-wrap">
       {% unless page.header.overlay_color or page.header.overlay_image %}
         <header>
-          {% if page.title %}<h1 id="page__title" class="page__title" itemprop="name">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
+          {% if page.title %}<h1 id="page__title" class="page__title">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
         </header>
       {% endunless %}
 
@@ -80,6 +80,7 @@ layout: default
       {% endif %}
 
       {% if page.reviews == true %}
+        {% include reviews-page-footer.html %}
         {% include reviews-form.html %}
       {% endif %}
     </div>
