@@ -19,7 +19,7 @@
 				<div class="form-group">
           <div itemprop="itemReviewed" itemscope itemtype="http://schema.org/Product">
                <span class="item-reviewed text-center heading">Item Reviewed</span>
-               <p><span itemprop="name">{{ reviewData.title }}</span></p>
+               <p><span itemprop="name">{{ reviewData.product }}</span></p>
             </div>
             <p class="review__date heading">
               {% if reviewData.date %}
@@ -29,7 +29,7 @@
               {% endif %}
             </p>
 				</div>
-				<div class="form-group form">
+				<div class="form-group">
              <div class="field-group1" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
 							<span class="heading">Rating:</span>
 		  				{% for i in (1..reviewData.review) %}
@@ -53,7 +53,7 @@
             <div class="heading">Message:</div><div itemprop="reviewBody"> {{ reviewData.description | markdownify }}</div>
 				</div>
 			</div>
-				<span style="display: none;" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+				<span itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
           <meta class="hidden" itemprop="name" content="donboulton.com">
         </span>
         <meta itemprop="url" type="hidden" value="{{ page.url | absolute_url }}">

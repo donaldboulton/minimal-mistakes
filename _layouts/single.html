@@ -16,8 +16,8 @@ layout: default
 
 <div id="main" role="main">
   {% include sidebar.html %}
-
-  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+  <div itemscope itemtype="http://schema.org/CreativeWork">
+  <article class="page">
     {% if page.title %}<meta itemprop="name" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
     {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
     {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date: "%B %d, %Y" }}">{% endif %}
@@ -85,7 +85,7 @@ layout: default
       {% endif %}
     </div>
   </article>
-
+  </div>
   {% comment %}<!-- only show related on a post page when `related: true` -->{% endcomment %}
   {% if page.id and page.related and site.related_posts.size > 0 %}
     <div class="page__related">

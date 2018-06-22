@@ -1,44 +1,58 @@
-<div id="reviews" class="js-comments gallery">
+<div class="entry-comments">
+  <header class="section-title">
+      <h3>
+          <svg width="14px" height="16px" class="icon icon--pulse" viewBox="0 0 14 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Octicons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="pulse" fill="#ffffff">
+                <polygon id="Shape" points="11.5 8 8.8 5.4 6.6 8.5 5.5 1.6 2.38 8 0 8 0 10 3.6 10 4.5 8.2 5.4 13.6 9 8.5 10.6 10 14 10 14 8"></polygon>
+              </g>
+            </g>
+          </svg>&nbsp;{% if site.data.reviews[page.slug].size > 1 %}{{ site.data.reviews[page.slug] | size | append: ' ' }}{% endif %}Reviews</h3>
+    </header>
+  <div id="reviews" class="flex-container">
   {% if page.reviews == true and site.data.reviews | where:'product',page.slug.size > 1 %}
   {% assign reviews = site.data.reviews | where:'product',page.slug %}
 	{% assign reviews = site.data.reviews | sort %}
 
-	{% for review in reviews limit:4 %}
-		{% assign reviewData = review[1] %}
-		<article itemscope itemtype="http://schema.org/Review" class="toc1">
-				<span class="section-title">
-					<h3 class="nav__title1"><svg width="14px" height="16px" class="icon icon--pulse" viewBox="0 0 14 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-						<g id="Octicons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-							<g id="pulse" fill="#ffffff">
-								<polygon id="Shape" points="11.5 8 8.8 5.4 6.6 8.5 5.5 1.6 2.38 8 0 8 0 10 3.6 10 4.5 8.2 5.4 13.6 9 8.5 10.6 10 14 10 14 8"></polygon>
-							</g>
-						</g>
-					</svg>&nbsp;Random Reviews</h3>
-				</span>
+	{% for review in reviews reversed limit:4 %}
+    {% assign reviewData = review[1] %}
+
+		<article itemscope itemtype="http://schema.org/Review" class="flex-item">
 			<div class="review-content">
-				<div class="form-group">
-          <div itemprop="itemReviewed" itemscope itemtype="http://schema.org/Product">
+            <div>
                <span class="item-reviewed text-center heading">Item Reviewed</span>
-               <p><span itemprop="name">{{ reviewData.title }}</span></p>
+               <div><span itemprop="itemReviewed">{{ reviewData.product }}</span></div>
             </div>
-            <p class="review__date heading">
+            <div class="review__date">
               {% if reviewData.date %}
                 {% if reviewData.index %}<a href="#review{{ reviewData.index }}" itemprop="url">{% endif %}
-                  <span class="heading">Dated:&nbsp;</span><time datetime="{{ reviewData.date | date_to_xmlschema }}" itemprop="datePublished">{{ reviewData.date | date: "%B %d, %Y <p>at: %I:%M %p</p>" }}</time>
+                  <span class="heading">Dated:&nbsp;</span><time datetime="{{ reviewData.date | date_to_xmlschema }}" itemprop="datePublished">{{ reviewData.date | date: "%B %d, %Y at: %I:%M %p" }}</time>
                 {% if reviewData.index %}</a>{% endif %}
               {% endif %}
-            </p>
-				</div>
-				<div class="form-group form">
-             <div class="field-group1" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+            </div>
+				<div class="group">
+            <div class="field-group1" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
 							<span class="heading">Rating:</span>
 		  				{% for i in (1..reviewData.review) %}
     						<svg class="icon icon--star rating-star rating-radio-star--on"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'assets/icons/' | relative_url }}"></use></svg>
-							{% endfor %}
+              {% endfor %}
+            </div>
+        </div>
+        {% assign reviews = site.data.reviews | where:'product',page.slug %}
+        {% assign reviewCount = reviews | size %}
+        {% assign sum = 0 %}
+        {% for review in reviews %}
+          {% assign sum = sum | plus: review.review %}
+        {% endfor %}
+        <span class="byline-item text-right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="icon rating-star"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"/></svg>&nbsp;Page Rating
+          {% if reviewCount > 0 %}
+            {% assign sum = sum | divided_by:reviewCount %}
+            (&nbsp;Average:&nbsp;<span itemprop="ratingValue">{{ sum | round: 1 }}&nbsp;</span>)
+          {% elsif site.data.reviews | where:'product',page.slug.reviewCount.size > 0 %} 0 {% else %}
+          {% endif %}
+        </span>}
               <meta class="hidden" itemprop="ratingValue" content="{{ reviewData.review }}">
-              <span class="heading">Title:</span>&nbsp;<span class="title-text">{{ reviewData.title }}</span>
-					</div>
-				</div>
+              <div class="heading">Title:</span>&nbsp;<span class="title-text">{{ reviewData.title }}</div>
         <div itemprop="author" class="review-author" itemscope itemtype="http://schema.org/Person">
           <div class="heading">Author:</div>
             <img itemprop="image" avatar="{{ reviewData.name }}" alt="{{ reviewData.name }}" class="review-avatar-image text-left" />
@@ -49,15 +63,17 @@
               {% endunless %}
             </span>
         </div>
-				<div class="form-group">
+				<div class="group">
             <div class="heading">Message:</div><div itemprop="reviewBody"> {{ reviewData.description | markdownify }}</div>
 				</div>
 			</div>
-				<span style="display: none;" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-          <meta class="hidden" itemprop="name" content="donboulton.com">
-        </span>
-        <meta itemprop="url" type="hidden" value="{{ page.url | absolute_url }}">
-		</article>
+      <span style="display: none;" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta class="hidden" itemprop="name" content="donboulton.com">
+      </span>
+      <meta itemprop="url" type="hidden" value="{{ page.url | absolute_url }}">
+      <input type="hidden" name="options[parent]" value="{{ page.url | absolute_url }}">
+    </article>
   {% endfor %}
   {% endif %}
+  </div>
 </div>
