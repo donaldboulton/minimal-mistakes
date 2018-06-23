@@ -24,12 +24,12 @@ layout: default
     {% if page.last_modified_at %}<meta itemprop="dateModified" content="{{ page.last_modified_at | date: "%B %d, %Y" }}">{% endif %}
     <div class="page__inner-wrap">
       {% unless page.header.overlay_color or page.header.overlay_image %}
-        <header>
-          {% if page.title %}<h1 id="page__title" class="page__title">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
+        <header itemprop="mainEntityOfPage">
+          {% if page.title %}<h1 id="page__title" itemprop="name">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
         </header>
       {% endunless %}
 
-      <section class="page__content" itemprop="mainEntityOfPage">
+      <section class="page__content">
           {{ content }}
           <aside class="sidebar__right" role="complementary" itemscope itemtype="http://schema.org/WPSideBar">
             {% if page.toc %}

@@ -1,26 +1,25 @@
 <div id="reviews" class="entry-reviews">
-    {% if page.reviews == true and site.data.reviews | where:'product',page.slug.size > 1 %}
+    {% if page.reviews == true and site.data.reviews | where:'product',page.slug.size > 0 %}
     {% assign reviews = site.data.reviews | where:'product',page.slug %}
     {% assign reviews = site.data.reviews | sort %}
     <header class="section-title">
       {% if page.reviews == true and site.data.reviews | where:'product',page.slug.size > 0 %}
-        <span class="byline-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon icon--chart-area"><path d="M500 384c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v308h436zM372.7 159.5L288 216l-85.3-113.7c-5.1-6.8-15.5-6.3-19.9 1L96 248v104h384l-89.9-187.8c-3.2-6.5-11.4-8.7-17.4-4.7z"/></svg>&nbsp;<span itemprop="reviewCount">{{ site.data.reviews | where:'product',page.slug | size }}</span> Page Review{% if site.data.reviews | where:'product',page.slug.size > 1 %}s{% endif %}</span>
+        <span class="byline-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon icon--chart-area"><path d="M500 384c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v308h436zM372.7 159.5L288 216l-85.3-113.7c-5.1-6.8-15.5-6.3-19.9 1L96 248v104h384l-89.9-187.8c-3.2-6.5-11.4-8.7-17.4-4.7z"/></svg>&nbsp;<span>{{ site.data.reviews | where:'product',page.slug | size }}</span> Page Review{% if site.data.reviews | where:'product',page.slug.size > 1 %}s{% endif %}</span>
       {% endif %}
     </header>
   <div class="flex-container">
 	{% for review in reviews reversed limit:4 %}
     {% assign reviewData = review[1] %}
 
-		<article itemscope itemtype="http://schema.org/Review" class="flex-item">
+		<article itemprop="mainEntity" itemscope itemtype="http://schema.org/Review" class="flex-item">
 			<div class="review-content">
             <div>
                <span class="item-reviewed text-center heading">Item Reviewed</span>
             </div>
             <div>
-              <a href="{{ reviewData.product.page.slug }}#review" itemprop="url">
+              <a href="{{ site.url }} / {{ reviewData.product }}" itemprop="url">
                 <span itemprop="itemReviewed">{{ reviewData.product }}</span>
               </a>
-              {% endif %}
             </div>
             <div class="review__date">
               {% if reviewData.date %}
@@ -44,10 +43,11 @@
               <span class="byline-item text-right">Page Rating
                 {% if reviewCount > 0 %}
                   {% assign sum = sum | divided_by:reviewCount %}
-                  (&nbsp;Average:&nbsp;<span itemprop="ratingValue">{{ sum | round: 1 }}&nbsp;</span>)
+                  (&nbsp;Average:&nbsp;<span>{{ sum | round: 1 }}&nbsp;</span>)
                 {% elsif site.data.reviews | where:'product',page.slug.reviewCount.size > 0 %} 0 {% else %}
                 {% endif %}
               </span>
+              <meta type="hidden" itemprop="ratingValue" content="{{ reviewData.review }}">
             </div>
           </div>
         <div class="heading">Title:</span>&nbsp;<span class="title-text">{{ reviewData.title }}</div>

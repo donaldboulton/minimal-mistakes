@@ -23,7 +23,7 @@
             </div>
             <div class="review__date heading">
               {% if reviewData.date %}
-                  <span class="heading">Dated:&nbsp;</span><time datetime="{{ reviewData.date | date_to_xmlschema }}" itemprop="datePublished">{{ reviewData.date | date: "%B %d, %Y at: %I:%M %p" }}</time>
+                  <span class="heading">Dated:&nbsp;</span><time datetime="{{ reviewData.date | date_to_xmlschema }}" itemprop="datePublished">{{ reviewData.date | date: "%B %d, %Y &nbsp; %I:%M %p" }}</time>
               {% endif %}
             </div>
 				</div>
