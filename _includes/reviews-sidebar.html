@@ -1,4 +1,4 @@
-<div id="reviews" class="js-comments">
+<div class="js-comments">
   {% if page.reviews == true and site.data.reviews | where:'product',page.slug.size > 1 %}
   {% assign reviews = site.data.reviews | where:'product',page.slug %}
 	{% assign reviews = site.data.reviews | sort %}
@@ -21,13 +21,11 @@
                <span class="item-reviewed text-center heading">Item Reviewed</span>
                <p><span itemprop="name">{{ reviewData.product }}</span></p>
             </div>
-            <p class="review__date heading">
+            <div class="review__date heading">
               {% if reviewData.date %}
-                {% if reviewData.index %}<a href="#review{{ reviewData.index }}" itemprop="url">{% endif %}
-                  <span class="heading">Dated:&nbsp;</span><time datetime="{{ reviewData.date | date_to_xmlschema }}" itemprop="datePublished">{{ reviewData.date | date: "%B %d, %Y <p>at: %I:%M %p</p>" }}</time>
-                {% if reviewData.index %}</a>{% endif %}
+                  <span class="heading">Dated:&nbsp;</span><time datetime="{{ reviewData.date | date_to_xmlschema }}" itemprop="datePublished">{{ reviewData.date | date: "%B %d, %Y at: %I:%M %p" }}</time>
               {% endif %}
-            </p>
+            </div>
 				</div>
 				<div class="form-group">
              <div class="field-group1" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
