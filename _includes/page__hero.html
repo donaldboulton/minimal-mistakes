@@ -52,7 +52,7 @@
       {% endif %}
     </div>
   {% else %}
-    <img src="{{ img_path }}" alt="{{ image_description }}" class="lazyload page__hero-image fadein">
+    <img itemprop="image" src="{{ img_path }}" alt="{{ image_description }}" class="lazyload page__hero-image fadein">
   {% endif %}
   {% if page.header.caption %}
     <span class="page__hero-caption">{{ page.header.caption | markdownify | remove: "<p>" | remove: "</p>" }}</span>

@@ -36,4 +36,3 @@ github_editme_path: donaldboulton/DWB/blob/gh-pages/_pages/contact.md
 {% include octo-arm.html %}
 
 {% include contact.html %}
-{% include twitter-cards.html %}
