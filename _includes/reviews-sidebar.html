@@ -18,10 +18,10 @@
 			<div class="review-content">
 				<div class="form-group">
           <div itemprop="itemReviewed" itemscope itemtype="http://schema.org/Product">
-               <span class="item-reviewed text-center heading">Item Reviewed</span>
+               <span class="item-reviewed">Item Reviewed</span>
               <div>
-                <a href="{{ site.url }}/{{ reviewData.slug }}" itemprop="url">
-                  <span>{{ reviewData.product }}</span>
+                <a href="{{ reviewData.url }}" itemprop="url">
+                  <span itemprop="name">{{ reviewData.product }}</span>
                 </a>
               </div>
             </div>
