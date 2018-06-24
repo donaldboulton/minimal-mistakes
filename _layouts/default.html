@@ -25,7 +25,9 @@ layout: compress
       {{ content }}
     </div>
   </div>
-  <div class="text-center">
+  <div class="text-center" role="note" itemscope itemtype="http://schema.org/WPAdBlock">
+        <meta itemprop="name" content="Adsense for {{ page.title }}"/>
+        <meta itemprop="description" content="Support {{ site.title }} by using Adsense and other advertisements."/>
         <ins class="adsbygoogle"
              style="display:block"
              data-ad-client="ca-pub-7655495105068461"

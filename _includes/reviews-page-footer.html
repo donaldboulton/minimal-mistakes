@@ -1,5 +1,5 @@
 <div id="reviews" class="entry-reviews">
-    {% if page.reviews == true and site.data.reviews | where:'product',page.slug.size > 0 %}
+    {% if page.reviews == true and site.data.reviews | where:'product',page.slug.size > 1 %}
     {% assign reviews = site.data.reviews | where:'product',page.slug %}
     {% assign reviews = site.data.reviews | sort %}
     <header class="section-title">
@@ -72,20 +72,6 @@
       <input type="hidden" name="options[parent]" value="{{ page.url | absolute_url }}">
     </article>
   {% endfor %}
-  {% assign reviews = site.data.reviews | where:'page.slug',reviews.page.product %}
-  {% assign reviews = page.data.reviews | sort %}
-        {% for review in reviews limit:4 %}
-        {% assign reviewData = review[1] %}
-        {% assign index = forloop.index %}
-        {% assign review = review[1].review %}
-        {% assign title = review[1].title %}
-        {% assign url = review[1].url %}
-        {% assign name = review[1].name %}
-        {% assign email = review[1].email %}
-        {% assign date = review[1].date %}
-        {% assign description = review[1].description %}
-        {% include review.html index=index review=review title=title email=email url=url name=name date=date description=description %}
-        {% endfor %}
   {% endif %}
   </div>
 </div>
