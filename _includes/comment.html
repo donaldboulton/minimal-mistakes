@@ -3,16 +3,16 @@
 <div itemprop="creator" itemscope itemtype="http://schema.org/Person">
   <div class="comment-avatar">
     {% if include.avatar %}
-      <img itemprop="image" avatar="{{ include.name }}" alt="{{ include.name }}" class="lazyload blur-up" />
+      <span><img itemprop="image" avatar="{{ include.name }}" alt="{{ include.name }}" class="lazyload blur-up" /></span>
     {% elsif include.email %}
-      <img src="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=60" srcset="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=120 2x" alt="{{ include.name | escape }}">
+    <span><img itemprop="image" src="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=60" srcset="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=120 2x" alt="{{ include.name | escape }}"></span>
     {% else %}
-      <img itemprop="image" avatar="{{ include.name }}" alt="{{ include.name }}" class="lazyload blur-up" />
+    <span><img itemprop="image" avatar="{{ include.name }}" alt="{{ include.name }}" class="lazyload blur-up" /></span>
     {% endif %}
   </div>
   <h3 class="comment-author-name">
     {% unless include.url == blank %}
-      <a rel="external nofollow" itemprop="name" href="{{ include.url }}">{{ include.name | strip_html }}</a>
+    <span><a rel="external nofollow" href="{{ include.url }}"></span><span itemprop="name">{{ include.name | strip_html }}</a></span>
     {% else %}
       {{ include.name | strip_html }}
     {% endunless %}
