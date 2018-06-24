@@ -11,14 +11,14 @@
 	{% for review in reviews reversed limit:4 %}
     {% assign reviewData = review[1] %}
 
-		<article itemprop="mainEntity" itemscope itemtype="http://schema.org/Review" class="flex-item">
+		<article itemscope itemtype="http://schema.org/Review" class="flex-item">
 			<div class="review-content">
             <div>
-               <span class="item-reviewed text-center heading">Item Reviewed</span>
+               <span class="item-reviewed">Item Reviewed</span>
             </div>
-            <div>
-              <a href="{{ site.url }}/{{ reviewData.product }}" itemprop="url">
-                <span itemprop="itemReviewed">{{ reviewData.product }}</span>
+            <div itemprop="itemReviewed">
+              <a href="{{ site.url }}/{{ reviewData.parent }}" itemprop="url">
+                <span itemprop="name">{{ reviewData.product }}</span>
               </a>
             </div>
             <div class="review__date">
