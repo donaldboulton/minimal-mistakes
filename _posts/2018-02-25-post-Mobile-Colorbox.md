@@ -18,7 +18,7 @@ category:
   - Programing
 
 toc: true
-toc_label: "Contents"
+toc_label: "Colorbox Contents"
 
 read_time: true
 comments: true

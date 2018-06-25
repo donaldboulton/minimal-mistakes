@@ -7,11 +7,12 @@ youtubeId: IGMCAZk5xlg
 sitemap: false
 permalink: /support/
 toc: true
+toc_label: "Support Contents"
 comments: false
 sidenav: true
 reviews: false
 adds: true
-support: [adds]
+support: [adds, cookies, youtube]
 
 header:
   image: /assets/images/pages/support-1200.jpg

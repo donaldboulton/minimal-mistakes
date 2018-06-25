@@ -1,13 +1,14 @@
 ---
 layout: single
-title: Drag Drop No Spambots
-name: Drag Drop No Spambots
+title: Drag Drop Spambots
+name: Drag Drop Spambots
 read_time: true
 comments: true
 share: true
 social-share: twitter --twitter-hashtags facebook
 sidenav: true
-toc: true
+toc: 
+toc_label: "Page Contents"
 search: true
 author: Donald Boulton
 author_profile: true

@@ -23,7 +23,7 @@ tags:
 category:
   - Staticman
 toc: true
-toc_label: "Contents"
+toc_label: "Page Contents"
 excerpt: "Use Staticman push to Gitlab. The first step is to create staticman app, according to the official document operation, you can also view the repository I created."
 image:
   cover: true

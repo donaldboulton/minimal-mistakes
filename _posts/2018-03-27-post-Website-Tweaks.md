@@ -15,7 +15,7 @@ category:
   - Programing
 
 toc: true
-toc_label: "Contents"
+toc_label: "Tweaks Contents"
 social-share: twitter --twitter-hashtags facebook
 read_time: true
 comments: true
@@ -253,7 +253,7 @@ In above example the client automatically provides the ETag token within the If-
 
 As a web developer, how do you take advantage of efficient revalidation? The browser does all the work on our behalf. It will automatically detect if a validation token has been previously specified, it will append it to an outgoing request, and it will update the cache timestamps as necessary based on received response from the server. The only thing thats left for us to do is to ensure that the server is, in fact, providing the necessary ETag tokens: check your server documentation for necessary configuration flags.
 
-### Remember
+### To Remember
 
 Tip: HTML5 Boilerplate project contains sample configuration files for all the most popular servers with detailed comments for each configuration flag and setting: find your favorite server in the list, look for appropriate settings, and copy / confirm that your server is configured with recommended settings.
 
@@ -264,7 +264,7 @@ Cache-Control directives control who can cache the response, under which conditi
 
 The best request is a request that does not need to communicate with the server: a local copy of the response allows us to eliminate all network latency and avoid data charges for the data transfer. To achieve this, the HTTP specification allows the server to return a number of different Cache-Control directives that control how, and for how long, the individual response can be cached by the browser and other intermediate caches.
 
-### Remember
+### Again Remember
 
 Cache-Control header was defined as part of the HTTP/1.1 specification and supersedes previous headers (e.g. Expires) used to define response caching policies. All modern browsers support Cache-Control, hence that is all we will need.
 

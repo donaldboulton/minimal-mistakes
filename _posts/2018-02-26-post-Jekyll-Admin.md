@@ -23,7 +23,7 @@ category:
   - Jekyll
 
 toc: true
-toc_label: "Contents"
+toc_label: "Admin Contents"
 
 image:
   cover: true
