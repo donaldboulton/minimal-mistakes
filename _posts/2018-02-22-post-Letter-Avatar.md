@@ -22,7 +22,7 @@ locations:
   - OKC Oklahoma
   - Rockwell Rv Park
 toc: true
-toc_label: "Avatar Contents"
+toc_label: "Page Contents"
 read_time: true
 comments: true
 share: true

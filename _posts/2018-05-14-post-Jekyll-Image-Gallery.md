@@ -20,7 +20,7 @@ category:
 locations:
   - OKC Oklahoma
 toc: true
-toc_label: "Gallery Contents"
+toc_label: "Page Contents"
 read_time: true
 comments: true
 related: true

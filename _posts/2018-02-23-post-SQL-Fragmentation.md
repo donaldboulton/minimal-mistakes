@@ -19,7 +19,7 @@ category:
   - Programing
   
 toc: true
-toc_label: "Fragment Contents"
+toc_label: "Page Contents"
 read_time: true
 comments: true
 share: true

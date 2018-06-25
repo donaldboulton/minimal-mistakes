@@ -15,7 +15,7 @@ category:
   - Programing
 
 toc: true
-toc_label: "Tweaks Contents"
+toc_label: "Page Contents"
 social-share: twitter --twitter-hashtags facebook
 read_time: true
 comments: true
