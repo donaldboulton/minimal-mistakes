@@ -29,7 +29,7 @@ share: true
 social-share: twitter --twitter-hashtags facebook
 related: true
 excerpt: "Many of us got really tired of the Gravatar Service being down or slow and having multiple server calls to download the Gravatar. 
-Alot of people do not even know about gravatar and your get a generic image for the User Avatar."
+Alot of people do not even know about gravatar and you get a generic image for the User Avatar."
 image:
   cover: true
   path: &image /assets/images/pages/letter-avatar-header.png
