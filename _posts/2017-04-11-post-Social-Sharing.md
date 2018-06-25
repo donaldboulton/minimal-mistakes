@@ -16,7 +16,7 @@ locations:
   - Idabel Oklahoma
   - 4 Oaks Storaage
 toc: true
-toc_label: "Contents"
+toc_label: "Social Contents"
 read_time: true
 comments: true
 related: true

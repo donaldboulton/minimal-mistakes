@@ -19,7 +19,7 @@ category:
   - Windows
 
 toc: true
-toc_label: "Contents"
+toc_label: "Tweaks Contents"
 
 read_time: true
 comments: true

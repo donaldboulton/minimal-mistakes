@@ -7,6 +7,8 @@ comments: true
 share: true
 social-share: twitter --twitter-hashtags facebook
 toc: true
+toc_label: Review Content
+sidenav: true
 search: true
 author: Donald Boulton
 author_profile: true

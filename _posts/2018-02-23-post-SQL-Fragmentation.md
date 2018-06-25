@@ -19,7 +19,7 @@ category:
   - Programing
   
 toc: true
-toc_label: "Contents"
+toc_label: "Defrag Contents"
 read_time: true
 comments: true
 share: true
