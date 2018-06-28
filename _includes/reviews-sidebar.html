@@ -52,7 +52,8 @@
             </span>
         </div>
 				<div class="form-group">
-            <div class="heading">Message</div><div itemprop="reviewBody"> {{ reviewData.description | markdownify }}</div>
+            <div class="heading">Message</div>
+            <div itemprop="reviewBody"> {{ reviewData.description | markdownify | strip_html | truncate: 130 }}</div>
 				</div>
 			</div>
 				<span itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
