@@ -7,7 +7,7 @@
       {% unless page.layout == 'archive' %}
         {% if page.date %}
           {% include author %}
-          <p class="entry-meta">
+          <div class="entry-meta">
             <span class="byline-item"><svg class="icon icon--calendar-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-calendar-alt' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;<time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %-d, %Y' }}</time></span>
             {% if page.work %}
               <span class="byline-item"><svg class="icon icon--folder" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-folder-open' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;{{ page.work | markdownify | remove: '<p>' | remove: '</p>' }}</span>
@@ -24,8 +24,8 @@
               <span class="byline-item"><svg class="icon icon--comments-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comments-alt' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;<a href="https://donboulton.com{{ page.url }}#disqus_thread">0 Comments</a></span>
             {% endif %}
             {% endcase %}
-          </p>
-          <p class="entry-meta" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+          </div>
+          <div class="entry-meta" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
             {% if page.reviews == true and site.data.reviews | where:'product',page.slug.size > 0 %}
               <span class="byline-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon icon--chart-area"><path d="M500 384c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v308h436zM372.7 159.5L288 216l-85.3-113.7c-5.1-6.8-15.5-6.3-19.9 1L96 248v104h384l-89.9-187.8c-3.2-6.5-11.4-8.7-17.4-4.7z"/></svg>&nbsp;<span itemprop="reviewCount">{{ site.data.reviews | where:'product',page.slug | size }}</span><a href="#reviews"> Page Review</a>{% if site.data.reviews | where:'product',page.slug.size > 1 %}s{% endif %}</span>
             {% endif %}
@@ -42,7 +42,7 @@
               {% elsif site.data.reviews | where:'product',page.slug.reviewCount.size > 0 %} 0 {% else %}
               {% endif %}
             </span>
-          </p>
+          </div>
           <div style="display:none;">
           <meta class="hidden" itemprop="bestRating" value="5">
           <meta class="hidden" itemprop="worstRating" value="1">

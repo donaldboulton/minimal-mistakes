@@ -88,38 +88,6 @@
 <script>
 window.addEventListener("load",function(){window.cookieconsent.initialise({"palette":{"popup":{"background":"#031111","text":"#d6d6d6"},"button":{"background":"#1faaaa"}},revokable:true,onStatusChange:function(status){console.log(this.hasConsented() ? 'enable cookies':'disable cookies')},law:{regionalLaw:false,},location:true,"theme":"edgeless","position":"bottom-left","content":{"href":"https://donboulton.com/terms/#cookies-and-web-beacons"}})})
 </script>
-{% endif %}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" crossorigin="anonymous"></script>
-<script>
-anchors.options.visible = 'always';
-anchors.add('h2,h3,h4');
-generateTableOfContents(anchors.elements);
-
-function generateTableOfContents(els) {
-	var anchoredElText,
-  		anchoredElHref,
-			ul = document.createElement('UL');
-
-  document.getElementById('table-of-contents').appendChild(ul);
-
-	for (var i = 0; i < els.length; i++) {
-  	anchoredElText = els[i].textContent;
-		anchoredElHref = els[i].querySelector('.anchorjs-link').getAttribute('href');
-  	addNavItem(ul, anchoredElHref, anchoredElText);
-  }
-}
-
-function addNavItem(ul, href, text) {
-  var listItem = document.createElement('LI'),
-		  anchorItem = document.createElement('A'),
-  	  textNode = document.createTextNode(text);
-
-  anchorItem.href = href;
-  ul.appendChild(listItem);
-  listItem.appendChild(anchorItem);
-  anchorItem.appendChild(textNode);
-};
-</script>
 <script>
 $(document).ready(function(){svg4everybody();$("a").smoothScroll({offset:-20})});var coll=document.getElementsByClassName("collapsible");var i;for(i=0;i<coll.length;i++){coll[i].addEventListener("click",function(){this.classList.toggle("active");var content=this.nextElementSibling;if(content.style.maxHeight){content.style.maxHeight=null}else{content.style.maxHeight=content.scrollHeight+"px"}})}
 </script>
@@ -267,6 +235,30 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
   function onSubmit(token) {
     document.getElementById("review-form").submit();
   }
+</script>
+{% endif %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" crossorigin="anonymous"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function(event) {
+anchors.add('h2, h3, h4, h5');
+anchors.options = {
+  visible: 'always',
+  placement: 'left',
+  icon: '¶'
+};
+anchors.add('p');
+
+function addNavItem(ul, href, text) {
+  var listItem = document.createElement('LI'),
+		  anchorItem = document.createElement('A'),
+  	  textNode = document.createTextNode(text);
+
+  anchorItem.href = href;
+  ul.appendChild(listItem);
+  listItem.appendChild(anchorItem);
+  anchorItem.appendChild(textNode);
+  };
+});
 </script>
 <script>
   function external_new_window() {
