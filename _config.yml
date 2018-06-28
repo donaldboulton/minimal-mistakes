@@ -35,9 +35,9 @@ reviews:
   provider               : "reviews-staticman_v2"
 
 reCaptcha:
-  enabled: false
-  siteKey: "6LerR1MUAAAAACWH7t30s7V4aApQZaIVVPcvH21X"
-  secret: "l3E2ulfQvk8keC9/tf0O6Znp5pcETtoOK/QIs+cPR5XcyK9yXPY8lXw6uN0HIbpeC4hy0zmSpmpjTzdTSXvlYsvkLMvmg+xQMK9EgL1apg2+z8wveyJbA+CMxpr+xHr7+1uvxW6WirdfcTcYBh3JwEiPLxykdlBc2MJx1EaHHCI="
+  enabled: true
+  siteKey: "6LeugF8UAAAAAEZSaOE_K7xm6V2A2uYUBdeqUtCW"
+  secret: "nZpkPONn79CW02rgPYYLUYo2CYayDHubSNKDW6AIXkICkNjw80qsC5or/auUh2TG8F4mKl3eLroc2xL+dOgWnkrty98lO5O9mpfCKgzE17em02cL/khFmLLW6wE6XVeF2abT9UMO7ScEW4nuXWQnJyA6uKhrYJCYLBee8rbsan4="
 
 webmentions:
   username: donboulton.com

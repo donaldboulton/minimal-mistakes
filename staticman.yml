@@ -3,8 +3,7 @@
 # For example, you can have one property to handle comment submission and
 # another one to handle posts.
 # To encrypt strings use the following endpoint:
-# https://api.staticman.net/v2/encrypt/{TEXT TO BE ENCRYPTED}
-
+# https://api.staticman.net/v2/encrypt/
 comments:
   # (*) REQUIRED
   #
@@ -108,7 +107,7 @@ comments:
   reCaptcha:
     enabled: true
     siteKey: "6LeugF8UAAAAAEZSaOE_K7xm6V2A2uYUBdeqUtCW"
-    secret: "ZRXlTwpjwXSV5c8pcMmQ/m5yuYzYMrV6oBTMipbiYR1UDS8ewnYSFnjFgnk+LxZ4CCUlmBtduD2pGyQD9fQacYeRGcEU9hiR6wBJ+Qdz43KXIvJDktnFPkJxIKxhkUjMOydeC1V8lWXzjkXL5lLVlgkajsCc3/xbsQqvg7F52M8="
+    secret: "nZpkPONn79CW02rgPYYLUYo2CYayDHubSNKDW6AIXkICkNjw80qsC5or/auUh2TG8F4mKl3eLroc2xL+dOgWnkrty98lO5O9mpfCKgzE17em02cL/khFmLLW6wE6XVeF2abT9UMO7ScEW4nuXWQnJyA6uKhrYJCYLBee8rbsan4="
 
 reviews:
   provider: "staticman_v2"
@@ -130,4 +129,4 @@ reviews:
   reCaptcha:
     enabled: true
     siteKey: "6LeugF8UAAAAAEZSaOE_K7xm6V2A2uYUBdeqUtCW"
-    secret: "ZRXlTwpjwXSV5c8pcMmQ/m5yuYzYMrV6oBTMipbiYR1UDS8ewnYSFnjFgnk+LxZ4CCUlmBtduD2pGyQD9fQacYeRGcEU9hiR6wBJ+Qdz43KXIvJDktnFPkJxIKxhkUjMOydeC1V8lWXzjkXL5lLVlgkajsCc3/xbsQqvg7F52M8="
+    secret: "nZpkPONn79CW02rgPYYLUYo2CYayDHubSNKDW6AIXkICkNjw80qsC5or/auUh2TG8F4mKl3eLroc2xL+dOgWnkrty98lO5O9mpfCKgzE17em02cL/khFmLLW6wE6XVeF2abT9UMO7ScEW4nuXWQnJyA6uKhrYJCYLBee8rbsan4="
