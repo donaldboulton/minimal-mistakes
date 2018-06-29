@@ -15,7 +15,10 @@
 		<textarea name="fields[message]" id="message" placeholder="Enter your message..." required></textarea>
   </div>
   <div class="form-group">
-      <input type="submit" value="Send Message" class="g-recaptcha btn btn--primary" data-sitekey="6LeugF8UAAAAAEZSaOE_K7xm6V2A2uYUBdeqUtCW" data-callback='onSubmit'>
+      <div class="g-recaptcha" data-sitekey="6LdjemEUAAAAAElWvXeLBlksiR83cZvXB2d9ZDmF"></div>
+  </div>
+  <div class="form-group">
+      <input type="submit" value="Send Message" class="btn btn--primary">
     </div>
   <div>
     <input type="hidden" name="_replyto" value="{{ page.email }}">

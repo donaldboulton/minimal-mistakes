@@ -3,7 +3,7 @@
 # For example, you can have one property to handle comment submission and
 # another one to handle posts.
 # To encrypt strings use the following endpoint:
-# https://api.staticman.net/v2/encrypt/
+# https://api.staticman.net/v2/encrypt/6LdjemEUAAAAAFk9H9kg9agjERxDZdUSbXK65M8_
 comments:
   # (*) REQUIRED
   #
@@ -106,8 +106,8 @@ comments:
   # Register your domain at https://www.google.com/recaptcha/ and choose reCAPTCHA V2
   reCaptcha:
     enabled: true
-    siteKey: "6LeugF8UAAAAAEZSaOE_K7xm6V2A2uYUBdeqUtCW"
-    secret: "nZpkPONn79CW02rgPYYLUYo2CYayDHubSNKDW6AIXkICkNjw80qsC5or/auUh2TG8F4mKl3eLroc2xL+dOgWnkrty98lO5O9mpfCKgzE17em02cL/khFmLLW6wE6XVeF2abT9UMO7ScEW4nuXWQnJyA6uKhrYJCYLBee8rbsan4="
+    siteKey: "6LdjemEUAAAAAElWvXeLBlksiR83cZvXB2d9ZDmF"
+    secret: "m2h3FNTphcvySjRn+AQaNzrhJh4Gy4fJa6wGAcTKzbrlfGGE6wkIayVZEeqz4yosiGPg3+96jxp5itTorTJZKlpqWADgp6ln6nxhECuP+vy1qGIqFJVUOAz/eN+47Oz14GNGvvB6GMmEfn8LW4N9d+tdXzEBWTsQGS6K32hfpJg="
 
 reviews:
   provider: "staticman_v2"
@@ -128,5 +128,5 @@ reviews:
         format: "iso8601"
   reCaptcha:
     enabled: true
-    siteKey: "6LeugF8UAAAAAEZSaOE_K7xm6V2A2uYUBdeqUtCW"
-    secret: "nZpkPONn79CW02rgPYYLUYo2CYayDHubSNKDW6AIXkICkNjw80qsC5or/auUh2TG8F4mKl3eLroc2xL+dOgWnkrty98lO5O9mpfCKgzE17em02cL/khFmLLW6wE6XVeF2abT9UMO7ScEW4nuXWQnJyA6uKhrYJCYLBee8rbsan4="
+    siteKey: "6LdjemEUAAAAAElWvXeLBlksiR83cZvXB2d9ZDmF"
+    secret: "m2h3FNTphcvySjRn+AQaNzrhJh4Gy4fJa6wGAcTKzbrlfGGE6wkIayVZEeqz4yosiGPg3+96jxp5itTorTJZKlpqWADgp6ln6nxhECuP+vy1qGIqFJVUOAz/eN+47Oz14GNGvvB6GMmEfn8LW4N9d+tdXzEBWTsQGS6K32hfpJg="
