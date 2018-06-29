@@ -390,7 +390,8 @@ defaults:
       permalink: /:products/:name/
 
 posts_json_path: posts.json
-
+ipstack:
+  api_key: b3e3a6f8d63be4a25492fef554f9e28a
 # Plugin: Auto Pages (jekyll-paginate-v2)
 autopages:
   enabled: true

@@ -21,6 +21,7 @@ email: donaldboulton@gmail.com
 adds: true
 toc: false
 sidenav: true
+recaptcha: true
 reviews: false
 comments: false
 cookies: true

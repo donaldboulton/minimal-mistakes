@@ -108,7 +108,6 @@ $(document).ready(function(){svg4everybody();$("a").smoothScroll({offset:-20})})
         'callback' : onSubmit
       });
     };
-    </script>
   </script>
 {% endif %}
 
@@ -116,7 +115,7 @@ $(document).ready(function(){svg4everybody();$("a").smoothScroll({offset:-20})})
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script>
     function onSubmit(token) {
-      document.getElementById("comment-form").submit();
+      document.getElementById("contact-form").submit();
     }
     var onSubmit = function(token) {
       console.log('success!');
@@ -128,7 +127,6 @@ $(document).ready(function(){svg4everybody();$("a").smoothScroll({offset:-20})})
         'callback' : onSubmit
       });
     };
-    </script>
   </script>
 {% endif %}
 

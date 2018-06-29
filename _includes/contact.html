@@ -1,6 +1,6 @@
 <div class="parent">
-  <div id="formBlock" class="contact-box wrapper">
-	<form id="contactform"  action="https://formspree.io/donaldboulton@gmail.com" method="post" class="contact-form">
+  <div id="formBlock" class="contact-box">
+	<form id="contact-form"  action="https://formspree.io/donaldboulton@gmail.com" method="post" class="contact-form">
     <h3>Send us a email message</h3>
   <div class="form-group">
 		<label for="name">Full Name</label>
@@ -38,3 +38,22 @@
   <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Contact <a href="https://t.co/SDMOt5GU7n">https://t.co/SDMOt5GU7n</a> via <a href="https://twitter.com/donboulton?ref_src=twsrc%5Etfw">@donboulton</a><a href="https://t.co/xbuqYoW5b2">https://t.co/xbuqYoW5b2</a> email contact form in <a href="https://t.co/A4Dw14MVjA">https://t.co/A4Dw14MVjA</a></p>&mdash; Don W. Boulton (@donboulton) <a href="https://twitter.com/donboulton/status/1001871264565342208?ref_src=twsrc%5Etfw">May 30, 2018</a></blockquote>
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
+<script>
+  // set endpoint and your access key
+var access_key = '4de0fc155fdb52586c4d4a3fe56f7753';
+var email_address = '{{ contactform.email }}';
+
+// verify email address via AJAX call
+$.ajax({
+    url: 'http://apilayer.net/api/check?access_key=' + access_key + '&email=' + email_address,
+    dataType: 'jsonp',
+    success: function(json) {
+
+    // Access and use your preferred validation result objects
+    console.log(json.format_valid);
+    console.log(json.smtp_check);
+    console.log(json.score);
+
+    }
+});
+</script>
