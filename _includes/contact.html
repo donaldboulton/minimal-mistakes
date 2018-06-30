@@ -1,12 +1,12 @@
-<div id="formBlock" class="contact-box">
+<div id="formBlock" class="js-contact">
 	<form id="contact-form"  action="https://formspree.io/donaldboulton@gmail.com" method="post" class="contact-form">
     <h3>Send us a email message</h3>
   <div class="form-group">
-		<label for="name">Full Name<abbr class="abbr" title="Required">&nbsp;*</abbr></label>
+		<label for="name">Full Name&nbsp;<abbr class="abbr" title="Required">*</abbr></label>
 		<input type="text" name="fields[name]" id="name" value="" required="required" aria-required="true" pattern="^([- \w\d\u00c0-\u024f]+)$" title="Your name (no special characters, diacritics are okay)" placeholder="Enter your name..." autofocus>
   </div>
   <div class="form-group">
-		<label for="email">Email Address<abbr class="abbr" title="Required">&nbsp;*</abbr></label>
+		<label for="email">Email Address&nbsp;<abbr class="abbr" title="Required">*</abbr></label>
 		<input type="email" name="fields[email]" id="email" value="" required="required" aria-required="true" pattern="^(([-\w\d]+)(\.[-\w\d]+)*@([-\w\d]+)(\.[-\w\d]+)*(\.([a-zA-Z]{2,5}|[\d]{1,3})){1,2})$" title="Your email address" type="email" spellcheck="false" placeholder="Enter your email..." inputmode="email">
   </div>
   <div class="form-group">
@@ -14,14 +14,14 @@
     <input type="url" name="fields[url]" id="url" pattern="^(http[s]?:\/\/)?([-\w\d]+)(\.[-\w\d]+)*(\.([a-zA-Z]{2,5}|[\d]{1,3})){1,2}(\/([-~%\.\(\)\w\d]*\/*)*(#[-\w\d]+)?)?$" title="Your website address" type="url" spellcheck="false" size="30" inputmode="url">
   </div>
   <div class="form-group">
-		<label for="message">Message<abbr class="abbr" title="Required">&nbsp;*</abbr></label>
-		<textarea name="fields[message]" id="message" spellcheck="true" placeholder="Enter your message..." value="" required="required" aria-required="true"></textarea>
+		<label for="message">Message&nbsp;<abbr class="abbr" title="Required">*</abbr></label>
+		<textarea name="fields[message]" id="message" maxlength="200" rows="6" spellcheck="true" placeholder="Enter your message..." value="" required="required" aria-required="true"></textarea>
   </div>
-  <div>Please Agree to our Terms and Conditions.</div>
+  <div>Please Agree to Our Terms and Conditions&nbsp;<abbr class="abbr" title="Required">*</abbr><small>&nbsp;(<a href="https://kramdown.gettalong.org/quickref.html">Markdown</a> is allowed)</small></div>
   <div class="checkbox_wrapper">
       <label class="checkbox-label" for="checkbox">
           <div class="checkbox_wrapper">
-            <input type="checkbox" id="checkbox" name="options[conditions]" value="conditions">
+            <input type="checkbox" id="checkbox" name="options[conditions]" value="conditions" required>
             <span class="custom"></span>
               <svg class="true_icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
               <path d="M27 4l-15 15-7-7-5 5 12 12 20-20z" />
