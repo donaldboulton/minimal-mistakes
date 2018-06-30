@@ -26,6 +26,7 @@
   transition: all .3s ease;
   width: 48px;
   z-index: 10;
+  border-radius: 50%;
 }
 
 [type="checkbox"]:checked,
@@ -38,7 +39,7 @@
     left: 49px;
 }
 
-.svg-checkbox {
+svg {
   position: absolute;
   z-index: 1;
 }
