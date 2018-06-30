@@ -93,55 +93,14 @@ $(document).ready(function(){svg4everybody();$("a").smoothScroll({offset:-20})})
 </script>
 {% if page.comments == true %}
   <script src="{{ '/assets/js/staticman/staticman-comments.js' | relative_url }}"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.jshttps://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-  <script>
-    $("#comment-form").validate({
-      submitHandler: function (form) {
-        var response = grecaptcha.getResponse();
-
-        if (response.length == 0) {
-          $('#recaptcha-error').show();
-          return false;
-        }
-
-        else {
-          $('#recaptcha-error').hide();
-          return true;
-        }
-        rules:
-        {
-          name:
-          {
-            required: true
-          }
-          email:
-          {
-            required:
-            {
-            depends:"input[name='conditions[]']:checked"
-            email: true
-            }
-          }
-          title:
-          {
-            required: true
-          }
-        }
-        messages:
-        {
-          name:
-          {
-            required: "Please enter your name"
-          }
-          email:
-          {
-            required: "Please enter your email address."
-          }
-        }
-
-      }
-    });
+  <script type="text/javascript">
+    var onloadCallback = function() {
+      grecaptcha.render('html_element', {
+        'sitekey' : '6LdjemEUAAAAAElWvXeLBlksiR83cZvXB2d9ZDmF',
+        'data-theme' : 'dark'
+      });
+    };
   </script>
 {% endif %}
 

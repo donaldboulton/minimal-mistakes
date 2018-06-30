@@ -83,6 +83,10 @@
    <link rel="stylesheet" href="{{ '/assets/css/vendor/snipcart/snipcart.min.css' | relative_url }}">
 {% endif %}
 
+{% if page.comments == true %}
+  <link rel="stylesheet" href="{{ '/assets/css/checkboxes.css' | relative_url }}">
+{% endif %}
+
 {% if page.support contains 'calendar' %}
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.0.0-alpha/fullcalendar.min.css">
    <link rel="stylesheet" media="print" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.0.0-alpha/fullcalendar.print.min.css">

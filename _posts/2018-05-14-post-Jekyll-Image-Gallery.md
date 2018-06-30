@@ -705,5 +705,3 @@ support: [gallery]
 If there is any confusion to the contents of this post add a review, tweet or a comment below, and or go to the repo for, Donald Boulton at: [Github Repo](https://github.com/donaldboulton/DWB){:id="open-website" rel="nofollow"} and view the code. Both my Simple and Complex Gallerys displayed on my Gallery Page.
 
 > The only Gallerys that are Complex or yml driven are my CAT Gallerys.
-
-{% include lightgallery-maps-iframe.html %}

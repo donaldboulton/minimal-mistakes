@@ -363,11 +363,8 @@ input[aria-invalid="true"], textarea[aria-invalid="true"] {
   box-shadow: 0 0 4px 0 #f00;
 }
 
-form div label {
+.abbr {
   display: inline-block;
-  width: 7em;
-}
-form div label abbr {
   border: none;
   font-weight: bold;
   color: #f00;

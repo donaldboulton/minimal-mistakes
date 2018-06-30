@@ -34,15 +34,28 @@
       <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.reCaptcha.siteKey }}">
       <input type="hidden" name="options[reCaptcha][secret]" value="{{ site.reCaptcha.secret }}">
     </div>
-    <label for="comment-form-subscribe" class="sr-only">Subscribe</label>
-    <input type="checkbox" id="comment-form-subscribe" name="options[subscribe]" value="email">&nbsp;Notify me of replies by email.
+    <div>Notify me of replies by email, Subscribe</div>
+  <div class="checkbox_wrapper">
+      <label class="checkbox-label" for="checkbox">
+          <div class="checkbox_wrapper">
+            <input type="checkbox" id="checkbox" name="options[subscribe]" value="email">
+            <span class="custom"></span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32" class="true_icon">
+              <path d="M27 4l-15 15-7-7-5 5 12 12 20-20z" />
+              </svg>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32" class="false_icon">
+              <path d="M31.708 25.708c-0-0-0-0-0-0l-9.708-9.708 9.708-9.708c0-0 0-0 0-0 0.105-0.105 0.18-0.227 0.229-0.357 0.133-0.356 0.057-0.771-0.229-1.057l-4.586-4.586c-0.286-0.286-0.702-0.361-1.057-0.229-0.13 0.048-0.252 0.124-0.357 0.228 0 0-0 0-0 0l-9.708 9.708-9.708-9.708c-0-0-0-0-0-0-0.105-0.104-0.227-0.18-0.357-0.228-0.356-0.133-0.771-0.057-1.057 0.229l-4.586 4.586c-0.286 0.286-0.361 0.702-0.229 1.057 0.049 0.13 0.124 0.252 0.229 0.357 0 0 0 0 0 0l9.708 9.708-9.708 9.708c-0 0-0 0-0 0-0.104 0.105-0.18 0.227-0.229 0.357-0.133 0.355-0.057 0.771 0.229 1.057l4.586 4.586c0.286 0.286 0.702 0.361 1.057 0.229 0.13-0.049 0.252-0.124 0.357-0.229 0-0 0-0 0-0l9.708-9.708 9.708 9.708c0 0 0 0 0 0 0.105 0.105 0.227 0.18 0.357 0.229 0.356 0.133 0.771 0.057 1.057-0.229l4.586-4.586c0.286-0.286 0.362-0.702 0.229-1.057-0.049-0.13-0.124-0.252-0.229-0.357z" />
+              </svg>
+          </div>
+        </label>
+  </div>
+
+
     <div class="form-group">
-      <div class="g-recaptcha" data-sitekey="6LdjemEUAAAAAElWvXeLBlksiR83cZvXB2d9ZDmF"></div>
+      <div id="html_element" class="g-recaptcha" data-theme="dark" data-sitekey="6LdjemEUAAAAAElWvXeLBlksiR83cZvXB2d9ZDmF"></div>
     </div>
-    <label for="comment-form-conditons" class="sr-only">Conditions of Usage</label>
-    <input type="checkbox" id="comment-form-conditions" name="options[conditions]" value="conditions">&nbsp;Agree to Terms and Conditions.
     <div class="form-group">
-        <button type="submit" id="comment-form-submit" class="btn btn-primary">Submit Comment</button>
+        <button type="submit" id="comment-form-submit" class="btn btn--primary">Submit Comment</button>
       <br/>
     </div>
     <div class="form-group">
