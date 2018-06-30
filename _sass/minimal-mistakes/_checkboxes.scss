@@ -54,7 +54,6 @@ $checked_bg: #2ecc71;
 }
 
 svg {
-  @include filter-effect( drop-shadow, 1px 1px 1px #000 );
   position: absolute;
   z-index: 1;
 }

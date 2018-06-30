@@ -146,34 +146,23 @@ $(document).ready(function(){svg4everybody();$("a").smoothScroll({offset:-20})})
 {% endif %}
 
 {% if page.support contains 'validate' %}
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.jshttps://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
-  <script>
-    $(function()
-    {
-    var validator = $('#contact-form').validate(
-    {
-        ignore:'.skip',
-        rules:
-        {
-          'email':{ required:true, email:true }
-        }
+<script>
+  function addEvent(node, type, callback) {
+  if (node.addEventListener) {
+    node.addEventListener(
+      type,
+      function(e) {
+        callback(e, e.target);
+      },
+      false
+    );
+  } else if (node.attachEvent) {
+    node.attachEvent("on" + type, function(e) {
+      callback(e, e.srcElement);
     });
-
-    $('#chkconditions').change(function()
-    {
-      if($(this).is(":checked"))
-      {
-        $('#email').removeClass('skip');
-      }
-      else
-      {
-        $('#email').addClass('skip');
-      }
-      validator.resetForm();
-    });
-
-    });
-  </script>
+  }
+}
+</script>
 {% endif %}
 
 {% if page.reviews == true %}

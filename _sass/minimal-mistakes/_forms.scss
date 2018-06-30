@@ -358,6 +358,20 @@ select:focus {
   z-index: 11;
 }
 
+input[aria-invalid="true"], textarea[aria-invalid="true"] {
+  border: 1px solid #f00;
+  box-shadow: 0 0 4px 0 #f00;
+}
+
+form div label {
+  display: inline-block;
+  width: 7em;
+}
+form div label abbr {
+  border: none;
+  font-weight: bold;
+  color: #f00;
+}
 /*
      Google search form
      ========================================================================== */
