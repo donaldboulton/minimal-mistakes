@@ -47,10 +47,11 @@
       {% endcase %}
       </div>
   </footer>
-  <div class="entry-excerpt">
+  <div class="entry entry-excerpt">
     {% if post.excerpt %}
       {{ post.excerpt | markdownify }}
-      <p><a href="{{ post.url | relative_url }}" class="more-link">Read more&hellip;</a></p>
+      </br>
+      <div><a href="{{ post.url | relative_url }}" class="more-link">Read more&hellip;</a></div>
     {% endif %}
   </div>
 </article>

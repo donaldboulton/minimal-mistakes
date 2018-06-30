@@ -273,6 +273,9 @@
    ========================================================================== */
 
 .page__taxonomy {
+  margin-bottom: 1.5em;
+  margin-top: 1.5em;
+
   .sep {
     display: none;
   }
@@ -285,7 +288,6 @@
 .page__taxonomy-item {
   display: inline-block;
   margin-right: 5px;
-  margin-bottom: 8px;
   padding: 5px 10px;
   text-decoration: none;
   border: 1px solid mix(#000, $border-color, 25%);

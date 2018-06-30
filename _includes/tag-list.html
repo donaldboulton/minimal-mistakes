@@ -13,7 +13,7 @@
   {% capture page_tags %}{% for tag in page.tags %}{{ tag | downcase }}#{{ tag }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
   {% assign tag_hashes = page_tags | split: ',' | sort %}
 
-  <p class="page__taxonomy">
+  <div class="page__taxonomy">
     <strong><svg class="icon icon--tag" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-tags' | prepend: 'assets/icons/' | relative_url }}"></use></svg> {{ site.data.ui-text[site.locale].tags_label | default: "Tags:" }} </strong>
     <span itemprop="keywords">
     {% for hash in tag_hashes %}
@@ -22,5 +22,5 @@
       <a href="{{ tag_word | slugify | prepend: path_type | prepend: site.tag_archive.path | relative_url }}" class="page__taxonomy-item" rel="tag">{{ tag_word }}</a>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}
     {% endfor %}
     </span>
-  </p>
+  </div>
 {% endif %}
