@@ -38,7 +38,7 @@
     left: 49px;
 }
 
-svg {
+.svg-checkbox {
   position: absolute;
   z-index: 1;
 }

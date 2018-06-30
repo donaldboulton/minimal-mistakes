@@ -21,7 +21,7 @@
       <input type="text" id="comment-form-title" name="fields[title]" required placeholder="Title (required *)">
     </div>
     <div class="form-group">
-      <label for="comment-form-message"><strong>Comment</strong> <small>(<a href="https://kramdown.gettalong.org/quickref.html">Markdown</a> is allowed)</small></label>
+      <label for="comment-form-message"><strong>Comment</strong><abbr class="abbr" title="Required">&nbsp;*</abbr><small>&nbsp;(<a href="https://kramdown.gettalong.org/quickref.html">Markdown</a> is allowed)</small></label>
       <textarea type="text" rows="6" id="comment-form-message" name="fields[message]" required spellcheck="true" placeholder="Comment (required *)"></textarea>
     </div>
     <div class="form-group hidden" style="display: none;">
@@ -40,7 +40,7 @@
           <div class="checkbox_wrapper">
             <input type="checkbox" id="checkbox" name="options[subscribe]" value="email">
             <span class="custom"></span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32" class="true_icon">
+              <svg class="svg-checkbox true_icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
               <path d="M27 4l-15 15-7-7-5 5 12 12 20-20z" />
               </svg>
               <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32" class="false_icon">
@@ -49,8 +49,6 @@
           </div>
         </label>
   </div>
-
-
     <div class="form-group">
       <div id="html_element" class="g-recaptcha" data-theme="dark" data-sitekey="6LdjemEUAAAAAElWvXeLBlksiR83cZvXB2d9ZDmF"></div>
     </div>
