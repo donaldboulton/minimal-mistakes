@@ -163,9 +163,9 @@ for (var a = fields.length, i = 0; i < a; i++) {
 }
 function checkForm(form)
   {
-    if(!form.terms.checked) {
+    if(!form.conditions.checked) {
       alert("Please indicate that you accept the Terms and Conditions");
-      form.terms.focus();
+      form.conditions.focus();
       return false;
     }
     return true;
