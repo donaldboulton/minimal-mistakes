@@ -5,7 +5,7 @@
 
 	{% for review in reviews limit:3 %}
 		{% assign reviewData = review[1] %}
-		<article itemscope itemtype="http://schema.org/Review" class="toc1">
+		<article class="toc1">
 				<span class="section-title">
 					<h3 class="nav__title1"><svg width="14px" height="16px" class="icon icon--pulse" viewBox="0 0 14 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 						<g id="Octicons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -17,35 +17,35 @@
 				</span>
 			<div class="review-content">
 				<div class="form-group">
-          <div itemprop="itemReviewed" itemscope itemtype="http://schema.org/Thing">
+          <div>
                <span class="item-reviewed">Item Reviewed</span>
               <div>
-                <a href="{{ reviewData.product.url }}" itemprop="url">
-                  <span itemprop="name">{{ reviewData.product }}</span>
+                <a href="{{ reviewData.product.url }}">
+                  <span>{{ reviewData.product }}</span>
                 </a>
               </div>
             </div>
             <div class="review__date heading">
               {% if reviewData.date %}
-                  <span class="heading">Date&nbsp;</span><time datetime="{{ reviewData.date | date_to_xmlschema }}" itemprop="datePublished">{{ reviewData.date | date: "%B %d, %Y, %I:%M %p" }}</time>
+                  <span class="heading">Date&nbsp;</span><time datetime="{{ reviewData.date | date_to_xmlschema }}">{{ reviewData.date | date: "%B %d, %Y, %I:%M %p" }}</time>
               {% endif %}
             </div>
 				</div>
 				<div class="form-group">
-             <div class="field-group1" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+             <div class="field-group1">
 							<span class="heading">Rating:</span>
 		  				{% for i in (1..reviewData.review) %}
     						<svg class="icon icon--star rating-star rating-radio-star--on"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'assets/icons/' | relative_url }}"></use></svg>
 							{% endfor %}
-              <meta class="hidden" itemprop="ratingValue" content="{{ reviewData.review }}">
+              <meta class="hidden" content="{{ reviewData.review }}">
               <span class="heading">Title:</span>&nbsp;<span class="title-text">{{ reviewData.title }}</span>
 					</div>
 				</div>
-        <div itemprop="author" class="review-author" itemscope itemtype="http://schema.org/Person">
+        <div itemprop="author" class="review-author">
           <div class="heading">Author</div>
-            <img itemprop="image" avatar="{{ reviewData.name }}" alt="{{ reviewData.name }}" class="review-avatar-image text-left" />
+            <img avatar="{{ reviewData.name }}" alt="{{ reviewData.name }}" class="review-avatar-image text-left" />
             {% unless reviewData.url == blank %}
-            <span class="review-author-name"><small><span itemprop="url"><a rel="external nofollow" href="{{ reviewData.url }}"></span><span itemprop="name">{{ reviewData.name | strip_html }}</span></a></small></span>
+            <span class="review-author-name"><small><span><a rel="external nofollow" href="{{ reviewData.url }}"></span><span>{{ reviewData.name | strip_html }}</span></a></small></span>
               {% else %}
                 {{ reviewData.name | strip_html }}
               {% endunless %}
@@ -53,13 +53,13 @@
         </div>
 				<div class="form-group">
             <div class="heading">Message</div>
-            <div itemprop="reviewBody"> {{ reviewData.description | markdownify | strip_html | truncate: 130 }}</div>
+            <div> {{ reviewData.description | markdownify | strip_html | truncate: 130 }}</div>
 				</div>
 			</div>
 				<span itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-          <meta class="hidden" itemprop="name" content="donboulton.com">
+          <meta class="hidden" content="donboulton.com">
         </span>
-        <meta itemprop="url" type="hidden" value="{{ page.url | absolute_url }}">
+        <meta type="hidden" value="{{ page.url | absolute_url }}">
         <input type="hidden" name="options[parent]" value="{{ page.url | absolute_url }}">
 		</article>
   {% endfor %}

@@ -11,6 +11,7 @@ sidenav: true
 adds: true
 cookies: true
 reviews: true
+anchor: true
 tags:
   - SQL Server
   - SQL Defragment
@@ -19,7 +20,7 @@ category:
 
 toc: true
 toc_label: "Defrag Contents"
-
+related: true
 read_time: true
 comments: true
 share: true

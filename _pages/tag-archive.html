@@ -1,15 +1,3 @@
----
-title: "Posts by Tag"
-permalink: /tags/
-layout: posts
-author_profile: true
-comments: false
-sidenav: true
-reviews: false
-adds: true
-support: [adds]
----
-
 {% include group-by-array collection=site.posts field="tags" %}
 
 {% for tag in group_names %}

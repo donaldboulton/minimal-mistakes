@@ -11,6 +11,7 @@ sidenav: true
 adds: true
 cookies: true
 reviews: true
+anchor: true
 tags:
   - Windows Tweaks
   - Windows 10

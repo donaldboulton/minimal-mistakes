@@ -7,6 +7,7 @@ gem "tzinfo-data"
 gem "wdm", "~> 0.1.0"
 gem "nokogiri"
 gem "html-proofer"
+gem "activesupport", "~> 5.2"
 
 group :jekyll_plugins do
   gem 'jekyll-archives'

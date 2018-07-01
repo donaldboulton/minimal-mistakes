@@ -16,6 +16,7 @@ adds: true
 dragula: true
 cookies: true
 reviews: true
+anchor: true
 date: 2018-06-06 16:16:01 -0600
 last_modified_at: 2018-06-06T10:42:38-04:00
 event_date: 2018-06-06

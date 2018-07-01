@@ -7,7 +7,7 @@ youtubeId: IGMCAZk5xlg
 sitemap: false
 permalink: /support/
 toc: true
-toc_label: "Support Contents"
+toc_label: "Support"
 comments: false
 sidenav: true
 reviews: false

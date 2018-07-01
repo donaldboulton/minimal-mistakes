@@ -30,7 +30,7 @@ sidenav: true
 reviews: true
 adds: true
 cookies: true
-
+anchor: true
 excerpt: "Create a Jekyll image Gallery that loops through all images in a folder. Not Configured by yml Frontmatter, thus much eaiser to create. Using [Images resizing by images.weserv.nl](weserv.nl), which gives a thumbnail image displayed in the isotope arranged gallery and the origional images which are opened by lightgallery."
 
 image:

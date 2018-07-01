@@ -5,7 +5,7 @@ permalink: /sitemap/
 toc: false
 sidenav: true
 comments: false
-anchor: true
+anchor: false
 sidenav: true
 sidenav-gen: true
 reviews: false

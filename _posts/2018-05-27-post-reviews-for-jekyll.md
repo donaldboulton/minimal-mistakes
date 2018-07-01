@@ -35,7 +35,7 @@ header:
   teaser: /assets/images/pages/reviews-320.jpg
 locations:
   - OKC, Oklahoma
-
+anchor: true
 excerpt: "Comments Ratings, Reviews with ratings unlike comments can increase your Google Positioning with correct microdata. Your site Internet search results will then show page review and aggregate rating.
 
 Got the idea from the Staticman Popcorn repo. This is still a work in progress so Leave a Review for any page in donboulton.com and the page aggregate rating will increase after a successfull push to my github repo. The aggregate rating and review per page are working review and rate and it soon will show up as a review rating on that page."

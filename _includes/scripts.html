@@ -278,6 +278,8 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
   }
 </script>
 {% endif %}
+
+{% if page.anchor == true %}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" crossorigin="anonymous"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function(event) {
@@ -308,6 +310,5 @@ function external_new_window() {
   }
   external_new_window();
 </script>
-
-
+{% endif %}
 

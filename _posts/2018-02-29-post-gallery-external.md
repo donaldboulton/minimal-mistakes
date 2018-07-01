@@ -14,6 +14,7 @@ last_modified_at: 2018-04-13T12:42:38-04:00
 search: true
 author: false
 related: false
+anchor: false
 tags:
   - Gallery
   - Cats

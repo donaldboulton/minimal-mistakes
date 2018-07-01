@@ -25,6 +25,7 @@ comments: true
 share: true
 social-share: twitter --twitter-hashtags facebook
 related: true
+anchor: true
 locations:
   - Idabel OKlahoma
 

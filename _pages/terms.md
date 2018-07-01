@@ -10,6 +10,7 @@ adds: true
 reviews: true
 comments: true
 cookies: true
+anchor: true
 support: [adds, cookies]
 folder: _pages
 product: terms

@@ -24,6 +24,7 @@ related: true
 sidenav: true
 reviews: true
 adds: true
+anchor: true
 excerpt: "Website Tweaks in my ASP.Core2 apps. Discussions on changes to Orchard 1.10 web.config, zipping files for AWS to Cloud-front, Proper Response and Request headers 
 Including jquery-pajax"
 image:

@@ -26,6 +26,7 @@ reviews: true
 adds: true
 cookies: true
 share: true
+anchor: true
 social-share: twitter --twitter-hashtags facebook
 excerpt: "Using just links in Asp.NET Core 2 add like included below  @Context.Request.GetDisplayUrl(), to get the url of the page your sharing. View the source of this repo to see how to do it in Jekyll"
 
