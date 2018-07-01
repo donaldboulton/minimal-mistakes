@@ -130,3 +130,7 @@ reviews:
     enabled: true
     siteKey: "6LdjemEUAAAAAElWvXeLBlksiR83cZvXB2d9ZDmF"
     secret: "m2h3FNTphcvySjRn+AQaNzrhJh4Gy4fJa6wGAcTKzbrlfGGE6wkIayVZEeqz4yosiGPg3+96jxp5itTorTJZKlpqWADgp6ln6nxhECuP+vy1qGIqFJVUOAz/eN+47Oz14GNGvvB6GMmEfn8LW4N9d+tdXzEBWTsQGS6K32hfpJg="
+reCaptcha:
+  enabled: true
+  siteKey: "6LdjemEUAAAAAElWvXeLBlksiR83cZvXB2d9ZDmF"
+  secret: "m2h3FNTphcvySjRn+AQaNzrhJh4Gy4fJa6wGAcTKzbrlfGGE6wkIayVZEeqz4yosiGPg3+96jxp5itTorTJZKlpqWADgp6ln6nxhECuP+vy1qGIqFJVUOAz/eN+47Oz14GNGvvB6GMmEfn8LW4N9d+tdXzEBWTsQGS6K32hfpJg="
