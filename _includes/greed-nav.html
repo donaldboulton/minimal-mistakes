@@ -1,5 +1,5 @@
 <script>
-    var $nav = $('.greedy-nav');
+var $nav = $('.greedy-nav');
 var $btn = $('.greedy-nav button');
 var $vlinks = $('.greedy-nav .visible-links');
 var $hlinks = $('.greedy-nav .hidden-links');
@@ -7,7 +7,7 @@ var $hlinks = $('.greedy-nav .hidden-links');
 var breaks = [];
 
 function updateNav() {
-  
+
   var availableSpace = $btn.hasClass('hidden') ? $nav.width() : $nav.width() - $btn.width() - 30;
 
   // The visible list is overflowing the nav
