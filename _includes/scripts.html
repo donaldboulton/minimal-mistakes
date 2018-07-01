@@ -179,7 +179,6 @@ function checkForm(form)
 
 {% if page.support contains 'dragula' %}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js" crossorigin="anonymous"></script>
-  <script src="{{ '/assets/js/vendor/dragula/init.dragula.js' | relative_url }}"></script>
   <script src="{{ '/assets/js/vendor/dragula/example.min.js' | relative_url }}"></script>
 {% endif %}
 
@@ -275,6 +274,13 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
 <script>
   function onSubmit(token) {
     document.getElementById("review-form").submit();
+    function external_new_window() {
+    for(var c = document.getElementsByTagName("a"), a = 0;a < c.length;a++) {
+    var b = c[a];
+    b.getAttribute("href") && b.hostname !== location.hostname && (b.target = "_blank")
+    }
+  }
+  external_new_window();
   }
 </script>
 {% endif %}
@@ -302,13 +308,6 @@ function addNavItem(ul, href, text) {
   anchorItem.appendChild(textNode);
   };
 });
-function external_new_window() {
-    for(var c = document.getElementsByTagName("a"), a = 0;a < c.length;a++) {
-    var b = c[a];
-    b.getAttribute("href") && b.hostname !== location.hostname && (b.target = "_blank")
-    }
-  }
-  external_new_window();
 </script>
 {% endif %}
 
