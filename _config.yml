@@ -88,8 +88,6 @@ algolia:
 github                   : [metadata]
 google-maps-api-key      : "AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA"
 repository               : "https://github.com/donaldboulton/DWB"
-head_scripts:
-  - https://www.googletagmanager.com/gtag/js?id=UA-30162465-2
 
 # SEO Related
 google_site_verification : "DKp8oxWR5F4kbaJJ9uowH1ySMttXrrUjIknx1OfUHc8"
