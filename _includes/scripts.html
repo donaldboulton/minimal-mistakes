@@ -91,15 +91,18 @@ $(document).ready(function(){svg4everybody();$("a").smoothScroll({offset:-20})})
 </script>
 {% if page.comments == true %}
   <script src="{{ '/assets/js/staticman/staticman-comments.js' | relative_url }}"></script>
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-  <script type="text/javascript">
-    var onloadCallback = function() {
-      grecaptcha.render('html_element', {
-        'sitekey' : '6LdjemEUAAAAAElWvXeLBlksiR83cZvXB2d9ZDmF',
-        'data-theme' : 'dark'
-      });
-    };
-  </script>
+  <script src='https://www.google.com/recaptcha/api.js?render=6Le-JGIUAAAAAItP3anxYzixThXd6EUvsDjXZevh'></script>
+  <script>
+    grecaptcha.ready(function() {
+    grecaptcha.execute('6Le-JGIUAAAAAItP3anxYzixThXd6EUvsDjXZevh', {action: 'action_name'})
+    .then(function(token) {
+    });
+    grecaptcha.render('html_element', {
+          'sitekey' : '{{ site.reCaptcha.siteKey }}',
+          'callback' : verifyCallback,
+          'theme' : 'dark'
+    });
+    </script>
 {% endif %}
 
 {% comment %} my own validation scripts and scss from https://www.sitepoint.com/instant-validation/ {% endcomment %}
