@@ -87,3 +87,13 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.0.0-alpha/fullcalendar.min.css">
    <link rel="stylesheet" media="print" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.0.0-alpha/fullcalendar.print.min.css">
 {% endif %}
+{% if page.comments == true %}
+<script>
+  var onloadCallback = function() {
+        grecaptcha.render('html_element', {
+          'sitekey' : '{{ site.reCaptcha.siteKey }}',
+          'theme' : 'dark'
+        });
+  };
+</script>
+{% endif %}
