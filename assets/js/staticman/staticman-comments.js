@@ -38,7 +38,7 @@
     $('.page__comments-form .js-notice-text').html(message);
   }
 })(jQuery);
-  var addComment = {
+var addComment = {
   moveForm: function(commId, parentId, respondId, postId) {
   var div,
     element,
