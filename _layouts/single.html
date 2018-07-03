@@ -83,9 +83,9 @@ layout: default
     </div>
   </article>
   </div>
-  {% if page.share %}
-  {% include cookies-en.html %}
-{% endif %}
+  {% if page.cookies %}
+    {% include cookies-en.html %}
+  {% endif %}
   {% comment %}<!-- only show related on a post page when `related: true` -->{% endcomment %}
   {% if page.id and page.related and site.related_posts.size > 0 %}
     <div class="page__related">
