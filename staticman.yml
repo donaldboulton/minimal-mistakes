@@ -107,7 +107,7 @@ comments:
   reCaptcha:
     enabled: true
     siteKey: "6Le-JGIUAAAAAItP3anxYzixThXd6EUvsDjXZevh"
-    secret: "6Le-JGIUAAAAAA1Awc7tRz82-4GAITRV44MesH9q"
+    secret: "PgN6O5VvZ+nm04p7v9hqtKX6fcUpMh7Kl+qyiVggoE1l0kQ424yXdu7Zhk/YS2xeenFuo4E8Js9X2DlFo4WVKXkyvrbpthyQMz4T4KTRqdHX/fzOP1FKqLmgqdr8LJaTvBrWmAMbYveHby7qDnSnCW1yZdHdjvW9/I36x5ivRGc="
 
 reviews:
   provider: "staticman_v2"
@@ -129,8 +129,8 @@ reviews:
   reCaptcha:
     enabled: true
     siteKey: "6Le-JGIUAAAAAItP3anxYzixThXd6EUvsDjXZevh"
-    secret: "6Le-JGIUAAAAAA1Awc7tRz82-4GAITRV44MesH9q"
+    secret: "PgN6O5VvZ+nm04p7v9hqtKX6fcUpMh7Kl+qyiVggoE1l0kQ424yXdu7Zhk/YS2xeenFuo4E8Js9X2DlFo4WVKXkyvrbpthyQMz4T4KTRqdHX/fzOP1FKqLmgqdr8LJaTvBrWmAMbYveHby7qDnSnCW1yZdHdjvW9/I36x5ivRGc="
 reCaptcha:
   enabled: true
   siteKey: "6Le-JGIUAAAAAItP3anxYzixThXd6EUvsDjXZevh"
-  secret: "6Le-JGIUAAAAAA1Awc7tRz82-4GAITRV44MesH9q"
+  secret: "PgN6O5VvZ+nm04p7v9hqtKX6fcUpMh7Kl+qyiVggoE1l0kQ424yXdu7Zhk/YS2xeenFuo4E8Js9X2DlFo4WVKXkyvrbpthyQMz4T4KTRqdHX/fzOP1FKqLmgqdr8LJaTvBrWmAMbYveHby7qDnSnCW1yZdHdjvW9/I36x5ivRGc="
