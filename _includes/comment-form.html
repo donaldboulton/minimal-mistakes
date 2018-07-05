@@ -24,16 +24,14 @@
       <label for="comment-form-message"><strong>Comment</strong><abbr class="abbr" title="Required">&nbsp;*</abbr><small>&nbsp;(<a href="https://kramdown.gettalong.org/quickref.html">Markdown</a> is allowed)</small></label>
       <textarea type="text" rows="6" id="comment-form-message" name="fields[message]" required spellcheck="true" placeholder="Comment (required *)"></textarea>
     </div>
-    <div class="form-group hidden" style="display: none;">
       <input type="hidden" name="options[origin]" value="{{ page.url | relative_url }}">
       <input type="hidden" name="options[parent]" value="{{ page.url | relative_url }}">
       <input type="hidden" id="comment-replying-to" name="fields[replying_to]" value="">
       <input type="hidden" id="comment-post-id" name="options[slug]" value="{{ page.slug }}">
-      <label for="comment-form-location">Leave blank if you are a human</label>
-      <input type="text" id="comment-form-location" name="fields[hidden]" autocomplete="off">
+      <label type="hidden" class="hidden" for="comment-form-location">Leave blank if you are a human</label>
+      <input type="hidden" id="comment-form-location" name="fields[hidden]" autocomplete="off">
       <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.reCaptcha.siteKey }}">
       <input type="hidden" name="options[reCaptcha][secret]" value="{{ site.reCaptcha.secret }}">
-    </div>
     <div>Notify me of replies by email, Subscribe</div>
     <div class="checkbox_wrapper">
       <label class="checkbox-label" for="checkbox">
@@ -47,12 +45,21 @@
               <path d="M31.708 25.708c-0-0-0-0-0-0l-9.708-9.708 9.708-9.708c0-0 0-0 0-0 0.105-0.105 0.18-0.227 0.229-0.357 0.133-0.356 0.057-0.771-0.229-1.057l-4.586-4.586c-0.286-0.286-0.702-0.361-1.057-0.229-0.13 0.048-0.252 0.124-0.357 0.228 0 0-0 0-0 0l-9.708 9.708-9.708-9.708c-0-0-0-0-0-0-0.105-0.104-0.227-0.18-0.357-0.228-0.356-0.133-0.771-0.057-1.057 0.229l-4.586 4.586c-0.286 0.286-0.361 0.702-0.229 1.057 0.049 0.13 0.124 0.252 0.229 0.357 0 0 0 0 0 0l9.708 9.708-9.708 9.708c-0 0-0 0-0 0-0.104 0.105-0.18 0.227-0.229 0.357-0.133 0.355-0.057 0.771 0.229 1.057l4.586 4.586c0.286 0.286 0.702 0.361 1.057 0.229 0.13-0.049 0.252-0.124 0.357-0.229 0-0 0-0 0-0l9.708-9.708 9.708 9.708c0 0 0 0 0 0 0.105 0.105 0.227 0.18 0.357 0.229 0.356 0.133 0.771 0.057 1.057-0.229l4.586-4.586c0.286-0.286 0.362-0.702 0.229-1.057-0.049-0.13-0.124-0.252-0.229-0.357z" />
               </svg>
           </div>
-        </label>
+        </label><span>Notify me of replies by email, Subscribe</span>
     </div>
     <div class="form-group">
-        <button type="submit" id="comment-form-submit" class="btn btn--primary">Submit Comment</button>
+        <button type="submit" id="comment-form-submit" class="btn btn--primary" value="Submit Comment" id="submit_button" data-callback="enableBtn">Submit Comment</button>
       <br/>
     </div>
+    <script type="text/javascript">
+      document.getElementById("submit_button").disabled = true;
+    </script>
+
+    <script type="text/javascript">
+      function enableBtn(){
+         document.getElementById("submit_button").disabled = false;
+        }
+    </script>
     <div class="form-group">
     <!-- Start comment form alert messaging -->
     <p class="hidden js-notice">
