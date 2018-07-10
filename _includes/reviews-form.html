@@ -35,17 +35,15 @@
         <label for="review-form[description]">Review Message<abbr class="abbr" title="Required">&nbsp;*</abbr><small>&nbsp;(<a href="https://kramdown.gettalong.org/quickref.html">Markdown</a> is allowed)</small></label>
         <textarea maxlength="200" name="fields[description]" type="text" rows="3" id="review-form[description]" placeholder="Message * 200 chars"></textarea>
       </div>
-      <div class="form-group" style="display: none;">
         <input type="hidden" name="options[origin]" value="{{ page.url | relative_url }}">
         <input type="hidden" name="options[parent]" value="{{ page.url | relative_url }}">
         <input type="hidden" id="review-post-id" name="options[slug]" value="{{ page.slug }}">
         <input name="fields[product]" type="hidden" value="{{ page.slug }}" />
         <input name="options[redirect]" type="hidden" value="{{site.url}}{{site.baseurl}}{{ page.url }}" />
         <label for="review-form-address">Leave blank if you are a human</label>
-        <input type="text" id="review-form-address" name="fields[hidden]" autocomplete="off">
+        <input type="hidden"id="review-form-address" name="fields[hidden]" autocomplete="off">
         <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.reCaptcha.siteKey }}">
         <input type="hidden" name="options[reCaptcha][secret]" value="{{ site.reCaptcha.secret }}">
-      </div>
       <div class="form-group">
         <button type="submit" id="review-form-submit" class="g-recaptcha btn btn--primary">Submit Review</button>
       </div>
