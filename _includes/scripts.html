@@ -225,20 +225,6 @@ function addNavItem(ul, href, text) {
   ga('send', 'pageview');
 </script>
 <script>
-function onSubmit(token) {
-  document.getElementById("review-form").submit();
-function external_new_window() {
-  for(var c = document.getElementsByTagName("a"), a = 0;a < c.length;a++) {
-  var b = c[a];
-  b.getAttribute("href") && b.hostname !== location.hostname && (b.target = "_blank")
-  }
-}
-external_new_window();
-}
-</script>
-<script>
-  function onSubmit(token) {
-    document.getElementById("review-form").submit();
   function external_new_window() {
     for(var c = document.getElementsByTagName("a"), a = 0;a < c.length;a++) {
     var b = c[a];
@@ -246,7 +232,6 @@ external_new_window();
     }
   }
   external_new_window();
-  }
 </script>
 <script>
   grecaptcha.ready(function() {

@@ -28,7 +28,11 @@
         showAlert('{{ site.data.ui-text[site.locale].review_error_msg | default: "Sorry, there was an error with your submission. Please make sure all required fields have been completed and try again." }}');
         $(form).removeClass('disabled');
       }
+    });
+
+    return false;
   });
+  document.getElementById("comment-form").reset();
   function showAlert(message) {
     $('.page__reviews-form .js-notice').removeClass('hidden');
     $('.page__reviews-form .js-notice-text').html(message);
