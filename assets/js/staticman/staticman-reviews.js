@@ -18,7 +18,7 @@
         $('#review-form-submit').html('{{ "Submitted" }}');
         $('.page__reviews-form .js-notice').removeClass('notice--danger');
         $('.page__reviews-form .js-notice').addClass('notice--success');
-        showAlert('{{ site.data.ui-text[site.locale].review_success_msg | default: "Thanks for your Review! It will show on the site once it has been approved." }}');
+        showAlert('{{ site.data.ui-text[site.locale].review_success_msg | default: "Thanks for your Review! It should show up after CloudFlare Cache purge. about a minute." }}');
         },
         error: function (err) {
         console.log(err);

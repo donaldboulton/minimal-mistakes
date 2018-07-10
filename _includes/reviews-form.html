@@ -32,7 +32,7 @@
         <input type="text" id="review-form[title]" name="fields[title]" required placeholder="Review Title *"/>
       </div>
       <div class="form-group">
-        <label for="review-form[description]">Message<abbr class="abbr" title="Required">&nbsp;*</abbr><small>&nbsp;(<a href="https://kramdown.gettalong.org/quickref.html">Markdown</a> is allowed)</small></label>
+        <label for="review-form[description]">Review Message<abbr class="abbr" title="Required">&nbsp;*</abbr><small>&nbsp;(<a href="https://kramdown.gettalong.org/quickref.html">Markdown</a> is allowed)</small></label>
         <textarea maxlength="200" name="fields[description]" type="text" rows="3" id="review-form[description]" placeholder="Message * 200 chars"></textarea>
       </div>
       <div class="form-group" style="display: none;">
@@ -47,13 +47,13 @@
         <input type="hidden" name="options[reCaptcha][secret]" value="{{ site.reCaptcha.secret }}">
       </div>
       <div class="form-group">
-          <button type="submit" id="review-form-submit" class="g-recaptcha btn btn--primary">Submit Review</button>
-        </div>
-          <div class="form-group">
-            <p class="hidden js-notice">
-              <span class="js-notice-text"></span>
-            </p>
-          </div>
+        <button type="submit" id="review-form-submit" class="g-recaptcha btn btn--primary">Submit Review</button>
+      </div>
+      <div class="form-group">
+        <p class="hidden js-notice">
+          <span class="js-notice-text"></span>
+        </p>
+      </div>
   </form>
  </div>
 </div>

@@ -110,16 +110,15 @@ comments:
     secret: "PgN6O5VvZ+nm04p7v9hqtKX6fcUpMh7Kl+qyiVggoE1l0kQ424yXdu7Zhk/YS2xeenFuo4E8Js9X2DlFo4WVKXkyvrbpthyQMz4T4KTRqdHX/fzOP1FKqLmgqdr8LJaTvBrWmAMbYveHby7qDnSnCW1yZdHdjvW9/I36x5ivRGc="
 
 reviews:
-  provider: "staticman_v2"
   allowedFields: ['name', "email", "url", 'title', 'description', 'review', 'product']
   allowedOrigins: ["https://donboulton.com"]
   branch: "gh-pages"
   commitMessage: "Add Review from {fields.name}"
   filename: "review-{fields.product}-{@id}"
   moderation: false
-  requiredFields: ['name', "email", 'title', 'description', 'review', "product"]
+  requiredFields: ['name', "email", 'title', 'description', 'review']
   format: "yaml"
-  path: "_data/reviews"
+  path: "_data/reviews/{options.slug}"
 
   generatedFields:
     date:
