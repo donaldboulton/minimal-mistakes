@@ -38,16 +38,19 @@ layout: default
                  {% include toc.html sanitize=true html=content h_min=2 h_max=3 class="toc__menu" %}
                </nav>
             {% endif %}
-            {% if page.sidenav-gallery %}
+            {% if page.sidenav-gallery == true %}
                {% include sidenav-gallery.html %}
             {% endif %}
-            {% if page.sidenav %}
+            {% if page.sidenav == true %}
                {% include sidenav.html %}
             {% endif %}
-            {% if page.reviews %}
+            {% if page.reviews == true %}
                {% include reviews-sidebar.html %}
             {% endif %}
-            {% if page.adds %}
+            {% if page.reviews-sidebar == true %}
+               {% include reviews-sidebar.html %}
+            {% endif %}
+            {% if page.adds == true %}
                {% include google-adds.html %}
             {% endif %}
           </aside>
@@ -66,7 +69,7 @@ layout: default
         {% endif %}
       </footer>
 
-      {% if page.share %}
+      {% if page.share == true %}
         {% include social-share.html %}
       {% endif %}
 
@@ -83,7 +86,7 @@ layout: default
     </div>
   </article>
   </div>
-  {% if page.cookies %}
+  {% if page.cookies == true %}
     {% include cookies-en.html %}
   {% endif %}
   {% comment %}<!-- only show related on a post page when `related: true` -->{% endcomment %}
