@@ -31,9 +31,6 @@ comments:
     num_posts            : # 5 (default)
     colorscheme          : "dark"
 
-reviews:
-  provider               : "reviews-staticman_v2"
-
 reCaptcha:
   enabled: true
   siteKey: "6Le-JGIUAAAAAItP3anxYzixThXd6EUvsDjXZevh"

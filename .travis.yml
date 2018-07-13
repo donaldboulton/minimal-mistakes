@@ -21,7 +21,7 @@ deploy:
   github-token: $g/KPkZ35QrQDOBsSFwZfUhn4fw0o+MBcoxrXualp+3/HpdaVS5fazIq9bZoEE2Tpvnge8Nu8/y46wFxA+3ehca8YekHdNdMD5jUNaR5nV7+sVhQr5Tff14cvgJV/CPf6v6dHoLAgiynogD2ou2n3K1krv2ZnFBvAcySgMp7sXNs=
   keep-history: true
   on:
-    branch: master
+    branch: gh-pages
 after_success:
   - eval "$(ssh-agent)"
   - chmod 600 ./deploy.secret.key
@@ -31,4 +31,4 @@ after_success:
   - git add -A
   - git commit --allow-empty -m "$TRAVIS_COMMIT_MSG"
   - echo "Pushing changes"
-  - git push git@github.com:donaldboulton/DWB.git master
+  - git push git@github.com:donaldboulton/DWB.git gh-pages
