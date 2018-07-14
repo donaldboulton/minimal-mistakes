@@ -60,25 +60,3 @@
   </form>
   </div>
 </div>
-<script type="text/javascript">
-  function disableBtn(){
-    document.getElementById("submit_button").disabled = true;
-  }
-  function enableBtn(){
-     document.getElementById("submit_button").disabled = false;
-  }
-  const focusDriver = new Driver();
-    document.getElementById('comment-form')
-    .addEventListener('focus', (e) => {
-    focusDriver.focus('#comment-form-name');
-    });
-  const driver = new Driver();
-    driver.highlight({
-    element: '#user-url',
-    popover: {
-      title: 'Commenter Url',
-      description: 'A Link to Commenters Url',
-    }
-  });const driver = new Driver();
-  driver.start();
-</script>
