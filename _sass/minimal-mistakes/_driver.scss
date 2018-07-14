@@ -1,8 +1,11 @@
-$text-color: #2d2d2d !default;
-$popover-bg: #ffffff !default;
+$pop-text-color: #ffffff !default;
+$popover-bg: #343434 !default;
 $stage-bg: #ffffff !default;
 $button-bg: #f1f1f1 !default;
 $disabled-btn-color: #808080 !default;
+$color_pop_1: black;
+$background_color_pop_1: rgba(110, 110, 110, 0);
+$background_color_pop_2: #efe;
 
 $popover-z-index: 1000000000 !default;
 $overlay-z-index: 100002 !default;
@@ -18,7 +21,7 @@ div#driver-popover-item {
   display: none;
   position: absolute;
   background: $popover-bg;
-  color: $text-color;
+  color: $pop-text-color;
   margin: 0;
   padding: 15px;
   border-radius: 5px;
@@ -211,4 +214,70 @@ div#driver-highlighted-element-stage {
   -o-transform-box: border-box !important;
   transform-box: border-box !important;
   will-change: unset !important;
+}
+
+.driver-popover__button {
+	position: relative;
+	z-index: 5;
+	top: -0.1em;
+	width: 1em;
+	height: 1em;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	display: inline-block;
+	padding: .1em 1em .5em .2em;
+	margin: 0;
+	border: none;
+	border-radius: 0.3em;
+	cursor: pointer;
+	background-color: $background_color_pop_1;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	font-size: 1rem;
+	line-height: 0;
+	vertical-align: middle;
+	text-decoration: none;
+	-webkit-font-smoothing: antialiased;
+	-webkit-transition-property: background-color;
+	transition-property: background-color;
+	-webkit-transition-duration: 0.25s;
+	transition-duration: 0.25s;
+	&:hover {
+		outline: none;
+		background-color: $background_color_pop_1;
+	}
+	&:focus {
+		outline: none;
+		background-color: $background_color_pop_1;
+	}
+	&:active {
+		background-color: $background_color_pop_1;
+	}
+	&:after {
+		content: '\2746';
+		color: $color_pop_1;
+		font-size: .9em;
+		display: block;
+		clear: both;
+	}
+}
+.driver-popover__button.is-active {
+	background-color: $background_color_pop_1;
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+.driver-popover__button__circle {
+	display: none;
+	width: 0.25em;
+	height: 0.25em;
+	margin-right: 0.25em;
+	float: left;
+	&:last-child {
+		margin-right: 0;
+	}
+}
+.driver-popover__container {
+	display: inline-block;
+	position: relative;
+	text-indent: 0;
 }
