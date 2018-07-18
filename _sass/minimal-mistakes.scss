@@ -1,5 +1,8 @@
 @import "minimal-mistakes/variables";
 @import "minimal-mistakes/vendor/breakpoint/breakpoint";
+@import "minimal-mistakes/vendor/bigfoot/bigfoot-default";
+@import "minimal-mistakes/vendor/bigfoot/bigfoot-bottom";
+@import "minimal-mistakes/vendor/bigfoot/bigfoot-number";
 @include breakpoint-set("to ems", true);
 @import "minimal-mistakes/vendor/susy/susy";
 @import "minimal-mistakes/mixins";

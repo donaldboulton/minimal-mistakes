@@ -11,6 +11,7 @@ sidenav: true
 reviews: true
 adds: true
 cookies: true
+footnotes: true
 tags:
   - Gravatar
   - Letter Avatar
@@ -56,7 +57,9 @@ How to easily create Letter Avatars for your comments in Minimal Mistakes. This 
 
 ## Gihub code as a Gihub Gist, by [Lee Crossly](https://gist.github.com/leecrossley/6027780)
 
-Avatar Generator from - Commenter name as - (first name and surname) as input and a canvas element as output using the initials from the name and a background colour (based on the first name & surname first letter).
+Avatar Generator from - Commenter name [^names] as input and a canvas element as output using the initials from the name and a background colour.
+
+[^names]: based on the first name & surname first letter.
 
 The background colours are from from [Flat Ui Colors](http://flatuicolors.com/) Now with retina support.
 

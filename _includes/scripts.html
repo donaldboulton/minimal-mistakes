@@ -240,3 +240,10 @@ function addNavItem(ul, href, text) {
 {% if page.support contains 'driver' %}
   <script src="https://unpkg.com/driver.js/dist/driver.min.js" crossorigin="anonymous"></script>
 {% endif %}
+
+
+{% if page.footnotes == true %}
+   <script src="{{ '/assets/js/vendor/bigfoot/bigfoot.min.js' | relative_url }}"></script>
+{% endif %}
+
+
