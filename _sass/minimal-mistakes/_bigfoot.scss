@@ -1,4 +1,4 @@
-$color_1: black;
+$color_16: black;
 $background_color_11: rgba(110, 110, 110, 0);
 $background_color_22: #efe;
 
@@ -41,7 +41,7 @@ $background_color_22: #efe;
 	}
 	&:after {
 		content: '\2746';
-		color: $color_1;
+		color: $color_16;
 		font-size: .9em;
 		display: block;
 		clear: both;
