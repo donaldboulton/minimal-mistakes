@@ -126,7 +126,27 @@ In order to provide website visitors with more choice on how data is collected b
 
 For more information on the usage of cookies by Google Analytics please see the Google website. A link to the privacy advice for this product is provided below for your convenience.
 
-### [Privacy Google](http://www.google.com/analytics/learn/privacy.html){:id="open-website" rel="nofollow"}
+## Hubspot __hstc Cookie
+
+About this cookie __hstc
+
+This cookie name is associated with websites built on the HubSpot platform. It is reported by them as being used for website analytics.
+
+The main purpose of this cookie is: Performance
+
+### Key numbers for __hstc
+
+Cookies with this name have been found on 316 websites, set by 269 host domains.
+
+It has been found as a First Party cookie on 277 websites and a Third Party cookie on 71 websites.
+
+It has been found as a Persistent cookie on 348 websites, with an average life span of 725 days.
+
+It has been found as a Session cookie on 0 websites.
+
+Note: Many technologies or services use cookies that will be common to different websites and can be identified by name alone. However this is not always true. More specific information can sometimes be found with a website based search.
+
+## [Privacy Google](http://www.google.com/analytics/learn/privacy.html){:id="open-website" rel="nofollow"}
 
 Google Analytics is a web analytics tool I use to help understand how visitors engage with this website. It reports website trends using cookies and web beacons without identifying individual visitors.
 
