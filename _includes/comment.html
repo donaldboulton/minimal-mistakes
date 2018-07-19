@@ -15,9 +15,6 @@
     <span>
       <a rel="external nofollow" href="{{ include.url }}"></span>
         <span itemprop="name">{{ include.name | strip_html }}</a>
-      <div class="driver-popover__container">
-        <button class="driver-popover__button" id="user-url" data-footnote-number="1" data-footnote-identifier="1" alt="See Footnote 1" rel="footnote"> <svg class="driver-popover__button__circle" viewBox="0 0 6 6" preserveAspectRatio="xMinYMin"><circle r="3" cx="3" cy="3" fill="white"></circle></svg> <svg class="driver-popover__button__circle" viewBox="0 0 6 6" preserveAspectRatio="xMinYMin"><circle r="3" cx="3" cy="3" fill="white"></circle></svg> <svg class="driver-popover___button__circle" viewBox="0 0 6 6" preserveAspectRatio="xMinYMin"><circle r="3" cx="3" cy="3" fill="white"></circle></svg> </button>
-      </div>
     </span>
     {% else %}
       {{ include.name | strip_html }}
