@@ -56,15 +56,3 @@
   {% assign message     = reply[1].message %}
   {% include comment.html index=index replying_to=replying_to avatar=avatar email=email name=name url=url date=date title=title message=message %}
 {% endfor %}
-
-<script>
-    const driver = new Driver();
-    driver.highlight({
-    element: '#user-url',
-    popover: {
-      title: 'Commenter Url',
-      description: 'A Link to Commenters Url',
-    }
-  });
-  driver.start();
-</script>
