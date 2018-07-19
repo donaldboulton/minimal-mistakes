@@ -112,8 +112,8 @@ $button-color:                          rgb(110, 110, 110) !default;            
 $button-hovered-color:                  $button-color !default;                  // Background color of the button when being hovered
 $button-activating-color:               $button-color !default;                  // Background color of the button when being clicked
 $button-active-color:                   $button-color !default;                  // Background color of the button when active
-$button-standard-opacity:               0.2 !default;                            // Opacity for when the button is just sittin' there
-$button-hovered-opacity:                0.5 !default;                            // Opacity for when the button is being hovered over
+$button-standard-opacity:               0.5 !default;                            // Opacity for when the button is just sittin' there
+$button-hovered-opacity:                0.7 !default;                            // Opacity for when the button is being hovered over
 $button-activating-opacity:             $button-hovered-opacity !default;        // Opacity for when the button is being clicked
 $button-active-opacity:                 1 !default;                              // Opacity for when the button is active
 $button-active-style-delay:             0.1s !default;                           // Delay before applying .active styles; this can be used to match to the popover activation transition
