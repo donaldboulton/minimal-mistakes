@@ -2,7 +2,7 @@ $color_1: #FFF;
 $color_2: #1faaaa;
 $color_3: #000;
 $font_family_1: 'Open Sans', sans-serif;
-$background_color_1: #222;
+$background_color_12: #222;
 $background_color_2: #D02828;
 $background_color_3: rgba(255,255,255,0.05);
 $background_color_4: #EEE;
@@ -69,7 +69,7 @@ $background_color_5: rgba(255,255,255,0.3);
 	z-index: 9998;
 	&::-webkit-scrollbar-track {
 		border-radius: 10px;
-		background-color: $background_color_1;
+		background-color: $background_color_12;
 		background-color: $background_color_3;
 	}
 	&::-webkit-scrollbar {
@@ -179,7 +179,7 @@ $background_color_5: rgba(255,255,255,0.3);
 	}
 }
 #cookie-bar-button {
-	background-color: $background_color_1;
+	background-color: $background_color_12;
 	border-bottom: 1px solid #222;
 	color: $color_1 !important;
 	cursor: pointer;

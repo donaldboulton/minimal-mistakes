@@ -7,7 +7,7 @@ $color_6: #fff;
 $font_family_1: Courier monospace;
 $font_family_2: Helvetica, Arial, sans-serif;
 $font_family_3: Verdana, sans-serif;
-$background_color_1: #FF5231;
+$background_color_14: #FF5231;
 $background_color_2: #666;
 $border_color_1: #FF5231 #FF5231 transparent;
 $border_right_color_1: #FF5231;
@@ -48,7 +48,7 @@ $border_right_color_3: #666;
 				width: 14px;
 				height: 32px;
 				margin-top: 6px;
-				background: url('img/mini-logo.png') no-repeat;
+				background: url('/asserts/images/anchor/mini-logo.png') no-repeat;
 				margin-left: -1.25em !important;
 			}
 		}
@@ -59,7 +59,7 @@ $border_right_color_3: #666;
 					margin-top: -4px;
 					display: block;
 				}
-				background-color: $background_color_1;
+				background-color: $background_color_14;
 				height: 32px;
 				width: 18px;
 				border-radius: 50%;
@@ -72,7 +72,7 @@ $border_right_color_3: #666;
 		&:nth-child(11) {
 			.anchorjs-link {
 				display: inline-block;
-				background: url('img/hyperlink.svg') no-repeat;
+				background: url('/assets/images/anchor/hyperlink.svg') no-repeat;
 				margin-left: 8px;
 				width: 14px;
 				height: 24px;
