@@ -215,6 +215,10 @@ function addNavItem(ul, href, text) {
 </script>
 {% endif %}
 
+{% if page.footnotes == true %}
+   <script src="{{ '/assets/js/vendor/bigfoot/bigfoot.min.js' | relative_url }}"></script>
+{% endif %}
+
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -235,15 +239,7 @@ function addNavItem(ul, href, text) {
       grecaptcha.execute('6Le-JGIUAAAAAItP3anxYzixThXd6EUvsDjXZevh', {action: 'home'}).then(function(token) {
     });
   });
+  var bigfoot = $.bigfoot();
 </script>
-
-{% if page.support contains 'driver' %}
-  <script src="https://unpkg.com/driver.js/dist/driver.min.js" crossorigin="anonymous"></script>
-{% endif %}
-
-
-{% if page.footnotes == true %}
-   <script src="{{ '/assets/js/vendor/bigfoot/bigfoot.min.js' | relative_url }}"></script>
-{% endif %}
 
 
