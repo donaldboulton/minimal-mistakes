@@ -28,7 +28,7 @@ read_time: true
 comments: true
 share: false
 web-intents: true
-tweet_id: 145116818707714048
+tweet_id: 1020425648366596096
 social-share: twitter --twitter-hashtags facebook
 related: true
 anchor: true
