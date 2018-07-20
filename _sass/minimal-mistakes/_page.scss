@@ -243,6 +243,32 @@
   text-transform: uppercase;
 }
 
+.page__share__twitter {
+  margin-top: .3em;
+  padding-top: .3em;
+  border: 1px solid $border-color;
+  border-radius: 5px;
+
+  @include breakpoint(max-width $small) {
+    .btn span {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+  }
+}
+
+.page__share__twitter-title {
+  margin-bottom: 1em;
+  font-size: $type-size-6;
+  text-transform: uppercase;
+}
+
 /*
    Page meta
    ========================================================================== */
@@ -273,8 +299,8 @@
    ========================================================================== */
 
 .page__taxonomy {
-  margin-bottom: 1.5em;
-  margin-top: 1.5em;
+  margin-bottom: 1em;
+  margin-top: 1em;
 
   .sep {
     display: none;
@@ -513,7 +539,7 @@
 .page__related {
   @include clearfix();
   float: left;
-  margin-top: 2em;
+  margin-top: 1em;
   padding-top: 1em;
   border-top: 1px solid $border-color;
 

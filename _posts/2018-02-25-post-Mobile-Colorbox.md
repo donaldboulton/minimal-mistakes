@@ -23,7 +23,9 @@ toc_label: "Page Contents"
 
 read_time: true
 comments: true
-share: true
+share: false
+web-intents: true
+tweet_id: 145116818707714048
 social-share: twitter --twitter-hashtags facebook
 related: true
 excerpt: "I use colorbox in my ASP.Core2 apps. Alot of developers still do in their applications. Mobile First Responsive Colorbox Window to open a link, div, code, about anything. Including a iframe using external data."

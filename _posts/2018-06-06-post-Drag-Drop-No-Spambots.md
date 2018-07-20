@@ -4,7 +4,9 @@ title: Drag Drop Spambots
 name: Drag Drop Spambots
 read_time: true
 comments: true
-share: true
+share: false
+web-intents: true
+tweet_id: 145116818707714048
 social-share: twitter --twitter-hashtags facebook
 sidenav: true
 toc: 

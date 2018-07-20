@@ -24,7 +24,9 @@ toc_label: "Page Contents"
 read_time: true
 comments: true
 related: true
-share: true
+share: false
+web-intents: true
+tweet_id: 145116818707714048
 social-share: twitter --twitter-hashtags facebook
 sidenav: true
 reviews: true

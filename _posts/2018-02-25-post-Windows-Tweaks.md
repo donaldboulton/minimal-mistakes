@@ -18,13 +18,14 @@ tags:
   - Performance
 category:
   - Windows
-
+web-intents: true
+tweet_id: 145116818707714048
 toc: true
 toc_label: "Page Contents"
 
 read_time: true
 comments: true
-share: true
+share: false
 social-share: twitter --twitter-hashtags facebook
 related: true
 excerpt: "This Tweaks page has evolved from Windows XP to Now upgrading this to Windows 10. Included is My testing and Opinions, try at you own risk."

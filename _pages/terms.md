@@ -8,13 +8,18 @@ youtube: true
 youtubeId: yoE9-tNvhRs
 adds: true
 reviews: true
-comments: true
+reviews-sidebar: true
+comments: false
+web-intents: true
+tweet_id: 145116818707714048
 cookies: true
 anchor: true
 support: [adds, cookies]
 folder: _pages
 product: terms
 slug: terms
+web-intents: true
+tweet_id: 145116818707714048
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_pages/terms.md
 ---
 

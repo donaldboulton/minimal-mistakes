@@ -19,7 +19,9 @@ toc_label: "Page Contents"
 social-share: twitter --twitter-hashtags facebook
 read_time: true
 comments: true
-share: true
+share: false
+web-intents: true
+tweet_id: 145116818707714048
 related: true
 sidenav: true
 reviews: true

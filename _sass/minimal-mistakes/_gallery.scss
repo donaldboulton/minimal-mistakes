@@ -47,6 +47,22 @@
   }
 }
 
+.gallery-4-col {
+  display: grid;
+  grid-gap: 0.5em;
+  align-items: stretch;
+  justify-items: center;
+
+  @include breakpoint($small) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  caption {
+    width: 100%;
+    grid-column: 1 / -1;
+  }
+}
+
 .gallery-3-col-unjustified {
   display: grid;
   grid-gap: 0.5em;
