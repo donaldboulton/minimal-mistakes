@@ -28,12 +28,13 @@ read_time: true
 comments: true
 share: false
 web-intents: true
-tweet_id: 1020425648366596096
+tweet_id: 1021888928280924161
 social-share: twitter --twitter-hashtags facebook
 related: true
 anchor: true
 excerpt: "Many of us got really tired of the Gravatar Service being down or slow and having multiple server calls to download the Gravatar. 
-Alot of people do not even know about gravatar and you get a generic image for the User Avatar."
+A lot of people do not even know about gravatar and you get a generic image for the User Avatar."
+
 image:
   cover: true
   path: &image /assets/images/pages/letter-avatar-header.png
@@ -55,15 +56,15 @@ lcb: "{"
 
 How to easily create Letter Avatars for your comments in Minimal Mistakes. This coversion is a work in progress as I am just learning liquid.
 
-# Letter Avatar Origional gist
+# Letter Avatar Original gist
 
-## Gihub code as a Gihub Gist, by [Lee Crossly](https://gist.github.com/leecrossley/6027780)
+## GitHub code as a GitHub Gist, by [Lee Crossly](https://gist.github.com/leecrossley/6027780)
 
-Avatar Generator from - Commenter name [^names] as input and a canvas element as output using the initials from the name and a background colour.
+Avatar Generator from - Commenter name [^names] as input and a canvas element as output using the initials from the name and a background color.
 
 [^names]: based on the first name & surname first letter.
 
-The background colours are from from [Flat Ui Colors](http://flatuicolors.com/) Now with retina support.
+The background colors are from from [Flat Ui Colors](http://flatuicolors.com/) Now with retina support.
 
 ### The Canvas html snippet
 
@@ -107,7 +108,7 @@ context.fillStyle = "#FFF";
 context.fillText(initials, canvasCssWidth / 2, canvasCssHeight / 1.5);
 ```
 
-## MVC Implimentation
+## MVC Implementation
 
 I Still Use Asp.Net Core2 for Mansbooks and use letter avatar with the MVC changes.
 
