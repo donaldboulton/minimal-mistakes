@@ -215,7 +215,7 @@ function addNavItem(ul, href, text) {
 {% endif %}
 
 {% if page.web-intents == true %}
-  <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
+<script src="{{ '/assets/js/vendor/twitter/web-intents.js' | relative_url }}"></script>
 {% endif %}
 
 {% if page.footnotes == true %}
