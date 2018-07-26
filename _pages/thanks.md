@@ -9,14 +9,20 @@ map:
   longitude: -97.634299097
   address: 'OKC, Oklahoma'
   zoom: 13
-
 layout: single
 author_profile: true
-
 category:
-  - Contact
   - Donald Boulton
-
+image:
+  cover: true
+  path: &image /assets/images/pages/support.jpg
+  feature: *image
+  thumbnail: /assets/images/pages/support-320.png
+header:
+  image: /assets/images/pages/support-1200.jpg
+  teaser: /assets/images/pages/support-320.jpg
+  excerpt: "Sitemap of Posts"
+support: [adds, cookies, anchor]
 adds: true
 toc: false
 sidenav: true
