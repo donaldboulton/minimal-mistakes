@@ -27,7 +27,7 @@ adds: true
 toc: false
 sidenav: true
 reviews: false
-comments: false
+comments: true
 cookies: true
 youtube: true
 youtubeId: 3LbWJzZwKWw
