@@ -23,6 +23,8 @@ sidenav: true
 reviews: false
 comments: false
 cookies: true
+youtube: true
+youtubeId: 3LbWJzZwKWw
 
 excerpt: 'Github CloudFlare Hosting with Full SSL.<br /> <small><a href="https://github.com/donaldboulton/DWB/">Jekyll Gulp Travis CI Build</a></small><br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
 support: [adds, cookies]
@@ -38,6 +40,8 @@ github_editme_path: donaldboulton/DWB/blob/gh-pages/pages/thanks.md
 
 If a response if required, I will try to reply A.S.A.P..
 
-{% include thank-you-video.html %}
+Thank You For Being A Friend. ⚔️
+
+{% include youtubePlayer.html id=page.youtubeId %}
 
 {% include twitter-cards.html %}
