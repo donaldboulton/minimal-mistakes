@@ -49,5 +49,3 @@ If a response if required, I will try to reply A.S.A.P..
 Thank You For Being A Friend. ⚔️
 
 {% include youtubePlayer.html id=page.youtubeId %}
-
-{% include twitter-cards.html %}
