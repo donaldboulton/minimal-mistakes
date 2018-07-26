@@ -17,10 +17,8 @@ tags:
   - Mobile Colorbox
 category:
   - Programing
-
 toc: true
 toc_label: "Page Contents"
-
 read_time: true
 comments: true
 share: false
@@ -28,15 +26,15 @@ web-intents: true
 tweet_id: 145116818707714048
 social-share: twitter --twitter-hashtags facebook
 related: true
-excerpt: "I use colorbox in my ASP.Core2 apps. Alot of developers still do in their applications. Mobile First Responsive Colorbox Window to open a link, div, code, about anything. Including a iframe using external data."
+excerpt: "I use colorbox in my ASP.Core2 apps. A lot of developers still do in their applications. Mobile First Responsive Colorbox Window to open a link, div, code, about anything. Including a iframe using external data."
 image:
   cover: true
-  path: &image /assets/images/pages/svg/colorbox-html.png
+  path: &image /assets/images/pages/colorbox-html.jpg
   feature: *image
-  thumbnail: /assets/images/pages/svg/colorbox-html-320.png
+  thumbnail: /assets/images/pages/colorbox-html-320.jpg
 header:
-  image: /assets/images/pages/svg/colorbox-html-1200.png
-  teaser: /assets/images/pages/svg/colorbox-html-320.png
+  image: /assets/images/pages/colorbox-html-1200.jpg
+  teaser: /assets/images/pages/colorbox-html-320.jpg
 
 support: [adds, cookies]
 folder: _posts
@@ -52,7 +50,7 @@ github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2018-02-25-post-Mobil
 
 Mobile First Responsive Colorbox Window to open a link, div, code, about anything. Including a iframe using external data.
 
-Using the provided code works with, Jquery 3.3.2 and Bootstrap 4 beta 3.
+Using the provided code works with, jQuery 3.3.2 and Bootstrap 4 beta 3.
 
 Colorbox if you have not used it was created by [Jack Moore](http://www.jacklmoore.com/colorbox/)
 
@@ -100,9 +98,9 @@ $('.inline_content').on('click', function() {
 });
 ```
 
-Below is the changed javascript  with additions highlighted.
+Below is the changed JavaScript  with additions highlighted.
 
-### The Javascript
+### The JavaScript
 
 ```javascript
   $(".group1").colorbox({
