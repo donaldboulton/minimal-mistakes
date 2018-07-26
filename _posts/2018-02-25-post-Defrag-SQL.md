@@ -27,7 +27,7 @@ share: false
 web-intents: true
 tweet_id: 145116818707714048
 social-share: twitter --twitter-hashtags facebook
-excerpt: "Defrag Sql 2008 to 2016. In any SQl database and one that updates through migrations like Orchard CMS get defragmented and I have notice over the years dealing with SQL server that it needs defraging occasionaly, keeping the performance optimized"
+excerpt: "Defrag SQL 2008 to 2016. In any SQL database and one that updates through migrations like Orchard CMS get defragmented and I have notice over the years dealing with SQL server that it needs defragging occasionally, keeping the performance optimized"
 image:
   cover: true
   path: &image /assets/images/pages/defrag-sql-2014.png
@@ -50,7 +50,7 @@ github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2018-02-25-post-Defra
 
 # SQL Server 2008 - 2016
 
-In any SQl database and one that updates through migrations like Orchard CMS get defragmented and I have notice over the years dealing with SQL server that it needs defraging occasionaly, keeping the performance optimized.
+In any SQl database and one that updates through migrations like Orchard CMS get defragmented and I have notice over the years dealing with SQL server that it needs defragging occasionally, keeping the performance optimized.
 
 I have included this in my blog as a notice to pay attention and defrag your SQL database.
 
