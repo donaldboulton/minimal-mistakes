@@ -40,7 +40,7 @@ header:
 locations:
   - OKC, Oklahoma
 
-excerpt: "This is a simple 13kb with .js its init.js and .scss a lightweight flawless way to defeat spambots. Use a submit button that has to be dragged using dragula to its posting position, In the Form, to post any form."
+excerpt: "This is a simple 13kb with js its init.js and scss a lightweight flawless way to defeat spambots Use a submit button that has to be dragged using dragula to its posting position In the Form to post any form."
 
 support: [adds, cookies, dragula]
 folder: _posts
@@ -64,7 +64,7 @@ Use a submit button that has to be dragged using dragula to its posting position
 
 No bot or computer can figure this out so spam is defeated, except by the jerks comments or reviews based on non-sense. Then I just blacklist them in CloudFlair and that blocks them from CloudFlare servers, that will really make there day.
 
-Yea! Goodby recaptcha and honeypots.
+Yea! Goodbye recaptcha and honeypots.
 
 ## The draggable button
 
@@ -95,7 +95,7 @@ Note in using this I noticed dragula uses some of the .js files from the node-mo
 </div>
 ```
 
-### Add javascript
+### Add javaScript
 
 Adding dragula to my scripts.html
 
