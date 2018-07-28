@@ -4,12 +4,15 @@
 <!-- http://t.co/dKP3o1e -->
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="robots" Content="index, follow, archive">
 <meta name="revisit-after" Content="3 days">
-<meta name="apple-mobile-web-app-capable" Content="yes">
 <meta name="expires" Content="Mon, 06 Jan 2020 21:31:12 GMT">
+<meta name="apple-mobile-web-app-capable" Content="yes">
+<meta name="application-name" content="donboulton">
+<meta name="apple-mobile-web-app-title" content="donboulton">
+<meta name="msapplication-starturl" content="https://donboulton.com">
 <meta name="author" Content="Donald Boulton">
 <meta name="fb:app_id" Content="322180367845124">
 <meta name="twitter:thumbnailUrl" Content="/assets/images/donald-boulton_100.jpg">
@@ -30,11 +33,14 @@
 <meta name="theme-color" content="#212529">
 <meta name="msvalidate.01" content="361016BEC0F67F6A834D6186E897D9EC" />
 <meta name="logo" content="{{ site.url }}/apple-touch-icon-precomposed.png" />
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/fav-icons/apple-touch-icon-180x180.png">
+<meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/fav-icons/apple-touch-icon-180x180.png" sizes="180x180">
 <link rel="icon" type="image/png" href="/assets/images/fav-icons/favicon.png" sizes="32x32">
 <link rel='shortcut icon' type='image/png' href='/assets/images/fav-icons/favicon.png' />
 <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
-
+<link rel="alternate" title="{{ site.title }} Feed" type="application/atom+xml" href="{{ 'atom.xml' | absolute_url }}">
+<link rel="alternate" title="{{ site.title }} Feed" type="application/json" href="{{ 'feed.json' | absolute_url }}">
+<link rel="manifest" href="manifest.json">
 <script type="application/ld+json">
   {
     "@context": "http://schema.org",
@@ -43,7 +49,6 @@
     "logo": "https://donboulton.com/apple-touch-icon-precomposed.png"
   }
 </script>
-
 <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
 </script>
@@ -88,4 +93,19 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.0.0-alpha/fullcalendar.min.css">
    <link rel="stylesheet" media="print" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.0.0-alpha/fullcalendar.print.min.css">
 {% endif %}
+
 <script src='https://www.google.com/recaptcha/api.js?render=6Le-JGIUAAAAAItP3anxYzixThXd6EUvsDjXZevh'></script>
+
+{% if site.webmention_url %}
+  <link rel="webmention" href="{{ site.webmention_url }}">
+{% endif %}
+
+<script type="text/javascript">
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("/sw.js").then(function(registration) {
+      console.log("Service Worker registration successful with scope: ", registration.scope);
+    }).catch(function(err) {
+      console.log("Service Worker registration failed: ", err);
+    });
+  }
+</script>

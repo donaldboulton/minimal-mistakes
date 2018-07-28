@@ -1,6 +1,14 @@
-// modified from generator-jekyllized 1.0.0-rc.6
-'use strict';
-var gulp       = require('gulp');
+'use strict'
+
+const gulp = require('gulp');
+var ghPages = require('gulp-gh-pages');
+
+gulp.task('deploy', function() {
+  return gulp.src('./_site/**/*')
+    .pipe(ghPages({
+      "remoteUrl" : "git@github.com:donaldboulton/DWB.git gh-pages"
+    }));
+});
 var responsive = require('gulp-responsive');
 var gulpSharp  = require('gulp-sharp');
 var requireDir = require('require-dir');
@@ -28,9 +36,6 @@ gulp.task('build', gulp.series('clean', 'assets', 'build:site', 'html', 'xml'));
 
 // 'gulp deploy' -- deploy site to production and submit sitemap XML
 gulp.task('deploy', gulp.series('upload', 'submit:sitemap'));
-
-// 'gulp rebuild' -- WARNING: removes all assets, images, and built site
-gulp.task('rebuild', gulp.series('clean', 'clean:images'));
 
 // 'gulp check' -- checks your Jekyll site for errors
 gulp.task('check', gulp.series('site:check'));

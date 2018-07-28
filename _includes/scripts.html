@@ -247,4 +247,9 @@ function addNavItem(ul, href, text) {
   var bigfoot = $.bigfoot();
 </script>
 
+{% if page.layout == amp %}
+  <!-- Install Service Worker -->
+  <amp-install-serviceworker src="/sw.js" data-iframe-src="https://donboulton.com/sw.html" layout="nodisplay"></amp-install-serviceworker>
+{% endif %}
+
 

@@ -1,0 +1,53 @@
+{
+  "name": "donboulton.com",
+  "short_name": "donboulton",
+  "lang": "en-US",
+  "start_url": "https://donboulton.com",
+  "Scope": "/",
+  "background_color": "#000000",
+  "theme_color": "#212529",
+  "icons": [
+    {
+      "src": "https://donboulton.com/assets/images/fav-icons/favicon.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "https://donboulton.com/assets/images/pages/bg10-min.png",
+      "sizes": "10x10",
+      "type": "image/png"
+    },
+    {
+      "src": "https://donboulton.com/assets/images/red-flask-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "https://donboulton.com/assets/images/pages/donald-boulton-100.jpg",
+      "sizes": "100x100",
+      "type": "image/jpg"
+    },
+    {
+      "src": "https://donboulton.com/assets/images/pages/cf-logo-v-rgb-rev-239-80.png",
+      "sizes": "239x80",
+      "type": "image/png"
+    },
+    {
+      "src": "https://donboulton.com/assets/images/pages/github-74-80.png",
+      "sizes": "74x80",
+      "type": "image/png"
+    },
+    {
+      "src": "https://donboulton.com/assets/icons/icons.svg",
+      "sizes": "384x384",
+      "type": "icon/svg"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "twitter",
+      "id": "5379060"
+    }
+  ],
+  "splash_pages": null
+}

@@ -1,0 +1,40 @@
+<head>
+  <meta charset="utf-8">
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="icon" type="image/png" href="/assets/images/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/assets/images/favicon-16x16.png" sizes="16x16" />
+  <link rel="canonical" href="{{ site.baseurl }}{{ page.canonical }}">
+  <link rel="manifest" href="/manifest.json">
+
+  <title>{{ page.title }} - {{ site.title }}</title>
+  <!-- AMP Boilerplate -->
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  <!-- Include custom AMP components if the post calls for it -->
+{% if page.amp_components %}
+{% for js_file in page.amp_components %}
+  {{ js_file }}
+{% endfor %}
+<style amp-custom>
+  {% capture scss_content %}
+    {% include css/inline.scss %}
+  {% endcapture %}
+  {{ scss_content | scssify }}
+</style>
+{% endif %}
+
+    <script type="text/javascript">
+      var swsource = "/sw.js";
+      if("serviceWorker" in navigator) {
+        navigator.serviceWorker.register(swsource)
+          .then(function(reg){
+            console.log('SW scope: ', reg.scope);
+          })
+          .catch(function(err) {
+            console.log('SW registration failed: ', err);
+          });
+      };
+  </script>
+</head>
+<!-- Include custom AMP components if the post calls for it -->
