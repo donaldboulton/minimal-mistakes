@@ -41,6 +41,9 @@ support: [adds, cookies]
 folder: _posts
 product: defrag-sql
 slug: defrag-sql
+canonical: "/amp-html/2018-02-25-post-Defrag-SQL.html"
+amp_path: "2018-02-25-post-Defrag-SQL"
+amp_skip: false
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2018-02-25-post-Defrag-SQL.md
 ---
 

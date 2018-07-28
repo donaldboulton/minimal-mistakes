@@ -100,6 +100,10 @@
   <link rel="webmention" href="{{ site.webmention_url }}">
 {% endif %}
 
+{% if page.layout == amp-single %}
+  <!-- Install Service Worker -->
+  <amp-install-serviceworker src="/sw.js" data-iframe-src="https://donboulton.com/sw.html" layout="nodisplay"></amp-install-serviceworker>
+{% endif %}
 <script type="text/javascript">
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("/sw.js").then(function(registration) {

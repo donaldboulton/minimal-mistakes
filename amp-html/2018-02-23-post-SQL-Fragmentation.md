@@ -1,4 +1,5 @@
 ---
+layout: amp-single
 title: "SQL Fragmentation"
 permalink: 2018-02-22-post-SQL-Fragmentation.html
 date: 2018-02-23 16:16:01 -0900
@@ -29,7 +30,7 @@ social-share: twitter --twitter-hashtags facebook
 related: true
 anchor: true
 locations:
-  - Idabel OKlahoma
+  - Idabel Oklahoma
 
 excerpt: "Check SQL Server a specified database index fragmentation percentage (SQL). A Dynamic CMS using SQL Server most always has fragmentation. When files or data are in the wrong place then SQL Server has to spend time looking for the missing data, slowing the whole process down and increasing load times for your site."
 image:
@@ -45,6 +46,9 @@ support: [adds, cookies]
 folder: _posts
 product: sql-fragmentation
 slug: sql-fragmentation
+canonical: "/amp-html/2018-02-22-post-SQL-Fragmentation.html"
+amp_path: "2018-02-22-post-SQL-Fragmentation"
+amp_skip: false
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2018-02-23-post-SQL-Fragmentation.md
 ---
 

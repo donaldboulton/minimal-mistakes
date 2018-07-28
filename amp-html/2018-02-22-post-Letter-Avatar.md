@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: amp-single
 title: "Letter Avatar"
 permalink: 2018-02-22-post-Letter-Avatar.html
 date: 2018-02-22 16:16:01 -0600
