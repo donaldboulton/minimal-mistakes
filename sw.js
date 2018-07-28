@@ -1,6 +1,8 @@
 var urlsToCache = [
-  '/offline.html',
-  '/assets/images/bg-10-min.png'
+  'offline.html',
+  'assets/images/pages/bg-10-min.png',
+  'assets/css/main.css',
+  'assets/js/main.min.js'
 ];
 
 var CACHE_NAME = 'don-boulton-cache-v1';

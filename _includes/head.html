@@ -40,7 +40,8 @@
 <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
 <link rel="alternate" title="{{ site.title }} Feed" type="application/atom+xml" href="{{ 'atom.xml' | absolute_url }}">
 <link rel="alternate" title="{{ site.title }} Feed" type="application/json" href="{{ 'feed.json' | absolute_url }}">
-<link rel="manifest" href="{{ site.baseurl }}/manifest.json">
+<link rel="manifest" href="{{ 'manifest.json' | absolute_url }}">
+
 <script type="application/ld+json">
   {
     "@context": "http://schema.org",
@@ -102,7 +103,7 @@
 
 {% if page.layout == amp-single %}
   <!-- Install Service Worker -->
-  <amp-install-serviceworker src="/sw.js" data-iframe-src="https://donboulton.com/sw.html" layout="nodisplay"></amp-install-serviceworker>
+  <amp-install-serviceworker src="{{ 'sw.js' | absolute_url }}" data-iframe-src="{{ 'sw.html' | absolute_url }}" layout="nodisplay"></amp-install-serviceworker>
 {% endif %}
 <script type="text/javascript">
   if ("serviceWorker" in navigator) {
