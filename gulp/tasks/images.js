@@ -37,7 +37,7 @@ gulp.task('images:pages', () => {
       // resize all images
       '*.*': [{
         width: 320,
-        rename: { suffix: '-th' },
+        rename: { suffix: '-320' },
       }, {
         width: 800,
         rename: { suffix: '-800' },
@@ -47,7 +47,7 @@ gulp.task('images:pages', () => {
       }, {
         // copy original image
         width: '100%',
-        rename: { suffix: '' },
+        rename: { suffix: '-lq' },
       }]
     }, {
       // global configuration for all images
@@ -66,10 +66,10 @@ gulp.task('images:photography', () => {
       // resize all images
       '*.*': [{
         width: 20,
-        rename: { suffix: '-lq' },
+        rename: { suffix: '-th' },
       }, {
         width: 320,
-        rename: { suffix: '-th' },
+        rename: { suffix: '-lq' },
       }, {
         width: 800,
         rename: { suffix: '-800' },
