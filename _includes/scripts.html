@@ -247,7 +247,11 @@ function addNavItem(ul, href, text) {
       grecaptcha.execute('6Le-JGIUAAAAAItP3anxYzixThXd6EUvsDjXZevh', {action: 'home'}).then(function(token) {
     });
   });
-
+  if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js');
+  });
+}
 </script>
 
 
