@@ -38,7 +38,7 @@ function clearOldCache() {
             })
         );
     });
-}
+};
 
 self.addEventListener('install', function(event) {
   event.waitUntil(
