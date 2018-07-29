@@ -13,7 +13,7 @@ var filesToCache = [
     'assets/images/pages/bg-10-min.png',
     'assets/images/fav-icons/favicon-32x32.png',
 	  '/posts',
-	  '/feed.json'
+	  '/feed.json',
     {% for post in site.posts %}
     	'{{ post.url }}',
 	  {% endfor %}
