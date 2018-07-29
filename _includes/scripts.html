@@ -222,6 +222,9 @@ function addNavItem(ul, href, text) {
 
 {% if page.footnotes == true %}
    <script src="{{ '/assets/js/vendor/bigfoot/bigfoot.min.js' | relative_url }}"></script>
+   <script>
+     var bigfoot = $.bigfoot();
+   </script>
 {% endif %}
 
 <script>
@@ -244,7 +247,7 @@ function addNavItem(ul, href, text) {
       grecaptcha.execute('6Le-JGIUAAAAAItP3anxYzixThXd6EUvsDjXZevh', {action: 'home'}).then(function(token) {
     });
   });
-  var bigfoot = $.bigfoot();
+
 </script>
 
 
