@@ -25,21 +25,6 @@ var filesToCache = [
   {% endfor %}
 
 {% raw %}
-function clearOldCache() {
-    return caches.keys().then(keys => {
-        // Remove caches whose name is no longer valid.
-        return Promise.all(keys
-            .filter(key => {
-                return key !== cacheName;
-            })
-            .map(key => {
-                console.log(`Service Worker: removing cache ${key}`);
-                return caches.delete(key);
-            })
-        );
-    });
-};
-
 self.addEventListener('install', function(event) {
   event.waitUntil(
       caches.open(cacheName).then(function(cache) {
