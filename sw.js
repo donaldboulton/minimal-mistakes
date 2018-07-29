@@ -1,72 +1,55 @@
----
-layout: null
----
+var APP_PREFIX = 'donboulton'
+var VERSION = 'version_01'
+var CACHE_NAME = APP_PREFIX + VERSION
+var URLS = [
+  '/assets/js/main.min.js',
+  '/assets/css/main.css',
+  '/assets/js/vendor/letter-avatar/letter-avatar.min.js',
+  '/assets/js/vendor/twitter/web-intents.js',
+  '/index.html',
+  '/assets/images/pages/bg-10-min.png'
+];
 
-importScripts('js/vendor/serviceworker/serviceworker-cache-polyfill.js');
+self.addEventListener('fetch', function (e) {
+  console.log('fetch request : ' + e.request.url)
+  e.respondWith(
+    caches.match(e.request).then(function (request) {
+      if (request) {
+        console.log('responding with cache : ' + e.request.url)
+        return request
+      } else {
+        console.log('file is not cached, fetching : ' + e.request.url)
+        return fetch(e.request)
+      }
+    })
+  )
+})
 
-var cacheName = 'donboulton.com-cache-v1';
-var filesToCache = [
-    '/css/main.css',
-    {% for page in site.html_pages %}
-    	'{{ page.url }}',
-    {% endfor %}
-    'assets/images/pages/bg-10-min.png',
-    'assets/images/fav-icons/favicon-32x32.png',
-	  '/posts',
-	  '/feed.json',
-    {% for post in site.posts %}
-    	'{{ post.url }}',
-	  {% endfor %}
+self.addEventListener('install', function (e) {
+  e.waitUntil(
+    caches.open(CACHE_NAME).then(function (cache) {
+      console.log('installing cache : ' + CACHE_NAME)
+      return cache.addAll(URLS)
+    })
+  )
+})
 
-	{% for file in site.static_files %}
-    {% if file.extname == '.js' or file.path contains '/vendor/letter-avatar' or file.path contains '/vendor/twitter' %}
-        '{{ file.path }}',
-		{% endif %}
-  {% endfor %}
+self.addEventListener('activate', function (e) {
+  e.waitUntil(
+    caches.keys().then(function (keyList) {
 
-{% raw %}
-self.addEventListener('install', function(event) {
-  event.waitUntil(
-      caches.open(cacheName).then(function(cache) {
-          return cache.addAll(filesToCache);
+      var cacheWhitelist = keyList.filter(function (key) {
+        return key.indexOf(APP_PREFIX)
       })
-  );
-});
 
-self.addEventListener('activate', event => {
-    event.waitUntil(clearOldCache());
-});
+      cacheWhitelist.push(CACHE_NAME)
 
-self.addEventListener('fetch', event => {
-    let request = event.request;
-    let url = new URL(request.url);
-
-    if (url.origin !== location.origin) {
-        return;
-    }
-
-    if (request.method !== 'GET') {
-        event.respondWith(fetch(request));
-        return;
-    }
-
-    if (request.headers.get('Accept').indexOf('text/html') !== -1) {
-        event.respondWith(
-            fetch(request).catch(() => caches.match('/offline/'))
-        );
-        return;
-    }
-
-    event.respondWith(
-        caches.match(request)
-            .then(response => {
-                if (response) {
-                    console.log('Serving cached: ', event.request.url);
-                    return response;
-                }
-                console.log('Fetching: ', event.request.url);
-                return fetch(request)
-            })
-    );
-});
-{% endraw %}
+      return Promise.all(keyList.map(function (key, i) {
+        if (cacheWhitelist.indexOf(key) === -1) {
+          console.log('deleting cache : ' + keyList[i] )
+          return caches.delete(keyList[i])
+        }
+      }))
+    })
+  )
+})
