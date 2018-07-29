@@ -1,13 +1,13 @@
 var APP_PREFIX = 'donboulton';
-var VERSION = 'version_01';
+var VERSION = 'version_02';
 var CACHE_NAME = APP_PREFIX + VERSION;
 var URLS = [
   '/assets/js/main.min.js',
   '/assets/css/main.css',
-  '/assets/js/vendor/letter-avatar/letter-avatar.min.js',
+  '/assets/js/vendor/letter-avatar/letter-avatar.js',
   '/assets/js/vendor/twitter/web-intents.js',
   '/index.html',
-  '/assets/images/pages/bg-10-min.png',
+  '/assets/images/bg10-min.png',
   '/assets/images/fav-icons/favicon-32x32.png'
 ];
 
