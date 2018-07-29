@@ -18,19 +18,6 @@ self.addEventListener('install', function(event) {
   );
 });
 
-self.addEventListener('fetch', function (event) {
-  event.respondWith(
-      caches.open(CACHE_NAME).then(function (cache) {
-          return cache.match(event.request).then(function (response) {
-              return response || fetch(event.request).then(function (response) {
-                  cache.put(event.request, response.clone());
-                  return response;
-              });
-          });
-      })
-  );
-});
-
 // Cache name: adjust version number to invalidate service worker cachce.
 var CACHE_NAME = 'donboulton-cache-v2';
 
