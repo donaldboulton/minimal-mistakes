@@ -6,18 +6,6 @@ var urlsToCache = [
   'assets/js/main.min.js'
 ];
 
-var CACHE_NAME = 'donboulton-cache-v1';
-
-self.addEventListener('install', function(event) {
-  // Perform install steps
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(function(cache) {
-        return cache.addAll(urlsToCache);
-      })
-  );
-});
-
 // Cache name: adjust version number to invalidate service worker cachce.
 var CACHE_NAME = 'donboulton-cache-v2';
 
