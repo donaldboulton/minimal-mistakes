@@ -1,7 +1,7 @@
 var urlsToCache = [
   '/offline.html',
   'assets/images/pages/bg-10-min.png',
-  'assets/images/fav-icons/favicon.png',
+  'assets/images/fav-icons/favicon-32x32.png',
   'assets/css/main.css',
   'assets/js/main.min.js'
 ];
