@@ -42,7 +42,7 @@
       {% case site.comments.provider %}
       {% when "disqus" %}
       {% if page.comments == true %}
-      <span class="byline-item"><svg class="icon icon--comments-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comments-alt' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;<a href="https://donboulton.com{{ page.url }}#disqus_thread">0 Comments</a></span>
+      <span class="byline-item"><svg class="icon icon--comments-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comments-alt' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;<a href="https://donboulton.com{{ page.url }}#comments-list">0 Comments</a></span>
       {% endif %}
       {% endcase %}
       </div>
