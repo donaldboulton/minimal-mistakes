@@ -100,8 +100,3 @@
 {% if site.webmention_url %}
   <link rel="webmention" href="{{ site.webmention_url }}">
 {% endif %}
-
-{% if page.layout == amp-single %}
-  <!-- Install Service Worker -->
-  <amp-install-serviceworker src="{{ 'serviceWorker.js' | absolute_url }}" data-iframe-src="{{ 'sw.html' | absolute_url }}" layout="nodisplay"></amp-install-serviceworker>
-{% endif %}

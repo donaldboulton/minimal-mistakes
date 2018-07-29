@@ -16,15 +16,8 @@ layout: compress
 
 <body id="style-3" class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}" itemscope itemtype="http://schema.org/WebPage">
   <meta itemprop="url" content="{{ site.url }}{{ page.url }}" />
-  <!-- Install Service Worker -->
-  <amp-install-serviceworker src="/sw.js" data-iframe-src="https://donboulton.com/sw.html" layout="nodisplay"></amp-install-serviceworker>
-  {% include serviceworker.html %}
   {% include browser-upgrade.html %}
   {% include masthead.html %}
-  {% if page.layout == amp %}
-    {% include post-image.html %}
-  {% endif %}
-
   <div>
     {% if site.search == true %}
     <div class="search-content">
@@ -52,6 +45,7 @@ layout: compress
       {% include footer.html %}
     </footer>
   </div>
+  {% include serviceworker.html %}
   {% include scripts.html %}
 </body>
 </html>
