@@ -4,7 +4,7 @@ var CACHE_NAME = APP_PREFIX + VERSION;
 var URLS = [
   {% for asset in site.static_files %}
     {% if asset.path contains '/assets/images' or asset.path contains '/assets/icons' or asset.extname == '.jpg' %}
-    urlsToCache.push("{{ file.path }}")
+    '{{ file.path }}',
     {% endif %}
   {% endfor %}
   {% for page in site.html_pages %}
