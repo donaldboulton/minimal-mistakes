@@ -1,9 +1,7 @@
----
----
-
 {
   "name": "donboulton.com",
   "short_name": "donboulton",
+  "display": "standalone",
   "lang": "en-US",
   "start_url": "https://donboulton.com",
   "Scope": "/",
