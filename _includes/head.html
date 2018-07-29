@@ -103,15 +103,7 @@
 
 {% if page.layout == amp-single %}
   <!-- Install Service Worker -->
-  <amp-install-serviceworker src="{{ 'sw.js' | absolute_url }}" data-iframe-src="{{ 'sw.html' | absolute_url }}" layout="nodisplay"></amp-install-serviceworker>
-
-<script type="text/javascript">
-  if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("/sw.js").then(function(registration) {
-      console.log("Service Worker registration successful with scope: ", registration.scope);
-    }).catch(function(err) {
-      console.log("Service Worker registration failed: ", err);
-    });
-  }
-</script>
+  <amp-install-serviceworker src="{{ 'serviceWorker.js' | absolute_url }}" data-iframe-src="{{ 'sw.html' | absolute_url }}" layout="nodisplay"></amp-install-serviceworker>
 {% endif %}
+
+{% include serviceworker.html %}

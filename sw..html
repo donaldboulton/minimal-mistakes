@@ -3,7 +3,7 @@
   <head>
     <title>Installing Service Worker</title>
     <script type="text/javascript">
-        var swsource = "/sw.js";
+        var swsource = "/serviceWorker.js";
         if("serviceWorker" in navigator) {
           navigator.serviceWorker.register(swsource)
             .then(function(reg){
@@ -15,6 +15,6 @@
         };
     </script>
   </head>
-  <body>{{ content }}
+  <body>
   </body>
 </html>
