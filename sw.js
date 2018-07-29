@@ -1,14 +1,27 @@
 var APP_PREFIX = 'donboulton';
-var VERSION = 'version_02';
+var VERSION = 'version_03';
 var CACHE_NAME = APP_PREFIX + VERSION;
 var URLS = [
+  {% for asset in site.static_files %}
+    {% if asset.path contains '/assets/images' or asset.path contains '/assets/icons' or asset.extname == '.jpg' %}
+    urlsToCache.push("{{ file.path }}")
+    {% endif %}
+  {% endfor %}
+  {% for page in site.html_pages %}
+    '{{ page.url }}',
+  {% endfor %}
+  {% for post in site.posts %}
+    '{{ post.url }}',
+	{% endfor %}
   '/assets/js/main.min.js',
   '/assets/css/main.css',
   '/assets/js/vendor/letter-avatar/letter-avatar.js',
   '/assets/js/vendor/twitter/web-intents.js',
   '/index.html',
   '/assets/images/bg10-min.png',
-  '/assets/images/fav-icons/favicon-32x32.png'
+  '/assets/images/fav-icons/favicon-32x32.png',
+  '/sw.js',
+  '/manifest.webmanifest',
 ];
 
 self.addEventListener('fetch', function (e) {
