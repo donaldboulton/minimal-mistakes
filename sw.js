@@ -8,15 +8,14 @@ var APP_PREFIX = 'donboulton';
 var VERSION = 'version_02';
 var CACHE_NAME = APP_PREFIX + VERSION;
 var URLS = [
-  '/',
+  '/assets/js/main.min.js',
+  '/assets/css/main.css',
   {% for page in site.html_pages %}
     '{{ page.url }}',
   {% endfor %}
   {% for post in site.posts %}
     '{{ post.url }}',
 	{% endfor %}
-  '/assets/js/main.min.js',
-  '/assets/css/main.css',
   '/assets/js/vendor/letter-avatar/letter-avatar.js',
   '/assets/js/vendor/twitter/web-intents.js',
   '/assets/images/bg10-min.png',
@@ -35,7 +34,7 @@ var URLS = [
   '/assets/images/pages/letter-avatar-header-1200.png',
   '/assets/images/pages/social-sharing.jpg',
   '/assets/images/pages/defrag-sql-2014-1200.png',
-  '/assets/images/pages/check_sql_fragmentation-1200.png'
+  '/assets/images/pages/check_sql_fragmentation-1200.png',
   '/assets/images/pages/stop-spam-1200.jpg',
   '/assets/images/pages/reviews-1200.jpg',
   '/assets/images/pages/social-sharing-1200.jpg',
