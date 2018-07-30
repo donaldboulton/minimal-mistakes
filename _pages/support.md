@@ -17,6 +17,8 @@ support: [adds, cookies, youtube]
 header:
   image: /assets/images/pages/support-1200.jpg
   teaser: /assets/images/pages/support-320.jpg
+amp_components:
+  - <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 ---
 
 {% include support.html %}

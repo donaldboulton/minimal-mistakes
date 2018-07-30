@@ -128,7 +128,7 @@ analytics:
   provider               : "google"
   google:
     tracking_id          : "UA-30162465-2"
-
+amp_googleanalytics_id   : "UA-30162465-2"
 # Site Author
 author:
   name                   : "Donald Boulton"
