@@ -1,6 +1,6 @@
 ---
 title: Gallerys
-layout: single
+layout: amp-single
 redirect_to:
   - /photography/
 read_time: true
@@ -55,12 +55,12 @@ github_editme_path: https://github.com/donaldboulton/DWB/blob/gh-pages/_posts/20
 ---
 
 {% include octo-arm.html %}
-{% include page-intro.html %}
+{% include amp/amp-page-intro.html %}
 
 # Picture Gallery
 
 Pictures of my Kitty Cats and Travels.
-Alot of old Pics taken from old slides so the quality is not so good, but still memorys reside in them.
+A lot of old Pics taken from old slides so the quality is not so good, but still memorys reside in them.
 
 Banjo My Black Kitty
 

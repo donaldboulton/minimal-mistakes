@@ -45,15 +45,17 @@ support: [adds, cookies]
 folder: _posts
 product: social-sharing
 slug: social-sharing
-canonical: "/amp-html/2017-04-11-post-Social-Sharing.html"
-amp_path: "2017-04-11-post-Social-Sharing.html"
+canonical: "/2017-04-11-post-Social-Sharing.html"
+amp_path: "/amp-html/2017-04-11-post-Social-Sharing.html"
 amp_skip: false
+redirect_from:
+  - /post/2017-04-11-post-Social-Sharing/
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2017-04-11-post-Social-Sharing.md
 ---
 
 {% include octo-arm.html %}
 
-{% include page-intro.html %}
+{% include amp/amp-page-intro.html %}
 
 # Social Sharing Bootstrapped with no external JavaScript
 

@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: amp-single
 title: "Defrag SQL"
 permalink: 2018-02-25-post-Defrag-SQL.html
 date: 2018-02-25 16:16:01 -0600
@@ -44,12 +44,14 @@ slug: defrag-sql
 canonical: "/amp-html/2018-02-25-post-Defrag-SQL.html"
 amp_path: "2018-02-25-post-Defrag-SQL"
 amp_skip: false
+redirect_from:
+  - /posts/2018-02-25-post-Defrag-SQL/
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2018-02-25-post-Defrag-SQL.md
 ---
 
 {% include octo-arm.html %}
 
-{% include page-intro.html %}
+{% include amp/amp-page-intro.html %}
 
 # SQL Server 2008 - 2016
 

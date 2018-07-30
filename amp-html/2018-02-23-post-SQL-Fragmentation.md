@@ -46,15 +46,17 @@ support: [adds, cookies]
 folder: _posts
 product: sql-fragmentation
 slug: sql-fragmentation
-canonical: "/amp-html/2018-02-22-post-SQL-Fragmentation.html"
-amp_path: "2018-02-22-post-SQL-Fragmentation"
+canonical: "/2018-02-22-post-SQL-Fragmentation.html"
+amp_path: "/amp-html/2018-02-22-post-SQL-Fragmentation"
 amp_skip: false
+redirect_from:
+  - /post/2018-02-22-post-SQL-Fragmentation/
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2018-02-23-post-SQL-Fragmentation.md
 ---
 
 {% include octo-arm.html %}
 
-{% include page-intro.html %}
+{% include amp/amp-page-intro.html %}
 
 # Introduction
 

@@ -46,16 +46,18 @@ header:
 support: [adds, cookies]
 product: letter-avatar 
 slug: letter-avatar
-canonical: "/amp-html/2018-02-22-post-Letter-Avatar.html"
-amp_path: "2018-02-22-post-Letter-Avatar"
+canonical: "/2018-02-22-post-Letter-Avatar.html"
+amp_path: "/amp-html/2018-02-22-post-Letter-Avatar"
 amp_skip: false
+redirect_from:
+  - /post/2018-02-22-post-Letter-Avatar/
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2018-02-22-post-Letter-Avatar.md
 lcb: "{"
 ---
 
 {% include octo-arm.html %}
 
-{% include page-intro.html %}
+{% include amp/amp-page-intro.html %}
 
 How to easily create Letter Avatars for your comments in Minimal Mistakes. This coversion is a work in progress as I am just learning liquid.
 

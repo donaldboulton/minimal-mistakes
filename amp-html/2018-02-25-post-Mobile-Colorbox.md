@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: amp-single
 title: "Mobile Colorbox"
 permalink: 2018-02-25-post-Mobile-Colorbox.html
 date: 2018-02-25 15:16:01 -0600
@@ -40,11 +40,16 @@ support: [adds, cookies]
 folder: _posts
 product: mobile-colorbox 
 slug: mobile-colorbox
+canonical: "/posts/2018-02-25-post-Mobile-Colorbox.html"
+amp_path: "2018-02-25-post-Mobile-Colorbox"
+amp_skip: false
+redirect_from:
+  - /post/2018-02-25-post-Mobile-Colorbox/
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2018-02-25-post-Mobile-Colorbox.md
 ---
 
 {% include octo-arm.html %}
-{% include page-intro.html %}
+{% include amp/amp-page-intro.html %}
 
 # Mobile First Colorbox
 
