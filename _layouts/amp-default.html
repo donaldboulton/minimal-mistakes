@@ -6,14 +6,14 @@ layout: compress
 
 <html ⚡ lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js" itemscope itemtype="http://schema.org/WebSite">
 <head>
-  {% include amp-head.html %}
+  {% include amp/amp-head.html %}
 </head>
 
 <body id="style-3" class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}" itemscope itemtype="http://schema.org/WebPage">
   <meta itemprop="url" content="{{ site.url }}{{ page.url }}" />
   {% include browser-upgrade.html %}
-  {% include amp-masthead.html %}
-  {% include post-image.html %}
+  {% include amp/amp-masthead.html %}
+  {% include amp/amp-post-image.html %}
   <amp-analytics type="googleanalytics" id="amp-analytics-pageview">
       <script type="application/json">
       {
@@ -75,7 +75,7 @@ layout: compress
     </div>
   <div class="page__footer" itemscope itemtype="http://schema.org/WPFooter">
     <footer>
-        {% include footer.html %}
+        {% include amp/amp-footer.html %}
     </footer>
   </div>
  {% include scripts.html %}
