@@ -2,11 +2,18 @@
 layout: null
 ---
 
+'use strict'
+
 var APP_PREFIX = 'donboulton';
 var VERSION = 'version_01';
 var CACHE_NAME = APP_PREFIX + VERSION;
 var URLS = [
   '/',
+  {% for asset in site.static_files %}
+  {% if asset.path contains '/assets/images' or asset.path contains '/assets/icons' or asset.extname == '.jpg' %}
+    '{{ file.path }}',
+  {% endif %}
+  {% endfor %}
   {% for page in site.html_pages %}
     '{{ page.url }}',
   {% endfor %}
