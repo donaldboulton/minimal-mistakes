@@ -3,10 +3,10 @@ layout: null
 ---
 
 var APP_PREFIX = 'donboulton';
-var VERSION = 'version_03';
+var VERSION = 'version_01';
 var CACHE_NAME = APP_PREFIX + VERSION;
 var URLS = [
-  '/index.html',
+  '/',
   {% for asset in site.static_files %}
     {% if asset.path contains '/assets/images' or asset.path contains '/assets/icons' or asset.extname == '.jpg' %}
     ok'{{ file.path }}',

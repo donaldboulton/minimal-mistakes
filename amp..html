@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: amp-single
 author_profile: true
 
 tags:
@@ -30,13 +30,11 @@ support: [adds, cookies]
 folder: /
 slug: home
 product: home
-github_editme_path: donaldboulton/DWB/blob/gh-pages/index.html
+github_editme_path: donaldboulton/DWB/blob/gh-pages/amp.html
 ---
 
-{% include octo-arm.html %}
-
-<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
-
-{% include posts-all.html %}
-
-{% include post_pagination.html %}
+    <main class="content" role="main">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
