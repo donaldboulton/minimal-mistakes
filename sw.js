@@ -19,6 +19,7 @@ var URLS = [
   '/assets/js/vendor/letter-avatar/letter-avatar.js',
   '/assets/js/vendor/twitter/web-intents.js',
   '/assets/images/bg10-min.png',
+  '/assets/images/pages/bg10-min.png',
   '/assets/images/fav-icons/favicon-32x32.png',
   '/assets/images/pages/donald-boulton-100.jpg',
   '/assets/images/pages/reviews.jpg',
