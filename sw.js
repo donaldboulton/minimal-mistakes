@@ -1,10 +1,15 @@
+---
+layout: null
+---
+
 var APP_PREFIX = 'donboulton';
 var VERSION = 'version_03';
 var CACHE_NAME = APP_PREFIX + VERSION;
 var URLS = [
+  '/index.html',
   {% for asset in site.static_files %}
     {% if asset.path contains '/assets/images' or asset.path contains '/assets/icons' or asset.extname == '.jpg' %}
-    '{{ file.path }}',
+    ok'{{ file.path }}',
     {% endif %}
   {% endfor %}
   {% for page in site.html_pages %}
@@ -33,7 +38,7 @@ self.addEventListener('fetch', function (e) {
         return request;
       } else {
         console.log('file is not cached, fetching : ' + e.request.url);
-        return fetch(e.request);
+        return fetch(e.request)
       }
     })
   );
