@@ -64,6 +64,8 @@ var URLS = [
   '/assets/icons/icons.svg',
   '/assets/images/pages/github-74-80.png',
   '/assets/images/pages/cf-logo-v-rgb-rev-239-80.png',
+  '/assets/images/red-flask-32.png',
+  '/assets/images/fav-icons/favicon.png',
   '/sw.js',
   '/manifest.webmanifest',
 ];

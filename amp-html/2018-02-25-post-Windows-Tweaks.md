@@ -42,7 +42,7 @@ support: [adds, cookies]
 folder: _posts
 product: windows-tweaks
 slug: windows-tweaks
-github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2018-02-25-post-Windows-Tweaks.md
+github_editme_path: donaldboulton/DWB/blob/gh-pages/amp-html/2018-02-25-post-Windows-Tweaks.md
 ---
 
 {% include octo-arm.html %}

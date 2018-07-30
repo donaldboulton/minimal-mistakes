@@ -46,7 +46,7 @@ amp_path: "2018-02-25-post-Defrag-SQL"
 amp_skip: false
 redirect_from:
   - /posts/2018-02-25-post-Defrag-SQL/
-github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2018-02-25-post-Defrag-SQL.md
+github_editme_path: donaldboulton/DWB/blob/gh-pages/amp-html/2018-02-25-post-Defrag-SQL.md
 ---
 
 {% include octo-arm.html %}

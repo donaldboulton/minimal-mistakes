@@ -50,7 +50,7 @@ amp_path: "/amp-html/2017-04-11-post-Social-Sharing.html"
 amp_skip: false
 redirect_from:
   - /post/2017-04-11-post-Social-Sharing/
-github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2017-04-11-post-Social-Sharing.md
+github_editme_path: donaldboulton/DWB/blob/gh-pages/amp-html/2017-04-11-post-Social-Sharing.md
 ---
 
 {% include octo-arm.html %}

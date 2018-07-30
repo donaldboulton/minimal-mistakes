@@ -51,7 +51,7 @@ amp_path: "/amp-html/2018-02-22-post-Letter-Avatar"
 amp_skip: false
 redirect_from:
   - /post/2018-02-22-post-Letter-Avatar/
-github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2018-02-22-post-Letter-Avatar.md
+github_editme_path: donaldboulton/DWB/blob/gh-pages/amp-html/2018-02-22-post-Letter-Avatar.md
 lcb: "{"
 ---
 

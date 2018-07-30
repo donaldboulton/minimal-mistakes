@@ -45,7 +45,7 @@ amp_path: "2018-02-25-post-Mobile-Colorbox"
 amp_skip: false
 redirect_from:
   - /post/2018-02-25-post-Mobile-Colorbox/
-github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2018-02-25-post-Mobile-Colorbox.md
+github_editme_path: donaldboulton/DWB/blob/gh-pages/amp-html/2018-02-25-post-Mobile-Colorbox.md
 ---
 
 {% include octo-arm.html %}
