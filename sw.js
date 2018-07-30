@@ -22,7 +22,6 @@ var URLS = [
   '/assets/css/main.css',
   '/assets/js/vendor/letter-avatar/letter-avatar.js',
   '/assets/js/vendor/twitter/web-intents.js',
-  '/index.html',
   '/assets/images/bg10-min.png',
   '/assets/images/fav-icons/favicon-32x32.png',
   '/sw.js',
