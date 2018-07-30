@@ -49,7 +49,7 @@ github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2018-02-25-post-Mobil
 ---
 
 {% include octo-arm.html %}
-{% include amp/amp-page-intro.html %}
+{% include page-intro.html %}
 
 # Mobile First Colorbox
 

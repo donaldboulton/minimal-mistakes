@@ -55,7 +55,7 @@ github_editme_path: https://github.com/donaldboulton/DWB/blob/gh-pages/_posts/20
 ---
 
 {% include octo-arm.html %}
-{% include amp/amp-page-intro.html %}
+{% include page-intro.html %}
 
 # Picture Gallery
 

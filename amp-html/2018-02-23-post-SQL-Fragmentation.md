@@ -56,7 +56,7 @@ github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2018-02-23-post-SQL-F
 
 {% include octo-arm.html %}
 
-{% include amp/amp-page-intro.html %}
+{% include page-intro.html %}
 
 # Introduction
 

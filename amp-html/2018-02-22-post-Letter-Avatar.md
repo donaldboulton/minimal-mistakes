@@ -57,7 +57,7 @@ lcb: "{"
 
 {% include octo-arm.html %}
 
-{% include amp/amp-page-intro.html %}
+{% include page-intro.html %}
 
 How to easily create Letter Avatars for your comments in Minimal Mistakes. This coversion is a work in progress as I am just learning liquid.
 

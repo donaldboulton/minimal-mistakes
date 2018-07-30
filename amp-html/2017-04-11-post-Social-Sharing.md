@@ -55,7 +55,7 @@ github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2017-04-11-post-Socia
 
 {% include octo-arm.html %}
 
-{% include amp/amp-page-intro.html %}
+{% include page-intro.html %}
 
 # Social Sharing Bootstrapped with no external JavaScript
 
