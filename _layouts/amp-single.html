@@ -3,7 +3,7 @@ layout: amp-default
 ---
 
 {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
-  {% include page__hero.html %}
+  {% include amp/amp-page__hero.html %}
 {% elsif page.header.video.id and page.header.video.provider %}
   {% include page__hero_video.html %}
 {% endif %}
@@ -44,12 +44,6 @@ layout: amp-default
             {% if page.sidenav == true %}
                {% include sidenav.html %}
             {% endif %}
-            {% if page.reviews == true %}
-               {% include reviews-sidebar.html %}
-            {% endif %}
-            {% if page.reviews-sidebar == true %}
-               {% include reviews-sidebar.html %}
-            {% endif %}
             {% if page.adds == true %}
                {% include google-adds.html %}
             {% endif %}
@@ -81,11 +75,6 @@ layout: amp-default
       {% if page.comments == true %}
         {% include comments.html %}
       {% endif %}
-
-      {% if page.reviews == true %}
-        {% include reviews-page-footer.html %}
-        {% include reviews-form.html %}
-      {% endif %}
     </div>
   </article>
   </div>
@@ -98,7 +87,7 @@ layout: amp-default
       <h4 class="page__related-title">{{ site.data.ui-text[site.locale].related_label | default: "You May Also Enjoy" }}</h4>
       <div class="grid__wrapper">
         {% for post in site.related_posts limit:3 %}
-          {% include archive-single.html type="grid" %}
+          {% include amp/amp-archive-single.html type="grid" %}
         {% endfor %}
       </div>
     </div>
@@ -108,7 +97,7 @@ layout: amp-default
       <h4 class="page__related-title">{{ site.data.ui-text[site.locale].related_label | default: "You May Also Enjoy" }}</h4>
       <div class="grid__wrapper">
         {% for post in site.posts limit:3 %}
-          {% include archive-single.html type="grid" %}
+          {% include amp/amp-archive-single.html type="grid" %}
         {% endfor %}
       </div>
     </div>

@@ -5,7 +5,7 @@ layout: null
 'use strict'
 
 var APP_PREFIX = 'donboulton';
-var VERSION = 'version_02';
+var VERSION = 'version_03';
 var CACHE_NAME = APP_PREFIX + VERSION;
 var URLS = [
   '/assets/js/main.min.js',

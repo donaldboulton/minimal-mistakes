@@ -1,6 +1,6 @@
 ---
 layout: single
-permalink: 2018-02-26-post-Jekyll-Admin.html
+permalink: /amp-html/2018-02-26-post-Jekyll-Admin.html
 author_profile: true
 read_time: true
 comments: true

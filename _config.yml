@@ -318,6 +318,9 @@ collections:
   photography:
     output: true
     permalink: /:photography/:name/
+  amp-html:
+    output: true
+    permalink: /:amp-html/:name/
   products:
     output: true
     permalink: /:products/:name/
@@ -361,6 +364,24 @@ defaults:
       breadcrumbs:
         - label: "Posts"
           url: /year-archive/
+  # amp-html
+  - scope:
+      path: "amp-html"
+      type: posts
+    values:
+      layout: amp-single
+      author_profile: true
+      read_time: true
+      comments: false
+      share: true
+      related: true
+      toc: true
+      adds: true
+      reviews: true
+      cookies: true
+      breadcrumbs:
+        - label: "Amp Posts"
+          url: /:amp-html/:name/
   # _pages
   - scope:
       path: "_pages"

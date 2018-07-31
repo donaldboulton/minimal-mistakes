@@ -1,7 +1,7 @@
 ---
 layout: amp-single
 title: "Social Sharing"
-permalink: 2017-04-11-post-Social-Sharing.html
+permalink: /amp-html/2017-04-11-post-Social-Sharing.html
 date: 2017-04-11 16:16:01 -0600
 last_modified_at: 2017-04-28T12:42:38-04:00
 search: true

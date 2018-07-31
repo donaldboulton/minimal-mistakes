@@ -1,7 +1,7 @@
 ---
 layout: amp-single
 title: "Letter Avatar"
-permalink: 2018-02-22-post-Letter-Avatar.html
+permalink: /amp-html/2018-02-22-post-Letter-Avatar.html
 date: 2018-02-22 16:16:01 -0600
 last_modified_at: 2018-06-06T12:42:38-04:00
 search: true

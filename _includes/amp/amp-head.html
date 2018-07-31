@@ -54,10 +54,8 @@
   {{ js_file }}
 {% endfor %}
 <style amp-custom>
-  {% capture scss_content %}
     {% include css/inline.scss %}
-  {% endcapture %}
-  {{ scss_content | scssify }}
+    {{ scss_content | scssify }}
 </style>
 {% endif %}
 <!-- Include custom AMP components if the post calls for it -->
