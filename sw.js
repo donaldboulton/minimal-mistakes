@@ -5,7 +5,7 @@ layout: null
 'use strict'
 
 var APP_PREFIX = 'donboulton';
-var VERSION = 'version_06';
+var VERSION = 'version_05';
 var CACHE_NAME = APP_PREFIX + VERSION;
 var URLS = [
   '/assets/js/main.min.js',
@@ -122,6 +122,17 @@ self.addEventListener('activate', function (e) {
           return caches.delete(keyList[i]);
         }
       }));
+    })
+  );
+});
+
+self.addEventListener('push', function(event) {
+  event.waitUntil(
+    self.registration.showNotification('donboulton.com Site Changes', {
+      lang: 'en',
+      body: 'Don Boulton has added new content',
+      icon: 'favicon.png',
+      vibrate: [500, 100, 500],
     })
   );
 });

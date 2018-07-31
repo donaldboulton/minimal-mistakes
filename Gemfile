@@ -8,6 +8,7 @@ gem "wdm", "~> 0.1.0"
 gem "nokogiri"
 gem "html-proofer"
 gem "activesupport"
+gem 'webpush'
 
 group :jekyll_plugins do
   gem 'jekyll-archives'
