@@ -1,0 +1,56 @@
+<div id="twitter-container">
+  <div id="masterbox">
+    <div id="twitter-content">
+      <!--Your content in here-->
+      <h1>Locally Hosted Twitter Search Widget</h1>
+      <div class="twitter_description">
+        <div class="twitter_box_wrapper">
+          <div class="twitter_box">
+          <h2>Twitter Search Widget</h2>
+            <!--<script type="text/javascript" src="js/twitter_search_param.js"></script>-->
+            <a class="twitter-timeline" data-dnt="true" data-chrome="noscrollbar nofooter" width="250" height="300" href="https://twitter.com/search?q=donboulton"  data-widget-id="354185847421140992">Tweets about "rainbow"</a>
+<script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          </div><!--end twitter_box-->
+          <div class="twitter_box">
+          <h2>Twitter List Widget</h2>
+            <!--<script type="text/javascript" src="js/twitter_list_param.js"></script>--><a class="twitter-timeline" data-dnt="true" data-chrome="noscrollbar" width="250" height="300" href="https://twitter.com/anarkysheep/on-line-news"  data-widget-id="354185071600754688">Tweets from @anarkysheep/on-line-news</a>
+<script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            <noscript><p>It appears that your browser does not support javascript or you have it turned off. Javascript is needed for the display of the Twitter Search Widget</p></noscript>
+          </div><!--end twitter_box-->
+        </div><!--end twitter_box_wrapper-->
+        <div id="article_wrapper">
+        <h2>Why a standalone Twitter widget?</h2>
+        <p>Since this piece was written Twitter has discontinued their API Version 1.0 and introduced <a href="https://dev.twitter.com/docs/api/1.1">Version 1.1</a>. This means that the method to create an embedded Twitter widget has also changed. The following has been updated to reflect the changes brought about the new Twitter API.</p>
+        <p>Many versions of the <a href="https://twitter.com/about/resources/widgets">Twitter Search Widget</a> have been customised for CMSs such as <a href="http://wordpress.org/">Wordpress</a>. Following some simple instructions, these are quite easy to install. For non CMS websites, there are a number of <a href="http://chirrup.angryamoeba.co.uk/">bespoke Twitter search clients</a> available, many of which offer powerful options.</p>
+        <p>Locally hosting the standard Twitter Search Widget has the advantage of simplicity. There is the attraction that as the Twitter Widget is purely JavaScript, it can be also be inserted into static <abbr title="HyperText Markup Language" xml:lang="en">HTML</abbr>  pages. Two examples of the Twitter Widget are demonstrated, a search widget and a list widget.</p>
+        <h3>Instructions for use</h3>
+        <ul>
+        <li>Download and unzip the <a href="twitter_search_widget.zip">twitter_search_widget.zip</a> file to a local disc. The twitter_search_widget.zip file is a replica of this example and can run from the local disc or a <abbr title="Universal Serial Bus" xml:lang="en">USB</abbr> stick.</li>
+          <li>Alternatively, copy the file and directories to your website. If the directories already exist just copy the files into them</li>
+          <li>To replace the current examples with your own, navigate to the <a href="https://twitter.com/settings/widgets">Widget Configurator</a> on your twitter account. You can create widgets to display your own tweets, lists etc.</li>
+          <li>The generated HTML and Javascript code looks like:<br/>
+          <pre class="wrap">
+                           <a class="twitter-grid" href="https://twitter.com/donboulton" data-widget-id="422369327291957248" charset="utf-8">Tweets by @donboulton</a><br/>
+                           <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+             <a class="twitter-grid" href="https://twitter.com/TwitterDev/timelines/539487832448843776?ref_src=twsrc%5Etfw">National Park Tweets</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </pre>
+          </li>
+          <li>For pages you wish a Twitter Widget to appear simply paste the Twitter Widget code(s) in the HTML body.</li>
+
+        </ul>
+        <h3>Changing the appearance ot the Twitter widget</h3>
+        <p>The appearance of the widget can be customised by following the examples in <a href="https://dev.twitter.com/docs/embedded-timelines">Twitter's embedded timelines guide</a>.</p>
+        <h3>Limitations and bugs</h3>
+        <ul>
+          <li>Only publicly available accounts and lists can be displayed for which an ID is known</li>
+          <li>Some users that tweet excessively or engage in too much # may not appear on the Twitter feeds. This will give a blank result in the Twitter Widget window</li>
+        </ul>
+        <p>This work is offered 'as is'. Unfortunately, constrains of time and inclination prevent the offer of support...</p>
+        <h3>License</h3>
+        <p>This document is free to use and distribute under the <a href="http://www.gnu.org/copyleft/fdl.html" title="Free Software Foundation GNU General Public License">GNU Free Documentation License</a>.</p>
+        <p>Gary Hollands - April 2011. Updated for API changes July 2013.</p>
+        </div><!--end article_wrapper-->
+      </div><!--end twitter_description-->
+    </div><!--end content-->
+  </div><!--end masterbox-->
+</div><!--end container-

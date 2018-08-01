@@ -32,9 +32,6 @@ gulp.task('critical', gulp.series('styles:critical:home', 'styles:critical:archi
 // 'gulp deploy' -- deploy site to production and submit sitemap XML
 gulp.task('deploy', gulp.series('upload', 'submit:sitemap'));
 
-// 'gulp rebuild' -- WARNING: removes all assets, images, and built site
-gulp.task('rebuild', gulp.series('clean', 'clean:images'));
-
 // 'gulp check' -- checks your Jekyll site for errors
 gulp.task('check', gulp.series('site:check'));
 
