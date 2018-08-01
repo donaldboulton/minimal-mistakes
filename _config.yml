@@ -81,7 +81,9 @@ algolia:
     - index.html
     - index.md
     - subdirectory/*.html
-
+google:
+  search_engine_id       : "013988495707638373148:g116y1r0c-a"
+  instant_search         : # false (default), true
 github                   : [metadata]
 google-maps-api-key      : "AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA"
 repository               : "https://github.com/donaldboulton/DWB"

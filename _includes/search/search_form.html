@@ -5,7 +5,14 @@
     <meta itemprop="target" content="https://query.donboulton.com/search?q={search_term_string}"/>
     <input type="text" id="search" class="search-input" itemprop="query-input" required name="search_term_string" tabindex="-1" placeholder="{{ site.data.ui-text[site.locale].search_placeholder_text | default: 'Enter your search term...' }}" />
     <div id="results" class="results"></div>
-  {%- when "algolia" -%}
+    {%- when "google" -%}
+    <form onsubmit="return executeQuery();" id="cse-search-box-form-id">
+    <input type="text" id="cse-search-input-box-id" itemprop="query-input" required name="search_term_string" class="search-input" tabindex="-1" placeholder="{{ site.data.ui-text[site.locale].search_placeholder_text | default: 'Enter your search term...' }}" />
+    </form>
+    <div id="results" class="results">
+        <gcse:searchresults-only></gcse:searchresults-only>
+    </div>
+    {%- when "algolia" -%}
     <div class="search-searchbar"></div>
     <div class="search-hits"></div>
 {%- endcase -%}
