@@ -59,7 +59,6 @@ _site
 codekit-config.json
 example/_site
 Gemfile.lock
-node_modules
 npm-debug.log*
 .vs/slnx.sqlite
 *.sqlite

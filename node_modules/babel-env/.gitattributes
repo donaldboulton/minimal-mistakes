@@ -1,0 +1,12 @@
+*.js text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+.babelrc text eol=lf
+.editorconfig text eol=lf
+.eslintrc text eol=lf
+.eslintignore text eol=lf
+.gitattributes text eol=lf
+.gitignore text eol=lf
+.npmignore text eol=lf
+LICENSE text eol=lf
+package.json text eol=lf
