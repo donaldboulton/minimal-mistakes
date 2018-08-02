@@ -1,21 +1,18 @@
----
-layout: null
----
-
 'use strict'
 
 var APP_PREFIX = 'donboulton';
-var VERSION = 'version_05';
+var VERSION = 'version_03';
 var CACHE_NAME = APP_PREFIX + VERSION;
 var URLS = [
-  '/assets/js/main.min.js',
-  '/assets/css/main.css',
+  '/assets/images/pages/reviews.jpg',
   {% for page in site.html_pages %}
     '{{ page.url }}',
   {% endfor %}
   {% for post in site.posts %}
     '{{ post.url }}',
-	{% endfor %}
+  {% endfor %}
+  '/assets/js/main.min.js',
+  '/assets/css/main.css',
   '/assets/js/vendor/letter-avatar/letter-avatar.js',
   '/assets/js/vendor/twitter/web-intents.js',
   '/assets/js/lunr/lunr.min.js',
@@ -26,7 +23,6 @@ var URLS = [
   '/assets/images/pages/bg10-min.png',
   '/assets/images/fav-icons/favicon-32x32.png',
   '/assets/images/pages/donald-boulton-100.jpg',
-  '/assets/images/pages/reviews.jpg',
   '/assets/images/pages/digital_box_1400-compressor.jpg',
   '/assets/images/pages/stop-spam.jpg',
   '/assets/images/pages/jekyll-reversed.jpg',
@@ -78,6 +74,9 @@ var URLS = [
   '/assets/images/pages/cf-logo-v-rgb-rev-239-80.png',
   '/assets/images/red-flask-32.png',
   '/assets/images/fav-icons/favicon.png',
+  '/assets/images/pages/like-action-18-24.png',
+  '/assets/images/pages/rewteet-action-22-21.png',
+  '/assets/images/pages/reply_action-22-24.png',
   '/sw.js',
   '/manifest.webmanifest',
 ];
@@ -126,13 +125,81 @@ self.addEventListener('activate', function (e) {
   );
 });
 
-self.addEventListener('push', function(event) {
+self.addEventListener('push', (event) => {
+  if (event.data) {
+      const data = event.data.json();
+
+      const title = data.title;
+      const options = {
+          body: data.body,
+          icon: data.icon || 'favicon.png',
+          tag: data.tag || 'default',
+          data: data.url,
+      };
+
+      event.waitUntil(
+          self.registration.showNotification(title, options),
+      );
+  }
+});
+
+self.addEventListener('pushsubscriptionchange', (event) => {
+  const options = event.oldSubscription.options;
+  // Fetch options if they do not exist in the event.
   event.waitUntil(
-    self.registration.showNotification('donboulton.com Site Changes', {
-      lang: 'en',
-      body: 'Don Boulton has added new content',
-      icon: 'favicon.png',
-      vibrate: [500, 100, 500],
-    })
+      self.registration.pushManager.subscribe(options)
+          .then((subscription) => { // eslint-disable-line no-unused-vars
+              // Send new subscription to application server.
+          }),
   );
+});
+
+self.addEventListener('notificationclick', (event) => {
+  let url = 'http://localhost:8080/';
+  if (event.notification.data) {
+      url = event.notification.data;
+  }
+
+  event.notification.close();
+
+  event.waitUntil(
+      self.clients.matchAll({
+          type: 'window',
+      }).then((clientList) => {
+          for (let i = 0; i < clientList.length; i += 1) {
+              const client = clientList[i];
+              const found = client.url === url || client.url === `${url}/`;
+              if (found && 'focus' in client) {
+                  client.focus();
+                  return;
+              }
+          }
+          if (self.clients.openWindow) {
+              self.clients.openWindow(url);
+          }
+      }),
+  );
+});
+
+self.addEventListener('notificationclick', function(event) {
+  console.log('On notification click: ', event.notification.tag);
+  // Android doesn’t close the notification when you click on it
+  // See: http://crbug.com/463146
+  event.notification.close();
+
+  // This looks to see if the current is already open and
+  // focuses if it is
+  event.waitUntil(clients.matchAll({
+    type: 'window'
+  }).then(function(clientList) {
+    for (var i = 0; i < clientList.length; i++) {
+      var client = clientList[i];
+      if (client.url === '/' && 'focus' in client) {
+        return client.focus();
+      }
+    }
+    if (clients.openWindow) {
+      return clients.openWindow('/');
+    }
+  }));
 });

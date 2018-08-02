@@ -33,7 +33,7 @@ reviews: true
 adds: true
 cookies: true
 anchor: true
-excerpt: "Create a Jekyll image Gallery that loops through all images in a folder. Not Configured by yml Frontmatter, thus much eaiser to create. Using [Images resizing by images.weserv.nl](weserv.nl), which gives a thumbnail image displayed in the isotope arranged gallery and the origional images which are opened by lightgallery."
+excerpt: "Create a Jekyll image Gallery that loops through all images in a folder. Not Configured by yml Frontmatter, thus much easier to create. Using [Images resizing by images.weserv.nl](weserv.nl), which gives a thumbnail image displayed in the isotope arranged gallery and the original images which are opened by lightGallery."
 
 image:
   cover: true
@@ -60,17 +60,17 @@ lcb: "{"
 
 There are two ways displayed below to build Image Gallerys with Jekyll using [MetaFuzzy Isotope](https://isotope.metafizzy.co/) and [Sachinchoolur LightGallery](http://sachinchoolur.github.io/lightGallery/demos/)
 
-The First is a Simple Gallery that Loops throught all images in a folder resizing the isotope gallery page, display image online, the origional image is opened in LightGallery.
+The First is a Simple Gallery that Loops through all images in a folder resizing the isotope gallery page, display image online, the original image is opened in LightGallery.
 
 The Second is a Complex Gallery is driven off of a data yml file, a hard way to do it, but it gives you a mobile responsive - data-responsive set of images kind of like a data-srcset but for a Isotope - LightGallery responsive display, using 4 or more image sizes.
 
 ## Image sizing
 
-Getting the four or more image sizes for the complex gallery is alot of work. If your on Github Pages, Cloudinary will not work. So I use Graphics Magic locally and then add the correct file extenshions for the size as image-th.jpg for the thumnail size, using 320px for the thumbnail size. Including 3 others image-320.jpg, image-800.jpg and image-1200.jpg, the main display image in lightgallery as image-1200.jpg. You can use different sizes to fit the needs for your site but they must have differing file size extenshions as image-1234.jpg or whatever.
+Getting the four or more image sizes for the complex gallery is a lot of work. If your on GitHub Pages, Cloudinary will not work. So I use Graphics Magic locally and then add the correct file extensions for the size as image-th.jpg for the thumbnail size, using 320px for the thumbnail size. Including 3 others image-320.jpg, image-800.jpg and image-1200.jpg, the main display image in lightGallery as image-1200.jpg. You can use different sizes to fit the needs for your site but they must have differing file size extensions as image-1234.jpg or whatever.
 
 ## Config and folder structure
 
-The config yml should look simular to the below if your gallery.md files are in a folder named, photography no underscore as _photography.
+The config yml should look similar to the below if your gallery.md files are in a folder named, photography no underscore as _photography.
 
 ```yml
 # Collections
@@ -103,10 +103,10 @@ I added images in my /assets/images/photography/ folders for each gallery. as li
 
 ## Data YML Files
 
-Both the simple and Complex Gallerys are driven by the data/gallerys/overview.yml data file as displayed below, this is from my site and gallerys.
- The fist set is for the complex gallery with 5 images, you only need 4, with different sizes and ending with different size extenshion as -1234. The second is for the simple gallery with just one image listed.
+Both the simple and Complex Gallery's are driven by the data/gallerys/overview.yml data file as displayed below, this is from my site and gallery's.
+ The fist set is for the complex gallery with 5 images, you only need 4, with different sizes and ending with different size extension as -1234. The second is for the simple gallery with just one image listed.
 
-### Gallerys main datafile overview.yml
+### Gallery's main datafile overview.yml
 
 ```yml
 // Complex yml 5 images
@@ -137,9 +137,9 @@ Both the simple and Complex Gallerys are driven by the data/gallerys/overview.ym
 
 ```
 
-### Individual Gallerys Frontmatter
+### Individual Gallery's Frontmatter
 
-Below the individual gallery frontmatter and the 5th image is not listed as with its extenshion as .jpg but it will be looking for a file with just the name as image.jpg not image-12345.jpg. So it uses 5 images of differing extenshions & sizes.
+Below the individual gallery frontmatter and the 5th image is not listed as with its extension as .jpg but it will be looking for a file with just the name as image.jpg not image-12345.jpg. So it uses 5 images of differing extensions & sizes.
 
 ```yaml
 picture_path: stray-cat-gallery
@@ -204,7 +204,7 @@ support: [gallery]
 
 ## The Included Js And Css
 
-I Included the [lightgallery.js](https://raw.githubusercontent.com/sachinchoolur/lightGallery/master/src/js/lightgallery.js){:id="open-website" rel="nofollow"} minified to my main site main.min.js file as to have it initilized at all times for any page. I included it right after jquery.js and before any other Conjugated scripts.
+I Included the [lightgallery.js](https://raw.githubusercontent.com/sachinchoolur/lightGallery/master/src/js/lightgallery.js){:id="open-website" rel="nofollow"} minified to my main site main.min.js file as to have it initialized at all times for any page. I included it right after jquery.js and before any other Conjugated scripts.
 
 Adding all other LightGallery css and scripts in a assets/dist folder. In the same folder structure as in the [lightgallery repo](https://github.com/sachinchoolur/lightGallery){:id="open-website" rel="nofollow"}, adding isotope.js, mousewheel.js and picturefill.js from CloudFlare CDN.
 
@@ -230,7 +230,7 @@ Adding included Isotope and LightGallery files as below seen in my [includes/scr
 {{ page.lcb }}% endif %}
 ```
 
-There is one script above init-lightgallery.js that is initializes all of LightGalley resources including links,iframe, maps = all.
+There is one script above init-lightgallery.js that is initializes all of LightGalley resources including links, iframe, maps = all.
 
 ## LightGallery init-lightgallery.js
 
@@ -650,7 +650,7 @@ The gallery.scss code below
 
 ## Jekyll Simple Gallery
 
-Create a Jekyll images Gallery that loops through all images in a folder. Displayed with [MetaFuzzy Isotope](https://isotope.metafizzy.co/) and viewed with [Sachinchoolur LightGallery](http://sachinchoolur.github.io/lightGallery/demos/){:id="open-website" rel="nofollow"}. Not Configured by yml Frontmatter, thus much eaiser to create. Using [Images resizing by images.weserv.nl](weserv.nl), which gives a thumnail image displayed in the Isotope gallery and the origional images which are opened by LightGallery.
+Create a Jekyll images Gallery that loops through all images in a folder. Displayed with [MetaFuzzy Isotope](https://isotope.metafizzy.co/) and viewed with [Sachinchoolur LightGallery](http://sachinchoolur.github.io/lightGallery/demos/){:id="open-website" rel="nofollow"}. Not Configured by yml Frontmatter, thus much eaiser to create. Using [Images resizing by images.weserv.nl](weserv.nl), which gives a thumbnail image displayed in the Isotope gallery and the original images which are opened by LightGallery.
 
 ### The _includes file Simple Gallery
 
@@ -679,15 +679,15 @@ support: [gallery]
 
 ## Jekyll Complex Gallery
 
-This is a Gallery based on Isotope and LightGallery the same as my Simple Gallery, this Complex one uses a data yml file and 5 pre configured images for a figure srcset display. Alot of coding is require for this and my cat gallerys are the only ones built like this, but for the best mobile speed with responsiveness, this is the way to go.
+This is a Gallery based on Isotope and LightGallery the same as my Simple Gallery, this Complex one uses a data yml file and 5 pre configured images for a figure srcset display. A lot of coding is require for this and my cat gallery's are the only ones built like this, but for the best mobile speed with responsiveness, this is the way to go.
 
 ### The _include file
 
-This include file at: [gallery-layout.html](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_includes/gallery-layout.html){:id="open-website" rel="nofollow"} builds a srcset out of Five preconfigured images. Sizes as example image-320.jpg or 320px wide, image-800.jpg or 800px wide, image-1200px or 1200px wide, and the origional image in your stock size twice once with its origional name and once with the extenshion to the file name as above image-lg.WHATEVER .png .jpg .gif...
+This include file at: [gallery-layout.html](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_includes/gallery-layout.html){:id="open-website" rel="nofollow"} builds a srcset out of Five preconfigured images. Sizes as example image-320.jpg or 320px wide, image-800.jpg or 800px wide, image-1200px or 1200px wide, and the original image in your stock size twice once with its original name and once with the extension to the file name as above image-lg.WHATEVER .png .jpg .gif...
 
 ### The _layout file
 
-The layout file at: [gallery.html](https://github.com/donaldboulton/DWB/blob/gh-pages/_layouts/gallery.html`){:id="open-website" rel="nofollow"} for the Complex Gallery simular to the simple gallery with a added class on the div as class="gallery".
+The layout file at: [gallery.html](https://github.com/donaldboulton/DWB/blob/gh-pages/_layouts/gallery.html`){:id="open-website" rel="nofollow"} for the Complex Gallery similar to the simple gallery with a added class on the div as class="gallery".
 
 ```html
 ---
@@ -704,6 +704,6 @@ support: [gallery]
 </div>
 ```
 
-If there is any confusion to the contents of this post add a review, tweet or a comment below, and or go to the repo for, Donald Boulton at: [Github Repo](https://github.com/donaldboulton/DWB){:id="open-website" rel="nofollow"} and view the code. Both my Simple and Complex Gallerys displayed on my Gallery Page.
+If there is any confusion to the contents of this post add a review, tweet or a comment below, and or go to the repo for, Donald Boulton at: [GitHub Repo](https://github.com/donaldboulton/DWB){:id="open-website" rel="nofollow"} and view the code. Both my Simple and Complex Gallerys displayed on my Gallery Page.
 
-> The only Gallerys that are Complex or yml driven are my CAT Gallerys.
+> The only Gallery's that are Complex or yml driven are my CAT Gallery's.
