@@ -20,7 +20,7 @@ module.exports = [
     }),
     Object.assign({}, config, {
         entry: {
-            'service-worker': './sw.js',
+            'service-worker': './service-worker.js',
         },
         target: 'webworker',
     }),

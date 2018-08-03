@@ -136,7 +136,7 @@ const URLS = [
     '/assets/images/pages/cf-logo-v-rgb-rev-239-80.png',
     '/assets/images/red-flask-32.png',
     '/assets/images/fav-icons/favicon.png',
-    '/sw.js',
+    '/service-worker.js',
     '/manifest.webmanifest',
 ];
 
