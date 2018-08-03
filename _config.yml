@@ -198,6 +198,7 @@ exclude:
   - vendor/ruby/
   - .vs
   - .vscode
+  - node_modules
   - gulpfile.js
   - LICENSE
   - log
@@ -205,6 +206,7 @@ exclude:
   - package-lock.json
   - Rakefile
   - README
+  - README.md
   - tmp
   - /docs # ignore Minimal Mistakes /docs
 keep_files:
