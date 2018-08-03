@@ -12,7 +12,7 @@
 <script src="{{ '/assets/js/vendor/letter-avatar/letter-avatar.js' | relative_url }}"></script>
 {% endif %}
 
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
 {% if site.search == true or page.layout == "search" %}
   {%- assign search_provider = site.search_provider | default: "lunr" -%}
@@ -255,7 +255,7 @@ function addNavItem(ul, href, text) {
   });
 
    navigator.serviceWorker.ready.then(function (registration) {
-            console.log('Service worker successfully registered on scope', registration.scope);
+      console.log('Service worker successfully registered on scope', registration.scope);
   });
 }
 </script>
