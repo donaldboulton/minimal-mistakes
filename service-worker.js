@@ -1,7 +1,7 @@
 'use strict'
 
 const APP_PREFIX = 'donboulton';
-const VERSION = 'version_06';
+const VERSION = 'version_03';
 const CACHE_NAME = APP_PREFIX + VERSION;
 const URLS = [
     '/assets/js/main.min.js',
