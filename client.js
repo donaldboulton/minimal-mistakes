@@ -1,6 +1,9 @@
-'use strict'
+#! /usr/bin/env node
+/* eslint consistent-return:0 */
 
-import push from './push';
+'use strict';
+
+const push = require('./push.js');
 
 const $button = document.querySelector('.js-button');
 let activated = false;
