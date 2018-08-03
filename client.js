@@ -1,7 +1,4 @@
-#! /usr/bin/env node
 /* eslint consistent-return:0 */
-
-'use strict';
 
 const push = require('./push.js');
 

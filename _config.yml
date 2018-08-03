@@ -205,7 +205,7 @@ exclude:
   - README
   - README.md
   - tmp
-  - /docs # ignore Minimal Mistakes /docs
+  - /docs
 keep_files:
   - .git
   - .svn
