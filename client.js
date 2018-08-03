@@ -1,6 +1,6 @@
 /* eslint consistent-return:0 */
 
-const push = require('./push.js');
+import push from './push';
 
 const $button = document.querySelector('.js-button');
 let activated = false;
