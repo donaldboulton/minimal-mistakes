@@ -17,6 +17,6 @@
     "wrap-iife": [2, "inside"],
     "import/no-unresolved": 0,
     "indent": 0,
-    "no-buffer-constructor": 0, // We still support Node v4.
+    "no-buffer-constructor": 0,
   }
 }

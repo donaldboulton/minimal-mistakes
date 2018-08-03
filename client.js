@@ -1,3 +1,5 @@
+'use strict'
+
 import push from './push';
 
 const $button = document.querySelector('.js-button');

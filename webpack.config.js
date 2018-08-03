@@ -15,7 +15,7 @@ const config = {
 module.exports = [
     Object.assign({}, config, {
         entry: {
-            'client': './src/client.js',
+            'client': './client.js',
         },
     }),
     Object.assign({}, config, {
