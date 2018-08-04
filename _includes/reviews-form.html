@@ -40,7 +40,7 @@
         <input type="hidden" id="review-post-id" name="options[slug]" value="{{ page.slug }}">
         <input name="fields[product]" type="hidden" value="{{ page.slug }}" />
         <input name="options[redirect]" type="hidden" value="{{site.url}}{{site.baseurl}}{{ page.url }}" />
-        <label for="review-form-address">Leave blank if you are a human</label>
+        <label type="hidden" for="review-form-address">Leave blank if you are a human</label>
         <input type="hidden"id="review-form-address" name="fields[hidden]" autocomplete="off">
         <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.reCaptcha.siteKey }}">
         <input type="hidden" name="options[reCaptcha][secret]" value="{{ site.reCaptcha.secret }}">
