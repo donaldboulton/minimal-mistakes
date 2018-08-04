@@ -254,15 +254,15 @@ function addNavItem(ul, href, text) {
     navigator.serviceWorker.register('/service-worker.js');
   });
 
-   navigator.serviceWorker.ready.then(function (registration) {
-      console.log('Service worker successfully registered on scope', registration.scope);
+  navigator.serviceWorker.ready.then(function (registration) {
+    console.log('Service worker successfully registered on scope', registration.scope);
   });
 }
 if ($.support.pjax) {
     $(document).on('click', 'a[data-pjax]', function(event) {
-     var container = $(this).closest('[data-pjax-container]')
-    $.pjax.click(event, {container: container})
+        const container = $(this).closest('[data-pjax-container]');
+        $.pjax.click(event, {container: containerSelector})
     })
-}
+};
 </script>
 
