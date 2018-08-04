@@ -13,6 +13,8 @@ const runningMessage = 'Server is running on port ' + port;
 // Constants just contains common messages so they're in one place
 const constants = require('./constants');
 
+const log = console.log;
+
 // VAPID keys should only be generated once.
 // use `web-push generate-vapid-keys --json` to generate in terminal
 // then export them in your shell with the follow env key names
@@ -41,10 +43,11 @@ app.post('/subscribe', (req, res) => {
     const body = JSON.stringify(req.body);
     let sendMessage;
     if (_.includes(subscriptions, body)) {
+        log(constants.messages.SUBSCRIPTION_ALREADY_STORED);
         sendMessage = constants.messages.SUBSCRIPTION_ALREADY_STORED;
     } else {
         subscriptions.push(body);
-
+        log(constants.messages.UPDATED_SUBSCRIPTIONS, subscriptions);
         sendMessage = constants.messages.SUBSCRIPTION_STORED;
     }
     res.send(sendMessage);
@@ -54,38 +57,82 @@ app.post('/subscribe', (req, res) => {
 app.post('/push', (req, res, next) => {
     const pushSubscription = req.body.pushSubscription;
     const notificationMessage = req.body.notificationMessage;
+    let errors = [];
+    let successes = [];
+    log('Current subscriptions found', subscriptions);
+    log('Notification message received:', notificationMessage);
 
     if (!pushSubscription) {
         res.status(400).send(constants.errors.ERROR_SUBSCRIPTION_REQUIRED);
-        return next(false);
+        return next();
     }
 
-    if (subscriptions.length) {
-        subscriptions.map((subscription, index) => {
-            const jsonSub = JSON.parse(subscription);
+    if ((typeof pushSubscription === 'string' || pushSubscription instanceof String) &&
+    pushSubscription.toLocaleLowerCase() === 'all') {
+        if (subscriptions.length) {
+            subscriptions.map((subscription, index) => {
+                log(constants.messages.SENDING_NOTIFICATION_MESSAGE, subscription);
+                let jsonSub = JSON.parse(subscription);
 
-            webPush.sendNotification(jsonSub, notificationMessage)
-                .then(success => handleSuccess(success, index))
-                .catch(error => handleError(error, index));
+                webPush.sendNotification(jsonSub, notificationMessage)
+                  .then(success => {
+                      return handleSuccess(success, index);
+                  })
+                 .catch(error => {
+                     return handleError(error, index);
+                 });
+            });
+        } else {
+            res.send(constants.messages.NO_SUBSCRIBERS_MESSAGE);
+            return next();
+        }
+        } else {
+        let subscription
+        try {
+            subscription = JSON.parse(pushSubscription);
+        } catch(error) {
+            return handleError(error, -1);
+        }
+
+        log(constants.messages.SENDING_NOTIFICATION_MESSAGE, pushSubscription);
+
+        webPush.sendNotification(subscription, notificationMessage)
+        .then(success => {
+            return handleSuccess(success, -1);
+        })
+        .catch(error => {
+            return handleError(error, -1);
         });
-    } else {
-        res.send(constants.messages.NO_SUBSCRIBERS_MESSAGE);
-        return next(false);
     }
 
     function handleSuccess(success, index) {
-        res.send(constants.messages.SINGLE_PUBLISH_SUCCESS_MESSAGE);
-        return next(false);
+        successes.push(constants.messages.SINGLE_PUBLISH_SUCCESS_MESSAGE + success);
+        if (index === subscriptions.length - 1 || subscriptions.length === 0 || index === -1) {
+            return checkNotificationResults();
+        }
     }
 
     function handleError(error, index) {
-        res.status(500).send(constants.errors.ERROR_MULTIPLE_PUBLISH);
-        return next(false);
+        log(error);
+        errors.push(error);
+        if (index === subscriptions.length - 1 || subscriptions.length === 0) {
+            return checkNotificationResults();
+        }
+    }
+
+    function checkNotificationResults() {
+        if (errors.length === 0) {
+            res.send(constants.messages.MULTIPLE_PUBLISH_SUCCESS_MESSAGE);
+        } else {
+            res.status(500).send(constants.errors.ERROR_MULTIPLE_PUBLISH);
+        }
+        return next();
     }
 });
 
 app.get('/', (req, res) => {
+    log('API is up and running');
     res.send(runningMessage);
 });
 
-app.listen(port, () => console.log(runningMessage));
+app.listen(port, () => log(runningMessage));

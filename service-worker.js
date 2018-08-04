@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 const APP_PREFIX = 'donboulton';
 const VERSION = 'version_03';
@@ -141,124 +141,123 @@ const URLS = [
 ];
 
 self.addEventListener('fetch', function (e) {
-  console.log('fetch request : ' + e.request.url);
-  e.respondWith(
-    caches.match(e.request).then(function (request) {
-      if (request) {
-        console.log('responding with cache : ' + e.request.url);
-        return request;
-      } else {
-        console.log('file is not cached, fetching : ' + e.request.url);
-        return fetch(e.request)
-      }
-    })
-  );
+    console.log('fetch request : ' + e.request.url);
+    e.respondWith(
+      caches.match(e.request).then(function (request) {
+          if (request) {
+              console.log('responding with cache : ' + e.request.url);
+              return request;
+          } else {
+              console.log('file is not cached, fetching : ' + e.request.url);
+              return fetch(e.request)
+          }
+      })
+    );
 });
 
 self.addEventListener('install', function (e) {
-  e.waitUntil(
+    e.waitUntil(
     caches.open(CACHE_NAME).then(function (cache) {
-      console.log('installing cache : ' + CACHE_NAME);
-      return cache.addAll(URLS);
+        console.log('installing cache : ' + CACHE_NAME);
+        return cache.addAll(URLS);
     })
   );
 });
 
 self.addEventListener('activate', function (e) {
-  e.waitUntil(
+    e.waitUntil(
     caches.keys().then(function (keyList) {
 
-      var cacheWhitelist = keyList.filter(function (key) {
-        return key.indexOf(APP_PREFIX);
-      });
+        const cacheWhitelist = keyList.filter(function (key) {
+            return key.indexOf(APP_PREFIX);
+        });
 
-      cacheWhitelist.push(CACHE_NAME);
+        cacheWhitelist.push(CACHE_NAME);
 
-      return Promise.all(keyList.map(function (key, i) {
-        if (cacheWhitelist.indexOf(key) === -1) {
-          console.log('deleting cache : ' + keyList[i] );
-          return caches.delete(keyList[i]);
-        }
-      }));
-    })
+        return Promise.all(keyList.map(function (key, i) {
+            if (cacheWhitelist.indexOf(key) === -1) {
+                console.log('deleting cache : ' + keyList[i] );
+                return caches.delete(keyList[i]);
+            }
+        }));
+    }),
   );
 });
 
 self.addEventListener('push', (event) => {
-  if (event.data) {
-      const data = event.data.json();
+    if (event.data) {
+        const data = event.data.json();
 
-      const title = data.title;
-      const options = {
-          body: data.body,
-          icon: data.icon || 'favicon.png',
-          tag: data.tag || 'default',
-          data: data.url,
-      };
+        const title = data.title;
+        const options = {
+            body: data.body,
+            icon: data.icon || 'favicon.png',
+            tag: data.tag || 'default',
+            data: data.url,
+        };
 
-      event.waitUntil(
+        event.waitUntil(
           self.registration.showNotification(title, options),
       );
-  }
+    }
 });
 
 self.addEventListener('pushsubscriptionchange', (event) => {
-  const options = event.oldSubscription.options;
-  // Fetch options if they do not exist in the event.
-  event.waitUntil(
+    const options = event.oldSubscription.options;
+   // Fetch options if they do not exist in the event.
+    event.waitUntil(
       self.registration.pushManager.subscribe(options)
           .then((subscription) => { // eslint-disable-line no-unused-vars
               // Send new subscription to application server.
           }),
-  );
+    );
 });
 
 self.addEventListener('notificationclick', (event) => {
-  let url = 'http://localhost:8080/';
-  if (event.notification.data) {
-      url = event.notification.data;
-  }
+    let url = 'https://donboulton.com/';
+    if (event.notification.data) {
+        url = event.notification.data;
+    }
 
-  event.notification.close();
+    event.notification.close();
 
-  event.waitUntil(
-      self.clients.matchAll({
-          type: 'window',
-      }).then((clientList) => {
-          for (let i = 0; i < clientList.length; i += 1) {
-              const client = clientList[i];
-              const found = client.url === url || client.url === `${url}/`;
-              if (found && 'focus' in client) {
-                  client.focus();
-                  return;
-              }
-          }
-          if (self.clients.openWindow) {
-              self.clients.openWindow(url);
-          }
-      }),
+    event.waitUntil(
+    self.clients.matchAll({
+        type: 'window',
+    }).then((clientList) => {
+        for (let i = 0; i < clientList.length; i += 1) {
+            const client = clientList[i];
+            const found = client.url === url || client.url === `${url}/`;
+            if (found && 'focus' in client) {
+                client.focus();
+                return;
+            }
+        }
+        if (self.clients.openWindow) {
+            self.clients.openWindow(url);
+        }
+    }),
   );
 });
 
-self.addEventListener('notificationclick', function(event) {
-  console.log('On notification click: ', event.notification.tag);
-  // Android doesn’t close the notification when you click on it
-  // See: http://crbug.com/463146
-  event.notification.close();
-
-  // This looks to see if the current is already open and
-  // focuses if it is
-  event.waitUntil(clients.matchAll({
-    type: 'window'
-  }).then(function(clientList) {
-    for (var i = 0; i < clientList.length; i++) {
-      var client = clientList[i];
-      if (client.url === '/' && 'focus' in client) {
-        return client.focus();
-      }
-    }
-    if (clients.openWindow) {
-      return clients.openWindow('/');
-    }
-  }));
+self.addEventListener('notificationclick', function (event) {
+    console.log('On notification click: ', event.notification.tag);
+    // Android doesn’t close the notification when you click on it
+    // See: http://crbug.com/463146
+    event.notification.close();
+    // This looks to see if the current is already open and
+    // focuses if it is
+    event.waitUntil(clients.matchAll({
+        type: 'window'
+    }).then(function(clientList) {
+        for (let i = 0; i < clientList.length; i++) {
+            const client = clientList[i];
+            if (client.url === '/' && 'focus' in client) {
+                return client.focus();
+            }
+        }
+        if (clients.openWindow) {
+            return clients.openWindow('/');
+        }
+    }));
 });

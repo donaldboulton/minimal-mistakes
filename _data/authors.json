@@ -1,0 +1,22 @@
+# Authors
+
+{
+	"Donald Boulton": {
+		"name": "Donald Boulton",
+		"uri": "https://donboulton.com",
+		"email": "donaldboulton@gmail.com",
+		"bio": "Work Full Time for Father God.",
+		"avatar": "/assets/images/pages/donald-boulton-100.jpg",
+		"twitter": "donboulton",
+		"google_plus": "donaldboulton"
+	},
+	"Michael Rose": {
+		"name": "Michael Rose",
+		"uri": "https://mademistakes.com",
+		"email": "michaelrose@mademistakes.com",
+		"bio": "Just making mistakes.",
+		"avatar": "/assets/images/pages/michael-rose.jpg",
+		"twitter": "mademistakes",
+		"google_plus": "mademistakes"
+	}
+}
