@@ -1,4 +1,4 @@
-/* eslint consistent-return:0 */
+'use strict';
 
 import push from './push';
 

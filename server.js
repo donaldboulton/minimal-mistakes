@@ -1,30 +1,93 @@
-const webpush = require('web-push');
+// Pull in dependencies
+const express = require('express');
+const webPush = require('web-push');
+const bodyParser = require('body-parser');
+const _ = require('lodash');
 
-// const vapidKeys = webpush.generateVAPIDKeys();
-// console.log(vapidKeys.publicKey);
-// console.log(vapidKeys.privateKey);
-// process.exit();
+// Server settings with ExpressJS
+const app = express();
+const port = process.env.PORT || 3000;
+const runningMessage = 'Server is running on port ' + port;
 
-webpush.setVapidDetails(
-    'mailto:donaldboulton@gmail.com',
-    'BOew5Tx7fTX51GzJ7tpF3dDLNS54OvUST_dGGqzJEy54jqW2qghIRTiK7BfOpCPp8xNfMH7Mtprl3hp_WGjgslU',
-    'ymblNrJSzlXdRMhFYdXh1Hda8HkIO76aVs85X93wAjc'
-);
+// Set up custom dependencies
+// Constants just contains common messages so they're in one place
+const constants = require('./constants');
 
-const subscription = {
-    endpoint: null,
-    keys: {
-        p256dh: null,
-        auth: null,
-    },
+// VAPID keys should only be generated once.
+// use `web-push generate-vapid-keys --json` to generate in terminal
+// then export them in your shell with the follow env key names
+const vapidKeys = {
+    publicKey: process.env.BOew5Tx7fTX51GzJ7tpF3dDLNS54OvUST_dGGqzJEy54jqW2qghIRTiK7BfOpCPp8xNfMH7Mtprl3hp_WGjgslU,
+    privateKey: process.env.ymblNrJSzlXdRMhFYdXh1Hda8HkIO76aVs85X93wAjc,
 };
 
-const notification = JSON.stringify({
-    title: 'What is Up',
-    body: 'Hello World, DWB ;)',
-    url: 'https://twitter.com/donboulton',
+// Tell web push about our application server
+webPush.setVapidDetails('mailto:donaldboulton@gmail.com', vapidKeys.publicKey, vapidKeys.privateKey);
+
+// Store subscribers in memory
+const subscriptions = [];
+
+// Set up CORS and allow any host for now to test things out
+// WARNING! Don't use `*` in production unless you intend to allow all hosts
+app.use(bodyParser.json());
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+    return next();
 });
 
-webpush.sendNotification(subscription, notification)
-    .then(success => console.log(success))
-    .catch(error => console.log(error));
+// Allow clients to subscribe to this application server for notifications
+app.post('/subscribe', (req, res) => {
+    const body = JSON.stringify(req.body);
+    let sendMessage;
+    if (_.includes(subscriptions, body)) {
+        sendMessage = constants.messages.SUBSCRIPTION_ALREADY_STORED;
+    } else {
+        subscriptions.push(body);
+
+        sendMessage = constants.messages.SUBSCRIPTION_STORED;
+    }
+    res.send(sendMessage);
+});
+
+// Allow host to trigger push notifications from the application server
+app.post('/push', (req, res, next) => {
+    const pushSubscription = req.body.pushSubscription;
+    const notificationMessage = req.body.notificationMessage;
+
+    if (!pushSubscription) {
+        res.status(400).send(constants.errors.ERROR_SUBSCRIPTION_REQUIRED);
+        return next(false);
+    }
+
+    if (subscriptions.length) {
+        subscriptions.map((subscription, index) => {
+            const jsonSub = JSON.parse(subscription);
+
+      // Use the web-push library to send the notification message to subscribers
+            webPush
+        .sendNotification(jsonSub, notificationMessage)
+        .then(success => handleSuccess(success, index))
+        .catch(error => handleError(error, index));
+        });
+    } else {
+        res.send(constants.messages.NO_SUBSCRIBERS_MESSAGE);
+        return next(false);
+    }
+
+    function handleSuccess(success, index) {
+        res.send(constants.messages.SINGLE_PUBLISH_SUCCESS_MESSAGE);
+        return next(false);
+    }
+
+    function handleError(error, index) {
+        res.status(500).send(constants.errors.ERROR_MULTIPLE_PUBLISH);
+        return next(false);
+    }
+});
+
+app.get('/', (req, res) => {
+    res.send(runningMessage);
+});
+
+app.listen(port, () => console.log(runningMessage));
