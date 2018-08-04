@@ -258,5 +258,11 @@ function addNavItem(ul, href, text) {
       console.log('Service worker successfully registered on scope', registration.scope);
   });
 }
+if ($.support.pjax) {
+    $(document).on('click', 'a[data-pjax]', function(event) {
+     var container = $(this).closest('[data-pjax-container]')
+    $.pjax.click(event, {container: container})
+     })
+}
 </script>
 

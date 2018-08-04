@@ -16,7 +16,7 @@
               {% assign domain = site.url | append: site.baseurl %}
             {% endif %}
             <li class="masthead__menu-item">
-              <a itemprop="url" href="{{ domain }}{{ link.url }}" {% if link.description %}title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
+              <a itemprop="url" href="{{ domain }}{{ link.url }}" {% if link.description %}title="{{ link.description }}"{% endif %} data-pjax>{{ link.title }}</a>
             </li>
           {% endfor %}
           {% if products == true %}
