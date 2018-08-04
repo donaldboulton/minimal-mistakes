@@ -219,14 +219,14 @@ function addNavItem(ul, href, text) {
 {% endif %}
 
 {% if page.web-intents == true %}
-<script src="{{ '/assets/js/vendor/twitter/web-intents.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/vendor/twitter/web-intents.js' | relative_url }}"></script>
 {% endif %}
 
 {% if page.footnotes == true %}
-   <script src="{{ '/assets/js/vendor/bigfoot/bigfoot.min.js' | relative_url }}"></script>
-   <script>
+  <script src="{{ '/assets/js/vendor/bigfoot/bigfoot.min.js' | relative_url }}"></script>
+  <script>
      var bigfoot = $.bigfoot();
-   </script>
+  </script>
 {% endif %}
 
 <script>
@@ -262,7 +262,7 @@ if ($.support.pjax) {
     $(document).on('click', 'a[data-pjax]', function(event) {
      var container = $(this).closest('[data-pjax-container]')
     $.pjax.click(event, {container: container})
-     })
+    })
 }
 </script>
 
