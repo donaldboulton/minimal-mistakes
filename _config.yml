@@ -168,6 +168,11 @@ author:
 weather:
   - platform             : "openweathermap"
     api_key              : "8f4c1537b5fad3b111dae7b441fd0937"
+
+vapidKeys:
+  - publicKey            : "BOew5Tx7fTX51GzJ7tpF3dDLNS54OvUST_dGGqzJEy54jqW2qghIRTiK7BfOpCPp8xNfMH7Mtprl3hp_WGjgslU"
+  - privateKey           : "ymblNrJSzlXdRMhFYdXh1Hda8HkIO76aVs85X93wAjc"
+
 extlinks:
   attributes: {rel: nofollow, target: _blank}
   rel_exclude: ['facebook.com', 'twitter.com']
