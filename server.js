@@ -17,8 +17,8 @@ const constants = require('./constants');
 // use `web-push generate-vapid-keys --json` to generate in terminal
 // then export them in your shell with the follow env key names
 const vapidKeys = {
-    publicKey: process.env.site.VAPID_PUBLIC_KEY,
-    privateKey: process.env.site.VAPID_PRIVATE_KEY,
+    publicKey: 'BOew5Tx7fTX51GzJ7tpF3dDLNS54OvUST_dGGqzJEy54jqW2qghIRTiK7BfOpCPp8xNfMH7Mtprl3hp_WGjgslU',
+    privateKey: 'ymblNrJSzlXdRMhFYdXh1Hda8HkIO76aVs85X93wAjc',
 };
 
 // Tell web push about our application server
@@ -64,11 +64,9 @@ app.post('/push', (req, res, next) => {
         subscriptions.map((subscription, index) => {
             const jsonSub = JSON.parse(subscription);
 
-      // Use the web-push library to send the notification message to subscribers
-            webPush
-        .sendNotification(jsonSub, notificationMessage)
-        .then(success => handleSuccess(success, index))
-        .catch(error => handleError(error, index));
+            webPush.sendNotification(jsonSub, notificationMessage)
+                .then(success => handleSuccess(success, index))
+                .catch(error => handleError(error, index));
         });
     } else {
         res.send(constants.messages.NO_SUBSCRIBERS_MESSAGE);

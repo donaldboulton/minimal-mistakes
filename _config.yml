@@ -173,6 +173,10 @@ vapidKeys:
   - publicKey            : "BOew5Tx7fTX51GzJ7tpF3dDLNS54OvUST_dGGqzJEy54jqW2qghIRTiK7BfOpCPp8xNfMH7Mtprl3hp_WGjgslU"
   - privateKey           : "ymblNrJSzlXdRMhFYdXh1Hda8HkIO76aVs85X93wAjc"
 
+hawk:
+  - authID               : "dh37fgj492je"
+  - authKey              : npm"werxhqb98rpaxn39848xrunpaw3489ruxnpa98w4rxn"
+
 extlinks:
   attributes: {rel: nofollow, target: _blank}
   rel_exclude: ['facebook.com', 'twitter.com']
