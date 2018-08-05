@@ -187,80 +187,49 @@ self.addEventListener('activate', function (e) {
   );
 });
 
-self.addEventListener('push', (event) => {
-    if (event.data) {
-        const data = event.data.json();
-
-        const title = data.title;
-        const options = {
-            body: data.body,
-            icon: data.icon || 'favicon.png',
-            tag: data.tag || 'default',
-            data: data.url,
-        };
-
-        event.waitUntil(
-          self.registration.showNotification(title, options),
-      );
+function handlePushEvent(event) {
+  const DEFAULT_TAG = 'donboulton'
+  return Promise.resolve()
+  .then(() => {
+    return event.data.json();
+  })
+  .then((data) => {
+    const title = data.notification.title;
+    const options = data.notification;
+    if (!options.tag) {
+      options.tag = DEFAULT_TAG;
     }
+    return registration.showNotification(title, options);
+  })
+  .catch((err) => {
+    console.error('Push event caused an error: ', err);
+
+    const title = 'Message Received';
+    const options = {
+      body: event.data.text(),
+      tag: DEFAULT_TAG
+    };
+    return registration.showNotification(title, options);
+  });
+}
+
+self.addEventListener('push', function(event) {
+  event.waitUntil(handlePushEvent(event));
 });
 
-self.addEventListener('pushsubscriptionchange', (event) => {
-    const options = event.oldSubscription.options;
-   // Fetch options if they do not exist in the event.
-    event.waitUntil(
-      self.registration.pushManager.subscribe(options)
-          .then((subscription) => { // eslint-disable-line no-unused-vars
-              // Send new subscription to application server.
-          }),
-    );
+const doSomething = () => {
+  return Promise.resolve();
+};
+
+// This is here just to highlight the simple version of notification click.
+// Normally you would only have one notification click listener.
+/**** START simpleNotification ****/
+self.addEventListener('notificationclick', function(event) {
+  const clickedNotification = event.notification;
+  clickedNotification.close();
+
+  // Do something as the result of the notification click
+  const promiseChain = doSomething();
+  event.waitUntil(promiseChain);
 });
-
-self.addEventListener('notificationclick', (event) => {
-    let url = 'https://donboulton.com/';
-    if (event.notification.data) {
-        url = event.notification.data;
-    }
-
-    event.notification.close();
-
-    event.waitUntil(
-    self.clients.matchAll({
-        type: 'window',
-    }).then((clientList) => {
-        for (let i = 0; i < clientList.length; i += 1) {
-            const client = clientList[i];
-            const found = client.url === url || client.url === `${url}/`;
-            if (found && 'focus' in client) {
-                client.focus();
-                return;
-            }
-        }
-        if (self.clients.openWindow) {
-            self.clients.openWindow(url);
-        }
-    }),
-  );
-});
-
-self.addEventListener('notificationclick', function (event) {
-    console.log('On notification click: ', event.notification.tag);
-    // Android doesn’t close the notification when you click on it
-    // See: http://crbug.com/463146
-    event.notification.close();
-    // This looks to see if the current is already open and
-    // focuses if it is
-    event.waitUntil(clients.matchAll({
-        type: 'window'
-    }).then(function(clientList) {
-        for (let i = 0; i < clientList.length; i++) {
-            const client = clientList[i];
-            if (client.url === '/' && 'focus' in client) {
-                return client.focus();
-            }
-        }
-        if (clients.openWindow) {
-            return clients.openWindow('/');
-        }
-    }));
-});
+/**** END simpleNotification ****/

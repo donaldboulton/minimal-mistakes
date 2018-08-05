@@ -1,14 +1,19 @@
 <article class="toc1">
     <span class="section-title">
         <h3 class="nav__title1">
-        <svg class="icon icon--folder fa-bell" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-bell' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;<h3 class="nav__title1">
+        <svg class="icon icon--folder fa-bell" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-bell' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;
         Notications</h3>
     </span>
   <div class="toc1__menu">
       <h3>Subcriptions</h3>
-      <p><button id="btnPushNotifications" name="btnPushNotifications" class="btn btn--danger js-button" disabled>Enable Notifications</button></p>
-      <small>subscription.toJSON()</small>
-      <p><pre class="js-subscription"></pre></p>
       <p><small><a href="https://donboulton.com/">https://donboulton.com/</a></small></p>
+      <div class="enable-push">
+        <div class="toggle-switch">
+          <input id="enable-push-checkbox" class="js-push-toggle-checkbox" type="checkbox" disabled></input>
+          <label for="enable-push-checkbox"></label>
+        </div>
+        <div class="subscription-message">Enable Notifications</div>
+      </div>
+      <p><a class="button" href="/admin.html" target="blank">Open Admin Panel</a></p>
   </div>
 </article>

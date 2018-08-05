@@ -1,23 +1,21 @@
 // Pull in dependencies
-const express = require('express');
 const webPush = require('web-push');
+const express = require('express');
+const path = require('path');
 const bodyParser = require('body-parser');
 const _ = require('lodash');
+const Datastore = require('nedb');
+
+/**** START web-push-gcm ****/
+const gcmServerKey = 'ff69aae7073f66de53794153adf06ddf07c45b21';
+webpush.setGCMAPIKey(gcmServerKey);
+/**** END web-push-gcm ****/
 
 const hostname = 'https://donboulton.com';
-
-// Server settings with ExpressJS
-const app = express();
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-const port = process.env.PORT || 80;
-const runningMessage = 'Server is running on port ' + port;
 
 // Set up custom dependencies
 // Constants just contains common messages so they're in one place
 const constants = require('./constants');
-
-const log = console.log;
 
 // VAPID keys should only be generated once.
 // use `web-push generate-vapid-keys --json` to generate in terminal
@@ -30,113 +28,194 @@ const vapidKeys = {
 // Tell web push about our application server
 webPush.setVapidDetails('mailto:donaldboulton@gmail.com', vapidKeys.publicKey, vapidKeys.privateKey);
 
-// Store subscribers in memory
-const subscriptions = [];
+const db = new Datastore({
+  filename: path.join(__dirname, 'subscription-store.db'),
+  autoload: true
+});
 
-// Set up CORS and allow any host for now to test things out
-// WARNING! Don't use `*` in production unless you intend to allow all hosts
+/**** START save-sub-function ****/
+function saveSubscriptionToDatabase(subscription) {
+  return new Promise(function(resolve, reject) {
+    db.insert(subscription, function(err, newDoc) {
+      if (err) {
+        reject(err);
+        return;
+      }
+
+      resolve(newDoc._id);
+    });
+  });
+};
+/**** END save-sub-function ****/
+
+function getSubscriptionsFromDatabase() {
+  return new Promise(function(resolve, reject) {
+    db.find({}, function(err, docs) {
+      if (err) {
+        reject(err);
+        return;
+      }
+
+      resolve(docs);
+    })
+  });
+}
+
+function deleteSubscriptionFromDatabase(subscriptionId) {
+  return new Promise(function(resolve, reject) {
+  db.remove({_id: subscriptionId }, {}, function(err) {
+      if (err) {
+        reject(err);
+        return;
+      }
+
+      resolve();
+    });
+  });
+}
+
+/**** START save-sub-api-validate ****/
+const isValidSaveRequest = (req, res) => {
+  // Check the request body has at least an endpoint.
+  if (!req.body || !req.body.endpoint) {
+    // Not a valid subscription.
+    res.status(400);
+    res.setHeader('Content-Type', 'application/json');
+    res.send(JSON.stringify({
+      error: {
+        id: 'no-endpoint',
+        message: 'Subscription must have an endpoint.'
+      }
+    }));
+    return false;
+  }
+  return true;
+};
+/**** END save-sub-api-validate ****/
+
+const app = express();
+app.use(express.static(path.join(__dirname, 'frontend')));
 app.use(bodyParser.json());
+app.use(bodyParser.text());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     return next();
 });
+/**** START save-sub-example ****/
+/**** START save-sub-api-post ****/
+app.post('/api/save-subscription/', function (req, res) {
+/**** END save-sub-api-post ****/
+  if (!isValidSaveRequest(req, res)) {
+    return;
+  }
 
-// Allow clients to subscribe to this application server for notifications
-app.post('/subscribe', (req, res) => {
-    const body = JSON.stringify(req.body);
-    let sendMessage;
-    if (_.includes(subscriptions, body)) {
-        log(constants.messages.SUBSCRIPTION_ALREADY_STORED);
-        sendMessage = constants.messages.SUBSCRIPTION_ALREADY_STORED;
+  /**** START save-sub-api-save-subscription ****/
+  return saveSubscriptionToDatabase(req.body)
+  .then(function(subscriptionId) {
+    res.setHeader('Content-Type', 'application/json');
+    res.send(JSON.stringify({ data: { success: true } }));
+  })
+  .catch(function(err) {
+    res.status(500);
+    res.setHeader('Content-Type', 'application/json');
+    res.send(JSON.stringify({
+      error: {
+        id: 'unable-to-save-subscription',
+        message: 'The subscription was received but we were unable to save it to our database.'
+      }
+    }));
+  });
+  /**** END save-sub-api-save-subscription ****/
+});
+/**** END save-sub-example ****/
+
+app.post('/api/get-subscriptions/', function (req, res) {
+  // TODO: This should be secured / not available publicly.
+  //       this is for demo purposes only.
+
+  return getSubscriptionsFromDatabase()
+  .then(function(subscriptions) {
+    const reducedSubscriptions = subscriptions.map((subscription) => {
+      return {
+        id: subscription._id,
+        endpoint: subscription.endpoint
+      }
+    });
+
+    res.setHeader('Content-Type', 'application/json');
+    res.send(JSON.stringify({ data: { subscriptions: reducedSubscriptions } }));
+  })
+  .catch(function(err) {
+    res.status(500);
+    res.setHeader('Content-Type', 'application/json');
+    res.send(JSON.stringify({
+      error: {
+        id: 'unable-to-get-subscriptions',
+        message: 'We were unable to get the subscriptions from our database.'
+      }
+    }));
+  });
+});
+
+/**** START trig-push-send-notification ****/
+const triggerPushMsg = function(subscription, dataToSend) {
+  return webpush.sendNotification(subscription, dataToSend)
+  .catch((err) => {
+    if (err.statusCode === 410) {
+      return deleteSubscriptionFromDatabase(subscription._id);
     } else {
-        subscriptions.push(body);
-        log(constants.messages.UPDATED_SUBSCRIPTIONS, subscriptions);
-        sendMessage = constants.messages.SUBSCRIPTION_STORED;
+      console.log('Subscription is no longer valid: ', err);
     }
-    res.send(sendMessage);
+  });
+};
+/**** END trig-push-send-notification ****/
+
+/**** START trig-push-api-post ****/
+app.post('/api/trigger-push-msg/', function (req, res) {
+/**** END trig-push-api-post ****/
+  // NOTE: This API endpoint should be secure (i.e. protected with a login
+  // check OR not publicly available.)
+
+  const dataToSend = JSON.stringify(req.body);
+
+  /**** START trig-push-send-push ****/
+  return getSubscriptionsFromDatabase()
+  .then(function(subscriptions) {
+    let promiseChain = Promise.resolve();
+
+    for (let i = 0; i < subscriptions.length; i++) {
+      const subscription = subscriptions[i];
+      promiseChain = promiseChain.then(() => {
+        return triggerPushMsg(subscription, dataToSend);
+      });
+    }
+
+    return promiseChain;
+  })
+  /**** END trig-push-send-push ****/
+  /**** START trig-push-return-response ****/
+  .then(() => {
+    res.setHeader('Content-Type', 'application/json');
+      res.send(JSON.stringify({ data: { success: true } }));
+  })
+  .catch(function(err) {
+    res.status(500);
+    res.setHeader('Content-Type', 'application/json');
+    res.send(JSON.stringify({
+      error: {
+        id: 'unable-to-send-messages',
+        message: `We were unable to send messages to all subscriptions : ` +
+          `'${err.message}'`
+      }
+    }));
+  });
+  /**** END trig-push-return-response ****/
 });
 
-// Allow host to trigger push notifications from the application server
-app.post('/push', (req, res, next) => {
-    const pushSubscription = req.body.pushSubscription;
-    const notificationMessage = req.body.notificationMessage;
-    const errors = [];
-    const successes = [];
-    log('Current subscriptions found', subscriptions);
-    log('Notification message received:', notificationMessage);
+const port = process.env.PORT || 9012;
 
-    if (!pushSubscription) {
-        res.status(400).send(constants.errors.ERROR_SUBSCRIPTION_REQUIRED);
-        return next();
-    }
-
-    if ((typeof pushSubscription === 'string' || pushSubscription instanceof String) &&
-    pushSubscription.toLocaleLowerCase() === 'all') {
-        if (subscriptions.length) {
-            subscriptions.map((subscription, index) => {
-                log(constants.messages.SENDING_NOTIFICATION_MESSAGE, subscription);
-                const jsonSub = JSON.parse(subscription);
-
-                webPush.sendNotification(jsonSub, notificationMessage)
-                  .then(success => {
-                      return handleSuccess(success, index);
-                  })
-                 .catch(error => {
-                     return handleError(error, index);
-                 });
-            });
-        } else {
-            res.send(constants.messages.NO_SUBSCRIBERS_MESSAGE);
-            return next();
-        }
-        } else {
-        let subscription;
-        try {
-            subscription = JSON.parse(pushSubscription);
-        } catch (error) {
-            return handleError(error, -1);
-        }
-
-        log(constants.messages.SENDING_NOTIFICATION_MESSAGE, pushSubscription);
-
-        webPush.sendNotification(subscription, notificationMessage)
-        .then(success => {
-            return handleSuccess(success, -1);
-        })
-        .catch(error => {
-            return handleError(error, -1);
-        });
-    }
-
-    function handleSuccess(success, index) {
-        successes.push(constants.messages.SINGLE_PUBLISH_SUCCESS_MESSAGE + success);
-        if (index === subscriptions.length - 1 || subscriptions.length === 0 || index === -1) {
-            return checkNotificationResults();
-        }
-    }
-
-    function handleError(error, index) {
-        log(error);
-        errors.push(error);
-        if (index === subscriptions.length - 1 || subscriptions.length === 0) {
-            return checkNotificationResults();
-        }
-    }
-
-    function checkNotificationResults() {
-        if (errors.length === 0) {
-            res.send(constants.messages.MULTIPLE_PUBLISH_SUCCESS_MESSAGE);
-        } else {
-            res.status(500).send(constants.errors.ERROR_MULTIPLE_PUBLISH);
-        }
-        return next();
-    }
+const server = app.listen(port, function () {
+  console.log('Running on http://localhost:' + port);
 });
-
-app.get('/', (req, res) => {
-    log('API is up and running');
-    res.send(runningMessage);
-});
-
-app.listen(port, () => log(runningMessage));
