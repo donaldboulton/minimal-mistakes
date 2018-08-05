@@ -73,7 +73,12 @@ function chmod(src, dest) {
 }
 
 function readdir(dirname, includeDotfiles, filter) {
-  return (0, _fsReaddirRecursive().default)(dirname, filename => (includeDotfiles || filename[0] !== ".") && (!filter || filter(filename)));
+  return (0, _fsReaddirRecursive().default)(dirname, (filename, _index, currentDirectory) => {
+    const stat = _fs().default.statSync(_path().default.join(currentDirectory, filename));
+
+    if (stat.isDirectory()) return true;
+    return (includeDotfiles || filename[0] !== ".") && (!filter || filter(filename));
+  });
 }
 
 function readdirForCompilable(dirname, includeDotfiles) {

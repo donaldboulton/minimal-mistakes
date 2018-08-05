@@ -97,9 +97,9 @@ Ignoring url /sitemap.xml
 
 ## Web.config
 
-Here is my web.config for Orchard 1.9.1 and it Orchard changed alot in 1.10, if using 1.10 check changes carefully. I comment in and on soon.
+Here is my web.config for Orchard 1.9.1 and it Orchard changed a lot in 1.10, if using 1.10 check changes carefully. I comment in and on soon.
 
-Leveraging prefetch cache and Vary policys, and caching on XML.
+Leveraging prefetch cache and Vary policies, and caching on XML.
 
 ```html
   <httpHandlers>
@@ -173,7 +173,7 @@ JadeX HTML Minifaction at: [https://github.com/JadeX/Orchard.HtmlMinifier](https
 
 Module designed to reduce size of output HTML to bare minimum while maintaining same functionality for your Orchard website.
 
-Size for simple pages gets reduced by 10% (gzipped) or 20% (uncompressed) respectively. As page gets more complex with more shapes and content, reduction ratio grows.
+Size for simple pages gets reduced by 10% (g-zipped) or 20% (uncompressed) respectively. As page gets more complex with more shapes and content, reduction ratio grows.
 
 Minification makes full use of Output caching provided by Orchard.OutputCache module to prevent recurring minification for responses that were already recently minified.
 
@@ -185,7 +185,7 @@ I use all the stock settings seems to work great and works with Orchard 1.10. Th
 
 ## Gzip
 
-Gzipped file settings on upload I use reduuced redundancy storage and the on mime types uncheck figure out mime types automatically and the add Content type for .js add application/x-javascript for .css files add text/css,
+G-zipped file settings on upload I use reduced redundancy storage and the on mime types uncheck figure out mime types automatically and the add Content type for .js add application/x-javaScript for .css files add text/css,
 
 I set Cache-Control to public, max-age=2592000,
 
@@ -193,13 +193,13 @@ Expires Wed, 01-Feb-2017 16:32:35 GMT should be at least a year ahead of today. 
 
 Content-Encoding set to gzip
 
-The files uploaded will still have the extenshion like site-slate.min.css.gz so just rename them like site-slate.min.css no .gz.
+The files uploaded will still have the extension like site-slate.min.css.gz so just rename them like site-slate.min.css no .gz.
 
-Now if you read about this you should have one file gzipped and one file not, if you do not have the correct HTTP Request and Resopnse header for older browsers = I do not care anything about older browsers. so judge for yourself
+Now if you read about this you should have one file g-zipped and one file not, if you do not have the correct HTTP Request and Response header for older browsers = I do not care anything about older browsers. so judge for yourself
 
 ## AWS S3
 
-There is allot of information on setting up AWS S3 and Cloudfront so I will not go into that; just how I use it for file distribution, and I use my own static cookiesless, "except for oauth cookie from Cloud Front", subweb for my link as static.donboulton.com which can be set up on your server and then on AWS S3 and Cloud Front adding to your web.config
+There is allot of information on setting up AWS S3 and CloudFront so I will not go into that; just how I use it for file distribution, and I use my own static cookie-less, "except for oauth cookie from Cloud Front", sub web for my link as static.donboulton.com which can be set up on your server and then on AWS S3 and Cloud Front adding to your web.config
 
 ```html
 <add name="Access-Control-Allow-Origin" value="http://yoursite.com" />
@@ -208,18 +208,18 @@ There is allot of information on setting up AWS S3 and Cloudfront so I will not 
 
 For a Poor Mans CDN "WoW", for me about $0.30 a month added to the $25.00 Ultimate plan at Winhost.com and its very affordable and as you can see donboulton.com is super fast. A stock installation of Orchard on winhost servers is way slower.
 
-All my static files are congregated, minified, then if its .css or .js its Gzipped and served from AWS through Cloudfront.
+All my static files are congregated, minified, then if its .css or .js its Gzipped and served from AWS through CloudFront.
 
-I used to use Combinator but it adds to the end of the file a timestamp =?whatever, well servers complain about the ? and sometimes it did what it wanted; so I just started to congregate or combine them together. My jquary.js file has about 12 other minified scripts added to it and then using 7-zip I gzip it to the Ultra max. ends up about 40kb would be served individually over 500kb and 12 round trips for the individual files. Even added pjax minified version at the bottom of my jquary file, works great.
+I used to use Combinator but it adds to the end of the file a timestamp =?whatever, well servers complain about the ? and sometimes it did what it wanted; so I just started to congregate or combine them together. My jquary.js file has about 12 other minified scripts added to it and then using 7-zip I gzip it to the Ultra max. ends up about 40kb would be served individually over 500kb and 12 round trips for the individual files. Even added pjax minified version at the bottom of my jQuary file, works great.
 
-Doing the same for all of my .css files. I use PJS.Bootstrap which has the ability to change styles so it injects the style sheet from settings through Models and Handlers, so eliminated Models and Handlers all the reference's to injection and add a direct link to my site-slate.min.css file minified and Gzipped to the Ultimate max, adding all font files .less files .sass file and progressive minified images to my AWS CDN so all static content is on AWS keeping the bootstrap file structure in tact.
+Doing the same for all of my .css files. I use PJS.Bootstrap which has the ability to change styles so it injects the style sheet from settings through Models and Handlers, so eliminated Models and Handlers all the reference's to injection and add a direct link to my site-slate.min.css file minified and G-zipped to the Ultimate max, adding all font files .less files .sass file and progressive minified images to my AWS CDN so all static content is on AWS keeping the bootstrap file structure in tact.
 
-So I get one .js file and one.css file for most of my site, have to add some others on certain pages like jquary- lightbox image gallery for my portfolios'.
+So I get one .js file and one.css file for most of my site, have to add some others on certain pages like lightboxGallery image gallery for my portfolios'.
 
 ### Web Fundamentals Http Caching
 
 Taken from:
-[Page Insites Google developers](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching?hl=en)
+[Page Incites Google developers](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching?hl=en)
 
 Fetching something over the network is both slow and expensive: large responses require many roundtrips between the client and server, which delays when they are available and can be processed by the browser, and also incurs data costs for the visitor. As a result, the ability to cache and reuse previously fetched resources is a critical aspect of optimizing for performance.
 
@@ -235,7 +235,7 @@ Great news, every browser ships with an implementation of an HTTP cache! All we 
 
 ### Remember
 
-If you are using a Webview to fetch and display web content in your application, you may need to provide additional configuration flags to ensure that the HTTP cache is enabled, its size is set to a reasonable number to match your use case, and that the cache is persisted. Check the platform documentation and confirm your settings!
+If you are using a Web-view to fetch and display web content in your application, you may need to provide additional configuration flags to ensure that the HTTP cache is enabled, its size is set to a reasonable number to match your use case, and that the cache is persisted. Check the platform documentation and confirm your settings!
 
 {% include figure image_path="/assets/images/pages/performance/http-request.png" alt="Http-Request" caption="Http-Request" class="align-left" %}
 
@@ -246,15 +246,15 @@ When the server returns a response it also emits a collection of HTTP headers, d
 Validation token is communicated by the server via the ETag HTTP header
 Validation token enables efficient resource update checks: no data transfer if the resource has not changed.
 
-Lets assume 120 seconds have passed since our initial fetch and the browser has initiated a new request for the same resource. First, the browser checks the local cache and finds the previous response, unfortunately it cannot use it as the response has now expired. At this point it could simply dispatch a new request and fetch the new full response, but thats inefficient because if the resource has not changed then there is no reason to download the exact same bytes that are already in cache!
+Lets assume 120 seconds have passed since our initial fetch and the browser has initiated a new request for the same resource. First, the browser checks the local cache and finds the previous response, unfortunately it cannot use it as the response has now expired. At this point it could simply dispatch a new request and fetch the new full response, but that's inefficient because if the resource has not changed then there is no reason to download the exact same bytes that are already in cache!
 
-Thats the problem that validation tokens, as specified in the ETag header, are designed to solve: the server generates and returns an arbitrary token which is typically a hash or some other fingerprint of the contents of the file. The client does not need to know how the fingerprint is generated, it only needs to send it to the server on the next request: if the fingerprint is still the same then the resource has not changed and we can skip the download.
+That's the problem that validation tokens, as specified in the ETag header, are designed to solve: the server generates and returns an arbitrary token which is typically a hash or some other fingerprint of the contents of the file. The client does not need to know how the fingerprint is generated, it only needs to send it to the server on the next request: if the fingerprint is still the same then the resource has not changed and we can skip the download.
 
 {% include figure image_path="/assets/images/pages/performance/http-cache-control.png" alt="Cache Control" caption="Cache Control" class="align-left" %}
 
 In above example the client automatically provides the ETag token within the If-None-Match HTTP request header, the server checks the token against the current resource, and if it has not changed returns a 304 Not Modified response which tells the browser that the response it has in cache has not changed and can be renewed for another 120 seconds. Note that we do not have to download the response once more - this saves time and bandwidth.
 
-As a web developer, how do you take advantage of efficient revalidation? The browser does all the work on our behalf. It will automatically detect if a validation token has been previously specified, it will append it to an outgoing request, and it will update the cache timestamps as necessary based on received response from the server. The only thing thats left for us to do is to ensure that the server is, in fact, providing the necessary ETag tokens: check your server documentation for necessary configuration flags.
+As a web developer, how do you take advantage of efficient revalidation? The browser does all the work on our behalf. It will automatically detect if a validation token has been previously specified, it will append it to an outgoing request, and it will update the cache timestamps as necessary based on received response from the server. The only thing that's left for us to do is to ensure that the server is, in fact, providing the necessary ETag tokens: check your server documentation for necessary configuration flags.
 
 ### To Remember
 
@@ -277,11 +277,11 @@ Cache-Control header was defined as part of the HTTP/1.1 specification and super
 
 no-cache indicates that the returned response cannot be used to satisfy a subsequent request to the same URL without first checking with the server if the response has changed. As a result, if a proper validation token (ETag) is present, no-cache will incur a roundtrip to validate the cached response, but can eliminate the download if the resource has not changed.
 
-By contrast, no-store is much simpler, as it simply disallows the browser and all intermediate caches to store any version of the returned response - e.g. one containing private personal or banking data. Everytime the user requests this asset, a request is sent to the server and a full response is downloaded each and every time.
+By contrast, no-store is much simpler, as it simply disallows the browser and all intermediate caches to store any version of the returned response - e.g. one containing private personal or banking data. Every time the user requests this asset, a request is sent to the server and a full response is downloaded each and every time.
 
 ## public vs. private
 
-If the response is marked as public then it can be cached, even if it has HTTP authentication associated with it, and even when the response status code isnt normally cacheable. Most of the time, public isnt necessary, because explicit caching information (like max-age) indicates that the response is cacheable anyway.
+If the response is marked as public then it can be cached, even if it has HTTP authentication associated with it, and even when the response status code is not normally cacheable. Most of the time, public is not necessary, because explicit caching information (like max-age) indicates that the response is cacheable anyway.
 
 By contrast, private responses can be cached by the browser but are typically intended for a single user and hence are not allowed to be cached by any intermediate cache - e.g. an HTML page with private user information can be cached by that users browser, but not by a CDN.
 
@@ -301,7 +301,7 @@ max-age=86400 Response can be cached by browser and any intermediary caches (i.e
 private, max-age=600 Response can be cached by the clients browser only for up to 10 minutes (60 seconds x 10 minutes)
 no-store Response is not allowed to be cached and must be fetched in full on every request.
 
-According to HTTP Archive, amongst the top 300,000 sites (by Alexa rank), nearly half of all the downloaded responses can be cached by the browser, which is a huge savings for repeat pageviews and visits! Of course, that doesnt mean that your particular application will have 50% of resources that can be cached: some sites can cache 90%+ of their resources, while others may have a lot of private or time-sensitive data that cant be cached at all.
+According to HTTP Archive, amongst the top 300,000 sites (by Alexa rank), nearly half of all the downloaded responses can be cached by the browser, which is a huge savings for repeat pageviews and visits! Of course, that doesn't mean that your particular application will have 50% of resources that can be cached: some sites can cache 90%+ of their resources, while others may have a lot of private or time-sensitive data that cant be cached at all.
 
 Audit your pages to identify which resources can be cached and ensure that they are returning appropriate Cache-Control and ETag headers.
 
@@ -313,7 +313,7 @@ Each application needs to define its own cache hierarchy for optimal performance
 
 All HTTP requests made by the browser are first routed to the browser cache to check if there is a valid cached response that can be used to fulfill the request. If there is a match, the response is read from the cache and we eliminate both the network latency and the data costs incurred by the transfer. However, what if we want to update or invalidate a cached response?
 
-For example, lets say weve told our visitors to cache a CSS stylesheet for up to 24 hours (max-age=86400), but our designer has just committed an update that we would like to make available to all users. How do we notify all the visitors with what is now a stale cached copy of our CSS to update their caches? Its a trick question - we cant, at least not without changing the URL of the resource.
+For example, lets say we told our visitors to cache a CSS stylesheet for up to 24 hours (max-age=86400), but our designer has just committed an update that we would like to make available to all users. How do we notify all the visitors with what is now a stale cached copy of our CSS to update their caches? Its a trick question - we cant, at least not without changing the URL of the resource.
 
 Once the response is cached by the browser, the cached version will be used until it is no longer fresh, as determined by max-age or expires, or until it is evicted from cache for some other reason - e.g. the user clearing their browser cache. As a result, different users might end up using different versions of the file when the page is constructed; users who just fetched the resource will use the new version, while users who cached an earlier (but still valid) copy will use an older version of its response.
 
@@ -325,7 +325,7 @@ The ability to define per-resource caching policies allows us to define cache hi
 
 The HTML is marked with no-cache, which means that the browser will always revalidate the document on each request and fetch the latest version if the contents change. Also, within the HTML markup we embed fingerprints in the URLs for CSS and JavaScript assets: if the contents of those files change, then the HTML of the page will change as well and new copy of the HTML response will be downloaded.
 The CSS is allowed to be cached by browsers and intermediate caches (e.g. a CDN), and is set to expire in 1 year. Note that we can use the far future expires of 1 year safely because we embed the file fingerprint its filename: if the CSS is updated, the URL will change as well.
-The JavaScript is also set to expire in 1 year, but is marked as private, perhaps because it contains some private user data that the CDN shouldnt cache.
+The JavaScript is also set to expire in 1 year, but is marked as private, perhaps because it contains some private user data that the CDN shouldn't cache.
 The image is cached without a version or unique fingerprint and is set to expire in 1 day.
 
 The combination of ETag, Cache-Control, and unique URLs allows us to deliver the best of all worlds: long-lived expiry times, control over where the response can be cached, and on-demand updates.
@@ -375,7 +375,7 @@ Upgrade-Insecure-Requests: 1
 
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.47 Safari/537.36
 
-## Responsed Headers
+## Response Headers
 
 HTTP/1.1 200 OK
 
@@ -451,7 +451,7 @@ When the whole page is redirected, our eyes will re-checking the new page, while
 
 Reduce bandwidth and server cost
 
-Since only part of the page is updated, many requests such as CSS/JS requests will not be sent anymore. Although no testings did on how much cost can be saved, the estimation is around 40% and the server cost can be reduced by 30%.
+Since only part of the page is updated, many requests such as CSS/JS requests will not be sent anymore. Although no testing's did on how much cost can be saved, the estimation is around 40% and the server cost can be reduced by 30%.
 
 pjax also has some disadvantages:
 
@@ -555,3 +555,26 @@ My tabs are pjaxed and I added this to Zone after content so the origional pjax 
 ```html
 <div id="tabs-container" class="data-pjax-container" data-pjax-container>
 ```
+
+## Jekyll Pjax
+
+I thought I would try [Denfukt Jquery-pjax](https://github.com/defunkt/jquery-pjax) with a service worker as the backend server on GitHub Pages.
+
+Pjax works with server interaction, and Jekyll is, STATIC, so it said. so a service worker is my backend, with a node express, web-push server, doing push-notifications, and pjax works on push state.
+
+And it works Great if you view Chrome console And Go to any page in donboulton.com, you will see to the right of the dev tools window hidden files, pjax told the server as a service worker not to fetch the files already cached. And sends on the page html file and the changed images.
+
+### Page Load times
+
+All scripts, main.css and external files from Google, Twitter and my API's do not get fetched again.
+
+Page load time went from 3.5s to 2.5s with a page that's 948.6kb, pretty fast.
+
+{% include figure image_path="/assets/images/pjax-hidden-files-800.jpg
+" alt="Pjax Hidden files" caption="Chrome Dev Hidden files" class="align-center" %}
+
+My page loads are super fast add a service worker and pjax. On some page loads I am only fetching 3 files 2018-03-27-post-Website-Tweaks.html, the Images for the Page, and for some reason the main.css file. Nothing from Google or any of my Scripts.
+
+Will be adding the Code soon as I am working on it.
+
+Progress can be viewed on my GitHub repo. Octocat EditMe link at the top every page to view page repo files.

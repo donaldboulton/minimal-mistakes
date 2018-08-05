@@ -137,6 +137,9 @@ const URLS = [
     '/assets/images/red-flask-32.png',
     '/assets/images/fav-icons/favicon.png',
     '/service-worker.js',
+    '/assets/js/staticman/staticman-reviews.js',
+    '/assets/js/staticman/staticman-comments.js',
+    '/assets/js/vendor/bigfoot/bigfoot.min.js',
     '/manifest.webmanifest',
 ];
 

@@ -23,6 +23,10 @@ class PluginPass {
     return this._map.get(key);
   }
 
+  availableHelper(name, versionRange) {
+    return this.file.availableHelper(name, versionRange);
+  }
+
   addHelper(name) {
     return this.file.addHelper(name);
   }

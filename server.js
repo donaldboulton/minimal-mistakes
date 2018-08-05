@@ -4,6 +4,8 @@ const webPush = require('web-push');
 const bodyParser = require('body-parser');
 const _ = require('lodash');
 
+const hostname = 'https://donboulton.com';
+
 // Server settings with ExpressJS
 const app = express();
 app.use(bodyParser.json());
