@@ -6,7 +6,9 @@ const _ = require('lodash');
 
 // Server settings with ExpressJS
 const app = express();
-const port = process.env.PORT || 3000;
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+const port = process.env.PORT || 80;
 const runningMessage = 'Server is running on port ' + port;
 
 // Set up custom dependencies
@@ -57,8 +59,8 @@ app.post('/subscribe', (req, res) => {
 app.post('/push', (req, res, next) => {
     const pushSubscription = req.body.pushSubscription;
     const notificationMessage = req.body.notificationMessage;
-    let errors = [];
-    let successes = [];
+    const errors = [];
+    const successes = [];
     log('Current subscriptions found', subscriptions);
     log('Notification message received:', notificationMessage);
 
@@ -72,7 +74,7 @@ app.post('/push', (req, res, next) => {
         if (subscriptions.length) {
             subscriptions.map((subscription, index) => {
                 log(constants.messages.SENDING_NOTIFICATION_MESSAGE, subscription);
-                let jsonSub = JSON.parse(subscription);
+                const jsonSub = JSON.parse(subscription);
 
                 webPush.sendNotification(jsonSub, notificationMessage)
                   .then(success => {
@@ -87,10 +89,10 @@ app.post('/push', (req, res, next) => {
             return next();
         }
         } else {
-        let subscription
+        let subscription;
         try {
             subscription = JSON.parse(pushSubscription);
-        } catch(error) {
+        } catch (error) {
             return handleError(error, -1);
         }
 
