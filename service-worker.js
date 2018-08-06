@@ -1,4 +1,4 @@
-'use strict';
+
 
 const APP_PREFIX = 'donboulton';
 const VERSION = 'version_05';
@@ -75,7 +75,6 @@ const URLS = [
     '/2018-02-22-post-Letter-Avatar.html',
     '/2017-04-11-post-Social-Sharing.html',
     '/assets/js/vendor/letter-avatar/letter-avatar.js',
-    '/assets/js/vendor/twitter/web-intents.js',
     '/assets/js/lunr/lunr.min.js',
     '/assets/js/lunr/lunr-store.js',
     '/assets/js/lunr/lunr-en.js',
@@ -143,7 +142,7 @@ const URLS = [
     '/manifest.webmanifest',
 ];
 
-self.addEventListener('fetch', function (e) {
+self.addEventListener('fetch', (e) => {
     console.log('fetch request : ' + e.request.url);
     e.respondWith(
       caches.match(e.request).then(function (request) {
@@ -158,7 +157,7 @@ self.addEventListener('fetch', function (e) {
     );
 });
 
-self.addEventListener('install', function (e) {
+self.addEventListener('install', (e) => {
     e.waitUntil(
     caches.open(CACHE_NAME).then(function (cache) {
         console.log('installing cache : ' + CACHE_NAME);
@@ -167,17 +166,14 @@ self.addEventListener('install', function (e) {
   );
 });
 
-self.addEventListener('activate', function (e) {
+self.addEventListener('activate', (e) => {
     e.waitUntil(
-    caches.keys().then(function (keyList) {
-
-        const cacheWhitelist = keyList.filter(function (key) {
-            return key.indexOf(APP_PREFIX);
-        });
-
-        cacheWhitelist.push(CACHE_NAME);
-
-        return Promise.all(keyList.map(function (key, i) {
+        caches.keys().then(function (keyList) {
+            const cacheWhitelist = keyList.filter(function (key) {
+                return key.indexOf(APP_PREFIX);
+            });
+            cacheWhitelist.push(CACHE_NAME);
+            return Promise.all(keyList.map(function (key, i) {
             if (cacheWhitelist.indexOf(key) === -1) {
                 console.log('deleting cache : ' + keyList[i] );
                 return caches.delete(keyList[i]);
@@ -187,49 +183,192 @@ self.addEventListener('activate', function (e) {
   );
 });
 
-function handlePushEvent(event) {
-  const DEFAULT_TAG = 'donboulton',
-  return Promise.resolve()
-  .then(() => {
-    return event.data.json();
-  })
-  .then((data) => {
-    const title = data.notification.title;
-    const options = data.notification;
-    if (!options.tag) {
-      options.tag = DEFAULT_TAG;
-    }
-    return registration.showNotification(title, options);
-  })
-  .catch((err) => {
-    console.error('Push event caused an error: ', err);
+const examplePage = '/example-page.html';
 
-    const title = 'Message Received';
-    const options = {
-      body: event.data.text(),
-      tag: DEFAULT_TAG
-    };
-    return registration.showNotification(title, options);
-  });
+function openWindow(event) {
+    const examplePage = '/example-page.html';
+    const promiseChain = clients.openWindow(examplePage);
+    event.waitUntil(promiseChain);
 }
 
-self.addEventListener('push', function(event) {
-  event.waitUntil(handlePushEvent(event));
+function focusWindow(event) {
+
+    const urlToOpen = new URL(examplePage, self.location.origin).href;
+
+    const promiseChain = clients.matchAll({
+        type: 'window',
+        includeUncontrolled: true,
+    })
+        .then((windowClients) => {
+            let matchingClient = null;
+
+            for (let i = 0; i < windowClients.length; i++) {
+                const windowClient = windowClients[i];
+                if (windowClient.url === urlToOpen) {
+                    matchingClient = windowClient;
+                    break;
+                }
+            }
+
+            if (matchingClient) {
+                return matchingClient.focus();
+            }
+            return clients.openWindow(urlToOpen);
+        });
+
+
+    event.waitUntil(promiseChain);
+}
+
+function dataNotification(event) {
+    const notificationData = event.notification.data;
+    console.log('');
+    console.log('The data notification had the following parameters:');
+    Object.keys(notificationData).forEach((key) => {
+        console.log(`  ${key}: ${notificationData[key]}`);
+    });
+    console.log('');
+}
+
+function isClientFocused() {
+    return clients.matchAll({
+        type: 'window',
+        includeUncontrolled: true,
+    })
+        .then((windowClients) => {
+            let clientIsFocused = false;
+
+            for (let i = 0; i < windowClients.length; i++) {
+                const windowClient = windowClients[i];
+                if (windowClient.focused) {
+                    clientIsFocused = true;
+                    break;
+                }
+            }
+
+            return clientIsFocused;
+        });
+}
+
+function demoMustShowNotificationCheck(event) {
+    const promiseChain = isClientFocused()
+        .then((clientIsFocused) => {
+            if (clientIsFocused) {
+                console.log('Don\'t need to show a notification.');
+                return;
+            }
+
+            return self.registration.showNotification('Had to show a notification.');
+        });
+
+    event.waitUntil(promiseChain);
+}
+
+function demoSendMessageToPage(event) {
+
+    const promiseChain = isClientFocused()
+        .then((clientIsFocused) => {
+            if (clientIsFocused) {
+                windowClients.forEach((windowClient) => {
+                    windowClient.postMessage({
+                        message: 'Received a push message.',
+                        time: new Date().toString(),
+                    });
+                });
+            } else {
+                return self.registration.showNotification('No focused windows', {
+                    body: 'Had to show a notification instead of messaging each page.',
+                });
+            }
+        });
+
+    event.waitUntil(promiseChain);
+}
+
+self.addEventListener('push', (event) => {
+    if (event.data) {
+        switch(event.data.text()) {
+        case 'must-show-notification':
+            demoMustShowNotificationCheck(event);
+            break;
+        case 'send-message-to-page':
+            demoSendMessageToPage(event);
+            break;
+        default:
+            console.warn('Unsure of how to handle push event: ', event.data);
+            break;
+        }
+    }
 });
 
-const doSomething = () => {
-  return Promise.resolve();
-};
+self.addEventListener('notificationclick', (event) => {
+    if (!event.action) {
+        console.log('Notification Click.');
+        return;
+    }
 
-// This is here just to highlight the simple version of notification click.
-// Normally you would only have one notification click listener.
-/**** START simpleNotification ****/
-self.addEventListener('notificationclick', function(event) {
-  const clickedNotification = event.notification;
-  clickedNotification.close();
-
-  // Do something as the result of the notification click
-  const promiseChain = doSomething();
-  event.waitUntil(promiseChain);
+    switch (event.action) {
+    case 'coffee-action':
+        console.log('User ❤️️\'s coffee.');
+        break;
+    case 'doughnut-action':
+        console.log('User ❤️️\'s doughnuts.');
+        break;
+    case 'gramophone-action':
+        console.log('User ❤️️\'s music.');
+        break;
+    case 'atom-action':
+        console.log('User ❤️️\'s science.');
+        break;
+    default:
+        console.log(`Unknown action clicked: '${event.action}'`);
+        break;
+    }
 });
-/**** END simpleNotification ****/
+
+self.addEventListener('notificationclick', (event) => {
+    event.notification.close();
+
+    switch(event.notification.tag) {
+    case 'open-window':
+        openWindow(event);
+        break;
+    case 'focus-window':
+        focusWindow(event);
+        break;
+    case 'data-notification':
+        dataNotification(event);
+        break;
+    default:
+
+        break;
+    }
+});
+
+const notificationCloseAnalytics = () => Promise.resolve();
+
+self.addEventListener('notificationclose', (event) => {
+    const dismissedNotification = event.notification;
+
+    const promiseChain = notificationCloseAnalytics();
+    event.waitUntil(promiseChain);
+});
+
+self.addEventListener('message', (event) => {
+    console.log('Received message from page.', event.data);
+    switch(event.data) {
+    case 'must-show-notification-demo':
+        self.dispatchEvent(new PushEvent('push', {
+            data: 'must-show-notification'
+        }));
+        break;
+    case 'send-message-to-page-demo':
+        self.dispatchEvent(new PushEvent('push', {
+            data: 'send-message-to-page'
+        }));
+        break;
+    default:
+        console.warn('Unknown message received in service-worker.js');
+        break;
+    }
+});
