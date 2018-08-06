@@ -5,9 +5,6 @@ const admin = require('firebase-admin');
 const bodyParser = require('body-parser');
 const Datastore = require('nedb');
 
-const gcmServerKey = 'BA4ajKLzo5CmHez5N34TL0OGFVPTS_2NnyB3hQ9gmciUlNi3a3tFiC3vUN_VuJbl17XA7CM7lnpc0FjhIQlKWi0';
-webpush.setGCMAPIKey(gcmServerKey);
-
 const hostname = 'https://donboulton.com';
 
 const constants = require('./constants');
