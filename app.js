@@ -15,25 +15,6 @@ function urlBase64ToUint8Array(base64String) {
   return outputArray;
 }
 
-/**** START register-sw ****/
-function registerServiceWorker() {
-  return navigator.serviceWorker.register('service-worker.js')
-  .then(function(registration) {
-    console.log('Service worker successfully registered.');
-    return registration;
-  })
-  .catch(function(err) {
-    console.error('Unable to register service worker.', err);
-  });
-}
-/**** END register-sw ****/
-
-// This is just to make sample code eaier to read.
-// TODO: Move into a variable rather than register each time.
-function getSWRegistration() {
-  return navigator.serviceWorker.register('service-worker.js');
-}
-
 /**** START request-permission ****/
 function askPermission() {
   return new Promise(function(resolve, reject) {
