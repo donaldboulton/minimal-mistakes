@@ -230,6 +230,9 @@ exclude:
   - .vs
   - .vscode
   - node_modules/
+  - node_modules
+  - functions/node_modules/
+  - functions/node_modules
   - LICENSE
   - log
   - Rakefile
