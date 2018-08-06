@@ -1,0 +1,42 @@
+<article>
+  <p>This page is just an example that gets all the subscriptions and allows
+  triggering of pushes to demostrate a basic implementation.</p>
+
+  <h2>Send Push Message</h2>
+
+  <p>Clicking "Trigger Push Message" will make
+    an API request to "/api/trigger-push-msg" (i.e. an API call to our
+    node backend) and that will trigger a push message to all our users.
+  </p>
+
+  <p>Feel free to change the text to anything you want.</p>
+
+  <div class="push-data">
+    <textarea rows="10" class="js-push-content push-content-text" disabled>{
+"notification": {
+  "title": "Example Title",
+  "body": "This will be the body text for the notification.",
+  "icon": "/assets/fav-icons/favicon-512x512.png"
+}
+}</textarea>
+
+    <button class="js-trigger-push-msg" disabled>Trigger Push Message</button>
+  </div>
+
+  <h2>Subscriber List</h2>
+
+  <table>
+    <thead>
+      <th>Database ID</th>
+      <th>Endpoint</th>
+    </thead>
+    <tbody class="js-subscriber-table-body">
+
+    </tbody>
+  </table>
+
+  <h3>Please Note</h3>
+
+  <p>You'd want this page to be restricted some how, perhaps by login or
+  could be a restricted application then is only accessible locally.</p>
+</article>
