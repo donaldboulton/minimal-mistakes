@@ -1,7 +1,7 @@
 ---
 layout: single
 author_profile: true
-
+permalink: /admin.html
 tags:
   - Home
   - Donald Boulton

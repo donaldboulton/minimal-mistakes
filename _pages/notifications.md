@@ -2,7 +2,7 @@
 layout: single
 title: "Notifications"
 author_profile: true
-
+permalink: /notifications.html
 tags:
   - Home
   - Donald Boulton
