@@ -229,7 +229,7 @@ exclude:
   - vendor/ruby/
   - .vs
   - .vscode
-  - node_modules
+  - node_modules/
   - LICENSE
   - log
   - Rakefile
