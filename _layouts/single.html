@@ -53,7 +53,9 @@ layout: default
             {% if page.adds == true %}
                {% include google-adds.html %}
             {% endif %}
+            {% if page.notifications == true %}
                {% include subscribe.html %}
+            {% endif %}
           </aside>
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
         {% if page.web-intents == true %}

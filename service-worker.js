@@ -1,7 +1,7 @@
 'use strict';
 
 const APP_PREFIX = 'donboulton';
-const VERSION = 'version_03';
+const VERSION = 'version_05';
 const CACHE_NAME = APP_PREFIX + VERSION;
 const URLS = [
     '/assets/js/main.min.js',
@@ -188,7 +188,7 @@ self.addEventListener('activate', function (e) {
 });
 
 function handlePushEvent(event) {
-  const DEFAULT_TAG = 'donboulton'
+  const DEFAULT_TAG = 'donboulton',
   return Promise.resolve()
   .then(() => {
     return event.data.json();

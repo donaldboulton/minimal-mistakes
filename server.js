@@ -1,41 +1,32 @@
-// Pull in dependencies
 const webPush = require('web-push');
 const express = require('express');
 const path = require('path');
+const admin = require('firebase-admin');
 const bodyParser = require('body-parser');
-const _ = require('lodash');
 const Datastore = require('nedb');
 
-/**** START web-push-gcm ****/
-const gcmServerKey = 'ff69aae7073f66de53794153adf06ddf07c45b21';
+const gcmServerKey = 'BA4ajKLzo5CmHez5N34TL0OGFVPTS_2NnyB3hQ9gmciUlNi3a3tFiC3vUN_VuJbl17XA7CM7lnpc0FjhIQlKWi0';
 webpush.setGCMAPIKey(gcmServerKey);
-/**** END web-push-gcm ****/
 
 const hostname = 'https://donboulton.com';
 
-// Set up custom dependencies
-// Constants just contains common messages so they're in one place
 const constants = require('./constants');
 
-// VAPID keys should only be generated once.
-// use `web-push generate-vapid-keys --json` to generate in terminal
-// then export them in your shell with the follow env key names
 const vapidKeys = {
     publicKey: 'BOew5Tx7fTX51GzJ7tpF3dDLNS54OvUST_dGGqzJEy54jqW2qghIRTiK7BfOpCPp8xNfMH7Mtprl3hp_WGjgslU',
     privateKey: 'ymblNrJSzlXdRMhFYdXh1Hda8HkIO76aVs85X93wAjc',
 };
 
-// Tell web push about our application server
 webPush.setVapidDetails('mailto:donaldboulton@gmail.com', vapidKeys.publicKey, vapidKeys.privateKey);
 
 const db = new Datastore({
-  filename: path.join(__dirname, 'subscription-store.db'),
-  autoload: true
+    filename: path.join(__dirname, 'subscription-store.db'),
+    autoload: true,
 });
 
-/**** START save-sub-function ****/
+
 function saveSubscriptionToDatabase(subscription) {
-  return new Promise(function(resolve, reject) {
+    return new Promise(function(resolve, reject) {
     db.insert(subscription, function(err, newDoc) {
       if (err) {
         reject(err);
@@ -46,7 +37,6 @@ function saveSubscriptionToDatabase(subscription) {
     });
   });
 };
-/**** END save-sub-function ****/
 
 function getSubscriptionsFromDatabase() {
   return new Promise(function(resolve, reject) {
@@ -70,31 +60,37 @@ function deleteSubscriptionFromDatabase(subscriptionId) {
       }
 
       resolve();
+      var admin = require("firebase-admin");
+
+      var serviceAccount = require("path/to/serviceAccountKey.json");
+
+      admin.initializeApp({
+      credential: admin.credential.cert(serviceAccount),
+      databaseURL: "https://airy-office-413.firebaseio.com"
+     });
     });
   });
 }
 
-/**** START save-sub-api-validate ****/
 const isValidSaveRequest = (req, res) => {
-  // Check the request body has at least an endpoint.
+
   if (!req.body || !req.body.endpoint) {
-    // Not a valid subscription.
+
     res.status(400);
     res.setHeader('Content-Type', 'application/json');
     res.send(JSON.stringify({
       error: {
         id: 'no-endpoint',
-        message: 'Subscription must have an endpoint.'
+        message: 'Subscription must have an endpoint.',
       }
     }));
     return false;
   }
   return true;
 };
-/**** END save-sub-api-validate ****/
 
 const app = express();
-app.use(express.static(path.join(__dirname, 'frontend')));
+app.use(express.static(path.join(__dirname, '/')));
 app.use(bodyParser.json());
 app.use(bodyParser.text());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -103,15 +99,13 @@ app.use((req, res, next) => {
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     return next();
 });
-/**** START save-sub-example ****/
-/**** START save-sub-api-post ****/
+
 app.post('/api/save-subscription/', function (req, res) {
-/**** END save-sub-api-post ****/
+
   if (!isValidSaveRequest(req, res)) {
     return;
   }
 
-  /**** START save-sub-api-save-subscription ****/
   return saveSubscriptionToDatabase(req.body)
   .then(function(subscriptionId) {
     res.setHeader('Content-Type', 'application/json');
@@ -127,14 +121,13 @@ app.post('/api/save-subscription/', function (req, res) {
       }
     }));
   });
-  /**** END save-sub-api-save-subscription ****/
+
 });
-/**** END save-sub-example ****/
 
-app.post('/api/get-subscriptions/', function (req, res) {
-  // TODO: This should be secured / not available publicly.
-  //       this is for demo purposes only.
 
+app.post('/api/get-subscriptions/',
+
+function (req, res) {
   return getSubscriptionsFromDatabase()
   .then(function(subscriptions) {
     const reducedSubscriptions = subscriptions.map((subscription) => {
@@ -159,7 +152,6 @@ app.post('/api/get-subscriptions/', function (req, res) {
   });
 });
 
-/**** START trig-push-send-notification ****/
 const triggerPushMsg = function(subscription, dataToSend) {
   return webpush.sendNotification(subscription, dataToSend)
   .catch((err) => {
@@ -170,17 +162,11 @@ const triggerPushMsg = function(subscription, dataToSend) {
     }
   });
 };
-/**** END trig-push-send-notification ****/
 
-/**** START trig-push-api-post ****/
 app.post('/api/trigger-push-msg/', function (req, res) {
-/**** END trig-push-api-post ****/
-  // NOTE: This API endpoint should be secure (i.e. protected with a login
-  // check OR not publicly available.)
 
   const dataToSend = JSON.stringify(req.body);
 
-  /**** START trig-push-send-push ****/
   return getSubscriptionsFromDatabase()
   .then(function(subscriptions) {
     let promiseChain = Promise.resolve();
@@ -194,8 +180,7 @@ app.post('/api/trigger-push-msg/', function (req, res) {
 
     return promiseChain;
   })
-  /**** END trig-push-send-push ****/
-  /**** START trig-push-return-response ****/
+
   .then(() => {
     res.setHeader('Content-Type', 'application/json');
       res.send(JSON.stringify({ data: { success: true } }));
@@ -211,7 +196,6 @@ app.post('/api/trigger-push-msg/', function (req, res) {
       }
     }));
   });
-  /**** END trig-push-return-response ****/
 });
 
 const port = process.env.PORT || 9012;

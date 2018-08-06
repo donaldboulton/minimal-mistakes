@@ -105,6 +105,7 @@ twitter:
 twitter_format           : "@title: @url@tags"
 twitter_url_length       : 22
 twitter_max_length       : 140
+
 facebook:
   username               : "don-boulton"
   app_id                 : "322180367845124"
@@ -165,6 +166,7 @@ author:
   weibo                  :
   xing                   :
   youtube                : # None
+
 weather:
   - platform             : "openweathermap"
     api_key              : "8f4c1537b5fad3b111dae7b441fd0937"
@@ -175,12 +177,32 @@ vapidKeys:
 
 hawk:
   - authID               : "dh37fgj492je"
-  - authKey              : npm"werxhqb98rpaxn39848xrunpaw3489ruxnpa98w4rxn"
+  - authKey              : "werxhqb98rpaxn39848xrunpaw3489ruxnpa98w4rxn"
+
+firebase:
+  - service_account: "firebase-adminsdk-w6981@donboulton-210120.iam.gserviceaccount.com"
+  - api_key: "AIzaSyBoZgIki3tEgCtgSVVWDdastZCqW9WWGKE"
+  - private_key_id: "855d30d59f707e354f99d67fd697aa4a01fd6f74"
+  - publicFacingName: "project-642731329222"
+  - name: "project-642731329222"
+  - sender_id: "857761645811"
+  - secret: "HhbGUueQ7G6lU0VPiwi2Uw6ovK0YOYaY7wUI9WuR"
+  - serverKey: "AAAAx7aUBPM:APA91bFxAfB5yAI4ILnxRpcpIAXEICRQ3O8YEu9A55ZgNEVkcc1jLMBj0g9GAvQGq4Y6DXMBcT1-1mxDzTdZIhQtGIsUWYoNK8g9ZZACxIZEmBGQQ7h-PZe7C1LxACe6FWYsHgbs0O7iJEvO3VwvWf9boSXKqALE6A"
+  - type: "service_account"
+  - project_id: "airy-office-413"
+  - client_email: "firebase-adminsdk-70gvb@airy-office-413.iam.gserviceaccount.com"
+  - client_id: "111154619117210573730"
+  - auth_uri: "https://accounts.google.com/o/oauth2/auth"
+  - token_uri: "https://accounts.google.com/o/oauth2/token"
+  - auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+  - client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-70gvb%40airy-office-413.iam.gserviceaccount.com"
 
 extlinks:
   attributes: {rel: nofollow, target: _blank}
   rel_exclude: ['facebook.com', 'twitter.com']
+
 strict_front_matter      : true
+
 # Reading Files
 include:
   - .htaccess
