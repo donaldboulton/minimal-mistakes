@@ -9,7 +9,7 @@
     'These aren\'t real messages.',
   ];
   const userIcon = '/assets/images/fav-icons/fav-icon-512x512.png';
-  const userName = 'DWB';
+  const userName = 'donaldboulton';
 
   const promiseTimeout = function(cb, timeout) {
     return new Promise((resolve) => {
