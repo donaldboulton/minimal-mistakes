@@ -1,21 +1,32 @@
 const pushCheckbox = document.querySelector('.js-push-toggle-checkbox');
 
 function urlBase64ToUint8Array(base64String) {
-  const padding = '='.repeat((4 - base64String.length % 4) % 4);
-  const base64 = (base64String + padding)
-    .replace(/\-/g, '+')
-    .replace(/_/g, '/');
+    const padding = '='.repeat((4 - base64String.length % 4) % 4);
+    const base64 = (base64String + padding)
+        .replace(/\-/g, '+')
+        .replace(/_/g, '/');
 
-  const rawData = window.atob(base64);
-  const outputArray = new Uint8Array(rawData.length);
+    const rawData = window.atob(base64);
+    const outputArray = new Uint8Array(rawData.length);
 
-  for (let i = 0; i < rawData.length; ++i) {
-    outputArray[i] = rawData.charCodeAt(i);
-  }
-  return outputArray;
+    for (let i = 0; i < rawData.length; ++i) {
+        outputArray[i] = rawData.charCodeAt(i);
+    }
+    return outputArray;
 }
-
-/**** START request-permission ****/
+function registerServiceWorker() {
+    return navigator.serviceWorker.register('service-worker.js')
+        .then(function(registration) {
+            console.log('Service worker successfully registered.');
+            return registration;
+        })
+        .catch(function(err) {
+            console.error('Unable to register service worker.', err);
+        });
+}
+function getSWRegistration() {
+    return navigator.serviceWorker.register('service-worker.js');
+}
 function askPermission() {
   return new Promise(function(resolve, reject) {
     const permissionResult = Notification.requestPermission(function(result) {
@@ -32,16 +43,6 @@ function askPermission() {
     }
   });
 }
-/**** END request-permission ****/
-
-/**
- * Using `Notification.permission` directly can be slow (locks on the main
- * thread). Using the permission API with a fallback to
- * `Notification.permission` is preferable.
- * @return {Promise<String>} Returns a promise that resolves to a notification
- * permission state string.
- */
-/**** START get-permission-state ****/
 function getNotificationPermissionState() {
   if (navigator.permissions) {
     return navigator.permissions.query({name: 'notifications'})
@@ -54,12 +55,10 @@ function getNotificationPermissionState() {
     resolve(Notification.permission);
   });
 }
-/**** END get-permission-state ****/
 
 function unsubscribeUserFromPush() {
   return registerServiceWorker()
     .then(function(registration) {
-      // Service worker is active so now we can subscribe the user.
       return registration.pushManager.getSubscription();
     })
     .then(function(subscription) {
@@ -81,7 +80,6 @@ function unsubscribeUserFromPush() {
     });
 }
 
-/**** START send-subscription-to-server ****/
 function sendSubscriptionToBackEnd(subscription) {
   return fetch('/api/save-subscription/', {
     method: 'POST',
@@ -103,9 +101,7 @@ function sendSubscriptionToBackEnd(subscription) {
     }
   });
 }
-/**** END send-subscription-to-server ****/
 
-/**** START subscribe-user ****/
 function subscribeUserToPush() {
   return getSWRegistration()
   .then(function(registration) {
@@ -123,7 +119,6 @@ function subscribeUserToPush() {
     return pushSubscription;
   });
 }
-/**** END subscribe-user ****/
 
 function setUpPush() {
   return Promise.all([
@@ -141,12 +136,11 @@ function setUpPush() {
     }
 
     pushCheckbox.addEventListener('change', function(event) {
-      // Disable UI until we've handled what to do.
+
       event.target.disabled = true;
 
       if (event.target.checked) {
-        // Just been checked meaning we need to subscribe the user
-        // Do we need to wait for permission?
+
         let promiseChain = Promise.resolve();
         if (currentPermissionState !== 'granted') {
           promiseChain = askPermission();
@@ -165,27 +159,21 @@ function setUpPush() {
             return subscription;
           })
           .then(function(subscription) {
-            // We got a subscription AND it was sent to our backend,
-            // re-enable our UI and set up state.
+
             pushCheckbox.disabled = false;
             pushCheckbox.checked = subscription !== null;
           })
           .catch(function(err) {
             console.error('Failed to subscribe the user.', err);
-
-            // An error occured while requestion permission, getting a
-            // subscription or sending it to our backend. Re-set state.
             pushCheckbox.disabled = currentPermissionState === 'denied';
             pushCheckbox.checked = false;
           });
       } else {
-        // Just been unchecked meaning we need to unsubscribe the user
         unsubscribeUserFromPush();
       }
     });
 
     if (currentPermissionState !== 'granted') {
-      // If permission isn't granted than we can't be subscribed for Push.
       pushCheckbox.disabled = false;
       return;
     }
@@ -202,18 +190,13 @@ function setUpPush() {
 }
 
 window.onload = function() {
-  /**** START feature-detect ****/
+
   if (!('serviceWorker' in navigator)) {
-    // Service Worker isn't supported on this browser, disable or hide UI.
     return;
   }
 
   if (!('PushManager' in window)) {
-    // Push isn't supported on this browser, disable or hide UI.
     return;
   }
-  /**** END feature-detect ****/
-
-  // Push is supported.
   setUpPush();
 };
