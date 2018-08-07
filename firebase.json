@@ -2,9 +2,6 @@
   "database": {
     "rules": "y"
   },
-  "hosting": {
-    "public": "build/_site"
-  },
   "firestore": {
     "rules": "y",
     "indexes": "y"
