@@ -21,7 +21,7 @@ function registerServiceWorker() {
             return registration;
         })
         .catch(function(err) {
-            console.error('Unable to register service worker.', err);
+            console.error('Unable to register service worker.');
         });
 }
 function getSWRegistration() {
