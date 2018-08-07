@@ -19,19 +19,7 @@
       }, timeout);
     });
   };
-
-  function registerServiceWorker() {
-    return navigator.serviceWorker.register('service-worker.js')
-    .then(function(registration) {
-      console.log('Service worker successfully registered.');
-      return registration;
-    })
-    .catch(function(err) {
-      console.error('Unable to register service worker.', err);
-    });
-  }
-
-  const allOptionsNotification = function(registration) {
+    const allOptionsNotification = function(registration) {
     const title = 'Web Push Book';
     const options = {
       body: 'This would be the body text of the notification.\n' +
