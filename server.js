@@ -1,13 +1,12 @@
 import { setVapidDetails } from 'web-push';
-import express, { static } from 'express';
+import express, { serveStatic } from 'express';
 import { join } from 'path';
-import firebaseAdmin from 'firebase-admin';
 import { json, text, urlencoded } from 'body-parser';
 import Datastore from 'nedb';
+import { initializeApp, credential as _credential } from 'firebase-admin';
+import constants from './constants';
 
 const hostname = 'https://donboulton.com';
-
-import constants from './constants';
 
 const vapidKeys = {
     publicKey: 'BOew5Tx7fTX51GzJ7tpF3dDLNS54OvUST_dGGqzJEy54jqW2qghIRTiK7BfOpCPp8xNfMH7Mtprl3hp_WGjgslU',
@@ -24,56 +23,54 @@ const db = new Datastore({
 
 function saveSubscriptionToDatabase(subscription) {
     return new Promise(((resolve, reject) => {
-    db.insert(subscription, function(err, newDoc) {
-      if (err) {
-        reject(err);
-        return;
-      }
-
-      resolve(newDoc._id);
-    });
-  }));
-}
-
-function getSubscriptionsFromDatabase() {
-    return new Promise(((resolve, reject) => {
-        db.find({}, function(err, docs) {
+        db.insert(subscription, (err, newDoc) => {
             if (err) {
                 reject(err);
                 return;
             }
-           resolve(docs);
+            resolve(newDoc._id);
         });
     }));
 }
 
-var ref = new Firebase("https://airy-office-413.firebaseio.com");
-ref.authWithCustomToken("AUTH_TOKEN", function(error, authData) {
-  if (error) {
-    console.log("Authentication Failed!", error);
-  } else {
-    console.log("Authenticated successfully with payload:", authData);
-  }
+function getSubscriptionsFromDatabase() {
+    return new Promise(((resolve, reject) => {
+        db.find({}, (err, docs) => {
+            if (err) {
+                reject(err);
+                return;
+            }
+            resolve(docs);
+        });
+    }));
+}
+
+const ref = new Firebase("https://airy-office-413.firebaseio.com");
+ref.authWithCustomToken('AUTH_TOKEN', (error, authData) => {
+    if (error) {
+        console.log('Authentication Failed!', error);
+    } else {
+        console.log('Authenticated successfully with payload:', authData);
+    }
 });
 
 function deleteSubscriptionFromDatabase(subscriptionId) {
     return new Promise(((resolve, reject) => {
-        db.remove({_id: subscriptionId }, {}, function(err) {
+        db.remove({ _id: subscriptionId }, {}, (err) => {
             if (err) {
                 reject(err);
                 return;
             }
             resolve();
-      var admin = require("firebase-admin");
 
-      var serviceAccount = require("./serviceAccountKey.json");
+            const serviceAccount = require('https/donboulton.com/serviceAccountKey.json');
 
-      admin.initializeApp({
-      credential: admin.credential.cert(serviceAccount),
-      databaseURL: "https://airy-office-413.firebaseio.com"
-     });
-    });
-  }));
+            initializeApp({
+                credential: _credential.cert(serviceAccount),
+                databaseURL: "https://airy-office-413.firebaseio.com"
+            });
+        });
+    }));
 }
 
 const isValidSaveRequest = (req, res) => {
@@ -92,7 +89,7 @@ const isValidSaveRequest = (req, res) => {
 };
 
 const app = express();
-app.use(static(join(__dirname, '/')));
+app.use(serveStatic(join(__dirname, '/')));
 app.use(json());
 app.use(text());
 app.use(urlencoded({ extended: true }));
@@ -104,104 +101,102 @@ app.use((req, res, next) => {
 
 app.post('/api/save-subscription/', (req, res) => {
 
-  if (!isValidSaveRequest(req, res)) {
-    return;
-  }
+    if (!isValidSaveRequest(req, res)) {
+        return;
+    }
 
-  return saveSubscriptionToDatabase(req.body)
-  .then(function(subscriptionId) {
-    res.setHeader('Content-Type', 'application/json');
-    res.send(JSON.stringify({ data: { success: true } }));
-  })
-  .catch(function(err) {
-    res.status(500);
-    res.setHeader('Content-Type', 'application/json');
-    res.send(JSON.stringify({
-      error: {
-        id: 'unable-to-save-subscription',
-        message: 'The subscription was received but we were unable to save it to our database.'
-      }
-    }));
-  });
-
+    return saveSubscriptionToDatabase(req.body)
+        .then((subscriptionId) => {
+            res.setHeader('Content-Type', 'application/json');
+            res.send(JSON.stringify({ data: { success: true } }));
+        })
+        .catch((err) => {
+            res.status(500);
+            res.setHeader('Content-Type', 'application/json');
+            res.send(JSON.stringify({
+                error: {
+                    id: 'unable-to-save-subscription',
+                    message: 'The subscription was received but we were unable to save it to our database.'
+                }
+            }));
+        });
 });
 
 
 app.post('/api/get-subscriptions/',
 
     (req, res) => {
-  return getSubscriptionsFromDatabase()
-  .then(function(subscriptions) {
-    const reducedSubscriptions = subscriptions.map((subscription) => {
-      return {
-        id: subscription._id,
-        endpoint: subscription.endpoint
-      };
-    });
+        return getSubscriptionsFromDatabase()
+            .then((subscriptions) => {
+                const reducedSubscriptions = subscriptions.map((subscription) => {
+                    return {
+                        id: subscription._id,
+                        endpoint: subscription.endpoint,
+                    };
+                });
 
-    res.setHeader('Content-Type', 'application/json');
-    res.send(JSON.stringify({ data: { subscriptions: reducedSubscriptions } }));
-  })
-  .catch(function(err) {
-    res.status(500);
-    res.setHeader('Content-Type', 'application/json');
-    res.send(JSON.stringify({
-      error: {
-        id: 'unable-to-get-subscriptions',
-        message: 'We were unable to get the subscriptions from our database.'
-      }
-    }));
-  });
-});
+                res.setHeader('Content-Type', 'application/json');
+                res.send(JSON.stringify({ data: { subscriptions: reducedSubscriptions } }));
+            })
+            .catch((err) => {
+                res.status(500);
+                res.setHeader('Content-Type', 'application/json');
+                res.send(JSON.stringify({
+                    error: {
+                        id: 'unable-to-get-subscriptions',
+                        message: 'We were unable to get the subscriptions from our database.',
+                    },
+                }));
+            });
+    });
 
 const triggerPushMsg = function (subscription, dataToSend) {
     return webpush.sendNotification(subscription, dataToSend)
         .catch((err) => {
-    if (err.statusCode === 410) {
-      return deleteSubscriptionFromDatabase(subscription._id);
-    }
-      console.log('Subscription is no longer valid: ', err);
+            if (err.statusCode === 410) {
+                return deleteSubscriptionFromDatabase(subscription._id);
+            }
+            console.log('Subscription is no longer valid: ', err);
 
-  });
+        });
 };
 
 app.post('/api/trigger-push-msg/', (req, res) => {
 
-  const dataToSend = JSON.stringify(req.body);
+    const dataToSend = JSON.stringify(req.body);
 
-  return getSubscriptionsFromDatabase()
-  .then(function(subscriptions) {
-    let promiseChain = Promise.resolve();
+    return getSubscriptionsFromDatabase()
+        .then((subscriptions) => {
+            let promiseChain = Promise.resolve();
 
-    for (let i = 0; i < subscriptions.length; i++) {
-      const subscription = subscriptions[i];
-      promiseChain = promiseChain.then(() => {
-        return triggerPushMsg(subscription, dataToSend);
-      });
-    }
+            for (let i = 0; i < subscriptions.length; i++) {
+                const subscription = subscriptions[i];
+                promiseChain = promiseChain.then(() => {
+                    return triggerPushMsg(subscription, dataToSend);
+                });
+            }
 
-    return promiseChain;
-  })
+            return promiseChain;
+        })
 
-  .then(() => {
-    res.setHeader('Content-Type', 'application/json');
-      res.send(JSON.stringify({ data: { success: true } }));
-  })
-  .catch(function(err) {
-    res.status(500);
-    res.setHeader('Content-Type', 'application/json');
-    res.send(JSON.stringify({
-      error: {
-        id: 'unable-to-send-messages',
-        message: `We were unable to send messages to all subscriptions : ` +
-          `'${err.message}'`
-      }
-    }));
-  });
+        .then(() => {
+            res.setHeader('Content-Type', 'application/json');
+            res.send(JSON.stringify({ data: { success: true } }));
+        })
+        .catch((err) => {
+            res.status(500);
+            res.setHeader('Content-Type', 'application/json');
+            res.send(JSON.stringify({
+                error: {
+                    id: 'unable-to-send-messages',
+                    message: `'We were unable to send messages to all subscriptions : ' + ' ${err.message}'`
+                },
+            }));
+        });
 });
 
 const port = process.env.PORT || 9012;
 
 const server = app.listen(port, () => {
-  console.log('Running on http://localhost:' + port);
+    console.log('Running on http://localhost:' + port);
 });
