@@ -36,7 +36,7 @@
     <div class="heading">Author:</div>
       <img itemprop="image" class="comment__avatar" avatar="{{ reviewData.name }}" alt="{{ reviewData.name }}"/>
       {% unless reviewData.url == blank %}
-      <span itemprop="name" class="review-author-name"><small><a rel="external nofollow" itemprop="name" href="{{ reviewData.url }}">{{ reviewData.name | strip_html }}</a></small>
+      <span itemprop="name" class="review-author-name"><small><a rel="external noreferrer" itemprop="name" href="{{ reviewData.url }}">{{ reviewData.name | strip_html }}</a></small>
         {% else %}
           {{ reviewData.name | strip_html }}
         {% endunless %}

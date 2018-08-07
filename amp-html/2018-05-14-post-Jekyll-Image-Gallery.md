@@ -204,16 +204,16 @@ support: [gallery]
 
 ## The Included Js And Css
 
-I Included the [lightgallery.js](https://raw.githubusercontent.com/sachinchoolur/lightGallery/master/src/js/lightgallery.js){:id="open-website" rel="nofollow"} minified to my main site main.min.js file as to have it initilized at all times for any page. I included it right after jquery.js and before any other Conjugated scripts.
+I Included the [lightgallery.js](https://raw.githubusercontent.com/sachinchoolur/lightGallery/master/src/js/lightgallery.js){:id="open-website" rel="noreferrer"} minified to my main site main.min.js file as to have it initilized at all times for any page. I included it right after jquery.js and before any other Conjugated scripts.
 
-Adding all other LightGallery css and scripts in a assets/dist folder. In the same folder structure as in the [lightgallery repo](https://github.com/sachinchoolur/lightGallery){:id="open-website" rel="nofollow"}, adding isotope.js, mousewheel.js and picturefill.js from CloudFlare CDN.
+Adding all other LightGallery css and scripts in a assets/dist folder. In the same folder structure as in the [lightgallery repo](https://github.com/sachinchoolur/lightGallery){:id="open-website" rel="noreferrer"}, adding isotope.js, mousewheel.js and picturefill.js from CloudFlare CDN.
 
-Isotope.js latest at github repo: [isotope.js](https://raw.githubusercontent.com/metafizzy/isotope/master/js/isotope.js){:id="open-website" rel="nofollow"} and LightGallery Js and Css are required for this gallery including the below _gallery.sass file.
+Isotope.js latest at github repo: [isotope.js](https://raw.githubusercontent.com/metafizzy/isotope/master/js/isotope.js){:id="open-website" rel="noreferrer"} and LightGallery Js and Css are required for this gallery including the below _gallery.sass file.
 
 ### Gallery Assets
 
 To gather the required scripts and css we need to download and add them to our assets folder.
-Adding included Isotope and LightGallery files as below seen in my [includes/scripts.html](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_includes/scripts.html){:id="open-website" rel="nofollow"} file.
+Adding included Isotope and LightGallery files as below seen in my [includes/scripts.html](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_includes/scripts.html){:id="open-website" rel="noreferrer"} file.
 
 ```html
 {{ page.lcb }}% if page.support contains 'gallery' %}
@@ -440,7 +440,7 @@ I added the Css  same way to my [/includes/head.html](https://raw.githubusercont
 
 ### The Sass styling
 
-The styling for my site gallery's, several are included. The download of [gallery.scss](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_sass/minimal-mistakes/_gallery.scss){:id="open-website" rel="nofollow"} file.
+The styling for my site gallery's, several are included. The download of [gallery.scss](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_sass/minimal-mistakes/_gallery.scss){:id="open-website" rel="noreferrer"} file.
 
 The gallery.scss code below
 
@@ -650,15 +650,15 @@ The gallery.scss code below
 
 ## Jekyll Simple Gallery
 
-Create a Jekyll images Gallery that loops through all images in a folder. Displayed with [MetaFuzzy Isotope](https://isotope.metafizzy.co/) and viewed with [Sachinchoolur LightGallery](http://sachinchoolur.github.io/lightGallery/demos/){:id="open-website" rel="nofollow"}. Not Configured by yml Frontmatter, thus much eaiser to create. Using [Images resizing by images.weserv.nl](weserv.nl), which gives a thumnail image displayed in the Isotope gallery and the origional images which are opened by LightGallery.
+Create a Jekyll images Gallery that loops through all images in a folder. Displayed with [MetaFuzzy Isotope](https://isotope.metafizzy.co/) and viewed with [Sachinchoolur LightGallery](http://sachinchoolur.github.io/lightGallery/demos/){:id="open-website" rel="noreferrer"}. Not Configured by yml Frontmatter, thus much eaiser to create. Using [Images resizing by images.weserv.nl](weserv.nl), which gives a thumnail image displayed in the Isotope gallery and the origional images which are opened by LightGallery.
 
 ### The _includes file Simple Gallery
 
-The image gallery includes file as [image-gallery.html](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_includes/image-gallery.html){:id="open-website" rel="nofollow"} for Isotope arranged animated thumnails, resized online by [images.weserv.nl](weserv.nl) and displayed in LightGallery.
+The image gallery includes file as [image-gallery.html](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_includes/image-gallery.html){:id="open-website" rel="noreferrer"} for Isotope arranged animated thumnails, resized online by [images.weserv.nl](weserv.nl) and displayed in LightGallery.
 
 ### The _layout file Simple Gallery
 
-Gallery layout download [galleryloop.html](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_layouts/galleryloop.html){:id="open-website" rel="nofollow"}
+Gallery layout download [galleryloop.html](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_layouts/galleryloop.html){:id="open-website" rel="noreferrer"}
 
 The gallery layout file code with the tile of my page being in my single layout or your default layout file.
 
@@ -683,11 +683,11 @@ This is a Gallery based on Isotope and LightGallery the same as my Simple Galler
 
 ### The _include file
 
-This include file at: [gallery-layout.html](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_includes/gallery-layout.html){:id="open-website" rel="nofollow"} builds a srcset out of Five preconfigured images. Sizes as example image-320.jpg or 320px wide, image-800.jpg or 800px wide, image-1200px or 1200px wide, and the origional image in your stock size twice once with its origional name and once with the extenshion to the file name as above image-lg.WHATEVER .png .jpg .gif...
+This include file at: [gallery-layout.html](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_includes/gallery-layout.html){:id="open-website" rel="noreferrer"} builds a srcset out of Five preconfigured images. Sizes as example image-320.jpg or 320px wide, image-800.jpg or 800px wide, image-1200px or 1200px wide, and the origional image in your stock size twice once with its origional name and once with the extenshion to the file name as above image-lg.WHATEVER .png .jpg .gif...
 
 ### The _layout file
 
-The layout file at: [gallery.html](https://github.com/donaldboulton/DWB/blob/gh-pages/_layouts/gallery.html`){:id="open-website" rel="nofollow"} for the Complex Gallery simular to the simple gallery with a added class on the div as class="gallery".
+The layout file at: [gallery.html](https://github.com/donaldboulton/DWB/blob/gh-pages/_layouts/gallery.html`){:id="open-website" rel="noreferrer"} for the Complex Gallery simular to the simple gallery with a added class on the div as class="gallery".
 
 ```html
 ---
@@ -704,6 +704,6 @@ support: [gallery]
 </div>
 ```
 
-If there is any confusion to the contents of this post add a review, tweet or a comment below, and or go to the repo for, Donald Boulton at: [Github Repo](https://github.com/donaldboulton/DWB){:id="open-website" rel="nofollow"} and view the code. Both my Simple and Complex Gallerys displayed on my Gallery Page.
+If there is any confusion to the contents of this post add a review, tweet or a comment below, and or go to the repo for, Donald Boulton at: [Github Repo](https://github.com/donaldboulton/DWB){:id="open-website" rel="noreferrer"} and view the code. Both my Simple and Complex Gallerys displayed on my Gallery Page.
 
 > The only Gallerys that are Complex or yml driven are my CAT Gallerys.

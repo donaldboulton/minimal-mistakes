@@ -13,7 +13,7 @@
   <h3 class="comment-author-name">
     {% unless include.url == blank %}
     <span>
-      <a rel="external nofollow" href="{{ include.url }}"></span>
+      <a rel="external  noreferrer" href="{{ include.url }}"></span>
         <span itemprop="name">{{ include.name | strip_html }}</a>
     </span>
     {% else %}
@@ -33,7 +33,7 @@
   </div>
   {% unless include.replying_to != 0 or page.comments_locked == true %}
     <div class="comment-reply">
-      <a rel="nofollow" class="btn btn--primary" href="#comment-{{ include.index }}" onclick="return addComment.moveForm('comment-{{ include.index }}', '{{ include.index }}', 'respond', '{{ page.slug }}')"> Reply to: <svg class="icon icon--reply" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-reply' | prepend: 'assets/icons/' | relative_url }}"></use></svg> {{ include.name }}</a>
+      <a rel="noreferrer" class="btn btn--primary" href="#comment-{{ include.index }}" onclick="return addComment.moveForm('comment-{{ include.index }}', '{{ include.index }}', 'respond', '{{ page.slug }}')"> Reply to: <svg class="icon icon--reply" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-reply' | prepend: 'assets/icons/' | relative_url }}"></use></svg> {{ include.name }}</a>
     </div>
   {% endunless %}
 </article>

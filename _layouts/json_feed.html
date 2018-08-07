@@ -51,7 +51,7 @@ layout: null
             {{ post_gallery }}
           {% endif %}
           {{ post.content }}
-          <p><a href="{{ post.url | absolute_url }}" rel="nofollow">{{ post.title }}</a> was originally published on {{ site.title }}.</p>
+          <p><a href="{{ post.url | absolute_url }}" rel="noreferrer">{{ post.title }}</a> was originally published on {{ site.title }}.</p>
         {% endcapture %}
         "content_html": {{ post_content | strip | jsonify }},
         "content_text": {{ post.content | strip_html | normalize_whitespace | jsonify }}
