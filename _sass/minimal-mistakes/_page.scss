@@ -589,3 +589,22 @@
     }
   }
 }
+
+.page-nav-next, .page-nav-prev {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: calc(var(--horizontal-padding) - 16px);
+  height: 60%;
+  padding: 8px;
+  top: 20%;
+  justify-content: center;
+}
+
+.page-nav-next {
+  right: 0;
+}
+
+.page-nav-prev {
+  left: 0;
+}
