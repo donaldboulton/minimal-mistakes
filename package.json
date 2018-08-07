@@ -88,6 +88,8 @@
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "firebase-admin": "^5.13.1",
+    "google-auth-library": "^0.10.0",
+    "googleapis": "^20.1.0",
     "mustache": "^2.3.0",
     "nedb": "^1.8.0",
     "web-push": "^3.3.2"
