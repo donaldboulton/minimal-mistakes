@@ -18,7 +18,7 @@ deploy:
   provider: script
   skip-cleanup: true
   script: gulp deploy
-  github-token: $g/KPkZ35QrQDOBsSFwZfUhn4fw0o+MBcoxrXualp+3/HpdaVS5fazIq9bZoEE2Tpvnge8Nu8/y46wFxA+3ehca8YekHdNdMD5jUNaR5nV7+sVhQr5Tff14cvgJV/CPf6v6dHoLAgiynogD2ou2n3K1krv2ZnFBvAcySgMp7sXNs=
+  github-token: cXD0v7D6CnafiQXfABx41AiRfgAnJcjJDaU4Dd7tjeBBNOPqOcXWp5Q+rf4JfVvw0Oe+rw42gmZ491cmHvi5IVEl34P5Tgnpbittdw76egeblp78zfPLMlVRgSDavYWH3q6m6KM4efj/Ls4Jx4Cn+9h6S8jRcXVZzaCjg+MFTzo=
   keep-history: true
   on:
     branch: gh-pages

@@ -47,6 +47,15 @@ function getSubscriptionsFromDatabase() {
     }));
 }
 
+var ref = new Firebase("https://airy-office-413.firebaseio.com");
+ref.authWithCustomToken("AUTH_TOKEN", function(error, authData) {
+  if (error) {
+    console.log("Authentication Failed!", error);
+  } else {
+    console.log("Authenticated successfully with payload:", authData);
+  }
+});
+
 function deleteSubscriptionFromDatabase(subscriptionId) {
     return new Promise(((resolve, reject) => {
         db.remove({_id: subscriptionId }, {}, function(err) {

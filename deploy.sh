@@ -12,6 +12,4 @@ npm install
 
 npm start
 
-pm2 start bin/www
-
 echo "Server restarted Successfully"
