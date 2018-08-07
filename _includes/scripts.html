@@ -275,6 +275,8 @@ if ($.support.pjax) {
   };
   firebase.initializeApp(config);
 </script>
+{% endif %}
+{% if page.notifications-admin == true %}
 <script src="{{ '/assets/js/vendor/notifications/notifications-admin.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/vendor/notifications/notifications.js' | relative_url }}"></script>
 {% endif %}

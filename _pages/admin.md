@@ -14,6 +14,8 @@ comments: false
 cookies: true
 recaptcha: false
 notifications: true
+notifications-admin: true
+
 image:
   cover: true
   path: &image /assets/images/pages/digital-box-compressor.jpg
