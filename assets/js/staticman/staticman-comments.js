@@ -1,47 +1,46 @@
 (function ($) {
-    const $comments = $('.js-comments');
-    $('#comment-form').submit(function () {
-        const form = this;
+  var $comments = $('.js-comments');
 
-        $(form).addClass('disabled');
-        $('#comment-form-submit').html(
-            '<svg class="icon spin"><use xlink:href="/assets/icons/icons.svg#icon-loading"></use></svg> Loading...',
-        );
+  $('#comment-form').submit(function () {
+    var form = this;
 
-        $.ajax({
-            type: $(this).attr('method'),
-            url: $(this).attr('action'),
-            data: $(this).serialize(),
-            contentType: 'application/x-www-form-urlencoded',
-            success(data) {
-                $('#comment-form-submit').html('{{ site.data.ui-text[site.locale].comment_btn_submitted | default: "Submitted" }}');
-                $('.page__comments-form .js-notice').removeClass('notice--danger');
-                $('.page__comments-form .js-notice').addClass('notice--success');
-                showAlert('{{ site.data.ui-text[site.locale].comment_success_msg | default: "Thanks for your comment! It will show on the site once it has been approved." }}');
-            },
+    $(form).addClass('disabled');
+    $("#comment-form-submit").html(
+      '<svg class="icon spin"><use xlink:href="/assets/icons/icons.svg#icon-loading"></use></svg> Loading...'
+    );
 
-            error(err) {
-                console.log(err);
-                $('#comment-form-submit').html('{{ site.data.ui-text[site.locale].comment_btn_submit  | default: "Submit Comment" }}');
-                $('.page__comments-form .js-notice').removeClass('notice--success');
-                $('.page__comments-form .js-notice').addClass('notice--danger');
-                showAlert('{{ site.data.ui-text[site.locale].comment_error_msg | default: "Sorry, there was an error with your submission. Please make sure all required fields have been completed and try again." }}');
-                $(form).removeClass('disabled');
-            },
-        });
-
-        return false;
+    $.ajax({
+      type: $(this).attr('method'),
+      url: $(this).attr('action'),
+      data: $(this).serialize(),
+      contentType: 'application/x-www-form-urlencoded',
+      success: function (data) {
+        $('#comment-form-submit').html('{{ site.data.ui-text[site.locale].comment_btn_submitted | default: "Submitted" }}');
+        $('.page__comments-form .js-notice').removeClass('notice--danger');
+        $('.page__comments-form .js-notice').addClass('notice--success');
+        showAlert('{{ site.data.ui-text[site.locale].comment_success_msg | default: "Thanks for your comment! It will show on the site once it has been approved." }}');
+      },
+      error: function (err) {
+        console.log(err);
+        $('#comment-form-submit').html('{{ site.data.ui-text[site.locale].comment_btn_submit  | default: "Submit Comment" }}');
+        $('.page__comments-form .js-notice').removeClass('notice--success');
+        $('.page__comments-form .js-notice').addClass('notice--danger');
+        showAlert('{{ site.data.ui-text[site.locale].comment_error_msg | default: "Sorry, there was an error with your submission. Please make sure all required fields have been completed and try again." }}');
+        $(form).removeClass('disabled');
+      }
     });
-    document.getElementById('comment-form').reset();
-    function showAlert(message) {
-        $('.page__comments-form .js-notice').removeClass('hidden');
-        $('.page__comments-form .js-notice-text').html(message);
-    }
-}(jQuery));
 
-const addComment = {
-    moveForm(commId, parentId, respondId, postId) {
-  const div
+    return false;
+  });
+  document.getElementById("comment-form").reset();
+  function showAlert(message) {
+    $('.page__comments-form .js-notice').removeClass('hidden');
+    $('.page__comments-form .js-notice-text').html(message);
+  }
+})(jQuery);
+var addComment = {
+  moveForm: function(commId, parentId, respondId, postId) {
+  var div,
     element,
     style,
     cssHidden,
@@ -122,7 +121,7 @@ const addComment = {
   return false;
 },
 
-    I(id) {
+I: function(id) {
   return document.getElementById(id);
-},
+}
 };

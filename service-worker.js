@@ -162,7 +162,7 @@ this.addEventListener('activate', (e) => {
 
 function fetchFromNetworkAndCache(e) {
     if (e.request.cache === 'only-if-cached' && e.request.mode !== 'same-origin') return;
-        return fetch(e.request).then((res) => {
+    return fetch(e.request).then((res) => {
         if (!res.url) return res;
         if (new URL(res.url).origin !== location.origin) return res;
         return caches.open(VERSION).then((cache) => {
@@ -183,7 +183,7 @@ function openWindow(event) {
 }
 
 function focusWindow(event) {
-    const urlToOpen = newFunction()
+    const urlToOpen = newFunction();
 
     const promiseChain = clients.matchAll({
         type: 'window',
@@ -364,4 +364,25 @@ self.addEventListener('message', (event) => {
         console.warn('Unknown message received in service-worker.js');
         break;
     }
+});
+
+importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-app.js');
+importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-messaging.js');
+
+firebase.initializeApp({
+    messagingSenderId: '857761645811',
+});
+
+const messaging = firebase.messaging();
+
+messaging.setBackgroundMessageHandler((payload) => {
+    console.log('[firebase-messaging-sw.js] Received background message ', payload);
+    const notificationTitle = 'Background Message Title';
+    const notificationOptions = {
+        body: 'Background Message body.',
+        icon: '/firebase-logo.png',
+    };
+
+    return self.registration.showNotification(notificationTitle,
+        notificationOptions);
 });

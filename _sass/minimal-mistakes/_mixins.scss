@@ -4,15 +4,11 @@
 
 %tab-focus {
   /* Default*/
-  outline: thin dotted $warning-color;
+  outline: thin dotted $link-color-hover;
   /* Webkit*/
-  outline: 5px auto $warning-color;
+  outline: 5px auto $link-color-hover;
   outline-offset: -2px;
 }
-
-/*
-   em function
-   ========================================================================== */
 
 @function em($target, $context: $doc-font-size) {
   @return ($target / $context) * 1em;
