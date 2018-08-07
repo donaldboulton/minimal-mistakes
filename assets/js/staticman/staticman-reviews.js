@@ -14,13 +14,13 @@
             url: $(this).attr('action'),
             data: $(this).serialize(),
             contentType: 'application/x-www-form-urlencoded',
-            success (data) {
+            success(data) {
                 $('#review-form-submit').html('{{ "Submitted" }}');
                 $('.page__reviews-form .js-notice').removeClass('notice--danger');
                 $('.page__reviews-form .js-notice').addClass('notice--success');
                 showAlert('{{ site.data.ui-text[site.locale].review_success_msg | default: "Thanks for your Review! It should show up after CloudFlare Cache purge. about a minute." }}');
             },
-            error (err) {
+            error(err) {
                 console.log(err);
                 $('#review-form-submit').html('{{ "Submit Review" }}');
                 $('.page__reviews-form .js-notice').removeClass('notice--success');
@@ -32,7 +32,7 @@
 
         return false;
     });
-    document.getElementById('comment-form').reset();
+    document.getElementById('review-form').reset();
     function showAlert(message) {
         $('.page__reviews-form .js-notice').removeClass('hidden');
         $('.page__reviews-form .js-notice-text').html(message);
