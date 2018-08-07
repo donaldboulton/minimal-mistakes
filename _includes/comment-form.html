@@ -31,13 +31,12 @@
       <input type="hidden" id="comment-form-location" name="fields[hidden]" autocomplete="off">
       <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.reCaptcha.siteKey }}">
       <input type="hidden" name="options[reCaptcha][secret]" value="{{ site.reCaptcha.secret }}">
-      <p><small>Notifications For:&nbsp;<a href="https://donboulton.com/">donboulton.com</a></small></p>
       <div class="enable-push">
         <div class="toggle-switch">
           <input id="enable-push-checkbox" class="js-push-toggle-checkbox" type="checkbox" disabled></input>
           <label for="enable-push-checkbox"></label>
         </div>
-        <div class="subscription-message">Enable Notifications</div>
+        <div class="subscription-message">&nbsp;Enable Notifications</div>
       </div>
     <div class="form-group">
         <button type="submit" id="comment-form-submit" class="btn btn--primary" value="Submit Comment" id="submit_button" data-callback="enableBtn">Submit Comment</button>
