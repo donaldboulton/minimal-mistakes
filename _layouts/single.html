@@ -31,6 +31,7 @@ layout: default
 
       <section class="page__content">
           {{ content }}
+          {% include page-navigation.html %}
           <aside class="sidebar__right" role="complementary" itemscope itemtype="http://schema.org/WPSideBar">
             {% if page.toc %}
                <nav class="toc">
@@ -62,7 +63,6 @@ layout: default
           {% include twitter-web-intents.html %}
         {% endif %}
       </section>
-      {% include page-navigation.html %}
       <footer class="page__meta">
         {% if site.data.ui-text[site.locale].meta_label %}
           <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
