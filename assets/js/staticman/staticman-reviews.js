@@ -1,5 +1,3 @@
-'use strict';
-
 (function ($) {
     const $reviews = $('.js-reviews');
 
@@ -8,21 +6,21 @@
 
         $(form).addClass('disabled');
         $('#review-form-submit').html(
-        '<svg class="icon spin"><use xlink:href="/assets/icons/icons.svg#icon-loading"></use></svg> Loading...'
-    );
+            '<svg class="icon spin"><use xlink:href="/assets/icons/icons.svg#icon-loading"></use></svg> Loading...',
+        );
 
         $.ajax({
             type: $(this).attr('method'),
             url: $(this).attr('action'),
             data: $(this).serialize(),
             contentType: 'application/x-www-form-urlencoded',
-            success: function (data) {
+            success (data) {
                 $('#review-form-submit').html('{{ "Submitted" }}');
                 $('.page__reviews-form .js-notice').removeClass('notice--danger');
                 $('.page__reviews-form .js-notice').addClass('notice--success');
                 showAlert('{{ site.data.ui-text[site.locale].review_success_msg | default: "Thanks for your Review! It should show up after CloudFlare Cache purge. about a minute." }}');
             },
-            error: function (err) {
+            error (err) {
                 console.log(err);
                 $('#review-form-submit').html('{{ "Submit Review" }}');
                 $('.page__reviews-form .js-notice').removeClass('notice--success');
@@ -39,4 +37,4 @@
         $('.page__reviews-form .js-notice').removeClass('hidden');
         $('.page__reviews-form .js-notice-text').html(message);
     }
-})(jQuery);
+}(jQuery));
