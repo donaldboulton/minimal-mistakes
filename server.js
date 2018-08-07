@@ -1,29 +1,29 @@
-const webPush = require('web-push');
-const express = require('express');
-const path = require('path');
-const admin = require('firebase-admin');
-const bodyParser = require('body-parser');
-const Datastore = require('nedb');
+import { setVapidDetails } from 'web-push';
+import express, { static } from 'express';
+import { join } from 'path';
+import firebaseAdmin from 'firebase-admin';
+import { json, text, urlencoded } from 'body-parser';
+import Datastore from 'nedb';
 
 const hostname = 'https://donboulton.com';
 
-const constants = require('./constants');
+import constants from './constants';
 
 const vapidKeys = {
     publicKey: 'BOew5Tx7fTX51GzJ7tpF3dDLNS54OvUST_dGGqzJEy54jqW2qghIRTiK7BfOpCPp8xNfMH7Mtprl3hp_WGjgslU',
     privateKey: 'ymblNrJSzlXdRMhFYdXh1Hda8HkIO76aVs85X93wAjc',
 };
 
-webPush.setVapidDetails('mailto:donaldboulton@gmail.com', vapidKeys.publicKey, vapidKeys.privateKey);
+setVapidDetails('mailto:donaldboulton@gmail.com', vapidKeys.publicKey, vapidKeys.privateKey);
 
 const db = new Datastore({
-    filename: path.join(__dirname, 'subscription-store.db'),
+    filename: join(__dirname, 'subscription-store.db'),
     autoload: true,
 });
 
 
 function saveSubscriptionToDatabase(subscription) {
-    return new Promise(function(resolve, reject) {
+    return new Promise(((resolve, reject) => {
     db.insert(subscription, function(err, newDoc) {
       if (err) {
         reject(err);
@@ -32,31 +32,29 @@ function saveSubscriptionToDatabase(subscription) {
 
       resolve(newDoc._id);
     });
-  });
-};
+  }));
+}
 
 function getSubscriptionsFromDatabase() {
-  return new Promise(function(resolve, reject) {
-    db.find({}, function(err, docs) {
-      if (err) {
-        reject(err);
-        return;
-      }
-
-      resolve(docs);
-    })
-  });
+    return new Promise(((resolve, reject) => {
+        db.find({}, function(err, docs) {
+            if (err) {
+                reject(err);
+                return;
+            }
+           resolve(docs);
+        });
+    }));
 }
 
 function deleteSubscriptionFromDatabase(subscriptionId) {
-  return new Promise(function(resolve, reject) {
-  db.remove({_id: subscriptionId }, {}, function(err) {
-      if (err) {
-        reject(err);
-        return;
-      }
-
-      resolve();
+    return new Promise(((resolve, reject) => {
+        db.remove({_id: subscriptionId }, {}, function(err) {
+            if (err) {
+                reject(err);
+                return;
+            }
+            resolve();
       var admin = require("firebase-admin");
 
       var serviceAccount = require("./serviceAccountKey.json");
@@ -66,38 +64,36 @@ function deleteSubscriptionFromDatabase(subscriptionId) {
       databaseURL: "https://airy-office-413.firebaseio.com"
      });
     });
-  });
+  }));
 }
 
 const isValidSaveRequest = (req, res) => {
-
-  if (!req.body || !req.body.endpoint) {
-
-    res.status(400);
-    res.setHeader('Content-Type', 'application/json');
-    res.send(JSON.stringify({
-      error: {
-        id: 'no-endpoint',
-        message: 'Subscription must have an endpoint.',
-      }
-    }));
-    return false;
-  }
-  return true;
+    if (!req.body || !req.body.endpoint) {
+        res.status(400);
+        res.setHeader('Content-Type', 'application/json');
+        res.send(JSON.stringify({
+            error: {
+                id: 'no-endpoint',
+                message: 'Subscription must have an endpoint.',
+            },
+        }));
+        return false;
+    }
+    return true;
 };
 
 const app = express();
-app.use(express.static(path.join(__dirname, '/')));
-app.use(bodyParser.json());
-app.use(bodyParser.text());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(static(join(__dirname, '/')));
+app.use(json());
+app.use(text());
+app.use(urlencoded({ extended: true }));
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     return next();
 });
 
-app.post('/api/save-subscription/', function (req, res) {
+app.post('/api/save-subscription/', (req, res) => {
 
   if (!isValidSaveRequest(req, res)) {
     return;
@@ -124,14 +120,14 @@ app.post('/api/save-subscription/', function (req, res) {
 
 app.post('/api/get-subscriptions/',
 
-function (req, res) {
+    (req, res) => {
   return getSubscriptionsFromDatabase()
   .then(function(subscriptions) {
     const reducedSubscriptions = subscriptions.map((subscription) => {
       return {
         id: subscription._id,
         endpoint: subscription.endpoint
-      }
+      };
     });
 
     res.setHeader('Content-Type', 'application/json');
@@ -149,18 +145,18 @@ function (req, res) {
   });
 });
 
-const triggerPushMsg = function(subscription, dataToSend) {
-  return webpush.sendNotification(subscription, dataToSend)
-  .catch((err) => {
+const triggerPushMsg = function (subscription, dataToSend) {
+    return webpush.sendNotification(subscription, dataToSend)
+        .catch((err) => {
     if (err.statusCode === 410) {
       return deleteSubscriptionFromDatabase(subscription._id);
-    } else {
-      console.log('Subscription is no longer valid: ', err);
     }
+      console.log('Subscription is no longer valid: ', err);
+
   });
 };
 
-app.post('/api/trigger-push-msg/', function (req, res) {
+app.post('/api/trigger-push-msg/', (req, res) => {
 
   const dataToSend = JSON.stringify(req.body);
 
@@ -197,6 +193,6 @@ app.post('/api/trigger-push-msg/', function (req, res) {
 
 const port = process.env.PORT || 9012;
 
-const server = app.listen(port, function () {
+const server = app.listen(port, () => {
   console.log('Running on http://localhost:' + port);
 });

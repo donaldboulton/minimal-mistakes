@@ -1,7 +1,5 @@
-
-
 const APP_PREFIX = 'donboulton';
-const VERSION = 'version_05';
+const VERSION = 'version_04';
 const CACHE_NAME = APP_PREFIX + VERSION;
 const URLS = [
     '/assets/js/main.min.js',
@@ -143,47 +141,45 @@ const URLS = [
 ];
 
 self.addEventListener('fetch', (e) => {
-    console.log('fetch request : ' + e.request.url);
+    console.log(`fetch request : ${e.request.url}`);
     e.respondWith(
-      caches.match(e.request).then(function (request) {
+        caches.match(e.request).then((request) => {
           if (request) {
               console.log('responding with cache : ' + e.request.url);
               return request;
-          } else {
+          }
               console.log('file is not cached, fetching : ' + e.request.url);
               return fetch(e.request)
-          }
-      })
+
+      }),
     );
 });
 
 self.addEventListener('install', (e) => {
     e.waitUntil(
-    caches.open(CACHE_NAME).then(function (cache) {
-        console.log('installing cache : ' + CACHE_NAME);
-        return cache.addAll(URLS);
-    })
-  );
+        caches.open(CACHE_NAME).then((cache) => {
+            console.log(`installing cache : ${  CACHE_NAME}`);
+            return cache.addAll(URLS);
+        }),
+    );
 });
 
 self.addEventListener('activate', (e) => {
     e.waitUntil(
-        caches.keys().then(function (keyList) {
-            const cacheWhitelist = keyList.filter(function (key) {
+        caches.keys().then((keyList) => {
+            const cacheWhitelist = keyList.filter((key) => {
                 return key.indexOf(APP_PREFIX);
             });
             cacheWhitelist.push(CACHE_NAME);
-            return Promise.all(keyList.map(function (key, i) {
-            if (cacheWhitelist.indexOf(key) === -1) {
-                console.log('deleting cache : ' + keyList[i] );
-                return caches.delete(keyList[i]);
-            }
-        }));
-    }),
-  );
+            return Promise.all(keyList.map((key, i) => {
+                if (cacheWhitelist.indexOf(key) === -1) {
+                    console.log('deleting cache : ' + keyList[i] );
+                    return caches.delete(keyList[i]);
+                }
+            }));
+        }),
+    );
 });
-
-const examplePage = '/example-page.html';
 
 function openWindow(event) {
     const examplePage = '/example-page.html';
@@ -192,7 +188,6 @@ function openWindow(event) {
 }
 
 function focusWindow(event) {
-
     const urlToOpen = new URL(examplePage, self.location.origin).href;
 
     const promiseChain = clients.matchAll({
@@ -265,7 +260,6 @@ function demoMustShowNotificationCheck(event) {
 }
 
 function demoSendMessageToPage(event) {
-
     const promiseChain = isClientFocused()
         .then((clientIsFocused) => {
             if (clientIsFocused) {
@@ -287,7 +281,7 @@ function demoSendMessageToPage(event) {
 
 self.addEventListener('push', (event) => {
     if (event.data) {
-        switch(event.data.text()) {
+        switch (event.data.text()) {
         case 'must-show-notification':
             demoMustShowNotificationCheck(event);
             break;
@@ -329,7 +323,7 @@ self.addEventListener('notificationclick', (event) => {
 self.addEventListener('notificationclick', (event) => {
     event.notification.close();
 
-    switch(event.notification.tag) {
+    switch (event.notification.tag) {
     case 'open-window':
         openWindow(event);
         break;
@@ -356,15 +350,15 @@ self.addEventListener('notificationclose', (event) => {
 
 self.addEventListener('message', (event) => {
     console.log('Received message from page.', event.data);
-    switch(event.data) {
+    switch (event.data) {
     case 'must-show-notification-demo':
         self.dispatchEvent(new PushEvent('push', {
-            data: 'must-show-notification'
+            data: 'must-show-notification',
         }));
         break;
     case 'send-message-to-page-demo':
         self.dispatchEvent(new PushEvent('push', {
-            data: 'send-message-to-page'
+            data: 'send-message-to-page',
         }));
         break;
     default:
