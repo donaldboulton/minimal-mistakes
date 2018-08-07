@@ -395,6 +395,7 @@ defaults:
       adds: true
       reviews: true
       cookies: true
+      notifications: true
       breadcrumbs:
         - label: "Posts"
           url: /year-archive/
@@ -413,6 +414,7 @@ defaults:
       adds: true
       reviews: true
       cookies: true
+      notifications: true
       breadcrumbs:
         - label: "Amp Posts"
           url: /:amp-html/:name/
@@ -423,6 +425,7 @@ defaults:
     values:
       layout: single
       author_profile: true
+      notifications: true
   - scope:
       path: ""
       type: category
