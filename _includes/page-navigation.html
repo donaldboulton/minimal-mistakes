@@ -1,7 +1,7 @@
-{% for links in site.content  %}
+{% for links in site.posts  %}
   {% if links.title == page.title %}
     {% unless forloop.last %}
-      {% assign next = site.content[forloop.index] %}
+      {% assign next = site.posts[forloop.index] %}
     {% endunless %}
     {% break %}
   {% endif %}
