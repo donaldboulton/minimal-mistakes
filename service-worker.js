@@ -419,6 +419,7 @@ firebase.initializeApp({
   'messagingSenderId': '857761645811'
 });
 
+var messaging = firebase.messaging();
 messaging.setBackgroundMessageHandler(function(payload) {
  console.log('[sevice-worker.js] Received background message ', payload);
 
@@ -441,5 +442,3 @@ firebase.initializeApp({
     storageBucket: 'airy-office-413.appspot.com',
     messagingSenderId: '857761645811',
 });
-
-var messaging = firebase.messaging();
