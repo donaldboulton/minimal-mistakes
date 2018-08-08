@@ -1,4 +1,4 @@
-const VERSION = '20';
+const VERSION = '21';
 
 this.addEventListener('install', (e) => {
     e.waitUntil(caches.open(VERSION).then(cache => cache.addAll([
@@ -411,7 +411,18 @@ self.addEventListener('message', (event) => {
     }
 });
 
-var messaging = firebase.messaging();
+const pushBtn   = document.getElementById('push-button');
+      database  = firebase.database();
+      messaging = firebase.messaging();
+
+
+let userToken    = null,
+    isSubscribed = false;
+
+
+messaging.onMessage(payload => {
+    snackbar(payload);
+});
 
 importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-app.js');
 importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-database.js');
