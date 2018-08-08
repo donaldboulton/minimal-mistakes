@@ -411,19 +411,6 @@ self.addEventListener('message', (event) => {
     }
 });
 
-const pushBtn   = document.getElementById('push-button');
-      database  = firebase.database();
-      messaging = firebase.messaging();
-
-
-let userToken    = null,
-    isSubscribed = false;
-
-
-messaging.onMessage(payload => {
-    snackbar(payload);
-});
-
 importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-app.js');
 importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-database.js');
 importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-messaging.js');
