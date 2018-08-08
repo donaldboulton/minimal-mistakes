@@ -7,6 +7,7 @@
   "Scope": "/",
   "background_color": "#000000",
   "theme_color": "#212529",
+  "gcm_sender_id": "857761645811",
   "icons": [
     {
       "src": "https://donboulton.com/assets/images/fav-icons/favicon-32x32.png",

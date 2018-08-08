@@ -135,7 +135,6 @@ this.addEventListener('install', (e) => {
         '/assets/images/fav-icons/favicon.png',
         '/service-worker.js',
         '/assets/js/staticman/staticman-reviews.js',
-        '/assets/js/staticman/staticman-comments.js',
         '/assets/js/vendor/bigfoot/bigfoot.min.js',
         '/manifest.webmanifest',
     ])));
@@ -252,10 +251,14 @@ function demoMustShowNotificationCheck(event) {
                 return;
             }
 
-            return self.registration.showNotification('Had to show a notification.');
+            return newFunction();
         });
 
     event.waitUntil(promiseChain);
+
+    function newFunction() {
+        return self.registration.showNotification('Had to show a notification.');
+    }
 }
 
 function demoSendMessageToPage(event) {
@@ -367,13 +370,8 @@ self.addEventListener('message', (event) => {
 });
 
 importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-app.js');
+importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-database.js');
 importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-messaging.js');
-
-firebase.initializeApp({
-    messagingSenderId: '857761645811',
-});
-
-const messaging = firebase.messaging();
 
 messaging.setBackgroundMessageHandler((payload) => {
     console.log('[firebase-messaging-sw.js] Received background message ', payload);
@@ -386,3 +384,26 @@ messaging.setBackgroundMessageHandler((payload) => {
     return self.registration.showNotification(notificationTitle,
         notificationOptions);
 });
+
+// ON NOTIFICATION CLICK
+self.addEventListener('notificationclick', (event) => {
+    console.log(event);
+
+    event.notification.close();
+
+    event.waitUntil(
+        self.clients.openWindow('https://donaldboulton.com'),
+    );
+});
+
+
+firebase.initializeApp({
+    apiKey: 'AIzaSyBoZgIki3tEgCtgSVVWDdastZCqW9WWGKE',
+    authDomain: 'airy-office-413.firebaseapp.com',
+    databaseURL: 'https://airy-office-413.firebaseio.com',
+    projectId: 'airy-office-413',
+    storageBucket: 'airy-office-413.appspot.com',
+    messagingSenderId: '857761645811',
+});
+
+const messaging = firebase.messaging();

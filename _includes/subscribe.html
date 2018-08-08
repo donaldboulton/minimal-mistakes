@@ -6,14 +6,19 @@
     </span>
   <div class="toc1__menu">
       <h3>Subcriptions</h3>
-      <p><small>For:&nbsp;<a href="https://donboulton.com/">https://donboulton.com/</a></small></p>
-      <div class="enable-push">
-        <div class="toggle-switch">
-          <input id="enable-push-checkbox" class="js-push-toggle-checkbox" type="checkbox" disabled></input>
-          <label for="enable-push-checkbox"></label>
+      <p><small>For:&nbsp;<a href="https://donboulton.com/">donboulton.com</a></small></p>
+      <button id="push-button" class="mdl-button mdl-js-button btn btn--primary" disabled>Subscribe</button>
+      <form action="#">
+        <div class="mdl-textfield mdl-js-textfield">
+            <input id="input-title" class="mdl-textfield__input" type="text">
+            <label class="mdl-textfield__label" for="input-title">Post Title</label>
         </div>
-        <div class="subscription-message">Enable Notifications</div>
-      </div>
-      <p><a class="button" href="/admin.html" target="blank">Open Admin Panel</a></p>
+        <button type="submit" id="add-post" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect btn btn--danger">Add Post</button>
+        </form>
+        <ul id="list" class="mdl-list"></ul>
+  </div>
+  <div id="snackbar" class="mdl-js-snackbar mdl-snackbar">
+    <div class="mdl-snackbar__text"></div>
+    <button class="btn btn--primary btn__action" type="button"></button>
   </div>
 </article>
