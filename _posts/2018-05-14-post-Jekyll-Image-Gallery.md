@@ -26,7 +26,7 @@ comments: true
 related: true
 share: false
 web-intents: true
-tweet_id: 145116818707714048
+tweet_id: 1027106412470718465
 social-share: twitter --twitter-hashtags facebook
 sidenav: true
 reviews: true
@@ -58,7 +58,7 @@ lcb: "{"
 
 # A Simple or Complex Image Gallery
 
-There are two ways displayed below to build Image Gallerys with Jekyll using [MetaFuzzy Isotope](https://isotope.metafizzy.co/) and [Sachinchoolur LightGallery](http://sachinchoolur.github.io/lightGallery/demos/)
+There are two ways displayed below to build Image Gallery's with Jekyll using [MetaFuzzy Isotope](https://isotope.metafizzy.co/) and [Sachinchoolur LightGallery](http://sachinchoolur.github.io/lightGallery/demos/)
 
 The First is a Simple Gallery that Loops through all images in a folder resizing the isotope gallery page, display image online, the original image is opened in LightGallery.
 
@@ -704,6 +704,6 @@ support: [gallery]
 </div>
 ```
 
-If there is any confusion to the contents of this post add a review, tweet or a comment below, and or go to the repo for, Donald Boulton at: [GitHub Repo](https://github.com/donaldboulton/DWB){:id="open-website" rel="noreferrer"} and view the code. Both my Simple and Complex Gallerys displayed on my Gallery Page.
+If there is any confusion to the contents of this post add a review, tweet or a comment below, and or go to the repo for, Donald Boulton at: [GitHub Repo](https://github.com/donaldboulton/DWB){:id="open-website" rel="noreferrer"} and view the code. Both my Simple and Complex Gallery's displayed on my Gallery Page.
 
 > The only Gallery's that are Complex or yml driven are my CAT Gallery's.

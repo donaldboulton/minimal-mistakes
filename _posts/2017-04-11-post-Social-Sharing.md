@@ -27,7 +27,7 @@ adds: true
 cookies: true
 share: false
 web-intents: true
-tweet_id: 145116818707714048
+tweet_id: 1027102649798287360
 anchor: true
 social-share: twitter --twitter-hashtags facebook
 excerpt: "Using just links in Asp.NET Core 2 add like included below  @Context.Request.GetDisplayUrl(), to get the url of the page your sharing. View the source of this repo to see how to do it in Jekyll"
@@ -56,9 +56,9 @@ github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2017-04-11-post-Socia
 
 Using just links in Asp.NET Core 2 add @@Context.Request.GetDisplayUrl() to get the url of the page your sharing.
 
-First download Mofit.Social and install it. Open your site folders Modules/Mofit.Social/Views/Parts/Social.cshtml and deleat everything in the file. and Add [the below](#below) changing it to your own website content.
+First download Mofit.Social and install it. Open your site folders Modules/Mofit.Social/Views/Parts/Social.cshtml and delee everything in the file. and Add [the below](#below) changing it to your own website content.
 
-We will be using Font Awesome Icons for social icons on our bootstrap buttons but you could easily use glyph-icons or your own images instead anhd all the links open in a browser friendly window, thus no user gets lost  from your website on a new browser window, tab or page.
+We will be using Font Awesome Icons for social icons on our bootstrap buttons but you could easily use glyph-icons or your own images instead and all the links open in a browser friendly window, thus no user gets lost  from your website on a new browser window, tab or page.
 
 Not a download of JavaScript or Cookies is required.
 
@@ -72,7 +72,7 @@ There is also an added bonus in that you don’t need to have Facebook/Twitter/E
 
 How to do this
 
-Add the links below. Changing to Your Titles, Summary and where needed a Discription.
+Add the links below. Changing to Your Titles, Summary and where needed a Description.
 
 Url's Model is buy url=@Model.Url on each link  and by addingdata-url="@Model.Url" so the page your user is on gets shared, instead of your website home url.
 
@@ -149,7 +149,7 @@ Add the page link to your post or page in the Mofit.Social Url input, add the fu
 
 ### Limited Dependencies With Twitter Web Intents
 
-Some sites may prefer to embed the unobtrusive Web Intents pop-up Javascript inline or without a dependency to platform.twitter.com. The snippet below will offer the equivalent functionality without the external dependency. [Twitter Web Intents page](https://dev.twitter.com/web/intents "Twitter Web Intents").
+Some sites may prefer to embed the unobtrusive Web Intents pop-up JavaScript inline or without a dependency to platform.twitter.com. The snippet below will offer the equivalent functionality without the external dependency. [Twitter Web Intents page](https://dev.twitter.com/web/intents "Twitter Web Intents").
 
 ```javascript
     <script>
