@@ -209,20 +209,13 @@ const doSomething = () => {
     return Promise.resolve();
 };
 
-// This is here just to highlight the simple version of notification click.
-// Normally you would only have one notification click listener.
-/**** START simpleNotification ****/
-
 self.addEventListener('notificationclick', (event) => {
     const clickedNotification = event.notification;
     clickedNotification.close();
 
-    // Do something as the result of the notification click
     const promiseChain = doSomething();
     event.waitUntil(promiseChain);
 });
-
-/**** END simpleNotification ****/
 
 function openWindow(event) {
     const examplePage = '/thanks.html';
@@ -424,8 +417,6 @@ importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-app.js');
 importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-database.js');
 importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-messaging.js');
 
-// Initialize the Firebase app in the service worker by passing in the
-// messagingSenderId.
 firebase.initializeApp({
   'messagingSenderId': '857761645811'
 });
@@ -443,7 +434,6 @@ messaging.setBackgroundMessageHandler(function(payload) {
  return self.registration.showNotification(notificationTitle,
    notificationOptions);
 });
-// [END background_handler
 
 firebase.initializeApp({
     apiKey: 'AIzaSyBoZgIki3tEgCtgSVVWDdastZCqW9WWGKE',
@@ -453,5 +443,3 @@ firebase.initializeApp({
     storageBucket: 'airy-office-413.appspot.com',
     messagingSenderId: '857761645811',
 });
-
-const messaging = firebase.messaging();
