@@ -1,4 +1,4 @@
-const VERSION = '20';
+const VERSION = '22';
 
 this.addEventListener('install', (e) => {
     e.waitUntil(caches.open(VERSION).then(cache => cache.addAll([
