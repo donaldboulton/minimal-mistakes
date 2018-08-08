@@ -85,7 +85,7 @@ google:
   search_engine_id       : "013988495707638373148:g116y1r0c-a"
   instant_search         : # false (default), true
 github                   : [metadata]
-google-maps-api-key      : "AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA"
+google-maps-api-key      : "ma8ylWAZUjNaRNN45C2CBJHnyw5Nt2A7MgJqoFFHQKtwHzxO9lMMdHmOpbBHuB0wVKVvBLr2gpBN5Sw/+6GtpUxy0CmBF6voPmcj8FMnhZKI1CYPoTMWgUzTZeVaZOQnTFipmx80+1KZPu9JPsjNQdRbmQKwOcaqVPocIqVs3Nk="
 repository               : "https://github.com/donaldboulton/DWB"
 
 # SEO Related
@@ -173,21 +173,21 @@ weather:
 
 vapidKeys:
   - publicKey            : "BOew5Tx7fTX51GzJ7tpF3dDLNS54OvUST_dGGqzJEy54jqW2qghIRTiK7BfOpCPp8xNfMH7Mtprl3hp_WGjgslU"
-  - privateKey           : "ymblNrJSzlXdRMhFYdXh1Hda8HkIO76aVs85X93wAjc"
+  - privateKey           : "nzmLYpa/uP0drjyjUgMwcLCxlDa2MwTUwQZg0JaxJRH/PPvEu5JC4y0nN55QKR+d9g7TwX+g3GwtS3ZYUeG7IE9BIbKnAiYLGa2HQXGtTY1fPsX4lFo1aP8MF9CU5ECkEwJLXxeu11Z1huNo4pq5hpt6mjiAOp7SKGwn1oacV58="
 
 hawk:
   - authID               : "dh37fgj492je"
-  - authKey              : "werxhqb98rpaxn39848xrunpaw3489ruxnpa98w4rxn"
+  - authKey              : "pargjXuTsCJHCrmHa60MtZ5F2Ak90qSvQObEsUMWCuw6e3IfpZm7kO3auNLXtbsu4dE3Spt+AS3wvCTVzMT+j/GqdZKZgjnWZT4y2HDrr1hM48mQyJPi3DI79NaF6ZwUeJI4I1ohTVqXB0dVK2TS1r7hZeD9UYkHGXjLuC9OqqY="
 
 firebase:
   - service_account: "firebase-adminsdk-w6981@donboulton-210120.iam.gserviceaccount.com"
-  - api_key: "AIzaSyBoZgIki3tEgCtgSVVWDdastZCqW9WWGKE"
-  - private_key_id: "855d30d59f707e354f99d67fd697aa4a01fd6f74"
+  - api_key: "sigTU8nHaWpXRrI5ONcc5Vob0EOtqahICCiGJLmmrQZDw2prWwFiSOu71+8fz46J0RYp3oevxa86S2BbICg/fntP9AeH0F5wo4mI4GVT54lTKHEGzPjVgnWYcDwa86C9t2S/7US+vCZt5qPjArtf9geh2wrqdZ8T9hQiIs/7B0k="
+  - private_key_id: "pKJGrAZjBvJnxEThHzgYv7hcjj9bG0HKHsZH5jo9kBtm8nxJAJIfI9mcqyFpEkSS55hI7sdakl7M2B63Ci58FwPjd850u5Q5t7V7HMSheKtNVMCLZ/7YEYwNCEQZjZuPW51s+ZtjvBFLWmKYGcqf2UR2CDB8GtoA+hSQhzXIOQo="
   - publicFacingName: "project-642731329222"
   - name: "project-642731329222"
   - sender_id: "857761645811"
-  - secret: "HhbGUueQ7G6lU0VPiwi2Uw6ovK0YOYaY7wUI9WuR"
-  - serverKey: "AAAAx7aUBPM:APA91bFxAfB5yAI4ILnxRpcpIAXEICRQ3O8YEu9A55ZgNEVkcc1jLMBj0g9GAvQGq4Y6DXMBcT1-1mxDzTdZIhQtGIsUWYoNK8g9ZZACxIZEmBGQQ7h-PZe7C1LxACe6FWYsHgbs0O7iJEvO3VwvWf9boSXKqALE6A"
+  - secret: "L9ooVwaIqvcQorsx4IovmuwiDLSte+qfPFnBO65fM0I1rVmhFfqV84jpskRd/xQnTBt1UQvGTxL6nVP7uXspcS3MjaFg11LJ6HkZFkdBd3IV8BvESlVu3sqDRF5HBxrnV/O7v0mxZfpsay+4sHXRoEA0iuTjxelh/OO7VBk0DcQ="
+  - serverKey: "GMy8XbGPUe8VK/XFr75hAUzDi71+yT4Imq6tl4TJ9RwwD6LrJBXii1PwEQbXDS0DsXSLreHomfSteRayZySA+g2iwSyqZV4HrpvaL6VfOZPdKDE3THIvXTkcJjzPjQiZc29BC/c6WbEiKNjf2ve6kELOb80JOBmb8WGs1p7xot66t4iN2mQfSdZ8vlkmSCQfxEego/e7jb2vinSbSo67ywJnT1C+o4ujM8ELinFGiTM/PYMDDGQYNyjvWdbGKhyXU3kV+sdii1faRKzgYWJGCSVUEyogovXgd6B2sPo1OstJxNzgScvlq3Hn5mxS1tStqutxurvFNjGCo6+Pre/HqTpxDdMfNAjxRNxi1dfvXemd6rGBxAthe8+VftYZQvhMR7rAr2vMmgx1KlV0fu0XpBuLD6I8y9ZajtDoxkZCq5Bb7UZONY/TWa1GJZmLbnXxai3/IZUYOHvpI25s9VyHPQkTZVs1RGF1Hxme7BPDLPGA/h+f+h/RchJ/IcplxNvz"
   - type: "service_account"
   - project_id: "airy-office-413"
   - client_email: "firebase-adminsdk-70gvb@airy-office-413.iam.gserviceaccount.com"
