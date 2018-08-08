@@ -1,4 +1,4 @@
-const VERSION = '21';
+const VERSION = '20';
 
 this.addEventListener('install', (e) => {
     e.waitUntil(caches.open(VERSION).then(cache => cache.addAll([
@@ -410,6 +410,8 @@ self.addEventListener('message', (event) => {
         break;
     }
 });
+
+var messaging = firebase.messaging();
 
 importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-app.js');
 importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-database.js');
