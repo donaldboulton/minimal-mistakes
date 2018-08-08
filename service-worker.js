@@ -175,6 +175,55 @@ function handleNoCacheMatch(e) {
     return fetchFromNetworkAndCache(e);
 }
 
+function handlePushEvent(event) {
+    const DEFAULT_TAG = 'donboulton';
+    return Promise.resolve()
+        .then(() => {
+            return event.data.json();
+        })
+        .then((data) => {
+            const title = data.notification.title;
+            const options = data.notification;
+            if (!options.tag) {
+                options.tag = DEFAULT_TAG;
+            }
+            return registration.showNotification(title, options);
+        })
+        .catch((err) => {
+            console.error('Push event caused an error: ', err);
+
+            const title = 'Message Received';
+            const options = {
+                body: event.data.text(),
+                tag: DEFAULT_TAG
+            };
+            return registration.showNotification(title, options);
+        });
+}
+
+self.addEventListener('push', (event) => {
+    event.waitUntil(handlePushEvent(event));
+});
+
+const doSomething = () => {
+    return Promise.resolve();
+};
+
+// This is here just to highlight the simple version of notification click.
+// Normally you would only have one notification click listener.
+/**** START simpleNotification ****/
+
+self.addEventListener('notificationclick', (event) => {
+    const clickedNotification = event.notification;
+    clickedNotification.close();
+
+    // Do something as the result of the notification click
+    const promiseChain = doSomething();
+    event.waitUntil(promiseChain);
+});
+
+/**** END simpleNotification ****/
+
 function openWindow(event) {
     const examplePage = '/thanks.html';
     const promiseChain = clients.openWindow(examplePage);
@@ -369,33 +418,32 @@ self.addEventListener('message', (event) => {
     }
 });
 
+var messaging = firebase.messaging();
+
 importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-app.js');
 importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-database.js');
 importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-messaging.js');
 
-messaging.setBackgroundMessageHandler((payload) => {
-    console.log('[firebase-messaging-sw.js] Received background message ', payload);
-    const notificationTitle = 'Background Message Title';
-    const notificationOptions = {
-        body: 'Background Message body.',
-        icon: '/assets/images/firebase-logo.png',
-    };
-
-    return self.registration.showNotification(notificationTitle,
-        notificationOptions);
+// Initialize the Firebase app in the service worker by passing in the
+// messagingSenderId.
+firebase.initializeApp({
+  'messagingSenderId': '857761645811'
 });
 
-// ON NOTIFICATION CLICK
-self.addEventListener('notificationclick', (event) => {
-    console.log(event);
+messaging.setBackgroundMessageHandler(function(payload) {
+ console.log('[sevice-worker.js] Received background message ', payload);
 
-    event.notification.close();
+ var notificationTitle = 'Background Message Title';
+ var notificationOptions = {
+  title: `New Article: ${postTitle}`,
+   body: 'Click to read article.',
+   icon: '/assets/images/firebase-logo.png'
+ };
 
-    event.waitUntil(
-        self.clients.openWindow('https://donaldboulton.com'),
-    );
+ return self.registration.showNotification(notificationTitle,
+   notificationOptions);
 });
-
+// [END background_handler
 
 firebase.initializeApp({
     apiKey: 'AIzaSyBoZgIki3tEgCtgSVVWDdastZCqW9WWGKE',

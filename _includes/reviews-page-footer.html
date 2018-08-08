@@ -53,11 +53,15 @@
           <div class="heading">Author</div>
             <img itemprop="image" avatar="{{ reviewData.name }}" alt="{{ reviewData.name }}" class="review-avatar-image text-left" />
             {% unless reviewData.url == blank %}
-            <span class="review-author-name"><small><span itemprop="url"><a rel="external noreferrer" href="{{ reviewData.url }}"></span><span itemprop="name">{{ reviewData.name | strip_html }}</span></a></small></span>
+            <small><span class="review-author-name">
+              <span itemprop="url">
+                <a rel="external noreferrer" href="{{ reviewData.url }}"></span>
+                  <span itemprop="name">{{ reviewData.name | strip_html }}</span>
+                </a>
               {% else %}
                 {{ reviewData.name | strip_html }}
               {% endunless %}
-            </span>
+            </span></small>
         </div>
 				<div class="group">
             <div class="heading">Message</div><div itemprop="reviewBody"> {{ reviewData.description | markdownify | strip_html | truncate: 130 }}</div>

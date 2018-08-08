@@ -1,70 +1,57 @@
-const functions = require('firebase-functions');
-const admin     = require('firebase-admin');
+const functions = require('firebase-functions')
+const admin = require('firebase-admin')
 
-admin.initializeApp(functions.config().firebase);
+admin.initializeApp(functions.config().firebase)
 
+// runs when new post is added
 exports.sendPostNotification = functions.database.ref('/posts/{postID}').onWrite(event => {
+    const postID    = event.params.postID
+    const postTitle = event.data.val()
 
-const postID    = event.params.postID,
-      postTitle = event.data.val();
-      if (!postTitle) return console.log(`Post ${postID} deleted.`);
+    // if data deleted => exit
+    if (!postTitle) return console.log('Post', postID, 'deleted')
 
-const getDeviceTokensPromise = admin.database()
-  .ref('device_ids')
-  .once('value')
-  .then(snapshots => {
-      if (!snapshots) return console.log('No devices to send to.');
-};
+    // Get Device tokens
+    const getDeviceTokensPromise = admin.database().ref('device_ids').once('value').then(snapshots => {
 
-const payload = {
-  notification: {
-    title: `New Article: ${postTitle}`,
-    body: 'Click to read article.',
-    icon: 'https://donboulton.com/assets/icons/bell-regular.svg'
-  }
-};
+        // Check if tokens exist
+        if (!snapshots) {
+            return console.log('No device IDs to send notifications to.')
+        }
 
-snapshots.forEach(childSnapshot => {
-  const token = childSnapshot.val()
+        // Notification details
+        const payload = {
+            notification: {
+                title: `New Article: ${postTitle}`,
+                body: 'Click to read article.',
+                icon: 'https://pascalaoms.github.io/push-api-example/assets/img/push-icon.png'
+            }
+        }
 
-  admin.messaging().sendToDevice(token, payload).then(response => {
-    // handle response
-  }
-};
+        snapshots.forEach(childSnapshot => {
+            const token = childSnapshot.val()
 
-response.results.forEach(result => {
-  const error = result.error;
 
-  if (error) {
-    console.error('Failed delivery to', token, error);
+            // Send notification to all tokens
+            admin.messaging().sendToDevice(token, payload).then(response => {
 
-  if (error.code === 'messaging/invalid-registration-token' ||
-      error.code === 'messaging/registration-token-not-registered') {
+                response.results.forEach(result => {
+                    const error = result.error
 
-      childSnapshot.ref.remove();
-      console.info('Was removed:', token);
+                    if (error) {
+                        console.error('Failed delivery to', token, error)
 
-  } else {
-    console.info('Notification sent to', token);
-  }
-
-}
-
-response.results.forEach(result => {
-  const error = result.error;
-
-  if (error) {
-    console.error('Failed delivery to', token, error);
-
-  if (error.code === 'messaging/invalid-registration-token' ||
-      error.code === 'messaging/registration-token-not-registered') {
-
-      childSnapshot.ref.remove();
-      console.info('Was removed:', token);
-
-  } else {
-    console.info('Notification sent to', token);
-  }
-
-  }
-}
+                        // Prepare unused tokens for removal
+                        if (error.code === 'messaging/invalid-registration-token' ||
+                            error.code === 'messaging/registration-token-not-registered') {
+                            childSnapshot.ref.remove()
+                            console.info('Was removed:', token)
+                        }
+                    } else {
+                        console.info('Notification sent to', token)
+                    }
+                })
+            })
+        })
+    })
+})
