@@ -411,8 +411,6 @@ self.addEventListener('message', (event) => {
     }
 });
 
-var messaging = firebase.messaging();
-
 importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-app.js');
 importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-database.js');
 importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-messaging.js');
@@ -443,3 +441,5 @@ firebase.initializeApp({
     storageBucket: 'airy-office-413.appspot.com',
     messagingSenderId: '857761645811',
 });
+
+var messaging = firebase.messaging();
