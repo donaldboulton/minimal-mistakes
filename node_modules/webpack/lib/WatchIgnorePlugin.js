@@ -4,19 +4,8 @@
 */
 "use strict";
 
-class WatchIgnorePlugin {
-	constructor(paths) {
-		this.paths = paths;
-	}
-
-	apply(compiler) {
-		compiler.plugin("after-environment", () => {
-			compiler.watchFileSystem = new IgnoringWatchFileSystem(compiler.watchFileSystem, this.paths);
-		});
-	}
-}
-
-module.exports = WatchIgnorePlugin;
+const validateOptions = require("schema-utils");
+const schema = require("../schemas/plugins/WatchIgnorePlugin.json");
 
 class IgnoringWatchFileSystem {
 	constructor(wfs, paths) {
@@ -25,25 +14,87 @@ class IgnoringWatchFileSystem {
 	}
 
 	watch(files, dirs, missing, startTime, options, callback, callbackUndelayed) {
-		const ignored = path => this.paths.some(p => p instanceof RegExp ? p.test(path) : path.indexOf(p) === 0);
+		const ignored = path =>
+			this.paths.some(
+				p => (p instanceof RegExp ? p.test(path) : path.indexOf(p) === 0)
+			);
 
 		const notIgnored = path => !ignored(path);
 
 		const ignoredFiles = files.filter(ignored);
 		const ignoredDirs = dirs.filter(ignored);
 
-		this.wfs.watch(files.filter(notIgnored), dirs.filter(notIgnored), missing, startTime, options, (err, filesModified, dirsModified, missingModified, fileTimestamps, dirTimestamps) => {
-			if(err) return callback(err);
+		const watcher = this.wfs.watch(
+			files.filter(notIgnored),
+			dirs.filter(notIgnored),
+			missing,
+			startTime,
+			options,
+			(
+				err,
+				filesModified,
+				dirsModified,
+				missingModified,
+				fileTimestamps,
+				dirTimestamps
+			) => {
+				if (err) return callback(err);
 
-			ignoredFiles.forEach(path => {
-				fileTimestamps[path] = 1;
-			});
+				for (const path of ignoredFiles) {
+					fileTimestamps.set(path, 1);
+				}
 
-			ignoredDirs.forEach(path => {
-				dirTimestamps[path] = 1;
-			});
+				for (const path of ignoredDirs) {
+					dirTimestamps.set(path, 1);
+				}
 
-			callback(err, filesModified, dirsModified, missingModified, fileTimestamps, dirTimestamps);
-		}, callbackUndelayed);
+				callback(
+					err,
+					filesModified,
+					dirsModified,
+					missingModified,
+					fileTimestamps,
+					dirTimestamps
+				);
+			},
+			callbackUndelayed
+		);
+
+		return {
+			close: () => watcher.close(),
+			pause: () => watcher.pause(),
+			getContextTimestamps: () => {
+				const dirTimestamps = watcher.getContextTimestamps();
+				for (const path of ignoredDirs) {
+					dirTimestamps.set(path, 1);
+				}
+				return dirTimestamps;
+			},
+			getFileTimestamps: () => {
+				const fileTimestamps = watcher.getFileTimestamps();
+				for (const path of ignoredFiles) {
+					fileTimestamps.set(path, 1);
+				}
+				return fileTimestamps;
+			}
+		};
 	}
 }
+
+class WatchIgnorePlugin {
+	constructor(paths) {
+		validateOptions(schema, paths, "Watch Ignore Plugin");
+		this.paths = paths;
+	}
+
+	apply(compiler) {
+		compiler.hooks.afterEnvironment.tap("WatchIgnorePlugin", () => {
+			compiler.watchFileSystem = new IgnoringWatchFileSystem(
+				compiler.watchFileSystem,
+				this.paths
+			);
+		});
+	}
+}
+
+module.exports = WatchIgnorePlugin;
