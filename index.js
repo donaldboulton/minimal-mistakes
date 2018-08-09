@@ -18,7 +18,7 @@ const isSubscribed = false;
 
 window.addEventListener('load', () => {
     if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/service-worker.js')
+        navigator.serviceWorker.register('/firebase-messaging-sw.js')
             .then((registration) => {
                 messaging.useServiceWorker(registration);
 

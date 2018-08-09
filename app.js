@@ -214,9 +214,6 @@ function setUpPush() {
       pushCheckbox.checked = subscription !== null;
       pushCheckbox.disabled = false;
     });
-  })
-  .catch(function(err) {
-    console.log('Unable to register the service worker: ' + err);
   });
 }
 

@@ -410,16 +410,3 @@ self.addEventListener('message', (event) => {
         break;
     }
 });
-
-importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-app.js');
-importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-database.js');
-importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-messaging.js');
-
-firebase.initializeApp({
-    apiKey: 'AIzaSyBoZgIki3tEgCtgSVVWDdastZCqW9WWGKE',
-    authDomain: 'airy-office-413.firebaseapp.com',
-    databaseURL: 'https://airy-office-413.firebaseio.com',
-    projectId: 'airy-office-413',
-    storageBucket: 'airy-office-413.appspot.com',
-    messagingSenderId: '857761645811',
-});

@@ -68,6 +68,34 @@ export default function(payload) {
         actionText: 'Reload'
     };
     snackbarContainer.MaterialSnackbar.showSnackbar(data);
-
 }
 
+importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-app.js');
+importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-database.js');
+importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-messaging.js');
+
+firebase.initializeApp({
+    apiKey: 'AIzaSyBoZgIki3tEgCtgSVVWDdastZCqW9WWGKE',
+    authDomain: 'airy-office-413.firebaseapp.com',
+    databaseURL: 'https://airy-office-413.firebaseio.com',
+    projectId: 'airy-office-413',
+    storageBucket: 'airy-office-413.appspot.com',
+    messagingSenderId: '857761645811',
+});
+
+messaging.requestPermission()
+    .then(function() {
+        return messaging.getToken();
+    })
+    .then(function(token) {
+        // send rest call to add to database
+        $.ajax('https://airy-office-413.firebaseio.com/pushtokens/'+token+'.json', {
+            method: 'PUT',
+            data: 'true',
+            error: function(err) {
+            }
+        });
+    })
+    .catch(function(err) {
+        console.log('Permission denied');
+    });
