@@ -1,4 +1,4 @@
-const VERSION = '18';
+const VERSION = '16';
 
 this.addEventListener('install', (e) => {
     e.waitUntil(caches.open(VERSION).then(cache => cache.addAll([
@@ -414,21 +414,6 @@ self.addEventListener('message', (event) => {
 importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-app.js');
 importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-database.js');
 importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-messaging.js');
-
-var messaging = firebase.messaging();
-messaging.setBackgroundMessageHandler(function(payload) {
- console.log('[sevice-worker.js] Received background message ', payload);
-
- var notificationTitle = 'Background Message Title';
- var notificationOptions = {
-  title: `New Article: ${postTitle}`,
-   body: 'Click to read article.',
-   icon: '/assets/images/firebase-logo.png'
- };
-
- return self.registration.showNotification(notificationTitle,
-   notificationOptions);
-});
 
 firebase.initializeApp({
     apiKey: 'AIzaSyBoZgIki3tEgCtgSVVWDdastZCqW9WWGKE',

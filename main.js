@@ -20,7 +20,6 @@ postBtn.addEventListener('click', () => {
 
 loadPosts();
 
-
 export default function() {
 
   const database = firebase.database();
