@@ -597,9 +597,9 @@
   width: calc(var(--horizontal-padding) - 16px);
   height: 60%;
   padding: 8px;
-  top: 60%;
+  top: 45%;
   justify-content: center;
-  z-index: 100;
+  z-index: 1000;
 }
 
 .page-nav-next {
