@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 const VERSION = '16';
+=======
+const VERSION = '18';
+>>>>>>> 13976055b32cef995b654f62264ef0e25e9af5a4
 
 this.addEventListener('install', (e) => {
     e.waitUntil(caches.open(VERSION).then(cache => cache.addAll([
