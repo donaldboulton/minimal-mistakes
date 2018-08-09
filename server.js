@@ -16,7 +16,7 @@ const vapidKeys = {
 setVapidDetails('mailto:donaldboulton@gmail.com', vapidKeys.publicKey, vapidKeys.privateKey);
 
 const db = new Datastore({
-    filename: join(__dirname, 'subscription-store.db'),
+    filename: join(__dirname, '/_data/subscription-store.db'),
     autoload: true,
 });
 
