@@ -596,8 +596,8 @@
   position: fixed;
   width: calc(var(--horizontal-padding) - 16px);
   height: 60%;
-  padding: 8px;
-  top: 45%;
+  padding: 4px;
+  top: 40%;
   justify-content: center;
   z-index: 1000;
 }
@@ -608,4 +608,5 @@
 
 .page-nav-prev {
   left: 0;
+  color: #fff!important;
 }
