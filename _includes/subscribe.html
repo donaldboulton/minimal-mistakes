@@ -5,16 +5,9 @@
         Notications</h3>
     </span>
   <div class="toc1__menu">
-      <h3>Subcriptions</h3>
-      <p><small>For:&nbsp;<a href="https://donboulton.com/">donboulton.com</a></small></p>
-      <button id="push-button" class="mdl-button mdl-js-button btn btn--primary" disabled>Subscribe</button>
-      <form action="#">
-        <div class="mdl-textfield mdl-js-textfield">
-            <input id="input-title" class="mdl-textfield__input" type="text">
-            <label class="mdl-textfield__label" for="input-title">Post Title</label>
-        </div>
-        <button type="submit" id="add-post" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect btn btn--danger">Add Post</button>
-        </form>
+      <h3>Firebase Comments</h3>
+      <span class="byline-item"><svg class="icon icon--comments-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comments-alt' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;<a href="https://donboulton.com/{{ page.url }}#comments">0 Comments</a></span>
+      </a></small>
         <ul id="list" class="mdl-list"></ul>
   </div>
   <div id="snackbar" class="mdl-js-snackbar mdl-snackbar">
@@ -22,3 +15,4 @@
     <button class="btn btn--primary btn__action" type="button"></button>
   </div>
 </article>
+
