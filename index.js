@@ -111,6 +111,6 @@ export const sendPostNotification = functions.database.ref('/posts/{postID}').on
 
 newFunction();
 
-    function newFunction() {
-      return initializeApp(config().firebase);
-    }
+  function newFunction() {
+    return initializeApp(config().firebase);
+  }

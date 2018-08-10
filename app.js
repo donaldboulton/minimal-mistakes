@@ -34,15 +34,6 @@ function getSWRegistration() {
   return navigator.serviceWorker.register('service-worker.js');
 }
 
-const hostname = 'https://donboulton.com';
-
-const vapidKeys = {
-    publicKey: 'BOew5Tx7fTX51GzJ7tpF3dDLNS54OvUST_dGGqzJEy54jqW2qghIRTiK7BfOpCPp8xNfMH7Mtprl3hp_WGjgslU',
-    privateKey: 'ymblNrJSzlXdRMhFYdXh1Hda8HkIO76aVs85X93wAjc',
-};
-
-setVapidDetails('mailto:donaldboulton@gmail.com', vapidKeys.publicKey, vapidKeys.privateKey);
-
 const db = new Datastore({
     filename: join(__dirname, '/_data/subscription-store.db'),
     autoload: true,
