@@ -1,3 +1,33 @@
+import { initializeApp } from 'firebase-admin';
+import { config } from 'firebase-function';
+
+firebase.initializeApp({
+    apiKey: 'AIzaSyBoZgIki3tEgCtgSVVWDdastZCqW9WWGKE',
+    authDomain: 'airy-office-413.firebaseapp.com',
+    databaseURL: 'https://airy-office-413.firebaseio.com',
+    projectId: 'airy-office-413',
+    storageBucket: 'airy-office-413.appspot.com',
+    messagingSenderId: '857761645811',
+});
+
+const messaging = firebase.messaging();
+const database = firebase.database();
+const userToken = null;
+const isSubscribed = false;
+
+window.addEventListener('load', () => {
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/firebase-messaging-sw.js')
+            .then((registration) => {
+                messaging.useServiceWorker(registration);
+
+                initializePush();
+            })
+            .catch(err => console.log('Service Worker Error', err));
+    } else {
+      pushCeckbox.textContent = 'Push not supported.';
+    }
+});
 const pushCheckbox = document.querySelector('.js-push-toggle-checkbox');
 
 function urlBase64ToUint8Array(base64String) {
@@ -57,7 +87,30 @@ function askPermission() {
   });
 }
 /**** END request-permission ****/
+function updateSubscriptionOnServer(token) {
+  if (isSubscribed) {
+      return database.ref('device_ids')
+          .equalTo(token)
+          .on('child_added', snapshot => snapshot.ref.remove());
+  }
 
+  database.ref('device_ids').once('value')
+      .then((snapshots) => {
+          let deviceExists = false;
+
+          snapshots.forEach((childSnapshot) => {
+              if (childSnapshot.val() === token) {
+                  deviceExists = true;
+                  return console.log('Device already registered.');
+              }
+          });
+
+          if (!deviceExists) {
+              console.log('Device subscribed');
+              return database.ref('device_ids').push(token);
+          }
+      });
+}
 /**
  * Using `Notification.permission` directly can be slow (locks on the main
  * thread). Using the permission API with a fallback to

@@ -1,0 +1,101 @@
+const postBtn = document.getElementById('add-post');
+const list = document.getElementById('list');
+
+function saveToDB(title) {
+    firebase.database().ref('posts').push(title);
+}
+
+postBtn.addEventListener('click', () => {
+    const input = document.getElementById('input-title');
+    const inputWrap = document.querySelector('.mdl-textfield');
+    const listItem = document.createElement('li');
+
+    listItem.innerHTML = input.value;
+    list.append(listItem);
+
+    saveToDB(input.value);
+    input.value = '';
+    inputWrap.classList.remove('is-dirty');
+});
+
+loadPosts();
+
+export default function() {
+
+  const database = firebase.database();
+  const connectedRef = database.ref(".info/connected");
+
+  connectedRef.on("value", function(snap) {
+      if (snap.val() === true) {
+          console.log("connected");
+          // database.goOnline()
+      } else {
+          console.log("not connected");
+          // database.goOffline()
+
+
+      }
+  });
+  readDB();
+
+  function readDB() {
+      console.log('read');
+      database.ref('posts').once('value').then(snapshots => {
+
+          snapshots.forEach(childSnapshot => {
+              const data = childSnapshot.val();
+              const listItem = document.createElement('li');
+
+              listItem.innerHTML = data;
+              list.append(listItem);
+          });
+
+      });
+  }
+
+}
+
+export default function(payload) {
+    const snackbarContainer = document.querySelector('#snackbar');
+
+    console.log('snack payload', payload);
+    let data = {
+        message: payload.notification.title,
+        timeout: 5000,
+        actionHandler(event) {
+            location.reload();
+        },
+        actionText: 'Reload'
+    };
+    snackbarContainer.MaterialSnackbar.showSnackbar(data);
+}
+
+importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-app.js');
+importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-database.js');
+importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-messaging.js');
+
+firebase.initializeApp({
+    apiKey: 'AIzaSyBoZgIki3tEgCtgSVVWDdastZCqW9WWGKE',
+    authDomain: 'airy-office-413.firebaseapp.com',
+    databaseURL: 'https://airy-office-413.firebaseio.com',
+    projectId: 'airy-office-413',
+    storageBucket: 'airy-office-413.appspot.com',
+    messagingSenderId: '857761645811',
+});
+
+messaging.requestPermission()
+    .then(function() {
+        return messaging.getToken();
+    })
+    .then(function(token) {
+        // send rest call to add to database
+        $.ajax('https://airy-office-413.firebaseio.com/pushtokens/'+token+'.json', {
+            method: 'PUT',
+            data: 'true',
+            error: function(err) {
+            }
+        });
+    })
+    .catch(function(err) {
+        console.log('Permission denied');
+    });
