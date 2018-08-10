@@ -2,15 +2,6 @@
 // import 'firebase/database'
 // import 'firebase/messaging'
 
-firebase.initializeApp({
-  apiKey: "AIzaSyBoZgIki3tEgCtgSVVWDdastZCqW9WWGKE",
-  authDomain: "airy-office-413.firebaseapp.com",
-  databaseURL: "https://airy-office-413.firebaseio.com",
-  projectId: "airy-office-413",
-  storageBucket: "airy-office-413.appspot.com",
-  messagingSenderId: "857761645811"
-});
-
 const pushBtn   = document.getElementById('push-button'),
       database  = firebase.database(),
       messaging = firebase.messaging()
