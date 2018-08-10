@@ -1,5 +1,3 @@
-importScripts( '/assets/modules/loadPosts.js');
-
 const postBtn = document.getElementById('comment-form-submit');
 const list = document.getElementById('list');
 

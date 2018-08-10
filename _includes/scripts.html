@@ -264,7 +264,9 @@ if ($.support.pjax) {
   };
   firebase.initializeApp(config);
 </script>
-<script src="{{ '/site-notifications.js' | relative_url }}" async defer></script>
+<script src="{{ '/comment-notifications.js' | relative_url }}" async defer></script>
+<script src="{{ '/assets/js/modules/LoadPosts.js' | relative_url }}" async defer></script>
+<script src="{{ '/assets/js/snackbar.js' | relative_url }}" async defer></script>
 {% endif %}
 
 {% if page.notifications-admin == true %}
@@ -285,4 +287,3 @@ if ($.support.pjax) {
 <script src="{{ '/assets/js/vendor/notifications/notifications-admin.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/vendor/notifications/notifications.js' | relative_url }}"></script>
 {% endif %}
-<script src="{{ '/comment-notifications.js' | relative_url }}" async defer></script>
