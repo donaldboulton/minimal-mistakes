@@ -24,7 +24,7 @@ exports.sendPostNotification = functions.database.ref('/posts/{postID}').onWrite
             notification: {
                 title: `New Article: ${postTitle}`,
                 body: 'Click to read article.',
-                icon: 'https://pascalaoms.github.io/push-api-example/assets/img/push-icon.png'
+                icon: 'https://donboulton.com/assets/images/push-icon.png'
             }
         }
 

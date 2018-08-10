@@ -175,6 +175,32 @@ function handleNoCacheMatch(e) {
     return fetchFromNetworkAndCache(e);
 }
 
+importScripts('https://www.gstatic.com/firebasejs/4.1.3/firebase-app.js')
+importScripts('https://www.gstatic.com/firebasejs/4.1.3/firebase-database.js')
+importScripts('https://www.gstatic.com/firebasejs/4.1.3/firebase-messaging.js')
+
+// ON NOTIFICATION CLICK
+self.addEventListener('notificationclick', event => {
+    console.log(event)
+
+    event.notification.close()
+
+    event.waitUntil(
+        self.clients.openWindow('https://donboulton.com')
+    )
+})
+
+firebase.initializeApp({
+  apiKey: 'AIzaSyBoZgIki3tEgCtgSVVWDdastZCqW9WWGKE',
+  authDomain: 'airy-office-413.firebaseapp.com',
+  databaseURL: 'https://airy-office-413.firebaseio.com',
+  projectId: 'airy-office-413',
+  storageBucket: 'airy-office-413.appspot.com',
+  messagingSenderId: '857761645811',
+});
+
+const messaging = firebase.messaging();
+
 function handlePushEvent(event) {
     const DEFAULT_TAG = 'donboulton';
     return Promise.resolve()
