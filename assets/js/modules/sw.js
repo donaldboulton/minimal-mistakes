@@ -2,17 +2,14 @@
 // import 'firebase/database'
 // import 'firebase/messaging'
 
-import snackbar from './snackbar'
-
-
 firebase.initializeApp({
-    apiKey: "AIzaSyCNWf72UrEdxbzu1YnW4Yd3zfzQIKtXl94",
-    authDomain: "push-test-75834.firebaseapp.com",
-    databaseURL: "https://push-test-75834.firebaseio.com",
-    projectId: "push-test-75834",
-    storageBucket: "push-test-75834.appspot.com",
-    messagingSenderId: "858712102689"
-})
+  apiKey: "AIzaSyBoZgIki3tEgCtgSVVWDdastZCqW9WWGKE",
+  authDomain: "airy-office-413.firebaseapp.com",
+  databaseURL: "https://airy-office-413.firebaseio.com",
+  projectId: "airy-office-413",
+  storageBucket: "airy-office-413.appspot.com",
+  messagingSenderId: "857761645811"
+});
 
 const pushBtn   = document.getElementById('push-button'),
       database  = firebase.database(),

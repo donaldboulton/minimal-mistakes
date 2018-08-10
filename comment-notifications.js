@@ -17,5 +17,3 @@ postBtn.addEventListener('click', () => {
     input.value = '';
     inputWrap.classList.remove('is-dirty');
 });
-
-loadPosts();
