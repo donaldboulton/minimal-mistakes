@@ -608,5 +608,24 @@
 
 .page-nav-prev {
   left: 0;
-  color: #fff!important;
+}
+
+.page-nav-icon {
+  width: 24px;
+  height: 40px;
+  color: #ffffff!important;
+
+  a {
+    padding: 0.5rem 1rem;
+    color: $text-color!important;
+    font-size: $type-size-7;
+
+    &:hover {
+      color: $link-color-hover;
+    }
+
+    &:visited {
+      color: $text-color!important;
+    }
+  }
 }

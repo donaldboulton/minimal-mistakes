@@ -9,9 +9,9 @@
 {% endfor %}
 
 {% if page.previous %}
-<a class="page-nav-prev" href="{{ page.previous.url | relative_url }}" title="Previous Page"><img class="icon" src="/assets/icons/left-arrow.svg" alt="Previous Page Arrow" /></a>
+<a class="page-nav-prev" href="{{ page.previous.url | relative_url }}" title="Previous Page"><img class="page-nav-icon" src="/assets/icons/left-arrow.svg" alt="Previous Page Arrow" /></a>
 {% endif %}
 
 {% if page.next %}
-<a class="page-nav-next" href="{{ page.next.url | relative_url }}" title="Next Page"><img class="icon" src="/assets/icons/right-arrow.svg" alt="Next Page Arrow" /></a>
+<a class="page-nav-next" href="{{ page.next.url | relative_url }}" title="Next Page"><img class="page-nav-icon" src="/assets/icons/right-arrow.svg" alt="Next Page Arrow" /></a>
 {% endif %}
