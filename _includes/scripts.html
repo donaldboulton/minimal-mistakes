@@ -12,8 +12,6 @@
 <script src="{{ '/assets/js/vendor/letter-avatar/letter-avatar.js' | relative_url }}"></script>
 {% endif %}
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-
 {% if site.search == true or page.layout == "search" %}
   {%- assign search_provider = site.search_provider | default: "lunr" -%}
   {%- case search_provider -%}
@@ -252,7 +250,6 @@ if ($.support.pjax) {
 <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-database.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-messaging.js"></script>
-
 <script>
   var config = {
     apiKey: "AIzaSyBoZgIki3tEgCtgSVVWDdastZCqW9WWGKE",
@@ -286,3 +283,4 @@ if ($.support.pjax) {
 <script src="{{ '/assets/js/vendor/notifications/notifications-admin.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/vendor/notifications/notifications.js' | relative_url }}"></script>
 {% endif %}
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

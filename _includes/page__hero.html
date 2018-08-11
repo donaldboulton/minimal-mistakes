@@ -44,7 +44,7 @@
       {% if page.header.show_overlay_excerpt != false and page.excerpt %}
         <p class="page__lead">{{ page.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>
       {% endif %}
-      {% if site.read_time and page.read_time %}
+      {% if page.read_time %}
         <p class="page__meta"><svg class="icon icon--stopwatch" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-stopwatch' | prepend: 'assets/icons/' | relative_url }}"></use></svg> {% include read-time.html %}</p>
       {% endif %}
       {% if page.header.cta_url %}
