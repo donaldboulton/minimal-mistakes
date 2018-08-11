@@ -21,7 +21,7 @@ read_time: true
 comments: true
 share: false
 web-intents: true
-tweet_id: 1023376006755885056
+tweet_id: 1028382457731670022
 related: true
 sidenav: true
 reviews: true
