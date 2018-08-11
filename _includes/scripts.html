@@ -254,10 +254,8 @@ try {
   window.addEventListener("testPassive", null, opts);
   window.removeEventListener("testPassive", null, opts);
 } catch (e) {}
-
 elem.addEventListener('touchstart', fn, supportsPassive ? { passive: true } : false);
 </script>
-{% if page.notifications == true %}
 <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-database.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-messaging.js"></script>
@@ -272,14 +270,10 @@ elem.addEventListener('touchstart', fn, supportsPassive ? { passive: true } : fa
   };
   firebase.initializeApp(config);
 </script>
-<script src="{{ '/comment-notifications.js' | relative_url }}" async defer></script>
-<script src="{{ '/assets/js/modules/sw.js' | relative_url }}" async defer></script>
-{% endif %}
 
 {% if page.notifications-admin == true %}
 <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-functions.js"></script>
-
 <script>
   var config = {
     apiKey: "AIzaSyBoZgIki3tEgCtgSVVWDdastZCqW9WWGKE",
