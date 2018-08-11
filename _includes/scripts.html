@@ -88,9 +88,7 @@
 {% if page.support contains 'cookies' %}
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/cookie-bar/cookiebar-latest.min.js?tracking=1&showNoConsent=1&privacyPage=https%3A%2F%2Fdonboulton.com%2Fterms%23cookies--beacons"></script>
 {% endif %}
-<script>
-  $(document).ready(function(){svg4everybody();$("a").smoothScroll({offset:-20})});var coll=document.getElementsByClassName("collapsible");var i;for(i=0;i<coll.length;i++){coll[i].addEventListener("click",function(){this.classList.toggle("active");var content=this.nextElementSibling;if(content.style.maxHeight){content.style.maxHeight=null}else{content.style.maxHeight=content.scrollHeight+"px"}})}
-</script>
+
 {% comment %} <!--  my own validation scripts and scss from sitepoint.com/instant-validation/ -->{% endcomment %}
 
 {% if page.support contains 'validate' %}
@@ -219,6 +217,7 @@ function addNavItem(ul, href, text) {
 {% endif %}
 
 <script>
+  $(document).ready(function(){svg4everybody();$("a").smoothScroll({offset:-20})});var coll=document.getElementsByClassName("collapsible");var i;for(i=0;i<coll.length;i++){coll[i].addEventListener("click",function(){this.classList.toggle("active");var content=this.nextElementSibling;if(content.style.maxHeight){content.style.maxHeight=null}else{content.style.maxHeight=content.scrollHeight+"px"}})}
   function external_new_window() {
     for(var c = document.getElementsByTagName("a"), a = 0;a < c.length;a++) {
     var b = c[a];
@@ -245,6 +244,18 @@ if ($.support.pjax) {
         $.pjax.click(event, {container: containerSelector})
     })
 };
+var supportsPassive = false;
+try {
+  var opts = Object.defineProperty({}, 'passive', {
+    get: function() {
+      supportsPassive = true;
+    }
+  });
+  window.addEventListener("testPassive", null, opts);
+  window.removeEventListener("testPassive", null, opts);
+} catch (e) {}
+
+elem.addEventListener('touchstart', fn, supportsPassive ? { passive: true } : false);
 </script>
 {% if page.notifications == true %}
 <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
