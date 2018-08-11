@@ -1,57 +1,49 @@
-const functions = require('firebase-functions')
-const admin = require('firebase-admin')
+import { config, database } from 'firebase-functions';
+import { initializeApp, database as _database, messaging } from 'firebase-admin';
 
-admin.initializeApp(functions.config().firebase)
+initializeApp(config().firebase);
 
-// runs when new post is added
-exports.sendPostNotification = functions.database.ref('/posts/{postID}').onWrite(event => {
-    const postID    = event.params.postID
-    const postTitle = event.data.val()
+export const sendCommentNotification = database.ref('/comments/{commentID}').onWrite(event => {
+    const commentID    = event.params.commentID;
+    const commentTitle = event.data.val();
 
-    // if data deleted => exit
-    if (!postTitle) return console.log('Post', postID, 'deleted')
+    if (!commentTitle) return console.log('Comment', commentID, 'deleted');
 
-    // Get Device tokens
-    const getDeviceTokensPromise = admin.database().ref('device_ids').once('value').then(snapshots => {
+    const getDeviceTokensPromise = _database().ref('device_ids').once('value').then(snapshots => {
 
-        // Check if tokens exist
         if (!snapshots) {
-            return console.log('No device IDs to send notifications to.')
+            return console.log('No device IDs to send notifications to.');
         }
 
-        // Notification details
         const payload = {
             notification: {
-                title: `New Article: ${postTitle}`,
-                body: 'Click to read article.',
+                title: `New Comment: ${commentTitle}`,
+                body: 'Click to read new comment.',
                 icon: 'https://donboulton.com/assets/images/push-icon.png'
             }
-        }
+        };
 
         snapshots.forEach(childSnapshot => {
-            const token = childSnapshot.val()
+            const token = childSnapshot.val();
 
-
-            // Send notification to all tokens
-            admin.messaging().sendToDevice(token, payload).then(response => {
+            messaging().sendToDevice(token, payload).then(response => {
 
                 response.results.forEach(result => {
-                    const error = result.error
+                    const error = result.error;
 
                     if (error) {
-                        console.error('Failed delivery to', token, error)
+                        console.error('Failed delivery to', token, error);
 
-                        // Prepare unused tokens for removal
                         if (error.code === 'messaging/invalid-registration-token' ||
                             error.code === 'messaging/registration-token-not-registered') {
-                            childSnapshot.ref.remove()
-                            console.info('Was removed:', token)
+                            childSnapshot.ref.remove();
+                            console.info('Was removed:', token);
                         }
                     } else {
-                        console.info('Notification sent to', token)
+                        console.info('Notification sent to', token);
                     }
-                })
-            })
-        })
-    })
-})
+                });
+            });
+        });
+    });
+});

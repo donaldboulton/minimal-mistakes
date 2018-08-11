@@ -175,20 +175,20 @@ function handleNoCacheMatch(e) {
     return fetchFromNetworkAndCache(e);
 }
 
-importScripts('https://www.gstatic.com/firebasejs/4.1.3/firebase-app.js')
-importScripts('https://www.gstatic.com/firebasejs/4.1.3/firebase-database.js')
-importScripts('https://www.gstatic.com/firebasejs/4.1.3/firebase-messaging.js')
+importScripts('https://www.gstatic.com/firebasejs/4.1.3/firebase-app.js');
+importScripts('https://www.gstatic.com/firebasejs/4.1.3/firebase-database.js');
+importScripts('https://www.gstatic.com/firebasejs/4.1.3/firebase-messaging.js');
 
 // ON NOTIFICATION CLICK
 self.addEventListener('notificationclick', event => {
-    console.log(event)
+    console.log(event);
 
-    event.notification.close()
+    event.notification.close();
 
     event.waitUntil(
         self.clients.openWindow('https://donboulton.com')
-    )
-})
+    );
+});
 
 firebase.initializeApp({
   apiKey: 'AIzaSyBoZgIki3tEgCtgSVVWDdastZCqW9WWGKE',
