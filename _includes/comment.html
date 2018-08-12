@@ -13,7 +13,7 @@
   <h3 class="comment-author-name">
     {% unless include.url == blank %}
     <span>
-      <a rel="external  noreferrer" href="{{ include.url }}"></span>
+      <a rel="noreferrer" href="{{ include.url }}"></span>
         <span itemprop="name">{{ include.name | strip_html }}</a>
     </span>
     {% else %}
