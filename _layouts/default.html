@@ -11,16 +11,12 @@ layout: compress
   {% if page.layout == amp-single %}
     {% include amp-head.html %}
   {% endif %}
-  <!-- AMP Boilerplate -->
 </head>
 
 <body id="style-3" class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}" itemscope itemtype="http://schema.org/WebPage">
   <meta itemprop="url" content="{{ site.url }}{{ page.url }}" />
-  <!-- Google Tag Manager (noscript) -->
-<noscript><iframe aria-label="google hidden frame" src="https://www.googletagmanager.com/ns.html?id=GTM-TDPND89"
+<noscript><iframe aria-label="google hidden iframe" src="https://www.googletagmanager.com/ns.html?id=GTM-TDPND89"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-  {% include browser-upgrade.html %}
   {% include masthead.html %}
   <div>
     {% if site.search == true %}
