@@ -1,15 +1,37 @@
-var firebase = require("firebase/app");
+importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-app.js');
+importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-database.js');
+importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-messaging.js');
+importScripts('"https://www.gstatic.com/firebasejs/5.3.0/firebase-functions.js');
 
-require("firebase/database");
-require("firebase/messaging");
-require("firebase/functions");
+firebase.initializeApp({
+    apiKey: 'AIzaSyBoZgIki3tEgCtgSVVWDdastZCqW9WWGKE',
+    authDomain: 'airy-office-413.firebaseapp.com',
+    databaseURL: 'https://airy-office-413.firebaseio.com',
+    projectId: 'airy-office-413',
+    storageBucket: 'airy-office-413.appspot.com',
+    messagingSenderId: '857761645811',
+});
 
-initializeApp(config().firebase);
+firebase.initializeApp(config);
 
 const serviceAccount = require("/serviceAccountKey.json");
 const pushBtn = document.getElementById('push-button');
 const userToken = null;
 const isSubscribed = false;
+
+const gcmServerKey = 'AIzaSyC5itnz9jHmpvQRhq8sJUCFUy2SYUPanGs';
+webpush.setGCMAPIKey(gcmServerKey);
+
+const vapidKeys = {
+  publicKey: 'BOew5Tx7fTX51GzJ7tpF3dDLNS54OvUST_dGGqzJEy54jqW2qghIRTiK7BfOpCPp8xNfMH7Mtprl3hp_WGjgslU',
+  privateKey: 'ymblNrJSzlXdRMhFYdXh1Hda8HkIO76aVs85X93wAjc'
+};
+
+webpush.setVapidDetails(
+  'mailto:donaldboulton@gmail.com',
+  vapidKeys.publicKey,
+  vapidKeys.privateKey
+);
 
 export const sendCommentNotification = database.ref('/comments/{commentID}').onWrite(event => {
     const commentID    = event.params.commentID;
@@ -69,20 +91,6 @@ window.addEventListener('load', () => {
         pushBtn.textContent = 'Push not supported.';
     }
 });
-
-const gcmServerKey = 'AIzaSyC5itnz9jHmpvQRhq8sJUCFUy2SYUPanGs';
-webpush.setGCMAPIKey(gcmServerKey);
-
-const vapidKeys = {
-  publicKey: 'BOew5Tx7fTX51GzJ7tpF3dDLNS54OvUST_dGGqzJEy54jqW2qghIRTiK7BfOpCPp8xNfMH7Mtprl3hp_WGjgslU',
-  privateKey: 'ymblNrJSzlXdRMhFYdXh1Hda8HkIO76aVs85X93wAjc'
-};
-
-webpush.setVapidDetails(
-  'mailto:donaldboulton@gmail.com',
-  vapidKeys.publicKey,
-  vapidKeys.privateKey
-);
 
 function initializePush() {
     userToken = localStorage.getItem('pushToken');
