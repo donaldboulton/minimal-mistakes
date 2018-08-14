@@ -1,5 +1,8 @@
-import { config, database } from 'firebase-functions';
-import { initializeApp, database as _database, messaging } from 'firebase-admin';
+var firebase = require("firebase/app");
+
+require("firebase/database");
+require("firebase/messaging");
+require("firebase/functions");
 
 initializeApp(config().firebase);
 
