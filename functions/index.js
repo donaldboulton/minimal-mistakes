@@ -1,49 +1,89 @@
-import { config, database } from 'firebase-functions';
-import { initializeApp, database as _database, messaging } from 'firebase-admin';
+/**
+ * Copyright 2016 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+'use strict';
 
-initializeApp(config().firebase);
+const functions = require('firebase-functions');
+const admin = require('firebase-admin');
+admin.initializeApp();
 
-export const sendCommentNotification = database.ref('/comments/{commentID}').onWrite(event => {
-    const commentID    = event.params.commentID;
-    const commentTitle = event.data.val();
+/**
+ * Triggers when a user gets a new follower and sends a notification.
+ *
+ * Followers add a flag to `/followers/{followedUid}/{followerUid}`.
+ * Users save their device notification tokens to `/users/{followedUid}/notificationTokens/{notificationToken}`.
+ */
+exports.sendFollowerNotification = functions.database.ref('/followers/{followedUid}/{followerUid}')
+    .onWrite(async (change, context) => {
+      const followerUid = context.params.followerUid;
+      const followedUid = context.params.followedUid;
+      // If un-follow we exit the function.
+      if (!change.after.val()) {
+        return console.log('User ', followerUid, 'un-followed user', followedUid);
+      }
+      console.log('We have a new follower UID:', followerUid, 'for user:', followedUid);
 
-    if (!commentTitle) return console.log('Comment', commentID, 'deleted');
+      // Get the list of device notification tokens.
+      const getDeviceTokensPromise = admin.database()
+          .ref(`/users/${followedUid}/notificationTokens`).once('value');
 
-    const getDeviceTokensPromise = _database().ref('device_ids').once('value').then(snapshots => {
+      // Get the follower profile.
+      const getFollowerProfilePromise = admin.auth().getUser(followerUid);
 
-        if (!snapshots) {
-            return console.log('No device IDs to send notifications to.');
+      // The snapshot to the user's tokens.
+      let tokensSnapshot;
+
+      // The array containing all the user's tokens.
+      let tokens;
+
+      const results = await Promise.all([getDeviceTokensPromise, getFollowerProfilePromise]);
+      tokensSnapshot = results[0];
+      const follower = results[1];
+
+      // Check if there are any device tokens.
+      if (!tokensSnapshot.hasChildren()) {
+        return console.log('There are no notification tokens to send to.');
+      }
+      console.log('There are', tokensSnapshot.numChildren(), 'tokens to send notifications to.');
+      console.log('Fetched follower profile', follower);
+
+      // Notification details.
+      const payload = {
+        notification: {
+          title: 'You have a new follower!',
+          body: `${follower.displayName} is now following you.`,
+          icon: follower.photoURL
         }
+      };
 
-        const payload = {
-            notification: {
-                title: `New Comment: ${commentTitle}`,
-                body: 'Click to read new comment.',
-                icon: 'https://donboulton.com/assets/images/push-icon.png'
-            }
-        };
-
-        snapshots.forEach(childSnapshot => {
-            const token = childSnapshot.val();
-
-            messaging().sendToDevice(token, payload).then(response => {
-
-                response.results.forEach(result => {
-                    const error = result.error;
-
-                    if (error) {
-                        console.error('Failed delivery to', token, error);
-
-                        if (error.code === 'messaging/invalid-registration-token' ||
-                            error.code === 'messaging/registration-token-not-registered') {
-                            childSnapshot.ref.remove();
-                            console.info('Was removed:', token);
-                        }
-                    } else {
-                        console.info('Notification sent to', token);
-                    }
-                });
-            });
-        });
+      // Listing all tokens as an array.
+      tokens = Object.keys(tokensSnapshot.val());
+      // Send notifications to all tokens.
+      const response = await admin.messaging().sendToDevice(tokens, payload);
+      // For each message check if there was an error.
+      const tokensToRemove = [];
+      response.results.forEach((result, index) => {
+        const error = result.error;
+        if (error) {
+          console.error('Failure sending notification to', tokens[index], error);
+          // Cleanup the tokens who are not registered anymore.
+          if (error.code === 'messaging/invalid-registration-token' ||
+              error.code === 'messaging/registration-token-not-registered') {
+            tokensToRemove.push(tokensSnapshot.ref.child(tokens[index]).remove());
+          }
+        }
+      });
+      return Promise.all(tokensToRemove);
     });
-});

@@ -99,6 +99,10 @@
   <link rel="webmention" href="{{ site.webmention_url }}">
 {% endif %}
 
+{% if page.support contains 'firebase-login' %}
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.3.0/firebaseui.css" />
+{% endif %}
+
 <!-- AMP Article -->
 {% if page.path contains 'posts' %}
   {% unless page.amp_skip %}

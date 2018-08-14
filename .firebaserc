@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "airy-office-413"
+    "default": "airy-office-413",
+    "production": "airy-office-413"
   }
 }

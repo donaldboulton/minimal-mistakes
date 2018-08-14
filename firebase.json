@@ -1,10 +1,10 @@
 {
   "database": {
-    "rules": "database-rules.json"
+    "rules": "y"
   },
   "firestore": {
-    "rules": "firestore.rules",
-    "indexes": "firestore-indexes.json"
+    "rules": "y",
+    "indexes": "y"
   },
   "storage": {
     "rules": "firestore.storage.rules"
