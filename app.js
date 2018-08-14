@@ -1,7 +1,5 @@
 'use strict';
 
-const serviceAccount = require("/serviceAccountKey.json");
-
 const applicationServerPublicKey = 'BD2iZ3fdD1IdYyJCHAJmwLsJPrPxeetpYe_zit7UGt4x5Nkas5TCYkLIVTabOWikVLaTDDPXkXdG0Ho1xZh6Ozw';
 
 const pushButton = document.querySelector('.js-push-btn');
