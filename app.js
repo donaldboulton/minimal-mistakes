@@ -1,127 +1,143 @@
-importScripts('https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js');
-importScripts('https://www.gstatic.com/firebasejs/5.3.0/firebase-database.js');
-importScripts('https://www.gstatic.com/firebasejs/5.3.0/firebase-messaging.js');
-importScripts('"https://www.gstatic.com/firebasejs/5.3.0/firebase-functions.js');
-
-firebase.initializeApp({
-    apiKey: 'AIzaSyBoZgIki3tEgCtgSVVWDdastZCqW9WWGKE',
-    authDomain: 'airy-office-413.firebaseapp.com',
-    databaseURL: 'https://airy-office-413.firebaseio.com',
-    projectId: 'airy-office-413',
-    storageBucket: 'airy-office-413.appspot.com',
-    messagingSenderId: '857761645811',
-});
-
-firebase.initializeApp(config);
+'use strict';
 
 const serviceAccount = require("/serviceAccountKey.json");
-const pushBtn = document.getElementById('push-button');
-const userToken = null;
-const isSubscribed = false;
 
-const gcmServerKey = 'AIzaSyC5itnz9jHmpvQRhq8sJUCFUy2SYUPanGs';
-webpush.setGCMAPIKey(gcmServerKey);
+const applicationServerPublicKey = 'BD2iZ3fdD1IdYyJCHAJmwLsJPrPxeetpYe_zit7UGt4x5Nkas5TCYkLIVTabOWikVLaTDDPXkXdG0Ho1xZh6Ozw';
 
-const vapidKeys = {
-  publicKey: 'BOew5Tx7fTX51GzJ7tpF3dDLNS54OvUST_dGGqzJEy54jqW2qghIRTiK7BfOpCPp8xNfMH7Mtprl3hp_WGjgslU',
-  privateKey: 'ymblNrJSzlXdRMhFYdXh1Hda8HkIO76aVs85X93wAjc'
-};
+const pushButton = document.querySelector('.js-push-btn');
 
-webpush.setVapidDetails(
-  'mailto:donaldboulton@gmail.com',
-  vapidKeys.publicKey,
-  vapidKeys.privateKey
-);
+let isSubscribed = false;
+let swRegistration = null;
 
-window.addEventListener('load', () => {
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/service-worker.js')
-            .then((registration) => {
-                messaging.useServiceWorker(registration);
+function urlB64ToUint8Array(base64String) {
+  const padding = '='.repeat((4 - base64String.length % 4) % 4);
+  const base64 = (base64String + padding)
+    .replace(/\-/g, '+')
+    .replace(/_/g, '/');
 
-                initializePush();
-            })
-            .catch(err => console.log('Service Worker Error', err));
-    } else {
-        pushBtn.textContent = 'Push not supported.';
-    }
-});
+  const rawData = window.atob(base64);
+  const outputArray = new Uint8Array(rawData.length);
 
-function initializePush() {
-    userToken = localStorage.getItem('pushToken');
-
-    isSubscribed = userToken !== null;
-    updateBtn();
-
-    pushBtn.addEventListener('click', () => {
-        pushBtn.disabled = true;
-
-        if (isSubscribed) return unsubscribeUser();
-
-        return subscribeUser();
-    });
+  for (let i = 0; i < rawData.length; ++i) {
+    outputArray[i] = rawData.charCodeAt(i);
+  }
+  return outputArray;
 }
 
 function updateBtn() {
-    if (Notification.permission === 'denied') {
-        pushBtn.textContent = 'Subscription blocked';
-        return;
-    }
+  if (Notification.permission === 'denied') {
+    pushButton.textContent = 'Push Messaging Blocked.';
+    pushButton.disabled = true;
+    updateSubscriptionOnServer(null);
+    return;
+  }
 
-    pushBtn.textContent = isSubscribed ? 'Unsubscribe' : 'Subscribe';
-    pushBtn.disabled = false;
+  if (isSubscribed) {
+    pushButton.textContent = 'Disable Push Messaging';
+  } else {
+    pushButton.textContent = 'Enable Push Messaging';
+  }
+
+  pushButton.disabled = false;
 }
 
-function updateSubscriptionOnServer(token) {
-    if (isSubscribed) {
-        return database.ref('device_ids')
-            .equalTo(token)
-            .on('child_added', snapshot => snapshot.ref.remove());
-    }
+function updateSubscriptionOnServer(subscription) {
+  // TODO: Send subscription to application server
 
-    database.ref('device_ids').once('value')
-        .then((snapshots) => {
-            let deviceExists = false;
+  const subscriptionJson = document.querySelector('.js-subscription-json');
+  const subscriptionDetails =
+    document.querySelector('.js-subscription-details');
 
-            snapshots.forEach((childSnapshot) => {
-                if (childSnapshot.val() === token) {
-                    deviceExists = true;
-                    return console.log('Device already registered.');
-                }
-            });
+  if (subscription) {
+    subscriptionJson.textContent = JSON.stringify(subscription);
+    subscriptionDetails.classList.remove('is-invisible');
+  } else {
+    subscriptionDetails.classList.add('is-invisible');
+  }
+}
 
-            if (!deviceExists) {
-                console.log('Device subscribed');
-                return database.ref('device_ids').push(token);
-            }
-        });
+function subscribeUser() {
+  const applicationServerKey = urlB64ToUint8Array(applicationServerPublicKey);
+  swRegistration.pushManager.subscribe({
+    userVisibleOnly: true,
+    applicationServerKey: applicationServerKey
+  })
+  .then(function(subscription) {
+    console.log('User is subscribed.');
+
+    updateSubscriptionOnServer(subscription);
+
+    isSubscribed = true;
+
+    updateBtn();
+  })
+  .catch(function(err) {
+    console.log('Failed to subscribe the user: ', err);
+    updateBtn();
+  });
 }
 
 function unsubscribeUser() {
-    messaging.deleteToken(userToken)
-        .then(() => {
-            updateSubscriptionOnServer(userToken);
-            isSubscribed = false;
-            userToken = null;
-            localStorage.removeItem('pushToken');
-            updateBtn();
-        })
-        .catch(err => console.log('Error unsubscribing', err));
+  swRegistration.pushManager.getSubscription()
+  .then(function(subscription) {
+    if (subscription) {
+      return subscription.unsubscribe();
+    }
+  })
+  .catch(function(error) {
+    console.log('Error unsubscribing', error);
+  })
+  .then(function() {
+    updateSubscriptionOnServer(null);
+
+    console.log('User is unsubscribed.');
+    isSubscribed = false;
+
+    updateBtn();
+  });
 }
 
-messaging.requestPermission()
-    .then(function() {
-        return messaging.getToken();
-    })
-    .then(function(token) {
-        // send rest call to add to database
-        $.ajax('https://airy-office-413.firebaseio.com/pushtokens/'+token+'.json', {
-            method: 'PUT',
-            data: 'true',
-            error: function(err) {
-            }
-        });
-    })
-    .catch(function(err) {
-        console.log('Permission denied');
-});
+function initializeUI() {
+  pushButton.addEventListener('click', function() {
+    pushButton.disabled = true;
+    if (isSubscribed) {
+      unsubscribeUser();
+    } else {
+      subscribeUser();
+    }
+  });
+
+  // Set the initial subscription value
+  swRegistration.pushManager.getSubscription()
+  .then(function(subscription) {
+    isSubscribed = !(subscription === null);
+
+    updateSubscriptionOnServer(subscription);
+
+    if (isSubscribed) {
+      console.log('User IS subscribed.');
+    } else {
+      console.log('User is NOT subscribed.');
+    }
+
+    updateBtn();
+  });
+}
+
+if ('serviceWorker' in navigator && 'PushManager' in window) {
+  console.log('Service Worker and Push is supported');
+
+  navigator.serviceWorker.register('sw.js')
+  .then(function(swReg) {
+    console.log('Service Worker is registered', swReg);
+
+    swRegistration = swReg;
+    initializeUI();
+  })
+  .catch(function(error) {
+    console.error('Service Worker Error', error);
+  });
+} else {
+  console.warn('Push messaging is not supported');
+  pushButton.textContent = 'Push Not Supported';
+}

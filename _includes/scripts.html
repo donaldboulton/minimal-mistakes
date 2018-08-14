@@ -246,49 +246,15 @@ if ($.support.pjax) {
 };
 </script>
 
-{% if page.support contains 'firebase-login' %}
-<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+{% if page.notifications == true %}
+<!-- Firebase App is always required and must be first -->
+<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
+
+<!-- Add additional services that you want to use -->
 <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-messaging.js"></script>
 
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: 'AIzaSyBoZgIki3tEgCtgSVVWDdastZCqW9WWGKE',
-    authDomain: 'airy-office-413.firebaseapp.com',
-    databaseURL: 'https://airy-office-413.firebaseio.com',
-    projectId: 'airy-office-413',
-    storageBucket: 'airy-office-413.appspot.com',
-    messagingSenderId: '857761645811',
-  };
-  firebase.initializeApp(config);
-</script>
-
-<script src="https://cdn.firebase.com/libs/firebaseui/3.3.0/firebaseui.js"></script>
-
-<script type="text/javascript">
-  // FirebaseUI config.
-  var uiConfig = {
-    'signInSuccessUrl': 'https://donboulton.com/',
-    'signInOptions': [
-      // Leave the lines as is for the providers you want to offer your users.
-      firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-      firebase.auth.TwitterAuthProvider.PROVIDER_ID,
-      firebase.auth.GithubAuthProvider.PROVIDER_ID,
-      firebase.auth.EmailAuthProvider.PROVIDER_ID
-    ],
-    // Terms of service url.
-    'tosUrl': 'https://donboulton.com/terms/',
-  };
-
-  // Initialize the FirebaseUI Widget using Firebase.
-  var ui = new firebaseui.auth.AuthUI(firebase.auth());
-  // The start method will wait until the DOM is loaded.
-  ui.start('#firebaseui-auth-container', uiConfig);
-</script>
-{% endif %}
-
-{% if page.notifications-admin == true %}
-<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-auth.js"></script>
 <script>
   var config = {
     apiKey: "AIzaSyBoZgIki3tEgCtgSVVWDdastZCqW9WWGKE",
@@ -300,7 +266,6 @@ if ($.support.pjax) {
   };
   firebase.initializeApp(config);
 </script>
-<script src="{{ '/assets/js/vendor/notifications/notifications-admin.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/vendor/notifications/notifications.js' | relative_url }}"></script>
 {% endif %}
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
