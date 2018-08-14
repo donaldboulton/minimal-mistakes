@@ -1,7 +1,7 @@
 {
   "extends": "airbnb/legacy",
   "env": {
-    "es6": true
+    "es7": true
   },
   "rules": {
     "no-var": 2,
