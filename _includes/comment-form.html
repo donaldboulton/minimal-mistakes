@@ -36,8 +36,11 @@
       <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.reCaptcha.siteKey }}">
       <input type="hidden" name="options[reCaptcha][secret]" value="{{ site.reCaptcha.secret }}">
       <div class="enable-push">
-        <button id="push-button" name="fields[notifications]" class="js-push-btn js-notification-overview btn btn--light-outline" disabled>Enable</button>
-        <div class="subscription-message">&nbsp;Comment Notifications</div>
+        <div class="toggle-switch">
+          <input aria-label="Enable Notifications" id="enable-push-checkbox" class="js-push-toggle-checkbox" type="checkbox" disabled />
+          <label for="enable-push-checkbox"></label>
+        </div>
+        <div class="message">Enable Notifications</div>
       </div>
     <div class="form-group">
         <button type="submit" id="comment-form-submit" class="btn btn--primary" value="Submit Comment" id="submit_button" data-callback="enableBtn">Submit Comment</button>
