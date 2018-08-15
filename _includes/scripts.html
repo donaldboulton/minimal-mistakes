@@ -210,7 +210,7 @@ function addNavItem(ul, href, text) {
 {% endif %}
 
 {% if page.footnotes == true %}
-  <script src="{{ '/assets/js/vendor/bigfoot/bigfoot.min.js' | relative_url }}"></script>
+  <script async src="{{ '/assets/js/vendor/bigfoot/bigfoot.min.js' | relative_url }}"></script>
   <script>
      var bigfoot = $.bigfoot();
   </script>
@@ -248,12 +248,11 @@ if ($.support.pjax) {
 
 {% if page.notifications == true %}
 <!-- Firebase App is always required and must be first -->
-<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
+<script async src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
 
 <!-- Add additional services that you want to use -->
-<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-database.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-messaging.js"></script>
+<script async defer src="https://www.gstatic.com/firebasejs/5.3.0/firebase-database.js"></script>
+<script async defer src="https://www.gstatic.com/firebasejs/5.3.0/firebase-messaging.js"></script>
 
 <script>
   var config = {
@@ -267,6 +266,6 @@ if ($.support.pjax) {
   firebase.initializeApp(config);
 </script>
 {% endif %}
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script type="text/javascript" src="https://unpkg.com/default-passive-events"></script>
+<script async defer src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script async defer type="text/javascript" src="https://unpkg.com/default-passive-events"></script>
 <script src="{{ '/app.js' | relative_url }}"></script>

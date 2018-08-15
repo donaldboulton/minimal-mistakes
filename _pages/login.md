@@ -37,3 +37,5 @@ github_editme_path: donaldboulton/DWB/blob/gh-pages/_pages/login.md
 {% include octo-arm.html %}
 
 {% include firebase-login.html %}
+
+{% include firebase-config.html %}
