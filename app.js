@@ -2,7 +2,7 @@
 
 const applicationServerPublicKey = 'BD2iZ3fdD1IdYyJCHAJmwLsJPrPxeetpYe_zit7UGt4x5Nkas5TCYkLIVTabOWikVLaTDDPXkXdG0Ho1xZh6Ozw';
 
-const pushButton = document.querySelector('.js-push-toggle-checkbox');
+const pushCheckbox = document.querySelector('.js-push-toggle-checkbox');
 
 function urlBase64ToUint8Array(base64String) {
   const padding = '='.repeat((4 - base64String.length % 4) % 4);
