@@ -1,6 +1,6 @@
 $background_color_1s: #dddddd;
 $background_color_2s: #fff;
-$background_color_3s: #8ce196;
+$background_color_3s: #00c100;
 
 .toggle-switch {
 	display: inline-block;
@@ -77,4 +77,12 @@ td.endpoint {
 	display: block;
 	width: 100%;
 	margin-bottom: 16px;
+}
+
+.is-invisible {
+  opacity: 0;
+}
+
+.subscription-details {
+  transition: opacity 1s;
 }

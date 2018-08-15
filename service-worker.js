@@ -1,4 +1,4 @@
-const VERSION = '13';
+const VERSION = '17';
 
 this.addEventListener('install', (e) => {
     e.waitUntil(caches.open(VERSION).then(cache => cache.addAll([
@@ -78,7 +78,8 @@ this.addEventListener('install', (e) => {
         '/assets/js/lunr/lunr-en.js',
         '/assets/js/github/github-widget.js',
         '/assets/images/bg10-min.png',
-        '/assets/images/pages/bg10-min.png',
+        '/assets/images/badge.png',
+        '/assets/images/icon.png',
         '/assets/images/fav-icons/favicon-32x32.png',
         '/assets/images/pages/donald-boulton-100.jpg',
         '/assets/images/pages/reviews.jpg',
@@ -174,13 +175,63 @@ function fetchFromNetworkAndCache(e) {
 function handleNoCacheMatch(e) {
     return fetchFromNetworkAndCache(e);
 }
-// ON NOTIFICATION CLICK
-self.addEventListener('notificationclick', event => {
-    console.log(event);
 
-    event.notification.close();
+/* eslint-disable max-len */
 
-    event.waitUntil(
-        self.clients.openWindow('https://donboulton.com')
-    );
+const applicationServerPublicKey = 'BOew5Tx7fTX51GzJ7tpF3dDLNS54OvUST_dGGqzJEy54jqW2qghIRTiK7BfOpCPp8xNfMH7Mtprl3hp_WGjgslU';
+
+/* eslint-enable max-len */
+
+function urlB64ToUint8Array(base64String) {
+  const padding = '='.repeat((4 - base64String.length % 4) % 4);
+  const base64 = (base64String + padding)
+    .replace(/\-/g, '+')
+    .replace(/_/g, '/');
+
+  const rawData = window.atob(base64);
+  const outputArray = new Uint8Array(rawData.length);
+
+  for (let i = 0; i < rawData.length; ++i) {
+    outputArray[i] = rawData.charCodeAt(i);
+  }
+  return outputArray;
+}
+
+self.addEventListener('push', function(event) {
+  console.log('[Service Worker] Push Received.');
+  console.log(`[Service Worker] Push had this data: "${event.data.text()}"`);
+
+  const title = 'Push Codelab';
+  const options = {
+    body: 'Push Notifications enabled.',
+    icon: '/assets/images/icon.png',
+    badge: '/assets/images/badge.png'
+  };
+
+  event.waitUntil(self.registration.showNotification(title, options));
+});
+
+self.addEventListener('notificationclick', function(event) {
+  console.log('[Service Worker] Notification click Received.');
+
+  event.notification.close();
+
+  event.waitUntil(
+    clients.openWindow('https://donboulton.com/')
+  );
+});
+
+self.addEventListener('pushsubscriptionchange', function(event) {
+  console.log('[Service Worker]: \'pushsubscriptionchange\' event fired.');
+  const applicationServerKey = urlB64ToUint8Array(applicationServerPublicKey);
+  event.waitUntil(
+    self.registration.pushManager.subscribe({
+      userVisibleOnly: true,
+      applicationServerKey: applicationServerKey
+    })
+    .then(function(newSubscription) {
+      // TODO: Send to application server
+      console.log('[Service Worker] New subscription: ', newSubscription);
+    })
+  );
 });
