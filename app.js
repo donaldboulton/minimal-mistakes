@@ -31,9 +31,9 @@ function updateBtn() {
   }
 
   if (isSubscribed) {
-    pushButton.textContent = 'Disable Push Messaging';
+    pushButton.textContent = 'Disable';
   } else {
-    pushButton.textContent = 'Enable Push Messaging';
+    pushButton.textContent = 'Enable';
   }
 
   pushButton.disabled = false;
@@ -133,7 +133,7 @@ if ('serviceWorker' in navigator && 'PushManager' in window) {
     initializeUI();
   })
   .catch(function(error) {
-    console.error('Service Worker Error', error);
+    console.error('Service Worker Error');
   });
 } else {
   console.warn('Push messaging is not supported');
