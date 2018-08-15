@@ -201,11 +201,15 @@ self.addEventListener('push', function(event) {
   console.log('[Service Worker] Push Received.');
   console.log(`[Service Worker] Push had this data: "${event.data.text()}"`);
 
-  const title = 'Push Codelab';
+  const title = 'Notify';
   const options = {
     body: 'Push Notifications enabled.',
     icon: '/assets/images/icon.png',
-    badge: '/assets/images/badge.png'
+    badge: '/assets/images/badge.png',
+    image: '/assets/images/pages/letter-avatar-header.png',
+    sound: '/assets/audio/notification-sound.mp3',
+    tag: 'notification',
+    vibrate: [500,110,500,110,450,110,200,110,170,40,450,110,200,110,170,40,500],
   };
 
   event.waitUntil(self.registration.showNotification(title, options));

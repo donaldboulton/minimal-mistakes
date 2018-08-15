@@ -210,7 +210,7 @@ function addNavItem(ul, href, text) {
 {% endif %}
 
 {% if page.footnotes == true %}
-  <script async src="{{ '/assets/js/vendor/bigfoot/bigfoot.min.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/vendor/bigfoot/bigfoot.min.js' | relative_url }}"></script>
   <script>
      var bigfoot = $.bigfoot();
   </script>
@@ -247,13 +247,9 @@ if ($.support.pjax) {
 </script>
 
 {% if page.notifications == true %}
-<!-- Firebase App is always required and must be first -->
-<script async src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
-
-<!-- Add additional services that you want to use -->
-<script async defer src="https://www.gstatic.com/firebasejs/5.3.0/firebase-database.js"></script>
-<script async defer src="https://www.gstatic.com/firebasejs/5.3.0/firebase-messaging.js"></script>
-
+<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-messaging.js"></script>
 <script>
   var config = {
     apiKey: "AIzaSyBoZgIki3tEgCtgSVVWDdastZCqW9WWGKE",

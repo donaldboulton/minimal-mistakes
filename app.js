@@ -169,7 +169,7 @@ function setUpPush() {
           .then(subscribeUserToPush)
           .then(function(subscription) {
             if (subscription) {
-              return sendSubscriptionToBackEnd(subscription)
+              return sendSubscriptionToServer(subscription)
               .then(function() {
                 return subscription;
               });
@@ -231,18 +231,12 @@ window.onload = function() {
   setUpPush();
 };
 
-function saveToFirebase(email) {
-  var emailObject = {
-      email: email
-  };
+var database = firebase.database();
 
-  firebase.database().ref('subscription-entries').push().set(emailObject)
-      .then(function(snapshot) {
-          success(); // some success method
-      }, function(error) {
-          console.log('error' + error);
-          error(); // some error method
-      });
+function saveToFirebase(name, email, title) {
+  firebase.database().ref('notifications').push().set({
+    name: name,
+    email: email,
+    title: title,
+  });
 }
-
-saveToFirebase(email);
