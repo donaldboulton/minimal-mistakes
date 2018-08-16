@@ -1,0 +1,53 @@
+<div class="fade" id="addContactModal" tabindex="-1" aria-labelledby="Add Contact">
+  <div class="dialog">
+    <div class="content">
+      <form method="POST" id="contactForm" name="contactForm">
+        <div class="body">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text"  id="name" required placeholder="Enter name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email"  id="email" required placeholder="Enter Email">
+          </div>
+          <h3>Location</h3>
+          <div class="form-group">
+            <label for="city">City</label>
+            <input type="text"  id="city" placeholder="Enter City">
+          </div>
+          <div class="form-group">
+            <label for="email">State</label>
+            <input type="text"  id="state" placeholder="Enter State">
+          </div>
+          <div class="form-group">
+            <label for="zip">Zip</label>
+            <input type="text"  id="zip" placeholder="Enter Zip Code">
+          </div>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn--primary addValue">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+  <div class="fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="Message" aria-hidden="true">
+    <div class="dialog">
+      <div class="content">
+        <div>
+          <h4 class="title" id="messageModalLabel">Message</h4>
+        </div>
+        <div class="form-group">
+          <div class="pre-auth">
+            <span class="">
+              <button type="submit" class="btn btn--primary" data-target="#registerModal">Register</button>
+              <button type="submit" class="btn btn--success" data-target="#loginModal">Login</button>
+            </span>
+          </div>
+          <div class="post-auth"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

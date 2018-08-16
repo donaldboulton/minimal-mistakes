@@ -13,7 +13,7 @@ layout: compress
   {% endif %}
 </head>
 
-<body id="style-3" class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}" itemscope itemtype="http://schema.org/WebPage">
+<body id="style-3" class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %} auth-false" itemscope itemtype="http://schema.org/WebPage">
   <meta itemprop="url" content="{{ site.url }}{{ page.url }}" />
 <noscript><iframe aria-label="google hidden iframe" src="https://www.googletagmanager.com/ns.html?id=GTM-TDPND89"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

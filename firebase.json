@@ -1,13 +1,13 @@
 {
+  "firebase": "airy-office-413",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ],
   "database": {
     "rules": "y"
-  },
-  "firestore": {
-    "rules": "y",
-    "indexes": "y"
-  },
-  "storage": {
-    "rules": "firestore.storage.rules"
   },
   "functions": {
     "predeploy": [
