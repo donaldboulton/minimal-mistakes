@@ -1,25 +1,3 @@
-<!-- Firebase App is always required and must be first -->
-<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
-
-<!-- Add additional services that you want to use -->
-<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-database.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-messaging.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-functions.js"></script>
-
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: 'AIzaSyBoZgIki3tEgCtgSVVWDdastZCqW9WWGKE',
-    authDomain: 'airy-office-413.firebaseapp.com',
-    databaseURL: 'https://airy-office-413.firebaseio.com',
-    projectId: 'airy-office-413',
-    storageBucket: 'airy-office-413.appspot.com',
-    messagingSenderId: '857761645811',
-  };
-  firebase.initializeApp(config);
-</script>
-
 <script src="https://cdn.firebase.com/libs/firebaseui/3.3.0/firebaseui.js"></script>
 
 <script type="text/javascript">
@@ -41,4 +19,36 @@
   var ui = new firebaseui.auth.AuthUI(firebase.auth());
   // The start method will wait until the DOM is loaded.
   ui.start('#firebaseui-auth-container', uiConfig);
+  // Register a new user
+firebase.auth().createUserWithEmailAndPassword(email, password)
+ .catch(function (err) {
+   // Handle errors
+ });
+
+    document.querySelector('#sign-in').addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var email = document.querySelector('#email').value;
+      var password = document.querySelector('#password').value
+      var credential = firebase.auth.EmailAuthProvider.credential(email, password);
+      var auth = firebase.auth();
+      var currentUser = auth.currentUser;
+    });
+
+    document.querySelector('#sign-out').addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      firebase.auth().signOut();
+    });
+    firebase.auth().onAuthStateChanged(function(user) {
+      window.user = user;
+    });
+</script>
+<script src=”https://apis.google.com/js/platform.js" async defer></script>
+<script>
+ var provider = new firebase.auth.GoogleAuthProvider();
+ provider.addScope('profile');
+ provider.addScope('email');
+ provider.addScope('https://www.googleapis.com/auth/plus.me');
+ firebase.auth().signInWithPopup(provider); // Opens a popup window and returns a promise to handle errors.
 </script>
