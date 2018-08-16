@@ -1,5 +1,6 @@
 $(document).ready(function(){
-    var cogHTML = '<i class="fa fa-cog fa-spin"></i>';
+    var cogHTML = '<svg class="icon spin"><use xlink:href="/assets/icons/icons.svg#icon-loading"></use></svg> Loading...',
+
     var forms = {
       login: '#loginForm',
       settings: '#settingsForm',
