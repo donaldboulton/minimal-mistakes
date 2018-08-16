@@ -247,13 +247,22 @@ if ($.support.pjax) {
 </script>
 <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-auth.js"></script>
-<script src="{{ '/assets/js/vendor/firebase/firebase-login.js' | relative_url }}"></script>
-{% if page.notifications == true %}
 <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-database.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-messaging.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-storage.js"></script>
+<script>
+  var config = {
+    apiKey: "AIzaSyBoZgIki3tEgCtgSVVWDdastZCqW9WWGKE",
+    authDomain: "airy-office-413.firebaseapp.com",
+    databaseURL: "https://airy-office-413.firebaseio.com",
+    projectId: "airy-office-413",
+    storageBucket: "airy-office-413.appspot.com",
+    messagingSenderId: "857761645811"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="{{ '/assets/js/vendor/firebase/firebase-login.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/vendor/firebase/functions.js' | relative_url }}"></script>
-{% endif %}
 <script async defer src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script async defer type="text/javascript" src="https://unpkg.com/default-passive-events"></script>
 <script src="{{ '/app.js' | relative_url }}"></script>
