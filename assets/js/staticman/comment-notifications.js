@@ -100,7 +100,7 @@ function saveToDB(title) {
 
 commentBtn.addEventListener('click', () => {
     const input = document.getElementById('comment-form-title');
-    const inputWrap = document.querySelector('.comment-title');
+    const inputWrap = document.querySelector('.comment__title');
     const listItem = document.createElement('li');
 
     listItem.innerHTML = input.value;

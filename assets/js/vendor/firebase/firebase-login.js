@@ -1,164 +1,246 @@
 $(document).ready(function(){
-  var config = {
-    apiKey: "AIzaSyBoZgIki3tEgCtgSVVWDdastZCqW9WWGKE",
-    authDomain: "airy-office-413.firebaseapp.com",
-    databaseURL: "https://airy-office-413.firebaseio.com",
-    projectId: "airy-office-413",
-    storageBucket: "airy-office-413.appspot.com",
-    messagingSenderId: "857761645811"
-  };
-  firebase.initializeApp(config);
-
-  var Auth = firebase.auth();
-  var dbRef = firebase.database();
-  var contactsRef = dbRef.ref('contacts')
-  var usersRef = dbRef.ref('users')
-  var auth = null;
-
-  $('#registerForm').on('submit', function (e) {
-    e.preventDefault();
-    var data = {
-      email: $('#registerEmail').val(),
-      firstName: $('#registerFirstName').val(),
-      lastName: $('#registerLastName').val(),
-    };
-    var passwords = {
-      password : $('#registerPassword').val(),
-      cPassword : $('#registerConfirmPassword').val(),
+    var cogHTML = '<i class="fa fa-cog fa-spin"></i>';
+    var forms = {
+      login: '#loginForm',
+      settings: '#settingsForm',
+      updateUserInfo: '#updateForm',
+      addContact: '#contactForm',
+      register: '#registerForm',
+      forgotPassword: '#forgotPasswordForm',
     }
-    if( data.email != '' && passwords.password != ''  && passwords.cPassword != '' ){
-      if( passwords.password == passwords.cPassword ){
+    //initialize the firebase app
+    var config = {
+      apiKey: "AIzaSyBoZgIki3tEgCtgSVVWDdastZCqW9WWGKE",
+      authDomain: "airy-office-413.firebaseapp.com",
+      databaseURL: "https://airy-office-413.firebaseio.com",
+      projectId: "airy-office-413",
+      storageBucket: "airy-office-413.appspot.com",
+      messagingSenderId: "857761645811"
+    };
+    firebase.initializeApp(config);
 
-        firebase.auth()
-          .createUserWithEmailAndPassword(data.email, passwords.password)
-          .then(function(user) {
-            return user.updateProfile({
-              displayName: data.firstName + ' ' + data.lastName
-            })
-          })
-          .then(function(user){
-            auth = user;
-            usersRef.child(user.uid).set(data)
-              .then(function(){
-                console.log("User Information Saved:", user.uid);
-              })
-            $('#messageModalLabel').html(spanText('Success!', ['center', 'success']))
+    //create firebase references
+    var Auth = firebase.auth();
+    var Storage = firebase.storage();
+    var dbRef = firebase.database();
+    var contactsRef = dbRef.ref('contacts')
+    var profileImagesRef = Storage.ref().child('profile-images')
+    var usersRef = dbRef.ref('users')
+    var user = null;
+    var userData = null;
+
+    //Register
+    $(forms.register).on('submit', function (e) {
+      e.preventDefault();
+      $('#registerModal').modal('hide');
+      $('#messageModalLabel').html(span(cogHTML, ['center', 'info']));
+      $('#messageModal').modal('show');
+      var data = {
+        email: $('#registerEmail').val(), //get the email from Form
+        firstName: $('#registerFirstName').val(), // get firstName
+        lastName: $('#registerLastName').val(), // get lastName
+      };
+
+      var password = $('#registerPassword').val(); //get the pass from Form
+      var cPassword = $('#registerConfirmPassword').val(); //get the confirmPass from Form
+      var photo = $('#registerPhoto').get(0).files[0];
+      var profileData = {
+        displayName: data.firstName + ' ' + data.lastName,
+        photoURL: null
+      };
+      if( data.email != '' && password != ''  && cPassword === password ){
+        Auth.createUserWithEmailAndPassword(data.email, password)
+          .then(function() { user = Auth.currentUser })
+          .then(function() { return sendEmailVerification(data) })
+          .then(function() { return photo ? saveImage(photo, user.uid, profileImagesRef) : null })
+          .then(function(url) { profileData.photoURL = url; })
+          .then(function(){ return user.updateProfile(profileData) })
+          .then(function(){ saveUserInfo(data) })
+          .then(function(){
+            userData = data;
+            console.log("User Information Saved:", user.uid);
+            $('#messageModalLabel').html(span('Success!', ['center', 'success']))
 
             $('#messageModal').modal('hide');
           })
+          .then(updateUserStatus)
           .catch(function(error){
             console.log("Error creating user:", error);
-            $('#messageModalLabel').html(spanText('ERROR: '+error.code, ['danger']))
+            $('#messageModalLabel').html(span('ERROR: '+error.code, ['danger']))
           });
-      } else {
-        $('#messageModalLabel').html(spanText("ERROR: Passwords didn't match", ['danger']))
       }
-    }
-  });
+    });
 
-  //Login
-  $('#loginForm').on('submit', function (e) {
-    e.preventDefault();
-    $('#loginModal').modal('hide');
-    $('#messageModalLabel').html(spanText('<i class="fa fa-cog fa-spin"></i>', ['center', 'info']));
-    $('#messageModal').modal('show');
+    //Login
+    $(forms.login).on('submit', function (e) {
+      e.preventDefault();
+      $('#loginModal').modal('hide');
+      $('#messageModalLabel').html(span(cogHTML, ['center', 'info']));
+      $('#messageModal').modal('show');
 
-    if( $('#loginEmail').val() != '' && $('#loginPassword').val() != '' ){
-      //login the user
-      var data = {
-        email: $('#loginEmail').val(),
-        password: $('#loginPassword').val()
-      };
-      firebase.auth().signInWithEmailAndPassword(data.email, data.password)
-        .then(function(authData) {
-          auth = authData;
-          $('#messageModalLabel').html(spanText('Success!', ['center', 'success']))
-          $('#messageModal').modal('hide');
-        })
-        .catch(function(error) {
-          console.log("Login Failed!", error);
-          $('#messageModalLabel').html(spanText('ERROR: '+error.code, ['danger']))
-        });
-    }
-  });
-
-  $('#logout').on('click', function(e) {
-    e.preventDefault();
-    firebase.auth().signOut()
-  });
-
-  $('#contactForm').on('submit', function( event ) {
-    event.preventDefault();
-    if( auth != null ){
-      if( $('#name').val() != '' || $('#email').val() != '' ){
-        contactsRef.child(auth.uid)
-          .push({
-            name: $('#name').val(),
-            email: $('#email').val(),
-            location: {
-              city: $('#city').val(),
-              state: $('#state').val(),
-              zip: $('#zip').val()
-            }
+      var email = $('#loginEmail').val();
+      var password = $('#loginPassword').val();
+      if( email != '' && password != '' ){
+        Auth.signInWithEmailAndPassword(email, password)
+          .then(function(authData) {
+            user = authData;
+            $('#messageModalLabel').html(span('Success!', ['center', 'success']))
+            $('#messageModal').modal('hide');
           })
-          document.contactForm.reset();
-      } else {
-        alert('Please fill at-lease name or email!');
+          .catch(function(error) {
+            console.log("Login Failed!", error);
+            $('#messageModalLabel').html(span('ERROR: '+error.code, ['danger']))
+          });
       }
-    } else {
-      //inform user to login
-    }
-  });
+    });
 
-  firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-      auth = user;
-      $('body').removeClass('auth-false').addClass('auth-true');
-      usersRef.child(user.uid).once('value').then(function (data) {
-        var info = data.val();
-        if(user.photoUrl) {
-          $('.user-info img').show();
-          $('.user-info img').attr('src', user.photoUrl);
-          $('.user-info .user-name').hide();
-        } else if(user.displayName) {
-          $('.user-info img').hide();
-          $('.user-info').append('<span class="user-name">'+user.displayName+'</span>');
-        } else if(info.firstName) {
-          $('.user-info img').hide();
-          $('.user-info').append('<span class="user-name">'+info.firstName+'</span>');
+    // Forgot Password
+    $(forms.forgotPassword).on('submit', function (e) {
+      e.preventDefault();
+      $('#forgotPasswordModal').modal('hide');
+      $('#messageModalLabel').html(span(cogHTML, ['center', 'info']));
+      $('#messageModal').modal('show');
+
+      var data = extractFormData(forms.forgotPassword);
+      if( email !== ''){
+        firebase.auth().sendPasswordResetEmail(data.email)
+          .then(function() {
+            $('#messageModalLabel').html(span('Reset Link sent to email!', ['center', 'success']));
+          })
+          .catch(function(error) {
+            console.error("Failed!", error);
+            $('#messageModalLabel').html(span('ERROR: '+error.code, ['danger']))
+          });
+      }
+    });
+
+    $('#logout').on('click', function(e) {
+      e.preventDefault();
+      Auth.signOut();
+    });
+
+    //Update user info
+    $(forms.updateUserInfo).on('submit', function (e) {
+      e.preventDefault();
+      var values = extractFormData(forms.updateUserInfo);
+      user = Auth.currentUser;
+      var profileData = {
+        displayName: values.firstName + ' ' + values.lastName,
+        photoURL: null
+      };
+      var promise = values.photo
+        ? saveImage(values.photo, user.uid, profileImagesRef)
+          .then(function(url) { profileData.photoURL = url; })
+          .then(function(){ return user.updateProfile(profileData) })
+        : Promise.resolve(null);
+      promise
+        .then(function() { return saveUserInfo(values); })
+        .then(updateUserStatus)
+        .then(function(){
+          console.log("User Information Saved:", user.uid);
+          $('#updateInfoModal').modal('hide');
+        })
+    });
+
+    // Send the email verification link
+    $('#send-verification').on('click', sendEmailVerification)
+    $('#changePasswordTrigger').on('click', function() {
+      var c = document.querySelector('#forgotPasswordModal').querySelectorAll('.auth-false')
+      c.forEach(el => el.classList.add('d-none'))
+    })
+    $('#forgotPasswordTrigger').on('click', function() {
+      var c = document.querySelector('#forgotPasswordModal').querySelectorAll('.auth-false')
+      c.forEach(el => el.classList.rmeove('d-none'))
+    })
+
+
+    $('.linkSocial').on('click', function(e) {
+      var provider = e.target.getAttribute('data-provider');
+      var p = provider+'AuthProvider';
+      provider = firebase.auth[p];
+      if(provider && e.target.hasAttribute('disabled')) {
+        Auth.currentUser.linkWithPopup(new provider).then(console.log)
+      }
+    })
+
+    // Prevent User from adding contact if email is not verified
+    $('#addContactModalTrigger').on('click', function(e) {
+      if(!user.emailVerified) {
+        e.stopPropagation()
+        e.target.classList.add('btn-danger')
+        setTimeout(function() {
+          e.target.classList.remove('btn-danger')
+        }, 500);
+      }
+    })
+
+    //save contact
+    $(forms.addContact).on('submit', function( event ) {
+      event.preventDefault();
+      if( user != null ){
+        var formData = extractFormData(forms.addContact);
+        if( formData.name !== '' || formData.email !== '' ){
+          contactsRef.child(user.uid).push({
+            name: formData.name,
+            email: formData.email,
+            location: {
+              city: formData.city,
+              state: formData.state,
+              zip: formData.zip,
+            }
+          });
+          document.contactForm.reset();
+        } else {
+          alert('Please fill at-least name or email!');
         }
+      }
+    });
+
+    Auth.onAuthStateChanged(updateUserStatus);
+
+    function saveUserInfo(data) {
+      user = Auth.currentUser;
+      return usersRef.child(user.uid).set(data)
+    }
+    function sendEmailVerification(data) {
+      email = data.email || user.email
+      return user.emailVerified || user.sendEmailVerification({
+        url: window.location.href + '?email=' + user.email,
       });
-      contactsRef.child(user.uid).on('child_added', onChildAdd);
-    } else {
-      $('body').removeClass('auth-true').addClass('auth-false');
-      auth && contactsRef.child(auth.uid).off('child_added', onChildAdd);
-      $('#contacts').html('');
-      auth = null;
+    }
+    function updateUserStatus(userInfo) {
+      userInfo = userInfo || Auth.currentUser;
+      if (userInfo) {
+        user = userInfo;
+        $('body').removeClass('auth-false').addClass('auth-true');
+        if(user.emailVerified) {
+          document.querySelector('#email-verification').classList.add('d-none')
+        } else {
+          document.querySelector('#email-verification').classList.remove('d-none')
+        }
+        var providers = user.providerData.map(function(provider){ return provider.providerId;});
+        var _providers = providers.join(',');
+        [].slice.call(document.querySelectorAll('.linkSocial')).forEach(function(el) {
+          if(_providers.split(new RegExp(el.getAttribute('data-provider'), 'ig')).length > 1) {
+            el.setAttribute('disabled', true);
+          }
+        });
+        usersRef.child(user.uid).once('value').then(function (snapshot) {
+          var info = snapshot.val();
+          var data = Object.assign({}, info, {
+            photoURL: user.photoURL,
+            displayName: user.displayName,
+          });
+          userData = data;
+          setUserInfoArea(data);
+        });
+        contactsRef.child(user.uid).on('child_added', onChildAdd);
+      } else {
+        // No user is signed in.
+        $('body').removeClass('auth-true').addClass('auth-false');
+        user && contactsRef.child(user.uid).off('child_added', onChildAdd);
+        $('#contacts').html('');
+        user = null;
+      }
     }
   });
-});
-
-function onChildAdd (snap) {
-  $('#contacts').append(contactHtmlFromObject(snap.key, snap.val()));
-}
-
-function contactHtmlFromObject(key, contact){
-  return '<div class="card contact" style="width: 18rem;" id="'+key+'">'
-    + '<div class="card-body">'
-      + '<h5 class="card-title">'+contact.name+'</h5>'
-      + '<h6 class="card-subtitle mb-2 text-muted">'+contact.email+'</h6>'
-      + '<p class="card-text" title="' + contact.location.zip+'">'
-        + contact.location.city + ', '
-        + contact.location.state
-      + '</p>'
-      // + '<a href="#" class="card-link">Card link</a>'
-      // + '<a href="#" class="card-link">Another link</a>'
-    + '</div>'
-  + '</div>';
-}
-
-function spanText(textStr, textClasses) {
-  var classNames = textClasses.map(c => 'text-'+c).join(' ');
-  return '<span class="'+classNames+'">'+ textStr + '</span>';
-}
-

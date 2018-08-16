@@ -2,37 +2,41 @@
   <div class="dialog">
     <div class="content">
       <form method="POST" id="contactForm" name="contactForm">
-        <div class="body">
+        <div class="modal-header">
+          <h4 class="modal-title" id="addContactModalLabel">Add Contact</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body">
           <div class="form-group">
             <label for="name">Name</label>
-            <input type="text"  id="name" required placeholder="Enter name">
+            <input type="text" class="form-control" name="name" id="name" required placeholder="Enter name">
           </div>
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="email"  id="email" required placeholder="Enter Email">
+            <input type="email" class="form-control" name="email" id="email" required placeholder="Enter Email">
           </div>
           <h3>Location</h3>
           <div class="form-group">
             <label for="city">City</label>
-            <input type="text"  id="city" placeholder="Enter City">
+            <input type="text" class="form-control" name="city" id="city" placeholder="Enter City">
           </div>
           <div class="form-group">
             <label for="email">State</label>
-            <input type="text"  id="state" placeholder="Enter State">
+            <input type="text" class="form-control" name="state" id="state" placeholder="Enter State">
           </div>
           <div class="form-group">
             <label for="zip">Zip</label>
-            <input type="text"  id="zip" placeholder="Enter Zip Code">
+            <input type="text" class="form-control" name="zip" id="zip" placeholder="Enter Zip Code">
           </div>
         </div>
-        <div class="form-group">
-          <button type="submit" class="btn btn--primary addValue">Submit</button>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary addValue">Submit</button>
         </div>
       </form>
     </div>
   </div>
 </div>
-  <div class="fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="Message" aria-hidden="true">
+  <div class="fade" id="messageModal" tabindex="-1" aria-labelledby="Message" aria-hidden="true">
     <div class="dialog">
       <div class="content">
         <div>
@@ -49,5 +53,53 @@
         </div>
       </div>
     </div>
+  </div>
+</div>
+<div class="modal fade" id="updateInfoModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <form id="updateForm" method="POST">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="messageModalLabel">Update Info</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="updateFirstName" class="control-label">First Name:</label>
+            <input type="text" class="form-control" name="firstName" id="updateFirstName">
+          </div>
+          <div class="form-group">
+            <label for="updateLastName" class="control-label">Last Name:</label>
+            <input type="text" class="form-control" name="lastName" id="updateLastName">
+          </div>
+          <div class="form-group">
+            <label for="updatePhoto" class="control-label">Profile Picture:</label>
+            <input type="file" class="form-control" name="photo" id="updatePhoto">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary" id="doUpdate">Update</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal fade" id="connectSocialAccountsModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <form id="connectSocialAccountsForm" method="POST">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Connect Social Accounts</h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <button type="button" class="btn btn-primary linkSocial" id="linkFacebook" data-provider="Facebook"><i class="fa fa-facebook"></i> Connect Facebook</button>
+          </div>
+          <div class="form-group">
+            <button type="button" class="btn btn-primary linkSocial" id="linkTwitter" data-provider="Twitter"><i class="fa fa-twitter"></i> Connect Twitter</button>
+          </div>
+        </div>
+      </div>
+    </form>
   </div>
 </div>

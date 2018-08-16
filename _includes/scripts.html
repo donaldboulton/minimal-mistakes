@@ -307,14 +307,8 @@ firebase.auth().createUserWithEmailAndPassword(email, password)
       window.user = user;
     });
 </script>
-<script src=”https://apis.google.com/js/platform.js" async defer></script>
-<script>
- var provider = new firebase.auth.GoogleAuthProvider();
- provider.addScope('profile');
- provider.addScope('email');
- provider.addScope('https://www.googleapis.com/auth/plus.me');
- firebase.auth().signInWithPopup(provider); // Opens a popup window and returns a promise to handle errors.
-</script>
+
+<script src="{{ '/assets/js/vendor/firebase/functions.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/vendor/firebase/firebase-login.js' | relative_url }}"></script>
 {% endif %}
 <script async defer src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
