@@ -1,14 +1,14 @@
-importScripts('https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js');
-importScripts('https://www.gstatic.com/firebasejs/5.3.0/firebase-auth.js');
-importScripts('https://www.gstatic.com/firebasejs/5.3.0/firebase-database.js');
-importScripts('https://www.gstatic.com/firebasejs/5.3.0/firebase-messaging.js');
-importScripts('https://www.gstatic.com/firebasejs/5.3.0/firebase-storage.js');
+importScripts('/assets/js/vendor/firebase/bundle/firebase-bundle.js');
 
 let app = null;
-let firebase = firebaseapp.firebase;
+let firebase = firebaseBundle.firebase;
+
+firebase.initializeApp({
+  'messagingSenderId': '40911931240'
+});
 
 function createCollection(path) {
-  return app.firestore().collection(path)
+  return app.firestore().collection(path);
 }
 
 self.addEventListener('message', event => {
