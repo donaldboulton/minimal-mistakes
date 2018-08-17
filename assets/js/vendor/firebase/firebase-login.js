@@ -19,7 +19,6 @@ $(document).ready(function(){
     var user = null;
     var userData = null;
 
-    //Register
     $(forms.register).on('submit', function (e) {
       e.preventDefault();
       $('#registerModal').modal('hide');
