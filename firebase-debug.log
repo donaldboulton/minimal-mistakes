@@ -1,0 +1,32 @@
+[debug] [2018-08-17T17:52:42.710Z] ----------------------------------------------------------------------
+[debug] [2018-08-17T17:52:42.712Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Donald Boulton\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve --only functions
+[debug] [2018-08-17T17:52:42.713Z] CLI Version:   4.1.0
+[debug] [2018-08-17T17:52:42.713Z] Platform:      win32
+[debug] [2018-08-17T17:52:42.713Z] Node Version:  v8.11.3
+[debug] [2018-08-17T17:52:42.714Z] Time:          Fri Aug 17 2018 12:52:42 GMT-0500 (Central Daylight Time)
+[debug] [2018-08-17T17:52:42.714Z] ----------------------------------------------------------------------
+[debug] 
+[warn] !  "firebase" key in firebase.json is deprecated. Run firebase use --add instead
+[warn] !  Deprecation Warning: Firebase Hosting configuration should be moved under "hosting" key.
+[debug] [2018-08-17T17:52:42.739Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-08-17T17:52:42.742Z] > authorizing via signed-in user
+[debug] [2018-08-17T17:52:42.746Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/airy-office-413  
+ 
+[debug] [2018-08-17T17:52:43.453Z] <<< HTTP RESPONSE 200
+[debug] [2018-08-17T17:52:43.455Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/airy-office-413/tokens  
+ 
+[debug] [2018-08-17T17:52:44.072Z] <<< HTTP RESPONSE 200
+[debug] [2018-08-17T17:52:44.074Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/airy-office-413  
+ 
+[debug] [2018-08-17T17:52:44.549Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\Donald Boulton\Documents\GitHub\DWB'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-08-17T17:52:55.169Z] Fetching environment
+[debug] [2018-08-17T17:52:55.176Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/857761645811:getServerAppConfig  
+ 
+[debug] [2018-08-17T17:52:56.242Z] <<< HTTP RESPONSE 200
+[debug] [2018-08-17T17:52:56.243Z] Starting @google-cloud/functions-emulator
+[debug] [2018-08-17T17:53:03.944Z] Parsing function triggers
+[info] i  functions: No HTTPS functions found. Use firebase functions:shell if you would like to emulate other types of functions.

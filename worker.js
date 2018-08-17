@@ -1,7 +1,11 @@
-importScripts('/firebase-bundle.js');
+importScripts('https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js');
+importScripts('https://www.gstatic.com/firebasejs/5.3.0/firebase-auth.js');
+importScripts('https://www.gstatic.com/firebasejs/5.3.0/firebase-database.js');
+importScripts('https://www.gstatic.com/firebasejs/5.3.0/firebase-messaging.js');
+importScripts('https://www.gstatic.com/firebasejs/5.3.0/firebase-storage.js');
 
 let app = null;
-let firebase = firebaseBundle.firebase;
+let firebase = firebaseapp.firebase;
 
 function createCollection(path) {
   return app.firestore().collection(path)
@@ -38,8 +42,8 @@ self.addEventListener('message', event => {
         const empty = snap.empty;
         self.postMessage({
           name: `firestore.col.${path}.onSnapshot`,
-          response: { 
-            data: { docs, size, empty }, 
+          response: {
+            data: { docs, size, empty },
             type: 'QuerySnapshot',
           }
         });

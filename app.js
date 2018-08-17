@@ -42,6 +42,7 @@ const worker = new Worker('worker.js');
 worker.addEventListener('message', event => {
   console.log(event.data, 'Message from the worker!');
 });
+
 /**** START request-permission ****/
 function askPermission() {
   return new Promise(function(resolve, reject) {

@@ -19,20 +19,6 @@
     "rules": "y",
     "indexes": "y"
   },
-  "hosting": {
-    "public": "n",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
-    ]
-  },
   "storage": {
     "rules": "y"
   }
