@@ -244,6 +244,10 @@ if ($.support.pjax) {
         $.pjax.click(event, {container: containerSelector})
     })
 };
+$(".author__urls_masthead button").on("click", function() {
+    $(".author__urls_masthead").toggleClass("is--visible");
+    $(".author__urls_masthead button").toggleClass("open");
+});
 </script>
 <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-auth.js"></script>
