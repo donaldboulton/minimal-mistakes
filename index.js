@@ -12,7 +12,7 @@ firebase.initializeApp({
 
 const messaging = firebase.messaging();
 const database = firebase.database();
-const pushBtn = document.getElementById('push-button');
+const pushCheckbox = document.querySelector('.js-push-toggle-checkbox');
 const userToken = null;
 const isSubscribed = false;
 
@@ -26,7 +26,7 @@ window.addEventListener('load', () => {
             })
             .catch(err => console.log('Service Worker Error', err));
     } else {
-        pushBtn.textContent = 'Push not supported.';
+        pushCheckbox.textContent = 'Push not supported.';
     }
 });
 
@@ -34,10 +34,10 @@ function initializePush() {
     userToken = localStorage.getItem('pushToken');
 
     isSubscribed = userToken !== null;
-    updateBtn();
+    updateCheckbox();
 
-    pushBtn.addEventListener('click', () => {
-        pushBtn.disabled = true;
+    pushCheckbox.addEventListener('click', () => {
+        pushCheckbox.disabled = true;
 
         if (isSubscribed) return unsubscribeUser();
 
@@ -45,14 +45,14 @@ function initializePush() {
     });
 }
 
-function updateBtn() {
+function updateCheckbox() {
     if (Notification.permission === 'denied') {
-        pushBtn.textContent = 'Subscription blocked';
+        pushCheckbox.textContent = 'Subscription blocked';
         return;
     }
 
-    pushBtn.textContent = isSubscribed ? 'Unsubscribe' : 'Subscribe';
-    pushBtn.disabled = false;
+    pushCheckbox.textContent = isSubscribed ? 'Unsubscribe' : 'Subscribe';
+    pushCheckbox.disabled = false;
 }
 
 function updateSubscriptionOnServer(token) {
@@ -87,7 +87,7 @@ function unsubscribeUser() {
             isSubscribed = false;
             userToken = null;
             localStorage.removeItem('pushToken');
-            updateBtn();
+            updateCheckbox();
         })
         .catch(err => console.log('Error unsubscribing', err));
 }
@@ -105,7 +105,7 @@ messaging.onMessage((payload) => {
     };
     snackbarContainer.MaterialSnackbar.showSnackbar(data);
 });
-export const sendPostNotification = functions.database.ref('/posts/{postID}').onWrite(event => {
+export const sendPostNotification = functions.database.ref('/contacts/{contactID}').onWrite(event => {
   // react to changes
 }
 

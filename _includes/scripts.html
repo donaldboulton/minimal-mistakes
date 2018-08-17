@@ -263,7 +263,12 @@ $(".author__urls_masthead button").on("click", function() {
     storageBucket: "airy-office-413.appspot.com",
     messagingSenderId: "857761645811"
   };
-  firebase.initializeApp(config);
+  if (firebase.apps.length === 0) {
+  firebase.initializeApp({
+    databaseURL: 'https://airy-office-413.firebaseio.com'
+  })
+}
+export default firebase.database()
 </script>
 <script src="{{ '/assets/js/vendor/firebase/firebase-login.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/vendor/firebase/functions.js' | relative_url }}"></script>
