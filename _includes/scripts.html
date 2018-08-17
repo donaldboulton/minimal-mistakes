@@ -266,8 +266,10 @@ $(".author__urls_masthead button").on("click", function() {
 }
 export default firebase.database()
 </script>
+{% if page.support contains 'firebase-login' %}
 <script src="{{ '/assets/js/vendor/firebase/firebase-login.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/vendor/firebase/functions.js' | relative_url }}"></script>
+{% endif %}
 <script async defer src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script async defer type="text/javascript" src="https://unpkg.com/default-passive-events"></script>
 <script src="{{ '/app.js' | relative_url }}"></script>
