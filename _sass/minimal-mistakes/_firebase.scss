@@ -173,3 +173,51 @@
       }
     }
   }
+
+#contacts p,
+#contacts p.lead{
+  margin: 0;
+}
+.userAuth {
+  display: block;
+  margin: 20px 0 0;
+}
+.modal-header:last-child{
+  border-bottom: 0;
+}
+.card {
+  display: inline-block;
+  margin: 0.5em;
+  max-width: calc(25% - 1em);
+}
+#contacts {
+  margin-left: -0.5em;
+  margin-right: -0.5em;
+  display: flex;
+  flex-wrap: wrap;
+}
+.user-info {
+  display: inline-block;
+  margin: 0 0.5em;
+}
+.user-info.with-image {
+  border: 1px solid $border-color;
+  border-radius: 50%;
+  padding: 2px;
+}
+.user-info img{
+  display: inline-block;
+  max-width: 2em;
+}
+
+.auth-true .authenticated,
+.auth-false .unauthenticated {
+  display: block;
+}
+.auth-true .unauthenticated,
+.auth-false .authenticated {
+  display: none;
+}
+#addContactModalTrigger {
+  transition: all ease 500ms;
+}

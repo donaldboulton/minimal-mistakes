@@ -25,13 +25,13 @@ $(document).ready(function(){
       $('#messageModalLabel').html(span(cogHTML, ['center', 'info']));
       $('#messageModal').modal('show');
       var data = {
-        email: $('#registerEmail').val(),
-        firstName: $('#registerFirstName').val(),
-        lastName: $('#registerLastName').val(),
+        email: $('#registerEmail').val(), //get the email from Form
+        firstName: $('#registerFirstName').val(), // get firstName
+        lastName: $('#registerLastName').val(), // get lastName
       };
 
-      var password = $('#registerPassword').val();
-      var cPassword = $('#registerConfirmPassword').val();
+      var password = $('#registerPassword').val(); //get the pass from Form
+      var cPassword = $('#registerConfirmPassword').val(); //get the confirmPass from Form
       var photo = $('#registerPhoto').get(0).files[0];
       var profileData = {
         displayName: data.firstName + ' ' + data.lastName,
@@ -48,18 +48,19 @@ $(document).ready(function(){
           .then(function(){
             userData = data;
             console.log("User Information Saved:", user.uid);
-            $('#messageModalLabel').html(span('Success!', ['center', 'success']));
+            $('#messageModalLabel').html(span('Success!', ['center', 'success']))
 
             $('#messageModal').modal('hide');
           })
           .then(updateUserStatus)
           .catch(function(error){
             console.log("Error creating user:", error);
-            $('#messageModalLabel').html(span('ERROR: '+error.code, ['danger']));
+            $('#messageModalLabel').html(span('ERROR: '+error.code, ['danger']))
           });
       }
     });
 
+    //Login
     $(forms.login).on('submit', function (e) {
       e.preventDefault();
       $('#loginModal').modal('hide');
@@ -72,16 +73,17 @@ $(document).ready(function(){
         Auth.signInWithEmailAndPassword(email, password)
           .then(function(authData) {
             user = authData;
-            $('#messageModalLabel').html(span('Success!', ['center', 'success']));
+            $('#messageModalLabel').html(span('Success!', ['center', 'success']))
             $('#messageModal').modal('hide');
           })
           .catch(function(error) {
             console.log("Login Failed!", error);
-            $('#messageModalLabel').html(span('ERROR: '+error.code, ['danger']));
+            $('#messageModalLabel').html(span('ERROR: '+error.code, ['danger']))
           });
       }
     });
 
+    // Forgot Password
     $(forms.forgotPassword).on('submit', function (e) {
       e.preventDefault();
       $('#forgotPasswordModal').modal('hide');
@@ -96,7 +98,7 @@ $(document).ready(function(){
           })
           .catch(function(error) {
             console.error("Failed!", error);
-            $('#messageModalLabel').html(span('ERROR: '+error.code, ['danger']));
+            $('#messageModalLabel').html(span('ERROR: '+error.code, ['danger']))
           });
       }
     });
@@ -106,6 +108,7 @@ $(document).ready(function(){
       Auth.signOut();
     });
 
+    //Update user info
     $(forms.updateUserInfo).on('submit', function (e) {
       e.preventDefault();
       var values = extractFormData(forms.updateUserInfo);
@@ -128,15 +131,16 @@ $(document).ready(function(){
         })
     });
 
-    $('#send-verification').on('click', sendEmailVerification);
+    // Send the email verification link
+    $('#send-verification').on('click', sendEmailVerification)
     $('#changePasswordTrigger').on('click', function() {
-      var c = document.querySelector('#forgotPasswordModal').querySelectorAll('.auth-false');
-      c.forEach(el => el.classList.add('d-none'));
-    });
+      var c = document.querySelector('#forgotPasswordModal').querySelectorAll('.auth-false')
+      c.forEach(el => el.classList.add('d-none'))
+    })
     $('#forgotPasswordTrigger').on('click', function() {
-      var c = document.querySelector('#forgotPasswordModal').querySelectorAll('.auth-false');
-      c.forEach(el => el.classList.rmeove('d-none'));
-    });
+      var c = document.querySelector('#forgotPasswordModal').querySelectorAll('.auth-false')
+      c.forEach(el => el.classList.rmeove('d-none'))
+    })
 
 
     $('.linkSocial').on('click', function(e) {
@@ -144,20 +148,22 @@ $(document).ready(function(){
       var p = provider+'AuthProvider';
       provider = firebase.auth[p];
       if(provider && e.target.hasAttribute('disabled')) {
-        Auth.currentUser.linkWithPopup(new provider).then(console.log);
+        Auth.currentUser.linkWithPopup(new provider).then(console.log)
       }
-    });
+    })
 
+    // Prevent User from adding contact if email is not verified
     $('#addContactModalTrigger').on('click', function(e) {
       if(!user.emailVerified) {
-        e.stopPropagation();
-        e.target.classList.add('btn-danger');
+        e.stopPropagation()
+        e.target.classList.add('btn-danger')
         setTimeout(function() {
-          e.target.classList.remove('btn-danger');
+          e.target.classList.remove('btn-danger')
         }, 500);
       }
-    });
+    })
 
+    //save contact
     $(forms.addContact).on('submit', function( event ) {
       event.preventDefault();
       if( user != null ){
@@ -183,10 +189,10 @@ $(document).ready(function(){
 
     function saveUserInfo(data) {
       user = Auth.currentUser;
-      return usersRef.child(user.uid).set(data);
+      return usersRef.child(user.uid).set(data)
     }
     function sendEmailVerification(data) {
-      email = data.email || user.email;
+      email = data.email || user.email
       return user.emailVerified || user.sendEmailVerification({
         url: window.location.href + '?email=' + user.email,
       });
@@ -197,9 +203,9 @@ $(document).ready(function(){
         user = userInfo;
         $('body').removeClass('auth-false').addClass('auth-true');
         if(user.emailVerified) {
-          document.querySelector('#email-verification').classList.add('d-none');
+          document.querySelector('#email-verification').classList.add('d-none')
         } else {
-          document.querySelector('#email-verification').classList.remove('d-none');
+          document.querySelector('#email-verification').classList.remove('d-none')
         }
         var providers = user.providerData.map(function(provider){ return provider.providerId;});
         var _providers = providers.join(',');
@@ -219,10 +225,11 @@ $(document).ready(function(){
         });
         contactsRef.child(user.uid).on('child_added', onChildAdd);
       } else {
+        // No user is signed in.
         $('body').removeClass('auth-true').addClass('auth-false');
         user && contactsRef.child(user.uid).off('child_added', onChildAdd);
         $('#contacts').html('');
         user = null;
       }
     }
-  });
+});

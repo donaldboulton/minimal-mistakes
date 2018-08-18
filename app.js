@@ -235,3 +235,13 @@ window.onload = function() {
   // Push is supported.
   setUpPush();
 };
+
+const database = firebase.database();
+
+function saveToFirebase(name, email, title) {
+  firebase.database().ref('notifications').push().set({
+    name: name,
+    email: email,
+    title: title,
+  });
+}

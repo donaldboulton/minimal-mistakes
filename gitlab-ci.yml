@@ -1,0 +1,16 @@
+image: alpine:latest
+
+pages:
+  stage: deploy
+  script:
+  - echo 'Nothing to do...'
+  - mkdir public
+  - cp *.html public/
+  - cp *.js public/
+  - cp *.css public/
+  - cp *.svg public/
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
