@@ -212,7 +212,13 @@ function addNavItem(ul, href, text) {
 {% if page.footnotes == true %}
   <script src="{{ '/assets/js/vendor/bigfoot/bigfoot.min.js' | relative_url }}"></script>
   <script>
-     var bigfoot = $.bigfoot();
+    var bigfoot = $.bigfoot(
+        {
+            deleteOnUnhover: false,
+            preventPageScroll: false,
+            hoverDelay: 250
+        }
+    );
   </script>
 {% endif %}
 

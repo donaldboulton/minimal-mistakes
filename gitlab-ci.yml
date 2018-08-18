@@ -1,16 +1,34 @@
-image: alpine:latest
+stages:
+  - build
+  - deploy
 
-pages:
-  stage: deploy
+build:
+  stage: build
+  image: starefossen/stretch-slim
+  cache:
+    paths:
+      - node_modules/
+      - gems/
   script:
-  - echo 'Nothing to do...'
-  - mkdir public
-  - cp *.html public/
-  - cp *.js public/
-  - cp *.css public/
-  - cp *.svg public/
+    - npm install
+    - npm install gulp -g
+    - bundle install --path gems/
+    - bundle exec jekyll contentful
+    - gulp jekyll:prod
+    - gulp minify
   artifacts:
     paths:
-    - public
+      - public
   only:
-  - master
+    - master
+
+deploy_staging:
+  stage: deploy
+  environment:
+    name: staging
+    url: https://donboulton.com
+  script:
+    - apt-get update
+    - apt-get install lftp
+    - lftp -e "mirror -R build TARGET_DIRECTORY_ON_YOUR_SERVER" -u $USERNAME,$PASSWORD $HOST
+  when: manual
