@@ -441,6 +441,16 @@ defaults:
 posts_json_path: posts.json
 ipstack:
   api_key: b3e3a6f8d63be4a25492fef554f9e28a
+
+pagination:
+  enabled: true
+  per_page: 3
+  title: ':title - page :num'
+  limit: 0
+  trail:
+    before: 2
+    after: 2
+
 # Plugin: Auto Pages (jekyll-paginate-v2)
 autopages:
   enabled: true
