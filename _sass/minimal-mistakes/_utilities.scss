@@ -61,10 +61,6 @@ body:hover .visually-hidden button {
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 }
 
-/*
-   Skip links
-   ========================================================================== */
-
 .skip-link {
   position: fixed;
   z-index: 20;
@@ -78,10 +74,6 @@ body:hover .visually-hidden button {
   width: 0;
   list-style: none;
 }
-
-/*
-   Type
-   ========================================================================== */
 
 .text-left {
   text-align: left;
@@ -103,12 +95,6 @@ body:hover .visually-hidden button {
   white-space: nowrap;
 }
 
-/*
-   Alignment
-   ========================================================================== */
-
-/* clearfix */
-
 .cf {
   clear: both;
 }
@@ -118,12 +104,6 @@ body:hover .visually-hidden button {
   margin-right: auto;
   width: 100%;
 }
-
-/*
-   Images
-   ========================================================================== */
-
-/* image align left */
 
 .align-left {
   display: block;
@@ -135,8 +115,6 @@ body:hover .visually-hidden button {
     margin-right: 1em;
   }
 }
-
-/* image align right */
 
 .align-right {
   display: block;
@@ -378,8 +356,8 @@ body:hover .visually-hidden button {
   min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;
-  background-color: #f5f5f5;
-  border: 1px solid #e3e3e3;
+  background-color: #333;
+  border: 1px solid #000;
   border-radius: $border-radius;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
@@ -477,7 +455,7 @@ a.reversefootnote {
 }
 
 /*
-   Google Custom Search Engine
+   Google Custom Search Engine and Adds border
    ========================================================================== */
 
 .gsc-control-cse {
@@ -488,6 +466,10 @@ a.reversefootnote {
   }
 }
 
+u, ins {
+  text-decoration: none;
+  border-bottom: 1px solid #1d1d1d!important;
+}
 /*
    Responsive Video Embed
    ========================================================================== */
@@ -517,4 +499,43 @@ a.reversefootnote {
   .page__footer {
     position: static;
   }
+}
+
+.adds{
+  margin-top: 2em;
+  padding-top: 1em;
+}
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.content-collapsible {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.collapsible {
+	&:after {
+		content: '\02795';
+		font-size: 15px;
+		float: right;
+    margin-left: 10px;
+    display: block;
+    color: #000000;
+    text-align: center;
+    top: .6em;
+	}
+}
+.active {
+	&:after {
+		content: "\2796";
+	}
 }

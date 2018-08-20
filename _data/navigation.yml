@@ -3,6 +3,8 @@ main:
   - title: "About"
     url: /about/
   - title: "Posts"
-    url: /year-archive/
+    url: /categories/
+  - title: "Gallery"
+    url: /photography/
   - title: "Sitemap"
     url: /sitemap/

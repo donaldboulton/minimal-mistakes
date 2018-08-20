@@ -3,14 +3,13 @@
 # For example, you can have one property to handle comment submission and
 # another one to handle posts.
 # To encrypt strings use the following endpoint:
-# https://api.staticman.net/v2/encrypt/{TEXT TO BE ENCRYPTED}
-
+# https://api.staticman.net/v2/encrypt/6LdjemEUAAAAAFk9H9kg9agjERxDZdUSbXK65M8_
 comments:
   # (*) REQUIRED
   #
   # Names of the fields the form is allowed to submit. If a field that is
   # not here is part of the request, an error will be thrown.
-  allowedFields: ["name", "email", "url", "message", "replying_to"]
+  allowedFields: ["name", "email", "url", "title", "message", "replying_to"]
 
   # (*) REQUIRED WHEN USING NOTIFICATIONS
   #
@@ -25,7 +24,7 @@ comments:
   # request.
   branch: "gh-pages"
 
-  commitMessage: "New comment"
+  commitMessage: "Add Comment from {fields.name}"
 
   # (*) REQUIRED
   #
@@ -34,7 +33,7 @@ comments:
 
   # The format of the generated data files. Accepted values are "json", "yaml"
   # or "frontmatter"
-  format: "json"
+  format: "yaml"
 
   # List of fields to be populated automatically by Staticman and included in
   # the data file. Keys are the name of the field. The value can be an object
@@ -69,6 +68,14 @@ comments:
   notifications:
     enabled: true
 
+  notify:
+  - name: donboulton
+    platform: twitter
+    consumer_key: Wicpx8XkPT8tHijl4MKH7w
+    consumer_secret: WWYv+fj1vn4foC7aTTwELPLM22XfxAT9wu01NdvOhtJWGhrV8wy0DzES5bCGxxFqtMi1kxTq9vGsbwH/e/9QzuNZGnHV2YeqxVKvXwWVxC700m+GZsFJXvehUdsHHUBgxe0MFzxkhEFpRK6y9QIUGofN+yH1+DqYn+iaNMVO964=
+    access_token: 105217183-OZnpTgm0Ug9T1XUQLefhzKzEdyHkckWX1Z6nHONO
+    access_token_secret: Sl/KluM2Asg0B+g8YmYJmZeyH1yONSMu/enIbX7+m56ADUKVL8yl+141eT3j5GOsnPBH40yfADg/ZBUDmejHq/+uB+SvYvoYwhm5V1F4ru8HzYjYlbYt95w2oMQbQQp2DQVNeqL7tQAbkWmmEbUFzr88NFkSLjYwKMG0W1e3Vos=
+
     # (!) ENCRYPTED
     #
     #Mailgun API key
@@ -79,7 +86,7 @@ comments:
     #Mailgun domain
     domain: "https://api.mailgun.net/v3/e34znvGa3bO/OEQLyxKXl/xsTH5YIuREGWgzhLlKN1VC5oTiY3/XbBknpnmtDvrPFpE+kyOfjtw3KGDRUcGbzZjmfT+22+KvcBo9KVvwlwYp3gllmFAWI9XaIMlvYvD/fnShL433vECUMTx8ZKOc51QHC2Kp4tjReeC0ZOLISHE="
 
-    fromAddress: "postmaster@donboulton.com"
+    fromAddress: "donaldboulton@gmail.com"
 
   # (*) REQUIRED
   #
@@ -88,7 +95,7 @@ comments:
 
   # Names of required files. If any of these isn't in the request or is empty,
   # an error will be thrown.
-  requiredFields: ["name", "email", "message"]
+  requiredFields: ["name", "email", "title", "message"]
 
   # List of transformations to apply to any of the fields supplied. Keys are
   # the name of the field and values are possible transformation types.
@@ -98,8 +105,31 @@ comments:
   # reCaptcha
   # Register your domain at https://www.google.com/recaptcha/ and choose reCAPTCHA V2
   reCaptcha:
-    enabled: true
-    siteKey: "6Lf15UcUAAAAALh_yk6LPPErNxT-Qd-k2efKcJxR"
-    # Encrypt reCaptcha secret key using Staticman /encrypt endpoint
-    # For more information, https://staticman.net/docs/encryption
-    secret: "q0fksxUG8S3yendptK4byPIrlKUWhVPPn+zMA+2hjPd3ekaOPrwK04Ig0hHlyneN3z6zfH6edP7zk4kQEIHy8OOYADVmBAOX8US4dKusdXvoxHBFbdZPdC9o/FgS1eUkcrsn4g8cuXr4HUxz9/hoiMg2gHn0+5W99KoxR8pL+54="
+    enabled: false
+    siteKey: "6Le-JGIUAAAAAItP3anxYzixThXd6EUvsDjXZevh"
+    secret: "PgN6O5VvZ+nm04p7v9hqtKX6fcUpMh7Kl+qyiVggoE1l0kQ424yXdu7Zhk/YS2xeenFuo4E8Js9X2DlFo4WVKXkyvrbpthyQMz4T4KTRqdHX/fzOP1FKqLmgqdr8LJaTvBrWmAMbYveHby7qDnSnCW1yZdHdjvW9/I36x5ivRGc="
+
+reviews:
+  allowedFields: ['name', "email", "url", 'title', 'description', 'review', 'product']
+  allowedOrigins: ["https://donboulton.com"]
+  branch: "gh-pages"
+  commitMessage: "Add Review from {fields.name}"
+  filename: "review-{fields.product}-{@id}"
+  moderation: false
+  requiredFields: ['name', "email", 'title', 'description', 'review']
+  format: "yaml"
+  path: "_data/reviews/{options.slug}"
+
+  generatedFields:
+    date:
+      type: date
+      options:
+        format: "iso8601"
+  reCaptcha:
+    enabled: false
+    siteKey: "6Le-JGIUAAAAAItP3anxYzixThXd6EUvsDjXZevh"
+    secret: "PgN6O5VvZ+nm04p7v9hqtKX6fcUpMh7Kl+qyiVggoE1l0kQ424yXdu7Zhk/YS2xeenFuo4E8Js9X2DlFo4WVKXkyvrbpthyQMz4T4KTRqdHX/fzOP1FKqLmgqdr8LJaTvBrWmAMbYveHby7qDnSnCW1yZdHdjvW9/I36x5ivRGc="
+reCaptcha:
+  enabled: false
+  siteKey: "6Le-JGIUAAAAAItP3anxYzixThXd6EUvsDjXZevh"
+  secret: "PgN6O5VvZ+nm04p7v9hqtKX6fcUpMh7Kl+qyiVggoE1l0kQ424yXdu7Zhk/YS2xeenFuo4E8Js9X2DlFo4WVKXkyvrbpthyQMz4T4KTRqdHX/fzOP1FKqLmgqdr8LJaTvBrWmAMbYveHby7qDnSnCW1yZdHdjvW9/I36x5ivRGc="

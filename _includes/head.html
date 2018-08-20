@@ -1,22 +1,24 @@
 <meta charset="utf-8">
-
 {% include seo.html %}
-
-<link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | absolute_url }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
-
+<link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
 <!-- http://t.co/dKP3o1e -->
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="robots" Content="index, follow, archive">
 <meta name="revisit-after" Content="3 days">
-<meta name="apple-mobile-web-app-capable" Content="yes">
 <meta name="expires" Content="Mon, 06 Jan 2020 21:31:12 GMT">
+<meta name="apple-mobile-web-app-capable" Content="yes">
+<meta name="application-name" content="donboulton">
+<meta name="apple-mobile-web-app-title" content="donboulton">
+<meta name="msapplication-starturl" content="https://donboulton.com">
 <meta name="author" Content="Donald Boulton">
-<meta name="fb:app_id" Content="322180367845124">
 <meta name="twitter:thumbnailUrl" Content="/assets/images/donald-boulton_100.jpg">
 <meta name="twitter:id" Content="105217183">
 <meta name="twitter:creator:id" Content="105217183">
+<meta name="twitter:creator:username" Content="@donboulton">
+<meta name="twitter:name" Content="@donboulton">
 <meta name="twitter:widgets:theme" Content="dark">
 <meta name="twitter:widgets:link-color" Content=" #71ba70">
 <meta name="twitter:widgets:border-color" Content="#282A2B">
@@ -28,63 +30,82 @@
 <meta name="google-signin-cookiepolicy" Content="single_host_origin">
 <meta name="specificfeeds-verification-code" content="w48MyShCerwN6kA3DklR" />
 <meta name="theme-color" content="#212529">
-<meta name="msvalidate.01" content="361016BEC0F67F6A834D6186E897D9EC" />
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon-180x180.png">
-<link rel="icon" type="image/png" href="/assets/images/icons/favicon.png" sizes="32x32">
-<link rel="shortcut icon" type="image/png" href="{{ "/favicon.png" | prepend: site.baseurl }}">
-<link rel='shortcut icon' type='image/png' href='/assets/images/icons/favicon.png' />
+<meta name="logo" content="{{ site.url }}/apple-touch-icon-precomposed.png" />
+<meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+<meta name="pjax-timeout" content="1000">
+<meta http-equiv="x-pjax-version" content="d4d26263aff43b9e6848743a02fdedef">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/fav-icons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/assets/images/fav-icons/favicon.png" sizes="32x32">
+<link rel='shortcut icon' type='image/png' href='/assets/images/fav-icons/favicon.png' />
 <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" />
-<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
-
-<script>
-  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
-</script>
+<link rel="alternate" title="{{ site.title }} Feed" type="application/atom+xml" href="{{ 'atom.xml' | absolute_url }}">
+<link rel="alternate" title="{{ site.title }} Feed" type="application/json" href="{{ 'feed.json' | absolute_url }}">
+<link rel="manifest" href="{{ 'manifest.json' | absolute_url }}">
+<link rel="amphtml" href="{{ site.url }}{{ page.url }}" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-30162465-2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'UA-30162465-2');
 </script>
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', '{{ site.analytics.google.tracking_id }}']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TDPND89');</script>
 <script type="application/ld+json">
-  [{"@context":"http://schema.org","@type":"WebSite","url":"https://donboulton.com","potentialAction":{"@type":"SearchAction","target":"https://query.donboulton.com/search?q={q}","query-input":"required name=q"}},{"@context":"http://schema.org","@type":"SoftwareApplication","name":"Donald Boulton","operatingSystem":"Jekyll","applicationCategory":"http://schema.org/WebApplication","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.6","ratingCount":"8864"},"offers":{"@type":"Offer","price":"1.00","priceCurrency":"USD"}}]
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "url": "https://donboulton.com",
+    "logo": "https://donboulton.com/apple-touch-icon-precomposed.png"
+  }
 </script>
-<!-- For all browsers -->
-<link rel="stylesheet" href="{{ '/assets/css/main.css' | absolute_url }}">
-
-<!--[if lte IE 9]>
-  <style>
-    /* old IE unsupported flexbox fixes */
-    .greedy-nav .site-title {
-      padding-right: 3em;
-    }
-    .greedy-nav button {
-      position: absolute;
-      top: 0;
-      right: 0;
-      height: 100%;
-    }
-  </style>
-<![endif]-->
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 {% if site.head_scripts %}
   {% for script in site.head_scripts %}
     {% if script contains "://" %}
       {% capture script_path %}{{ script }}{% endcapture %}
     {% else %}
-      {% capture script_path %}{{ script | absolute_url }}{% endcapture %}
+      {% capture script_path %}{{ script | relative_url }}{% endcapture %}
     {% endif %}
-<script src="{{ script_path }}"></script>
+      <script src="{{ script_path }}"></script>
   {% endfor %}
+{% endif %}
+{% if page.support contains 'gallery' %}
+   <link rel="stylesheet" href="{{ '/assets/dist/css/lightgallery.min.css' | relative_url }}">
+{% endif %}
+{% if page.support contains 'places' %}
+   <link rel="stylesheet" href="{{ '/assets/css/vendor/google-places/google-places.css' | relative_url }}">
+{% endif %}
+{% if page.support contains 'products' %}
+   <link rel="stylesheet" href="{{ '/assets/css/vendor/snipcart/snipcart.min.css' | relative_url }}">
+{% endif %}
+
+{% if page.support contains 'calendar' %}
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.0.0-alpha/fullcalendar.min.css">
+   <link rel="stylesheet" media="print" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.0.0-alpha/fullcalendar.print.min.css">
+{% endif %}
+
+<script async defer src='https://www.google.com/recaptcha/api.js?render=6Le-JGIUAAAAAItP3anxYzixThXd6EUvsDjXZevh'></script>
+
+{% if site.webmention_url %}
+  <link rel="webmention" href="{{ site.webmention_url }}">
+{% endif %}
+
+{% if page.support contains 'firebase-login' %}
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.3.0/firebaseui.css" />
+{% endif %}
+
+<!-- AMP Article -->
+{% if page.path contains 'posts' %}
+  {% unless page.amp_skip %}
+    <link rel="amphtml" href="{{ site.baseurl }}/amp-html/{{ page.amp_path }}.html">
+  {% endunless %}
 {% endif %}

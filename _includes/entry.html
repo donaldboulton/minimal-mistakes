@@ -18,33 +18,39 @@
              src="{{ f[0] | relative_url }}-lq.{{ f[1] }}"
              data-srcset="{{ f[0] | relative_url }}-lq.{{ f[1] }} 20w,
                           {{ f[0] | relative_url }}-320.{{ f[1] }} 320w,
-                          {{ f[0] | relative_url }}-768.{{ f[1] }} 768w,
-                          {{ f[0] | relative_url }}-1024.{{ f[1] }} 1024w"
+                          {{ f[0] | relative_url }}-800.{{ f[1] }} 800w,
+                          {{ f[0] | relative_url }}-1200.{{ f[1] }} 1200w"
              alt="{{ post.title | strip_html }}"
              class="lazyload entry-image fade-in">
       </a>
     {% endif %}
   </header>
   <footer class="entry-meta">
-    <ul>
+      <div class="archive-right">
       {% if post.work %}
-        <li><svg class="icon icon--folder" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-folder' | prepend: 'assets/icons/' | relative_url }}"></use></svg>{{ post.work | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+      <span class="byline-item"><svg class="icon icon--folder fa-folder" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-folder-open' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;{{ post.work | markdownify | remove: '<p>' | remove: '</p>' }}</span>
       {% endif %}
       {% if post.date %}
-        <li><svg class="icon icon--calendar" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-calendar' | prepend: 'assets/icons/' | relative_url }}"></use></svg><time class="entry-time" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time></li>
+      <span class="byline-item"><svg class="icon icon--calendar-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-calendar-alt' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;<time class="entry-time" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time></span>
       {% endif %}
       {% if post.read_time %}
-        <li><svg class="icon icon--stopwatch" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-stopwatch' | prepend: 'assets/icons/' | relative_url }}"></use></svg>{% capture read_time %}{% include read-time.html %}{% endcapture %}{{ read_time | strip }}</li>
+      <span class="byline-item"><svg class="icon icon--stopwatch" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-stopwatch' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;{% capture read_time %}{% include read-time.html %}{% endcapture %}{{ read_time | strip }}</span>
       {% endif %}
       {% if site.data.comments[post.slug].size > 0 and post.comments %}
-        <li><a href="{{ post.url | relative_url }}#comments"><svg class="icon icon--comments" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comments' | prepend: 'assets/icons/' | relative_url }}"></use></svg>{{ site.data.comments[post.slug] | size }} Comment{% if site.data.comments[post.slug].size > 1 %}s{% endif %}</a></li>
+      <span class="byline-item"><a href="{{ post.url | relative_url }}#comments-list"><svg class="icon icon--comments-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comments-alt' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;{{ site.data.comments[post.slug] | size }} Comment{% if site.data.comments[post.slug].size > 1 %}s{% endif %}</a></span>
       {% endif %}
-    </ul>
+      {% case site.comments.provider %}
+      {% when "disqus" %}
+      {% if page.comments == true %}
+      <span class="byline-item"><svg class="icon icon--comments-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comments-alt' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;<a href="https://donboulton.com{{ page.url }}#comments-list">0 Comments</a></span>
+      {% endif %}
+      {% endcase %}
+      </div>
   </footer>
-  <div class="entry-excerpt">
+  <div class="entry entry-excerpt">
     {% if post.excerpt %}
       {{ post.excerpt | markdownify }}
-      <p><a href="{{ post.url | relative_url }}" class="more-link">Read more&hellip;</a></p>
+      <div><a href="{{ post.url | relative_url }}" class="more-link">Read more&hellip;</a></div>
     {% endif %}
   </div>
 </article>

@@ -23,6 +23,16 @@ body {
   }
 }
 
+/* latin */
+@font-face {
+	font-family: 'Kaushan Script';
+	font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+	src: local('Kaushan Script'), local('KaushanScript-Regular'), url(https://fonts.gstatic.com/s/kaushanscript/v6/vm8vdRfvXFLG3OLnsO15WYS5DG74wNJVMJ8b.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 h1,
 h2,
 h3,
@@ -128,6 +138,8 @@ blockquote {
 /* links */
 
 a {
+  text-decoration: none;
+
   &:focus {
     @extend %tab-focus;
   }
@@ -136,6 +148,8 @@ a {
   &:active {
     color: $link-color-hover;
     outline: 0;
+    text-decoration: underline;
+    text-decoration-color: $link-color-hover;
   }
 
   &:visited {
@@ -217,6 +231,7 @@ figure {
   align-items: flex-start;
   flex-wrap: wrap;
   margin: 2em 0;
+  height: auto;
 
   img,
   iframe,
@@ -229,6 +244,7 @@ figure {
     border-radius: $border-radius;
     -webkit-transition: $global-transition;
     transition: $global-transition;
+    background-color: rgba(255, 255, 255, 0.45);
   }
 
   > a {
@@ -280,6 +296,18 @@ figcaption {
   }
 }
 
+.logo {
+  display: block;
+  margin: 1em auto;
+  max-width: 50%;
+  height: auto;
+
+  @media (min-width: 40em) {
+    max-width: 25%;
+    float: right;
+    margin: 0 0 1em 1em;
+  }
+}
 /* Fix IE9 SVG bug */
 
 svg:not(:root) {

@@ -1,73 +1,58 @@
 {% assign taxonomy = page.autopages.display_name | downcase | slugify %}
 {% assign tag = site.data.taxonomy[taxonomy] %}
-{% assign feature_image = page.image.feature | default: page.image.path %}
 
-<header class="intro {% if feature_image and page.image.cover %}cover{% endif %}">
-  {% if feature_image %}
-    <div class="intro-image">
-      {% assign f = feature_image | split: '.' %}
-        <noscript><img src="{{ f[0] | relative_url }}-320.{{ f[1] }}"></noscript>
-        <img data-sizes="auto"
-             src="{{ f[0] | relative_url }}-lq.{{ f[1] }}"
-             data-srcset="{{ f[0] | relative_url }}-lq.{{ f[1] }} 20w,
-                          {{ f[0] | relative_url }}-320.{{ f[1] }} 320w,
-                          {{ f[0] | relative_url }}-768.{{ f[1] }} 768w,
-                          {{ f[0] | relative_url }}-1024.{{ f[1] }} 1024w,
-                          {{ f[0] | relative_url }}.{{ f[1] }} 1920w"
-             alt="{{ page.title }}"
-             class="lazyload blur-up">
-      {% if page.image.caption %}{% include image-caption.html %}{% endif %}
-    </div>
-  {% endif %}
-
-  {% include breadcrumbs.html %}
-
+<div class="intro">
   <div class="inner">
     <div class="intro-text">
-      <h1 class="intro-title">{{ page.alt_title | default: page.autopage.display_name | default: page.title | default: site.title | markdownify | strip_html | widont }}</h1>
-      {% if page.sub_title %}
-        <p class="intro-subtitle">{{ page.sub_title | markdownify | strip_html }}</p>
-      {% endif %}
-
       {% unless page.layout == 'archive' %}
         {% if page.date %}
           {% include author %}
-          <p class="entry-meta">
-            <span class="byline-item"><svg class="icon icon--calendar" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-calendar' | prepend: 'assets/icons/' | relative_url }}"></use></svg><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %-d, %Y' }}</time></span>
+          <div class="entry-meta">
+            <span class="byline-item"><svg class="icon icon--calendar-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-calendar-alt' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;<time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %-d, %Y' }}</time></span>
             {% if page.work %}
-              <span class="byline-item"><svg class="icon icon--folder" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-folder' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;{{ page.work | markdownify | remove: '<p>' | remove: '</p>' }}</span>
+              <span class="byline-item"><svg class="icon icon--folder" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-folder-open' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;{{ page.work | markdownify | remove: '<p>' | remove: '</p>' }}</span>
             {% endif %}
             {% if page.read_time %}
-              <span class="byline-item"><svg class="icon icon--stopwatch" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-stopwatch' | prepend: 'assets/icons/' | relative_url }}"></use></svg>{% capture read_time %}{% include read-time.html %}{% endcapture %}{{ read_time | strip }}</span>
+              <span class="byline-item"><svg class="icon icon--stopwatch" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-stopwatch' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;{% capture read_time %}{% include read-time.html %}{% endcapture %}{{ read_time | strip }}</span>
             {% endif %}
             {% if page.comments == true and site.data.comments[page.slug].size > 0 %}
-              <span class="byline-item"><a href="#comments"><svg class="icon icon--stopwatch" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comments' | prepend: 'assets/icons/' | relative_url }}"></use></svg>{{ site.data.comments[page.slug] | size }}&nbsp;Comment{% if site.data.comments[page.slug].size > 1 %}s{% endif %}</a></span>
+              <span class="byline-item"><a href="#comments"><svg class="icon icon--comments-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comments-alt' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;{{ site.data.comments[page.slug] | size }} Comment{% if site.data.comments[page.slug].size > 1 %}s{% endif %}</a></span>
             {% endif %}
-          </p>
+            {% case site.comments.provider %}
+            {% when "disqus" %}
+            {% if page.comments == true %}
+              <span class="byline-item"><svg class="icon icon--comments-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comments-alt' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;<a href="https://donboulton.com/{{ page.url }}#comments">0 Comments</a></span>
+            {% endif %}
+            {% endcase %}
+          </div>
+          <div class="entry-meta" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+            {% if page.reviews == true and site.data.reviews | where:'product',page.slug.size > 0 %}
+              <span class="byline-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon icon--chart-area"><path d="M500 384c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v308h436zM372.7 159.5L288 216l-85.3-113.7c-5.1-6.8-15.5-6.3-19.9 1L96 248v104h384l-89.9-187.8c-3.2-6.5-11.4-8.7-17.4-4.7z"/></svg>&nbsp;<span itemprop="reviewCount">{{ site.data.reviews | where:'product',page.slug | size }}</span><a href="#reviews"> Page Review</a>{% if site.data.reviews | where:'product',page.slug.size > 1 %}s{% endif %}</span>
+            {% endif %}
+            {% assign reviews = site.data.reviews | where:'product',page.slug %}
+            {% assign reviewCount = reviews | size %}
+            {% assign sum = 0 %}
+            {% for review in reviews %}
+              {% assign sum = sum | plus: review.review %}
+            {% endfor %}
+            <span class="byline-item text-right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="icon rating-star"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"/></svg>&nbsp;Page Rating
+              {% if reviewCount > 0 %}
+                {% assign sum = sum | divided_by:reviewCount %}
+                (&nbsp;Average:&nbsp;<span itemprop="ratingValue">{{ sum | round: 1 }}&nbsp;</span>)
+              {% elsif site.data.reviews | where:'product',page.slug.reviewCount.size > 0 %} 0 {% else %}
+              {% endif %}
+            </span>
+          </div>
+          <div style="display:none;">
+          <meta class="hidden" itemprop="bestRating" value="5">
+          <meta class="hidden" itemprop="worstRating" value="1">
+          <span class="hidden" itemprop="name">{{ page.slug }}</span>
+          <input name="fields[product]" type="hidden" value="{{ page.slug }}" />
+          <input type="hidden" name="options[origin]" value="{{ page.url | relative_url }}">
+          <meta class="hidden" content="donboulton.com">
+         </div>
         {% endif %}
       {% endunless %}
-
-      {% if page.introduction %}
-        <div class="intro-more">
-          {{ page.introduction | markdownify }}
-        </div>
-      {% elsif page.layout == 'autopage_tags' %}
-        <div class="intro-more">
-          {% if tag.description %}
-            {{ tag.description | markdownify }}
-          {% else %}
-            <p>An archive of posts tagged <em>{{ page.autopages.display_name }}</em>.</p>
-          {% endif %}
-        </div>
-      {% endif %}
-
-      {% if page.actions %}
-        <ul class="intro-actions">
-          {% for action in page.actions %}
-            <li><a href="{{ action.url }}" class="btn">{{ action.label }}</a></li>
-          {% endfor %}
-        </ul>
-      {% endif %}
     </div>
   </div>
-</header>
+</div>

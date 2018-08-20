@@ -1,0 +1,55 @@
+<div id="formBlock" class="js-contact">
+	<form id="contact-form"  action="https://formspree.io/donaldboulton@gmail.com" method="post" class="contact-form" onsubmit="return checkForm(this);">
+    <h3>Send us a email message</h3>
+  <div class="form-group">
+		<label for="name">Full Name&nbsp;<abbr class="abbr" title="Required">*</abbr></label>
+		<input type="text" name="fields[name]" id="name" value="" required="required" aria-required="true" pattern="^([- \w\d\u00c0-\u024f]+)$" title="Your name (no special characters, diacritics are okay)" placeholder="Enter your name..." autofocus>
+  </div>
+  <div class="form-group">
+		<label for="email">Email Address&nbsp;<abbr class="abbr" title="Required">*</abbr></label>
+		<input type="email" name="fields[email]" id="email" value="" required="required" aria-required="true" pattern="^(([-\w\d]+)(\.[-\w\d]+)*@([-\w\d]+)(\.[-\w\d]+)*(\.([a-zA-Z]{2,5}|[\d]{1,3})){1,2})$" title="Your email address" type="email" spellcheck="false" placeholder="Enter your email..." inputmode="email">
+  </div>
+  <div class="form-group">
+		<label for="url">Website</label>
+    <input type="url" name="fields[url]" id="url" pattern="^(http[s]?:\/\/)?([-\w\d]+)(\.[-\w\d]+)*(\.([a-zA-Z]{2,5}|[\d]{1,3})){1,2}(\/([-~%\.\(\)\w\d]*\/*)*(#[-\w\d]+)?)?$" title="Your website address" type="url" spellcheck="false" size="30" inputmode="url">
+  </div>
+  <div class="form-group">
+		<label for="message">Message&nbsp;<abbr class="abbr" title="Required">*</abbr></label>
+		<textarea name="fields[message]" id="message" maxlength="200" rows="6" spellcheck="true" placeholder="Enter your message..." value="" required="required" aria-required="true"></textarea>
+  </div>
+  <div>Please Agree to Our <a href="https://donboulton.com/terms">Terms and Conditions</a>&nbsp;<abbr class="abbr" title="Required">&nbsp;*&nbsp;</abbr><small>(<a href="https://kramdown.gettalong.org/quickref.html">Markdown</a> is allowed)</small></div>
+  <div class="checkbox_wrapper">
+      <label class="checkbox-label" for="checkbox">
+          <div class="checkbox_wrapper">
+            <input aria-label="Terms Checkbox" type="checkbox" id="checkbox" name="conditions" value="conditions" required>
+            <span class="custom"></span>
+              <svg class="true_icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+              <path d="M27 4l-15 15-7-7-5 5 12 12 20-20z" />
+              </svg>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32" class="false_icon">
+              <path d="M31.708 25.708c-0-0-0-0-0-0l-9.708-9.708 9.708-9.708c0-0 0-0 0-0 0.105-0.105 0.18-0.227 0.229-0.357 0.133-0.356 0.057-0.771-0.229-1.057l-4.586-4.586c-0.286-0.286-0.702-0.361-1.057-0.229-0.13 0.048-0.252 0.124-0.357 0.228 0 0-0 0-0 0l-9.708 9.708-9.708-9.708c-0-0-0-0-0-0-0.105-0.104-0.227-0.18-0.357-0.228-0.356-0.133-0.771-0.057-1.057 0.229l-4.586 4.586c-0.286 0.286-0.361 0.702-0.229 1.057 0.049 0.13 0.124 0.252 0.229 0.357 0 0 0 0 0 0l9.708 9.708-9.708 9.708c-0 0-0 0-0 0-0.104 0.105-0.18 0.227-0.229 0.357-0.133 0.355-0.057 0.771 0.229 1.057l4.586 4.586c0.286 0.286 0.702 0.361 1.057 0.229 0.13-0.049 0.252-0.124 0.357-0.229 0-0 0-0 0-0l9.708-9.708 9.708 9.708c0 0 0 0 0 0 0.105 0.105 0.227 0.18 0.357 0.229 0.356 0.133 0.771 0.057 1.057-0.229l4.586-4.586c0.286-0.286 0.362-0.702 0.229-1.057-0.049-0.13-0.124-0.252-0.229-0.357z" />
+              </svg>
+          </div>
+        </label>
+  </div>
+  <div class="form-group">
+      <input type="submit" value="Send Message" class="btn btn--primary">
+  </div>
+  <div>
+    <input type="hidden" name="_replyto" value="{{ page.email }}">
+    <input type="hidden" name="_cc" value="{{ contactform.email }}">
+    <input type="hidden" name="_subject" value="Website donboulton New Message" />
+    <input type="hidden" name="_next" value="https://donboulton.com/thanks/" />
+    <input type="text" name="_gotcha" style="display: none;">
+    <input type="hidden" name="_language" value="en" />
+  </div>
+  </form>
+</div>
+<script type="text/javascript">
+  function disableBtn(){
+    document.getElementById("submit_button").disabled = true;
+  }
+  function enableBtn(){
+     document.getElementById("submit_button").disabled = false;
+  }
+</script>

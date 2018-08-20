@@ -1,57 +1,72 @@
 ---
-title: Letter Avatar
-date: 2018-02-22 22:16:01 Z
-permalink: "/2018-02-22-post-Letter-Avatar/"
-categories:
-- Programing
-tags:
-- Gravatar
-- Letter Avatar
-- Staticman
-- MMistakes
 layout: single
-last_modified_at: 2018-02-28 16:42:38 Z
+title: "Letter Avatar"
+permalink: 2018-02-22-post-Letter-Avatar.html
+date: 2018-02-22 16:16:01 -0600
+last_modified_at: 2018-06-06T12:42:38-04:00
 search: true
 author: Donald Boulton
 author_profile: true
+sidenav: true
+reviews: true
+adds: true
+cookies: true
+footnotes: true
+tags:
+  - Gravatar
+  - Letter Avatar
+  - Staticman
+  - Jekyll
+category:
+  - Programing
+locations:
+  - OKC Oklahoma
+  - Rockwell Rv Park
 toc: true
-toc_label: Page Contents
-toc_icon: file
+toc_label: "Page Contents"
 read_time: true
 comments: true
-share: true
+share: false
+web-intents: true
+tweet_id: 1021888928280924161
+social-share: twitter --twitter-hashtags facebook
 related: true
-excerpt: Many of us got really tired of the Gravatar Service being down or slow and
-  having multiple server calls to download the Gravatar. Alot of people do not even
-  know about gravatar and your get a generic image for the User Avatar.
+anchor: true
+excerpt: "Many of us got really tired of the Gravatar Service being down or slow and having multiple server calls to download the Gravatar. 
+A lot of people do not even know about gravatar and you get a generic image for the User Avatar."
+
+image:
+  cover: true
+  path: &image /assets/images/pages/letter-avatar-header.png
+  feature: *image
+  thumbnail: /assets/images/pages/letter-avatar-single-letter-320.png
 header:
-  image: "/assets/images/pages/letter-avatar-header.png"
-  teaser: "/assets/images/pages/letter-avatar-header.png"
-gallery:
-- url: "/assets/images/pages/gravatar-icon-600.jpeg"
-  image_path: "/assets/images/pages/gravatar-icon-256.jpg"
-  alt: Gravtar Image
-- url: "/assets/images/pages/avatar-600.png"
-  image_path: "/assets/images/pages/avatar-225.png"
-  alt: Gravtar Generic Image
-- url: "/assets/images/pages/myLetterAvatar-600.png"
-  image_path: "/assets/images/pages/myLetterAvatar-225.png"
-  alt: Letter Avatar
+  image: /assets/images/pages/letter-avatar-header-1200.png
+  teaser: /assets/images/pages/letter-avatar-header-320.png        
+support: [adds, cookies]
+product: letter-avatar 
+slug: letter-avatar
+github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2018-02-22-post-Letter-Avatar.md
+lcb: "{"
 ---
 
 {% include octo-arm.html %}
 
-## Letter Avatar
+{% include page-intro.html %}
 
 How to easily create Letter Avatars for your comments in Minimal Mistakes. This coversion is a work in progress as I am just learning liquid.
 
-### Gihub code as a Gihub Gist, by [Lee Crossly](https://gist.github.com/leecrossley/6027780)
+# Letter Avatar Original gist
 
-Avatar Generator from - Commenter name as - (first name and surname) as input and a canvas element as output using the initials from the name and a background colour (based on the first name & surname first letter). 
+## GitHub code as a GitHub Gist, by [Lee Crossly](https://gist.github.com/leecrossley/6027780)
 
-The background colours are from from [Flat Ui Colors](http://flatuicolors.com/) Now with retina support.
+Avatar Generator from - Commenter name [^names] as input and a canvas element as output using the initials from the name and a background color.
 
-### The Canvas html snippet. 
+[^names]: based on the first name & surname first letter.
+
+The background colors are from from [Flat Ui Colors](http://flatuicolors.com/) Now with retina support.
+
+### The Canvas html snippet
 
 ```html
 <canvas id="user-icon" width="60" height="60"></canvas>
@@ -93,7 +108,9 @@ context.fillStyle = "#FFF";
 context.fillText(initials, canvasCssWidth / 2, canvasCssHeight / 1.5);
 ```
 
-## MVC Implimentation
+## MVC Implementation
+
+I Still Use Asp.Net Core2 for Mansbooks and use letter avatar with the MVC changes.
 
 ### Image tag changes for MVC
 
@@ -147,7 +164,7 @@ context.fillText(initials, canvasCssWidth / 2, canvasCssHeight / 1.5);
             canvas = null;
 
             return dataURI;
-        },
+        }
 
         LetterAvatar.transform = function () {
 
@@ -187,77 +204,43 @@ context.fillText(initials, canvasCssWidth / 2, canvasCssHeight / 1.5);
     })(window, document);
 ```
 
-## Liquid Conversion
+## Jekyll Liquid Conversion
 
-Lets take a look a Minimal Mistakes post on Staticman Comments, at [Improving Jekyll Staticman Comments](https://mademistakes.com/articles/improving-jekyll-static-comments/)
+Super simple and added to my reviews [reviews.html](https://github.com/donaldboulton/DWB/blob/gh-pages/_includes/reviews.html)
 
-The comments include form in: _includes/comment.html, line 8
-
-```html
-8 <img src="/assets/images/avatar-60.png" srcset="/assets/images/avatar-120.png 2x" alt="{{ include.name | escape }}">
-```
-
-### Image changes
-
-Modifying the Image link From:
-```html
-8 <img src="/assets/images/avatar-60.png" srcset="/assets/images/avatar-120.png 2x; 
-```
-Changed To: Letter Avatar
-
-Removed src="..." and srcset="..." 
-
-Added
+Added to my reviews layout with just a link to avatar="" + reviewData.name, or if your using comments its commentsData.name
 
 ```html
-avatar="include.name | escape" class="avatar" alt="include.name | escape"
-```
-Then the link to the Gravatar image you have to change for yur own genertic image, orLetter Avatar generated.
-
-As discribed at [Stack Overflow](https://stackoverflow.com/questions/2683803/gravatar-is-there-a-default-image)
-
-I will Change Line 6
-
-```html
-<img src="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=60" srcset="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=120 2x" alt="{{ include.name | escape }}">
-```
-From:
-```html
-?d=mm&s=60 
-and also 
-?d=mm&s=120 2x
-```
-To nothing for fallback image in gravatar links, then it falls back to 
-
-```html
-    <img src="https://www.gravatar.com/avatar/{{ include.email }}?d=avatar" srcset="https://www.gravatar.com/avatar/{{ include.email }}?d=avatar=120 2x" alt="{{ include.name | escape }}">
-% else %
-    <img class="avatar" avatar="{{ include.name | escape }}" alt="{{ include.name | escape }}" />
-% endif %
+<div itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img itemprop="image" avatar="{{ page.lcb }}{ reviewData.name }}" alt=" {{ page.lcb }}{ reviewData.name }}" class="review-avatar-image text-left" />
+    &nbsp;<span itemprop="name">{{ page.lcb }}{ reviewData.name }}</span>
+</div>
 ```
 
-### Add avatar.js
+## Add letter-avatar.js
 
-Adding the modified MVC Letter Avatar.js to my /assets/js/avatar.js.
+Adding the modified MVC [letter-avatar.js](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/assets/js/vendor/letter-avatar/letter-avatar.js) to my /assets/js/vendor/letter-avatar/letter-avatar.js.
 
 Link to it in scripts.html
 
 ```html
-<script src="{{ '/assets/js/avatar.js' | absolute_url }}"></script>
+<script src="{{ page.lcb }}{ '/assets/js/vendor/letter-avatar/letter-avatar.js' | absolute_url }}"></script>
 ```
-Or in a mardown page as.
+
+Or in a pages markdown frontmatter as.
 
 ```html
 footer:
-  - /assets/js/avatar.js
+  - /assets/js/vendor/letter-avatar/letter-avatar.js
 ```
+
 ### Adding Scripts Site wide in _config.yaml
 
-To add scripts to the <head> or closing </body> elements by adding paths to following arrays in _config.yml.
+To add scripts to the head or closing </body> elements by adding paths to following arrays in _config.yml.
 
 ```yaml
 head_scripts:
-  - https://code.jquery.com/jquery-3.3.1.min.js
+  - https://code.jquery.com/jquery-3.2.1.min.js
   - /assets/js/your-custom-head-script.js
 
 footer_scripts:
@@ -265,10 +248,3 @@ footer_scripts:
 ```
 
 Then create avatar.scss and register the avatar.scss file in minimal-mistakes.scss, for width, height and rounded images.
-
-{% include gallery caption="Gravtar, Avatar, Letter Avatar." %}
- 
-## Pre implementation comments.
-
-If your reading this before I get Staticman working. I need to see if this is really works or not.
-Use disqus below to comment or add ideas to this conception.

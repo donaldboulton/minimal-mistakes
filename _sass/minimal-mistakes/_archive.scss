@@ -18,7 +18,7 @@
 }
 
 .archive__subtitle {
-  margin: 1.414em 0 0;
+  margin: 1.414em 2em 0;
   padding-bottom: 0.5em;
   font-size: $type-size-5;
   color: $muted-text-color;
@@ -31,10 +31,11 @@
 
 .archive__item-title {
   margin-bottom: 0.25em;
-  font-family: $sans-serif-narrow;
+  font-family: 'Kaushan Script', cursive;
   line-height: initial;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-decoration: none;
 
   a {
     color: inherit;
@@ -54,7 +55,7 @@
 }
 
 .archive__item-excerpt {
-  margin-top: 0;
+  margin-top: .5em;
   font-size: $type-size-6;
 
   & + p {
@@ -316,4 +317,14 @@
   .feature__item--right {
     font-size: 1em;
   }
+}
+
+ul.archive-month, ul.archive-item, ul.recent-post {
+  padding: 0px;
+}
+
+ul li.list-month, ul li.list-content {
+  padding-left: 0;
+  list-style: none;
+  margin-left: 30px;
 }

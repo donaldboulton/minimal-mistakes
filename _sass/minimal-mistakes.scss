@@ -1,27 +1,15 @@
-/*!
- * Minimal Mistakes Jekyll Theme 4.10.0 by Michael Rose
- * Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
- * Licensed under MIT (https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt)
-*/
-
-/* Variables */
 @import "minimal-mistakes/variables";
-
-/* Mixins and functions */
 @import "minimal-mistakes/vendor/breakpoint/breakpoint";
+@import "minimal-mistakes/vendor/bigfoot/bigfoot-default";
+@import "minimal-mistakes/vendor/bigfoot/bigfoot-number";
 @include breakpoint-set("to ems", true);
-@import "minimal-mistakes/vendor/magnific-popup/magnific-popup"; // Magnific Popup
 @import "minimal-mistakes/vendor/susy/susy";
 @import "minimal-mistakes/mixins";
-
-/* Core CSS */
 @import "minimal-mistakes/reset";
 @import "minimal-mistakes/base";
 @import "minimal-mistakes/forms";
 @import "minimal-mistakes/tables";
 @import "minimal-mistakes/animations";
-
-/* Components */
 @import "minimal-mistakes/buttons";
 @import "minimal-mistakes/notices";
 @import "minimal-mistakes/masthead";
@@ -29,18 +17,22 @@
 @import "minimal-mistakes/footer";
 @import "minimal-mistakes/search";
 @import "minimal-mistakes/syntax";
-
-/* Utility classes */
 @import "minimal-mistakes/utilities";
-
-/* Layout specific */
 @import "minimal-mistakes/page";
 @import "minimal-mistakes/archive";
 @import "minimal-mistakes/sidebar";
 @import "minimal-mistakes/print";
 @import "minimal-mistakes/scrollbar";
-@import "minimal-mistakes/top";
 @import "minimal-mistakes/githubwidget";
 @import "minimal-mistakes/comments";
 @import "minimal-mistakes/octoarm";
+@import "minimal-mistakes/lazyload";
+@import "minimal-mistakes/intro";
+@import "minimal-mistakes/gallery";
+@import "minimal-mistakes/video";
+@import "minimal-mistakes/entry";
 @import "minimal-mistakes/cookies";
+@import "minimal-mistakes/ratings";
+@import "minimal-mistakes/checkboxes";
+@import "minimal-mistakes/subscribe";
+

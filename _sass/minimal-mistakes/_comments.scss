@@ -15,7 +15,8 @@
 
 .comment-timestamp {
   font-size: 0.8em;
-  padding-left:40px;
+  padding-left: 25px;
+  margin-left: 25px;
 
   a {
     color: inherit;
@@ -23,9 +24,16 @@
   }
 }
 
+.comment-title {
+  font-size: 0.8em;
+  padding-left: 25px;
+  margin-left: 25px;
+}
+
 .comment-content {
   margin-top: 1em;
   margin-left: 40px;
+  padding-left: 25px;
 
   > p,
   > ul,
@@ -64,30 +72,37 @@
   }
 }
 
-.comment__avatar {
+.comment-avatar {
   position: absolute;
   top: 0;
   left: 0;
-  width: 3.25em;
-  height: 3.25em;
+  width: 60px;
+  height: 60px;
 
   &::after {
     position: absolute;
     right: 0.5em;
     bottom: 0.5em;
-    width: 3.25em;
-    height: 3.25em;
+    width: 60px;
+    height: 60px;
     content: "";
     z-index: -1;
   }
 }
-
+ .comment-avatar-img {
+  width: 60px;
+  height: 60px;
+  padding: 1.5px;
+  border: 1px solid #434040;
+  border-radius: 50%
+ }
 .comment-author-name {
   display: inline-block;
   margin: 0 0 0.25em;
   font-size: 1.25em;
   line-height: 1;
-  padding-left:40px;
+  padding-left: 25px;
+  margin-left: 25px;
 
   a {
     color: inherit;
@@ -97,6 +112,7 @@
 
 .comment-reply {
     margin-left: 40px;
+    padding-left: 40px;
   a {
     text-decoration: none;
 
@@ -112,6 +128,9 @@
 
 #cancel-comment-reply-link {
   margin-left: 1em;
+  color: #ffffff;
+  text-decoration: underline;
+  text-decoration-color: rgba($success-color, 0.5);
 }
 
 #comment-form {
@@ -121,7 +140,45 @@
 /* Site author specific */
 .admin {
   .comment-author-name {
-    box-shadow: inset 0 -0.25em 0 rgba($warning-color, 0.5);
+    box-shadow: inset 0 -0.25em 0 rgba($success-color, 0.5);
   }
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #343434;
+  color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #000;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
 }
 

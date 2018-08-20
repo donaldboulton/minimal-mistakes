@@ -1,0 +1,87 @@
+---
+layout: compress
+---
+
+<!doctype html>
+
+<html ⚡ lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js" itemscope itemtype="http://schema.org/WebSite">
+<head>
+  {% include amp/amp-head.html %}
+</head>
+
+<body id="style-3" class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}" itemscope itemtype="http://schema.org/WebPage">
+  <meta itemprop="url" content="{{ site.url }}{{ page.url }}" />
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T2NFHJ"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  {% include browser-upgrade.html %}
+  {% include amp/amp-masthead.html %}
+  {% include amp/amp-post-image.html %}
+  <amp-analytics type="googleanalytics" id="amp-analytics-pageview">
+      <script type="application/json">
+      {
+        "vars": {
+          "account": "{{site.amp_googleanalytics_id}}"
+        },
+        "triggers": {
+          "trackPageview": {
+            "on": "visible",
+            "request": "pageview"
+          }
+        }
+      }
+      </script>
+    </amp-analytics>
+
+    <amp-analytics type="googleanalytics" id="amp-analytics-tweet-share">
+    <script type="application/json">
+    {
+      "vars": {
+        "account": "{{site.amp_googleanalytics_id}}"
+      },
+      "triggers": {
+        "trackClickOnTwitterLink" : {
+          "on": "click",
+          "selector": "#twitter-share-link",
+          "request": "social",
+          "vars": {
+              "socialNetwork": "twitter",
+              "socialAction": "tweet",
+              "socialTarget": "{{site.url}}{{page.url}}"
+          }
+        }
+      }
+    }
+    </script>
+    </amp-analytics>
+  <div>
+    {% if site.search == true %}
+    <div class="search-content">
+      {% include search/search_form.html %}
+    </div>
+    {% endif %}
+    <div id="initial-content" class="initial-content">
+      {{ content }}
+    </div>
+  </div>
+  <div class="text-center" role="note" itemscope itemtype="http://schema.org/WPAdBlock">
+        <meta itemprop="name" content="Adsense for {{ page.title }}"/>
+        <meta itemprop="description" content="Support {{ site.title }} by using Adsense and other advertisements."/>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-7655495105068461"
+             data-ad-slot="5601054893"
+             data-ad-format="auto"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+  <div class="page__footer" itemscope itemtype="http://schema.org/WPFooter">
+    <footer>
+        {% include amp/amp-footer.html %}
+    </footer>
+  </div>
+ {% include scripts.html %}
+</body>
+</html>

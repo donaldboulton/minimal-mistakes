@@ -1,0 +1,56 @@
+.entry {
+  @include clearfix();
+  margin-bottom: .5em;
+  padding-bottom: 1rem;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $border-color;
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
+.entry-meta {
+    display: block;
+    margin-bottom: .5em;
+    margin-top: .5em;
+
+    @include breakpoint($medium) {
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .byline-item {
+      white-space: nowrap;
+
+      &:not(:first-child) {
+        margin-left: .5rem;
+      }
+    }
+
+    .icon {
+      margin-right: 0.5em;
+    }
+  }
+
+  .entry-image {
+    display: block;
+    min-height: 100px;
+    width: 100%;
+    margin: 1em 0;
+    border-radius: $border-radius;
+  }
+
+  .entry-excerpt {
+    margin-left: 40px;
+  }

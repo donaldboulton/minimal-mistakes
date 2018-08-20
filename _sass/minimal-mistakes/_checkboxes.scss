@@ -1,0 +1,54 @@
+.checkbox_wrapper {
+  cursor: pointer;
+  height: 50px;
+  margin-top: .5em;
+  margin-bottom: 1em;
+  position: relative;
+  width: 100px;
+}
+
+.checkbox-label {
+  display: block;
+  margin: auto;
+  width: 100px;
+}
+
+[type="checkbox"]:checked + .custom,
+[type="checkbox"]:not(:checked) + .custom {
+  background: $danger-color;
+  left: 1px;
+  position: absolute;
+  top: 1px; bottom: 1px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  width: 48px;
+  z-index: 10;
+  border-radius: 50%;
+}
+
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked) {
+  opacity: 0;
+}
+
+[type="checkbox"]:checked + .custom {
+    background: $success-color;
+    left: 49px;
+}
+
+svg {
+  position: absolute;
+  z-index: 1;
+}
+
+.true_icon {
+  fill: $success-color;
+  left: 8px;
+  top: 8px;
+}
+
+.false_icon {
+  fill: $danger-color;
+  right: 8px;
+  top: 9px;
+}

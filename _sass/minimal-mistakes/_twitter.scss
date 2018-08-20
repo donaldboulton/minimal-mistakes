@@ -1,0 +1,66 @@
+/*-------------------------Page layout boxes etc-------------------------*/
+#twitter-container {
+	width: 98%;/*48em or 98%*/
+	margin: 2% auto 0 auto;
+}
+#masterbox {
+	width: 90%;
+	margin: 0 auto 0 auto;
+}
+#twitter-content{
+	margin-top: 0.5em;
+}
+#twitter-content p{
+	font-size: 90%;
+	padding: 0.5em 0 0.5em 0;
+}
+/*-------------------------Twitter boxes-------------------------*/
+#twitter-content .twitter_description{
+	float: left;
+	margin: 0.5em 0 0 0;
+}
+#twitter-content #article_wrapperz{
+	width: 70%;
+	float: left;
+}
+#twitter-content .twitter_box_wrapper{
+
+	float: left;
+	margin: 0 1em 0 0;
+}
+#twitter-content .twitter_box{
+	float: left;
+	clear: both;
+	margin: 0 0 0.5em 0;
+	/*border-radius: 6px 6px 4px 4px;
+	background-color: rgb(213,235,255);*/
+}
+/*-----------------------------Lists-----------------------------*/
+#twitter-content ul{
+	list-style-type: circle;
+	list-style-position: inside;
+	margin: 0.25em 0 0.25em 1.5em;
+}
+#twitter-content ul li{
+	font-size: 85%;
+}
+/*-----------------------------Tables-----------------------------*/
+#twitter-content table{
+	margin: 0.5em 0 0.5em 0;
+	border-collapse: collapse;
+	border-spacing: 0;
+	border: none;
+	empty-cells: hide;
+	width: 100%;
+}
+#twitter-content table th{
+	color: rgb(10,90,0);
+	font-size: 85%;
+	width: auto;
+	text-align: left;
+	padding: 0 0 0.25em 0.25em;
+}
+#twitter-content table td{
+	font-size: 85%;
+	padding: 0 0 0.25em 0.25em;
+}

@@ -1,8 +1,14 @@
 ---
-title: Posts by Year
-permalink: "/year-archive/"
 layout: archive
+permalink: /year-archive/
+title: "Posts by Year"
 author_profile: true
+toc: false
+sidenav: true
+comments: false
+reviews: false
+adds: true
+support: [adds]
 ---
 
 {% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'"  %}

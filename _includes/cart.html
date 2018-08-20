@@ -1,0 +1,20 @@
+<article class="post page">                        
+    <div class="post-content">
+        <table class="cart table">
+            <thead>
+                <tr><th></th><th>Quantity</th><th>Price</th></tr>
+            </thead>
+                <tbody></tbody>
+        </table>
+   
+        <div class="text-right"><a href="/donate" class="btn btn--secondary">Continue shopping</a> &nbsp;&nbsp; <a href="/checkout" class="btn btn--primary">Proceed to checkout</a></div>
+
+        <div style="margin-top: 50px; position: relative; top: 30px;">
+           <ul id="checkout_progress">
+               <li><span><a href="#">Cart</a></span></li><li><span><span>Checkout</span></span></li><li><span><span>Payment</span></span></li>
+           </ul>
+        </div>  
+   </div>
+</article>
+
+{% include cart-scripts.html %}

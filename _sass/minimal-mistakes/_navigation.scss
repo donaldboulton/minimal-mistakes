@@ -12,6 +12,7 @@
   max-width: 100%;
   padding-left: 2em;
   padding-right: 2em;
+  margin-left: 1.5em;
   font-family: $sans-serif;
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
@@ -48,12 +49,9 @@
 
   .current {
     font-weight: bold;
+    padding-left: .3em;
   }
 }
-
-/*
-     Post pagination navigation links
-     ========================================================================== */
 
 .pagination {
   @include clearfix();
@@ -269,7 +267,7 @@
     border: 0;
     outline: none;
     color: #fff;
-    background-color: $primary-color;
+    background-color: transparent;
     cursor: pointer;
   }
 
@@ -284,6 +282,7 @@
 
     li {
       -webkit-box-flex: 0;
+      box-flex: 0;
       flex: none;
     }
 
@@ -563,14 +562,55 @@
   border: 1px solid $border-color;
   border-radius: $border-radius;
   box-shadow: $box-shadow;
+  margin-bottom: 1em;
 
   .nav__title {
     color: #fff;
     font-size: $type-size-6;
-    background: $primary-color;
+    background: $toctitle-color;
     border-top-left-radius: $border-radius;
     border-top-right-radius: $border-radius;
+    border-bottom: 1px solid $border-color;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.125);
   }
+}
+
+.toc1 {
+  font-family: $sans-serif-narrow;
+  background-color: $background-color;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  margin-bottom: 1.5em;
+  padding: .5rem;
+
+  .nav__title1 {
+    color: #fff;
+    font-size: $type-size-6;
+    background: $toctitle-color;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+    border-bottom: 1px solid $border-color;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.125);
+    padding-left: .5em;
+
+  .heading {
+    color: $gray;
+  }
+  }
+}
+
+.toc1-li{
+  margin-bottom: .25em;
+  border-bottom: 1px solid $border-color;
+  line-height: 1.5;
+}
+
+.nav__title1 {
+  margin: 0;
+  padding: 0.5rem 1rem;
+  font-family: -apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+  font-weight: bold;
 }
 
 .toc__menu {
@@ -590,7 +630,11 @@
     border-bottom: 1px solid $border-color;
 
     &:hover {
-      color: $text-color;
+      color: $link-color-hover;
+    }
+
+    &:visited {
+      color: $link-color-visited;
     }
   }
 
@@ -605,6 +649,41 @@
     font-weight: normal;
   }
 
+  .toc1__menu {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    list-style: none;
+    font-size: 0.8rem;
+
+    a {
+      padding: 0.5rem 1rem;
+      color: $muted-text-color;
+      font-size: $type-size-7;
+      font-weight: bold;
+      line-height: 1.5;
+      border-bottom: 1px solid $border-color;
+
+      &:hover {
+        color: $link-color-hover;
+      }
+
+      &:visited {
+        color: $link-color-visited;
+      }
+    }
+
+    > li:last-child {
+      a {
+        border-bottom: none;
+      }
+    }
+
+    li ul > li a {
+      padding-left: 1.75rem;
+      font-weight: normal;
+    }
+  }
   /* hide sub sub links on small screens*/
   li > ul li {
     display: none;

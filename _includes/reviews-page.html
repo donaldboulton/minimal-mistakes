@@ -1,0 +1,18 @@
+<div class="js-reviews">
+      {% if page.id and page.reviews == true and site.data.reviews | where:'product',page.slug.size > 1 %}
+        <h4 class="page__comments-title">{{ site.data.ui-text[site.locale].reviews_title | default: "Reviews" }}</h4>
+        {% assign reviews = site.data.reviews | sort %}
+        {% for review in reviews %}
+        {% assign index = forloop.index %}
+        {% assign review = review[1].review %}
+        {% assign title = review[1].title %}
+        {% assign url = review[1].url %}
+        {% assign name = review[1].name %}
+        {% assign email = review[1].email %}
+        {% assign date = review[1].date %}
+        {% assign description = review[1].description %}
+        {% include review.html index=index review=review title=title email=email url=url name=name date=date description=description %}
+        {% endfor %}
+      {% endif %}
+</div>
+

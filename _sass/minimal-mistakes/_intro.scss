@@ -1,0 +1,114 @@
+/* ==========================================================================
+   Page intro
+   ========================================================================== */
+
+.intro {
+  margin: .5rem 0 0;
+  padding-bottom: .7rem;
+}
+
+.intro-image {
+  position: relative;
+  margin-top: -3rem; /* compensate for intro top margin */
+  margin-bottom: 3rem;
+
+  img {
+    width: 100%;
+  }
+}
+
+.intro-text {
+  /* remove space after last child element */
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.intro-title {
+  margin-bottom: 1rem;
+  color: tint($text-color, 25%);
+  line-height: 1;
+}
+
+.intro-subtitle {
+  font-style: italic;
+}
+
+.intro-actions {
+  @include list-unstyled;
+
+  li {
+    display: inline-block;
+  }
+}
+
+.intro-more {
+  > p:first-child {
+    font-size: 1.125em;
+    line-height: 1.625;
+  }
+}
+
+/*
+   Cover variant
+   ========================================================================== */
+
+.intro {
+  &.cover {
+    position: relative;
+    overflow: hidden;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+    text-shadow: 1px 01px 1px rgba($text-color, 0.75);
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: "";
+      z-index: 5;
+    }
+
+    .inner {
+      position: relative;
+      z-index: 10;
+    }
+
+    .intro-image {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+
+      img {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        font-family: "object-fit: cover"; // lazysizes object fit polyfill
+      }
+    }
+
+    .intro-text {
+      position: relative;
+      color: #fff;
+    }
+
+    .entry-meta .icon {
+      fill: #fff;
+    }
+
+    .intro-title {
+      color: #fff;
+    }
+  }
+}

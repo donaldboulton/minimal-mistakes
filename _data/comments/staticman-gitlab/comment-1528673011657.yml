@@ -1,0 +1,14 @@
+_id: 49a7fc10-6d05-11e8-a340-0b3e32e47a80
+_parent: /2018-02-26-post-Staticman-with-Gitlab.html
+name: Donald Boulton
+email: c1e68ec3dd3cc5dad0d017d2930b259c
+url: 'https://donboulton.com'
+title: Testing staticman
+message: This works and this is a test comment
+replying_to: ''
+hidden: ''
+date: '2018-06-10T23:23:31.655Z'
+tags:
+  - comment-subscription
+timestamp: 1528673011
+slug: testing-staticman

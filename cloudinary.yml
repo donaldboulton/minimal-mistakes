@@ -1,0 +1,67 @@
+---
+development:
+  cloud_name: mansbooks
+  api_key: '228989664973733'
+  api_secret: T9WSQ9U5m/3nMvCDYrql76Lk8FzE5zpVB8z8nA2nAHsSMj5s8TvcIvRSo0h1KWUTjc8D7q7yu5O3uPAldHGVOCHcpcjTfCOznMTOpgcUW+DdME7FVPYBx9Baz7in62gqx50MU1WQBusYz3G9au3X/TRgDpmEvgHcOs2tNYNkACU=
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: mansbooks
+  api_key: '228989664973733'
+  api_secret: T9WSQ9U5m/3nMvCDYrql76Lk8FzE5zpVB8z8nA2nAHsSMj5s8TvcIvRSo0h1KWUTjc8D7q7yu5O3uPAldHGVOCHcpcjTfCOznMTOpgcUW+DdME7FVPYBx9Baz7in62gqx50MU1WQBusYz3G9au3X/TRgDpmEvgHcOs2tNYNkACU=
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: mansbooks
+  api_key: '228989664973733'
+  api_secret: T9WSQ9U5m/3nMvCDYrql76Lk8FzE5zpVB8z8nA2nAHsSMj5s8TvcIvRSo0h1KWUTjc8D7q7yu5O3uPAldHGVOCHcpcjTfCOznMTOpgcUW+DdME7FVPYBx9Baz7in62gqx50MU1WQBusYz3G9au3X/TRgDpmEvgHcOs2tNYNkACU=
+  enhance_image_tag: true
+  static_image_support: false
+# Cloudinary
+cloudinary :
+  cloud_name : mansbooks
+  verbose : false
+  presets :
+    default :
+      min_width : 360
+      max_width : 1600
+      fallback_max_width : 800
+      steps : 5
+      sizes : ' (min-width: 50rem) 50rem, 90vw '
+      figure : always
+    onehalf :
+      min_width : 180
+      max_width : 800
+      fallback_max_width : 400
+      steps : 5
+      sizes : ' (min-width: 50rem) 25rem, 45vw '
+      figure : always
+      attributes :
+        class : onehalf
+    onethird :
+      min_width : 120
+      max_width : 560
+      fallback_max_width : 300
+      steps : 5
+      sizes : ' (min-width: 50rem) 17rem, 30vw '
+      figure : always
+      attributes :
+        class : onethird right
+    onefourth :
+      min_width : 100
+      max_width : 400
+      fallback_max_width : 200
+      steps : 5
+      sizes : ' (min-width: 50rem) 13rem, 23vw '
+      figure : always
+      attributes :
+        class : onefourth right
+    logo :
+      min_width : 100
+      max_width : 400
+      fallback_max_width : 200
+      steps : 3
+      sizes : ' (min-width: 55rpm) 12.5rem, (min-width: 30rem) 22.5vw, 30vw '
+      figure : never
+      attributes :
+        class : logo

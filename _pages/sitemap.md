@@ -1,36 +1,42 @@
 ---
-title: Sitemap
-permalink: "/sitemap/"
-layout: archive
-author_profile: true
+layout: single
+title: "Sitemap"
+permalink: /sitemap/
+toc: false
+sidenav: true
+comments: false
+anchor: false
+sidenav: true
+sidenav-gen: true
+reviews: false
+adds: true
+excerpt: "Sitemap with Post by Catagories, by Tags and by Years"
+image:
+  cover: true
+  path: &image /assets/images/pages/sitemap.png
+  feature: *image
+  thumbnail: /assets/images/pages/sitemap-320.png
+header:
+  image: /assets/images/pages/sitemap-1200.png
+  teaser: /assets/images/pages/sitemap-320.png
+  excerpt: "Sitemap of Posts"
+support: [adds, cookies, anchor]
+folder: _pages
+product: sitemap
+slug: sitemap
+github_editme_path: donaldboulton/DWB/blob/gh-pages/_pages/sitemap.md
 ---
 
-A list of all the posts and pages found on the site. For you robots out there is an [XML version]({{ "sitemap.xml" | absolute_url }}) and a [Atom Version]({{ "atom.xml" | absolute_url }}) available for digesting as well.
+{% include octo-arm.html %}
 
+# Sitemap Posts by Categories
 
-<h2>Posts</h2>
-{% for post in site.posts %}
-{% include archive-single.html %}
-{% endfor %}
+Links to Posts by Years, Months, Days and Tags.
 
-<h2>Pages</h2>
-{% for post in site.pages %}
-{% include archive-single.html %}
-{% endfor %}
+For your viewing and or all robots out there. Here is an [XML version]({{ "sitemap.xml" | absolute_url }}) and a [Atom Version]({{ "atom.xml" | absolute_url }}) or a [Json Feed]({{ "feed.json" | absolute_url }}) with a listing of all Pages and Posts, available for digesting as well.
 
-{% capture written_label %}'None'{% endcapture %}
+# Posts
 
-{% for collection in site.collections %}
-{% unless collection.output == false or collection.label == "posts" %}
-{% capture label %}{{ collection.label }}{% endcapture %}
-{% if label != written_label %}
-<h2>{{ label }}</h2>
-{% capture written_label %}{{ label }}{% endcapture %}
-{% endif %}
-{% endunless %}
-{% for post in collection.docs %}
-{% unless collection.output == false or collection.label == "posts" %}
-{% include archive-single.html %}
-{% endunless %}
-{% endfor %}
-{% endfor %}
+{% include posts-all.html %}
+
+{% include post_pagination.html %}

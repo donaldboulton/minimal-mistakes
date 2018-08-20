@@ -1,0 +1,40 @@
+<div class="product no-js">
+    <div class="gallery-2-col-unjustified">
+                   <div>
+                    <a href="https://images.weserv.nl/?url=donboulton.com/assets/images/cart/coffee/1.jpg&w=1400&output=jpg&q=50" class="lightbox-image"><img src="https://images.weserv.nl/?url=donboulton.com/assets/images/cart/coffee/1.jpg&w=350&output=jpg&q=50" /></a>
+                    </div>
+                    <div>
+                        <h3 class="price">&dollar; 2.50 - &dollar; 4.50</h3>
+                        <label>Choose a size:</label>
+                        <select name="variant" class="form-control" onchange="updatevariant(this,'Coffee');">
+                            <option value="tall | 2.50">tall | $2.50</option>
+                            <option value="grande | 3.50">grande | $3.50</option>
+                            <option value="venti | 4.30">venti | $4.50</option>
+                        </select>
+                        <button class="snipcart-add-item btn btn--primary"
+                        data-item-name="{{ product.name }}"
+                        data-item-id="{{ product.sku }}"
+                        data-item-image="{{ product.image }}"
+                        data-item-url="{{ site.baseurl }}"
+                        data-item-price="{{ product.price }}">
+                        Buy it for {{ product.price }} $
+                      </button>
+                        <p>Buy me a small one for wake up or a big one!</p>
+                    </div>
+    </div>
+    <br /><br />
+    <div class="gallery-3-col">
+            <div>
+                <h2 class="page__title">Joe time</h2>
+                <a href="https://images.weserv.nl/?url=donboulton.com/assets/images/cart/coffee/4.jpg&w=1400&output=jpg&q=50" class="lightbox-image"><img src="https://images.weserv.nl/?url=donboulton.com/assets/images/cart/coffee/1.jpg&w=350&output=jpg&q=50" /></a>
+            </div>
+            <div>
+                <h2 class="page__title">Best Beans</h2>
+                <a href="https://images.weserv.nl/?url=donboulton.com/assets/images/cart/coffee/2.jpg&w=1400&output=jpg&q=50" class="lightbox-image"><img src="https://images.weserv.nl/?url=donboulton.com/assets/images/cart/coffee/2.jpg&w=350&output=jpg&q=50" /></a>
+            </div>
+            <div>
+                <h2 class="page__title">Grind em</h2>
+                <a href="https://images.weserv.nl/?url=donboulton.com/assets/images/cart/coffee/3.jpg&w=1400&output=jpg&q=50" class="lightbox-image"><img src="https://images.weserv.nl/?url=donboulton.com/assets/images/cart/coffee/3.jpg&w=350&output=jpg&q=50" /></a>
+            </div>
+    </div>
+</div>

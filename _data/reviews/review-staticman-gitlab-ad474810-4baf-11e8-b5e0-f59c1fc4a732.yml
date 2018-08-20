@@ -1,0 +1,16 @@
+_id: ad474810-4baf-11e8-b5e0-f59c1fc4a732
+_parent: /2018-02-26-post-Staticman-with-Gitlab.html
+address: ''
+name: Donald Boulton
+email: c1e68ec3dd3cc5dad0d017d2930b259c
+title: Testing staticman v2
+url: donaboulton.com
+product: staticman-gitlab
+commentDate: '2018-04-29T13:17:33.813Z'
+description:
+  Making this more specific to Jekyll performance using Gulp, Grunt and a Travis
+  build. Using .svg sprite sheets for icons and site specific images.
+review: '3.5'
+pageless: true
+templateKey: reviews
+timestamp: 1525007853

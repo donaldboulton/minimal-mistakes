@@ -1,0 +1,36 @@
+
+<script type="text/javascript">
+$(document).ready(function() {
+
+$('#contactform').on('submit', function(e) {
+  e.preventDefault();
+
+  var name = $('#name').val();
+
+  var email = $('#email').val();
+
+  var comments = $('#comments').val();
+
+  $.ajax({
+    url:'https://formspree.io/donaldboulton@gmail.com',
+    method:'POST',
+    data:{
+      name:name,
+      _replyto:email,
+       email:email,
+      comments:comments,
+      _subject:'My Form Submission',
+    },
+    dataType:"json",
+    success:function() {
+      console.log('success');
+      $('#formBlock').hide();
+      $('#thankyouBlock').show();
+    }
+
+  });
+
+});
+
+});
+</script>

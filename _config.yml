@@ -1,207 +1,255 @@
----
-title: Donald Boulton
-timezone: America/Chicago
-collections:
-  pets:
-    title: Pets
-    output: true
-    permalink: "/pets/:path/"
-  posts:
-    title: Posts
-    output: true
-  uploads:
-    title: Uploads
-    output: true
-defaults:
-- scope:
-    path: ''
-    type: posts
-  values:
-    layout: single
-    author_profile: true
-    read_time: true
-    comments: true
-    share: true
-    related: true
-- scope:
-    path: _pages
-    type: pages
-  values:
-    layout: single
-    author_profile: true
-- scope:
-    path: ''
-    type: pets
-  values:
-    layout: single
-    author_profile: true
-    share: true
-    comment: true
-- scope:
-    path: ''
-    type: portfolio
-  values:
-    layout: single
-    author_profile: false
-    share: true
-minimal_mistakes_skin: neon
-locale: en-US
-title_separator: "-"
-name: Donald W. Boulton II
-description: DWB's Jekyll website.
-url: https://donboulton.com
-baseurl: "/"
-repository: donaldboulton/DWB
-teaser: "/assets/images/pages/digital_box_1400-compressor.jpg"
-words_per_minute: 200
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your entire site, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# `jekyll serve`. If you change this file, please restart the server process.
+
+minimal_mistakes_skin    : "neon" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+
+# Site Settings
+locale                   : "en-US"
+title                    : "Donald Boulton"
+title_separator          : "-"
+name                     : "Donald Boulton"
+logo                     : "/assets/images/fav-icons/apple-touch-icon.png"
+description              : "DWB's Jekyll Website."
+url                      : "https://donboulton.com"
+baseurl                  : "/"
+repository               : "donaldboulton/DWB"
+teaser                   : "/assets/images/pages/digital_box_1400-compressor.jpg"
+breadcrumbs              : true
+words_per_minute         : 200
 comments:
-  provider: staticman_v2
+  provider               : "staticman" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
   disqus:
-    shortname: donald-boulton
+    shortname            : "donald-boulton"
   discourse:
-    server: 
+    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
-    appid: 322180367845124
-    num_posts: 
-    colorscheme: dark
-staticman:
-  allowedFields:
-  - name
-  - email
-  - url
-  - message
-  - replying_to
-  branch: gh-pages
-  commitMessage: New comment.
-  filename: comment-{@timestamp}
-  format: json
-  moderation: false
-  path: "/_data/comments/{options.slug}"
-  requiredFields:
-  - name
-  - email
-  - message
-  transforms:
-    email: md5
-  generatedFields:
-    date:
-      type: date
-      options:
-        format: iso8601
+    appid                : "322180367845124"
+    num_posts            : # 5 (default)
+    colorscheme          : "dark"
+
 reCaptcha:
-  siteKey: 6Lf15UcUAAAAALh_yk6LPPErNxT-Qd-k2efKcJxR
-  secret: q0fksxUG8S3yendptK4byPIrlKUWhVPPn+zMA+2hjPd3ekaOPrwK04Ig0hHlyneN3z6zfH6edP7zk4kQEIHy8OOYADVmBAOX8US4dKusdXvoxHBFbdZPdC9o/FgS1eUkcrsn4g8cuXr4HUxz9/hoiMg2gHn0+5W99KoxR8pL+54=
+  enabled: true
+  siteKey: "6Le-JGIUAAAAAItP3anxYzixThXd6EUvsDjXZevh"
+  secret: "PgN6O5VvZ+nm04p7v9hqtKX6fcUpMh7Kl+qyiVggoE1l0kQ424yXdu7Zhk/YS2xeenFuo4E8Js9X2DlFo4WVKXkyvrbpthyQMz4T4KTRqdHX/fzOP1FKqLmgqdr8LJaTvBrWmAMbYveHby7qDnSnCW1yZdHdjvW9/I36x5ivRGc="
+
+webmentions:
+  username: donboulton.com
+  cache_folder: _data/webmentions
+  cache_bad_uris_for: 5
+  pause_lookups: false
+  collections:
+    - notes
+  templates:
+    count: _includes/webmentions/count.html
+    likes: _includes/webmentions/likes.html
+    reposts: _includes/webmentions/reposts.html
+    webmentions: _includes/webmentions/webmentions.html
+  js: false
+  legacy_domains:
+    - http://donboulton.com
+
+  throttle_lookups:
+    last_week: daily
+    last_month: daily
+    last_year: weekly
+    older: every 2 weeks
+
 atom_feed:
-  path: 
-search: true
-search_full_content: true
-search_provider: lunr
+  path                   : # blank (default) uses feed.xml
+search                   : true
+search_full_content      : true
+search_provider          : lunr
+
+siteleaf:
+  site-id                : "5ab05d47552cde487f135f56"
+  api-key                : "598283c4e4db7bcdc42a367c732e22bb"
+  api-secret             : "DD9rRDh9UGZFrUZWEwvhtMDOyiRCM99pmq0mjfKaUb5Yzkr8U/6mTNyv9AXa2yKqkYnNYG9uwhl1LZZeDxs8YUon4QmZ9i89qsZ9EaA0+T8sC+5Yn6+fJcMX2DYt6pfybacXbJN/OR3UJVIfIM6TBhMz1/JyNme9DPMdnq3GG4w="
+
+github_editme_path       : donaldboulton/DWB/blob/gh-pages/
+
 algolia:
-  application_id: G34JUR3EB9
-  index_name: donald_boulton
-  search_only_api_key: 68c60968e03d06ce61d592425b22c6bd
-  algolia_api_key: KLAOJmvpl1yZhCrno50lgSpRVJrrTtPKi98521LaL8X62hajFubs8IHB5eLjrcG5DOQJdfB6Dca9XluHQQQCWVJhQVAD7aqzfivz5/AlYEYukabDmEOw6Efd8RzNhlsFvVTa0t2/oxYWL66Xo9LtRbC0Lfpkf/u/RpA55pn5CkE=
-  powered_by: true
-Mailgun:
-  smtp_Hostname: smtp.mailgun.org
-  api_Base_Url: https://api.mailgun.net/v3/donboulton.com
-  api_key: H5EZw3wcgp0MVFVT9xj1T2bjagHUmxotILm4KbnXTHE5MtyHj+1pk+kQQGQuVdH8U/rgnth/4kvm/4lWRmxgu3vNAotPpg5VcmZsd7A44D/+sLNrZCXU7q5+YZ6VHYMjQpbHTBOsdebxq3Tog/3x3ONuR5XL/kRQNvD9tdjmdFw=
-  smtp_login: postmaster@donboulton.com
-github:
-- metadata
-head_scripts:
-- https://www.googletagmanager.com/gtag/js?id=UA-30162465-2
-google_site_verification: DKp8oxWR5F4kbaJJ9uowH1ySMttXrrUjIknx1OfUHc8
-bing_site_verification: 361016BEC0F67F6A834D6186E897D9EC
-yandex_site_verification: 
-naver_site_verification: 
+  application_id         : "G34JUR3EB9"
+  index_name             : "donald_boulton"
+  search_only_api_key    : "68c60968e03d06ce61d592425b22c6bd"
+  algolia_api_key        : "KLAOJmvpl1yZhCrno50lgSpRVJrrTtPKi98521LaL8X62hajFubs8IHB5eLjrcG5DOQJdfB6Dca9XluHQQQCWVJhQVAD7aqzfivz5/AlYEYukabDmEOw6Efd8RzNhlsFvVTa0t2/oxYWL66Xo9LtRbC0Lfpkf/u/RpA55pn5CkE="
+  powered_by             : true
+  files_to_exclude:
+    - index.html
+    - index.md
+    - subdirectory/*.html
+google:
+  search_engine_id       : "013988495707638373148:g116y1r0c-a"
+  instant_search         : # false (default), true
+github                   : [metadata]
+google-maps-api-key      : "ma8ylWAZUjNaRNN45C2CBJHnyw5Nt2A7MgJqoFFHQKtwHzxO9lMMdHmOpbBHuB0wVKVvBLr2gpBN5Sw/+6GtpUxy0CmBF6voPmcj8FMnhZKI1CYPoTMWgUzTZeVaZOQnTFipmx80+1KZPu9JPsjNQdRbmQKwOcaqVPocIqVs3Nk="
+repository               : "https://github.com/donaldboulton/DWB"
+
+# SEO Related
+google_site_verification : "DKp8oxWR5F4kbaJJ9uowH1ySMttXrrUjIknx1OfUHc8"
+bing_site_verification   : "361016BEC0F67F6A834D6186E897D9EC"
+yandex_site_verification :
+naver_site_verification  :
+snipcart_key             : "NGViODk5ZDAtNmU4OC00MjI5LWIxMGMtZGZmOWEwOGRhM2M1NjM2NjE0Nzc1OTQ2NzMzMTU"
+# Social Sharing
 twitter:
-  username: donboulton
+  username               : "donboulton"
+  api_key                : "Wicpx8XkPT8tHijl4MKH7w"
+  secret                 : "Ugr3ZV9eEXjnuIZgWEi6sXgOji4PHCDjVhAWPLmIeodcDJFhVX/awFB9/NzkN0vI8HdWg0oPxyXUEEarW3YChM5p63Xlfuc+Ax2cMSC6K0/CdG9XAxID0cxfrZ44/DpbcXewwV/tDDWzepjUq3EJiPyIlZnYZfyCtKRi3Nl6iGo="
+  format                 : "@title: @url@tags"
+  url_length             : 22
+  max_length             : 140
+twitter_format           : "@title: @url@tags"
+twitter_url_length       : 22
+twitter_max_length       : 140
+
 facebook:
-  username: donboulton
-  app_id: 
-  publisher: 
-og_image: favicon.png
+  username               : "don-boulton"
+  app_id                 : "322180367845124"
+  publisher              : "don-boulton"
+  og_image               : "favicon.png" # Open Graph/Twitter default site image
+# For specifying social profiles
+# - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type: 
-  name: 
-  links:
-  - https://twitter.com/donboulton
-  - https://facebook.com/donboulton
+  type                   : person
+  name                   : Donald Boulton
+  links: # An array of links to social media profiles
+    - "https://twitter.com/donboulton"
+    - "https://facebook.com/don-boulton"
+    - "https://plus.google.com/u/0/+DonaldBoulton"
+
+webmention:
+  api_key               : "jZUrcysy0Lrx2JjkchWJuQ"
+  pingback_url          : "https://webmention.io/donboulton.com/xmlrpc"
+  webmention_url        : "https://webmention.io/donboulton.com/webmention"
+  micropub_url          : ""
+# Analytics
 analytics:
-  provider: google
+  provider               : "google"
   google:
-    tracking_id: UA-30162465-2
+    tracking_id          : "UA-30162465-2"
+amp_googleanalytics_id   : "UA-30162465-2"
+# Site Author
 author:
-  name: Donald Boulton
-  avatar: "/assets/images/pages/donald-boulton-100.jpg"
-  bio: Away from Asp. Anything.
-  location: OKC Oklahoma
-  email: donaldboulton@gmail.com
-  uri: https://donboulton.com
-  home: https://donboulton.com/
-  bitbucket: 
-  codepen: 
-  dribbble: 
-  flickr: 
-  facebook: 
-  foursquare: 
-  github: donaldboulton
-  gitlab: 
-  google_plus: donaldboulton
-  keybase: 
-  instagram: 
-  lastfm: 
-  linkedin: don-boulton-3a10972b
-  pinterest: 
-  soundcloud: 
-  stackoverflow: 
-  steam: 
-  tumblr: 
-  twitter: donboulton
-  vine: 
-  weibo: 
-  xing: 
-  youtube: 
+  name                   : "Donald Boulton"
+  avatar                 : "/assets/images/pages/donald-boulton-100.jpg"
+  picture                : "/assets/images/pages/donald-boulton-100.jpg"
+  bio                    : "Away from Asp. Anything."
+  location               : "OKC Oklahoma"
+  email                  : "donaldboulton@gmail.com"
+  uri                    : "https://donboulton.com"
+  url                    : "https://donboulton.com/"
+  home                   : "https://donboulton.com/"
+  bitbucket              :
+  codepen                :
+  dribbble               :
+  flickr                 :
+  facebook               : "don-boulton"
+  foursquare             :
+  github                 : "donaldboulton"
+  gitlab                 :
+  google_plus            : "donaldboulton"
+  keybase                : "donaldboulton"
+  instagram              :
+  lastfm                 :
+  linkedin               : "don-boulton-3a10972b"
+  pinterest              :
+  soundcloud             :
+  stackoverflow          : # none
+  steam                  : # "steamId" (the last part of your profile url, e.g. https://steamcommunity.com/id/steamId/)
+  tumblr                 :
+  twitter                : "donboulton"
+  vine                   :
+  weibo                  :
+  xing                   :
+  youtube                : # None
+
+weather:
+  - platform             : "openweathermap"
+    api_key              : "8f4c1537b5fad3b111dae7b441fd0937"
+
+vapidKeys:
+  - publicKey            : "BOew5Tx7fTX51GzJ7tpF3dDLNS54OvUST_dGGqzJEy54jqW2qghIRTiK7BfOpCPp8xNfMH7Mtprl3hp_WGjgslU"
+  - privateKey           : "nzmLYpa/uP0drjyjUgMwcLCxlDa2MwTUwQZg0JaxJRH/PPvEu5JC4y0nN55QKR+d9g7TwX+g3GwtS3ZYUeG7IE9BIbKnAiYLGa2HQXGtTY1fPsX4lFo1aP8MF9CU5ECkEwJLXxeu11Z1huNo4pq5hpt6mjiAOp7SKGwn1oacV58="
+
+hawk:
+  - authID               : "dh37fgj492je"
+  - authKey              : "pargjXuTsCJHCrmHa60MtZ5F2Ak90qSvQObEsUMWCuw6e3IfpZm7kO3auNLXtbsu4dE3Spt+AS3wvCTVzMT+j/GqdZKZgjnWZT4y2HDrr1hM48mQyJPi3DI79NaF6ZwUeJI4I1ohTVqXB0dVK2TS1r7hZeD9UYkHGXjLuC9OqqY="
+
+firebase:
+  - service_account: "firebase-adminsdk-w6981@donboulton-210120.iam.gserviceaccount.com"
+  - api_key: "sigTU8nHaWpXRrI5ONcc5Vob0EOtqahICCiGJLmmrQZDw2prWwFiSOu71+8fz46J0RYp3oevxa86S2BbICg/fntP9AeH0F5wo4mI4GVT54lTKHEGzPjVgnWYcDwa86C9t2S/7US+vCZt5qPjArtf9geh2wrqdZ8T9hQiIs/7B0k="
+  - private_key_id: "pKJGrAZjBvJnxEThHzgYv7hcjj9bG0HKHsZH5jo9kBtm8nxJAJIfI9mcqyFpEkSS55hI7sdakl7M2B63Ci58FwPjd850u5Q5t7V7HMSheKtNVMCLZ/7YEYwNCEQZjZuPW51s+ZtjvBFLWmKYGcqf2UR2CDB8GtoA+hSQhzXIOQo="
+  - publicFacingName: "project-642731329222"
+  - name: "project-642731329222"
+  - sender_id: "857761645811"
+  - secret: "L9ooVwaIqvcQorsx4IovmuwiDLSte+qfPFnBO65fM0I1rVmhFfqV84jpskRd/xQnTBt1UQvGTxL6nVP7uXspcS3MjaFg11LJ6HkZFkdBd3IV8BvESlVu3sqDRF5HBxrnV/O7v0mxZfpsay+4sHXRoEA0iuTjxelh/OO7VBk0DcQ="
+  - serverKey: "GMy8XbGPUe8VK/XFr75hAUzDi71+yT4Imq6tl4TJ9RwwD6LrJBXii1PwEQbXDS0DsXSLreHomfSteRayZySA+g2iwSyqZV4HrpvaL6VfOZPdKDE3THIvXTkcJjzPjQiZc29BC/c6WbEiKNjf2ve6kELOb80JOBmb8WGs1p7xot66t4iN2mQfSdZ8vlkmSCQfxEego/e7jb2vinSbSo67ywJnT1C+o4ujM8ELinFGiTM/PYMDDGQYNyjvWdbGKhyXU3kV+sdii1faRKzgYWJGCSVUEyogovXgd6B2sPo1OstJxNzgScvlq3Hn5mxS1tStqutxurvFNjGCo6+Pre/HqTpxDdMfNAjxRNxi1dfvXemd6rGBxAthe8+VftYZQvhMR7rAr2vMmgx1KlV0fu0XpBuLD6I8y9ZajtDoxkZCq5Bb7UZONY/TWa1GJZmLbnXxai3/IZUYOHvpI25s9VyHPQkTZVs1RGF1Hxme7BPDLPGA/h+f+h/RchJ/IcplxNvz"
+  - type: "service_account"
+  - project_id: "airy-office-413"
+  - client_email: "firebase-adminsdk-70gvb@airy-office-413.iam.gserviceaccount.com"
+  - client_id: "111154619117210573730"
+  - auth_uri: "https://accounts.google.com/o/oauth2/auth"
+  - token_uri: "https://accounts.google.com/o/oauth2/token"
+  - auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+  - client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-70gvb%40airy-office-413.iam.gserviceaccount.com"
+
+extlinks:
+  attributes: {rel: noreferrer, target: _blank}
+  rel_exclude: ['facebook.com', 'twitter.com']
+
+strict_front_matter      : true
+
+# Reading Files
 include:
-- ".htaccess"
-- _pages
+  - .htaccess
+  - _pages
+  - node_modules
 exclude:
-- "*.sublime-project"
-- "*.sublime-workspace"
-- vendor
-- ".asset-cache"
-- ".bundle"
-- ".jekyll-assets-cache"
-- ".sass-cache"
-- assets/js/plugins
-- assets/js/_main.js
-- assets/js/vendor
-- Capfile
-- CHANGELOG
-- config
-- Gemfile
-- Gruntfile.js
-- gulpfile.js
-- LICENSE
-- log
-- node_modules
-- package.json
-- Rakefile
-- README
-- tmp
-- "/docs"
-- "/test"
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - .asset-cache
+  - vendor
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - assets/js/plugins
+  - assets/js/_main.js
+  - Capfile
+  - CHANGELOG
+  - config
+  - Gemfile
+  - Gemfile.lock
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .vs
+  - .vscode
+  - LICENSE
+  - log
+  - Rakefile
+  - README
+  - README.md
+  - tmp
+  - /docs
 keep_files:
-- ".git"
-- ".svn"
-encoding: utf-8
-markdown_ext: markdown,mkdown,mkdn,mkd,md
+  - .git
+  - .svn
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+# Conversion
 markdown: kramdown
 highlighter: rouge
 lsi: false
 excerpt_separator: "\n\n"
 incremental: false
+
+# Markdown Processing
 kramdown:
   input: GFM
   hard_wrap: false
@@ -211,81 +259,208 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
+
+# Sass/SCSS
 sass:
   sass_dir: _sass
-  style: compressed
+  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+
+# Outputting
+permalink: /:categories/:title/
+paginate: 5 # amount of posts to show
+paginate_path: /page:num/
+timezone: America/Chicago
+# Plugins (previously gems:)
 plugins:
-- jekyll-sitemap
-- jekyll-gist
-- jekyll-feed
-- jekyll-seo-tag
-- jekyll-archives
-- jekyll-paginate-v2
-- jekyll-figure
-- jekyll-jekyll-typogrify
-- jekyll-tagging-related_posts
-- jekyll-octicons
-- jekyll-admin
-- jemoji
-- json
+  - posts_json
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-archives
+  - jekyll-figure
+  - jekyll-tagging
+  - jekyll-tagging-related_posts
+  - jekyll-redirect-from
+  - jekyll-algolia
+  - jekyll-paginate-v2
+  - lazyload
+  - notice
+  - jemoji
+  - json
+
+# mimic GitHub Pages with --safe
 whitelist:
-- jekyll-sitemap
-- jekyll-gist
-- jekyll-feed
-- jekyll-seo-tag
-- jekyll-archives
-- jekyll-paginate-v2
-- jekyll-figure
-- jekyll-jekyll-typogrify
-- jekyll-tagging-related_posts
-- jekyll-octicons
-- jekyll-admin
-- jemoji
-- json
+  - posts_json
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-archives
+  - jekyll-figure
+  - jekyll-tagging
+  - jekyll-tagging-related_posts
+  - jekyll-redirect-from
+  - jekyll-algolia
+  - jekyll-paginate-v2
+  - lazyload
+  - notice
+  - jemoji
+  - json
+
+# Archives
+#  Type
+#  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)
+#  - Jekyll Archives plugin archive pages ~> type: jekyll-archives
+#  Path (examples)
+#  - Archive page should exist at path when using Liquid method or you can
+#    expect broken links (especially with breadcrumbs enabled)
+#  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
+#  - <base_path/categories/my-awesome-category/index.html ~> path: /categories/
+#  - <base_path/my-awesome-category/index.html ~> path: /
 category_archive:
   type: liquid
-  path: "/categories/"
+  path: /categories/
 tag_archive:
   type: liquid
-  path: "/tags/"
+  path: /tags/
+# https://github.com/jekyll/jekyll-archives
 jekyll-archives:
-  enabled:
-  - categories
-  - tags
-  layouts:
-    category: archive-taxonomy
-    tag: archive-taxonomy
-  permalinks:
-    category: "/categories/:name/"
-    tag: "/tags/:name/"
+   enabled:
+     - categories
+     - tags
+   layouts:
+     category: archive-taxonomy
+     tag: archive-taxonomy
+   permalinks:
+     category: /categories/:name/
+     tag: /tags/:name/
+
+# HTML Compression
+# - http://jch.penibelst.de/
 compress_html:
   clippings: all
+  comments:  ["<!-- ", " -->"]
+  endings:   all
   ignore:
     envs: development
-pagination:
-  enabled: true
-  debug: false
-  per_page: 15
-  permalink: "/page/:num/"
-  title: ":title - Page :num of :max"
-  limit: 0
-  sort_field: date
-  sort_reverse: true
+
+# Collections
+collections:
+  photography:
+    output: true
+    permalink: /:photography/:name/
+  amp-html:
+    output: true
+    permalink: /:amp-html/:name/
+  products:
+    output: true
+    permalink: /:products/:name/
+  category:
+    output: true
+# Defaults
+defaults:
+  - scope:
+      path: "photography"
+      type: "photograpny"
+    values:
+      layout: single
+      author_profile: false
+      gallery: true
+      comments: true
+      share: true
+      related: true
+      sidenav-gallery: true
+      adds: true
+      cookies: true
+      breadcrumb: true
+      breadcrumbs:
+        - label: "photography"
+          url: /photography/
+      permalink: /:path/:basename:output_ext
+  # _posts
+  - scope:
+      path: "_posts"
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: false
+      share: true
+      related: true
+      toc: true
+      adds: true
+      reviews: true
+      cookies: true
+      notifications: true
+      breadcrumbs:
+        - label: "Posts"
+          url: /year-archive/
+  # amp-html
+  - scope:
+      path: "amp-html"
+      type: posts
+    values:
+      layout: amp-single
+      author_profile: true
+      read_time: true
+      comments: false
+      share: true
+      related: true
+      toc: true
+      adds: true
+      reviews: true
+      cookies: true
+      notifications: true
+      breadcrumbs:
+        - label: "Amp Posts"
+          url: /:amp-html/:name/
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+      notifications: true
+  - scope:
+      path: ""
+      type: category
+    values:
+      layout: "category"
+  # _products
+  - scope:
+      path: "_products"
+      type: "products" # a collection in your site, in plural form
+    values:
+      layout: "product"
+      breadcrumbs:
+        - label: "products"
+          url: /products/
+      permalink: /:products/:name/
+
+posts_json_path: posts.json
+ipstack:
+  api_key: b3e3a6f8d63be4a25492fef554f9e28a
+# Plugin: Auto Pages (jekyll-paginate-v2)
 autopages:
   enabled: true
   categories:
-    enabled: false
+    enabled: true
   collections:
     layouts:
-    - autopage_collection.html
-    title: Posts in collection :coll
-    permalink: "/collection/:coll"
+      - 'autopage_collection.html'
+    title: 'Posts in collection :coll' # :coll is replaced by the collection name
+    permalink: '/collection/:coll'
   tags:
     enabled: true
     slugify:
       mode: raw
       cased: true
     layouts:
-    - autopage_tags.html
-    title: ":tag"
+      - "autopage_tags.html"
+    title: ":tag" # :tag is replaced by the tag name
     permalink: "/tag/:tag"

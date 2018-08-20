@@ -1,26 +1,35 @@
-/* ==========================================================================
-   Gallery
-   ========================================================================== */
+.image-wrapper,
+.gallery-sizer {
+  width: 25%;
+}
 
-// 2 Column Gallery
+.gallery {
 
-.gallery-2-col {
-  display: grid;
-  grid-gap: 0.5em;
-  align-items: stretch;
-  justify-items: center;
+  display: block;
 
-  @include breakpoint($small) {
-    grid-template-columns: repeat(2, 1fr);
+  .image-wrapper {
+    float: left;
+    padding: 3px;
+
+    // hack required if no padding
+    .image {
+      width: 100.1%;
+      width: calc( 100% + 1px );
+      height: 100%;
+    }
   }
 
-  figcaption {
-    width: 100%;
-    grid-column: 1 / -1;
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
   }
 }
 
-// 3 Column Gallery
+.caption {
+  position: static;
+  color: #AAA;
+}
 
 .gallery-3-col {
   display: grid;
@@ -32,12 +41,108 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
-  figcaption {
+  caption {
     width: 100%;
     grid-column: 1 / -1;
   }
 }
 
+.gallery-4-col {
+  display: grid;
+  grid-gap: 0.5em;
+  align-items: stretch;
+  justify-items: center;
+
+  @include breakpoint($small) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  caption {
+    width: 100%;
+    grid-column: 1 / -1;
+  }
+}
+
+.gallery-3-col-unjustified {
+  display: grid;
+  grid-gap: 0.5em;
+  align-items: stretch;
+
+  @include breakpoint($small) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  caption {
+    width: 100%;
+    grid-column: 1 / -1;
+  }
+}
+
+.grid,
+.grid-sizer {
+  width: 25%;
+}
+
+.grid {
+
+  max-width: 1200px;
+
+  .grid-item {
+    float: left;
+    width: 320px;
+    padding: 3px;
+
+    // hack required if no padding
+    .thumb {
+      width: 100.1%;
+      width: calc( 100% + 1px );
+      height: 100%;
+    }
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.list-unstyled {
+  padding: 0px!important;
+  margin: 0px!important;
+  list-style: none;
+}
+
+.gallery-2-col {
+  display: grid;
+  grid-gap: 0.5em;
+  align-items: stretch;
+  justify-items: center;
+
+  @include breakpoint($small) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  caption {
+    width: 100%;
+    grid-column: 1 / -1;
+  }
+}
+
+.gallery-2-col-unjustified {
+  display: grid;
+  grid-gap: 0.5em;
+  align-items: stretch;
+
+  @include breakpoint($small) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  caption {
+    width: 100%;
+    grid-column: 1 / -1;
+  }
+}
 // Vertical Gallery
 
 .gallery-vertical {
@@ -52,7 +157,7 @@
     overflow-x: inherit;
   }
 
-  .gallery-img {
+  .gallery-image {
     padding: 0 1em 1em 1em;
     max-width: ($small - ($small * 0.25 + 0px));
     flex-shrink: 0;
@@ -70,6 +175,7 @@
     img {
       display: block;
       width: 100%;
+      border-radius: 3px;
     }
   }
 }
@@ -77,7 +183,6 @@
 // Thumbnail Gallery
 
 .gallery-thumbnails {
-  @include clearfix();
   display: grid;
   grid-gap: 0.5em;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -101,7 +206,12 @@
       width: 100%;
       height: auto;
       min-height: 100px;
-      border-radius: $border-radius;
+      border-radius: 3px;
     }
   }
+}
+
+.gallery-image{
+  width: 219px!important;
+  height: 165px!important;
 }

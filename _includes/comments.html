@@ -1,10 +1,9 @@
 <div class="entry-comments">
-  {% if site.repository and site.staticman.branch %}
   {% if site.data.comments[page.slug] %}
   <!-- Start static comments -->
-  <div id="comments" class="js-comments comment">
+  <div id="comments" class="js-comments comment" itemscope itemtype="http://schema.org/UserComments">
     <header class="section-title">
-      <h3>{% if site.data.comments[page.slug].size > 1 %}{{ site.data.comments[page.slug] | size | append: ' ' }}{% endif %}Comments</h3>
+      <h3><svg class="icon icon--comments-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comments-alt' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;{% if site.data.comments[page.slug].size > 1 %}{{ site.data.comments[page.slug] | size | append: ' ' }}{% endif %}Comments</h3>
     </header>
     {% assign comments = site.data.comments[page.slug] | where_exp: 'item', 'item.replying_to == blank' %}
     {% for comment in comments %}
@@ -16,13 +15,13 @@
     {% assign name        = comment.name %}
     {% assign url         = comment.url %}
     {% assign date        = comment.date %}
+    {% assign title       = comment.title %}
     {% assign message     = comment.message %}
-    {% include comment.html index=index replying_to=replying_to avatar=avatar email=email name=name url=url date=date message=message %}
+    {% include comment.html index=index replying_to=replying_to avatar=avatar email=email name=name url=url date=date title=title message=message %}
     {% endfor %}
   </div>
   <!-- End static comments -->
   {% endif %}
 
   {% include comment-form.html %}
-  {% endif %}
 </div>

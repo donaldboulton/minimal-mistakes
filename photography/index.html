@@ -1,0 +1,90 @@
+---
+layout: single
+permalink: /photography/
+title: Gallerys
+date: 2018-04-01 16:18:01 -0600
+last_modified_at: 2018-05-16T12:42:38-04:0
+redirect_from:
+  - /post/2018-02-29-post-gallery-external/
+search: true
+sidenav: true
+author: Donald Boulton
+author_profile: false
+tags:
+  - Cats
+  - OKC
+  - Family
+  - Tahoe
+  - Tucson
+  - Sulphur OK
+  - Us Fest
+  - Charlottesville Va
+  - San Diego
+  - Santa Barbara
+category:
+  - Gallerys
+toc: false
+sidenav-gallery: true
+adds: true
+read_time: true
+comments: true
+share: true
+related: true
+catagory: true
+breakcrumb: true
+sidebar:
+  - title: "My Hun Kitty"
+    image: /assets/photography/old-cat-gallery/Little-Hun-th.jpg
+    image_alt: "Hun Kitty"
+    text: "Hun at 3 weaks"
+  - title: "Responsibilities"
+    text: "I take care of about 20 stray cats in three different parts of OKC and any kitty that comes my way."
+image:
+    cover: true
+    path: &image /assets/photography/cat-gallery/einstine.jpg
+    feature: *image
+    thumbnail: /assets/photography/cat-gallery/einstine-320.jpg
+header:
+  image: /assets/photography/cat-gallery/einstine-1200.jpg
+  teaser: /assets/photography/cat-gallery/einstine-th.jpg"
+folder: photography
+product: gallerys
+slug: photography/index.html
+support: [adds, cookies]
+github_editme_path: donaldboulton/DWB/blob/gh-pages/photography/index.html
+---
+
+{% if include.id %}
+  {% assign gallery = page[include.id] %}
+{% else %}
+  {% assign gallery = page.gallery %}
+{% endif %}
+
+{% if gallery.size == 2 %}
+  {% assign gallery_layout = 'half' %}
+{% elsif gallery.size >= 3 %}
+  {% assign gallery_layout = 'third' %}
+{% else %}
+  {% assign gallery_layout = '' %}
+{% endif %}
+
+{% include octo-arm.html %}
+
+{% include page-intro.html %}
+
+<p>Below are my Kitty Cat and Travels gallerys.</p>
+<p>Cat Gallerys are broken into my house cats, past cats and stray cats. All Gallerys are built with <a https://isotope.metafizzy.co/> Isotope</a> and displayed with <a target="blank" http://sachinchoolur.github.io/lightGallery/>Light Gallery</a>.</p>
+
+<p>Alot of Travel Pics taken from old slides so the quality is not so good, but still memorys reside in them, Adding them soon.</p>
+
+{% assign count = 0 %}
+  <div class="gallery-3-col">
+  {% for gallery in site.data.galleries.overview %}
+   <div>
+    <h2 class="page__title">{{ gallery.title }}</h2>
+    <a href="{{ site.url }}{{ site.baseurl }}/photography/{{ gallery.directory }}">
+      <img class="gallery-image" alt="{{ gallery.title }}" src="{{ site.url }}{{ site.baseurl }}/assets/photography/{% if gallery.picture_path %}{{ gallery.picture_path }}{% else %}{{ gallery.directory }}{% endif %}/{{ gallery.preview.thumbnail }}" />
+    </a>
+  </div>
+  {% endfor %}
+</div>

@@ -1,0 +1,12 @@
+<!-- Determines which layout is being used and builds the image accordingly -->
+{% if page.layout == 'amp-single' %}
+  <amp-img
+    src="{{ site.baseurl }}{{ include.src }}"
+    width="{{ include.width }}"
+    height="{{ include.height }}"
+    alt="{{ include.alt }}"
+    layout="responsive"></amp-img>
+  <noscript><img src="{{ include.src }}" alt="{{ include.alt }}"></noscript>
+{% else %}
+  <img src="{{ include.src }}" alt="{{ include.alt }}">
+{% endif %}

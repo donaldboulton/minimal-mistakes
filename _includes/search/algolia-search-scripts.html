@@ -23,12 +23,10 @@ const hitTemplate = function(hit) {
   const content = hit._highlightResult.html.value;
 
   return `
-    <div class="list__item">
-      <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-        <h2 class="archive__item-title" itemprop="headline"><a href="{{ site.baseurl }}${url}">${title}</a></h2>
-        <div class="archive__item-excerpt" itemprop="description">${content}</div>
-      </article>
-    </div>
+    <article class="entry">
+      <h3 class="entry-title"><a href="{{ site.baseurl }}${url}">${title}</a></h3>
+      <div class="entry-excerpt">${content}</div>
+    </article>
   `;
 }
 
@@ -36,8 +34,8 @@ const hitTemplate = function(hit) {
 search.addWidget(
   instantsearch.widgets.searchBox({
     container: '.search-searchbar',
-    {% unless site.algolia.powered_by == false %}poweredBy: true,{% endunless %}
-    placeholder: '{{ site.data.ui-text[site.locale].search_placeholder_text | default: "Enter your search term..." }}'
+    poweredBy: true,
+    placeholder: 'Enter your search term...'
   })
 );
 search.addWidget(

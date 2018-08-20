@@ -1,0 +1,56 @@
+{% if post.id %}
+  {% assign title = post.title | markdownify | strip_html %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+<article class="entry">
+  <header class="entry-header">
+    <h3 class="entry-title">
+      <a href="{{ post.url | relative_url }}" rel="bookmark">{{ title | widont }}</a>
+    </h3>
+    {% assign feature_image = post.image.feature %}
+    {% if feature_image %}
+      <a href="{{ post.url | relative_url }}">
+        {% assign f = feature_image | split: '.' %}
+        <noscript><amp-img src="{{ f[0] | relative_url }}-320.{{ f[1] }}" class="entry-image"></amp-img></noscript>
+        <amp-img data-sizes="auto"
+             src="{{ f[0] | relative_url }}-lq.{{ f[1] }}"
+             data-srcset="{{ f[0] | relative_url }}-lq.{{ f[1] }} 20w,
+                          {{ f[0] | relative_url }}-320.{{ f[1] }} 320w,
+                          {{ f[0] | relative_url }}-800.{{ f[1] }} 800w,
+                          {{ f[0] | relative_url }}-1200.{{ f[1] }} 1200w"
+             alt="{{ post.title | strip_html }}"
+             class="lazyload entry-image fade-in"></amp-img>
+      </a>
+    {% endif %}
+  </header>
+  <footer class="entry-meta">
+      <div class="archive-right">
+      {% if post.work %}
+      <span class="byline-item"><svg class="icon icon--folder fa-folder" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-folder-open' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;{{ post.work | markdownify | remove: '<p>' | remove: '</p>' }}</span>
+      {% endif %}
+      {% if post.date %}
+      <span class="byline-item"><svg class="icon icon--calendar-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-calendar-alt' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;<time class="entry-time" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time></span>
+      {% endif %}
+      {% if post.read_time %}
+      <span class="byline-item"><svg class="icon icon--stopwatch" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-stopwatch' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;{% capture read_time %}{% include read-time.html %}{% endcapture %}{{ read_time | strip }}</span>
+      {% endif %}
+      {% if site.data.comments[post.slug].size > 0 and post.comments %}
+      <span class="byline-item"><a href="{{ post.url | relative_url }}#comments-list"><svg class="icon icon--comments-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comments-alt' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;{{ site.data.comments[post.slug] | size }} Comment{% if site.data.comments[post.slug].size > 1 %}s{% endif %}</a></span>
+      {% endif %}
+      {% case site.comments.provider %}
+      {% when "disqus" %}
+      {% if page.comments == true %}
+      <span class="byline-item"><svg class="icon icon--comments-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comments-alt' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;<a href="https://donboulton.com{{ page.url }}#comments-list">0 Comments</a></span>
+      {% endif %}
+      {% endcase %}
+      </div>
+  </footer>
+  <div class="entry entry-excerpt">
+    {% if post.excerpt %}
+      {{ post.excerpt | markdownify }}
+      <div><a href="{{ post.url | relative_url }}" class="more-link">Read more&hellip;</a></div>
+    {% endif %}
+  </div>
+</article>

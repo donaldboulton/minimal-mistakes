@@ -1,48 +1,56 @@
 ---
-title: Mobile Colorbox
-date: 2018-02-25 21:16:01 Z
-permalink: "/2018-02-25-post-Mobile-Colorbox/"
-categories:
-- Programing
-tags:
-- Colorbox
-- Mobile Colorbox
 layout: single
-last_modified_at: 2018-02-28 16:42:38 Z
+title: "Mobile Colorbox"
+permalink: 2018-02-25-post-Mobile-Colorbox.html
+date: 2018-02-25 15:16:01 -0600
+last_modified_at: 2018-02-28T12:42:38-04:00
 search: true
 author: Donald Boulton
 author_profile: true
+sidenav: true
+adds: true
+cookies: true
+reviews: true
+anchor: true
+tags:
+  - Colorbox
+  - Mobile Colorbox
+category:
+  - Programing
 toc: true
-toc_label: Page Contents
-toc_icon: file
+toc_label: "Page Contents"
 read_time: true
 comments: true
-share: true
+share: false
+web-intents: true
+tweet_id: 145116818707714048
+social-share: twitter --twitter-hashtags facebook
 related: true
-excerpt: I use colorbox in my ASP.Core2 apps. Alot of developers still do in their
-  applications
+excerpt: "I use colorbox in my ASP.Core2 apps. A lot of developers still do in their applications. Mobile First Responsive Colorbox Window to open a link, div, code, about anything. Including a iframe using external data."
+image:
+  cover: true
+  path: &image /assets/images/pages/colorbox-html.jpg
+  feature: *image
+  thumbnail: /assets/images/pages/colorbox-html-320.jpg
 header:
-  image: "/assets/images/pages/svg/colorbox-html-1400.png"
-  teaser: "/assets/images/pages/svg/colorbox-html-1400.png"
-gallery:
-- url: "/assets/images/pages/svg/colorbox-html-1400.png"
-  image_path: "/assets/images/pages/svg/colorbox-html.png"
-  alt: Colorbox HTML
-- url: "/assets/images/pages/svg/colorbox-800.png"
-  image_path: "/assets/images/pages/svg/colorbox.png"
-  alt: Colorbox Images
-- url: "/assets/images/pages/svg/colorbox-logon-800.png"
-  image_path: "/assets/images/pages/svg/colorbox-logon.png"
-  alt: Colorbox Logon
+  image: /assets/images/pages/colorbox-html-1200.jpg
+  teaser: /assets/images/pages/colorbox-html-320.jpg
+
+support: [adds, cookies]
+folder: _posts
+product: mobile-colorbox 
+slug: mobile-colorbox
+github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2018-02-25-post-Mobile-Colorbox.md
 ---
 
 {% include octo-arm.html %}
+{% include page-intro.html %}
 
-### Mobile First Colorbox
+# Mobile First Colorbox
 
 Mobile First Responsive Colorbox Window to open a link, div, code, about anything. Including a iframe using external data.
 
-Using the provided code works with, Jquery 3.3.2 and Bootstrap 4 beta 3.
+Using the provided code works with, jQuery 3.3.2 and Bootstrap 4 beta 3.
 
 Colorbox if you have not used it was created by [Jack Moore](http://www.jacklmoore.com/colorbox/)
 
@@ -55,24 +63,26 @@ I searched around and found similar posts and came up with a small addition to t
 Colorbox now is working perfect on my Android and some other phone's I have tried. It now makes the colorbox windows 90% of the view on a normal website, and 90% on mobile.
 
 I am building Mobile First sites now and it way to easy with Core 2 framework, with a Mobile First Agency Theme based on Bootstrap 4 beta 3 using colorbox for some internal views.
+Click to open the Page Code block or anything in a Colorbox Window
 
-#### Click to open the Page Code block or anything in a Colorbox Window.
-
-To use the Colorbox window by clicking a link that uses a class as class="inline" and link it to the div with href="#profiles"</div>
+To use the Colorbox window by clicking a link that uses a class as class="inline" and link it to the div with href="#profiles"
 
 ```html
-<a class="inline" href="#profiles" title="Colorbox">Click to open in a Colorbox Window.</a>    
+<a class="inline" href="#profiles" title="Colorbox">Click to open in a Colorbox Window.</a>
 ```
+
 Hide Content in a hidden div class="hidden"
 
 The css for hidden
+
 ```css
 .hidden{display:none}
 ```
+
 The link is to a div with id="profiles"
 Add Colorbox Content in the div with profiles
 
-### The Inline Code for inline code.
+## The Inline Code for inline code
 
 ```javascript
 $(".inline").colorbox({
@@ -88,9 +98,9 @@ $('.inline_content').on('click', function() {
 });
 ```
 
-Below is the changed javascript  with additions highlighted.
+Below is the changed JavaScript  with additions highlighted.
 
-#### The Javascript
+### The JavaScript
 
 ```javascript
   $(".group1").colorbox({
@@ -179,5 +189,3 @@ Below is the changed javascript  with additions highlighted.
   jQuery(window).resize(resizeColorBox);
   window.addEventListener("orientationchange", resizeColorBox, false);
 ```
-
-{% include gallery caption="Colorbox HTML, Colorbox Images, Colorbox Logon." %}

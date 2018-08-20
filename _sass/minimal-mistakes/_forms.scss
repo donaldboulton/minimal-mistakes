@@ -148,7 +148,7 @@ input[type="file"] {
 
 select {
   width: auto;
-  background-color: #fff;
+  background-color: #1d1d1d;
 }
 
 select[multiple],
@@ -358,6 +358,17 @@ select:focus {
   z-index: 11;
 }
 
+input[aria-invalid="true"], textarea[aria-invalid="true"] {
+  border: 1px solid #f00;
+  box-shadow: 0 0 4px 0 #f00;
+}
+
+.abbr {
+  display: inline-block;
+  border: none;
+  font-weight: bold;
+  color: #f00;
+}
 /*
      Google search form
      ========================================================================== */

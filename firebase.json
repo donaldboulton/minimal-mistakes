@@ -1,0 +1,9 @@
+{
+  "firebase": "airy-office-413",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

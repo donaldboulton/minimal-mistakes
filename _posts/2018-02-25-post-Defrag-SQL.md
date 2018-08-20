@@ -1,49 +1,60 @@
 ---
-title: Defrag SQL
-date: 2018-02-25 22:16:01 Z
-permalink: "/2018-02-25-post-Defrag-SQL/"
-categories:
-- Programing
-tags:
-- SQL Server
-- SQL Defragment
 layout: single
-last_modified_at: 2018-03-01 16:42:38 Z
+title: "Defrag SQL"
+permalink: 2018-02-25-post-Defrag-SQL.html
+date: 2018-02-25 16:16:01 -0600
+last_modified_at: 2018-03-01T12:42:38-04:00
 search: true
 author: Donald Boulton
 author_profile: true
+sidenav: true
+adds: true
+cookies: true
+reviews: true
+anchor: true
+tags:
+  - SQL Server
+  - SQL Defragment
+category:
+  - Programing
+
 toc: true
-toc_label: Page Contents
-toc_icon: file
+toc_label: "Defrag Contents"
+related: true
 read_time: true
 comments: true
-share: true
-related: true
-excerpt: Defrag Sql 2008 to 2016
+share: false
+web-intents: true
+tweet_id: 1023374609566113793
+social-share: twitter --twitter-hashtags facebook
+excerpt: "Defrag SQL 2008 to 2016. In any SQL database and one that updates through migrations like Orchard CMS get defragmented and I have notice over the years dealing with SQL server that it needs defragging occasionally, keeping the performance optimized"
+image:
+  cover: true
+  path: &image /assets/images/pages/defrag-sql-2014.png
+  feature: *image
+  thumbnail: /assets/images/pages/defrag-sql-2014-320.png
 header:
-  image: "/assets/images/pages/defrag-sql-2014-1400-min.png"
-  teaser: "/assets/images/pages/defrag-sql-2014-1400-min.png"
-gallery:
-- url: "/assets/images/pages/page-splitting.png"
-  image_path: "/assets/images/pages/page-splitting-256.png"
-  alt: Page Splitting
-- url: "/assets/images/pages/index_heatmap.jpeg"
-  image_path: "/assets/images/pages/index_heatmap-256.png"
-  alt: Index Heatmap
-- url: "/assets/images/pages/windows-xp-defragment-hard-drive.jpeg"
-  image_path: "/assets/images/pages/windows-xp-defragment-hard-drive-256.jpeg"
-  alt: Clusters
+  image: /assets/images/pages/defrag-sql-2014-1200.png
+  teaser: /assets/images/pages/defrag-sql-2014-320.png
+
+support: [adds, cookies]
+folder: _posts
+product: defrag-sql
+slug: defrag-sql
+github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2018-02-25-post-Defrag-SQL.md
 ---
 
 {% include octo-arm.html %}
 
-## Defragment SQL Server
+{% include page-intro.html %}
 
-In any SQl database and one that updates through migrations like Orchard CMS get defragmented and I have notice over the years dealing with SQL server that it needs defraging occasionaly, keeping the performance optimized.
+# SQL Server 2008 - 2016
+
+In any SQl database and one that updates through migrations like Orchard CMS get defragmented and I have notice over the years dealing with SQL server that it needs defragging occasionally, keeping the performance optimized.
 
 I have included this in my blog as a notice to pay attention and defrag your SQL database.
 
-#### Microsoft Post
+## Microsoft Post
 
 [Microsoft Docs](https://docs.microsoft.com/en-us/sql/t-sql/database-console-commands/dbcc-indexdefrag-transact-sql)
 
@@ -51,21 +62,21 @@ It’s been quite some time since my last index defrag script update. A big part
 
 Change Log
 
-*   Bug fix for databases containing spaces or special characters
-*   Support for case-sensitive databases
-*   Re-executable CREATE script (for those who want to re-run the whole script)
-*   Comma-delimited list of databases is now supported for the @database parameter
+* Bug fix for databases containing spaces or special characters
+* Support for case-sensitive databases
+* Re-executable CREATE script (for those who want to re-run the whole script)
+* Comma-delimited list of databases is now supported for the @database parameter
 
 Feature List:
 
-*   Defrag a single database, a list of databases, or all databases (@database)
-*   Time Limitations: stop defragging after the specified amount of time has elapsed (@timeLimit). Please note, it will not kill a defrag that is currently in process, even if it exceeds the threshold.
-*   Optional stop-and-resume functionality: pick up where your defrag last left off without having to rescan sys.dm_db_index_physical_stats. (@forceRescan)
-*   Defrag scheduling: choose which days to defrag certain indexes, or exclude certain indexes altogether, by using the dbo.dba_indexDefragExclusion table.
-*   Defrag priority: choose whether to defrag indexes in ascending or descending order by range_scan_count (default), fragmentation, or page_count.
-*   Current partition exclusion: choose whether or not to exclude the right-most populated partition from the defrag process, common for sliding-window tables (@excludeMaxPartition)
-*   Commands-only mode: Choose to just log the current defrag status and print the defrag commands, rather than executing them, by using @executeSQL.
-*   … and tons more! Please read the parameter list and notes section for details of all the options available.
+* Defrag a single database, a list of databases, or all databases (@database)
+* Time Limitations: stop defragging after the specified amount of time has elapsed (@timeLimit). Please note, it will not kill a defrag that is currently in process, even if it exceeds the threshold.
+* Optional stop-and-resume functionality: pick up where your defrag last left off without having to rescan sys.dm_db_index_physical_stats. (@forceRescan)
+* Defrag scheduling: choose which days to defrag certain indexes, or exclude certain indexes altogether, by using the dbo.dba_indexDefragExclusion table.
+* Defrag priority: choose whether to defrag indexes in ascending or descending order by range_scan_count (default), fragmentation, or page_count.
+* Current partition exclusion: choose whether or not to exclude the right-most populated partition from the defrag process, common for sliding-window tables (@excludeMaxPartition)
+* Commands-only mode: Choose to just log the current defrag status and print the defrag commands, rather than executing them, by using @executeSQL.
+* And tons more! Please read the parameter list and notes section for details of all the options available.
 
 FAQ:
 
@@ -76,7 +87,7 @@ This is most likely a very small index. Here’s what Microsoft has to say:
 
 In general, fragmentation on small indexes is often not controllable. The pages of small indexes are stored on mixed extents. Mixed extents are shared by up to eight objects, so the fragmentation in a small index might not be reduced after reorganizing or rebuilding the index. For more information about mixed extents, see Understanding Pages and Extents.
 
-What database should I create it in? or Can I create this in the MASTER database? 
+What database should I create it in? or Can I create this in the MASTER database?
 It’s up to you where you create it. You could technically create it in the MASTER database, but I recommend creating a utility database for your DBA administrative tasks.
 
 Can I run this against a SharePoint database?
@@ -88,122 +99,122 @@ You need to be on SQL Server 2005 SP2 or higher.
 ### SQL Server 2008 R2 or higher
 
 ```sql
-/*Perform a 'USE <database name>' to select the database in which to run the script.*/  
--- Declare variables  
-SET NOCOUNT ON;  
-DECLARE @tablename varchar(255);  
-DECLARE @execstr   varchar(400);  
-DECLARE @objectid  int;  
-DECLARE @indexid   int;  
-DECLARE @frag      decimal;  
-DECLARE @maxfrag   decimal;  
+/*Perform a 'USE <database name>' to select the database in which to run the script.*/
+-- Declare variables
+SET NOCOUNT ON;
+DECLARE @tablename varchar(255);
+DECLARE @execstr   varchar(400);
+DECLARE @objectid  int;
+DECLARE @indexid   int;
+DECLARE @frag      decimal;
+DECLARE @maxfrag   decimal;
 
--- Decide on the maximum fragmentation to allow for.  
-SELECT @maxfrag = 30.0;  
+-- Decide on the maximum fragmentation to allow for.
+SELECT @maxfrag = 30.0;
 
--- Declare a cursor.  
-DECLARE tables CURSOR FOR  
-   SELECT TABLE_SCHEMA + '.' + TABLE_NAME  
-   FROM INFORMATION_SCHEMA.TABLES  
-   WHERE TABLE_TYPE = 'BASE TABLE';  
+-- Declare a cursor.
+DECLARE tables CURSOR FOR
+   SELECT TABLE_SCHEMA + '.' + TABLE_NAME
+   FROM INFORMATION_SCHEMA.TABLES
+   WHERE TABLE_TYPE = 'BASE TABLE';
 
--- Create the table.  
-CREATE TABLE #fraglist (  
-   ObjectName char(255),  
-   ObjectId int,  
-   IndexName char(255),  
-   IndexId int,  
-   Lvl int,  
-   CountPages int,  
-   CountRows int,  
-   MinRecSize int,  
-   MaxRecSize int,  
-   AvgRecSize int,  
-   ForRecCount int,  
-   Extents int,  
-   ExtentSwitches int,  
-   AvgFreeBytes int,  
-   AvgPageDensity int,  
-   ScanDensity decimal,  
-   BestCount int,  
-   ActualCount int,  
-   LogicalFrag decimal,  
-   ExtentFrag decimal);  
+-- Create the table.
+CREATE TABLE #fraglist (
+   ObjectName char(255),
+   ObjectId int,
+   IndexName char(255),
+   IndexId int,
+   Lvl int,
+   CountPages int,
+   CountRows int,
+   MinRecSize int,
+   MaxRecSize int,
+   AvgRecSize int,
+   ForRecCount int,
+   Extents int,
+   ExtentSwitches int,
+   AvgFreeBytes int,
+   AvgPageDensity int,
+   ScanDensity decimal,
+   BestCount int,
+   ActualCount int,
+   LogicalFrag decimal,
+   ExtentFrag decimal);
 
--- Open the cursor.  
-OPEN tables;  
+-- Open the cursor.
+OPEN tables;
 
--- Loop through all the tables in the database.  
-FETCH NEXT  
-   FROM tables  
-   INTO @tablename;  
+-- Loop through all the tables in the database.
+FETCH NEXT
+   FROM tables
+   INTO @tablename;
 
-WHILE @@FETCH_STATUS = 0  
-BEGIN  
--- Do the showcontig of all indexes of the table  
-   INSERT INTO #fraglist   
-   EXEC ('DBCC SHOWCONTIG (''' + @tablename + ''')   
-      WITH FAST, TABLERESULTS, ALL_INDEXES, NO_INFOMSGS');  
-   FETCH NEXT  
-      FROM tables  
-      INTO @tablename;  
-END;  
+WHILE @@FETCH_STATUS = 0
+BEGIN
+-- Do the showcontig of all indexes of the table
+   INSERT INTO #fraglist
+   EXEC ('DBCC SHOWCONTIG (''' + @tablename + ''')
+      WITH FAST, TABLERESULTS, ALL_INDEXES, NO_INFOMSGS')
+   FETCH NEXT
+      FROM tables
+      INTO @tablename;
+END;
 
--- Close and deallocate the cursor.  
-CLOSE tables;  
-DEALLOCATE tables;  
+-- Close and deallocate the cursor.
+CLOSE tables;
+DEALLOCATE tables;
 
--- Declare the cursor for the list of indexes to be defragged.  
-DECLARE indexes CURSOR FOR  
-   SELECT ObjectName, ObjectId, IndexId, LogicalFrag  
-   FROM #fraglist  
-   WHERE LogicalFrag >= @maxfrag  
-      AND INDEXPROPERTY (ObjectId, IndexName, 'IndexDepth') > 0;  
+-- Declare the cursor for the list of indexes to be defragged.
+DECLARE indexes CURSOR FOR
+   SELECT ObjectName, ObjectId, IndexId, LogicalFrag
+   FROM #fraglist
+   WHERE LogicalFrag >= @maxfrag
+      AND INDEXPROPERTY (ObjectId, IndexName, 'IndexDepth') > 0;
 
--- Open the cursor.  
-OPEN indexes;  
+-- Open the cursor.
+OPEN indexes;
 
--- Loop through the indexes.  
-FETCH NEXT  
-   FROM indexes  
-   INTO @tablename, @objectid, @indexid, @frag;  
+-- Loop through the indexes.
+FETCH NEXT
+   FROM indexes
+   INTO @tablename, @objectid, @indexid, @frag;
 
-WHILE @@FETCH_STATUS = 0  
-BEGIN  
-   PRINT 'Executing DBCC INDEXDEFRAG (0, ' + RTRIM(@tablename) + ',  
-      ' + RTRIM(@indexid) + ') - fragmentation currently '  
-       + RTRIM(CONVERT(varchar(15),@frag)) + '%';  
-   SELECT @execstr = 'DBCC INDEXDEFRAG (0, ' + RTRIM(@objectid) + ',  
-       ' + RTRIM(@indexid) + ')';  
-   EXEC (@execstr);  
+WHILE @@FETCH_STATUS = 0
+BEGIN
+   PRINT 'Executing DBCC INDEXDEFRAG (0, ' + RTRIM(@tablename) + ',
+      ' + RTRIM(@indexid) + ') - fragmentation currently '
+       + RTRIM(CONVERT(varchar(15),@frag)) + '%';
+   SELECT @execstr = 'DBCC INDEXDEFRAG (0, ' + RTRIM(@objectid) + ',
+       ' + RTRIM(@indexid) + ')';
+   EXEC (@execstr);
 
-   FETCH NEXT  
-      FROM indexes  
-      INTO @tablename, @objectid, @indexid, @frag;  
-END;  
+   FETCH NEXT
+      FROM indexes
+      INTO @tablename, @objectid, @indexid, @frag;
+END;
 
--- Close and deallocate the cursor.  
-CLOSE indexes;  
-DEALLOCATE indexes;  
+-- Close and deallocate the cursor.
+CLOSE indexes;
+DEALLOCATE indexes;
 
--- Delete the temporary table.  
-DROP TABLE #fraglist;  
+-- Delete the temporary table.
+DROP TABLE #fraglist;
 GO
 ```
 
 #### SQL 2005 - 2008 code
 
-Originally created by Microsoft 
+Originally created by Microsoft
 
 [Error corrected by Pinal Dave](http://www.SQLAuthority.com)
 
 ### Check Fragmentation
 
-```python
+```sql
 DBCC INDEXDEFRAG
 (
-    { database_name | database_id | 0 } 
-    , { table_name | table_id | view_name | view_id } 
+    { database_name | database_id | 0 }
+    , { table_name | table_id | view_name | view_id }
     [ , { index_name | index_id } [ , { partition_number | 0 } ] ]
 )
     [ WITH NO_INFOMSGS ]
@@ -265,8 +276,8 @@ FETCH NEXT
 WHILE @@FETCH_STATUS = 0
 BEGIN
 -- Do the showcontig of all indexes of the table
-   INSERT INTO #fraglist 
-   EXEC ('DBCC SHOWCONTIG (''' + @tablename + ''') 
+   INSERT INTO #fraglist
+   EXEC ('DBCC SHOWCONTIG (''' + @tablename + ''')
       WITH FAST, TABLERESULTS, ALL_INDEXES, NO_INFOMSGS');
    FETCH NEXT
       FROM tables
@@ -321,7 +332,7 @@ Note
 
 When DBCC INDEXDEFRAG is run, index defragmentation occurs serially. This means that the operation on a single index is performed using a single thread. No parallelism occurs. Also, operations on multiple indexes from the same DBCC INDEXDEFRAG statement are performed on one index at a time.
 
-DBCC INDEXDEFRAG also compacts the pages of an index, taking into consideration the fill factor specified when the index was created. Any empty pages created because of this compaction are removed. For more information, see <span>[Specify Fill Factor for an Index](http://msdn.microsoft.com/en-us/library/ms177459.aspx)</span>.
+DBCC INDEXDEFRAG also compacts the pages of an index, taking into consideration the fill factor specified when the index was created. Any empty pages created because of this compaction are removed. For more information, see [Specify Fill Factor for an Index](http://msdn.microsoft.com/en-us/library/ms177459.aspx).
 
 If an index spans more than one file, DBCC INDEXDEFRAG defragments one file at a time. Pages do not migrate between files.
 
@@ -329,7 +340,9 @@ DBCC INDEXDEFRAG reports the estimated percentage completed every five minutes. 
 
 Unlike DBCC DBREINDEX, or the index building operation generally, DBCC INDEXDEFRAG is an online operation. It does not hold locks long term. Therefore, DBCC INDEXDEFRAG does not block running queries or updates. Because the time to defragment is related to the level of fragmentation, a relatively unfragmented index can be defragmented faster than a new index can be built. A very fragmented index might take considerably longer to defragment than to rebuild.
 
-The defragmentation is always fully logged, regardless of the database recovery model setting. For more information, see <span>[ALTER DATABASE (Transact-SQL)](http://msdn.microsoft.com/en-us/library/ms174269.aspx)</span>. The defragmentation of a very fragmented index can generate more log than a fully logged index creation. However, the defragmentation is performed as a series of short transactions, so a large log is unnecessary if log backups are taken frequently or if the recovery model setting is SIMPLE.
+The defragmentation is always fully logged, regardless of the database recovery model setting. For more information, see [ALTER DATABASE (Transact-SQL)](http://msdn.microsoft.com/en-us/library/ms174269.aspx)
+
+The defragmentation of a very fragmented index can generate more log than a fully logged index creation. However, the defragmentation is performed as a series of short transactions, so a large log is unnecessary if log backups are taken frequently or if the recovery model setting is SIMPLE.
 
 ### Restrictions
 
@@ -337,12 +350,10 @@ DBCC INDEXDEFRAG shuffles index leaf pages in place. Therefore, if an index is i
 
 DBCC INDEXDEFRAG cannot be used to defragment the following indexes:
 
-*   A disabled index.
+* A disabled index.
 
-*   An index with page locking set to OFF.
+* An index with page locking set to OFF.
 
-*   A spatial index.
+* A spatial index.
 
 DBCC INDEXDEFRAG is not supported for use on system tables.
-
-{% include gallery caption="Old XP Defragmentation, Page Splitting, Web Matrix Defrag." %}

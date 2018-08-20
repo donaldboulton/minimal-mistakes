@@ -1,0 +1,97 @@
+<meta charset="utf-8">
+{% include seo.html %}
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="robots" Content="index, follow, archive">
+<meta name="revisit-after" Content="3 days">
+<meta name="expires" Content="Mon, 06 Jan 2020 21:31:12 GMT">
+<meta name="apple-mobile-web-app-capable" Content="yes">
+<meta name="application-name" content="donboulton">
+<meta name="apple-mobile-web-app-title" content="donboulton">
+<meta name="msapplication-starturl" content="https://donboulton.com">
+<meta name="author" Content="Donald Boulton">
+<meta name="fb:app_id" Content="322180367845124">
+<meta name="twitter:thumbnailUrl" Content="/assets/images/donald-boulton_100.jpg">
+<meta name="twitter:id" Content="105217183">
+<meta name="twitter:creator:id" Content="105217183">
+<meta name="twitter:creator:username" Content="@donboulton">
+<meta name="twitter:name" Content="@donboulton">
+<meta name="twitter:widgets:theme" Content="dark">
+<meta name="twitter:widgets:link-color" Content=" #71ba70">
+<meta name="twitter:widgets:border-color" Content="#282A2B">
+<meta name="name" Content="Donald Boulton">
+<meta name="InLanguage" Content="en-US">
+<meta name="google-signin-clientid" Content="857761645811-u1iefg2lorg7aqoiat9vkn1d146n8lkp.apps.googleusercontent.com">
+<meta name="google-signin-scope" Content="https://www.googleapis.com/auth/plus.login">
+<meta name="google-signin-requestvisibleactions" Content="http://schema.org/AddAction">
+<meta name="google-signin-cookiepolicy" Content="single_host_origin">
+<meta name="specificfeeds-verification-code" content="w48MyShCerwN6kA3DklR" />
+<meta name="theme-color" content="#212529">
+<meta name="msvalidate.01" content="361016BEC0F67F6A834D6186E897D9EC" />
+<meta name="logo" content="{{ site.url }}/apple-touch-icon-precomposed.png" />
+<meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/fav-icons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/assets/images/fav-icons/favicon.png" sizes="32x32">
+<link rel='shortcut icon' type='image/png' href='/assets/images/fav-icons/favicon.png' />
+<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+<link rel="alternate" title="{{ site.title }} Feed" type="application/atom+xml" href="{{ 'atom.xml' | absolute_url }}">
+<link rel="alternate" title="{{ site.title }} Feed" type="application/json" href="{{ 'feed.json' | absolute_url }}">
+<link rel="icon" type="image/png" href="/assets/images/fav-icons/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="/assets/images/fav-icons/favicon-16x16.png" sizes="16x16" />
+<link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
+<link rel="canonical" href="{{ site.baseurl }}{{ page.canonical }}">
+<link rel="manifest" href="{{ 'manifest.json' | absolute_url }}">
+<script async src="https://cdn.ampproject.org/v0.js"></script>
+<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+  <title>{{ page.title }} - {{ site.title }}</title>
+  <!-- AMP Boilerplate -->
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  <!-- Include custom AMP components if the post calls for it -->
+{% if page.amp_components %}
+{% for js_file in page.amp_components %}
+  {{ js_file }}
+{% endfor %}
+<style amp-custom>
+    {% include css/inline.scss %}
+    {{ scss_content | scssify }}
+</style>
+{% endif %}
+<!-- Include custom AMP components if the post calls for it -->
+<!-- Install Service Worker -->
+<amp-install-serviceworker src="/service-worker.js"
+  data-iframe-src="https://donboulton.com/sw.html"
+  layout="nodisplay">
+</amp-install-serviceworker>
+<script async src="https://www.googletagmanager.com/gtag/js?id=GTM-TDPND89"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'GTM-TDPND89');
+</script>
+<!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TDPND89');</script>
+  <!-- End Google Tag Manager -->
+  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+  <amp-analytics type="googleanalytics">
+    <script type="application/json">
+    {
+      "vars": {
+        "account": "UA-30162465-2"
+      },
+      "triggers": {
+        "trackPageview": {
+          "on": "visible",
+          "request": "pageview"
+        }
+      }
+    }
+    </script>
+  </amp-analytics>

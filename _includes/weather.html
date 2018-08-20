@@ -1,0 +1,44 @@
+<script>
+function checkWind() {
+  var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://api.openweathermap.org/data/2.5/weather?zip=73125%2Cus&appid=8f4c1537b5fad3b111dae7b441fd0937&units=imperial",
+    "method": "GET"
+  }
+
+  $.ajax(settings)
+
+.done(function (response) {
+  console.log(response);
+     $("#wind_speed").append (response.wind.speed);
+     $("#wind_direction").append (response.wind.deg);
+     $("#main_temp").append (response.main.temp);
+     $("#weather_conditions").append (response.weather[0].main);
+     $("#wind_speed_unit").append (" MPH");
+     $("#wind_degree_unit").append (" degrees");
+     $("#main_temp_unit").append (" F");
+});
+}
+</script>
+
+<h1>Weather</h1>
+<div class="container">
+    <h2>Wind conditions for OKC</h2>
+    <div><button type="button" onclick="checkWind()" class="btn btn--danger weatherbutton">Check wind conditions</button></div><br/>
+    <span><b>Temperature: </b></span><span id="main_temp"></span><span id="main_temp_unit"></span><br/>
+    <span><b>Wind speed: </b></span><span id="wind_speed"></span> <span id="wind_speed_unit"></span><br/>
+    <span><b>Wind direction: </b></span><span id="wind_direction"></span><span id="wind_degree_unit"></span><br/>
+    <span><b>Current conditions: </b></span><span id="weather_conditions"></span>
+  <div class="gallery-2-col-unjustified">
+      <div class="text-left">
+          <h2>Current Conditions</h2>
+          <h3 id="current"></h3>
+      </div>
+      <div class="text-right">
+          <h2>Forecast</h2>
+          <h3 id="forecast"></h3>
+      </div>
+  </div>
+</div>
+

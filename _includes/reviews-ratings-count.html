@@ -1,0 +1,39 @@
+<article itemscope itemtype="http://schema.org/Review" class="toc1">
+  <header class="section-title">
+    <h3 class="nav__title1"><svg width="16px" height="16px" viewBox="0 0 15 16" version="1.1" class="icon icon--megaphone" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g id="Octicons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g id="project" fill="#ffffff">
+            <path d="M10,12 L13,12 L13,2 L10,2 L10,12 L10,12 Z M6,10 L9,10 L9,2 L6,2 L6,10 L6,10 Z M2,14 L5,14 L5,2 L2,2 L2,14 L2,14 Z M1,15 L14,15 L14,1 L1,1 L1,15 L1,15 Z M14,0 L1,0 C0.448,0 0,0.448 0,1 L0,15 C0,15.552 0.448,16 1,16 L14,16 C14.552,16 15,15.552 15,15 L15,1 C15,0.448 14.552,0 14,0 L14,0 L14,0 Z" id="Shape"></path>
+          </g>
+      </g>
+  </svg> Page Rating</h3>
+  </header>
+<div id="reviews" class="js-reviews product-reviews">
+  {% assign reviews = site.data.reviews | where:'product',page.id %}
+  {% assign reviewCount = reviews | size %}
+  {% assign sum = 0 %}
+  {% for review in reviews %}
+    {% assign sum = sum | plus: review.review %}
+  {% endfor %}
+
+  <h3>
+    {% if reviewCount > 0 %}
+      {% assign sum = sum | divided_by:reviewCount %}
+      (Average: {{ sum | round: 1 }})
+    {% endif %}
+  </h3>
+</div>
+  <input name="fields[product]" type="hidden" value="{{ page.id }}" />
+</article>
+{% if site.data.comments[post_slug] %}
+    {% assign comments = site.data.comments[post_slug] | sort %}
+
+    {% for comment in comments %}
+        <div class="comment">
+          <h3 class="comment__author"><a href="{{ comment[1].url }}">{{ comment[1].name }}</a></h3
+          <p class="comment__date">{{ comment[1].date }}</p>
+          <img class="comment__avatar" src="https://www.gravatar.com/avatar/{{ comment[1].hash }}?d=mm&s=180">
+          {{ comment[1].message }}
+        </div>
+    {% endfor %}
+{% endif %}

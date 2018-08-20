@@ -84,7 +84,7 @@
   }
   /* paragraph indents */
   p {
-    margin: 0 0 $indent-var;
+    margin: 0 1em $indent-var;
     /* sibling indentation*/
     @if $paragraph-indent == true {
       & + p {
@@ -243,6 +243,32 @@
   text-transform: uppercase;
 }
 
+.page__share__twitter {
+  margin-top: .3em;
+  padding-top: .3em;
+  border: 1px solid $border-color;
+  border-radius: 5px;
+
+  @include breakpoint(max-width $small) {
+    .btn span {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+  }
+}
+
+.page__share__twitter-title {
+  margin-bottom: 1em;
+  font-size: $type-size-6;
+  text-transform: uppercase;
+}
+
 /*
    Page meta
    ========================================================================== */
@@ -273,6 +299,9 @@
    ========================================================================== */
 
 .page__taxonomy {
+  margin-bottom: 1em;
+  margin-top: 1em;
+
   .sep {
     display: none;
   }
@@ -285,7 +314,6 @@
 .page__taxonomy-item {
   display: inline-block;
   margin-right: 5px;
-  margin-bottom: 8px;
   padding: 5px 10px;
   text-decoration: none;
   border: 1px solid mix(#000, $border-color, 25%);
@@ -295,6 +323,43 @@
     text-decoration: none;
     color: $link-color-hover;
   }
+}
+
+.taxonomy__index {
+  display: grid;
+  grid-column-gap: 2em;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 1.414em 0;
+  padding: 0;
+  font-size: 0.75em;
+  list-style: none;
+}
+
+.taxonomy__index a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0.25em 0;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid #000000;
+}
+
+.taxonomy__count {
+  color: #cacdd0;
+}
+
+.back-to-top {
+  display: block;
+  clear: both;
+  color: #cacdd0;
+  font-size: 0.6em;
+  text-transform: uppercase;
+  text-align: right;
+  text-decoration: none;
 }
 
 /*
@@ -383,13 +448,98 @@
 }
 
 /*
+   Reviews
+   ========================================================================== */
+
+   .page__reviews {
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    clear: both;
+  }
+
+  .page__reviews-title {
+    margin-top: 2rem;
+    margin-bottom: 10px;
+    padding-top: 2rem;
+    font-size: $type-size-6;
+    border-top: 1px solid $border-color;
+    text-transform: uppercase;
+  }
+
+  .page__reviews-form {
+    -webkit-transition: $global-transition;
+    transition: $global-transition;
+
+    &.disabled {
+      input,
+      button,
+      textarea,
+      label {
+        pointer-events: none;
+        cursor: not-allowed;
+        filter: alpha(opacity=65);
+        box-shadow: none;
+        opacity: 0.65;
+      }
+    }
+  }
+
+  .review{
+    @include clearfix();
+    margin: 1em 0;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $border-color;
+    }
+  }
+
+  .review__avatar-wrapper {
+    float: left;
+    width: 60px;
+    height: 60px;
+
+    @include breakpoint($large) {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  .review__content-wrapper {
+    float: right;
+    width: calc(100% - 60px);
+
+    @include breakpoint($large) {
+      width: calc(100% - 100px);
+    }
+  }
+
+  .review__author {
+    margin: 0;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .review__date {
+    @extend .page__meta;
+    margin: 0;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+/*
    Related
    ========================================================================== */
 
 .page__related {
   @include clearfix();
   float: left;
-  margin-top: 2em;
+  margin-top: 1em;
   padding-top: 1em;
   border-top: 1px solid $border-color;
 
@@ -436,6 +586,46 @@
 
     @include breakpoint($x-large) {
       padding-right: 0;
+    }
+  }
+}
+
+.page-nav-next, .page-nav-prev {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: calc(var(--horizontal-padding) - 16px);
+  height: 60%;
+  padding: 4px;
+  top: 40%;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.page-nav-next {
+  right: 0;
+}
+
+.page-nav-prev {
+  left: 0;
+}
+
+.page-nav-icon {
+  width: 24px;
+  height: 40px;
+  color: #ffffff!important;
+
+  a {
+    padding: 0.5rem 1rem;
+    color: $text-color!important;
+    font-size: $type-size-7;
+
+    &:hover {
+      color: $link-color-hover;
+    }
+
+    &:visited {
+      color: $text-color!important;
     }
   }
 }

@@ -5,7 +5,7 @@
         <a href="{{ page.previous.url | relative_url }}" class="previous">
           <span class="pager-label">Previous</span>
           <span class="pager-title">
-            <svg class="icon icon--arrow-left" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-arrow-right' | prepend: 'assets/icons/' | relative_url }}"></use></svg> {{ page.previous.title | markdownify | remove: '<p>' | remove: '</p>' }}
+            <svg class="icon icon--back-arrow" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-back-arrow' | prepend: 'assets/icons/' | relative_url }}"></use></svg> {{ page.previous.title | markdownify | remove: '<p>' | remove: '</p>' }}
           </span>
         </a>
       </li>
@@ -22,3 +22,4 @@
     {% endif %}
   </ul>
 </nav>
+

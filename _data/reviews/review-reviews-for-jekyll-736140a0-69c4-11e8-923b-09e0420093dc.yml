@@ -1,0 +1,17 @@
+_id: 736140a0-69c4-11e8-923b-09e0420093dc
+_parent: /2018-05-27-post-reviews-for-jekyll.html
+review: '4'
+name: Don Boulton
+email: c1e68ec3dd3cc5dad0d017d2930b259c
+url: 'https://donboulton.com'
+address: ''
+title: Reviews for Jekyll
+description: >-
+  Still trying looping over the reviews data file and pulling down reviews for
+  that page. No much luck gets other pages reviews?
+product: reviews-for-jekyll
+hidden: ''
+date: '2018-06-06T20:01:50.987Z'
+timestamp: 1528315310
+tags:
+  - review-subscription

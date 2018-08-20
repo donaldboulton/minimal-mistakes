@@ -1,0 +1,158 @@
+<script>
+    function createCookie(name,value,days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days*24*60*60*1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + value + expires + "; path=/";
+    }
+    
+    function readCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0;i < ca.length;i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1,c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+        }
+        return null;
+    }
+    
+    function eraseCookie(name) {
+        createCookie(name,"",-1);
+    }
+    
+    function validateEmail(email) {
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+    }
+
+    $("form").addClass('js');
+    var formname = $("form.autofill").first().attr('id');
+    
+    if(formname) {
+       
+        if(readCookie(formname)) {
+            form_array = unescape(readCookie(formname)).split(',');
+            
+            var i = 0;
+            $( "input[type='text'], input[type='number'], input[type='email'], textarea, select, input[type='radio'], input[type='checkbox']" ).each(function(){
+                if(form_array[i]) {
+                
+                if($(this).is("input[type='radio']") || $(this).is("input[type='checkbox']")) {
+                    if ($(this).val() == form_array[i]) {
+                    if(!$(this).attr('checked')) $(this).click();
+                    } else {
+                    if($(this).attr('checked')) $(this).click();
+                    }
+                } else {
+                    $(this).val(form_array[i]);
+                    $(this).parent().addClass('active');
+                }
+
+                if ($(this).val()!='' && typeof $(this).attr('required') !== typeof undefined && $(this).attr('required') !== false) {
+                    if($(this).is("input[type='email']" )) {
+                    if (validateEmail($(this).val())) {
+                        $(this).addClass('isvalid');
+                    } else {
+                        $(this).removeClass('isvalid');
+                    }
+                    } else {
+                    $(this).addClass('isvalid');
+                    }
+                }
+                }
+                i++;
+            });
+        }
+
+        $( "input[type='text'], input[type='number'], input[type='email'], textarea, select, input[type='radio'], input[type='checkbox']" ).blur( function() {
+            
+            eraseCookie(formname);
+            var form_array = [];
+            var i = 0;
+            $( "input[type='text'], input[type='number'], input[type='email'], textarea, select, input[type='radio'], input[type='checkbox']" ).each(function(){
+            if($(this).is("input[type='radio']") || $(this).is("input[type='checkbox']")) {
+                if ($(this).is('input:checked')) {
+                form_array[i] = $(this).val();
+                }
+                else form_array[i] = '-';
+            } else {
+                form_array[i] = $(this).val();
+            }
+            i++;
+            });
+            createCookie(formname,escape(form_array.join(',')),30);
+        
+            if($(this).val()=='') $(this).parent().removeClass('active');
+        });
+    }  
+
+    $( "input[type='text'], input[type='number'], input[type='email'], textarea" ).focus( function() {
+        $(this).parent().addClass('active');
+    });
+    
+    $( "input[type='text'], input[type='number'], input[type='email'], textarea, select, input[type='checkbox']" ).blur( function() {
+        if(typeof $(this).attr('required') !== typeof undefined && $(this).attr('required') !== false) {
+        if ($(this).val()!='') {
+            if($(this).is("input[type='email']" )) {
+            if (validateEmail($(this).val())) {
+                $(this).addClass('isvalid');
+            } else {
+                $(this).removeClass('isvalid');
+                $(this).addClass('error');
+            }
+            } else {
+            $(this).addClass('isvalid');
+            }
+        } else {
+            $(this).removeClass('isvalid');
+            $(this).addClass('error');
+        }
+        }
+    });
+    
+    $( "input, textarea" ).click( function() {
+        $(this).removeClass('error');
+    });
+    
+    $('form input[type="submit"]').on('click', function(e){
+        var error = 0;
+        if($('#input_signature').val()!='') {
+
+        } else {
+        $('#signature').addClass('error');
+        error = 1;
+        }
+        $( "input[type='text'], input[type='number'], input[type='email'], textarea" ).each( function() {
+        if (typeof $(this).attr('required') !== typeof undefined && $(this).attr('required') !== false) {
+            if($(this).val()!='') { 
+            if($(this).is("input[type='email']" )) {
+                if (validateEmail($(this).val())) {
+
+                } else {
+                $(this).addClass('error');
+                error = 1;
+                }
+            }
+            } else {
+            $(this).addClass('error');
+            error = 1;
+            }
+        }
+        });
+        if (error==1) {
+        e.preventDefault();
+        
+        $('html, body').animate({
+            scrollTop: ($('.error:visible:first').offset().top - 150)
+        }, 300);
+        }
+    });
+
+    $( document ).ready(function() {
+        $(".product select").val($(".product select option:first").val());
+    });
+</script>

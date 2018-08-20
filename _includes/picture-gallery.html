@@ -1,0 +1,13 @@
+<div id="aniimated-thumbnials{% if include.id_number %}-{{ include.id_number }}{% endif %}" class="gallery">
+    <div id="gallery-sizer{% if include.id_number %}-{{ include.id_number }}{% endif %}" class="gallery-sizer"></div>
+    {% capture page.picture_path %}{{ page.gallery }}{% endcapture %}
+  {% for image in site.static_files %}
+    {% if image.path contains 'photography/picture_path' %}
+    <div class="image-wrapper" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="https://images.weserv.nl/?url=donboulton.com/assets/photography/{{ include.picture_path }}/{{ image.path }}">
+        <img itemprop="thumbnail" alt="{{ picture.title }}" src="https://images.weserv.nl/?url=donboulton.com/assets/photography/{{ include.picture_path }}/{{ image.path }}&w=320&h=320&output=jpg&q=50&t=square" />
+      </a>
+    </div>
+    {% endif %}
+  {% endfor %}
+</div>

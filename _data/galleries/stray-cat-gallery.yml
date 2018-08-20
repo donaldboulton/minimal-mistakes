@@ -1,0 +1,108 @@
+picture_path: stray-cat-gallery
+preview:
+  filename: DSCN1261
+  original: DSCN1261-1200.jpg
+  sizes:
+  - DSCN1261-1200.jpg
+  - DSCN1261-800.jpg
+  - DSCN1261-320.jpg
+  thumbnail: DSCN1261-th.jpg
+pictures:
+- filename: DSCN1252
+  original: DSCN1252-1200.jpg
+  sizes:
+  - DSCN1252-1200.jpg
+  - DSCN1252-800.jpg
+  - DSCN1252-320.jpg
+  thumbnail: DSCN1252-th.jpg
+- filename: DSCN1260
+  original: DSCN1260-1200.jpg
+  sizes:
+  - DSCN1260-1200.jpg
+  - DSCN1260-800.jpg
+  - DSCN1260-320.jpg
+  thumbnail: DSCN1260-th.jpg
+- filename: Casper
+  original: Casper-1200.jpg
+  sizes:
+  - Casper-1200.jpg
+  - Casper-800.jpg
+  - Casper-320.jpg
+  thumbnail: Casper-th.jpg
+- filename: Casper-Mousee
+  original: Casper-Mousee-1200.jpg
+  sizes:
+  - Casper-Mousee-1200.jpg
+  - Casper-Mousee-800.jpg
+  - Casper-Mousee-320.jpg
+  thumbnail: Casper-Mousee-th.jpg
+- filename: DSCN1269
+  original: DSCN1269-1200.jpg
+  sizes:
+  - DSCN1269-1200.jpg
+  - DSCN1269-800.jpg
+  - DSCN1269-320.jpg
+  thumbnail: DSCN1269-th.jpg
+- filename: DSCN1477
+  original: DSCN1477-1200.jpg
+  sizes:
+  - DSCN1477-1200.jpg
+  - DSCN1477-800.jpg
+  - DSCN1477-1320.jpg
+  thumbnail: DSCN1477-th.jpg
+- filename: DSCN1479
+  original: DSCN1479-1200.jpg
+  sizes:
+  - DSCN1479-1200.jpg
+  - DSCN1479-800.jpg
+  - DSCN1479-320.jpg
+  thumbnail: DSCN1479-th.jpg
+- filename: GrandPaw-My-Cats
+  original: GrandPaw-My-Cats-1200.jpg
+  sizes:
+  - GrandPaw-My-Cats-1200.jpg
+  - GrandPaw-My-Cats-800.jpg
+  - GrandPaw-My-Cats-320.jpg
+  thumbnail: GrandPaw-My-Cats-th.jpg
+- filename: Grandpaw
+  original: Grandpaw-1200.jpg
+  sizes:
+  - Grandpaw-1200.jpg
+  - Grandpaw-800.jpg
+  - Grandpaw-320.jpg
+  thumbnail: Grandpaw-th.jpg
+- filename: Pretty-Girl
+  original: Pretty-Girl-1200.jpg
+  sizes:
+  - Pretty-Girl-1200.jpg
+  - Pretty-Girl-800.jpg
+  - Pretty-Girl-320.jpg
+  thumbnail: Pretty-Girl-th.jpg
+- filename: Pretty-Girl-kittens
+  original: Pretty-Girl-kittens-1200.jpg
+  sizes:
+  - Pretty-Girl-kittens-1200.jpg
+  - Pretty-Girl-kittens-800.jpg
+  - Pretty-Girl-kittens-320.jpg
+  thumbnail: Pretty-Girl-kittens-th.jpg
+- filename: Pretty-Girl-1200
+  original: Pretty-Girl-1200.jpg
+  sizes:
+  - Pretty-Girl-1200.jpg
+  - Pretty-Girl-800.jpg
+  - Pretty-Girl-320.jpg
+  thumbnail: Pretty-Girl-th.jpg
+- filename: topcat-storage
+  original: topcat-storage-1200.jpg
+  sizes:
+  - topcat-storage-1200.jpg
+  - topcat-storage-800.jpg
+  - topcat-storage-320.jpg
+  thumbnail: topcat-storage-th.jpg
+- filename: Topcat-hood
+  original: Topcat-hood-1200.jpg
+  sizes:
+  - Topcat-hood-1200.jpg
+  - Topcat-hood-800.jpg
+  - Topcat-hood-320.jpg
+  thumbnail: Topcat-hood-th.jpg

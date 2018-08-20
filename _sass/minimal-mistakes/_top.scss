@@ -2,13 +2,13 @@
   width: 100%;
   margin: 0 auto;
   position: fixed;
-  bottom: 6px;
-  right: 7px;
+  bottom: 12px;
+  right: 10px;
 }
 
 .scroll {
   position: absolute;
-  right: 14px;
+  right: 20px;
   bottom: 5px;
   padding: 10px;
   text-align: center;
@@ -27,13 +27,13 @@
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
 
-    .fas {
+    .icon--chevron-up {
       padding-top: -10px;
     }
   }
 
-  .fas {
-    font-size: 25px;
+  .icon--chevron-up {
+    font-size: 30px;
     margin-top: -5px;
     margin-left: 1px;
     transition: 0.5s;

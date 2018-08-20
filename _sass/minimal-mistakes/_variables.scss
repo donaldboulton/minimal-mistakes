@@ -56,17 +56,19 @@ $lighter-gray: mix(#fff, $gray, 90%) !default;
 $background-color: #fff !default;
 $code-background-color: mix(#000, $gray, 60%) !default;
 $code-background-color-dark: $light-gray !default;
-$text-color: $dark-gray !default;
+$text-color: $light-gray !default;
 $muted-text-color: mix(#fff, $text-color, 35%) !default;
 $border-color: $lighter-gray !default;
 $form-background-color: $lighter-gray !default;
 $footer-background-color: $lighter-gray !default;
 
 $primary-color: #7a8288 !default;
-$success-color: #62c462 !default;
+$success-color: #00c100 !default;
 $warning-color: #f89406 !default;
 $danger-color: #ee5f5b !default;
 $info-color: #52adc8 !default;
+$rating-color: #EBBD5B !default;
+$toctitle-color: #141010 !default;
 
 /* YIQ color contrast */
 $yiq-contrasted-dark-default: $dark-gray !default;
@@ -91,7 +93,7 @@ $rss-color: #fa9b39 !default;
 $soundcloud-color: #ff3300 !default;
 $stackoverflow-color: #fe7a15 !default;
 $tumblr-color: #32506d !default;
-$twitter-color: #55acee !default;
+$twitter-color: #1dcaff !default;
 $vimeo-color: #1ab7ea !default;
 $vine-color: #00bf8f !default;
 $youtube-color: #bb0000 !default;
@@ -99,8 +101,8 @@ $xing-color: #006567 !default;
 
 /* links */
 $link-color: $info-color !default;
-$link-color-hover: mix(#000, $link-color, 25%) !default;
-$link-color-visited: mix(#fff, $link-color, 25%) !default;
+$link-color-hover: mix(#178080, $link-color, 25%) !default;
+$link-color-visited: mix(#cccccc, $link-color, 25%) !default;
 $masthead-link-color: $primary-color !default;
 $masthead-link-color-hover: mix(#000, $primary-color, 25%) !default;
 $navicon-link-color-hover: mix(#fff, $primary-color, 75%) !default;
@@ -122,6 +124,10 @@ $base0c: #89ddff !default;
 $base0d: #82aaff !default;
 $base0e: #c792ea !default;
 $base0f: #ff5370 !default;
+$basedb: #00c100 !default;
+$basebc: #333333 !default;
+$base99: #cccccc !default;
+$base98: #fdcccc !default;
 
 /*
    Breakpoints
@@ -137,13 +143,10 @@ $x-large: 1280px !default;
    Grid
    ========================================================================== */
 
-$right-sidebar-width-narrow: 200px !default;
-$right-sidebar-width: 300px !default;
+$right-sidebar-width-narrow: 250px !default;
+$right-sidebar-width: 275px !default;
 $right-sidebar-width-wide: 400px !default;
 
-/*
-   Other
-   ========================================================================== */
 
 $border-radius: 4px !default;
 $box-shadow: 0 1px 1px rgba(0, 0, 0, 0.125) !default;

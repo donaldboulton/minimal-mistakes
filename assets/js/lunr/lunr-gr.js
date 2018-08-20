@@ -1,5 +1,5 @@
 ---
-layout: 
+layout: null
 ---
 
 step1list = new Array();

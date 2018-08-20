@@ -6,8 +6,8 @@ div.highlighter-rouge,
 figure.highlight {
   position: relative;
   margin-bottom: 1em;
-  background: $base00;
-  color: $base05;
+  background: $basebc;
+  color: $base99;
   font-family: $monospace;
   font-size: $type-size-6;
   line-height: 1.8;
@@ -16,7 +16,8 @@ figure.highlight {
   > pre,
   pre.highlight {
     margin: 0;
-    padding: 1em;
+    padding: .8em;
+    white-space: pre-wrap;
   }
 }
 
@@ -78,7 +79,7 @@ figure.highlight {
   }
   .n {
     /* Name */
-    color: $base05;
+    color: $base99;
   }
   .o {
     /* Operator */
@@ -86,7 +87,7 @@ figure.highlight {
   }
   .p {
     /* Punctuation */
-    color: $base05;
+    color: $base99;
   }
   .cm {
     /* Comment.Multiline */
@@ -98,7 +99,7 @@ figure.highlight {
   }
   .c1 {
     /* Comment.Single */
-    color: $base04;
+    color: $basedb;
   }
   .cs {
     /* Comment.Special */
@@ -177,7 +178,7 @@ figure.highlight {
   }
   .nb {
     /* Name.Builtin */
-    color: $base05;
+    color: $base99;
   }
   .nc {
     /* Name.Class */
@@ -205,7 +206,7 @@ figure.highlight {
   }
   .nl {
     /* Name.Label */
-    color: $base05;
+    color: $base04;
   }
   .nn {
     /* Name.Namespace */
@@ -320,5 +321,6 @@ figure.highlight {
 .gist {
   th, td {
     border-bottom: 0;
+    text-decoration: none;
   }
 }
