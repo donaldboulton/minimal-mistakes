@@ -1,0 +1,6 @@
+/*
+  # TODO: https://observatory.mozilla.org/analyze.html?host=tim.allclair.org recommendations
+  # TODO: font-awesome hash
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
