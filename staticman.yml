@@ -117,7 +117,7 @@ reviews:
   filename: "review-{fields.product}-{@id}"
   moderation: false
   requiredFields: ['name', "email", 'title', 'description', 'review']
-  format: "yaml"
+  format: "json"
   path: "_data/reviews/{options.slug}"
 
   generatedFields:
