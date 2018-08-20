@@ -30,6 +30,7 @@
     "graceful-fs": "^4.1.11",
     "mkdirp": "^0.5.1",
     "nedb": "^1.8.0",
+    "netlify-auth-providers": "^1.0.0-alpha5",
     "web-push": "^3.3.2"
   },
   "devDependencies": {
