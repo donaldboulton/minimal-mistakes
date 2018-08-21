@@ -38,11 +38,7 @@ reCaptcha:
 
 webmentions:
   username: donboulton.com
-<<<<<<< HEAD
-  api_key: "jZUrcysy0Lrx2JjkchWJuQ"
-=======
->>>>>>> e2e5134fc5695bcb2fc1ef3912e17b6ee9dc660a
-  cache_folder: _data/webmentions
+  cache_folder: data/webmentions
   cache_bad_uris_for: 5
   pause_lookups: false
   collections:
