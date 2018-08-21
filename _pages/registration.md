@@ -34,4 +34,4 @@ product: registration
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_pages/registration.md
 ---
 
-{% include firebase-register.html %}
+{% include register.html %}
