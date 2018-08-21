@@ -9,11 +9,7 @@
       </svg> Add A Page Review</h3>
     </header>
  <div class="page__reviews-form">
-<<<<<<< HEAD
   <form id="review-form" class="page__form js-form form" method="post" action="https://api.staticman.net/v2/entry/donaldboulton/DWB/gh-pages/reviews" oninput="result.value=parseInt(this['fields[review]'].value)" netlify-honeypot="bot-field" netlify-recaptcha data-netlify="true">
-=======
-  <form id="review-form" class="page__form js-form form" method="post" action="https://api.staticman.net/v2/entry/donaldboulton/DWB/gh-pages/reviews" oninput="result.value=parseInt(this['fields[review]'].value)">
->>>>>>> e2e5134fc5695bcb2fc1ef3912e17b6ee9dc660a
     <div class="field-group rating-select"> <span>Add A Rating:&nbsp;</span> <label class="rating-radio-label" for="comment-form[star-1]"> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="1" name="fields[review]" id="comment-form[star-1]" checked=""> <label class="rating-radio-label" for="comment-form[star-2]"> <svg class="icon icon--star_border rating-star rating-radio-star--off"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-star_border"></use>star_border</svg> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="2" name="fields[review]" id="comment-form[star-2]"> <label class="rating-radio-label" for="comment-form[star-3]"> <svg class="icon icon--star_border rating-star rating-radio-star--off"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-star_border"></use>star_border</svg> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="3" name="fields[review]" id="comment-form[star-3]"> <label class="rating-radio-label" for="comment-form[star-4]"> <svg class="icon icon--star_border rating-star rating-radio-star--off"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-star_border"></use>star_border</svg> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="4" name="fields[review]" id="comment-form[star-4]"> <label class="rating-radio-label" for="comment-form[star-5]"> <svg class="icon icon--star_border rating-star rating-radio-star--off"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-star_border"></use>star_border</svg> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="5" name="fields[review]" id="comment-form[star-5]"></div>
       <div class="form-group">
         <label class="sr-only" for="review-form[name]">Your name</label>
@@ -28,13 +24,8 @@
         <input type="url" id="review-form[url]" name="fields[url]" placeholder="Website (optional)"/>
       </div>
       <div class="form-group hidden" style="display: none">
-<<<<<<< HEAD
         <label class="sr-only" for="bot-field">Address</label>
         <input type="text" id="review-form[address]" name="bot-field"/>
-=======
-        <label class="sr-only" for="review-form[address]">Address</label>
-        <input type="text" id="review-form[address]" name="fields[address]"/>
->>>>>>> e2e5134fc5695bcb2fc1ef3912e17b6ee9dc660a
       </div>
       <div class="form-group">
         <label class="sr-only" for="review-form[title]">Review Title</label>
@@ -49,10 +40,6 @@
         <input type="hidden" id="review-post-id" name="options[slug]" value="{{ page.slug }}">
         <input name="fields[product]" type="hidden" value="{{ page.slug }}" />
         <input name="options[redirect]" type="hidden" value="{{site.url}}{{site.baseurl}}{{ page.url }}" />
-<<<<<<< HEAD
-=======
-        <input type="hidden" id="review-form-address" name="fields[hidden]" autocomplete="off">
->>>>>>> e2e5134fc5695bcb2fc1ef3912e17b6ee9dc660a
         <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.reCaptcha.siteKey }}">
         <input type="hidden" name="options[reCaptcha][secret]" value="{{ site.reCaptcha.secret }}">
         <div>Agree to our&nbsp;<a rel="noreferrer" href="/terms">Terms and Privacy</a> <abbr class="abbr" title="Required">&nbsp;*</abbr></div>
@@ -70,10 +57,7 @@
               </div>
             </label>
       </div>
-<<<<<<< HEAD
       <div data-netlify-recaptcha></div>
-=======
->>>>>>> e2e5134fc5695bcb2fc1ef3912e17b6ee9dc660a
       <div class="form-group">
         <button type="submit" id="review-form-submit" class="g-recaptcha btn btn--primary">Submit Review</button>
       </div>

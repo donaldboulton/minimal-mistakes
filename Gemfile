@@ -8,10 +8,6 @@ gem "wdm", "~> 0.1.0"
 gem "nokogiri"
 gem "html-proofer"
 gem "activesupport"
-<<<<<<< HEAD
-=======
-gem 'webpush'
->>>>>>> e2e5134fc5695bcb2fc1ef3912e17b6ee9dc660a
 
 group :jekyll_plugins do
   gem 'jekyll-archives'
@@ -23,12 +19,7 @@ group :jekyll_plugins do
   gem 'json'
   gem 'jemoji'
   gem 'jekyll-redirect-from', '~> 0.13.0'
-<<<<<<< HEAD
   gem 'mailgun-ruby', '~>1.1.6'
   gem 'jekyll-algolia', '~> 1.0'
   gem 'jekyll-figure'
-=======
-  gem 'jekyll-figure'
-  gem 'jekyll-admin'
->>>>>>> e2e5134fc5695bcb2fc1ef3912e17b6ee9dc660a
 end
