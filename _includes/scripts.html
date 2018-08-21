@@ -271,9 +271,8 @@ $(".author__urls_masthead button").on("click", function() {
     databaseURL: 'https://airy-office-413.firebaseio.com'
   })
 }
-export default firebase.database()
 </script>
-{% if page.support contains 'firebase-login' %}
+{% if page.support contains 'firebase-login-2' %}
 <script src="{{ '/assets/js/vendor/firebase/firebase-login.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/vendor/firebase/functions.js' | relative_url }}"></script>
 {% endif %}
