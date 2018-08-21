@@ -57,6 +57,7 @@ site
 _asset_bundler_cache
 _site
 codekit-config.json
+node_modules
 example/_site
 Gemfile.lock
 npm-debug.log*

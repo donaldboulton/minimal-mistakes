@@ -23,8 +23,7 @@
     "test": "gulp build:prod && jekyll build"
   },
   "engines": {
-    "node": "8.11.3",
-    "npm": "6.4.0"
+    "node": "^6.0.0"
   },
   "dependencies": {
     "del": "^3.0.0",

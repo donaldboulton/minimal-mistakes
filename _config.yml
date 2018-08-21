@@ -16,7 +16,7 @@ logo                     : "/assets/images/fav-icons/apple-touch-icon.png"
 description              : "DWB's Jekyll Website."
 url                      : "https://donboulton.com"
 baseurl                  : "/"
-repository               : "donaldboulton/DWB"
+repository               : "https://github.com/donaldboulton/DWB.git"
 teaser                   : "/assets/images/pages/digital_box_1400-compressor.jpg"
 breadcrumbs              : true
 words_per_minute         : 200
@@ -228,6 +228,8 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - node_modules
+  - node_modules/
   - .vs
   - .vscode
   - LICENSE
