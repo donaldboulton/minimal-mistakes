@@ -34,4 +34,4 @@ product: profile
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_pages/profile.md
 ---
 
-{% include firebase-register.html %}
+{% include profile.html %}
