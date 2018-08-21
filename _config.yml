@@ -16,7 +16,7 @@ logo                     : "/assets/images/fav-icons/apple-touch-icon.png"
 description              : "DWB's Jekyll Website."
 url                      : "https://donboulton.com"
 baseurl                  : "/"
-repository               : "https://github.com/donaldboulton/DWB.git"
+repository               : "donaldboulton/DWB"
 teaser                   : "/assets/images/pages/digital_box_1400-compressor.jpg"
 breadcrumbs              : true
 words_per_minute         : 200
