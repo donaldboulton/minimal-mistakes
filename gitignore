@@ -58,10 +58,7 @@ _asset_bundler_cache
 _site
 codekit-config.json
 example/_site
-<<<<<<< HEAD
-=======
 node_modules
->>>>>>> e2e5134fc5695bcb2fc1ef3912e17b6ee9dc660a
 Gemfile.lock
 npm-debug.log*
 .vs/slnx.sqlite

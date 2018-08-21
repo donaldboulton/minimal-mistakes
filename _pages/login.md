@@ -34,4 +34,8 @@ product: login
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_pages/login.md
 ---
 
+<<<<<<< HEAD
 {% include login.html %}
+=======
+{% include firebase-login.html %}
+>>>>>>> e2e5134fc5695bcb2fc1ef3912e17b6ee9dc660a

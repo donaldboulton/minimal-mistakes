@@ -43,7 +43,11 @@ header:
   cta_label: "Posts"
   cta_url: "/year-archive/"
   caption: Gods Digital World
+<<<<<<< HEAD
 excerpt: 'Jekyll on a GitHub Repo Netlify Hosting.<br /> <small><a href="https://donboulton.com">About Donald Boulton at donboulton.com</a></small><br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
+=======
+excerpt: 'Hosted on GitHub CloudFlare with Full SSL.<br /> <small><a href="https://donboulton.com">About Donald Boulton at donboulton.com</a></small><br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
+>>>>>>> e2e5134fc5695bcb2fc1ef3912e17b6ee9dc660a
 
 feature_row:
   - image_path: /assets/images/pages/octocat.svg

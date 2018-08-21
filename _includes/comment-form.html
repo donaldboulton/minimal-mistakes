@@ -3,7 +3,11 @@
     <h3><svg class="icon icon--comment" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comment' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;Comment Form<small><a rel="noreferrer" id="cancel-comment-reply-link" href="{{ page.url | relative_url }}#respond" style="display:none;">Cancel reply</a></small></h3>
   </header>
   <div class="page__comments-form wrapper left-form">
+<<<<<<< HEAD
   <form id="comment-form" class="page__form js-form driver-fix-stacking" method="post" action="https://api.staticman.net/v2/entry/donaldboulton/DWB/gh-pages/comments" netlify-honeypot="bot-field" data-netlify="true">
+=======
+  <form id="comment-form" class="page__form js-form driver-fix-stacking" method="post" action="https://api.staticman.net/v2/entry/donaldboulton/DWB/gh-pages/comments">
+>>>>>>> e2e5134fc5695bcb2fc1ef3912e17b6ee9dc660a
     <div class="form-group">
       <label class="sr-only" for="comment-form-name"><strong>Your Name</strong></label>
       <input type="text" id="comment-form-name" name="fields[name]" required spellcheck="false" placeholder="Your Name (required *)">
@@ -17,8 +21,13 @@
       <input type="url" id="comment-form-url" name="fields[url]" placeholder="Website (optional)">
     </div>
     <div class="form-group hidden" style="display: none">
+<<<<<<< HEAD
       <label class="sr-only" for="bot-field">Address</label>
       <input type="text" id="comment-form[address]" name="bot-field"/>
+=======
+      <label class="sr-only" for="comment-form[address]">Address</label>
+      <input type="text" id="comment-form[address]" name="fields[address]"/>
+>>>>>>> e2e5134fc5695bcb2fc1ef3912e17b6ee9dc660a
     </div>
     <div class="comment__title form-group">
       <label class="sr-only" for="comment-form-title"><strong>Title</strong> <small>(required)</small></label>
@@ -32,6 +41,10 @@
       <input type="hidden" name="options[parent]" value="{{ page.url | relative_url }}">
       <input type="hidden" id="comment-replying-to" name="fields[replying_to]" value="">
       <input type="hidden" id="comment-post-id" name="options[slug]" value="{{ page.slug }}">
+<<<<<<< HEAD
+=======
+      <input type="hidden" id="comment-form-address" name="fields[hidden]" autocomplete="off">
+>>>>>>> e2e5134fc5695bcb2fc1ef3912e17b6ee9dc660a
       <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.reCaptcha.siteKey }}">
       <input type="hidden" name="options[reCaptcha][secret]" value="{{ site.reCaptcha.secret }}">
       <div class="enable-push">

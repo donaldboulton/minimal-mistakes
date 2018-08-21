@@ -256,7 +256,10 @@ $(".author__urls_masthead button").on("click", function() {
 });
 </script>
 
+<<<<<<< HEAD
 <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
+=======
+>>>>>>> e2e5134fc5695bcb2fc1ef3912e17b6ee9dc660a
 <script>
   var config = {
     apiKey: "AIzaSyBoZgIki3tEgCtgSVVWDdastZCqW9WWGKE",
@@ -271,8 +274,14 @@ $(".author__urls_masthead button").on("click", function() {
     databaseURL: 'https://airy-office-413.firebaseio.com'
   })
 }
+<<<<<<< HEAD
 </script>
 {% if page.support contains 'firebase-login-2' %}
+=======
+export default firebase.database()
+</script>
+{% if page.support contains 'firebase-login' %}
+>>>>>>> e2e5134fc5695bcb2fc1ef3912e17b6ee9dc660a
 <script src="{{ '/assets/js/vendor/firebase/firebase-login.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/vendor/firebase/functions.js' | relative_url }}"></script>
 {% endif %}
