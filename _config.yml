@@ -268,10 +268,6 @@ kramdown:
 sass:
   sass_dir: _sass
   style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
-<<<<<<< HEAD
-=======
-
->>>>>>> e2e5134fc5695bcb2fc1ef3912e17b6ee9dc660a
 # Outputting
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
@@ -290,13 +286,8 @@ plugins:
   - jekyll-tagging
   - jekyll-tagging-related_posts
   - jekyll-redirect-from
-<<<<<<< HEAD
   - jekyll-algolia
-=======
->>>>>>> e2e5134fc5695bcb2fc1ef3912e17b6ee9dc660a
   - lazyload
-  - notice
-  - jemoji
   - json
 
 # mimic GitHub Pages with --safe
@@ -312,10 +303,7 @@ whitelist:
   - jekyll-tagging
   - jekyll-tagging-related_posts
   - jekyll-redirect-from
-<<<<<<< HEAD
   - jekyll-algolia
-=======
->>>>>>> e2e5134fc5695bcb2fc1ef3912e17b6ee9dc660a
   - lazyload
   - notice
   - jemoji
@@ -456,19 +444,6 @@ defaults:
 posts_json_path: posts.json
 ipstack:
   api_key: b3e3a6f8d63be4a25492fef554f9e28a
-<<<<<<< HEAD
-
-pagination:
-  enabled: true
-  per_page: 3
-  title: ':title - page :num'
-  limit: 0
-  trail:
-    before: 2
-    after: 2
-
-=======
->>>>>>> e2e5134fc5695bcb2fc1ef3912e17b6ee9dc660a
 # Plugin: Auto Pages (jekyll-paginate-v2)
 autopages:
   enabled: true
