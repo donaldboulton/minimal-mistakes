@@ -629,3 +629,12 @@
     }
   }
 }
+
+.step {
+  display: none;
+  border: 1px solid #444;
+  padding: 20px 50px;
+}
+.step.visible {
+  display: block;
+}
