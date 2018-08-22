@@ -26,15 +26,16 @@
     "node": "^6.0.0"
   },
   "dependencies": {
+    "body-parser": "^1.18.3",
     "del": "^3.0.0",
     "express": "^4.16.3",
-    "body-parser": "^1.18.3",
     "fs-extra": "^7.0.0",
     "fs-extra-promise": "^1.0.1",
     "graceful-fs": "^4.1.11",
     "mkdirp": "^0.5.1",
     "nedb": "^1.8.0",
     "netlify-auth-providers": "^1.0.0-alpha5",
+    "netlify-identity-widget": "^1.4.14",
     "web-push": "^3.3.2"
   },
   "devDependencies": {

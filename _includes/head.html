@@ -101,8 +101,9 @@
   <link rel="webmention" href="{{ site.webmention_url }}">
 {% endif %}
 
-{% if page.support contains 'firebase-login' %}
-  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.3.0/firebaseui.css" />
+{% if page.support contains 'admin' %}
+  <link rel="stylesheet" href="https://unpkg.com/netlify-cms@^1.0/dist/cms.css" />
+  <script src="https://identity-js.netlify.com/v1/netlify-identity-widget.js"></script>
 {% endif %}
 
 <!-- AMP Article -->
