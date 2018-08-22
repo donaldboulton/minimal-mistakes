@@ -198,6 +198,12 @@ firebase:
   - auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
   - client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-70gvb%40airy-office-413.iam.gserviceaccount.com"
 
+backend:
+  name: git-gateway
+  branch: gh-pages # Branch to update (master by default)
+
+media_folder: "assets/img/uploads"
+
 extlinks:
   attributes: {rel: noreferrer, target: _blank}
   rel_exclude: ['facebook.com', 'twitter.com']

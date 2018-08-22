@@ -3,7 +3,7 @@
     <h3><svg class="icon icon--comment" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comment' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;Comment Form<small><a rel="noreferrer" id="cancel-comment-reply-link" href="{{ page.url | relative_url }}#respond" style="display:none;">Cancel reply</a></small></h3>
   </header>
   <div class="page__comments-form wrapper left-form">
-  <form id="comment-form" class="page__form js-form driver-fix-stacking" method="post" action="https://api.staticman.net/v2/entry/donaldboulton/DWB/gh-pages/comments" netlify-honeypot="bot-field" data-netlify="true">
+  <form id="comment-form" class="page__form js-form driver-fix-stacking" method="post" action="https://api.staticman.net/v2/entry/donaldboulton/DWB/gh-pages/comments" netlify-honeypot="bot-field" netlify>
     <div class="form-group">
       <label class="sr-only" for="comment-form-name"><strong>Your Name</strong></label>
       <input type="text" id="comment-form-name" name="fields[name]" required spellcheck="false" placeholder="Your Name (required *)">
