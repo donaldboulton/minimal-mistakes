@@ -58,7 +58,7 @@
             {% unless reviewData.url == blank %}
             <small><span class="review-author-name">
               <span itemprop="url">
-                <a rel="noreferrer" href="{{ reviewData.url }}"></span>
+                <a rel="noreferrer" title="{{ reviewData.name | strip_html }}" href="{{ reviewData.url }}"></span>
                   <span itemprop="name">{{ reviewData.name | strip_html }}</span>
                 </a>
               {% else %}
