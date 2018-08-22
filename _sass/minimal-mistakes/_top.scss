@@ -1,44 +1,25 @@
-.scrolltop {
-  width: 100%;
-  margin: 0 auto;
+#toTop {
+  padding: .5em 1em;
+  width: auto;
+  display: none;
+  text-align: center;
   position: fixed;
-  bottom: 12px;
-  right: 10px;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  color: white;
+  font-size: 18px;
+  border: 0;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  background: #1d1d1d;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .08);
+  transform: translateY(0);
+  transition: all .15s ease;
 }
 
-.scroll {
-  position: absolute;
-  right: 20px;
-  bottom: 5px;
-  padding: 10px;
-  text-align: center;
-  margin: 0 0 0 0;
-  cursor: pointer;
-  transition: 0.5s;
-  border-radius: 2px;
-  -moz-transition: 0.5s;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-
-  &:hover {
-    background: rgba(178,178,178,1.0);
-    transition: 0.5s;
-    -moz-transition: 0.5s;
-    -webkit-transition: 0.5s;
-    -o-transition: 0.5s;
-
-    .icon--chevron-up {
-      padding-top: -10px;
-    }
-  }
-
-  .icon--chevron-up {
-    font-size: 30px;
-    margin-top: -5px;
-    margin-left: 1px;
-    transition: 0.5s;
-    -moz-transition: 0.5s;
-    -webkit-transition: 0.5s;
-    -o-transition: 0.5s;
-  }
+#toTop:hover {
+  background-color: #00c100;
 }
