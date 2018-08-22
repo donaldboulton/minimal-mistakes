@@ -23,7 +23,7 @@
     "test": "gulp build:prod && jekyll build"
   },
   "engines": {
-    "node": "^6.0.0"
+    "node": ">= 0.10.0"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
@@ -31,11 +31,14 @@
     "express": "^4.16.3",
     "fs-extra": "^7.0.0",
     "fs-extra-promise": "^1.0.1",
+    "gotrue-js": "^0.9.22",
     "graceful-fs": "^4.1.11",
     "mkdirp": "^0.5.1",
     "nedb": "^1.8.0",
     "netlify-auth-providers": "^1.0.0-alpha5",
     "netlify-identity-widget": "^1.4.14",
+    "node": "^10.8.0",
+    "node-fetch": "^2.2.0",
     "web-push": "^3.3.2"
   },
   "devDependencies": {
