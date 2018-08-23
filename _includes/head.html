@@ -43,7 +43,7 @@
 <link rel="alternate" title="{{ site.title }} Feed" type="application/atom+xml" href="{{ 'atom.xml' | absolute_url }}">
 <link rel="alternate" title="{{ site.title }} Feed" type="application/json" href="{{ 'feed.json' | absolute_url }}">
 <link rel="manifest" href="{{ 'manifest.json' | absolute_url }}">
-<link rel="amphtml" href="{{ site.url }}{{ page.url }}" />
+<link rel="amphtml" href="{{ site.url }}{{ amp.page.url }}" />
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-30162465-2"></script>
 <script>
@@ -107,3 +107,5 @@
     <link rel="amphtml" href="{{ site.baseurl }}/amp-html/{{ page.amp_path }}.html">
   {% endunless %}
 {% endif %}
+
+<script src="https://identity-js.netlify.com/v1/netlify-identity-widget.js"></script>

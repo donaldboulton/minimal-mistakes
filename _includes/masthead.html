@@ -28,6 +28,9 @@
             </svg></a>
           </li>
           {% endif %}
+          <li class="masthead__menu-item">
+            <span data-netlify-identity-button><svg class="icon icon--sign-in-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#sign-in-alt' | prepend: 'assets/icons/' | relative_url }}"></use></svg></span>
+          </li>
         </ul>
         {% if site.search == true %}
         <button class="search__toggle" aria-label="Search" type="button">
