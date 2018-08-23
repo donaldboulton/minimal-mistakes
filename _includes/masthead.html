@@ -28,8 +28,8 @@
             </svg></a>
           </li>
           {% endif %}
-          <li class="masthead__menu-item">
-            <span data-netlify-identity-button><svg class="icon icon--sign-in-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#sign-in-alt' | prepend: 'assets/icons/' | relative_url }}"></use></svg></span>
+          <li data-netlify-identity-button class="masthead__menu-item">
+            <a class="netlify-identity-button" href="#"><svg class="icon icon--sign-in-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#sign-in-alt' | prepend: 'assets/icons/' | relative_url }}"></use></svg></a>
           </li>
         </ul>
         {% if site.search == true %}
