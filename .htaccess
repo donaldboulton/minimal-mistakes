@@ -24,8 +24,8 @@ AddHandler server-parsed .shtml .html .htm
 # Allow cross-origin requests.
 #
 # https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS
-# http://enable-cors.org/
-# http://www.w3.org/TR/cors/
+# https://enable-cors.org/
+# https://www.w3.org/TR/cors/
 
 # <IfModule mod_headers.c>
 #     Header set Access-Control-Allow-Origin "*"
@@ -72,8 +72,8 @@ AddHandler server-parsed .shtml .html .htm
 # some of the attributes of the `PerformanceResourceTiming` object will
 # be set to zero.
 #
-# http://www.w3.org/TR/resource-timing/
-# http://www.stevesouders.com/blog/2014/08/21/resource-timing-practical-tips/
+# https://www.w3.org/TR/resource-timing/
+# https://www.stevesouders.com/blog/2014/08/21/resource-timing-practical-tips/
 
 # <IfModule mod_headers.c>
 #     Header set Timing-Allow-Origin: "*"
@@ -126,7 +126,7 @@ Options -MultiViews
 # consider enabling `Enterprise Mode` throughout your company.
 #
 # https://msdn.microsoft.com/en-us/library/ie/bg182625.aspx#docmode
-# http://blogs.msdn.com/b/ie/archive/2014/04/02/stay-up-to-date-with-enterprise-mode-for-internet-explorer-11.aspx
+# https://blogs.msdn.com/b/ie/archive/2014/04/02/stay-up-to-date-with-enterprise-mode-for-internet-explorer-11.aspx
 
 <IfModule mod_headers.c>
 
@@ -149,7 +149,7 @@ Options -MultiViews
 # Allow cookies to be set from iframes in Internet Explorer.
 #
 # https://msdn.microsoft.com/en-us/library/ms537343.aspx
-# http://www.w3.org/TR/2000/CR-P3P-20001215/
+# https://www.w3.org/TR/2000/CR-P3P-20001215/
 
 # <IfModule mod_headers.c>
 #     Header set P3P "policyref=\"/w3c/p3p.xml\", CP=\"IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi CONi HIS OUR IND CNT\""
@@ -352,7 +352,7 @@ AddDefaultCharset utf-8
 # | Forcing `https://`                                                 |
 # ----------------------------------------------------------------------
 
-# Redirect from the `http://` to the `https://` version of the URL.
+# Redirect from the `https://` to the `https://` version of the URL.
 # https://wiki.apache.org/httpd/RewriteHTTPToHTTPS
 
 # <IfModule mod_rewrite.c>
@@ -372,7 +372,7 @@ AddDefaultCharset utf-8
 # one.
 #
 # By default `Option 1` (no `www.`) is activated.
-# http://no-www.org/faq.php?q=class_b
+# https://no-www.org/faq.php?q=class_b
 #
 # If you would prefer to use `Option 2`, just comment out all the
 # lines from `Option 1` and uncomment the ones from `Option 2`.
@@ -442,7 +442,7 @@ AddDefaultCharset utf-8
 # https://cure53.de/xfo-clickjacking.pdf.
 #
 # https://tools.ietf.org/html/rfc7034
-# http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx
+# https://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx
 # https://www.owasp.org/index.php/Clickjacking
 
 # <IfModule mod_headers.c>
@@ -474,11 +474,11 @@ AddDefaultCharset utf-8
 # That almost certainly won't work as-is for your website!
 #
 # To make things easier, you can use an online CSP header generator
-# such as: http://cspisawesome.com/.
+# such as: https://cspisawesome.com/.
 #
-# http://content-security-policy.com/
-# http://www.html5rocks.com/en/tutorials/security/content-security-policy/
-# http://www.w3.org/TR/CSP11/).
+# https://content-security-policy.com/
+# https://www.html5rocks.com/en/tutorials/security/content-security-policy/
+# https://www.w3.org/TR/CSP11/).
 
 # <IfModule mod_headers.c>
 
@@ -541,7 +541,7 @@ AddDefaultCharset utf-8
 # left by some text editors and can pose a security risk when anyone
 # has access to them.
 #
-# http://feross.org/cmsploit/
+# https://feross.org/cmsploit/
 #
 # (!) Update the `<FilesMatch>` regular expression from below to
 # include any files that might end up on your production server and
@@ -583,9 +583,9 @@ AddDefaultCharset utf-8
 # (!) Remove the `includeSubDomains` optional directive if the website's
 # subdomains are not using HTTPS.
 #
-# http://www.html5rocks.com/en/tutorials/security/transport-layer-security/
+# https://www.html5rocks.com/en/tutorials/security/transport-layer-security/
 # https://tools.ietf.org/html/draft-ietf-websec-strict-transport-sec-14#section-6.1
-# http://blogs.msdn.com/b/ieinternals/archive/2014/08/18/hsts-strict-transport-security-attacks-mitigations-deployment-https.aspx
+# https://blogs.msdn.com/b/ieinternals/archive/2014/08/18/hsts-strict-transport-security-attacks-mitigations-deployment-https.aspx
 
 # <IfModule mod_headers.c>
 #     Header always set Strict-Transport-Security "max-age=16070400; includeSubDomains"
@@ -602,8 +602,8 @@ AddDefaultCharset utf-8
 # is serving user-uploaded content or content that could potentially be
 # treated as executable by the browser.
 #
-# http://www.slideshare.net/hasegawayosuke/owasp-hasegawa
-# http://blogs.msdn.com/b/ie/archive/2008/07/02/ie8-security-part-v-comprehensive-protection.aspx
+# https://www.slideshare.net/hasegawayosuke/owasp-hasegawa
+# https://blogs.msdn.com/b/ie/archive/2008/07/02/ie8-security-part-v-comprehensive-protection.aspx
 # https://msdn.microsoft.com/en-us/library/ie/gg622941.aspx
 # https://mimesniff.spec.whatwg.org/
 
@@ -643,8 +643,8 @@ AddDefaultCharset utf-8
 #     you are taking all possible measures to prevent XSS attacks, the
 #     most obvious being: validating and sanitizing your website's inputs.
 #
-# http://blogs.msdn.com/b/ie/archive/2008/07/02/ie8-security-part-iv-the-xss-filter.aspx
-# http://blogs.msdn.com/b/ieinternals/archive/2011/01/31/controlling-the-internet-explorer-xss-filter-with-the-x-xss-protection-http-header.aspx
+# https://blogs.msdn.com/b/ie/archive/2008/07/02/ie8-security-part-iv-the-xss-filter.aspx
+# https://blogs.msdn.com/b/ieinternals/archive/2011/01/31/controlling-the-internet-explorer-xss-filter-with-the-x-xss-protection-http-header.aspx
 # https://www.owasp.org/index.php/Cross-site_Scripting_%28XSS%29
 
 # <IfModule mod_headers.c>

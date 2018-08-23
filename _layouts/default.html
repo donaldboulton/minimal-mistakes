@@ -4,7 +4,7 @@ layout: compress
 
 <!doctype html>
 
-<html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js" itemscope itemtype="http://schema.org/WebSite">
+<html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js" itemscope itemtype="https://schema.org/WebSite">
 <head>
   {% include head.html %}
   {% include head/custom.html %}
@@ -13,7 +13,7 @@ layout: compress
   {% endif %}
 </head>
 
-<body id="style-3" class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %} auth-false" itemscope itemtype="http://schema.org/WebPage">
+<body id="style-3" class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %} auth-false" itemscope itemtype="https://schema.org/WebPage">
   <meta itemprop="url" content="{{ site.url }}{{ page.url }}" />
 <noscript><iframe aria-label="google hidden iframe" src="https://www.googletagmanager.com/ns.html?id=GTM-TDPND89"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -28,7 +28,7 @@ layout: compress
       {{ content }}
     </div>
   </div>
-  <div class="text-center" role="note" itemscope itemtype="http://schema.org/WPAdBlock">
+  <div class="text-center" role="note" itemscope itemtype="https://schema.org/WPAdBlock">
         <meta itemprop="name" content="Adsense for {{ page.title }}"/>
         <meta itemprop="description" content="Support {{ site.title }} by using Adsense and other advertisements."/>
         <ins class="adsbygoogle"
@@ -40,7 +40,7 @@ layout: compress
           (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
     </div>
-  <div class="page__footer" itemscope itemtype="http://schema.org/WPFooter">
+  <div class="page__footer" itemscope itemtype="https://schema.org/WPFooter">
     <footer>
       {% include footer.html %}
     </footer>

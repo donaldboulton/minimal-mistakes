@@ -52,16 +52,16 @@ github_editme_path: donaldboulton/DWB/blob/gh-pages/amp-html/2018-02-25-post-Win
 
 Basic Tweaks Sites:
 
-[TweakHounds](http://www.tweakhound.com/vista/tweakguide/page_3.htm),
-[PcTuneUpTips](http://pctuneuptips.com/tips/vista_tweaks/),
-[H Enthusiasts](http://enthusiast.hardocp.com/article.html?art=MTMyNywxLCxoZW50aHVzaWFzdA==),
-[Windows Fanatics](http://www.lockergnome.com/windows/)
+[TweakHounds](https://www.tweakhound.com/vista/tweakguide/page_3.htm),
+[PcTuneUpTips](https://pctuneuptips.com/tips/vista_tweaks/),
+[H Enthusiasts](https://enthusiast.hardocp.com/article.html?art=MTMyNywxLCxoZW50aHVzaWFzdA==),
+[Windows Fanatics](https://www.lockergnome.com/windows/)
 
 ## Windows Fanatics at TechNet
 
- [Tech Net 1,](http://technet.microsoft.com/en-us/magazine/cc162494)
- [Tech Net 2,](http://technet.microsoft.com/en-us/magazine/cc162480.aspx)
- [Tech Net 3](http://technet.microsoft.com/en-us/magazine/cc162480.aspx)
+ [Tech Net 1,](https://technet.microsoft.com/en-us/magazine/cc162494)
+ [Tech Net 2,](https://technet.microsoft.com/en-us/magazine/cc162480.aspx)
+ [Tech Net 3](https://technet.microsoft.com/en-us/magazine/cc162480.aspx)
 
 Below is My testing and Opinions, "try at you own risk".
 
@@ -73,11 +73,11 @@ Go to Control Panel, Click System, Go to advanced System settings in left pane, 
 
 #### Virtual Memory
 
-Also on the Advanced tab for Virtual Memory click the Change button and  a new window will again pop up, click on Custom size button, type in the initial size as 4069 and in the Maximum size type 8069 and then click set, you can do this for more than one drive, and the maximum size can be at 3 times the amount of RAM installed on your computer. If you see warnings at these [Windows Vista](http://windowshelp.microsoft.com/Windows/en-US/Help/89ca317f-649d-40a6-8934-e5707ee5c4b81033.mspx) recommended levels, then increase the minimum and maximum sizes.
+Also on the Advanced tab for Virtual Memory click the Change button and  a new window will again pop up, click on Custom size button, type in the initial size as 4069 and in the Maximum size type 8069 and then click set, you can do this for more than one drive, and the maximum size can be at 3 times the amount of RAM installed on your computer. If you see warnings at these [Windows Vista](https://windowshelp.microsoft.com/Windows/en-US/Help/89ca317f-649d-40a6-8934-e5707ee5c4b81033.mspx) recommended levels, then increase the minimum and maximum sizes.
 
 Vista SP1 changes this to allot of different Values, some sites suggest not to set this to custom and let Windows decide Virtual Memory settings,  OK, they said that about XP also, but I found setting this to the max and on multiple drives increases performance and in XP if you reboot several times and then set it back o System Managed size it will increase the normal System management and size of page filing by letting Windows decide Virtual Memory settings, kind of tricks Windows into increasing this value, through its own Management. I leave it on custom, and to the MAX.
 
-My second partition I set to 2069 and 4069 which was the best min & max for XP Pro 32 bit. CAUTION, the above [Virtual Memory](http://windowshelp.microsoft.com/Windows/en-US/Help/89ca317f-649d-40a6-8934-e5707ee5c4b81033.mspx) setting is for 64 bit machines. Initial minimum: 1536 or 3072 or 4096 Maximum:, is max in X86 32 bit XP Machines. Some Vista Tweak's web sites recommend Disabling Virtual Memory, I don't know what they are smoking, but I don not recommend sharing whatever they are puffing on or Disabling Virtual Memory.
+My second partition I set to 2069 and 4069 which was the best min & max for XP Pro 32 bit. CAUTION, the above [Virtual Memory](https://windowshelp.microsoft.com/Windows/en-US/Help/89ca317f-649d-40a6-8934-e5707ee5c4b81033.mspx) setting is for 64 bit machines. Initial minimum: 1536 or 3072 or 4096 Maximum:, is max in X86 32 bit XP Machines. Some Vista Tweak's web sites recommend Disabling Virtual Memory, I don't know what they are smoking, but I don not recommend sharing whatever they are puffing on or Disabling Virtual Memory.
 
 [Top](#Top)
 
@@ -195,7 +195,7 @@ A ADDED VALUE!
 
 Links for regedit below.
 
-[Added registry entry for 32 bit not 64 bit](http://www.liutilities.com/products/registrybooster/tweaklibrary/tweaks/11423/)
+[Added registry entry for 32 bit not 64 bit](https://www.liutilities.com/products/registrybooster/tweaklibrary/tweaks/11423/)
 
 ```sql
 [Path: [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\]
@@ -208,7 +208,7 @@ Location: Local Machine
 Value Name: DisableAntiSpyware Data Type: DWORD (DWORD Value)
 Enabled Value: 1 >
 Disabled Value: 0
-Action Type: Add an Entry](http://www.liutilities.com/products/registrybooster/tweaklibrary/tweaks/11423/)
+Action Type: Add an Entry](https://www.liutilities.com/products/registrybooster/tweaklibrary/tweaks/11423/)
 ```
 
 A Changed Value!
@@ -381,7 +381,7 @@ If you use the Windows Explorer shortcut on your Start Menu, you probably notice
 
 If you find this to be an annoyance, Explorer always opening to the Documents folder, you can configure it to open to a folder of your choice. You can do so by editing the properties of the Windows Explorer shortcut.
 
-Open [Windows Explorer](http://www.lockergnome.com/windows/2007/08/27/start-explorer-in-a-different-folder-in-windows-vista/)and locate your Start Menu folder. Right click the shortcut to Windows Explorer and click Properties. From the Shortcut tab, change the target so it reads as follows: %systemroot%\explorer.exe /n, /e, x:\folder where x:\folder is the path to the folder that you want Explorer to open in. Click OK. Now when you launch Windows Explorer from the Start Menu, it will open in the folder that you specified.
+Open [Windows Explorer](https://www.lockergnome.com/windows/2007/08/27/start-explorer-in-a-different-folder-in-windows-vista/)and locate your Start Menu folder. Right click the shortcut to Windows Explorer and click Properties. From the Shortcut tab, change the target so it reads as follows: %systemroot%\explorer.exe /n, /e, x:\folder where x:\folder is the path to the folder that you want Explorer to open in. Click OK. Now when you launch Windows Explorer from the Start Menu, it will open in the folder that you specified.
 
 This is located in my computer in the Explorer Location Bar at:
 
@@ -407,6 +407,6 @@ Sometimes if you use a different drive as explained above for [Loading Multiple 
 
 This can be done in my system to %SystemRoot%\explorer.exe /n, /e, E:\Downloads, or whichever drive letter you have for the separate Hard Drive and/or Partition's, better on a separate Hard Drive.
 
-Thanks To:, Dana Huggins at [Windows Fanatics](http://www.lockergnome.com/windows/)
+Thanks To:, Dana Huggins at [Windows Fanatics](https://www.lockergnome.com/windows/)
 
 {% include links.html %}

@@ -1,5 +1,5 @@
 # Jekyll Sort by Name and Post Count Filter
-# http://www.codeofclimber.ru/2015/sorting-site-tags-in-jekyll/
+# https://www.codeofclimber.ru/2015/sorting-site-tags-in-jekyll/
 
 # Sort by name example:
 # <ul>

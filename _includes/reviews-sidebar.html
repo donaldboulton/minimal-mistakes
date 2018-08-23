@@ -7,7 +7,7 @@
 		{% assign reviewData = review[1] %}
 		<article class="toc1">
 				<span class="section-title">
-					<h3 class="nav__title1"><svg width="14px" height="16px" class="icon icon--pulse" viewBox="0 0 14 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+					<h3 class="nav__title1"><svg width="14px" height="16px" class="icon icon--pulse" viewBox="0 0 14 16" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
 						<g id="Octicons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 							<g id="pulse" fill="#ffffff">
 								<polygon id="Shape" points="11.5 8 8.8 5.4 6.6 8.5 5.5 1.6 2.38 8 0 8 0 10 3.6 10 4.5 8.2 5.4 13.6 9 8.5 10.6 10 14 10 14 8"></polygon>
@@ -56,7 +56,7 @@
             <div> {{ reviewData.description | markdownify | strip_html | truncate: 130 }}</div>
 				</div>
 			</div>
-				<span itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+				<span itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
           <meta class="hidden" content="donboulton.com">
         </span>
         <meta type="hidden" value="{{ page.url | absolute_url }}">

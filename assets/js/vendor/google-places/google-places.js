@@ -289,10 +289,10 @@
           // Set totals and averages - may be used later.
           var averageReview = reviewPointTotal / ( reviews.length );
           if(element instanceof jQuery){
-            element.append( '<span itemscope="" itemtype="http://schema.org/' + schema.type + '">'
+            element.append( '<span itemscope="" itemtype="https://schema.org/' + schema.type + '">'
             +  '<meta itemprop="url" content="' + location.origin + '">'
             +  schema.beforeText + ' <span itemprop="name">' + placeData.name + '</span> '
-            +  '<span itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">'
+            +  '<span itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating">'
             +    '<span itemprop="ratingValue">' + averageReview.toFixed(2) + '</span>/<span itemprop="bestRating">5</span> '
             +  schema.middleText + ' <span itemprop="ratingCount">' + reviews.length + '</span> '
             +  schema.afterText

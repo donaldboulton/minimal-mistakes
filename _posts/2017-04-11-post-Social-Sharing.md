@@ -103,7 +103,7 @@ Url's Model is buy url=@Model.Url on each link  and by addingdata-url="@Model.U
         <div class="row">
         <span class="btn-group">
         <a class="iframe btn btn-sm btn-default" data-toggle="tooltip" data-url="@@Model.Url"
-        data-count="horizontal" title="" href="http://feeds.feedburner.com/donboulton/Sohc" data-original-title="Don Boulton Blog RSS">
+        data-count="horizontal" title="" href="https://feeds.feedburner.com/donboulton/Sohc" data-original-title="Don Boulton Blog RSS">
         <i class="fa fa-rss"></i>
         </a>
         <a class="btn btn-sm btn-default" data-toggle="tooltip" data-toggle="tooltip"
@@ -126,7 +126,7 @@ Url's Model is buy url=@Model.Url on each link  and by addingdata-url="@Model.U
         <i class="fa fa-facebook"></i>
         </a>
         <a class="btn btn-sm btn-default" data-toggle="tooltip" data-url="@@Model.Url"
-                       href="http://www.linkedin.com/shareArticle?mini=true&url=@@Model.Url&title=YOUR TITLE%20Website&summary=My%20favorite%20web%20site&source=YOR WEBSITE URL" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" data-original-title="LinkedIn">
+                       href="https://www.linkedin.com/shareArticle?mini=true&url=@@Model.Url&title=YOUR TITLE%20Website&summary=My%20favorite%20web%20site&source=YOR WEBSITE URL" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" data-original-title="LinkedIn">
         <i class="fa fa-linkedin"></i>
         </a>
         <a class="btn btn-sm btn-default" data-toggle="tooltip"
@@ -135,7 +135,7 @@ Url's Model is buy url=@Model.Url on each link  and by addingdata-url="@Model.U
         <i class="fa fa-windows"></i>
         </a>
         <a data-toggle="tooltip" data-url="@@Model.Url"
-                       data-original-title="Proof of God scientifically" class="youtube btn btn-sm btn-default" href="http://www.youtube.com/embed/p00AYijRJy4?feature=player_detailpage">
+                       data-original-title="Proof of God scientifically" class="youtube btn btn-sm btn-default" href="https://www.youtube.com/embed/p00AYijRJy4?feature=player_detailpage">
         <i class="fa fa-youtube"></i>
         </a>
         <input value="donboulton/Sohc" name="uri" type="hidden"> //For Feedburner

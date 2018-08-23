@@ -51,7 +51,7 @@ webmentions:
     webmentions: _includes/webmentions/webmentions.html
   js: false
   legacy_domains:
-    - http://donboulton.com
+    - https://donboulton.com
 
   throttle_lookups:
     last_week: daily
@@ -272,7 +272,7 @@ kramdown:
 # Sass/SCSS
 sass:
   sass_dir: _sass
-  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+  style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
 # Outputting
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
@@ -347,7 +347,7 @@ jekyll-archives:
      tag: /tags/:name/
 
 # HTML Compression
-# - http://jch.penibelst.de/
+# - https://jch.penibelst.de/
 compress_html:
   clippings: all
   comments:  ["<!-- ", " -->"]

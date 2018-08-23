@@ -24,7 +24,7 @@ Minimal Mistakes is a flexible two-column Jekyll theme. Perfect for hosting your
 - Support for Jekyll's built-in Sass/SCSS preprocessor.
 - Nine different skins (color variations).
 - Several responsive layout options (single, archive index, search, splash, and paginated home page).
-- Optimized for search engines with support for [Twitter Cards](https://dev.twitter.com/cards/overview) and [Open Graph](http://ogp.me/) data
+- Optimized for search engines with support for [Twitter Cards](https://dev.twitter.com/cards/overview) and [Open Graph](https://ogp.me/) data
 - Optional [header images](https://mmistakes.github.io/minimal-mistakes/docs/layouts/#headers), [custom sidebars](https://mmistakes.github.io/minimal-mistakes/docs/layouts/#sidebars), [table of contents](https://mmistakes.github.io/minimal-mistakes/docs/helpers/#table-of-contents), [galleries](https://mmistakes.github.io/minimal-mistakes/docs/helpers/#gallery), related posts, [breadcrumb links](https://mmistakes.github.io/minimal-mistakes/docs/configuration/#breadcrumb-navigation-beta), [navigation lists](https://mmistakes.github.io/minimal-mistakes/docs/helpers/#navigation-list), and more.
 - Commenting and Reviews support (powered by [Disqus](https://disqus.com/), [Facebook](https://developers.facebook.com/docs/plugins/comments), Google+, [Discourse](https://www.discourse.org/), static-based via [Staticman v1 and v2](https://staticman.net/), and custom).
 - [Google Analytics](https://www.google.com/analytics/) support.
@@ -81,7 +81,7 @@ There are three ways to install the theme: as a Ruby gem (for self-hosted sites)
    gem "minimal-mistakes-jekyll"
    ```
 
-2. Fetch and update bundled gems by running the following [Bundler](http://bundler.io/) command:
+2. Fetch and update bundled gems by running the following [Bundler](https://bundler.io/) command:
 
    ```bash
    bundle
@@ -105,7 +105,7 @@ To update the theme run `bundle update`.
    gem "github-pages", group: :jekyll_plugins
    ```
 
-2. Fetch and update bundled gems by running the following [Bundler](http://bundler.io/) command:
+2. Fetch and update bundled gems by running the following [Bundler](https://bundler.io/) command:
 
    ```bash
    bundle
@@ -141,7 +141,7 @@ Theme documentation and demo pages can be found in the [`/docs`](docs) if submit
 
 To set up your environment to develop this theme, run `bundle install`.
 
-To test the theme, run `bundle exec rake preview` and open your browser at `http://localhost:4000/test/`. This starts a Jekyll server using content in the `test/` directory. As modifications are made to the theme and test site, it will regenerate and you should see the changes in the browser after a refresh.
+To test the theme, run `bundle exec rake preview` and open your browser at `https://localhost:4000/test/`. This starts a Jekyll server using content in the `test/` directory. As modifications are made to the theme and test site, it will regenerate and you should see the changes in the browser after a refresh.
 
 ---
 
@@ -158,20 +158,20 @@ To test the theme, run `bundle exec rake preview` and open your browser at `http
 ### Icons + Demo Images:
 
 - [The Noun Project](https://thenounproject.com) -- Garrett Knoll, Arthur Shlain, and [tracy tam](https://thenounproject.com/tracytam)
-- [Font Awesome](http://fontawesome.io/)
+- [Font Awesome](https://fontawesome.io/)
 - [Unsplash](https://unsplash.com/)
 
 ### Other:
 
-- [Jekyll](http://jekyllrb.com/)
-- [jQuery](http://jquery.com/)
-- [Susy](http://susy.oddbird.net/)
-- [Breakpoint](http://breakpoint-sass.com/)
-- [Magnific Popup](http://dimsemenov.com/plugins/magnific-popup/)
-- [FitVids.JS](http://fitvidsjs.com/)
+- [Jekyll](https://jekyllrb.com/)
+- [jQuery](https://jquery.com/)
+- [Susy](https://susy.oddbird.net/)
+- [Breakpoint](https://breakpoint-sass.com/)
+- [Magnific Popup](https://dimsemenov.com/plugins/magnific-popup/)
+- [FitVids.JS](https://fitvidsjs.com/)
 - [GreedyNav.js](https://github.com/lukejacksonn/GreedyNav)
 - [jQuery Smooth Scroll](https://github.com/kswedberg/jquery-smooth-scroll)
-- [Lunr](http://lunrjs.com)
+- [Lunr](https://lunrjs.com)
 
 ---
 
@@ -203,45 +203,45 @@ Minimal Mistakes incorporates icons from [The Noun Project](https://thenounproje
 creators Garrett Knoll, Arthur Shlain, and tracy tam.
 Icons are distributed under Creative Commons Attribution 3.0 United States (CC BY 3.0 US).
 
-Minimal Mistakes incorporates [Font Awesome](http://fontawesome.io/),
+Minimal Mistakes incorporates [Font Awesome](https://fontawesome.io/),
 Copyright (c) 2017 Dave Gandy.
-Font Awesome is distributed under the terms of the [SIL OFL 1.1](http://scripts.sil.org/OFL) 
-and [MIT License](http://opensource.org/licenses/MIT).
+Font Awesome is distributed under the terms of the [SIL OFL 1.1](https://scripts.sil.org/OFL) 
+and [MIT License](https://opensource.org/licenses/MIT).
 
 Minimal Mistakes incorporates photographs from [Unsplash](https://unsplash.com).
 
-Minimal Mistakes incorporates [Susy](http://susy.oddbird.net/),
+Minimal Mistakes incorporates [Susy](https://susy.oddbird.net/),
 Copyright (c) 2017, Miriam Eric Suzanne.
 Susy is distributed under the terms of the [BSD 3-clause "New" or "Revised" License](https://opensource.org/licenses/BSD-3-Clause).
 
-Minimal Mistakes incorporates [Breakpoint](http://breakpoint-sass.com/).
-Breakpoint is distributed under the terms of the [MIT/GPL Licenses](http://opensource.org/licenses/MIT).
+Minimal Mistakes incorporates [Breakpoint](https://breakpoint-sass.com/).
+Breakpoint is distributed under the terms of the [MIT/GPL Licenses](https://opensource.org/licenses/MIT).
 
 Minimal Mistakes incorporates [FitVids.js](https://github.com/davatron5000/FitVids.js/),
 Copyright (c) 2013 Dave Rubert and Chris Coyier.
-FitVids is distributed under the terms of the [WTFPL License](http://sam.zoy.org/wtfpl/).
+FitVids is distributed under the terms of the [WTFPL License](https://sam.zoy.org/wtfpl/).
 
-Minimal Mistakes incorporates [Magnific Popup](http://dimsemenov.com/plugins/magnific-popup/),
-Copyright (c) 2014-2016 Dmitry Semenov, http://dimsemenov.com.
+Minimal Mistakes incorporates [Magnific Popup](https://dimsemenov.com/plugins/magnific-popup/),
+Copyright (c) 2014-2016 Dmitry Semenov, https://dimsemenov.com.
 Magnific Popup is distributed under the terms of the MIT License.
 
 Minimal Mistakes incorporates [jQuery Smooth Scroll](https://github.com/kswedberg/jquery-smooth-scroll),
 Copyright (c) 2017 Karl Swedberg.
-jQuery Smooth Scroll is distributed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+jQuery Smooth Scroll is distributed under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
 Minimal Mistakes incorporates [GreedyNav.js](https://github.com/lukejacksonn/GreedyNav),
 Copyright (c) 2015 Luke Jackson.
-GreedyNav.js is distributed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+GreedyNav.js is distributed under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
 Minimal Mistakes incorporates [Jekyll Group-By-Array](https://github.com/mushishi78/jekyll-group-by-array),
 Copyright (c) 2015 Max White <mushishi78@gmail.com>.
-Jekyll Group-By-Array is distributed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+Jekyll Group-By-Array is distributed under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
 Minimal Mistakes incorporates [@allejo's Pure Liquid Jekyll Table of Contents](https://allejo.io/blog/a-jekyll-toc-in-liquid-only/),
 Copyright (c) 2017 Vladimir Jimenez.
-Pure Liquid Jekyll Table of Contents is distributed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+Pure Liquid Jekyll Table of Contents is distributed under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
-Minimal Mistakes incorporates [Lunr](http://lunrjs.com),
+Minimal Mistakes incorporates [Lunr](https://lunrjs.com),
 Copyright (c) 2017 Oliver Nightingale.
-Lunr is distributed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+Lunr is distributed under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 Everthing else

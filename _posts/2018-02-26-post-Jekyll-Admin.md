@@ -86,13 +86,13 @@ Run script/test-server to start the server
 Open:
 
 ```html
-http://localhost:4000/admin
+https://localhost:4000/admin
 ```
 
 in your browser
 
 ```html
-(or http://localhost:4000/_api)
+(or https://localhost:4000/_api)
 ```
 
 Running the front end server in development mode
@@ -113,7 +113,7 @@ Start Jekyll as you would normally (bundle exec jekyll serve)
 Navigate to:
 
 ```html
-http://localhost:4000/admin to access the administrative interface
+https://localhost:4000/admin to access the administrative interface
 ```
 
 Jekyll Admin related options can be specified in _config.yml under a key called jekyll_admin.
@@ -144,7 +144,7 @@ For simplicity, whenever possible, the API mirrors Jekyll internal data structur
 The API is exposed as:
 
 ```html
-http://localhost:4000/_api
+https://localhost:4000/_api
 ```
 
 (or whatever server/port your Jekyll installation is running on).
@@ -198,7 +198,7 @@ A standard JSON object of a directory looks like this:
   "path": "_posts/test",
   "type": "directory",
   "http_url": null,
-  "api_url": "http://localhost:4000/_api/collections/posts/entries/test"
+  "api_url": "https://localhost:4000/_api/collections/posts/entries/test"
 },
 ```
 
@@ -219,7 +219,7 @@ A JSON object from a Data file subdirectory looks like this:
   "path": "books",
   "type": "directory",
   "http_url": null,
-  "api_url": "http://localhost:4000/_api/data/books/"
+  "api_url": "https://localhost:4000/_api/data/books/"
 }
 ```
 
@@ -233,7 +233,7 @@ A GET call to the api_url will return another JSON object for the constituents o
     "path": "books/genres",
     "type": "directory",
     "http_url": null,
-    "api_url": "http://localhost:4000/_api/data/books/genres/"
+    "api_url": "https://localhost:4000/_api/data/books/genres/"
   },
   {
     "path": "/_data/books/authors.yml",
@@ -242,7 +242,7 @@ A GET call to the api_url will return another JSON object for the constituents o
     "ext": ".yml",
     "title": "Authors",
     "http_url": null,
-    "api_url": "http://localhost:4000/_api/data/books/authors.yml"
+    "api_url": "https://localhost:4000/_api/data/books/authors.yml"
   }
 ]
 ```
@@ -318,7 +318,7 @@ GET /drafts
     "path": "draft-dir",
     "type": "directory",
     "http_url": null,
-    "api_url": "http://localhost:4000/_api/drafts/draft-dir"
+    "api_url": "https://localhost:4000/_api/drafts/draft-dir"
   },
   {
     "path": "_drafts/draft-post.md",
@@ -339,8 +339,8 @@ GET /drafts
 
     ],
     "date": "2017-09-24 18:03:49 -0400",
-    "http_url": "http://localhost:4000/2017/09/24/draft-post.html",
-    "api_url": "http://localhost:4000/_api/drafts/draft-post.md",
+    "http_url": "https://localhost:4000/2017/09/24/draft-post.html",
+    "api_url": "https://localhost:4000/_api/drafts/draft-post.md",
     "name": "draft-post.md"
   }
 ]
@@ -369,8 +369,8 @@ GET /drafts/draft-dir/another-draft-post.md
     "ext": ".md",
     "tags": [],
     "date": "2017-09-24 18:03:49 -0400",
-    "http_url": "http://localhost:4000/2017/09/24/draft-post.html",
-    "api_url": "http://localhost:4000/_api/drafts/draft-post.md",
+    "http_url": "https://localhost:4000/2017/09/24/draft-post.html",
+    "api_url": "https://localhost:4000/_api/drafts/draft-post.md",
     "name": "draft-post.md"
   },
   "path": "_drafts/draft-dir/another-draft-post.md",
@@ -389,8 +389,8 @@ GET /drafts/draft-dir/another-draft-post.md
     "ext": ".md",
     "tags": [],
     "date": "2017-09-24 18:03:49 -0400",
-    "http_url": "http://localhost:4000/2017/09/24/yet-another-draft-post.html",
-    "api_url": "http://localhost:4000/_api/drafts/draft-dir/WIP/yet-another-draft-post.md",
+    "http_url": "https://localhost:4000/2017/09/24/yet-another-draft-post.html",
+    "api_url": "https://localhost:4000/_api/drafts/draft-dir/WIP/yet-another-draft-post.md",
     "name": "yet-another-draft-post.md"
   },
   "content": "<h1 id=\"another-draft-post\">Another Draft Post</h1>\n",
@@ -408,8 +408,8 @@ GET /drafts/draft-dir/another-draft-post.md
   "ext": ".md",
   "tags": [],
   "date": "2017-09-24 18:03:49 -0400",
-  "http_url": "http://localhost:4000/2017/09/24/another-draft-post.html",
-  "api_url": "http://localhost:4000/_api/drafts/draft-dir/another-draft-post.md",
+  "http_url": "https://localhost:4000/2017/09/24/another-draft-post.html",
+  "api_url": "https://localhost:4000/_api/drafts/draft-dir/another-draft-post.md",
   "raw_content": "# Another Draft Post\n",
   "front_matter": {
     "foo": "bar"

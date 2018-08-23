@@ -4,12 +4,12 @@ layout: compress
 
 <!doctype html>
 
-<html ⚡ lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js" itemscope itemtype="http://schema.org/WebSite">
+<html ⚡ lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js" itemscope itemtype="https://schema.org/WebSite">
 <head>
   {% include amp/amp-head.html %}
 </head>
 
-<body id="style-3" class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}" itemscope itemtype="http://schema.org/WebPage">
+<body id="style-3" class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}" itemscope itemtype="https://schema.org/WebPage">
   <meta itemprop="url" content="{{ site.url }}{{ page.url }}" />
   <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T2NFHJ"
@@ -65,7 +65,7 @@ layout: compress
       {{ content }}
     </div>
   </div>
-  <div class="text-center" role="note" itemscope itemtype="http://schema.org/WPAdBlock">
+  <div class="text-center" role="note" itemscope itemtype="https://schema.org/WPAdBlock">
         <meta itemprop="name" content="Adsense for {{ page.title }}"/>
         <meta itemprop="description" content="Support {{ site.title }} by using Adsense and other advertisements."/>
         <ins class="adsbygoogle"
@@ -77,7 +77,7 @@ layout: compress
           (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
     </div>
-  <div class="page__footer" itemscope itemtype="http://schema.org/WPFooter">
+  <div class="page__footer" itemscope itemtype="https://schema.org/WPFooter">
     <footer>
         {% include amp/amp-footer.html %}
     </footer>

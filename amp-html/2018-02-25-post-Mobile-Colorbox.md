@@ -57,7 +57,7 @@ Mobile First Responsive Colorbox Window to open a link, div, code, about anythin
 
 Using the provided code works with, jQuery 3.3.2 and Bootstrap 4 beta 3.
 
-Colorbox if you have not used it was created by [Jack Moore](http://www.jacklmoore.com/colorbox/)
+Colorbox if you have not used it was created by [Jack Moore](https://www.jacklmoore.com/colorbox/)
 
 I created a colorbox window for ASP.Net Core 2 app. On most Phone and Tablets, no matter the orientation Colorbox was way to small about 40% of the view.
 

@@ -58,7 +58,7 @@ lcb: "{"
 
 # A Simple or Complex Image Gallery
 
-There are two ways displayed below to build Image Gallerys with Jekyll using [MetaFuzzy Isotope](https://isotope.metafizzy.co/) and [Sachinchoolur LightGallery](http://sachinchoolur.github.io/lightGallery/demos/)
+There are two ways displayed below to build Image Gallerys with Jekyll using [MetaFuzzy Isotope](https://isotope.metafizzy.co/) and [Sachinchoolur LightGallery](https://sachinchoolur.github.io/lightGallery/demos/)
 
 The First is a Simple Gallery that Loops throught all images in a folder resizing the isotope gallery page, display image online, the origional image is opened in LightGallery.
 
@@ -650,7 +650,7 @@ The gallery.scss code below
 
 ## Jekyll Simple Gallery
 
-Create a Jekyll images Gallery that loops through all images in a folder. Displayed with [MetaFuzzy Isotope](https://isotope.metafizzy.co/) and viewed with [Sachinchoolur LightGallery](http://sachinchoolur.github.io/lightGallery/demos/){:id="open-website" rel="noreferrer"}. Not Configured by yml Frontmatter, thus much eaiser to create. Using [Images resizing by images.weserv.nl](weserv.nl), which gives a thumnail image displayed in the Isotope gallery and the origional images which are opened by LightGallery.
+Create a Jekyll images Gallery that loops through all images in a folder. Displayed with [MetaFuzzy Isotope](https://isotope.metafizzy.co/) and viewed with [Sachinchoolur LightGallery](https://sachinchoolur.github.io/lightGallery/demos/){:id="open-website" rel="noreferrer"}. Not Configured by yml Frontmatter, thus much eaiser to create. Using [Images resizing by images.weserv.nl](weserv.nl), which gives a thumnail image displayed in the Isotope gallery and the origional images which are opened by LightGallery.
 
 ### The _includes file Simple Gallery
 
@@ -671,7 +671,7 @@ support: [gallery]
 ---
 
 <div id="main" role="main">
-  <div itemscope itemtype="http://schema.org/ImageGallery">
+  <div itemscope itemtype="https://schema.org/ImageGallery">
       {{ page.lcb }}{ content }}
   </div>
 </div>
@@ -698,7 +698,7 @@ support: [gallery]
 ---
 
 <div id="main" role="main">
-  <div class="gallery" itemscope itemtype="http://schema.org/ImageGallery">
+  <div class="gallery" itemscope itemtype="https://schema.org/ImageGallery">
       {{ page.lcb }}{ content }}
   </div>
 </div>

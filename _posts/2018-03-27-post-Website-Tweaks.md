@@ -69,7 +69,7 @@ Follow the below content and test things locally first.
 
 {% include figure image_path="/assets/images/pages/performance/orchard-performance.jpg" alt="Performance" caption="Performance" class="align-center" %}
 
-My full test results: [Details](http://www.webpagetest.org/result/160227_P1_4P4/1/details/)
+My full test results: [Details](https://www.webpagetest.org/result/160227_P1_4P4/1/details/)
 
 I am getting a repeat view of 0kb and initially 380kb which is 1gb lower that a stock Orchard site with bootstrap and some images.
 
@@ -202,7 +202,7 @@ Now if you read about this you should have one file g-zipped and one file not, i
 There is allot of information on setting up AWS S3 and CloudFront so I will not go into that; just how I use it for file distribution, and I use my own static cookie-less, "except for oauth cookie from Cloud Front", sub web for my link as static.donboulton.com which can be set up on your server and then on AWS S3 and Cloud Front adding to your web.config
 
 ```html
-<add name="Access-Control-Allow-Origin" value="http://yoursite.com" />
+<add name="Access-Control-Allow-Origin" value="https://yoursite.com" />
 <add name="Access-Control-Allow-Credentials" value="true" />
 ```
 
@@ -368,7 +368,7 @@ Accept-Language: en-US,en;q=0.8
 Cookie: cc_cookie_accept=cc_cookie_accept; _ga=GA1.2.6125818.1454086529; _gat=1
 
 ```html
-Referer: http://donboulton.com/blogs/prettyphoto
+Referer: https://donboulton.com/blogs/prettyphoto
 ```
 
 Upgrade-Insecure-Requests: 1
@@ -421,7 +421,7 @@ Using [jQuary-pjaxpjax](https://github.com/defunkt/jquery-pjax "Jquary pjax") is
 
 ## What is pjax and why we should use it
 
-[Taken from pixelstech.net](http://www.pixelstech.net/article/1366737736-What-is-pjax-and-why-we-should-use-it "Jquary pjax")
+[Taken from pixelstech.net](https://www.pixelstech.net/article/1366737736-What-is-pjax-and-why-we-should-use-it "Jquary pjax")
 
 Now many websites such as Facebook, Twitter support one browsing style which is when you click one link on their sites, the page will not be redirected, instead only the page contents are updated and URL on address bar is changed. This kind of user experience is much better compared to load the whole page with a blink.
 
@@ -436,7 +436,7 @@ https://github.com/defunkt/jquery-pjax
 The demo page is:
 
 ```html
-http://pjax.heroku.com/
+https://pjax.heroku.com/
 ```
 
 If we don't check the pjax option, then the page will be redirected on clicking the link, after checking that option, the link will change to AJAX refresh.
@@ -481,7 +481,7 @@ Pjax.Mvc is a library to integrate ASP.NET MVC with [jQuery.pjax](https://github
 
 ## Installation
 
-To install Pjax.Mvc, run the following command in the [Package Manager Console](http://docs.nuget.org/docs/start-here/using-the-package-manager-console).
+To install Pjax.Mvc, run the following command in the [Package Manager Console](https://docs.nuget.org/docs/start-here/using-the-package-manager-console).
 
 MVC 5
 

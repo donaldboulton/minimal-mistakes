@@ -35,7 +35,7 @@
 [debug] [2018-08-18T11:30:13.738Z] <<< HTTP RESPONSE 200
 [debug] [2018-08-18T11:30:13.739Z] Starting @google-cloud/functions-emulator
 [debug] [2018-08-18T11:30:13.817Z] <<< HTTP RESPONSE 200
-[info] +  hosting: Local server: http://localhost:5000
+[info] +  hosting: Local server: https://localhost:5000
 
 [debug] [2018-08-18T11:30:21.247Z] Parsing function triggers
 [info] i  functions: No HTTPS functions found. Use firebase functions:shell if you would like to emulate other types of functions.

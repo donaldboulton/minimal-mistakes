@@ -64,7 +64,7 @@ Avatar Generator from - Commenter name [^names] as input and a canvas element as
 
 [^names]: based on the first name & surname first letter.
 
-The background colors are from from [Flat Ui Colors](http://flatuicolors.com/) Now with retina support.
+The background colors are from from [Flat Ui Colors](https://flatuicolors.com/) Now with retina support.
 
 ### The Canvas html snippet
 
@@ -211,7 +211,7 @@ Super simple and added to my reviews [reviews.html](https://github.com/donaldbou
 Added to my reviews layout with just a link to avatar="" + reviewData.name, or if your using comments its commentsData.name
 
 ```html
-<div itemprop="author" itemscope itemtype="http://schema.org/Person">
+<div itemprop="author" itemscope itemtype="https://schema.org/Person">
     <img itemprop="image" avatar="{{ page.lcb }}{ reviewData.name }}" alt=" {{ page.lcb }}{ reviewData.name }}" class="review-avatar-image text-left" />
     &nbsp;<span itemprop="name">{{ page.lcb }}{ reviewData.name }}</span>
 </div>

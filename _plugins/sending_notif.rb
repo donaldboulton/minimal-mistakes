@@ -12,7 +12,7 @@ options = {
     title: "Portugal vs. Denmark",
     body: "5 to 1",
     icon: "firebase-logo.png",
-    click_action: "http://localhost:8081"
+    click_action: "https://localhost:8081"
   }
 }
 

@@ -56,7 +56,7 @@ github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2018-02-23-post-SQL-F
 
 This T-SQL sample script illustrates how to check index fragmentation of a specified database in SQL Server.
 
-From: [Technet Script Center](http://gallery.technet.microsoft.com/scriptcenter/Check-SQL-Server-a-a5758043#content)
+From: [Technet Script Center](https://gallery.technet.microsoft.com/scriptcenter/Check-SQL-Server-a-a5758043#content)
 
 A Dynamic CMS using SQL Server most always has fragmentation. When files or data are in the wrong place then SQL Server has to spend time looking for the missing data, slowing the whole process down and increasing load times for your site
 
@@ -103,7 +103,7 @@ Additional Resources
 
 See My post on how to fix this at: [Defrag SQl](https://donaldboulton.gihub.io/DWB/Defrag-SQL)
 
-[SQL query performance might decrease when the SQL Server Database instance has high index fragmentation](http://support.microsoft.com/kb/2755960)
+[SQL query performance might decrease when the SQL Server Database instance has high index fragmentation](https://support.microsoft.com/kb/2755960)
 
 ### Download this script .zip file
 

@@ -77,7 +77,7 @@ Computers Cats are my passion, I love kitty cats.
 
 ## Cat Healing Powers
 
-Taken from [Nature Care Blog](http://www.naturalcatcareblog.com/2011/03/do-cats-have-healing-powers-research-says-yes/)
+Taken from [Nature Care Blog](https://www.naturalcatcareblog.com/2011/03/do-cats-have-healing-powers-research-says-yes/)
 
 Do cats have healing powers? Research says yes
 by Liz on March 12, 2011 in Cat Time is Good for You

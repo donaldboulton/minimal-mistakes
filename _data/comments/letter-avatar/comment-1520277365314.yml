@@ -3,7 +3,7 @@ _parent: /2018-02-22-post-Letter-Avatar.html
 name: Donald Boulton
 title: No Letter Avatar
 email: c1e68ec3dd3cc5dad0d017d2930b259c
-url: 'http://bibwoe.com'
+url: 'https://bibwoe.com'
 message: "Was not working as node did not compile the added letter-avatar.js\r\nSo it was not reading any .js for avatar.\r\n\r\nFixing it???"
 hidden: ''
 date: '2018-03-05T19:16:05.313Z'

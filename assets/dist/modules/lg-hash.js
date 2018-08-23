@@ -1,5 +1,5 @@
 /*! lg-hash - v1.0.4 - 2017-12-20
-* http://sachinchoolur.github.io/lightGallery
+* https://sachinchoolur.github.io/lightGallery
 * Copyright (c) 2017 Sachin N; Licensed GPLv3 */
 
 (function (root, factory) {

@@ -3,9 +3,9 @@
       {% for file in site.static_files %}
           {% if file.path contains include.folder %}
           {% if file.extname == '.jpg' or file.extname == '.jpeg' or file.extname == '.JPG' or file.extname == '.JPEG' %}
-          <div class="image-wrapper" itemscope itemtype="http://schema.org/ImageObject">
+          <div class="image-wrapper" itemscope itemtype="https://schema.org/ImageObject">
               <a itemprop="contentUrl" href="{{ file.path }}" {% if picture.title %} itemprop="name" data-sub-html="<div class='lg-toolbar caption'><h4>{{ picture.title | escape }}</h4>{% if picture.caption %}<p>{{ picture.caption | escape }}</p>{% endif %}</div>"{% endif %} class="image">
-                 <img itemprop="thumbnail" src="//images.weserv.nl/?url={{ site.url | replace: 'http://','' | replace: 'https://','' }}{{ file.path }}&w=300&h=300&output=jpg&q=50&t=square" />
+                 <img itemprop="thumbnail" src="//images.weserv.nl/?url={{ site.url | replace: 'https://','' | replace: 'https://','' }}{{ file.path }}&w=300&h=300&output=jpg&q=50&t=square" />
               </a>
           </div>
           {% endif %}

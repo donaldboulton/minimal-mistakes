@@ -60,21 +60,21 @@ If you wish to disable cookies, you may do so through your web browser options. 
 
 ### Cookies in EU Law
 
-* [Is the EU's cookie law confusing you too?](http://www.123-reg.co.uk/blog/security-issues/is-the-eus-cookie-law-confusing-you-too/){:id="open-website" rel="noreferrer"}
-* [New EU cookie law (e-Privacy Directive)](http://www.ico.gov.uk/for_organisations/privacy_and_electronic_communications/the_guide/cookies.aspx){:id="open-website" rel="noreferrer"}
-* [Cookies – Doing nothing isn't the right answer](http://chriswharton.me/2012/05/cookies-doing-nothing-isnt-the-right-answer/){:id="open-website" rel="noreferrer"}
+* [Is the EU's cookie law confusing you too?](https://www.123-reg.co.uk/blog/security-issues/is-the-eus-cookie-law-confusing-you-too/){:id="open-website" rel="noreferrer"}
+* [New EU cookie law (e-Privacy Directive)](https://www.ico.gov.uk/for_organisations/privacy_and_electronic_communications/the_guide/cookies.aspx){:id="open-website" rel="noreferrer"}
+* [Cookies – Doing nothing isn't the right answer](https://chriswharton.me/2012/05/cookies-doing-nothing-isnt-the-right-answer/){:id="open-website" rel="noreferrer"}
 
 ### Disabling Cookies
 
 If you would like to restrict the use of cookies you can control this in your Internet browser. Links to advice on how to do this for the most popular Internet browsers are provided below for convenience and will be available for the Internet browser of your choice either online or via the software help (normally available via key F1).
 
-* [Disabling cookies in Internet Explorer](http://windows.microsoft.com/en-GB/windows7/Block-enable-or-allow-cookies)
+* [Disabling cookies in Internet Explorer](https://windows.microsoft.com/en-GB/windows7/Block-enable-or-allow-cookies)
 
 * [Disabling cookies in Google Chrome](https://support.google.com/chrome/bin/answer.py?hl=en-GB&amp;answer=95647&amp;p=cpn_cookies){:id="open-website" rel="noreferrer"}
 
-* [Disabling cookies in Mozilla Firefox](http://support.mozilla.org/en-US/kb/Blocking-cookies){:id="open-website" rel="noreferrer"}
+* [Disabling cookies in Mozilla Firefox](https://support.mozilla.org/en-US/kb/Blocking-cookies){:id="open-website" rel="noreferrer"}
 
-* [Disabling cookies in Apple Safari](http://docs.info.apple.com/article.html?artnum=324){:id="open-website" rel="noreferrer"}
+* [Disabling cookies in Apple Safari](https://docs.info.apple.com/article.html?artnum=324){:id="open-website" rel="noreferrer"}
 
 ## Google Analytics
 
@@ -127,7 +127,7 @@ Google stores the information collected by these cookies on servers in the Unite
 
 In order to provide website visitors with more choice on how data is collected by Google Analytics, Google has developed the Google Analytics Opt-out Browser Add-on. The add-on communicates with the Google Analytics JavaScript (ga.js) to stop data being sent to Google Analytics. The Google Analytics Opt-out Browser Add-on does not affect usage of the website in any other way. A link to further information on the Google Analytics Opt-out Browser Add-on is provided below for your convenience.
 
-### [Opt Out Google tools](http://tools.google.com/dlpage/gaoptout?hl=None){:id="open-website" rel="noreferrer"}
+### [Opt Out Google tools](https://tools.google.com/dlpage/gaoptout?hl=None){:id="open-website" rel="noreferrer"}
 
 For more information on the usage of cookies by Google Analytics please see the Google website. A link to the privacy advice for this product is provided below for your convenience.
 
@@ -151,17 +151,17 @@ It has been found as a Session cookie on 0 websites.
 
 Note: Many technologies or services use cookies that will be common to different websites and can be identified by name alone. However this is not always true. More specific information can sometimes be found with a website based search.
 
-## [Privacy Google](http://www.google.com/analytics/learn/privacy.html){:id="open-website" rel="noreferrer"}
+## [Privacy Google](https://www.google.com/analytics/learn/privacy.html){:id="open-website" rel="noreferrer"}
 
 Google Analytics is a web analytics tool I use to help understand how visitors engage with this website. It reports website trends using cookies and web beacons without identifying individual visitors.
 
-### You can read: [Google Analytics Privacy Policy](http://www.google.com/analytics/learn/privacy.html){:id="open-website" rel="noreferrer"}
+### You can read: [Google Analytics Privacy Policy](https://www.google.com/analytics/learn/privacy.html){:id="open-website" rel="noreferrer"}
 
 ## Google Adsense
 
 Google Adsense, a third party affiliate marketing network, uses cookies to help make sure I get a commission when you buy a product after clicking on a link or ad banner that takes you to the site of one of their merchants.
 
-### You can read: [Google Adsense Privacy Policy](http://support.google.com/adsense/bin/answer.py?hl=en&answer=48182){:id="open-website" rel="noreferrer"}
+### You can read: [Google Adsense Privacy Policy](https://support.google.com/adsense/bin/answer.py?hl=en&answer=48182){:id="open-website" rel="noreferrer"}
 
 ## Donation Policy
 
@@ -204,7 +204,7 @@ Just like this website, my Disclosure Policy is a work in progress. As the reven
 
 ## License
 
-All original content (e.g. articles, blog posts, illustrations, artwork, and photographs) available on donboulton.com is released under a [Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License](http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US){:id="open-website" rel="noreferrer"} unless otherwise noted. Basically this means you are free to share, transmit, distribute, alter, transform, and build on my work just as long as you don't use it for commercial purposes without my prior written consent.
+All original content (e.g. articles, blog posts, illustrations, artwork, and photographs) available on donboulton.com is released under a [Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License](https://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US){:id="open-website" rel="noreferrer"} unless otherwise noted. Basically this means you are free to share, transmit, distribute, alter, transform, and build on my work just as long as you don't use it for commercial purposes without my prior written consent.
 
 ## Attribution
 

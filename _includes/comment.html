@@ -1,6 +1,6 @@
 <div id="list" class="js-comments">
 <article id="comment{% unless include.r %}{{ index | prepend: '-' }}{% else %}{{ include.index | prepend: '-' }}{% endunless %}" class="js-comment comment {% if include.name == site.author.name %}admin{% endif %} {% unless include.replying_to == 0 %}child{% endunless %}">
-<div itemprop="creator" itemscope itemtype="http://schema.org/Person">
+<div itemprop="creator" itemscope itemtype="https://schema.org/Person">
   <div class="comment-avatar">
     {% if include.avatar %}
       <span><img class="comment-avatar-img lazyload blur-up" itemprop="image" avatar="{{ include.name }}" alt="{{ include.name }}" /></span>

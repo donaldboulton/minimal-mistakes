@@ -1,7 +1,7 @@
 <div class="entry-comments">
   {% if site.data.comments[page.slug] %}
   <!-- Start static comments -->
-  <div id="comments" class="js-comments comment" itemscope itemtype="http://schema.org/UserComments">
+  <div id="comments" class="js-comments comment" itemscope itemtype="https://schema.org/UserComments">
     <header class="section-title">
       <h3><svg class="icon icon--comments-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comments-alt' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;{% if site.data.comments[page.slug].size > 1 %}{{ site.data.comments[page.slug] | size | append: ' ' }}{% endif %}Comments</h3>
     </header>

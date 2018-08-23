@@ -211,7 +211,7 @@ GO
 
 Originally created by Microsoft
 
-[Error corrected by Pinal Dave](http://www.SQLAuthority.com)
+[Error corrected by Pinal Dave](https://www.SQLAuthority.com)
 
 ### Check Fragmentation
 
@@ -337,7 +337,7 @@ Note
 
 When DBCC INDEXDEFRAG is run, index defragmentation occurs serially. This means that the operation on a single index is performed using a single thread. No parallelism occurs. Also, operations on multiple indexes from the same DBCC INDEXDEFRAG statement are performed on one index at a time.
 
-DBCC INDEXDEFRAG also compacts the pages of an index, taking into consideration the fill factor specified when the index was created. Any empty pages created because of this compaction are removed. For more information, see [Specify Fill Factor for an Index](http://msdn.microsoft.com/en-us/library/ms177459.aspx).
+DBCC INDEXDEFRAG also compacts the pages of an index, taking into consideration the fill factor specified when the index was created. Any empty pages created because of this compaction are removed. For more information, see [Specify Fill Factor for an Index](https://msdn.microsoft.com/en-us/library/ms177459.aspx).
 
 If an index spans more than one file, DBCC INDEXDEFRAG defragments one file at a time. Pages do not migrate between files.
 
@@ -345,7 +345,7 @@ DBCC INDEXDEFRAG reports the estimated percentage completed every five minutes. 
 
 Unlike DBCC DBREINDEX, or the index building operation generally, DBCC INDEXDEFRAG is an online operation. It does not hold locks long term. Therefore, DBCC INDEXDEFRAG does not block running queries or updates. Because the time to defragment is related to the level of fragmentation, a relatively unfragmented index can be defragmented faster than a new index can be built. A very fragmented index might take considerably longer to defragment than to rebuild.
 
-The defragmentation is always fully logged, regardless of the database recovery model setting. For more information, see [ALTER DATABASE (Transact-SQL)](http://msdn.microsoft.com/en-us/library/ms174269.aspx)
+The defragmentation is always fully logged, regardless of the database recovery model setting. For more information, see [ALTER DATABASE (Transact-SQL)](https://msdn.microsoft.com/en-us/library/ms174269.aspx)
 
 The defragmentation of a very fragmented index can generate more log than a fully logged index creation. However, the defragmentation is performed as a series of short transactions, so a large log is unnecessary if log backups are taken frequently or if the recovery model setting is SIMPLE.
 
