@@ -1,5 +1,5 @@
 <div id="formBlock" class="js-contact">
-	<form id="contact-form"  action="https://formspree.io/donaldboulton@gmail.com" method="post" class="contact-form" onsubmit="return checkForm(this);" netlify>
+	<form id="contact-form" method="Post" action="https://formspree.io/donaldboulton@gmail.com" method="post" class="contact-form" onsubmit="return checkForm(this);" netlify>
     <h3>Send us a email message</h3>
   <div class="form-group">
 		<label for="name">Full Name&nbsp;<abbr class="abbr" title="Required">*</abbr></label>
@@ -38,6 +38,7 @@
   <div>
     <input type="hidden" name="_replyto" value="{{ page.email }}">
     <input type="hidden" name="_cc" value="{{ contactform.email }}">
+    <input type="hidden" name="contact-form" value="contact" />
     <input type="hidden" name="_subject" value="Website donboulton New Message" />
     <input type="hidden" name="_next" value="https://donboulton.com/thanks/" />
     <input type="text" name="_gotcha" style="display: none;">
