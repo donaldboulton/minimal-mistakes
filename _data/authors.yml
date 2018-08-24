@@ -2,6 +2,7 @@
 
 Donald Boulton:
   name        : "Donald Boulton"
+  description : "Away from ASP, Jekyll for Me"
   uri         : "https://donboulton.com"
   email       : "donaldboulton@gmail.com"
   bio         : "Away from ASP. Jekyll for Me"
@@ -11,6 +12,7 @@ Donald Boulton:
 
 Michael Rose:
   name        : "Michael Rose"
+  dexcription : "Another tattoed Time Travler"
   uri         : "https://mademistakes.com"
   email       : "michaelrose@mademistakes.com"
   bio         : "Just making mistakes."

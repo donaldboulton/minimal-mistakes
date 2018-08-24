@@ -1,5 +1,5 @@
 function handlePushEvent(event) {
-  const DEFAULT_TAG = 'web-push-book-example-site'
+  const DEFAULT_TAG = 'donboulton.com/admin';
   return Promise.resolve()
   .then(() => {
     return event.data.json();
