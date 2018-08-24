@@ -89,7 +89,7 @@ const isValidSaveRequest = (req, res) => {
 };
 
 const app = express();
-app.use(serveStatic(join(__dirname, '/')));
+app.use(serveStatic(join(__dirname, '/admin')));
 app.use(json());
 app.use(text());
 app.use(urlencoded({ extended: true }));

@@ -272,9 +272,10 @@ $(".author__urls_masthead button").on("click", function() {
   })
 }
 </script>
-{% if page.support contains 'firebase-login-2' %}
-<script src="{{ '/assets/js/vendor/firebase/firebase-login.js' | relative_url }}"></script>
-<script src="{{ '/assets/js/vendor/firebase/functions.js' | relative_url }}"></script>
+{% if page.notifications == true %}
+<script src="{{ './server.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/vendor/notifications/admin.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/vendor/notifications/notifications.js' | relative_url }}"></script>
 {% endif %}
 <script async defer src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script async defer type="text/javascript" src="https://unpkg.com/default-passive-events"></script>
