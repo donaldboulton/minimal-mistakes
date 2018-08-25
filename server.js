@@ -1,10 +1,12 @@
-import { setVapidDetails } from 'web-push';
-import express, { serveStatic } from 'express';
-import { join } from 'path';
-import { json, text, urlencoded } from 'body-parser';
-import Datastore from 'nedb';
-import { initializeApp, credential as _credential } from 'firebase-admin';
-import constants from './constants';
+/**** START web-push-require ****/
+const webpush = require('web-push');
+/**** END web-push-require ****/
+const path = require('path');
+const express = require('express');
+const bodyParser = require('body-parser');
+const Datastore = require('nedb');
+
+
 
 const hostname = 'https://donboulton.com';
 
@@ -19,7 +21,6 @@ const db = new Datastore({
     filename: join(__dirname, '/_data/subscription-store.db'),
     autoload: true,
 });
-
 
 function saveSubscriptionToDatabase(subscription) {
     return new Promise(((resolve, reject) => {
@@ -45,34 +46,6 @@ function getSubscriptionsFromDatabase() {
     }));
 }
 
-const ref = new Firebase("https://airy-office-413.firebaseio.com");
-ref.authWithCustomToken('AUTH_TOKEN', (error, authData) => {
-    if (error) {
-        console.log('Authentication Failed!', error);
-    } else {
-        console.log('Authenticated successfully with payload:', authData);
-    }
-});
-
-function deleteSubscriptionFromDatabase(subscriptionId) {
-    return new Promise(((resolve, reject) => {
-        db.remove({ _id: subscriptionId }, {}, (err) => {
-            if (err) {
-                reject(err);
-                return;
-            }
-            resolve();
-
-            const serviceAccount = require('https/donboulton.com/serviceAccountKey.json');
-
-            initializeApp({
-                credential: _credential.cert(serviceAccount),
-                databaseURL: "https://airy-office-413.firebaseio.com"
-            });
-        });
-    }));
-}
-
 const isValidSaveRequest = (req, res) => {
     if (!req.body || !req.body.endpoint) {
         res.status(400);
@@ -89,9 +62,9 @@ const isValidSaveRequest = (req, res) => {
 };
 
 const app = express();
-app.use(serveStatic(join(__dirname, '/admin')));
-app.use(json());
-app.use(text());
+app.use(express.static(path.join(__dirname, 'admin')));
+app.use(bodyParser.json());
+app.use(bodyParser.text())
 app.use(urlencoded({ extended: true }));
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
@@ -121,7 +94,6 @@ app.post('/api/save-subscription/', (req, res) => {
             }));
         });
 });
-
 
 app.post('/api/get-subscriptions/',
 
@@ -200,3 +172,5 @@ const port = process.env.PORT || 9012;
 const server = app.listen(port, () => {
     console.log('Running on https://localhost:' + port);
 });
+
+

@@ -19,9 +19,9 @@
       }, timeout);
     });
   };
-    const allOptionsNotification = function(registration) {
-    const title = 'donboulton.com Notify';
-    const options = {
+  const allOptionsNotification = function(registration) {
+  const title = 'donboulton.com Notify';
+  const options = {
       body: 'Comment Updates Notifications.\n' +
         'There has been a new comment on donboulton.com.',
       icon: '/assets/images/fav-icons/favicon-512x512.png',
@@ -73,7 +73,7 @@
     /**** START iconNotification ****/
     const title = 'Icon Notification';
     const options = {
-      icon: '/assets/images/fav-icons/favicon-192x192.png'
+      icon: '/images/demos/icon-512x512.png'
     };
     registration.showNotification(title, options);
     /**** END iconNotification ****/
@@ -83,7 +83,7 @@
     /**** START badgeNotification ****/
     const title = 'Badge Notification';
     const options = {
-      badge: '/assets/images/fav-icons/favicon-192x192.png'
+      badge: '/images/demos/badge-128x128.png'
     };
     registration.showNotification(title, options);
     /**** END badgeNotification ****/
@@ -93,7 +93,7 @@
     /**** START imageNotification ****/
     const title = 'Image Notification';
     const options = {
-      image: '/assets/images/fav-icons/favicon-192x192.png'
+      image: '/images/demos/unsplash-farzad-nazifi-1600x1100.jpg'
     };
     registration.showNotification(title, options);
     /**** END imageNotification ****/
@@ -115,7 +115,7 @@
     /**** START soundNotification ****/
     const title = 'Sound Notification';
     const options = {
-      sound: '/assets/audio/notification-sound.mp3'
+      sound: '/demos/notification-examples/audio/notification-sound.mp3'
     };
     registration.showNotification(title, options);
     /**** END soundNotification ****/
@@ -176,12 +176,12 @@
         {
           action: 'coffee-action',
           title: 'Coffee',
-          icon: '/assets/images/fav-icons/favicon-192x192.png'
+          icon: '/images/demos/action-1-128x128.png'
         },
         {
           action: 'doughnut-action',
           title: 'Doughnut',
-          icon: '/assets/images/fav-icons/favicon-192x192.png'
+          icon: '/images/demos/action-2-128x128.png'
         },
         {
           action: 'gramophone-action',
@@ -191,7 +191,7 @@
         {
           action: 'atom-action',
           title: 'Atom',
-          icon: '/assets/images/fav-icons/favicon-192x192.png'
+          icon: '/images/demos/action-4-128x128.png'
         }
       ]
     };
@@ -381,7 +381,7 @@
     return promiseTimeout(() => {
       const serviceWorker = registration.install || registration.waiting ||
         registration.active;
-      serviceWorker.postMessage('must-show-notification');
+      serviceWorker.postMessage('must-show-notification-demo');
     }, 4000);
   };
 
@@ -389,7 +389,7 @@
     return promiseTimeout(() => {
       const serviceWorker = registration.install || registration.waiting ||
         registration.active;
-      serviceWorker.postMessage('send-message-to-page');
+      serviceWorker.postMessage('send-message-to-page-demo');
     }, 4000);
   };
 
@@ -622,4 +622,3 @@
     });
   });
 })();
-

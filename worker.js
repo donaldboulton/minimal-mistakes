@@ -1,4 +1,4 @@
-var admin = require('firebase-admin');
+const admin = require('firebase-admin');
 let app = null;
 let firebase = firebaseAdmin.firebase;
 
