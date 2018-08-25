@@ -23,10 +23,7 @@ webpush.setVapidDetails(
   vapidKeys.privateKey
 );
 
-const db = new Datastore({
-    filename: join(__dirname, '/_data/subscription-store.db'),
-    autoload: true,
-});
+const db = new Datastore({ filename: 'subscription-store.db', autoload: true });
 
 function saveSubscriptionToDatabase(subscription) {
     return new Promise(((resolve, reject) => {
