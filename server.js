@@ -1,3 +1,5 @@
+'use strict';
+
 /**** START web-push-require ****/
 const webpush = require('web-push');
 /**** END web-push-require ****/

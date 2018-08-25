@@ -1,8 +1,10 @@
+'use strict';
+
 const admin = require('firebase-admin');
 let app = null;
 let firebase = firebaseAdmin.firebase;
 
-var serviceAccount = require("./serviceAccountKey.json");
+const serviceAccount = require("https://donboulton.com/serviceAccountKey.json");
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
