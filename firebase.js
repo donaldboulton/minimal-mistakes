@@ -13,6 +13,9 @@ app.listen(process.env.PORT || 8080, function () {
 });
 
 // any other needed import for this worker
+importScripts(...[
+  'app', 'auth', 'database', 'firestore', 'messaging', 'functions'
+].map(name => `https://www.gstatic.com/firebasejs/5.0.1/firebase-${name}.js`));
 
 // expose a namespaces as an object
 // with any sort of serializable value

@@ -7,6 +7,7 @@ const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
 const Datastore = require('nedb');
+const workway = require('workway/node');
 
 const hostname = 'https://donboulton.com';
 
