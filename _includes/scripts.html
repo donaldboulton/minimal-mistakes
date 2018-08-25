@@ -263,4 +263,21 @@ $(".author__urls_masthead button").on("click", function() {
 <script async defer src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script async defer type="text/javascript" src="https://unpkg.com/default-passive-events"></script>
 <script src="{{ '/app.js' | relative_url }}"></script>
-<script src="{{ '/server-bundle.js' | relative_url }}"></script>
+<script id="worker2" type="javascript/worker">
+  self.onmessage = function(e) {
+    var data = e.data;
+
+    if (data.url) {
+      var url = data.url.href;
+      var index = url.indexOf('index.html');
+      if (index != -1) {
+        url = url.substring(0, index);
+      }
+      importScripts(url + 'server-bundle.js');
+    }
+  };
+  </script>
+  <script>
+    var worker = new Worker(window.URL.createObjectURL(bb.getBlob()));
+    worker.postMessage({url: document.location});
+  </script>

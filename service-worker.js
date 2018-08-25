@@ -197,7 +197,7 @@ function urlB64ToUint8Array(base64String) {
   return outputArray;
 }
 
-const worker = new Worker('worker.js');
+let worker = new Worker('worker.js');
 
 worker.addEventListener('message', event => {
   console.log(event.data, 'Message from the worker!');
