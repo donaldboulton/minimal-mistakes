@@ -2,7 +2,7 @@
   "name": "donaldboulton",
   "version": "4.12.0",
   "description": "Donald Boulton theme npm server scripts",
-  "main": "app.js",
+  "main": "server.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/donaldboulton/DWB.git"
@@ -11,7 +11,12 @@
     "jekyll",
     "node",
     "babel",
-    "Donald Boulton"
+    "Donald Boulton",
+    "Web Push API",
+    "Web Notifications API",
+    "Service Worker",
+    "Firebase Cloud Messaging",
+    "FCM"
   ],
   "author": "Donald Boulton",
   "license": "MPL-2.0",
@@ -20,7 +25,8 @@
   },
   "homepage": "https://github.com/donaldboulton/#readme",
   "scripts": {
-    "test": "gulp build:prod && jekyll build"
+    "test": "gulp build:prod && jekyll build",
+    "serve": "node server.js"
   },
   "engines": {
     "node": ">= 0.10.0"
