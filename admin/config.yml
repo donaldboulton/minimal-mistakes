@@ -53,29 +53,17 @@ collections: # A list of collections the CMS should be able to edit
               - {name: version, label: Version}
               - {name: date, label: Date, widget: date}
               - {name: description, label: Description}
-  - name: notifications
-    label: Notifications
-    file: _data/notifications.yml
-    description: Site-top notifications - publish one at a time
-    fields:
       - name: notifications
         label: Notifications
-        widget: list
+        file: _data/notifications.yml
+        description: Site-top notifications - publish one at a time
         fields:
-          - {label: Title, name: title, widget: string, tagname: h1}
-          - {label: Published, name: published, widget: boolean}
-          - {label: Loud, name: loud, widget: boolean}
-          - {label: Message, name: message, widget: text}
-          - {label: URL, name: url}
-  - name: "authors"
-    label: "Authors"
-    file: "_data/authors.yml"
-    description: "Author descriptions"
-    fields:
-      - name: authors
-        label: Authors
-        widget: list
-        fields:
-          - {label: "Name", name: "name", widget: "string"}
-          - {label: "Avatar", name: "avatar", widget: "image"}
-          - {label: "Description", name: "description", widget: "markdown"}
+          - name: notifications
+            label: Notifications
+            widget: list
+            fields:
+              - {label: Title, name: title, widget: string, tagname: h1}
+              - {label: Published, name: published, widget: boolean}
+              - {label: Loud, name: loud, widget: boolean}
+              - {label: Message, name: message, widget: text}
+              - {label: URL, name: url}
