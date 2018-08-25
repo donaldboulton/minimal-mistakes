@@ -30,6 +30,7 @@
     "del": "^3.0.0",
     "express": "^4.16.3",
     "file-upload-with-preview": "^2.1.1",
+    "firebase-admin": "^5.13.1",
     "fs-extra": "^7.0.0",
     "fs-extra-promise": "^1.0.1",
     "gotrue-js": "^0.9.22",

@@ -1,7 +1,6 @@
-importScripts('/assets/js/vendor/firebase/bundle/firebase-bundle.js');
-
+var admin = require('firebase-admin');
 let app = null;
-let firebase = firebaseBundle.firebase;
+let firebase = firebaseAdmin.firebase;
 
 firebase.initializeApp({
   'messagingSenderId': '40911931240'
