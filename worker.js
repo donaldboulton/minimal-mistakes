@@ -1,4 +1,4 @@
-workway('/workers/firebase.js').then(
+workway('/workers/firebase-bundle.js').then(
   async function ({worker, namespace}) {
     await namespace.initializeApp({
       apiKey: "AIzaSyBoZgIki3tEgCtgSVVWDdastZCqW9WWGKE",
