@@ -85,3 +85,7 @@ window.addEventListener('load', () => {
     }
   });
 });
+
+const FileUploadWithPreview = require('file-upload-with-preview')
+
+const upload = new FileUploadWithPreview('myUniqueUploadId')

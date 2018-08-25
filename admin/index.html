@@ -14,7 +14,12 @@ layout: compress
 </head>
 
 <body id="style-3" class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %} auth-false" itemscope itemtype="https://schema.org/WebPage">
-
+  {% include masthead.html %}
+  <div>
+    {% if site.search == true %}
+    <div class="search-content">
+      {% include search/search_form.html %}
+    </div>
 <div class="page">
 <script src="https://unpkg.com/netlify-cms@^1.0/dist/cms.js"></script>
 </div>
