@@ -31,12 +31,6 @@ function getSWRegistration() {
   return navigator.serviceWorker.register('service-worker.js');
 }
 
-const worker = new Worker('worker.js');
-
-worker.addEventListener('message', event => {
-  console.log(event.data, 'Message from the worker!');
-});
-
 function askPermission() {
   return new Promise(function(resolve, reject) {
     const permissionResult = Notification.requestPermission(function(result) {

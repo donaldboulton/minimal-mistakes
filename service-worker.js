@@ -197,6 +197,12 @@ function urlB64ToUint8Array(base64String) {
   return outputArray;
 }
 
+const worker = new Worker('worker.js');
+
+worker.addEventListener('message', event => {
+  console.log(event.data, 'Message from the worker!');
+});
+
 self.addEventListener('push', function(event) {
   console.log('[Service Worker] Push Received.');
   console.log(`[Service Worker] Push had this data: "${event.data.text()}"`);
