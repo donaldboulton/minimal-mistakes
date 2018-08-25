@@ -1,23 +1,21 @@
-'use strict';
+workway('/workers/firebase.js').then(
+  async function ({worker, namespace}) {
+    await namespace.initializeApp({
+      apiKey: "AIzaSyBoZgIki3tEgCtgSVVWDdastZCqW9WWGKE",
+      authDomain: "airy-office-413.firebaseapp.com",
+      databaseURL: "https://airy-office-413.firebaseio.com",
+      projectId: "airy-office-413",
+      storageBucket: "airy-office-413.appspot.com",
+      messagingSenderId: "857761645811"
+    });
+    const fb = new namespace.FirebaseUser();
+    const name = await fb.name();
+    console.log(name); // will log the user name, if any
 
-const admin = require('firebase-admin');
-let app = null;
-let firebase = firebaseAdmin.firebase;
-
-const serviceAccount = require("https://donboulton.com/serviceAccountKey.json");
-
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://airy-office-413.firebaseio.com"
-});
-
-firebase.initializeApp({
-  'messagingSenderId': '40911931240'
-});
-
-function createCollection(path) {
-  return app.firestore().collection(path);
-}
+    // the worker can be regularly used like any other worker
+    worker.postMessage('all good');
+  }
+);
 
 self.addEventListener('message', event => {
   switch(event.data.cmd) {

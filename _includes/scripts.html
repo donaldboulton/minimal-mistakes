@@ -256,27 +256,11 @@ $(".author__urls_masthead button").on("click", function() {
 });
 </script>
 
-<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
-<script>
-  var config = {
-    apiKey: "AIzaSyBoZgIki3tEgCtgSVVWDdastZCqW9WWGKE",
-    authDomain: "airy-office-413.firebaseapp.com",
-    databaseURL: "https://airy-office-413.firebaseio.com",
-    projectId: "airy-office-413",
-    storageBucket: "airy-office-413.appspot.com",
-    messagingSenderId: "857761645811"
-  };
-  if (firebase.apps.length === 0) {
-  firebase.initializeApp({
-    databaseURL: 'https://airy-office-413.firebaseio.com'
-  })
-}
-</script>
 {% if page.admin == true %}
 <script src="{{ '/assets/js/vendor/notifications/admin.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/vendor/notifications/notifications.js' | relative_url }}"></script>
 {% endif %}
 <script async defer src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script async defer type="text/javascript" src="https://unpkg.com/default-passive-events"></script>
-<script src="{{ '/app.js' | relative_url }}"></script>
-<script src="{{ '/server.js' | relative_url }}"></script>
+<script src="{{ '/app-bundle.js' | relative_url }}"></script>
+<script src="{{ '/server-bundle.js' | relative_url }}"></script>

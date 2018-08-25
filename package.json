@@ -2,7 +2,7 @@
   "name": "donaldboulton",
   "version": "4.12.0",
   "description": "Donald Boulton theme npm server scripts",
-  "main": "server.js",
+  "main": "app.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/donaldboulton/DWB.git"
@@ -26,6 +26,7 @@
   "homepage": "https://github.com/donaldboulton/#readme",
   "scripts": {
     "test": "gulp build:prod && jekyll build",
+    "postinstall": "npm start",
     "serve": "node server.js"
   },
   "engines": {
@@ -41,15 +42,19 @@
     "fs-extra-promise": "^1.0.1",
     "gotrue-js": "^0.9.22",
     "graceful-fs": "^4.1.11",
+    "gulp-util": "^3.0.8",
+    "minimatch": "^3.0.4",
     "mkdirp": "^0.5.1",
     "nedb": "^1.8.0",
     "netlify-auth-providers": "^1.0.0-alpha5",
     "netlify-identity-widget": "^1.4.14",
     "node": "^10.8.0",
     "node-fetch": "^2.2.0",
-    "web-push": "^3.3.2"
+    "web-push": "^3.3.2",
+    "workway": "^0.5.3"
   },
   "devDependencies": {
+    "browserify": "^16.2.2",
     "gulp-dev": "^0.3.0"
   }
 }

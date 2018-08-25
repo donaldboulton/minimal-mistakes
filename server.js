@@ -15,7 +15,12 @@ const vapidKeys = {
     privateKey: 'ymblNrJSzlXdRMhFYdXh1Hda8HkIO76aVs85X93wAjc',
 };
 
-setVapidDetails('mailto:donaldboulton@gmail.com', vapidKeys.publicKey, vapidKeys.privateKey);
+webpush.setGCMAPIKey('AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA');
+webpush.setVapidDetails(
+  'mailto:donaldboulton@gmail.com',
+  vapidKeys.publicKey,
+  vapidKeys.privateKey
+);
 
 const db = new Datastore({
     filename: join(__dirname, '/_data/subscription-store.db'),
