@@ -11,12 +11,12 @@
 {% endraw %}
 
 <article>
-  <div class=" fade" id="updateInfoModal" tabindex="-1">
+  <div class=" fade" id="updateInfo" tabindex="-1">
     <div class="dialog">
       <form id="updateForm" method="POST">
         <div class="content">
           <div class="header">
-            <h4 class="title" id="messageLabel">Update Info</h4>
+            <h4 class="title" id="messageLabel">Update Profile</h4>
           </div>
           <div class="body">
             <div class="form-group">
@@ -80,23 +80,30 @@
       </form>
     </div>
   </div>
-  <p>Send a push Notification - below - change the text to anything you want.</p>
+  <h2>Send Push Message</h2>
 
-<div class="push-data">
-  <textarea rows="10" class="js-push-content push-content-text" disabled>
-  {
-   "notification": {
-     "title": "Example Title",
-     "body": "This will be the body text for the notification.",
-     "icon": "/assets/fav-icons/favicon-512x512.png"
-    }
-  }
-</textarea>
-  <button class="btn btn--primary js-trigger-push-msg" disabled>Trigger Push Message</button>
-  <button class="js-notification-overview">Example Notification</button>
-</div>
+  <p>Clicking "Trigger Push Message" will make
+    an API request to "/api/trigger-push-msg" (i.e. an API call to our
+    node backend) and that will trigger a push message to all our users.
+  </p>
 
-  <h3>Subscriber List</h3>
+  <p>Feel free to change the text to anything you want.</p>
+
+  <div class="push-data">
+    <textarea rows="10" class="js-push-content push-content-text" disabled>{
+"notification": {
+  "title": "Example Title",
+  "body": "This will be the body text for the notification.",
+  "icon": "/assets/fav-icons/fav-icon-512x512.png"
+}
+}</textarea>
+
+    <button class="js-trigger-push-msg" disabled>Trigger Push Message</button>
+  </div>
+
+  <button class="js-notification-overview" disabled>Example Notification</button>
+
+  <h2>Subscriber List</h2>
 
   <table>
     <thead>
@@ -107,4 +114,10 @@
 
     </tbody>
   </table>
+
+  <h3>Please Note</h3>
+
+  <p>You'd want this page to be restricted some how, perhaps by login or
+  could be a restricted application then is only accessible locally.</p>
+</main>
 </article>

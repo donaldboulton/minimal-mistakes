@@ -1,4 +1,4 @@
-const VERSION = '16';
+const VERSION = '10';
 
 this.addEventListener('install', (e) => {
     e.waitUntil(caches.open(VERSION).then(cache => cache.addAll([
@@ -239,11 +239,11 @@ self.addEventListener('pushsubscriptionchange', function(event) {
   );
 });
 
-const examplePage = '/admin/admin.html';
+const examplePage = '/admin.html';
 
 function openWindow(event) {
   /**** START notificationOpenWindow ****/
-  const examplePage = '/admin/admin.html';
+  const examplePage = '/admin.html';
   const promiseChain = clients.openWindow(examplePage);
   event.waitUntil(promiseChain);
   /**** END notificationOpenWindow ****/
