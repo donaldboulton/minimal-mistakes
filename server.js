@@ -6,8 +6,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const Datastore = require('nedb');
 
-
-
 const hostname = 'https://donboulton.com';
 
 const vapidKeys = {

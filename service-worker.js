@@ -179,7 +179,7 @@ function handleNoCacheMatch(e) {
 /* eslint-disable max-len */
 
 const applicationServerPublicKey = 'BOew5Tx7fTX51GzJ7tpF3dDLNS54OvUST_dGGqzJEy54jqW2qghIRTiK7BfOpCPp8xNfMH7Mtprl3hp_WGjgslU';
-
+const applicationGCMServerKey = 'AAAAx7aUBPM:APA91bFxAfB5yAI4ILnxRpcpIAXEICRQ3O8YEu9A55ZgNEVkcc1jLMBj0g9GAvQGq4Y6DXMBcT1-1mxDzTdZIhQtGIsUWYoNK8g9ZZACxIZEmBGQQ7h-PZe7C1LxACe6FWYsHgbs0O7iJEvO3VwvWf9boSXKqALE6A';
 /* eslint-enable max-len */
 
 function urlB64ToUint8Array(base64String) {

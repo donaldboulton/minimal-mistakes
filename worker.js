@@ -2,6 +2,13 @@ const admin = require('firebase-admin');
 let app = null;
 let firebase = firebaseAdmin.firebase;
 
+var serviceAccount = require("./serviceAccountKey.json");
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: "https://airy-office-413.firebaseio.com"
+});
+
 firebase.initializeApp({
   'messagingSenderId': '40911931240'
 });
