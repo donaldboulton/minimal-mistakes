@@ -1,3 +1,5 @@
+importScripts('https://unpkg.com/workway/worker.js');
+
 workway('/workers/firebase-bundle.js').then(
     async function ({worker, namespace}) {
       await namespace.initializeApp({
