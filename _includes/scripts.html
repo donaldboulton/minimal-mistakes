@@ -258,9 +258,7 @@ $(".author__urls_masthead button").on("click", function() {
 
 {% if page.admin == true %}
 <script async defer src="'https://unpkg.com/file-upload-with-preview"></script>
-<script>
-  const upload = new FileUploadWithPreview('myUniqueUploadId', true)
-</script>
+
 <script id="worker1" type="javascript/worker">
   self.onmessage = function(e) {
     var data = e.data;
