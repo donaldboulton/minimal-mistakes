@@ -36,6 +36,7 @@
     "body-parser": "^1.18.3",
     "bufferutil": "^4.0.0",
     "del": "^3.0.0",
+    "es6-promise": "^4.2.4",
     "express": "^4.16.3",
     "file-upload-with-preview": "^2.1.1",
     "firebase-admin": "^6.0.0",

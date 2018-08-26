@@ -176,80 +176,12 @@ function handleNoCacheMatch(e) {
     return fetchFromNetworkAndCache(e);
 }
 
-/* eslint-disable max-len */
-const applicationServerPublicKey = 'BOew5Tx7fTX51GzJ7tpF3dDLNS54OvUST_dGGqzJEy54jqW2qghIRTiK7BfOpCPp8xNfMH7Mtprl3hp_WGjgslU';
-const applicationGCMServerKey = 'AAAAx7aUBPM:APA91bFxAfB5yAI4ILnxRpcpIAXEICRQ3O8YEu9A55ZgNEVkcc1jLMBj0g9GAvQGq4Y6DXMBcT1-1mxDzTdZIhQtGIsUWYoNK8g9ZZACxIZEmBGQQ7h-PZe7C1LxACe6FWYsHgbs0O7iJEvO3VwvWf9boSXKqALE6A';
-/* eslint-enable max-len */
-
-var worker = new Worker('worker.js');
-
-worker.addEventListener('message', event => {
-  console.log(event.data, 'Message from the worker!');
-});
-
-function urlB64ToUint8Array(base64String) {
-  const padding = '='.repeat((4 - base64String.length % 4) % 4);
-  const base64 = (base64String + padding)
-    .replace(/\-/g, '+')
-    .replace(/_/g, '/');
-
-  const rawData = window.atob(base64);
-  const outputArray = new Uint8Array(rawData.length);
-
-  for (let i = 0; i < rawData.length; ++i) {
-    outputArray[i] = rawData.charCodeAt(i);
-  }
-  return outputArray;
-}
-
-self.addEventListener('push', function(event) {
-  console.log('[Service Worker] Push Received.');
-  console.log(`[Service Worker] Push had this data: "${event.data.text()}"`);
-
-  const title = 'Notify';
-  const options = {
-    body: 'Push Notifications enabled.',
-    icon: '/assets/images/icon.png',
-    badge: '/assets/images/badge.png',
-    image: '/assets/images/pages/letter-avatar-header.png',
-    sound: '/assets/audio/notification-sound.mp3',
-    tag: 'notification',
-    vibrate: [500,110,500,110,450,110,200,110,170,40,450,110,200,110,170,40,500],
-  };
-
-  event.waitUntil(self.registration.showNotification(title, options));
-});
-
-self.addEventListener('notificationclick', function(event) {
-  console.log('[Service Worker] Notification click Received.');
-
-  event.notification.close();
-
-  event.waitUntil(
-    clients.openWindow('https://donboulton.com')
-  );
-});
-
-self.addEventListener('pushsubscriptionchange', function(event) {
-  console.log('[Service Worker]: \'pushsubscriptionchange\' event fired.');
-  const applicationServerKey = urlB64ToUint8Array(applicationServerPublicKey);
-  event.waitUntil(
-    self.registration.pushManager.subscribe({
-      userVisibleOnly: true,
-      applicationServerKey: applicationServerKey
-    })
-    .then(function(newSubscription) {
-      console.log('[Service Worker] New subscription: ', newSubscription);
-    })
-  );
-});
-
-const examplePage = '/admin.html';
+const adminPage = '/admin/admin.html';
 
 function openWindow(event) {
   /**** START notificationOpenWindow ****/
-  const examplePage = '/admin.html';
-  const promiseChain = clients.openWindow(examplePage);
+  const adminPage = '/admin/admin.html';
+  const promiseChain = clients.openWindow(adminPage);
   event.waitUntil(promiseChain);
   /**** END notificationOpenWindow ****/
 }
@@ -445,12 +377,12 @@ self.addEventListener('notificationclose', function(event) {
 self.addEventListener('message', function(event) {
   console.log('Received message from page.', event.data);
   switch(event.data) {
-    case 'must-show-notification-admin':
+    case 'must-show-notification-demo':
       self.dispatchEvent(new PushEvent('push', {
         data: 'must-show-notification'
       }));
       break;
-    case 'send-message-to-page-admin':
+    case 'send-message-to-page-demo':
       self.dispatchEvent(new PushEvent('push', {
         data: 'send-message-to-page'
       }));

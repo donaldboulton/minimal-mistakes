@@ -1,6 +1,13 @@
 'use strict';
 
 const applicationServerPublicKey = 'BD2iZ3fdD1IdYyJCHAJmwLsJPrPxeetpYe_zit7UGt4x5Nkas5TCYkLIVTabOWikVLaTDDPXkXdG0Ho1xZh6Ozw';
+const applicationGCMServerKey = 'AAAAx7aUBPM:APA91bFxAfB5yAI4ILnxRpcpIAXEICRQ3O8YEu9A55ZgNEVkcc1jLMBj0g9GAvQGq4Y6DXMBcT1-1mxDzTdZIhQtGIsUWYoNK8g9ZZACxIZEmBGQQ7h-PZe7C1LxACe6FWYsHgbs0O7iJEvO3VwvWf9boSXKqALE6A';
+
+var worker = new Worker('worker.js');
+
+worker.addEventListener('message', event => {
+  console.log(event.data, 'Message from the worker!');
+});
 
 const pushCheckbox = document.querySelector('.js-push-toggle-checkbox');
 
