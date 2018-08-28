@@ -1,15 +1,64 @@
 'use strict';
 
-/**** START web-push-require ****/
 const webpush = require('web-push');
-/**** END web-push-require ****/
 const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
 const Datastore = require('nedb');
 const workway = require('workway/node');
+const cors = require('cors')({ origin: true });
+const admin = require('firebase-admin');
+
+admin.initializeApp();
+const database = admin.database().ref('/items');
+
+exports.helloWorld = functions.https.onRequest((request, response) => {
+  response.send("Hello from a Severless Database!");
+});
+
+exports.addItem = functions.https.onRequest((req, res) => {
+  return cors(req, res, () => {
+    if(req.method !== 'POST') {
+      return res.status(401).json({
+        message: 'Not allowed'
+      })
+    }
+    console.log(req.body)
+
+    const item = req.body.item
+
+    database.push({ item });
+
+    let items = [];
+
+    return database.on('value', (snapshot) => {
+      snapshot.forEach((item) => {
+        items.push({
+          id: item.key,
+          items: item.val().item
+        });
+      });
+
+      res.status(200).json(items)
+    }, (error) => {
+      res.status(error.code).json({
+        message: `Something went wrong. ${error.message}`
+      })
+    })
+  })
+})
 
 const hostname = 'https://donboulton.com';
+const app = express();
+app.use(express.static('public'));
+app.use(bodyParser.json());
+app.use(bodyParser.text());
+app.use(urlencoded({ extended: true }));
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+    return next();
+});
 
 const vapidKeys = {
     publicKey: 'BOew5Tx7fTX51GzJ7tpF3dDLNS54OvUST_dGGqzJEy54jqW2qghIRTiK7BfOpCPp8xNfMH7Mtprl3hp_WGjgslU',
@@ -22,7 +71,6 @@ webpush.setVapidDetails(
   vapidKeys.publicKey,
   vapidKeys.privateKey
 );
-
 const db = new Datastore({ filename: 'subscription-store.db', autoload: true });
 
 function saveSubscriptionToDatabase(subscription) {
@@ -63,17 +111,6 @@ const isValidSaveRequest = (req, res) => {
     }
     return true;
 };
-
-const app = express();
-app.use(express.static(path.join(__dirname, 'admin')));
-app.use(bodyParser.json());
-app.use(bodyParser.text())
-app.use(urlencoded({ extended: true }));
-app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-    return next();
-});
 
 app.post('/api/save-subscription/', (req, res) => {
 

@@ -26,16 +26,13 @@ function urlBase64ToUint8Array(base64String) {
   return outputArray;
 }
 
-function registerServiceWorker() {
-  return navigator.serviceWorker.register('service-worker.js')
-  .then(function(registration) {
-    console.log('Service worker successfully registered.');
-    return registration;
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/service-worker.js')
+    .then(function(registration) {
+      messaging.useServiceWorker(registration);
+    });
   });
-}
-
-function getSWRegistration() {
-  return navigator.serviceWorker.register('service-worker.js');
 }
 
 function askPermission() {

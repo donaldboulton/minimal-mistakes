@@ -18,9 +18,9 @@
 
 #include <grpc/support/port_platform.h>
 
+#include "pb_decode.h"
+#include "pb_encode.h"
 #include "src/core/ext/filters/client_channel/lb_policy/grpclb/load_balancer_api.h"
-#include "third_party/nanopb/pb_decode.h"
-#include "third_party/nanopb/pb_encode.h"
 
 #include <grpc/support/alloc.h>
 
@@ -73,7 +73,7 @@ grpc_grpclb_request* grpc_grpclb_request_create(const char* lb_service_name) {
 }
 
 static void populate_timestamp(gpr_timespec timestamp,
-                               struct _grpc_lb_v1_Timestamp* timestamp_pb) {
+                               grpc_grpclb_timestamp* timestamp_pb) {
   timestamp_pb->has_seconds = true;
   timestamp_pb->seconds = timestamp.tv_sec;
   timestamp_pb->has_nanos = true;

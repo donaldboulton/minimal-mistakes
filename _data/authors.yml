@@ -1,7 +1,6 @@
 # Authors
 
-authors:
-  name        : "Donald Boulton"
+- name        : "Donald Boulton"
   description : "Away from ASP, Jekyll for Me"
   uri         : "https://donboulton.com"
   email       : "donaldboulton@gmail.com"
@@ -10,9 +9,8 @@ authors:
   twitter     : "donboulton"
   google_plus : "donaldboulton"
 
-Michael Rose:
-  name        : "Michael Rose"
-  dexcription : "Another tattoed Time Travler"
+- name        : "Michael Rose"
+  description : "Another tattoed Time Travler"
   uri         : "https://mademistakes.com"
   email       : "michaelrose@mademistakes.com"
   bio         : "Just making mistakes."

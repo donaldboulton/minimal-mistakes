@@ -48,11 +48,11 @@ extern void (*grpc_resolve_address_ares)(const char* name,
   function. \a on_done may be called directly in this function without being
   scheduled with \a exec_ctx, so it must not try to acquire locks that are
   being held by the caller. */
-extern grpc_ares_request* (*grpc_dns_lookup_ares)(
+extern grpc_ares_request* (*grpc_dns_lookup_ares_locked)(
     const char* dns_server, const char* name, const char* default_port,
     grpc_pollset_set* interested_parties, grpc_closure* on_done,
     grpc_lb_addresses** addresses, bool check_grpclb,
-    char** service_config_json);
+    char** service_config_json, grpc_combiner* combiner);
 
 /* Cancel the pending grpc_ares_request \a request */
 void grpc_cancel_ares_request(grpc_ares_request* request);
@@ -65,6 +65,10 @@ grpc_error* grpc_ares_init(void);
    grpc_ares_init(), this function uninitializes the gRPC ares wrapper only if
    it has been called the same number of times as grpc_ares_init(). */
 void grpc_ares_cleanup(void);
+
+/** Schedules the desired callback for request completion
+ * and destroys the grpc_ares_request */
+void grpc_ares_complete_request_locked(grpc_ares_request* request);
 
 /* Exposed only for testing */
 void grpc_cares_wrapper_test_only_address_sorting_sort(
