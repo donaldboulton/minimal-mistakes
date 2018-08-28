@@ -69,6 +69,8 @@
 
 "use strict";
 
+const workway = require('workway/node');
+
 workway('/worker.js').then(async ({worker, namespace}) => {
     const user = new namespace.app.User;
     user.getName().then(name => {

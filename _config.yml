@@ -243,6 +243,8 @@ exclude:
   - Rakefile
   - README
   - README.md
+  - admin/index.js
+  - webpack.config.js
   - tmp
   - /docs
 keep_files:

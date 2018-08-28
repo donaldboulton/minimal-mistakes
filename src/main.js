@@ -23,7 +23,7 @@ const register = (messaging) => {
         return;
     }
 
-    navigator.serviceWorker.register('./firebase-messaging-sw.js').then(() => {
+    navigator.serviceWorker.register('./service-worker.js').then(() => {
         return navigator.serviceWorker.ready;
     }).catch((error) => {
         console.error(error);
