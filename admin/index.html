@@ -16,6 +16,32 @@ layout: compress
 <body id="style-3" class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %} auth-false" itemscope itemtype="https://schema.org/WebPage">
 <div class="page">
 <script src="https://unpkg.com/netlify-cms@^1.0/dist/cms.js"></script>
+{% raw %}
+<script type="text/x-handlebars" data-template-name='cms/preview/authors'>
+  {{#cms-preview field="authors" as |author|}}
+    <div class="author">
+      <h2>{{author.name}}</h2>
+      <span class="author-avatar align-left">{{cms-preview field="avatar" from=author}}</span>
+      <div class="email">{{cms-preview field="email" from=author}}</div>
+      <div class="url">{{cms-preview field="url" from=author}}</div>
+      <div class="description">{{cms-preview field="description" from=author}}</div>
+    </div>
+  {{/cms-preview}}
+</script>
+<script type="text/x-handlebars" data-template-name='cms/widgets/author-control'>
+  <div class="form-group">
+    <label>{{widget.label}}</label>
+    {{view "select" content=widget.field.authors value=widget.value}}
+  </div>
+</script>
+
+<script type="text/x-handlebars" data-template-name='cms/widgets/author-preview'>
+  Written by
+  <span class="author">{{widget.value}}</span>
+  on
+  <span class="date">{{time-format widget.entry.cmsDate 'LL'}}</span>
+</script>
+{% endraw %}
 </div>
 </body>
 </html>

@@ -69,13 +69,10 @@
 
 "use strict";
 
-workway('/worker.js').then(async ({worker, namespace}) => {
-    const user = new namespace.app.User;
-    user.getName().then(name => {
-      worker.postMessage(`Thanks from ${name}!`);
-    });
-    const rand = await namespace.utils.random(16);
-    console.log(rand);
+var worker = new Worker('worker.js');
+
+worker.addEventListener('message', event => {
+  console.log(event.data, 'Message from the worker!');
 });
 
 Object.defineProperty(exports, '__esModule', { value: true });
@@ -2902,6 +2899,61 @@ var firebase = _interopRequireWildcard(_firebase);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
+var getFirebaseMessagingObject = function getFirebaseMessagingObject() {
+    // Initialize Firebase
+    var config = {
+        apiKey: 'AIzaSyDE2FsxAT0d3nROmfIZKcWoAuJNyzcmOZA',
+        authDomain: 'donboulton-210120.firebaseapp.com',
+        databaseURL: 'https://donboulton-210120.firebaseio.com',
+        projectId: 'donboulton-210120',
+        storageBucket: 'donboulton-210120.appspot.com',
+        messagingSenderId: '642731329222'
+    };
+
+    firebase.initializeApp(config);
+
+    return firebase.messaging();
+};
+
+var register = function register(messaging) {
+    if (!navigator.serviceWorker || !messaging) {
+        return;
+    }
+
+    navigator.serviceWorker.register('./firebase-messaging-sw.js').then(function () {
+        return navigator.serviceWorker.ready;
+    }).catch(function (error) {
+        console.error(error);
+    }).then(function (registration) {
+        messaging.useServiceWorker(registration);
+
+        messaging.requestPermission().then(function () {
+            console.log('Notification permission granted.');
+
+            messaging.getToken().then(function (token) {
+                console.log(token);
+
+                var options = {
+                    method: 'POST',
+                    headers: new Headers({ 'Content-Type': 'application/json' }),
+                    body: JSON.stringify({ token: token })
+                };
+
+                fetch('/api/webpush/register', options).then(function (res) {
+                    console.dir(res);
+                }).catch(function (error) {
+                    console.error(error);
+                });
+            }).catch(function (error) {
+                console.error(error);
+            });
+        }).catch(function (error) {
+            console.log('Unable to get permission to notify.', error);
+        });
+    });
+};
+
+register(getFirebaseMessagingObject());
 
 /***/ }),
 /* 7 */

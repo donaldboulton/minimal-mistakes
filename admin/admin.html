@@ -107,8 +107,21 @@ github_editme_path: donaldboulton/DWB/blob/gh-pages/admin/admin.html
     </div>
   </div>
   <h2>Send Push Message</h2>
-
-  <button class="js-notification-overview btn btn--primary" disabled>Example Notification</button>
+  <div class="WebPush">
+    <form method="post" action="/api/webpush/subscribe">
+        <dl>
+            <dt><label for="text-title">Title</label></dt>
+            <dd><input type="text" id="text-title" name="text-title" /></dd>
+            <dt><label for="text-body">Body</label></dt>
+            <dd><input type="text" id="text-body" name="text-body" /></dd>
+            <dt><label for="url-icon">Icon</label></dt>
+            <dd><input type="url" id="url-icon" name="url-icon" /></dd>
+            <dt><label for="url-link">Link</label></dt>
+            <dd><input type="url" id="url-link" name="url-link" /></dd>
+        </dl>
+        <button type="submit">Web Push</button>
+    </form>
+</div>
 
   <h2>Subscriber List</h2>
 
@@ -125,8 +138,9 @@ github_editme_path: donaldboulton/DWB/blob/gh-pages/admin/admin.html
       <button class="collapsible btn btn--light-outline">Open&nbsp;Test Notifications&nbsp;&rarr;</button>
     <div class="content-collapsible">
       <div class="flex-container">
-      <h2>Notification Options</h2>
 
+      <button class="js-notification-overview btn btn--primary" disabled>Example Notification</button>
+      <h2>Notification Options</h2>
       <p>This page contains a set of example notifications that you can interact
       with to see what is possible with notifications.</p>
 

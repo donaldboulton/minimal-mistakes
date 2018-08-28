@@ -189,7 +189,7 @@ function openWindow(event) {
 function focusWindow(event) {
   /**** START notificationFocusWindow ****/
   /**** START urlToOpen ****/
-  const urlToOpen = new URL(examplePage, self.location.origin).href;
+  const urlToOpen = new URL(adminPage, self.location.origin).href;
   /**** END urlToOpen ****/
 
   /**** START clientsMatchAll ****/
@@ -312,55 +312,6 @@ self.addEventListener('push', function(event) {
   }
 });
 
-/**** START notificationActionClickEvent ****/
-self.addEventListener('notificationclick', function(event) {
-  if (!event.action) {
-    // Was a normal notification click
-    console.log('Notification Click.');
-    return;
-  }
-
-  switch (event.action) {
-    case 'coffee-action':
-      console.log('User â¤ï¸ï¸\'s coffee.');
-      break;
-    case 'doughnut-action':
-      console.log('User â¤ï¸ï¸\'s doughnuts.');
-      break;
-    case 'gramophone-action':
-      console.log('User â¤ï¸ï¸\'s music.');
-      break;
-    case 'atom-action':
-      console.log('User â¤ï¸ï¸\'s science.');
-      break;
-    default:
-      console.log(`Unknown action clicked: '${event.action}'`);
-      break;
-  }
-});
-/**** END notificationActionClickEvent ****/
-
-/**** START notificationClickEvent ****/
-self.addEventListener('notificationclick', function(event) {
-  event.notification.close();
-
-  switch(event.notification.tag) {
-    case 'open-window':
-      openWindow(event);
-      break;
-    case 'focus-window':
-      focusWindow(event);
-      break;
-    case 'data-notification':
-      dataNotification(event);
-      break;
-    default:
-      // NOOP
-      break;
-  }
-});
-/**** END notificationClickEvent ****/
-
 const notificationCloseAnalytics = () => {
   return Promise.resolve();
 };
@@ -392,3 +343,32 @@ self.addEventListener('message', function(event) {
       break;
   }
 });
+
+self.addEventListener('install', (event) => {
+  event.waitUntil(skipWaiting());
+}, false);
+
+self.addEventListener('activate', (event) => {
+  event.waitUntil(self.clients.claim());
+}, false);
+
+self.addEventListener('push', (event) => {
+  if (!event.data) {
+      return;
+  }
+
+  const parsedData   = event.data.json();
+  const notification = parsedData.notification;
+  const title        = notification.title;
+  const body         = notification.body;
+  const icon         = notification.icon;
+  const data         = parsedData.data;
+
+  event.waitUntil(
+      self.registration.showNotification(title, { body, icon, data })
+  );
+}, false);
+
+self.addEventListener('notificationclick', (event) => {
+  event.waitUntil(self.clients.openWindow(event.notification.data.url));
+}, false);

@@ -2,10 +2,10 @@
 
 const webpush = require('web-push');
 const path = require('path');
+const https = require('https');
 const express = require('express');
 const bodyParser = require('body-parser');
 const Datastore = require('nedb');
-const workway = require('workway/node');
 const cors = require('cors')({ origin: true });
 const admin = require('firebase-admin');
 
@@ -71,6 +71,65 @@ webpush.setVapidDetails(
   vapidKeys.publicKey,
   vapidKeys.privateKey
 );
+
+const port = process.env.PORT || 5000;
+
+app.listen(port, () => {
+    console.log(`Listening on port ${port} ...`);
+});
+
+const bodies = [];
+
+app.post('/api/webpush/register', (req, res) => {
+    const body = req.body;
+
+    bodies.push(body);
+
+    res.status(200).set('Content-Type', 'application/json').send(JSON.stringify(body));
+});
+
+app.post('/api/webpush/subscribe', (req, res) => {
+    const notification = {
+        title : req.body['text-title'],
+        body  : req.body['text-body'],
+        icon  : req.body['url-icon']
+    };
+
+    const data =  {
+        url : req.body['url-link']
+    };
+
+    Promise.all(bodies.map((body) => {
+        return new Promise((resolve, reject) => {
+            const options = {
+                method  : 'POST',
+                host    : 'fcm.googleapis.com',
+                path    : '/fcm/send',
+                headers : {
+                    'Content-Type'  : 'application/json',
+                    'Authorization' : 'key=`Your Server Key`'
+                }
+            };
+
+            const to = body.token;
+
+            const content_available = true;
+
+            https.request(options, (response) => {
+                const data = [];
+
+                response.on('data',  (chunk) => data.push(chunk));
+                response.on('end',   ()      => resolve(JSON.parse(Buffer.concat(data).toString())));
+                response.on('error', (error) => reject(error));
+            }).end(JSON.stringify({ notification, data, to, content_available }));
+        });
+    })).then((result) => {
+        res.status(200).set('Content-Type', 'application/json').send(JSON.stringify(result));
+    }).catch((error) => {
+        res.status(500).set('Content-Type', 'application/json').send(JSON.stringify(error));
+    });
+});
+
 const db = new Datastore({ filename: 'subscription-store.db', autoload: true });
 
 function saveSubscriptionToDatabase(subscription) {
@@ -205,12 +264,6 @@ app.post('/api/trigger-push-msg/', (req, res) => {
                 },
             }));
         });
-});
-
-const port = process.env.PORT || 9012;
-
-const server = app.listen(port, () => {
-    console.log('Running on https://localhost:' + port);
 });
 
 

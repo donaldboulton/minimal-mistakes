@@ -96,55 +96,9 @@ $border-color: darken($grey, 20%);
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
-  		float: left;
-  		margin: 1.858736059%;
+  		  float: left;
+  		  margin: 1.858736059%;
         width: 29.615861214%;
         height: 100px;
-    }
-/*Upload Container*/
-
-.demo-upload-container {
-    padding: 50px 10px;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1000px;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-/*Info Container*/
-
-.demo-info-container {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 40px;
-    max-width: 300px;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-
-    background: #333;
-    padding: 15px 15px;
-    border-radius: 6px;
-    text-align: center;
-    color: white;
-}
-
-.demo-info-container a {
-    color: white;
-    text-decoration: underline;
-}
-
-.demo-info-container a:hover {
-    color: #eee;
-}
-
-.upload-info-button {
-    display: block;
-    margin-bottom: 10px;
+   }
 }
