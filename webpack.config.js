@@ -1,6 +1,6 @@
 module.exports = {
   entry: { js: './src/main.js' },
-  output: { path: `${__dirname}/public`, filename: 'app.js' },
+  output: { path: `${__dirname}/`, filename: 'app.js' },
   module: {
     rules: [
       {
