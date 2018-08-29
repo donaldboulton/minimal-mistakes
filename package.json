@@ -27,6 +27,7 @@
   "scripts": {
     "dev": "webpack && jekyll serve",
     "build": "webpack && jekyll build",
+    "start": "webpack --config webpack.config.js",
     "postbuild": "npm start",
     "serve": "node server.js"
   },
