@@ -258,54 +258,11 @@ $(".author__urls_masthead button").on("click", function() {
 
 {% if page.admin == true %}
 <script async defer src="'https://unpkg.com/file-upload-with-preview"></script>
-
-<script id="worker1" type="javascript/worker">
-  self.onmessage = function(e) {
-    var data = e.data;
-
-    if (data.url) {
-      var url = data.url.href;
-      var index = url.indexOf('/admin/admin.html');
-      if (index != -1) {
-        url = url.substring(0, admin);
-      }
-      importScripts(url + '/assets/js/vendor/notifications/admin.js');
-    }
-  };
-  function worker() {
-    setInterval(function() {
-      postMessage({foo: "bar"});
-    }, 1000);
-  }
-  </script>
-  <script>
-      var bb = new (window.BlobBuilder || window.WebKitBlobBuilder)();
-      bb.append(document.querySelector('#worker1').textContent);
-
-      var worker = new Worker(window.webkitURL.createObjectURL(bb.getBlob()));
-      worker.onmessage = function(e) {
-        status(e.data);
-      }
-      worker.postMessage();
-      var workers = $worker();
-      var worker1 = workers.create(function (e) {
-          self.postMessage(e.data);
-      }, [
-        {
-          name: 'foo',
-          method: function () {
-            return 'bar';
-          }
-        }
-      ]);
-
-      var worker2 = workers.create(function (e) {
-          self.postMessage(e.data);
-      });
-  </script>
+<script src="{{ '/assets/js/vendor/notifications/admin.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/vendor/notifications/notifications.js' | relative_url }}"></script>
 {% endif %}
 
 <script async defer src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script async defer type="text/javascript" src="https://unpkg.com/default-passive-events"></script>
-<script src="{{ '/app.js' | relative_url }}" async></script>
+<script src="{{ '/assets/js/bundle.js' | relative_url }}" async></script>
+<script src="{{ '/server.js' | relative_url }}" async></script>

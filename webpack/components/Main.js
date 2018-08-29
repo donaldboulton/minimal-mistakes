@@ -69,17 +69,6 @@
 
 "use strict";
 
-const workway = require('workway/node');
-
-workway('/worker.js').then(async ({worker, namespace}) => {
-    const user = new namespace.app.User;
-    user.getName().then(name => {
-      worker.postMessage(`Thanks from ${name}!`);
-    });
-    const rand = await namespace.utils.random(16);
-    console.log(rand);
-});
-
 Object.defineProperty(exports, '__esModule', { value: true });
 
 var util = __webpack_require__(4);

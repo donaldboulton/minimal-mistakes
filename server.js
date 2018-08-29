@@ -225,4 +225,12 @@ app.post('/api/trigger-push-msg/', (req, res) => {
         });
 });
 
+const worker = new Worker('worker.js');
+
+worker.addEventListener('message', event => {
+  console.log(event.data, 'Message from the worker!');
+});
+
+
+
 

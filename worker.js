@@ -1,4 +1,3 @@
-importScripts('https://unpkg.com/workway/worker.js');
 import * as firebase from 'firebase';
 
 const getFirebaseMessagingObject = () => {
@@ -267,3 +266,27 @@ workway({
 });
 // generic message listeners (addEventListener works too)
 self.onmessage = event => console.log(event.data);
+
+function run(fn) {
+    return new Worker(URL.createObjectURL(new Blob(['('+fn+')()'])));
+  }
+
+  const worker = run(function() {
+
+    postMessage('I am a worker!');
+
+    self.close();
+  });
+
+  worker.onmessage = (event) => console.log(event.data);
+
+const workers = spawn(function() {
+    postMessage('Yo!');
+    self.close();
+  }, 2);
+
+  workers.forEach(function(worker) {
+    worker.onmessage = function(event) {
+      console.log(event.data); // 'Yo!'
+    };
+  });

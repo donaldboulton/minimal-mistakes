@@ -1,14 +1,23 @@
+const path = require('path');
+
 module.exports = {
-  entry: { js: './src/main.js' },
-  output: { path: `${__dirname}/`, filename: 'app.js' },
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: 'babel-loader'
-      }
-    ]
-  },
-  devtool: 'source-map'
-};
+    // webpack folder's entry js - excluded from jekll's build process.
+    entry: "./webpack/app.js",
+    output: {
+      // we're going to put the generated file in the assets folder so jekyll will grab it.
+        path: 'src/assets/js/',
+        filename: "bundle.js"
+    },
+    module: {
+      loaders: [
+        {
+          test: /\.jsx?$/,
+          exclude: /(node_modules)/,
+          loader: 'babel-loader',
+          query: {
+            presets: ['react', 'es2015']
+          }
+        }
+      ]
+    }
+  };
