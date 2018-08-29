@@ -73,5 +73,16 @@
     "stylelint": "^9.5.0",
     "stylelint-config-standard": "^18.2.0",
     "webpack": "^4.17.1"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "react"
+    ],
+    "env": {
+      "presets":[
+        "react-hmre"
+      ]
+    }
   }
 }

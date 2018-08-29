@@ -225,7 +225,8 @@ exclude:
   - .sass-cache
   - assets/js/plugins
   - assets/js/_main.js
-  - assets/js/bundle.js
+  - src/
+  - src/assets/js/bundle.js
   - Capfile
   - CHANGELOG
   - config

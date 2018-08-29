@@ -2,12 +2,12 @@
 
 import React, { Component } from 'react';
 
-const webpush = require('web-push');
-const path = require('path');
-const https = require('https');
-const express = require('express');
-const bodyParser = require('body-parser');
-const Datastore = require('nedb');
+import express from 'express';
+import path from 'path';
+import https from 'https';
+
+import bodyParser from 'body-parser';
+import Datastore from 'nedb';
 const cors = require('cors')({ origin: true });
 
 const hostname = 'https://donboulton.com';
@@ -68,7 +68,7 @@ app.post('/api/webpush/subscribe', (req, res) => {
                 path    : '/fcm/send',
                 headers : {
                     'Content-Type'  : 'application/json',
-                    'Authorization' : 'key=`Your Server Key`'
+                    'Authorization' : 'key=`AAAAx7aUBPM:APA91bFxAfB5yAI4ILnxRpcpIAXEICRQ3O8YEu9A55ZgNEVkcc1jLMBj0g9GAvQGq4Y6DXMBcT1-1mxDzTdZIhQtGIsUWYoNK8g9ZZACxIZEmBGQQ7h-PZe7C1LxACe6FWYsHgbs0O7iJEvO3VwvWf9boSXKqALE6A`'
                 }
             };
 

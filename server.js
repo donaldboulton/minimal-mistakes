@@ -66,7 +66,7 @@ app.post('/api/webpush/subscribe', (req, res) => {
                 path    : '/fcm/send',
                 headers : {
                     'Content-Type'  : 'application/json',
-                    'Authorization' : 'key=`Your Server Key`'
+                    'Authorization' : 'key=`AAAAx7aUBPM:APA91bFxAfB5yAI4ILnxRpcpIAXEICRQ3O8YEu9A55ZgNEVkcc1jLMBj0g9GAvQGq4Y6DXMBcT1-1mxDzTdZIhQtGIsUWYoNK8g9ZZACxIZEmBGQQ7h-PZe7C1LxACe6FWYsHgbs0O7iJEvO3VwvWf9boSXKqALE6A`'
                 }
             };
 
