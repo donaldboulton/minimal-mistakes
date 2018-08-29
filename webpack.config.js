@@ -7,7 +7,7 @@ module.exports = {
     },
     output: {
       // we're going to put the generated file in the assets folder so jekyll will grab it.
-        path: 'src/assets/javascripts/',
+        path: '/src/assets/javascripts/',
         filename: "bundle.js"
     },
     module: {
