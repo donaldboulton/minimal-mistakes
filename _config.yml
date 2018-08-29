@@ -214,7 +214,7 @@ strict_front_matter      : true
 include:
   - .htaccess
   - _pages
-  - node_modules
+  - functions
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -222,9 +222,11 @@ exclude:
   - vendor
   - .bundle
   - .jekyll-assets-cache
+  - .jekyll-metadata
   - .sass-cache
   - assets/js/plugins
   - assets/js/_main.js
+  - assets/js/bundle.js
   - Capfile
   - CHANGELOG
   - config
