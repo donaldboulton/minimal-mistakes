@@ -3,7 +3,6 @@ const path = require('path');
 module.exports = {
     // webpack folder's entry js - excluded from jekll's build process.
     entry: {
-        app: './app.js',
         main: './webpack/entry.js',
     },
     output: {
