@@ -80,7 +80,7 @@
       "react"
     ],
     "env": {
-      "presets":[
+      "presets": [
         "react-hmre"
       ]
     }
