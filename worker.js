@@ -1,4 +1,4 @@
-import * as firebase from 'firebase';
+const firebase = require('firebase');
 
 const getFirebaseMessagingObject = () => {
     // Initialize Firebase

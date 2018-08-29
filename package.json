@@ -2,7 +2,7 @@
   "name": "donaldboulton",
   "version": "4.12.0",
   "description": "Donald Boulton theme npm server scripts",
-  "main": "server.js",
+  "main": "bundle.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/donaldboulton/DWB.git"
@@ -29,7 +29,7 @@
     "build": "webpack && jekyll build",
     "start": "webpack --config webpack.config.js",
     "postbuild": "npm start",
-    "serve": "node server.js"
+    "serve": "node bundle.js"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
