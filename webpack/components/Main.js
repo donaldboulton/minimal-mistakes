@@ -1,5 +1,7 @@
 'use strict';
 
+import React, { Component } from 'react';
+
 const webpush = require('web-push');
 const path = require('path');
 const https = require('https');
