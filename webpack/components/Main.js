@@ -1,7 +1,5 @@
 'use strict';
 
-import React, { Component } from 'react';
-
 import express from 'express';
 import path from 'path';
 import https from 'https';
