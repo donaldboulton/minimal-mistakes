@@ -214,7 +214,6 @@ strict_front_matter      : true
 include:
   - .htaccess
   - _pages
-  - functions
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
