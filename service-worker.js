@@ -176,11 +176,11 @@ function handleNoCacheMatch(e) {
     return fetchFromNetworkAndCache(e);
 }
 
-const adminPage = '/admin/admin.html';
+const adminPage = '/admin.html';
 
 function openWindow(event) {
   /**** START notificationOpenWindow ****/
-  const adminPage = '/admin/admin.html';
+  const adminPage = '/admin.html';
   const promiseChain = clients.openWindow(adminPage);
   event.waitUntil(promiseChain);
   /**** END notificationOpenWindow ****/
@@ -372,3 +372,11 @@ self.addEventListener('push', (event) => {
 self.addEventListener('notificationclick', (event) => {
   event.waitUntil(self.clients.openWindow(event.notification.data.url));
 }, false);
+
+const worker = new Worker('worker.js');
+
+worker.addEventListener('message', function(e) {
+  console.log('Worker said: ', e.data);
+}, false);
+
+worker.postMessage('Hello World');

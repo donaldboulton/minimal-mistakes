@@ -5829,7 +5829,7 @@ var Query = /** @class */ (function () {
                 deferred.resolve(snapshot);
             }
         };
-        this.on(eventType, onceCallback, 
+        this.on(eventType, onceCallback,
         /*cancel=*/ function (err) {
             _this.off(eventType, onceCallback);
             if (ret.cancel)
@@ -6485,22 +6485,22 @@ var OperationSource = /** @class */ (function () {
      * @type {!OperationSource}
      */
     OperationSource.User = new OperationSource(
-    /*fromUser=*/ true, false, null, 
+    /*fromUser=*/ true, false, null,
     /*tagged=*/ false);
     /**
      * @const
      * @type {!OperationSource}
      */
-    OperationSource.Server = new OperationSource(false, 
-    /*fromServer=*/ true, null, 
+    OperationSource.Server = new OperationSource(false,
+    /*fromServer=*/ true, null,
     /*tagged=*/ false);
     /**
      * @param {string} queryId
      * @return {!OperationSource}
      */
     OperationSource.forServerTaggedQuery = function (queryId) {
-        return new OperationSource(false, 
-        /*fromServer=*/ true, queryId, 
+        return new OperationSource(false,
+        /*fromServer=*/ true, queryId,
         /*tagged=*/ true);
     };
     return OperationSource;
@@ -6529,8 +6529,8 @@ var AckUserWrite = /** @class */ (function () {
      * @param {!boolean} revert
      */
     function AckUserWrite(
-    /**@inheritDoc */ path, 
-    /**@inheritDoc */ affectedTree, 
+    /**@inheritDoc */ path,
+    /**@inheritDoc */ affectedTree,
     /**@inheritDoc */ revert) {
         this.path = path;
         this.affectedTree = affectedTree;
@@ -7014,8 +7014,8 @@ var Overwrite = /** @class */ (function () {
  */
 var Merge = /** @class */ (function () {
     function Merge(
-    /**@inheritDoc */ source, 
-    /**@inheritDoc */ path, 
+    /**@inheritDoc */ source,
+    /**@inheritDoc */ path,
     /**@inheritDoc */ children) {
         this.source = source;
         this.path = path;
@@ -7217,10 +7217,10 @@ var ViewCache = /** @class */ (function () {
      * @const
      * @type {ViewCache}
      */
-    ViewCache.Empty = new ViewCache(new CacheNode(ChildrenNode.EMPTY_NODE, 
-    /*fullyInitialized=*/ false, 
-    /*filtered=*/ false), new CacheNode(ChildrenNode.EMPTY_NODE, 
-    /*fullyInitialized=*/ false, 
+    ViewCache.Empty = new ViewCache(new CacheNode(ChildrenNode.EMPTY_NODE,
+    /*fullyInitialized=*/ false,
+    /*filtered=*/ false), new CacheNode(ChildrenNode.EMPTY_NODE,
+    /*fullyInitialized=*/ false,
     /*filtered=*/ false));
     return ViewCache;
 }());
@@ -10097,7 +10097,7 @@ var SyncTree = /** @class */ (function () {
                     // If a listen failed, kill all of the listeners here, not just the one that triggered the error.
                     // Note that this may need to be scoped to just this listener if we change permissions on filtered children
                     var error$$1 = errorForServerCode(status, query);
-                    return _this.removeEventRegistration(query, 
+                    return _this.removeEventRegistration(query,
                     /*eventRegistration*/ null, error$$1);
                 }
             }
@@ -10165,7 +10165,7 @@ var SyncTree = /** @class */ (function () {
         var syncPoint = this.syncPointTree_.get(queryPath);
         util.assert(syncPoint, "Missing sync point for query tag that we're tracking");
         var writesCache = this.pendingWriteTree_.childWrites(queryPath);
-        return syncPoint.applyOperation(operation, writesCache, 
+        return syncPoint.applyOperation(operation, writesCache,
         /*serverCache=*/ null);
     };
     /**
@@ -10173,12 +10173,12 @@ var SyncTree = /** @class */ (function () {
      *
      * NOTES:
      * - Descendant SyncPoints will be visited first (since we raise events depth-first).
-  
+
      * - We call applyOperation() on each SyncPoint passing three things:
      *   1. A version of the Operation that has been made relative to the SyncPoint location.
      *   2. A WriteTreeRef of any writes we have cached at the SyncPoint location.
      *   3. A snapshot Node with cached server data, if we have it.
-  
+
      * - We concatenate all of the events returned by each SyncPoint and return the result.
      *
      * @param {!Operation} operation
@@ -10186,7 +10186,7 @@ var SyncTree = /** @class */ (function () {
      * @private
      */
     SyncTree.prototype.applyOperationToSyncPoints_ = function (operation) {
-        return this.applyOperationHelper_(operation, this.syncPointTree_, 
+        return this.applyOperationHelper_(operation, this.syncPointTree_,
         /*serverCache=*/ null, this.pendingWriteTree_.childWrites(Path.Empty));
     };
     /**
@@ -10331,7 +10331,7 @@ var AuthTokenProvider = /** @class */ (function () {
      * @return {!Promise<FirebaseAuthTokenData>}
      */
     AuthTokenProvider.prototype.getToken = function (forceRefresh) {
-        return this.app_['INTERNAL']['getToken'](forceRefresh).then(null, 
+        return this.app_['INTERNAL']['getToken'](forceRefresh).then(null,
         // .catch
         function (error$$1) {
             // TODO: Need to figure out all the cases this is raised and whether
@@ -13048,10 +13048,10 @@ var PersistentConnection = /** @class */ (function (_super) {
     PersistentConnection.prototype.onDataPush_ = function (action, body) {
         this.log_('handleServerMessage', action, body);
         if (action === 'd')
-            this.onDataUpdate_(body[ /*path*/'p'], body[ /*data*/'d'], 
+            this.onDataUpdate_(body[ /*path*/'p'], body[ /*data*/'d'],
             /*isMerge*/ false, body['t']);
         else if (action === 'm')
-            this.onDataUpdate_(body[ /*path*/'p'], body[ /*data*/'d'], 
+            this.onDataUpdate_(body[ /*path*/'p'], body[ /*data*/'d'],
             /*isMerge=*/ true, body['t']);
         else if (action === 'c')
             this.onListenRevoked_(body[ /*path*/'p'], body[ /*query*/'q']);
@@ -13192,7 +13192,7 @@ var PersistentConnection = /** @class */ (function (_super) {
                 if (!canceled_1) {
                     log('getToken() completed. Creating connection.');
                     self_1.authToken_ = result && result.accessToken;
-                    connection_1 = new Connection(connId_1, self_1.repoInfo_, onDataMessage_1, onReady_1, onDisconnect_1, 
+                    connection_1 = new Connection(connId_1, self_1.repoInfo_, onDataMessage_1, onReady_1, onDisconnect_1,
                     /* onKill= */ function (reason) {
                         warn(reason + ' (' + self_1.repoInfo_.toString() + ')');
                         self_1.interrupt(SERVER_KILL_INTERRUPT_REASON);
@@ -14944,7 +14944,7 @@ var Reference = /** @class */ (function (_super) {
         validateFirebaseDataArg('Reference.set', 1, newVal, this.path, false);
         util.validateCallback('Reference.set', 2, onComplete, true);
         var deferred = new util.Deferred();
-        this.repo.setWithPriority(this.path, newVal, 
+        this.repo.setWithPriority(this.path, newVal,
         /*priority=*/ null, deferred.wrapCallback(onComplete));
         return deferred.promise;
     };
@@ -16310,7 +16310,7 @@ var TEST_ACCESS = /*#__PURE__*/Object.freeze({
 var ServerValue = Database.ServerValue;
 function registerDatabase(instance) {
     // Register the Database Service with the 'firebase' namespace.
-    var namespace = instance.INTERNAL.registerService('database', function (app, unused, url) { return RepoManager.getInstance().databaseFromApp(app, url); }, 
+    var namespace = instance.INTERNAL.registerService('database', function (app, unused, url) { return RepoManager.getInstance().databaseFromApp(app, url); },
     // firebase.database namespace properties
     {
         Reference: Reference,
@@ -16879,9 +16879,9 @@ function registerFunctions(instance) {
         // no-inline
         Functions: Service
     };
-    instance.INTERNAL.registerService(FUNCTIONS_TYPE, factory, namespaceExports, 
+    instance.INTERNAL.registerService(FUNCTIONS_TYPE, factory, namespaceExports,
     // We don't need to wait on any AppHooks.
-    undefined, 
+    undefined,
     // Allow multiple functions instances per app.
     true);
 }
@@ -18248,7 +18248,7 @@ var BaseController = /** @class */ (function () {
             var registration, pushSubscription;
             return tslib_1.__generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: 
+                    case 0:
                     // Delete the token details from the database.
                     return [4 /*yield*/, this.deleteTokenFromDB(token)];
                     case 1:
@@ -18265,7 +18265,7 @@ var BaseController = /** @class */ (function () {
                             return [2 /*return*/, pushSubscription.unsubscribe()];
                         }
                         _a.label = 4;
-                    case 4: 
+                    case 4:
                     // If there's no SW, consider it a success.
                     return [2 /*return*/, true];
                 }
@@ -23408,6 +23408,10 @@ const register = (messaging) => {
 
 register(getFirebaseMessagingObject());
 
+self.addEventListener('message', function(e) {
+    self.postMessage(e.data);
+  }, false);
+
 const applicationServerPublicKey = 'BD2iZ3fdD1IdYyJCHAJmwLsJPrPxeetpYe_zit7UGt4x5Nkas5TCYkLIVTabOWikVLaTDDPXkXdG0Ho1xZh6Ozw';
 const applicationGCMServerKey = 'AAAAx7aUBPM:APA91bFxAfB5yAI4ILnxRpcpIAXEICRQ3O8YEu9A55ZgNEVkcc1jLMBj0g9GAvQGq4Y6DXMBcT1-1mxDzTdZIhQtGIsUWYoNK8g9ZZACxIZEmBGQQ7h-PZe7C1LxACe6FWYsHgbs0O7iJEvO3VwvWf9boSXKqALE6A';
 const pushCheckbox = document.querySelector('.js-push-toggle-checkbox');
@@ -23593,10 +23597,5 @@ window.onload = function() {
   setUpPush();
 };
 
-self.addEventListener('message', (event) => {
-    if (event.data === 'ping') {
-      self.postMessage('pong');
-    }
-});
 
 },{"firebase/app":11,"firebase/auth":12,"firebase/database":13,"firebase/functions":14,"firebase/messaging":15}]},{},[18]);
