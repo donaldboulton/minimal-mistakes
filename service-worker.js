@@ -328,12 +328,12 @@ self.addEventListener('notificationclose', function(event) {
 self.addEventListener('message', function(event) {
   console.log('Received message from page.', event.data);
   switch(event.data) {
-    case 'must-show-notification-demo':
+    case 'must-show-notification':
       self.dispatchEvent(new PushEvent('push', {
         data: 'must-show-notification'
       }));
       break;
-    case 'send-message-to-page-demo':
+    case 'send-message-to-page':
       self.dispatchEvent(new PushEvent('push', {
         data: 'send-message-to-page'
       }));
