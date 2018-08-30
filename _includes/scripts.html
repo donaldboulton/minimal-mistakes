@@ -253,6 +253,9 @@ $(".author__urls_masthead button").on("click", function() {
 
 {% if page.admin == true %}
 <script async defer src="'https://unpkg.com/file-upload-with-preview"></script>
+<script>
+  var upload = new FileUploadWithPreview('myUniqueUploadId')
+</script>
 <script src="{{ '/assets/js/vendor/notifications/admin.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/vendor/notifications/notifications.js' | relative_url }}"></script>
 {% endif %}
