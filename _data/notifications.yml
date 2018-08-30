@@ -8,9 +8,7 @@ notifications:
     url: >-
       https://www.eventbrite.com/e/netlify-cms-planning-session-bi-weekly-tickets-35794058994
   - loud: true
-    message: >-
-      We have a community on Gitter - join now to ask questions and discuss the
-      project with other devs!
+    message: Testing my Netlify Admin backend on Jekyll
     published: false
     title: Gitter shoutout
     url: 'https://gitter.im/netlify/netlifycms'
