@@ -5,7 +5,7 @@
     {% if include.avatar %}
       <span><img class="comment-avatar-img lazyload blur-up" itemprop="image" avatar="{{ include.name }}" alt="{{ include.name }}" /></span>
     {% elsif include.email %}
-    <span><img class="comment-avatar-img lazyload blur-up" itemprop="image" src="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=60" srcset="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=120 2x" alt="{{ include.name | escape }}"></span>
+    <span><img class="comment-avatar-img lazyload blur-up" itemprop="image" avatar="{{ include.name }}" alt="{{ include.name }}" /></span>
     {% else %}
     <span><img class="comment-avatar-img lazyload blur-up" itemprop="image" avatar="{{ include.name }}" alt="{{ include.name }}" /></span>
     {% endif %}

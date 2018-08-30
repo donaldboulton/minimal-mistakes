@@ -17,11 +17,10 @@ author_profile: true
 tags:
   - Contact
   - Donald Boulton
-email: donaldboulton@gmail.com
+
 adds: true
 toc: false
 sidenav: true
-validate: true
 reviews: false
 comments: false
 cookies: true

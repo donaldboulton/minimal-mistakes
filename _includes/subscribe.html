@@ -4,16 +4,17 @@
         <svg class="icon icon--bell fa-bell" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-bell' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;
         Notications</h3>
     </span>
+    <div class="enable-push">
+        <div class="toggle-switch">
+          <input aria-label="Enable Notifications" id="enable-push-checkbox" class="js-push-toggle-checkbox" type="checkbox" disabled />
+          <label for="enable-push-checkbox"></label>
+        </div>&nbsp;&nbsp;<span class="message">Enable Notifications</span>
+    </div>
   <div class="toc1__menu">
       <h3>Firebase Comments</h3>
       <span class="byline-item"><svg class="icon icon--comments-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comments-alt' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;<a href="https://donboulton.com/{{ page.url }}#comments">0 Comments</a></span>
       </a></small>
         <ul id="list" class="mdl-list"></ul>
   </div>
-  <div id="comments" class="form-group comment-list">
-    <div class="comments__text"></div>
-    <button class="comments__action btn btn-primary" type="button" aria-label="Post Notify">Notify</button>
-</div>
-
 </article>
 
