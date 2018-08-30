@@ -2920,7 +2920,7 @@ var register = function register(messaging) {
         return;
     }
 
-    navigator.serviceWorker.register('./firebase-messaging-sw.js').then(function () {
+    navigator.serviceWorker.register('./service-worker.js').then(function () {
         return navigator.serviceWorker.ready;
     }).catch(function (error) {
         console.error(error);
@@ -47352,4 +47352,3 @@ registerStorage(__WEBPACK_IMPORTED_MODULE_0__firebase_app___default.a);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=app.js.map

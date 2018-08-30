@@ -1,18 +1,15 @@
 'use strict';
 
-const webpush = require('web-push');
-const path = require('path');
-const https = require('https');
-const express = require('express');
-const bodyParser = require('body-parser');
-const Datastore = require('nedb');
-const cors = require('cors')({ origin: true });
+import { setGCMAPIKey, setVapidDetails, sendNotification } from 'web-push';
+import { request } from 'https';
+import express, { static } from 'express';
+import { json, text } from 'body-parser';
+import Datastore from 'nedb';
 
-const hostname = 'https://donboulton.com';
 const app = express();
-app.use(express.static('public'));
-app.use(bodyParser.json());
-app.use(bodyParser.text());
+app.use(static('public'));
+app.use(json());
+app.use(text());
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
@@ -24,8 +21,8 @@ const vapidKeys = {
     privateKey: 'ymblNrJSzlXdRMhFYdXh1Hda8HkIO76aVs85X93wAjc',
 };
 
-webpush.setGCMAPIKey('AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA');
-webpush.setVapidDetails(
+setGCMAPIKey('AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA');
+setVapidDetails(
   'mailto:donaldboulton@gmail.com',
   vapidKeys.publicKey,
   vapidKeys.privateKey
@@ -74,7 +71,7 @@ app.post('/api/webpush/subscribe', (req, res) => {
 
             const content_available = true;
 
-            https.request(options, (response) => {
+            request(options, (response) => {
                 const data = [];
 
                 response.on('data',  (chunk) => data.push(chunk));
@@ -137,20 +134,20 @@ app.post('/api/save-subscription/', (req, res) => {
     }
 
     return saveSubscriptionToDatabase(req.body)
-        .then((subscriptionId) => {
-            res.setHeader('Content-Type', 'application/json');
-            res.send(JSON.stringify({ data: { success: true } }));
-        })
-        .catch((err) => {
-            res.status(500);
-            res.setHeader('Content-Type', 'application/json');
-            res.send(JSON.stringify({
-                error: {
-                    id: 'unable-to-save-subscription',
-                    message: 'The subscription was received but we were unable to save it to our database.'
-                }
-            }));
-        });
+        .then(() => {
+                res.setHeader('Content-Type', 'application/json');
+                res.send(JSON.stringify({ data: { success: true } }));
+            })
+        .catch(() => {
+                res.status(500);
+                res.setHeader('Content-Type', 'application/json');
+                res.send(JSON.stringify({
+                    error: {
+                        id: 'unable-to-save-subscription',
+                        message: 'The subscription was received but we were unable to save it to our database.'
+                    }
+                }));
+            });
 });
 
 app.post('/api/get-subscriptions/',
@@ -168,20 +165,20 @@ app.post('/api/get-subscriptions/',
                 res.setHeader('Content-Type', 'application/json');
                 res.send(JSON.stringify({ data: { subscriptions: reducedSubscriptions } }));
             })
-            .catch((err) => {
-                res.status(500);
-                res.setHeader('Content-Type', 'application/json');
-                res.send(JSON.stringify({
-                    error: {
-                        id: 'unable-to-get-subscriptions',
-                        message: 'We were unable to get the subscriptions from our database.',
-                    },
-                }));
-            });
+            .catch(() => {
+                    res.status(500);
+                    res.setHeader('Content-Type', 'application/json');
+                    res.send(JSON.stringify({
+                        error: {
+                            id: 'unable-to-get-subscriptions',
+                            message: 'We were unable to get the subscriptions from our database.',
+                        },
+                    }));
+                });
     });
 
 const triggerPushMsg = function (subscription, dataToSend) {
-    return webpush.sendNotification(subscription, dataToSend)
+    return sendNotification(subscription, dataToSend)
         .catch((err) => {
             if (err.statusCode === 410) {
                 return deleteSubscriptionFromDatabase(subscription._id);
