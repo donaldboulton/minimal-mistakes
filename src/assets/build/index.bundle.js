@@ -5,6 +5,15 @@ import { request } from 'https';
 import express, { static } from 'express';
 import { json, text } from 'body-parser';
 import Datastore from 'nedb';
+import Worker from 'worker-loader!./worker.js';
+
+const worker = new Worker();
+
+let w = new Worker();
+w.postMessage('ping');
+w.onmessage = (event) => {
+  console.log(event.data);
+};
 
 const app = express();
 app.use(static('public'));
