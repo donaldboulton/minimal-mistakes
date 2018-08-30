@@ -638,3 +638,32 @@
 .step.visible {
   display: block;
 }
+
+.btnLink {
+   color: #cccccc!important;
+}
+
+.modalContent {
+  background: #1d1d1d!important;
+}
+
+.btnClose {
+ background: #343434!important;
+}
+
+.btnHeader {
+  background: #302e2e!important;
+  color: rgb(206, 213, 217)!important;
+  border-bottom: 2px solid #727474!important;
+}
+
+.btnHeader:focus, .btnHeader.active {
+  background: #343434!important;
+  color: rgb(206, 213, 217)!important;
+}
+
+.formControl {
+  border: 2px solid #212424!important;
+  background: #302e2e!important;
+  color: #ccc!important;
+}
