@@ -85,9 +85,3 @@ window.addEventListener('load', () => {
     }
   });
 });
-
-var secondUpload = new FileUploadWithPreview('mySecondImage', true)
-var secondUploadInfoButton = document.querySelector('.upload-info-button--second');
-secondUploadInfoButton.addEventListener('click', function(){
-    console.log('Second upload:', secondUpload, secondUpload.cachedFileArray)
-});
