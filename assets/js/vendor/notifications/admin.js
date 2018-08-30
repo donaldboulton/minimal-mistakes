@@ -1,9 +1,3 @@
-// using import
-import FileUploadWithPreview from 'file-upload-with-preview';
-
-// initialize a new FileUploadWithPreview object
-const upload = new FileUploadWithPreview('myUniqueUploadId');
-
 function enableSendingPushes() {
   const pushContent = document.querySelector('.js-push-content');
   const triggerPushBtn = document.querySelector('.js-trigger-push-msg');
