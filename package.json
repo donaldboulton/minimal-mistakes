@@ -25,11 +25,10 @@
   },
   "homepage": "https://github.com/donaldboulton/#readme",
   "scripts": {
-    "dev": "webpack && jekyll serve",
-    "build": "webpack && jekyll build",
-    "start": "webpack --config webpack.config.js",
-    "postbuild": "npm start",
-    "serve": "node bundle.js"
+    "start": "webpack-dev-server --open",
+    "build": "npm run clean && npm run compile",
+    "clean": "rm -rf ./build/index.bundle.js",
+    "compile": "NODE_ENV=production webpack --config ./webpack.config.js --progress"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
@@ -55,7 +54,8 @@
     "node-fetch": "^2.2.0",
     "spawn-worker": "^1.0.0",
     "utf-8-validate": "^5.0.1",
-    "web-push": "^3.3.2"
+    "web-push": "^3.3.2",
+    "webpack-dev-server": "^3.1.7"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -77,12 +77,14 @@
   },
   "babel": {
     "presets": [
-      "@babel/preset-env",
+      "env",
       "react"
     ],
     "env": {
       "development": {
-        "presets": ["react-hmre"]
+        "presets": [
+          "react-hmre"
+        ]
       }
     }
   }

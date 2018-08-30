@@ -1,25 +1,21 @@
-const path = require('path');
-
+// inside webpack.config.js
+const path = require('path')
+const webpack = require('webpack')
 module.exports = {
-    mode: 'production',
-    entry: {
-        main: './webpack/entry.js',
-    },
-    output: {
-      // we're going to put the generated file in the assets folder so jekyll will grab it.
-        path: '/src/assets/javascripts/',
-        filename: "bundle.js"
-    },
-    module: {
-      rules: [
-        {
-          test: /\.jsx?$/,
-          exclude: /(node_modules)/,
-          loader: 'babel-loader',
-          query: {
-            presets: ['react', '@babel/preset-env']
-          }
-        }
-      ]
-    }
-  };
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, 'build'),
+    filename: 'index.bundle.js'
+  },
+  mode: 'development',
+  devtool: 'inline-source-map',
+  devServer: {
+    contentBase: './build',
+    port: 3000
+  },
+  module: {
+    rules: [
+      {test: /\.js$/, exclude: /node_modules/, use: 'babel-loader'}
+    ]
+  }
+}
