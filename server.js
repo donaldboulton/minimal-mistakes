@@ -1,8 +1,4 @@
-'use strict';
-
-/**** START web-push-require ****/
 import { setGCMAPIKey, setVapidDetails, sendNotification } from 'web-push';
-/**** END web-push-require ****/
 import { join } from 'path';
 import express, { static } from 'express';
 import { json, text } from 'body-parser';
