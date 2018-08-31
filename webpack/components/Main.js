@@ -1,182 +1,217 @@
-const pushCheckbox = document.querySelector('.js-push-toggle-checkbox');
+'use strict';
 
-function urlBase64ToUint8Array(base64String) {
-  const padding = '='.repeat((4 - base64String.length % 4) % 4);
-  const base64 = (base64String + padding)
-    .replace(/\-/g, '+')
-    .replace(/_/g, '/');
+/**** START web-push-require ****/
+const webpush = require('web-push');
+/**** END web-push-require ****/
+const path = require('path');
+const express = require('express');
+const bodyParser = require('body-parser');
+const Datastore = require('nedb');
 
-  const rawData = window.atob(base64);
-  const outputArray = new Uint8Array(rawData.length);
+webpush.setGCMAPIKey('AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA');
 
-  for (let i = 0; i < rawData.length; ++i) {
-    outputArray[i] = rawData.charCodeAt(i);
-  }
-  return outputArray;
-}
+const vapidKeys = {
+    publicKey: 'BOew5Tx7fTX51GzJ7tpF3dDLNS54OvUST_dGGqzJEy54jqW2qghIRTiK7BfOpCPp8xNfMH7Mtprl3hp_WGjgslU',
+    privateKey: 'ymblNrJSzlXdRMhFYdXh1Hda8HkIO76aVs85X93wAjc',
+};
 
-function askPermission() {
-  return new Promise(function(resolve, reject) {
-    const permissionResult = Notification.requestPermission(function(result) {
-      resolve(result);
-    });
+webpush.setVapidDetails(
+  'mailto:donaldboulton@gmail.com',
+  vapidKeys.publicKey,
+  vapidKeys.privateKey
+);
 
-    if (permissionResult) {
-      permissionResult.then(resolve, reject);
-    }
-  })
-  .then(function(permissionResult) {
-    if (permissionResult !== 'granted') {
-      throw new Error('We weren\'t granted permission.');
-    }
+const db = new Datastore({
+    filename: path.join(__dirname, 'subscription-store.db'),
+    autoload: true
   });
-}
 
-function getNotificationPermissionState() {
-  if (navigator.permissions) {
-    return navigator.permissions.query({name: 'notifications'})
-    .then((result) => {
-      return result.state;
-    });
-  }
-
-  return new Promise((resolve) => {
-    resolve(Notification.permission);
-  });
-}
-
-function unsubscribeUserFromPush() {
-  return registerServiceWorker()
-    .then(function(registration) {
-      return registration.pushManager.getSubscription();
-    })
-    .then(function(subscription) {
-      if (subscription) {
-        return subscription.unsubscribe();
-      }
-    })
-    .then(function(subscription) {
-      pushCheckbox.disabled = false;
-      pushCheckbox.checked = false;
-    })
-    .catch(function(err) {
-      console.error('Failed to subscribe the user.', err);
-      getNotificationPermissionState()
-      .then((permissionState) => {
-        pushCheckbox.disabled = permissionState === 'denied';
-        pushCheckbox.checked = false;
-      });
-    });
-}
-
-function updateSubscriptionOnServer(subscription) {
-
-  const subscriptionJson = document.querySelector('.js-subscription-json');
-  const subscriptionDetails =
-    document.querySelector('.js-subscription-details');
-
-  if (subscription) {
-    subscriptionJson.textContent = JSON.stringify(subscription);
-    subscriptionDetails.classList.remove('is-invisible');
-  } else {
-    subscriptionDetails.classList.add('is-visible');
-  }
-}
-
-function subscribeUserToPush() {
-  return getSWRegistration()
-  .then(function(registration) {
-    const subscribeOptions = {
-      userVisibleOnly: true,
-      applicationServerKey: urlBase64ToUint8Array(
-        'BD2iZ3fdD1IdYyJCHAJmwLsJPrPxeetpYe_zit7UGt4x5Nkas5TCYkLIVTabOWikVLaTDDPXkXdG0Ho1xZh6Ozw'
-      )
-    };
-
-    return registration.pushManager.subscribe(subscribeOptions);
-  })
-  .then(function(pushSubscription) {
-    console.log('Received PushSubscription: ', JSON.stringify(pushSubscription));
-    return pushSubscription;
-  });
-}
-
-function setUpPush() {
-  return Promise.all([
-    registerServiceWorker(),
-    getNotificationPermissionState()
-  ])
-  .then(function(results) {
-    const registration = results[0];
-    const currentPermissionState = results[1];
-
-    if (currentPermissionState === 'denied') {
-      console.warn('The notification permission has been blocked. Nothing we can do.');
-      pushCheckbox.disabled = true;
-      return;
-    }
-
-    pushCheckbox.addEventListener('change', function(event) {
-      event.target.disabled = true;
-
-      if (event.target.checked) {
-        let promiseChain = Promise.resolve();
-        if (currentPermissionState !== 'granted') {
-          promiseChain = askPermission();
+  /**** START save-sub-function ****/
+  function saveSubscriptionToDatabase(subscription) {
+    return new Promise(function(resolve, reject) {
+      db.insert(subscription, function(err, newDoc) {
+        if (err) {
+          reject(err);
+          return;
         }
 
-        promiseChain
-          .then(subscribeUserToPush)
-          .then(function(subscription) {
-            if (subscription) {
-              return sendSubscriptionToServer(subscription)
-              .then(function() {
-                return subscription;
-              });
-            }
-
-            return subscription;
-          })
-          .then(function(subscription) {
-            pushCheckbox.disabled = false;
-            pushCheckbox.checked = subscription !== null;
-          })
-          .catch(function(err) {
-            console.error('Failed to subscribe the user.', err);
-            pushCheckbox.disabled = currentPermissionState === 'denied';
-            pushCheckbox.checked = false;
-          });
-      } else {
-        unsubscribeUserFromPush();
-      }
+        resolve(newDoc._id);
+      });
     });
+  };
+  /**** END save-sub-function ****/
 
-    if (currentPermissionState !== 'granted') {
-      pushCheckbox.disabled = false;
+  function getSubscriptionsFromDatabase() {
+    return new Promise(function(resolve, reject) {
+      db.find({}, function(err, docs) {
+        if (err) {
+          reject(err);
+          return;
+        }
+
+        resolve(docs);
+      })
+    });
+  }
+
+  function deleteSubscriptionFromDatabase(subscriptionId) {
+    return new Promise(function(resolve, reject) {
+    db.remove({_id: subscriptionId }, {}, function(err) {
+        if (err) {
+          reject(err);
+          return;
+        }
+
+        resolve();
+      });
+    });
+  }
+
+  /**** START save-sub-api-validate ****/
+  const isValidSaveRequest = (req, res) => {
+    // Check the request body has at least an endpoint.
+    if (!req.body || !req.body.endpoint) {
+      // Not a valid subscription.
+      res.status(400);
+      res.setHeader('Content-Type', 'application/json');
+      res.send(JSON.stringify({
+        error: {
+          id: 'no-endpoint',
+          message: 'Subscription must have an endpoint.'
+        }
+      }));
+      return false;
+    }
+    return true;
+  };
+  /**** END save-sub-api-validate ****/
+
+  const app = express();
+  app.use(express.static(path.join(__dirname, 'frontend')));
+  app.use(bodyParser.json());
+  app.use(bodyParser.text());
+
+  // This is the API that receives a push subscription and saves it.
+  /**** START save-sub-example ****/
+  /**** START save-sub-api-post ****/
+  app.post('/api/save-subscription/', function (req, res) {
+  /**** END save-sub-api-post ****/
+    if (!isValidSaveRequest(req, res)) {
       return;
     }
 
-    return registration.pushManager.getSubscription()
-    .then(function(subscription) {
-      pushCheckbox.checked = subscription !== null;
-      pushCheckbox.disabled = false;
+    /**** START save-sub-api-save-subscription ****/
+    return saveSubscriptionToDatabase(req.body)
+    .then(function(subscriptionId) {
+      res.setHeader('Content-Type', 'application/json');
+      res.send(JSON.stringify({ data: { success: true } }));
+    })
+    .catch(function(err) {
+      res.status(500);
+      res.setHeader('Content-Type', 'application/json');
+      res.send(JSON.stringify({
+        error: {
+          id: 'unable-to-save-subscription',
+          message: 'The subscription was received but we were unable to save it to our database.'
+        }
+      }));
     });
-  })
-  .catch(function(err) {
-    console.log('Unable to register the service worker: ' + err);
+    /**** END save-sub-api-save-subscription ****/
   });
-}
+  /**** END save-sub-example ****/
 
-window.onload = function() {
+  app.post('/api/get-subscriptions/', function (req, res) {
+    // TODO: This should be secured / not available publicly.
+    //       this is for demo purposes only.
 
-  if (!('serviceWorker' in navigator)) {
+    return getSubscriptionsFromDatabase()
+    .then(function(subscriptions) {
+      const reducedSubscriptions = subscriptions.map((subscription) => {
+        return {
+          id: subscription._id,
+          endpoint: subscription.endpoint
+        }
+      });
 
-    return;
-  }
+      res.setHeader('Content-Type', 'application/json');
+      res.send(JSON.stringify({ data: { subscriptions: reducedSubscriptions } }));
+    })
+    .catch(function(err) {
+      res.status(500);
+      res.setHeader('Content-Type', 'application/json');
+      res.send(JSON.stringify({
+        error: {
+          id: 'unable-to-get-subscriptions',
+          message: 'We were unable to get the subscriptions from our database.'
+        }
+      }));
+    });
+  });
 
-  if (!('PushManager' in window)) {
-    return;
-  }
+  /**** START trig-push-send-notification ****/
+  const triggerPushMsg = function(subscription, dataToSend) {
+    return webpush.sendNotification(subscription, dataToSend)
+    .catch((err) => {
+      if (err.statusCode === 410) {
+        return deleteSubscriptionFromDatabase(subscription._id);
+      } else {
+        console.log('Subscription is no longer valid: ', err);
+      }
+    });
+  };
+  /**** END trig-push-send-notification ****/
 
-  setUpPush();
+  /**** START trig-push-api-post ****/
+  app.post('/api/trigger-push-msg/', function (req, res) {
+  /**** END trig-push-api-post ****/
+    // NOTE: This API endpoint should be secure (i.e. protected with a login
+    // check OR not publicly available.)
+
+    const dataToSend = JSON.stringify(req.body);
+
+    /**** START trig-push-send-push ****/
+    return getSubscriptionsFromDatabase()
+    .then(function(subscriptions) {
+      let promiseChain = Promise.resolve();
+
+      for (let i = 0; i < subscriptions.length; i++) {
+        const subscription = subscriptions[i];
+        promiseChain = promiseChain.then(() => {
+          return triggerPushMsg(subscription, dataToSend);
+        });
+      }
+
+      return promiseChain;
+    })
+    /**** END trig-push-send-push ****/
+    /**** START trig-push-return-response ****/
+    .then(() => {
+      res.setHeader('Content-Type', 'application/json');
+        res.send(JSON.stringify({ data: { success: true } }));
+    })
+    .catch(function(err) {
+      res.status(500);
+      res.setHeader('Content-Type', 'application/json');
+      res.send(JSON.stringify({
+        error: {
+          id: 'unable-to-send-messages',
+          message: `We were unable to send messages to all subscriptions : ` +
+            `'${err.message}'`
+        }
+      }));
+    });
+    /**** END trig-push-return-response ****/
+  });
+
+  const port = process.env.PORT || 9012;
+
+  const server = app.listen(port, function () {
+    console.log('Running on http://localhost:' + port);
+  });
+
+var Worker = require("worker-loader?name=hash.worker.js!./worker");
+var worker = new Worker();
+worker.postMessage("b");
+worker.onmessage = function(event) {
+	var templateB = event.data; // "This text was generated by template B"
 };

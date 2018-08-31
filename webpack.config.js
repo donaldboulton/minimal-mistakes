@@ -13,12 +13,15 @@ module.exports = {
     contentBase: './build',
     port: 3000
   },
+  node: {
+    fs: "empty"
+  },
   plugins: [
     new webpack.LoaderOptionsPlugin({
         options: {
             worker: {
                 output: {
-                    filename: "hash.worker.js",
+                    filename: "./worker.js",
                     chunkFilename: "[id].hash.worker.js"
                 }
             }
