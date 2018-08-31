@@ -1,4 +1,4 @@
-const VERSION = '10';
+const VERSION = '11';
 
 this.addEventListener('install', (e) => {
     e.waitUntil(caches.open(VERSION).then(cache => cache.addAll([
@@ -57,8 +57,6 @@ this.addEventListener('install', (e) => {
         '/posts/2018-02-25-post-Defrag-SQL/',
         '/post/2018-02-25-post-Mobile-Colorbox/',
         '/post/2018-02-29-post-gallery-external/',
-        '/page2/',
-        '/page3/',
         '/2018-06-06-post-Drag-Drop-No-Spambots.html',
         '/2018-05-27-post-reviews-for-jekyll.html',
         '/2018-05-14-post-Jekyll-Image-Gallery.html',
@@ -134,7 +132,6 @@ this.addEventListener('install', (e) => {
         '/assets/images/pages/cf-logo-v-rgb-rev-239-80.png',
         '/assets/images/red-flask-32.png',
         '/assets/images/fav-icons/favicon.png',
-        '/service-worker.js',
         '/assets/js/staticman/staticman-reviews.js',
         '/assets/js/vendor/bigfoot/bigfoot.min.js',
         '/manifest.webmanifest',
@@ -176,12 +173,46 @@ function handleNoCacheMatch(e) {
     return fetchFromNetworkAndCache(e);
 }
 
+function handlePushEvent(event) {
+    const DEFAULT_TAG = 'web-push-book-example-site'
+    return Promise.resolve()
+    .then(() => {
+      return event.data.json();
+    })
+    .then((data) => {
+      const title = data.notification.title;
+      const options = data.notification;
+      if (!options.tag) {
+        options.tag = DEFAULT_TAG;
+      }
+      return registration.showNotification(title, options);
+    })
+    .catch((err) => {
+      console.error('Push event caused an error: ', err);
+
+      const title = 'Message Received';
+      const options = {
+        body: event.data.text(),
+        tag: DEFAULT_TAG
+      };
+      return registration.showNotification(title, options);
+    });
+  }
+
+  self.addEventListener('push', function(event) {
+    event.waitUntil(handlePushEvent(event));
+  });
+
+  const doSomething = () => {
+    return Promise.resolve();
+  };
+
 const adminPage = '/admin.html';
 
 function openWindow(event) {
   /**** START notificationOpenWindow ****/
-  const adminPage = '/admin.html';
-  const promiseChain = clients.openWindow(adminPage);
+  const examplePage = '/admin.html';
+  const promiseChain = clients.openWindow(examplePage);
   event.waitUntil(promiseChain);
   /**** END notificationOpenWindow ****/
 }
@@ -189,7 +220,7 @@ function openWindow(event) {
 function focusWindow(event) {
   /**** START notificationFocusWindow ****/
   /**** START urlToOpen ****/
-  const urlToOpen = new URL(adminPage, self.location.origin).href;
+  const urlToOpen = new URL(examplePage, self.location.origin).href;
   /**** END urlToOpen ****/
 
   /**** START clientsMatchAll ****/
@@ -312,6 +343,55 @@ self.addEventListener('push', function(event) {
   }
 });
 
+/**** START notificationActionClickEvent ****/
+self.addEventListener('notificationclick', function(event) {
+  if (!event.action) {
+    // Was a normal notification click
+    console.log('Notification Click.');
+    return;
+  }
+
+  switch (event.action) {
+    case 'coffee-action':
+      console.log('User ❤️️\'s coffee.');
+      break;
+    case 'doughnut-action':
+      console.log('User ❤️️\'s doughnuts.');
+      break;
+    case 'gramophone-action':
+      console.log('User ❤️️\'s music.');
+      break;
+    case 'atom-action':
+      console.log('User ❤️️\'s science.');
+      break;
+    default:
+      console.log(`Unknown action clicked: '${event.action}'`);
+      break;
+  }
+});
+/**** END notificationActionClickEvent ****/
+
+/**** START notificationClickEvent ****/
+self.addEventListener('notificationclick', function(event) {
+  event.notification.close();
+
+  switch(event.notification.tag) {
+    case 'open-window':
+      openWindow(event);
+      break;
+    case 'focus-window':
+      focusWindow(event);
+      break;
+    case 'data-notification':
+      dataNotification(event);
+      break;
+    default:
+      // NOOP
+      break;
+  }
+});
+/**** END notificationClickEvent ****/
+
 const notificationCloseAnalytics = () => {
   return Promise.resolve();
 };
@@ -328,12 +408,12 @@ self.addEventListener('notificationclose', function(event) {
 self.addEventListener('message', function(event) {
   console.log('Received message from page.', event.data);
   switch(event.data) {
-    case 'must-show-notification':
+    case 'must-show-notification-admin':
       self.dispatchEvent(new PushEvent('push', {
         data: 'must-show-notification'
       }));
       break;
-    case 'send-message-to-page':
+    case 'send-message-to-page-admin':
       self.dispatchEvent(new PushEvent('push', {
         data: 'send-message-to-page'
       }));
@@ -343,11 +423,3 @@ self.addEventListener('message', function(event) {
       break;
   }
 });
-
-const worker = new Worker('worker.js');
-
-worker.addEventListener('message', function(e) {
-  console.log('Worker said: ', e.data);
-}, false);
-
-worker.postMessage('Hello World');

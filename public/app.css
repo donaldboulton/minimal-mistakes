@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: #999;
+    line-height: 1.5;
+    min-width: 320px;
+}
+
+.WebPush {
+    margin: 24px auto 0;
+    width: 90%;
+}
+
+dl > dt {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+}
+
+dl > dd {
+    margin-bottom: 0.5rem;
+}
+
+input {
+    outline: none;
+    border: 2px solid #ccc;
+    padding: 0.5rem;
+    width: 18rem;
+    font-size: 1rem;
+    color: #999;
+    border-radius: 12px;
+    transition: box-shadow 0.6s ease;
+}
+
+input:focus {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) inset;
+}
+
+button {
+    cursor: pointer;
+    outline: none;
+    margin-top: 1rem;
+    border: none;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #999;
+    border-radius: 12px;
+    transition: background-color 0.6s ease;
+}
+
+button:hover {
+    background-color: #666;
+}
+
+button:active {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6) inset;
+}

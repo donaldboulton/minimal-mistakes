@@ -246,8 +246,9 @@ window.onload = function() {
   setUpPush();
 };
 
-self.addEventListener('message', (event) => {
-    if (event.data === 'ping') {
-      self.postMessage('pong');
-    }
-});
+onmessage = function(event) {
+	var template = event.data;
+	require(["../require.context/templates/" + event.data], function(tmpl) {
+		postMessage(tmpl());
+	});
+}

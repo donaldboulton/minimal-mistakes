@@ -89,6 +89,25 @@
         </div>
       </form>
     </div>
+    <p>Clicking "Trigger Push Message" will make
+      an API request to "/api/trigger-push-msg" (i.e. an API call to our
+      node backend) and that will trigger a push message to all our users.
+    </p>
+
+    <p>Feel free to change the text to anything you want.</p>
+
+    <div class="push-data">
+      <textarea rows="10" class="js-push-content push-content-text" disabled>{
+  "notification": {
+    "title": "Example Title",
+    "body": "This will be the body text for the notification.",
+    "icon": "/images/icon-512x512.png"
+  }
+}</textarea>
+
+      <button class="js-trigger-push-msg" disabled>Trigger Push Message</button>
+    </div>
+
   <h2>Subscriber List</h2>
 
   <table>
@@ -100,6 +119,7 @@
 
     </tbody>
   </table>
+
   <div>&nbsp;</div>
   <div id="respond-collapsible">
       <button class="collapsible btn btn--light-outline">Open&nbsp;Test Notifications&nbsp;&rarr;</button>

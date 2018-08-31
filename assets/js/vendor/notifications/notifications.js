@@ -8,8 +8,8 @@
     'What you been up to?',
     'These aren\'t real messages.',
   ];
-  const userIcon = '/assets/images/fav-icons/fav-icon-512x512.png';
-  const userName = 'donaldboulton';
+  const userIcon = '/images/demos/matt-512x512.png';
+  const userName = 'Matt';
 
   const promiseTimeout = function(cb, timeout) {
     return new Promise((resolve) => {
@@ -19,22 +19,32 @@
       }, timeout);
     });
   };
+
+  function registerServiceWorker() {
+    return navigator.serviceWorker.register('service-worker.js')
+    .then(function(registration) {
+      console.log('Service worker successfully registered.');
+      return registration;
+    })
+    .catch(function(err) {
+      console.error('Unable to register service worker.', err);
+    });
+  }
+
   const allOptionsNotification = function(registration) {
-  const title = 'donboulton.com Notify';
-  const options = {
-      body: 'Comment Updates Notifications.\n' +
-        'There has been a new comment on donboulton.com.',
-      icon: '/assets/images/fav-icons/favicon-512x512.png',
-      badge: '/assets/images/fav-icons/favicon-192x192.png',
-      image: '/assets/images/cloud_and_firebase-320.png',
-      sound: '/assets/audio/notification-sound.mp3',
-      tag: 'notification',
-      vibrate: [500,110,500,110,450,110,200,110,170,40,450,110,200,110,170,40,500],
+    const title = 'Web Push Book';
+    const options = {
+      body: 'This would be the body text of the notification.\n' +
+        'It can hold two lines of text.',
+      icon: '/images/demos/icon-512x512.png',
+      badge: '/images/demos/badge-128x128.png',
+      image: '/images/demos/unsplash-farzad-nazifi-1600x1100.jpg',
+      tag: 'example-notification',
       actions: [
         {
           action: 'download-book-action',
           title: 'Download Book',
-          icon: '/assets/icons/download.svg'
+          icon: '/images/demos/action-download-book-128x128.png'
         }
       ]
     };

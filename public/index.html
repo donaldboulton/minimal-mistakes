@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Web Push by Firebase Cloud Messaging (FCM)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" href="./app.css" type="text/css" media="all" />
+</head>
+<body>
+    <div class="WebPush">
+        <form method="post" action="/api/webpush/subscribe">
+            <dl>
+                <dt><label for="text-title">Title</label></dt>
+                <dd><input type="text" id="text-title" name="text-title" /></dd>
+                <dt><label for="text-body">Body</label></dt>
+                <dd><input type="text" id="text-body" name="text-body" /></dd>
+                <dt><label for="url-icon">Icon</label></dt>
+                <dd><input type="url" id="url-icon" name="url-icon" /></dd>
+                <dt><label for="url-link">Link</label></dt>
+                <dd><input type="url" id="url-link" name="url-link" /></dd>
+            </dl>
+            <button type="submit">Web Push</button>
+        </form>
+    </div>
+    <script type="text/javascript" src="./app.js"></script>
+</body>
+</html>

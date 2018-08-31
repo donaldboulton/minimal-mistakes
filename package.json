@@ -2,7 +2,7 @@
   "name": "donaldboulton",
   "version": "4.12.0",
   "description": "Donald Boulton theme npm server scripts",
-  "main": "server-bundle.js",
+  "main": "server.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/donaldboulton/DWB.git"
@@ -25,8 +25,9 @@
   },
   "homepage": "https://github.com/donaldboulton/#readme",
   "scripts": {
-    "start": "webpack-dev-server --open",
+    "lint": "eslint server.js src/main.js public/firebase-messaging-sw.js && stylelint public/app.css",
     "build": "npm run clean && npm run compile && webpack && jekyll build",
+    "build:watch": "webpack --watch",
     "clean": "rm -rf ./build/index.bundle.js",
     "compile": "NODE_ENV=production webpack --config ./webpack.config.js --progress",
     "postbuild": "npm start",
@@ -50,11 +51,11 @@
     "gulp-util": "^3.0.8",
     "minimatch": "^3.0.4",
     "mkdirp": "^0.5.1",
+    "mustache": "^2.3.2",
     "nedb": "^1.8.0",
     "netlify-auth-providers": "^1.0.0-alpha5",
     "netlify-identity-widget": "^1.4.14",
     "node-fetch": "^2.2.0",
-    "spawn-worker": "^1.0.0",
     "utf-8-validate": "^5.0.1",
     "web-push": "^3.3.2",
     "webpack-cli": "^3.1.0",
