@@ -41,7 +41,7 @@
     "es6-promise": "^4.2.4",
     "express": "^4.16.3",
     "file-upload-with-preview": "^2.1.1",
-    "firebase": "^5.4.1",
+    "firebase": "^5.4.2",
     "fs-extra": "^7.0.0",
     "fs-extra-promise": "^1.0.1",
     "google-auth-library": "^1.6.1",
