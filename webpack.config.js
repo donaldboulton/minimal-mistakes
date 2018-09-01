@@ -5,7 +5,8 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'index.bundle.js'
+    filename: 'index.bundle.js',
+    chunkFilename: 'server.bundle.js',
   },
   mode: 'production',
   devtool: 'inline-source-map',
@@ -14,7 +15,9 @@ module.exports = {
     port: 3000
   },
   node: {
-    fs: "empty"
+    fs: "empty",
+    tls: "empty",
+    net: "empty"
   },
   plugins: [
     new webpack.LoaderOptionsPlugin({
@@ -29,7 +32,9 @@ module.exports = {
     })
   ],
   optimization: {
-      occurrenceOrder: true // To keep filename consistent between different modes (for example building only)
+    splitChunks: {
+    chunks: 'all'
+    }
   },
   module: {
     rules: [
