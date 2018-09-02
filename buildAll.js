@@ -1,7 +1,7 @@
 "use strict";
 
-const cp = require("child_process");
-const examples = require("./examples");
+import cp from 'child_process';
+const examples = require("./require.context/example");
 
 const cmds = examples.map(function(dirname) {
 	return "cd " + dirname + " && node build.js";

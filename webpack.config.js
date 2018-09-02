@@ -1,10 +1,11 @@
-const path = require('path')
-const webpack = require('webpack')
+const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'build'),
+    publicPath: '/',
     filename: 'index.bundle.js',
     chunkFilename: 'server.bundle.js',
   },
@@ -33,12 +34,21 @@ module.exports = {
   ],
   optimization: {
     splitChunks: {
-    chunks: 'all'
+      cacheGroups: {
+        commons: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all'
+        }
+      }
     }
   },
   module: {
     rules: [
-      {test: /\.js$/, exclude: /node_modules/, use: 'babel-loader'}
+      {test: /\.(js|jsx)$/, exclude: /node_modules/, use: 'babel-loader'}
     ]
-  }
-}
+  },
+  resolve: {
+    extensions: ['*', '.js', '.jsx']
+  },
+};

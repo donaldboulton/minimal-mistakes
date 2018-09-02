@@ -1,15 +1,13 @@
 // inside src/index.js
 import React from 'react';
 import {render} from 'react-dom';
-require('./server.js');
+import App from "./App";
+import main from "./main";
 
-const App = () => {
- return <div>
-  <h3>React App Running!</h3>
- </div>
+async function getComponent() {
+   var element = document.createElement('div');
+   const { default: _ } = await import('lodash');
+   element.innerHTML = _.join(['Hello', 'react webpack'], ' ');
+   return element;
 }
 
-render(
- <App/>,
- document.getElementById('root')
-)

@@ -2,7 +2,7 @@
   "name": "donaldboulton",
   "version": "4.12.0",
   "description": "Donald Boulton theme npm server scripts",
-  "main": "server.js",
+  "main": "server-bundle.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/donaldboulton/DWB.git"
@@ -25,18 +25,19 @@
   },
   "homepage": "https://github.com/donaldboulton/#readme",
   "scripts": {
-    "lint": "eslint server.js src/main.js public/firebase-messaging-sw.js && stylelint public/app.css",
+    "lint": "eslint server-bundle.js assets/js/main.min.js public/firebase-messaging-sw.js && stylelint assets/css/main.css",
     "build": "npm run clean && npm run compile && webpack && jekyll build",
     "build:watch": "webpack --watch",
-    "clean": "rm -rf ./build/index.bundle.js",
+    "clean": "rm -rf ./build/server.bundle.js",
     "compile": "NODE_ENV=production webpack --config ./webpack.config.js --progress",
     "postbuild": "npm start",
-    "serve": "node server-bundle.js"
+    "serve": "node build/server-bundle.js"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
     "bufferutil": "^4.0.0",
     "cors": "^2.8.4",
+    "default-passive-events": "^1.0.10",
     "del": "^3.0.0",
     "es6-promise": "^4.2.4",
     "express": "^4.16.3",
@@ -69,6 +70,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-react-hmre": "^1.1.1",
+    "babel-preset-stage-2": "^6.24.1",
     "eslint": "^4.4.0",
     "eslint-cli": "^1.1.1",
     "https-proxy-agent": "^2.2.1",
@@ -79,12 +81,14 @@
     "stylelint": "^9.5.0",
     "stylelint-config-standard": "^18.2.0",
     "webpack": "^4.17.1",
+    "webpack-bundle-analyzer": "^2.13.1",
     "webpack-dev-server": "^3.1.7"
   },
   "babel": {
     "presets": [
       "env",
-      "react"
+      "react",
+      "stage-2"
     ]
   }
 }

@@ -1,8 +1,8 @@
-const firebase = require('firebase/app');
-require('firebase/auth');
-require('firebase/database');
-require('firebase/messaging');
-require('firebase/functions');
+import * as firebase from 'firebase/app';
+import 'firebase/auth';
+import 'firebase/database';
+import 'firebase/messaging';
+import 'firebase/functions';
 
 const getFirebaseMessagingObject = () => {
     // Initialize Firebase
