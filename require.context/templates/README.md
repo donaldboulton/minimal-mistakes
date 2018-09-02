@@ -4,15 +4,15 @@
 function getTemplate(templateName) {
 	return require("./templates/"+templateName);
 }
-console.log(getTemplate("a"));
-console.log(getTemplate("b"));
+console.log(getTemplate("pageA"));
+console.log(getTemplate("pageB"));
 ```
 
 # templates/
 
-* a.js
-* b.js
-* c.js
+* pageA.js
+* pageB.js
+* pageC.js
 
 All templates are of this pattern:
 
@@ -126,12 +126,12 @@ console.log(getTemplate("b"));
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./a": 2,
-	"./a.js": 2,
-	"./b": 3,
-	"./b.js": 3,
-	"./c": 4,
-	"./c.js": 4
+	"./pageA": 2,
+	"./pageA.js": 2,
+	"./pageB": 3,
+	"./pageB.js": 3,
+	"./pageC": 4,
+	"./pageC.js": 4
 };
 
 

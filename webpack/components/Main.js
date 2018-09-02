@@ -1,8 +1,4 @@
-'use strict';
-
-/**** START web-push-require ****/
 import webpush from 'webpush';
-/**** END web-push-require ****/
 import path from 'path';
 import express from 'express';
 import bodyParser from 'body-parser';
@@ -22,11 +18,10 @@ webpush.setVapidDetails(
 );
 
 const db = new Datastore({
-    filename: path.join(__dirname, 'subscription-store.db'),
+    filename: path.join(__dirname, 'public/subscription-store.db'),
     autoload: true
   });
 
-  /**** START save-sub-function ****/
   function saveSubscriptionToDatabase(subscription) {
     return new Promise(function(resolve, reject) {
       db.insert(subscription, function(err, newDoc) {
@@ -39,7 +34,6 @@ const db = new Datastore({
       });
     });
   };
-  /**** END save-sub-function ****/
 
   function getSubscriptionsFromDatabase() {
     return new Promise(function(resolve, reject) {
@@ -67,7 +61,6 @@ const db = new Datastore({
     });
   }
 
-  /**** START save-sub-api-validate ****/
   const isValidSaveRequest = (req, res) => {
     // Check the request body has at least an endpoint.
     if (!req.body || !req.body.endpoint) {
@@ -84,23 +77,18 @@ const db = new Datastore({
     }
     return true;
   };
-  /**** END save-sub-api-validate ****/
 
   const app = express();
   app.use(express.static(path.join(__dirname, '/')));
   app.use(bodyParser.json());
   app.use(bodyParser.text());
 
-  // This is the API that receives a push subscription and saves it.
-  /**** START save-sub-example ****/
-  /**** START save-sub-api-post ****/
   app.post('/api/save-subscription/', function (req, res) {
-  /**** END save-sub-api-post ****/
+
     if (!isValidSaveRequest(req, res)) {
       return;
     }
 
-    /**** START save-sub-api-save-subscription ****/
     return saveSubscriptionToDatabase(req.body)
     .then(function(subscriptionId) {
       res.setHeader('Content-Type', 'application/json');
@@ -116,13 +104,9 @@ const db = new Datastore({
         }
       }));
     });
-    /**** END save-sub-api-save-subscription ****/
   });
-  /**** END save-sub-example ****/
 
   app.post('/api/get-subscriptions/', function (req, res) {
-    // TODO: This should be secured / not available publicly.
-    //       this is for demo purposes only.
 
     return getSubscriptionsFromDatabase()
     .then(function(subscriptions) {
@@ -148,7 +132,6 @@ const db = new Datastore({
     });
   });
 
-  /**** START trig-push-send-notification ****/
   const triggerPushMsg = function(subscription, dataToSend) {
     return webpush.sendNotification(subscription, dataToSend)
     .catch((err) => {
@@ -159,17 +142,11 @@ const db = new Datastore({
       }
     });
   };
-  /**** END trig-push-send-notification ****/
 
-  /**** START trig-push-api-post ****/
   app.post('/api/trigger-push-msg/', function (req, res) {
-  /**** END trig-push-api-post ****/
-    // NOTE: This API endpoint should be secure (i.e. protected with a login
-    // check OR not publicly available.)
 
     const dataToSend = JSON.stringify(req.body);
 
-    /**** START trig-push-send-push ****/
     return getSubscriptionsFromDatabase()
     .then(function(subscriptions) {
       let promiseChain = Promise.resolve();
@@ -183,8 +160,7 @@ const db = new Datastore({
 
       return promiseChain;
     })
-    /**** END trig-push-send-push ****/
-    /**** START trig-push-return-response ****/
+
     .then(() => {
       res.setHeader('Content-Type', 'application/json');
         res.send(JSON.stringify({ data: { success: true } }));
@@ -200,10 +176,10 @@ const db = new Datastore({
         }
       }));
     });
-    /**** END trig-push-return-response ****/
+
   });
 
-  const port = process.env.PORT || 9012;
+  const port = process.env.PORT || 3000;
 
   const server = app.listen(port, function () {
     console.log('Running on http://localhost:' + port);

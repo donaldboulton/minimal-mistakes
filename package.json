@@ -23,6 +23,10 @@
   "bugs": {
     "url": "https://github.com/donaldboulton/issues"
   },
+  "peerDependencies": {
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
+  },
   "homepage": "https://github.com/donaldboulton/#readme",
   "scripts": {
     "lint": "eslint server-bundle.js assets/js/main.min.js public/firebase-messaging-sw.js && stylelint assets/css/main.css",
