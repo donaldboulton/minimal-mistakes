@@ -30,7 +30,7 @@
   "homepage": "https://github.com/donaldboulton/#readme",
   "scripts": {
     "lint": "assets/js/main.min.js public/firebase-messaging-sw.js && stylelint assets/css/main.css",
-    "build": "npm run clean && npm run compile && webpack && jekyll build",
+    "build": "npm run compile && webpack && jekyll build",
     "build:watch": "webpack --watch",
     "compile": "NODE_ENV=production webpack --config ./webpack.config.js --progress",
     "postbuild": "npm start",
