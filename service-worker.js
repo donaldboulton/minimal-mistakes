@@ -210,26 +210,21 @@ function handlePushEvent(event) {
 const adminPage = '/admin.html';
 
 function openWindow(event) {
-  /**** START notificationOpenWindow ****/
+
   const examplePage = '/admin.html';
   const promiseChain = clients.openWindow(examplePage);
   event.waitUntil(promiseChain);
-  /**** END notificationOpenWindow ****/
 }
 
 function focusWindow(event) {
-  /**** START notificationFocusWindow ****/
-  /**** START urlToOpen ****/
-  const urlToOpen = new URL(examplePage, self.location.origin).href;
-  /**** END urlToOpen ****/
 
-  /**** START clientsMatchAll ****/
+  const urlToOpen = new URL(examplePage, self.location.origin).href;
+
   const promiseChain = clients.matchAll({
     type: 'window',
     includeUncontrolled: true
   })
-  /**** END clientsMatchAll ****/
-  /**** START searchClients ****/
+
   .then((windowClients) => {
     let matchingClient = null;
 
@@ -247,14 +242,14 @@ function focusWindow(event) {
       return clients.openWindow(urlToOpen);
     }
   });
-  /**** END searchClients ****/
+
 
   event.waitUntil(promiseChain);
-  /**** END notificationFocusWindow ****/
+
 }
 
 function dataNotification(event) {
-  /**** START printNotificationData ****/
+
   const notificationData = event.notification.data;
   console.log('');
   console.log('The data notification had the following parameters:');
@@ -262,10 +257,9 @@ function dataNotification(event) {
     console.log(`  ${key}: ${notificationData[key]}`);
   });
   console.log('');
-  /**** END printNotificationData ****/
+
 }
 
-/**** START isClientFocused ****/
 function isClientFocused() {
   return clients.matchAll({
     type: 'window',
@@ -285,10 +279,10 @@ function isClientFocused() {
     return clientIsFocused;
   });
 }
-/**** END isClientFocused ****/
+
 
 function demoMustShowNotificationCheck(event) {
-  /**** START showNotificationRequired ****/
+
   const promiseChain = isClientFocused()
   .then((clientIsFocused) => {
     if (clientIsFocused) {
@@ -297,16 +291,15 @@ function demoMustShowNotificationCheck(event) {
 
     }
 
-    // Client isn't focused, we need to show a notification.
     return self.registration.showNotification('Had to show a notification.');
   });
 
   event.waitUntil(promiseChain);
-  /**** END showNotificationRequired ****/
+
 }
 
 function demoSendMessageToPage(event) {
-  /**** START sendPageMessage ****/
+
   const promiseChain = isClientFocused()
   .then((clientIsFocused) => {
     if (clientIsFocused) {
@@ -324,7 +317,7 @@ function demoSendMessageToPage(event) {
   });
 
   event.waitUntil(promiseChain);
-  /**** END sendPageMessage ****/
+
 }
 
 self.addEventListener('push', function(event) {
@@ -343,10 +336,8 @@ self.addEventListener('push', function(event) {
   }
 });
 
-/**** START notificationActionClickEvent ****/
 self.addEventListener('notificationclick', function(event) {
   if (!event.action) {
-    // Was a normal notification click
     console.log('Notification Click.');
     return;
   }
@@ -369,9 +360,7 @@ self.addEventListener('notificationclick', function(event) {
       break;
   }
 });
-/**** END notificationActionClickEvent ****/
 
-/**** START notificationClickEvent ****/
 self.addEventListener('notificationclick', function(event) {
   event.notification.close();
 
@@ -386,24 +375,20 @@ self.addEventListener('notificationclick', function(event) {
       dataNotification(event);
       break;
     default:
-      // NOOP
       break;
   }
 });
-/**** END notificationClickEvent ****/
 
 const notificationCloseAnalytics = () => {
   return Promise.resolve();
 };
 
-/**** START notificationCloseEvent ****/
 self.addEventListener('notificationclose', function(event) {
   const dismissedNotification = event.notification;
 
   const promiseChain = notificationCloseAnalytics();
   event.waitUntil(promiseChain);
 });
-/**** END notificationCloseEvent ****/
 
 self.addEventListener('message', function(event) {
   console.log('Received message from page.', event.data);
