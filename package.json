@@ -29,10 +29,9 @@
   },
   "homepage": "https://github.com/donaldboulton/#readme",
   "scripts": {
-    "lint": "eslint server-bundle.js assets/js/main.min.js public/firebase-messaging-sw.js && stylelint assets/css/main.css",
+    "lint": "assets/js/main.min.js public/firebase-messaging-sw.js && stylelint assets/css/main.css",
     "build": "npm run clean && npm run compile && webpack && jekyll build",
     "build:watch": "webpack --watch",
-    "clean": "rm -rf ./build/server.bundle.js",
     "compile": "NODE_ENV=production webpack --config ./webpack.config.js --progress",
     "postbuild": "npm start",
     "serve": "node build/server-bundle.js"
@@ -40,6 +39,7 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "bufferutil": "^4.0.0",
+    "bundle-loader": "^0.5.6",
     "cors": "^2.8.4",
     "default-passive-events": "^1.0.10",
     "del": "^3.0.0",
