@@ -1,4 +1,4 @@
-const VERSION = '11';
+const VERSION = '12';
 
 this.addEventListener('install', (e) => {
     e.waitUntil(caches.open(VERSION).then(cache => cache.addAll([
@@ -77,7 +77,7 @@ this.addEventListener('install', (e) => {
         '/assets/js/github/github-widget.js',
         '/assets/images/bg10-min.png',
         '/assets/images/badge.png',
-        '/assets/images/icon.png',
+        '/assets/images/firebase-logo.png',
         '/assets/images/fav-icons/favicon-32x32.png',
         '/assets/images/pages/donald-boulton-100.jpg',
         '/assets/images/pages/reviews.jpg',
@@ -173,238 +173,152 @@ function handleNoCacheMatch(e) {
     return fetchFromNetworkAndCache(e);
 }
 
-function handlePushEvent(event) {
-    const DEFAULT_TAG = 'web-push-book-example-site'
-    return Promise.resolve()
-    .then(() => {
-      return event.data.json();
-    })
-    .then((data) => {
-      const title = data.notification.title;
-      const options = data.notification;
-      if (!options.tag) {
-        options.tag = DEFAULT_TAG;
-      }
-      return registration.showNotification(title, options);
-    })
-    .catch((err) => {
-      console.error('Push event caused an error: ', err);
-
-      const title = 'Message Received';
-      const options = {
-        body: event.data.text(),
-        tag: DEFAULT_TAG
-      };
-      return registration.showNotification(title, options);
-    });
-  }
-
-  self.addEventListener('push', function(event) {
-    event.waitUntil(handlePushEvent(event));
-  });
-
-  const doSomething = () => {
-    return Promise.resolve();
-  };
-
-const adminPage = '/admin.html';
-
-function openWindow(event) {
-
-  const examplePage = '/admin.html';
-  const promiseChain = clients.openWindow(examplePage);
-  event.waitUntil(promiseChain);
-}
-
-function focusWindow(event) {
-
-  const urlToOpen = new URL(examplePage, self.location.origin).href;
-
-  const promiseChain = clients.matchAll({
-    type: 'window',
-    includeUncontrolled: true
-  })
-
-  .then((windowClients) => {
-    let matchingClient = null;
-
-    for (let i = 0; i < windowClients.length; i++) {
-      const windowClient = windowClients[i];
-      if (windowClient.url === urlToOpen) {
-        matchingClient = windowClient;
-        break;
-      }
-    }
-
-    if (matchingClient) {
-      return matchingClient.focus();
-    } else {
-      return clients.openWindow(urlToOpen);
-    }
-  });
-
-
-  event.waitUntil(promiseChain);
-
-}
-
-function dataNotification(event) {
-
-  const notificationData = event.notification.data;
-  console.log('');
-  console.log('The data notification had the following parameters:');
-  Object.keys(notificationData).forEach((key) => {
-    console.log(`  ${key}: ${notificationData[key]}`);
-  });
-  console.log('');
-
-}
-
-function isClientFocused() {
-  return clients.matchAll({
-    type: 'window',
-    includeUncontrolled: true
-  })
-  .then((windowClients) => {
-    let clientIsFocused = false;
-
-    for (let i = 0; i < windowClients.length; i++) {
-      const windowClient = windowClients[i];
-      if (windowClient.focused) {
-        clientIsFocused = true;
-        break;
-      }
-    }
-
-    return clientIsFocused;
-  });
-}
-
-
-function demoMustShowNotificationCheck(event) {
-
-  const promiseChain = isClientFocused()
-  .then((clientIsFocused) => {
-    if (clientIsFocused) {
-      console.log('Don\'t need to show a notification.');
-      return;
-
-    }
-
-    return self.registration.showNotification('Had to show a notification.');
-  });
-
-  event.waitUntil(promiseChain);
-
-}
-
-function demoSendMessageToPage(event) {
-
-  const promiseChain = isClientFocused()
-  .then((clientIsFocused) => {
-    if (clientIsFocused) {
-      windowClients.forEach((windowClient) => {
-        windowClient.postMessage({
-          message: 'Received a push message.',
-          time: new Date().toString()
-        });
-      });
-    } else {
-      return self.registration.showNotification('No focused windows', {
-        body: 'Had to show a notification instead of messaging each page.'
-      });
-    }
-  });
-
-  event.waitUntil(promiseChain);
-
-}
-
-self.addEventListener('push', function(event) {
-  if (event.data) {
-    switch(event.data.text()) {
-      case 'must-show-notification':
-        demoMustShowNotificationCheck(event);
-        break;
-      case 'send-message-to-page':
-        demoSendMessageToPage(event);
-        break;
-      default:
-        console.warn('Unsure of how to handle push event: ', event.data);
-        break;
-    }
-  }
+firebase.initializeApp({
+  'messagingSenderId': '857761645811'
 });
 
-self.addEventListener('notificationclick', function(event) {
-  if (!event.action) {
-    console.log('Notification Click.');
-    return;
+// Retrieve an instance of Firebase Messaging so that it can handle background
+// messages.
+const fb_messaging = firebase.messaging();
+
+// Buffer to save multipart messages
+var messagesBuffer = {};
+
+// Gets the number of keys in a dictionary
+var countKeys = function (dic) {
+  var count = 0;
+  for (var i in dic) {
+      count++;
   }
-
-  switch (event.action) {
-    case 'coffee-action':
-      console.log('User ❤️️\'s coffee.');
-      break;
-    case 'doughnut-action':
-      console.log('User ❤️️\'s doughnuts.');
-      break;
-    case 'gramophone-action':
-      console.log('User ❤️️\'s music.');
-      break;
-    case 'atom-action':
-      console.log('User ❤️️\'s science.');
-      break;
-    default:
-      console.log(`Unknown action clicked: '${event.action}'`);
-      break;
-  }
-});
-
-self.addEventListener('notificationclick', function(event) {
-  event.notification.close();
-
-  switch(event.notification.tag) {
-    case 'open-window':
-      openWindow(event);
-      break;
-    case 'focus-window':
-      focusWindow(event);
-      break;
-    case 'data-notification':
-      dataNotification(event);
-      break;
-    default:
-      break;
-  }
-});
-
-const notificationCloseAnalytics = () => {
-  return Promise.resolve();
+  return count;
 };
 
-self.addEventListener('notificationclose', function(event) {
-  const dismissedNotification = event.notification;
+// Parses the Realtime messages using multipart format
+var parseRealtimeMessage = function (message) {
+  // Multi part
+  var regexPattern = /^(\w[^_]*)_{1}(\d*)-{1}(\d*)_{1}([\s\S.]*)$/;
+  var match = regexPattern.exec(message);
 
-  const promiseChain = notificationCloseAnalytics();
-  event.waitUntil(promiseChain);
+  var messageId = null;
+  var messageCurrentPart = 1;
+  var messageTotalPart = 1;
+  var lastPart = false;
+
+  if (match && match.length > 0) {
+      if (match[1]) {
+          messageId = match[1];
+      }
+      if (match[2]) {
+          messageCurrentPart = match[2];
+      }
+      if (match[3]) {
+          messageTotalPart = match[3];
+      }
+      if (match[4]) {
+          message = match[4];
+      }
+  }
+
+  if (messageId) {
+      if (!messagesBuffer[messageId]) {
+          messagesBuffer[messageId] = {};
+      }
+      messagesBuffer[messageId][messageCurrentPart] = message;
+      if (countKeys(messagesBuffer[messageId]) == messageTotalPart) {
+          lastPart = true;
+      }
+  }
+  else {
+      lastPart = true;
+  }
+
+  if (lastPart) {
+      if (messageId) {
+          message = "";
+
+          // Aggregate all parts
+          for (var i = 1; i <= messageTotalPart; i++) {
+              message += messagesBuffer[messageId][i];
+              delete messagesBuffer[messageId][i];
+          }
+
+          delete messagesBuffer[messageId];
+      }
+
+      return message;
+  } else {
+    // We don't have yet all parts, we need to wait ...
+    return null;
+  }
+}
+
+// Shows a notification
+function showNotification(message) {
+  // In this example we are assuming the message is a simple string
+  // containing the notification text. The target link of the notification
+  // click is fixed, but in your use case you could send a JSON message with
+  // a link property and use it in the click_url of the notification
+
+  // The notification title
+  const notificationTitle = 'Web Push Notification';
+
+  // The notification properties
+  const notificationOptions = {
+    body: message,
+    icon: 'assets/images/firebase-logo.png',
+    data: {
+      click_url: '/index.html'
+    },
+    tag: Date.now()
+  };
+
+  return self.registration.showNotification(notificationTitle,
+      notificationOptions);
+}
+
+// If you would like to customize notifications that are received in the
+// background (Web app is closed or not in browser focus) then you should
+// implement this optional method.
+fb_messaging.setBackgroundMessageHandler(function(payload) {
+  console.log('Received background message ', payload);
+
+  // Customize notification here
+  if(payload.data && payload.data.M) {
+    var message = parseRealtimeMessage(payload.data.M);
+    return showNotification(message);
+  }
 });
 
-self.addEventListener('message', function(event) {
-  console.log('Received message from page.', event.data);
-  switch(event.data) {
-    case 'must-show-notification-admin':
-      self.dispatchEvent(new PushEvent('push', {
-        data: 'must-show-notification'
-      }));
-      break;
-    case 'send-message-to-page-admin':
-      self.dispatchEvent(new PushEvent('push', {
-        data: 'send-message-to-page'
-      }));
-      break;
-    default:
-      console.warn('Unknown message received in service-worker.js');
-      break;
+// Forces a notification
+self.addEventListener('message', function (evt) {
+   evt.waitUntil(showNotification(evt.data));
+});
+
+// The user has clicked on the notification ...
+self.addEventListener('notificationclick', function(event) {
+  // Android doesn’t close the notification when you click on it
+  // See: http://crbug.com/463146
+  event.notification.close();
+
+  if(event.notification.data && event.notification.data.click_url) {
+    // gets the notitication click url
+    var click_url = event.notification.data.click_url;
+
+    // This looks to see if the current is already open and
+    // focuses if it is
+    event.waitUntil(clients.matchAll({
+      type: "window"
+    }).then(function(clientList) {
+      for (var i = 0; i < clientList.length; i++) {
+        var client = clientList[i];
+        if (client.url == click_url && 'focus' in client)
+          return client.focus();
+      }
+      if (clients.openWindow) {
+        var url = click_url;
+        return clients.openWindow(url);
+      }
+
+    }));
   }
 });

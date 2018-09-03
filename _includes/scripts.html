@@ -250,17 +250,11 @@ $(".author__urls_masthead button").on("click", function() {
     $(".author__urls_masthead button").toggleClass("open");
 });
 </script>
-
-{% if page.admin == true %}
 <script type="text/javascript" src="node_modules/file-upload-with-preview/dist/index.min.js"></script>
 <script>
   var upload = new FileUploadWithPreview('myUniqueUploadId')
 </script>
-<script src="{{ '/assets/js/vendor/notifications/admin.js' | relative_url }}"></script>
-<script src="{{ '/assets/js/vendor/notifications/notifications.js' | relative_url }}"></script>
-{% endif %}
 
 <script async defer src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script type="text/javascript" src="node_modules/default-passive-events/dist/index.js"></script>
-<script src="{{ '/app.js' | relative_url }}" async></script>
-<script src="{{ '/build/index.bundle.js' | relative_url }}" async></script>
+<script src="{{ '/WebPushManager.js' | relative_url }}" async></script>

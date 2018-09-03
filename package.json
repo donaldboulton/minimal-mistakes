@@ -2,7 +2,7 @@
   "name": "donaldboulton",
   "version": "4.12.0",
   "description": "Donald Boulton theme npm server scripts",
-  "main": "server-bundle.js",
+  "main": "WebPushManager.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/donaldboulton/DWB.git"
@@ -30,21 +30,16 @@
   "homepage": "https://github.com/donaldboulton/#readme",
   "scripts": {
     "lint": "assets/js/main.min.js public/firebase-messaging-sw.js && stylelint assets/css/main.css",
-    "build": "npm run compile && webpack && jekyll build",
+    "build": "webpack && jekyll build",
     "build:watch": "webpack --watch",
-    "compile": "NODE_ENV=production webpack --config ./webpack.config.js --progress",
+    "compile": "webpack --config ./webpack.config.js --progress",
     "postbuild": "npm start",
-    "serve": "node build/server-bundle.js"
+    "serve": "node WebPushManager.js"
   },
   "dependencies": {
-    "body-parser": "^1.18.3",
-    "bufferutil": "^4.0.0",
     "bundle-loader": "^0.5.6",
-    "cors": "^2.8.4",
     "default-passive-events": "^1.0.10",
-    "del": "^3.0.0",
     "es6-promise": "^4.2.4",
-    "express": "^4.16.3",
     "file-upload-with-preview": "^2.1.1",
     "firebase": "^5.4.2",
     "fs-extra": "^7.0.0",
@@ -55,14 +50,11 @@
     "graceful-fs": "^4.1.11",
     "gulp-util": "^3.0.8",
     "minimatch": "^3.0.4",
-    "mkdirp": "^0.5.1",
     "mustache": "^2.3.2",
-    "nedb": "^1.8.0",
     "netlify-auth-providers": "^1.0.0-alpha5",
     "netlify-identity-widget": "^1.4.14",
     "node-fetch": "^2.2.0",
     "utf-8-validate": "^5.0.1",
-    "web-push": "^3.3.2",
     "webpack-cli": "^3.1.0",
     "worker-loader": "^2.0.0"
   },
