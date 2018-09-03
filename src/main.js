@@ -1,189 +1,87 @@
-import webpush from 'web-push';
-import path from 'path';
-import express from 'express';
-import bodyParser from 'body-parser';
-import Datastore from 'nedb';
+var channel = generateUserChannel();
 
-webpush.setGCMAPIKey('AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA');
+  $(document).ready(function() {
 
-const vapidKeys = {
-    publicKey: 'BOew5Tx7fTX51GzJ7tpF3dDLNS54OvUST_dGGqzJEy54jqW2qghIRTiK7BfOpCPp8xNfMH7Mtprl3hp_WGjgslU',
-    privateKey: 'ymblNrJSzlXdRMhFYdXh1Hda8HkIO76aVs85X93wAjc',
-};
+    // In this example we are using a demo Realtime application key without any security
+    // so you should replace it with your own appkey and follow the guidelines
+    // to configure it
+    var RealtimeAppKey = "AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA";
 
-webpush.setVapidDetails(
-  'mailto:donaldboulton@gmail.com',
-  vapidKeys.publicKey,
-  vapidKeys.privateKey
-);
+    // update the UI
+    $('#curl').text('curl "http://ortc-developers-useast1-s0001.realtime.co/send" --data "AK=' + RealtimeAppKey + '&AT=SomeToken&C=' + channel + '&M=12345678_1-1_This is a web push notification sent using the Realtime REST API"');
+    $('#channel').text(channel);
 
-const db = new Datastore({
-    filename: path.join(__dirname, 'public/subscription-store.db'),
-    autoload: true
-  });
+    // start Web Push Manager to obtain device id and register it with Realtime
+    // a service worker will be launched in background to receive the incoming push notifications
+    var webPushManager = new WebPushManager();
 
-  function saveSubscriptionToDatabase(subscription) {
-    return new Promise(function(resolve, reject) {
-      db.insert(subscription, function(err, newDoc) {
-        if (err) {
-          reject(err);
-          return;
+    webPushManager.start(function(error, registrationId){
+      if (error) {
+
+        if(error.message) {
+          alert(error.message);
+        } else {
+          alert("Ooops! It seems this browser doesn't support Web Push Notifications :(");
         }
 
-        resolve(newDoc._id);
-      });
-    });
-  };
+        $("#curl").html("Oops! Something went wrong. It seems your browser does not support Web Push Notifications.<br><br>Error:<br>" + error.message);
+        $("#sendButton").text("No can do ... this browser doesn't support web push notifications");
+        $("#sendButton").css("background-color","red");
+      };
 
-  function getSubscriptionsFromDatabase() {
-    return new Promise(function(resolve, reject) {
-      db.find({}, function(err, docs) {
-        if (err) {
-          reject(err);
-          return;
-        }
+      // Create Realtime Messaging client
+      client = RealtimeMessaging.createClient();
+      client.setClusterUrl('https://ortc-developers.realtime.co/server/ssl/2.1/');
 
-        resolve(docs);
-      })
+      client.onConnected = function (theClient) {
+        // client is connected
+
+        // subscribe users to their private channels
+        theClient.subscribeWithNotifications(channel, true, registrationId,
+            function (theClient, channel, msg) {
+              // while you are browsing this page you'll be connected to Realtime
+              // and receive messages directly in this callback
+              console.log("Received a message from the Realtime server:", msg);
+
+              // Since the service worker will only show a notification if the user
+              // is not browsing your website you can force a push notification to be displayed.
+              // For most use cases it would be better to change the website UI by showing a badge
+              // or any other form of showing the user something changed instead
+              // of showing a pop-up notification.
+              // Also consider thar if the user has severals tabs opened it will see a notification for
+              // each one ...
+              webPushManager.forceNotification(msg);
+            });
+      };
+
+      // Establish the connection
+      client.connect(RealtimeAppKey, 'JustAnyRandomToken');
     });
+});
+
+// generate a GUID
+function S4() {
+  return (((1+Math.random())*0x10000)|0).toString(16).substring(1);
+}
+
+// generate the user private channel and save it at the local storage
+// so we always use the same channel for each user
+function generateUserChannel(){
+  userChannel = localStorage.getItem("channel");
+  if (userChannel == null || userChannel == "null"){
+      guid = (S4() + S4() + "-" + S4() + "-4" + S4().substr(0,3) + "-" + S4() + "-" + S4() + S4() + S4()).toLowerCase();
+      userChannel = 'channel-' + guid;
+      localStorage.setItem("channel", userChannel);
   }
+  return userChannel;
+}
 
-  function deleteSubscriptionFromDatabase(subscriptionId) {
-    return new Promise(function(resolve, reject) {
-    db.remove({_id: subscriptionId }, {}, function(err) {
-        if (err) {
-          reject(err);
-          return;
-        }
-
-        resolve();
-      });
-    });
-  }
-
-  const isValidSaveRequest = (req, res) => {
-    // Check the request body has at least an endpoint.
-    if (!req.body || !req.body.endpoint) {
-      // Not a valid subscription.
-      res.status(400);
-      res.setHeader('Content-Type', 'application/json');
-      res.send(JSON.stringify({
-        error: {
-          id: 'no-endpoint',
-          message: 'Subscription must have an endpoint.'
-        }
-      }));
-      return false;
-    }
-    return true;
+// send a message to the user private channel to trigger a push notification
+function send(){
+  if (client) {
+    client.send(channel, "This is a web push notification sent using the Realtime JavaScript SDK");
   };
-
-  const app = express();
-  app.use(express.static(path.join(__dirname, '/')));
-  app.use(bodyParser.json());
-  app.use(bodyParser.text());
-
-  app.post('/api/save-subscription/', function (req, res) {
-
-    if (!isValidSaveRequest(req, res)) {
-      return;
-    }
-
-    return saveSubscriptionToDatabase(req.body)
-    .then(function(subscriptionId) {
-      res.setHeader('Content-Type', 'application/json');
-      res.send(JSON.stringify({ data: { success: true } }));
-    })
-    .catch(function(err) {
-      res.status(500);
-      res.setHeader('Content-Type', 'application/json');
-      res.send(JSON.stringify({
-        error: {
-          id: 'unable-to-save-subscription',
-          message: 'The subscription was received but we were unable to save it to our database.'
-        }
-      }));
-    });
-  });
-
-  app.post('/api/get-subscriptions/', function (req, res) {
-
-    return getSubscriptionsFromDatabase()
-    .then(function(subscriptions) {
-      const reducedSubscriptions = subscriptions.map((subscription) => {
-        return {
-          id: subscription._id,
-          endpoint: subscription.endpoint
-        }
-      });
-
-      res.setHeader('Content-Type', 'application/json');
-      res.send(JSON.stringify({ data: { subscriptions: reducedSubscriptions } }));
-    })
-    .catch(function(err) {
-      res.status(500);
-      res.setHeader('Content-Type', 'application/json');
-      res.send(JSON.stringify({
-        error: {
-          id: 'unable-to-get-subscriptions',
-          message: 'We were unable to get the subscriptions from our database.'
-        }
-      }));
-    });
-  });
-
-  const triggerPushMsg = function(subscription, dataToSend) {
-    return webpush.sendNotification(subscription, dataToSend)
-    .catch((err) => {
-      if (err.statusCode === 410) {
-        return deleteSubscriptionFromDatabase(subscription._id);
-      } else {
-        console.log('Subscription is no longer valid: ', err);
-      }
-    });
-  };
-
-  app.post('/api/trigger-push-msg/', function (req, res) {
-
-    const dataToSend = JSON.stringify(req.body);
-
-    return getSubscriptionsFromDatabase()
-    .then(function(subscriptions) {
-      let promiseChain = Promise.resolve();
-
-      for (let i = 0; i < subscriptions.length; i++) {
-        const subscription = subscriptions[i];
-        promiseChain = promiseChain.then(() => {
-          return triggerPushMsg(subscription, dataToSend);
-        });
-      }
-
-      return promiseChain;
-    })
-
-    .then(() => {
-      res.setHeader('Content-Type', 'application/json');
-        res.send(JSON.stringify({ data: { success: true } }));
-    })
-    .catch(function(err) {
-      res.status(500);
-      res.setHeader('Content-Type', 'application/json');
-      res.send(JSON.stringify({
-        error: {
-          id: 'unable-to-send-messages',
-          message: `We were unable to send messages to all subscriptions : ` +
-            `'${err.message}'`
-        }
-      }));
-    });
-
-  });
-
-  const port = process.env.PORT || 3000;
-
-  const server = app.listen(port, function () {
-    console.log('Running on http://localhost:' + port);
-  });
+}
 
 var Worker = require("worker-loader?name=hash.worker.js!./worker");
 var worker = new Worker();
@@ -191,3 +89,5 @@ worker.postMessage("pageB");
 worker.onmessage = function(event) {
 	var templatepageB = event.data; // "This text was generated by template pageB"
 };
+
+require('default-passive-events');

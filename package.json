@@ -29,12 +29,11 @@
   },
   "homepage": "https://github.com/donaldboulton/#readme",
   "scripts": {
-    "lint": "assets/js/main.min.js public/firebase-messaging-sw.js && stylelint assets/css/main.css",
+    "lint": "assets/js/main.min.js WebPushManager.js && stylelint assets/css/main.css",
     "build": "webpack && jekyll build",
     "build:watch": "webpack --watch",
     "compile": "webpack --config ./webpack.config.js --progress",
-    "postbuild": "npm start",
-    "serve": "node WebPushManager.js"
+    "postbuild": "npm start"
   },
   "dependencies": {
     "bundle-loader": "^0.5.6",
