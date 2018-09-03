@@ -25,7 +25,7 @@ WebPushManager.prototype.getRegistrationId = function (callback) {
           .then(function(currentToken) {
             if (currentToken) {
               callback(null, currentToken);
-            } 
+            }
           })
           .catch(function(err) {
             callback(err)
@@ -42,4 +42,4 @@ WebPushManager.prototype.forceNotification = function(message) {
   navigator.serviceWorker.ready.then(function(serviceWorkerRegistration) {
     serviceWorkerRegistration.active.postMessage(message);
   });
-}
+};
