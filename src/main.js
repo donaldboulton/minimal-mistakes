@@ -5,10 +5,10 @@ var channel = generateUserChannel();
     // In this example we are using a demo Realtime application key without any security
     // so you should replace it with your own appkey and follow the guidelines
     // to configure it
-    var RealtimeAppKey = "AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA";
+    var RealtimeAppKey = "zeTkBw";
 
     // update the UI
-    $('#curl').text('curl "http://ortc-developers-useast1-s0001.realtime.co/send" --data "AK=' + RealtimeAppKey + '&AT=SomeToken&C=' + channel + '&M=12345678_1-1_This is a web push notification sent using the Realtime REST API"');
+    $('#curl').text('curl "http://ortc-developers-useast1-s0003.realtime.co/send" --data "AK=' + RealtimeAppKey + '&AT=SomeToken&C=' + channel + '&M=12345678_1-1_This is a web push notification sent using the Realtime REST API"');
     $('#channel').text(channel);
 
     // start Web Push Manager to obtain device id and register it with Realtime

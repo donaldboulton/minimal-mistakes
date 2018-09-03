@@ -5,8 +5,8 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'index.bundle.js',
-    chunkFilename: 'server.bundle.js',
+    filename: 'vendors.js',
+    chunkFilename: 'bundle.js',
   },
   mode: 'production',
   devtool: 'inline-source-map',

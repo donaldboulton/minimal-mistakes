@@ -1,5 +1,4 @@
 import * as firebase from 'firebase/app';
-import 'firebase/database';
 import 'firebase/messaging';
 
 const getFirebaseMessagingObject = () => {
