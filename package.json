@@ -71,7 +71,6 @@
     "https-proxy-agent": "^2.2.1",
     "npm-run-all": "^4.1.1",
     "react": "^16.4.2",
-    "react-addons-update": "^15.6.2",
     "react-dom": "^16.4.2",
     "stylelint": "^9.5.0",
     "stylelint-config-standard": "^18.2.0",
