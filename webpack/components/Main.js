@@ -1,5 +1,4 @@
-  // Generate the user private channel
-  var channel = generateUserChannel();
+var channel = generateUserChannel();
 
   $(document).ready(function() {
 
