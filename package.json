@@ -54,9 +54,12 @@
     "netlify-auth-providers": "^1.0.0-alpha5",
     "netlify-identity-widget": "^1.4.14",
     "node-fetch": "^2.2.0",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
     "realtime-messaging": "^2.1.42",
     "utf-8-validate": "^5.0.1",
-    "webpack-cli": "^3.1.0",
     "worker-loader": "^2.0.0"
   },
   "devDependencies": {
@@ -72,11 +75,10 @@
     "eslint-cli": "^1.1.1",
     "https-proxy-agent": "^2.2.1",
     "npm-run-all": "^4.1.1",
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
     "stylelint": "^9.5.0",
     "stylelint-config-standard": "^18.2.0",
     "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0",
     "webpack-bundle-analyzer": "^2.13.1",
     "webpack-dev-server": "^3.1.7"
   },

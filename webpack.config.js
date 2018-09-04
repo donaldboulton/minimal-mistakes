@@ -1,12 +1,12 @@
-const path = require('path');
 const webpack = require('webpack');
+const path = require('path');
 
 module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'vendors.js',
-    chunkFilename: 'bundle.js',
+    filename: '[name].bundle.js',
+    chunkFilename: '[name].chunk.js',
   },
   mode: 'production',
   devtool: 'inline-source-map',
@@ -35,9 +35,9 @@ module.exports = {
     splitChunks: {
       cacheGroups: {
         commons: {
-          test: /[\\/]node_modules[\\/]/,
-          name: 'vendors',
-          chunks: 'all'
+          name: 'commons',
+          chunks: 'initial',
+          minChunks: 2
         }
       }
     }

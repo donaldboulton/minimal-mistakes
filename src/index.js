@@ -3,6 +3,7 @@ import React from 'react';
 import {render} from 'react-dom';
 import App from "./App";
 import main from "./main";
+import ('./pageA');
 
 async function getComponent() {
    var element = document.createElement('div');
