@@ -237,11 +237,16 @@ exclude:
   - vendor/ruby/
   - node_modules
   - node_modules/
+  - require.content/
+  - require.content
   - .vs
   - .vscode
   - LICENSE
   - log
   - Rakefile
+  - template.md
+  - src
+  - src/
   - README
   - README.md
   - admin/index.js
