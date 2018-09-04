@@ -33,12 +33,12 @@
 
 ## Unoptimized
 
-```
+```javascript
 {{stdout}}
 ```
 
 ## Production mode
 
-```
+```javascript
 {{production:stdout}}
 ```
