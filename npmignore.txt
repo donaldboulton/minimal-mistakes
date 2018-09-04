@@ -1,5 +1,9 @@
 coverage
 test
 test_tools
-.travis.yml
 .eslintrc
+src
+examples
+.babelrc
+.gitignore
+webpack.config.js
