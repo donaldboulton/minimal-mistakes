@@ -1,6 +1,7 @@
-import React from "react";
+import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import Realtime from 'realtime-messaging';
+
 class App extends Component {
 
     componentWillMount() {
@@ -33,5 +34,4 @@ class App extends Component {
 };
 
 export default App;
-ReactDOM.render(<App />, document.getElementById("app"));
-
+ReactDOM.render(<App />, document.getElementById("style-3"));

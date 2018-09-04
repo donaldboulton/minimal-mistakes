@@ -81,5 +81,5 @@ function generateUserChannel(){
 function send(){
   if (client) {
     client.send(channel, "This is a web push notification sent using the Realtime JavaScript SDK");
-  };
+  }
 }

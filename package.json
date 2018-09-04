@@ -37,6 +37,8 @@
     "start": "node ortic.js"
   },
   "dependencies": {
+    "babel": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
     "bundle-loader": "^0.5.6",
     "default-passive-events": "^1.0.10",
     "es6-promise": "^4.2.4",
@@ -49,6 +51,7 @@
     "gotrue-js": "^0.9.22",
     "graceful-fs": "^4.1.11",
     "gulp-util": "^3.0.8",
+    "ibtrealtimesjnode": "^2.1.30",
     "minimatch": "^3.0.4",
     "mustache": "^2.3.2",
     "netlify-auth-providers": "^1.0.0-alpha5",
@@ -63,9 +66,10 @@
     "worker-loader": "^2.0.0"
   },
   "devDependencies": {
+    "@babel/plugin-transform-async-to-generator": "^7.0.0",
     "babel-core": "^6.26.3",
-    "babel-eslint": "^8.1.2",
-    "babel-loader": "^7.1.1",
+    "babel-eslint": "^9.0.0",
+    "babel-loader": "^8.0.2",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
@@ -78,8 +82,8 @@
     "stylelint": "^9.5.0",
     "stylelint-config-standard": "^18.2.0",
     "webpack": "^4.17.1",
-    "webpack-cli": "^3.1.0",
     "webpack-bundle-analyzer": "^2.13.1",
+    "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.7"
   },
   "babel": {

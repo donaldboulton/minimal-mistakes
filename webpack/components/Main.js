@@ -1,87 +1,180 @@
-var channel = generateUserChannel();
+import Realtime from 'realtime-messaging';
+require('default-passive-events');
+import "babel-polyfill";
 
-  $(document).ready(function() {
+var OrtcNodeclient = require('ibtrealtimesjnode').IbtRealTimeSJNode;
 
-    // In this example we are using a demo Realtime application key without any security
-    // so you should replace it with your own appkey and follow the guidelines
-    // to configure it
-    var RealtimeAppKey = "AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA";
+var connectionUrl = 'http://ortc-developers.realtime.co/server/2.1';
 
-    // update the UI
-    $('#curl').text('curl "http://ortc-developers-useast1-s0001.realtime.co/send" --data "AK=' + RealtimeAppKey + '&AT=SomeToken&C=' + channel + '&M=12345678_1-1_This is a web push notification sent using the Realtime REST API"');
-    $('#channel').text(channel);
+var appKey = 'zeTkBw';
+var authToken = 'AUTHENTICATION_TOKEN';
+var channel = 'MyChannel';
+var privateKey = 'viDlNajTWf14';
+var isCluster = true;
+var authenticationRequired = false;
 
-    // start Web Push Manager to obtain device id and register it with Realtime
-    // a service worker will be launched in background to receive the incoming push notifications
-    var webPushManager = new WebPushManager();
+var client = new OrtcNodeclient();
 
-    webPushManager.start(function(error, registrationId){
-      if (error) {
+var countMsgChannel = 0;
 
-        if(error.message) {
-          alert(error.message);
-        } else {
-          alert("Ooops! It seems this browser doesn't support Web Push Notifications :(");
-        }
+/***********************************************************
+* Client sets
+***********************************************************/
 
-        $("#curl").html("Oops! Something went wrong. It seems your browser does not support Web Push Notifications.<br><br>Error:<br>" + error.message);
-        $("#sendButton").text("No can do ... this browser doesn't support web push notifications");
-        $("#sendButton").css("background-color","red");
-      };
+client.setClusterUrl(connectionUrl);
 
-      // Create Realtime Messaging client
-      client = RealtimeMessaging.createClient();
-      client.setClusterUrl('https://ortc-developers.realtime.co/server/ssl/2.1/');
+client.setConnectionMetadata('UserConnectionMetadata');
 
-      client.onConnected = function (theClient) {
-        // client is connected
+/***********************************************************
+* Client callbacks
+***********************************************************/
 
-        // subscribe users to their private channels
-        theClient.subscribeWithNotifications(channel, true, registrationId,
-            function (theClient, channel, msg) {
-              // while you are browsing this page you'll be connected to Realtime
-              // and receive messages directly in this callback
-              console.log("Received a message from the Realtime server:", msg);
+client.onConnected = clientConnected;
+client.onSubscribed = clientSubscribed;
+client.onUnsubscribed = clientUnsubscribed;
+client.onReconnecting = clientReconnecting;
+client.onReconnected = clientReconnected;
+client.onDisconnected = clientDisconnected;
+client.onException = clientException;
 
-              // Since the service worker will only show a notification if the user
-              // is not browsing your website you can force a push notification to be displayed.
-              // For most use cases it would be better to change the website UI by showing a badge
-              // or any other form of showing the user something changed instead
-              // of showing a pop-up notification.
-              // Also consider thar if the user has severals tabs opened it will see a notification for
-              // each one ...
-              webPushManager.forceNotification(msg);
-            });
-      };
+/***********************************************************
+* Client methods
+***********************************************************/
 
-      // Establish the connection
-      client.connect(RealtimeAppKey, 'JustAnyRandomToken');
+if(authenticationRequired){
+	// Enable presence data for MyChannel
+	client.enablePresence({
+		applicationKey : appKey,
+		channel : channel,
+		privateKey : privateKey,
+		url : connectionUrl,
+		isCluster : isCluster,
+		metadata : 1
+	},
+	function(error,result){
+		if(error){
+			log('Enable presence error: ' + error);
+		}else{
+			log('Presence enable: ' + result);
+		}
+	});
+}
+
+function clientConnected(ortc) {
+    log('Connected to: ' + ortc.getUrl());
+    log('Subscribe to channel: ' + channel);
+
+
+    setTimeout(function(){
+		// Get presence data for MyChannel
+		log('Retrieving presence data for channel: ' + channel);
+        client.presence({
+            authenticationToken : authToken,
+            applicationKey : appKey,
+            channel : channel,
+            url : connectionUrl,
+            isCluster : isCluster
+        },
+        function(error,result){
+            if(error){
+                console.log('Presence error:',error);
+            }else{
+                if(result){
+                    console.log('Subscriptions',result.subscriptions);
+
+                    for(var metadata in result.metadata){
+                        console.log(metadata,'-',result.metadata[metadata]);
+                    }
+                }else{
+                    console.log('Subscriptions empty');
+                }
+            }
+        });
+    },15 * 1000);
+
+    // Subscribe channel
+    ortc.subscribe(channel, true, function onMessage(ortc, channel, message) {
+        countMsgChannel++;
+
+        log('Received (' + countMsgChannel + '): ' + message + ' at channel: ' + channel);
     });
-});
+};
 
-// generate a GUID
-function S4() {
-  return (((1+Math.random())*0x10000)|0).toString(16).substring(1);
+function clientSubscribed(ortc, channel) {
+    log('Subscribed to channel: ' + channel);
+};
+
+function clientUnsubscribed(ortc, channel) {
+    log('Unsubscribed from channel: ' + channel);
+};
+
+function clientReconnecting(ortc) {
+    log('Reconnecting to ' + connectionUrl);
+};
+
+function clientReconnected(ortc) {
+    log('Reconnected to: ' + ortc.getUrl());
+};
+
+function clientDisconnected(ortc) {
+    log('Disconnected');
+};
+
+function clientException(ortc, error) {
+    log('Error: ' + error);
+};
+
+/***********************************************************
+* Aux methods
+***********************************************************/
+
+function log(text, isSameLine) {
+    if (text) {
+        var currTime = new Date();
+
+        text = currTime + ' - ' + text;
+    }
+
+    if (isSameLine) {
+        process.stdout.write(text);
+    }
+    else {
+        console.log(text);
+    }
+};
+
+if(authenticationRequired){
+	log('Authenticating to ' + connectionUrl);
+
+	var permissions = {};
+	// Give permission to read, write and obtain presence data
+	permissions[channel] = 'wrp';
+
+	// Authenticate the user token
+	client.saveAuthentication(connectionUrl,isCluster,authToken,false,appKey,1800,privateKey,permissions,function(error,result){
+		if(error){
+			log('Authentication Error: ' + error);
+		}else{
+			log('Authenticated to ' + connectionUrl);
+			log('Connecting to ' + connectionUrl);
+			// Connect to the Realtime Framework cluster
+			client.connect(appKey, authToken);
+		}
+	});
+}else{
+	log('Connecting to ' + connectionUrl);
+	// Connect to the Realtime Framework cluster
+	client.connect(appKey, authToken);
 }
 
-// generate the user private channel and save it at the local storage
-// so we always use the same channel for each user
-function generateUserChannel(){
-  userChannel = localStorage.getItem("channel");
-  if (userChannel == null || userChannel == "null"){
-      guid = (S4() + S4() + "-" + S4() + "-4" + S4().substr(0,3) + "-" + S4() + "-" + S4() + S4() + S4()).toLowerCase();
-      userChannel = 'channel-' + guid;
-      localStorage.setItem("channel", userChannel);
-  }
-  return userChannel;
-}
+var sendInterval = setInterval(function sendMessage() {
+    if (client.getIsConnected() == true) {
+        var message = 'Hello world!';
 
-// send a message to the user private channel to trigger a push notification
-function send(){
-  if (client) {
-    client.send(channel, "This is a web push notification sent using the Realtime JavaScript SDK");
-  };
-}
+        client.send(channel, message);
+		log('Sending: ' + message + ' to channel: ' + channel);
+    }
+}, 1000);
 
 var Worker = require("worker-loader?name=hash.worker.js!./worker");
 var worker = new Worker();
@@ -89,5 +182,3 @@ worker.postMessage("pageB");
 worker.onmessage = function(event) {
 	var templatepageB = event.data; // "This text was generated by template pageB"
 };
-
-require('default-passive-events');

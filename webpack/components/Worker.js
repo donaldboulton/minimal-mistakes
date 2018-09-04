@@ -1,5 +1,6 @@
 import * as firebase from 'firebase/app';
 import 'firebase/messaging';
+import "babel-polyfill";
 
 const getFirebaseMessagingObject = () => {
     // Initialize Firebase
