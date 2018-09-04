@@ -1,6 +1,5 @@
 import Realtime from 'realtime-messaging';
 require('default-passive-events');
-import "babel-polyfill";
 
 var OrtcNodeclient = require('ibtrealtimesjnode').IbtRealTimeSJNode;
 
