@@ -2,7 +2,7 @@
   "name": "donaldboulton",
   "version": "4.12.0",
   "description": "Donald Boulton theme npm server scripts",
-  "main": "ortc.js",
+  "main": "main.bundle.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/donaldboulton/DWB.git"
@@ -34,9 +34,10 @@
     "build:watch": "webpack --watch",
     "compile": "webpack --config ./webpack.config.js --progress",
     "postbuild": "npm start",
-    "start": "node ortic.js"
+    "start": "node build/main.bundle.js"
   },
   "dependencies": {
+    "@babel/preset-env": "^7.0.0-beta.51",
     "bundle-loader": "^0.5.6",
     "cross-env": "^5.1.3",
     "default-passive-events": "^1.0.10",
@@ -73,7 +74,6 @@
     "@babel/plugin-transform-react-inline-elements": "^7.0.0-beta.51",
     "@babel/plugin-transform-react-jsx-self": "^7.0.0-beta.51",
     "@babel/plugin-transform-react-jsx-source": "^7.0.0-beta.51",
-    "@babel/preset-env": "^7.0.0-beta.51",
     "@babel/preset-react": "^7.0.0-beta.51",
     "babel-plugin-react-transform": "^3.0.0",
     "babel-polyfill": "^6.26.0",
@@ -83,12 +83,14 @@
     "babel-minify-webpack-plugin": "^0.3.1",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-plugin-lodash": "^3.3.4",
+    "babel-preset-stage-2": "^6.24.1",
     "copy-webpack-plugin": "^4.5.1",
     "babel-preset-react-hmre": "^1.1.1",
     "eslint": "^5.5.0",
     "eslint-cli": "^1.1.1",
     "https-proxy-agent": "^2.2.1",
     "npm-run-all": "^4.1.3",
+    "react-hot-loader": "^4.3.6",
     "stylelint": "^9.5.0",
     "stylelint-config-standard": "^18.2.0",
     "webpack": "^4.17.2",
@@ -99,7 +101,8 @@
   "babel": {
     "presets": [
       "@babel/env",
-      "@babel/react"
+      "@babel/react",
+      "stage-2"
     ]
   }
 }
