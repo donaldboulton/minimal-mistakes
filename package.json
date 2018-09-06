@@ -54,8 +54,7 @@
     "react-dom": "^16.4.2",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
-    "realtime-messaging": "^2.1.42",
-    "worker-loader": "^2.0.0"
+    "realtime-messaging": "^2.1.42"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.51",
@@ -95,7 +94,8 @@
     "webpack": "^4.17.2",
     "webpack-bundle-analyzer": "^2.13.1",
     "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "^3.1.7"
+    "webpack-dev-server": "^3.1.7",
+    "worker-loader": "^2.0.0"
   },
   "babel": {
     "presets": [
