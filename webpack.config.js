@@ -47,7 +47,7 @@ module.exports = {
       {
         test: /\.bundle\.js$/,
         use: {
-          loader: 'bundle-loader',
+          loader: 'babel-loader',
           options: {
             name: 'my-chunk'
           }
