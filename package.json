@@ -34,7 +34,7 @@
     "build:watch": "webpack --watch",
     "compile": "webpack --config ./webpack.config.js --progress",
     "postbuild": "npm start",
-    "start": "node build/main.bundle.js"
+    "start": "node dist/main.bundle.js"
   },
   "dependencies": {
     "bundle-loader": "^0.5.6",
