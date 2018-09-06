@@ -48,10 +48,7 @@ module.exports = {
         test: /\.js$/,
           exclude: /node_modules/,
           use: {
-            loader: 'babel-loader',
-            options: {
-              name: 'my-chunk'
-            }
+            loader: 'babel-loader'
           }
       }
     ]
