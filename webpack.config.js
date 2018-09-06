@@ -45,13 +45,14 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.bundle\.js$/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            name: 'my-chunk'
+          test: /\.(js|jsx)$/,
+          exclude: /node_modules/,
+          use: {
+            loader: 'bundle-loader',
+            options: {
+              name: 'my-chunk',
+            }
           }
-        }
       }
     ]
   },

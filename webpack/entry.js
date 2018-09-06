@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {render} from 'react-dom';
 import App from "./components/App.js";
-
 class App extends Component {
   render() {
     return (
