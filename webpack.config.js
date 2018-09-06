@@ -50,7 +50,7 @@ module.exports = {
           use: {
             loader: 'bundle-loader',
             options: {
-              name: 'my-chunk',
+              name: 'my-chunk'
             }
           }
       }
