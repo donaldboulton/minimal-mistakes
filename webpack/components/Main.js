@@ -7,7 +7,7 @@ var connectionUrl = 'http://ortc-developers.realtime.co/server/2.1';
 
 var appKey = 'zeTkBw';
 var authToken = 'AUTHENTICATION_TOKEN';
-var channel = 'MyChannel';
+var channel = 'myChannel';
 var privateKey = 'viDlNajTWf14';
 var isCluster = true;
 var authenticationRequired = false;

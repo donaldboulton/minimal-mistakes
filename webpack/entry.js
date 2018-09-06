@@ -1,17 +1,14 @@
 import React, { Component } from "react";
 import {render} from 'react-dom';
-import App from './components/App';
-import Main from './components/Main';
+import Hello from './components/Hello';
 
-class App extends React.Component {
-    constructor( props ) {
-        super( props );
-    }
-    render() {
-        return(
-            <h1>Hello React!</h1>
-        );
-    }
+import Hello from './components/Hello';
+class App extends Component {
+  render() {
+    return (
+      <Hello />
+    )
+  }
 }
-// render inside `app-root` element
-ReactDOM.render( <App />, document.getElementById( 'style-3' ) );
+
+render(<App />, document.getElementById('app-root'))
