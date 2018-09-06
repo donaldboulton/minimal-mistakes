@@ -252,12 +252,22 @@ $(".author__urls_masthead button").on("click", function() {
 </script>
 <script type="text/javascript" src="/node_modules/file-upload-with-preview/dist/index.min.js"></script>
 <script>
-  var upload = new FileUploadWithPreview('myUniqueUploadId')
+       function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah')
+                        .attr('src', e.target.result);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
 </script>
 
 <script async defer src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script type="text/javascript" src="{{ '/assets/js/vendor/real-time/WebPushManager.js' | relative_url }}" async charset="utf-8"></script>
-<script type="text/javascript" src="/build/main.bundle.js" charset="utf-8"></script>
-<script src="{{ '/build/hash.worker.js' | relative_url }}" async charset="utf-8"></script>
+<script type="text/javascript" src="/dist/main.bundle.js" charset="utf-8"></script>
+<script src="{{ '/dist/hash.worker.js' | relative_url }}" async charset="utf-8"></script>
 
 
