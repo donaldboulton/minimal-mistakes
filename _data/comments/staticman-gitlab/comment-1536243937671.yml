@@ -1,0 +1,13 @@
+_id: b93c2f40-b1e0-11e8-afd3-cbef5b601756
+_parent: /2018-02-26-post-Staticman-with-Gitlab.html
+name: Vincent Tam
+email: 4980f828b9588a712cc2013ac10fd13a
+url: 'https://lstu.fr/3s'
+title: Staticman has added GitLab support
+message: >-
+  Thanks to [Staticman Pull Request
+  219](https://github.com/eduardoboucas/staticman/pull/219), ```POST
+  /v3/entry/<github|gitlab>/<vendor>/<repo>/<branch>/<configKey>``` is now
+  implemented on https://dev.staticman.net.
+replying_to: ''
+date: '2018-09-06T14:25:37.671Z'
