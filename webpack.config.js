@@ -34,13 +34,8 @@ module.exports = {
   ],
   optimization: {
     splitChunks: {
-      cacheGroups: {
-        commons: {
-          name: 'commons',
-          chunks: 'initial',
-          minChunks: 2
-        }
-      }
+       chunks: 'all',
+       minSize: 100000
     }
   },
   module: {
