@@ -2,7 +2,7 @@
   "name": "donaldboulton",
   "version": "4.12.0",
   "description": "Donald Boulton theme npm server scripts",
-  "main": "main.bundle.js",
+  "main": "dist/bundle.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/donaldboulton/DWB.git"
@@ -23,86 +23,45 @@
   "bugs": {
     "url": "https://github.com/donaldboulton/issues"
   },
-  "peerDependencies": {
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2"
-  },
   "homepage": "https://github.com/donaldboulton/#readme",
   "scripts": {
-    "lint": "assets/js/main.min.js WebPushManager.js && stylelint assets/css/main.css",
-    "build": "webpack && jekyll build",
-    "build:watch": "webpack --watch",
-    "compile": "webpack --config ./webpack.config.js --progress",
-    "postbuild": "npm start",
-    "start": "node dist/main.bundle.js"
+    "build": "npm run clean && npm run compile && webpack && jekyll build",
+    "lint": "eslint --ext .js,.jsx src",
+    "start": "webpack-dev-server --watch --inline --content-base dist/"
   },
   "dependencies": {
-    "cross-env": "^5.1.3",
-    "es6-promise": "^4.2.4",
-    "firebase": "^5.4.2",
-    "fs-extra": "^7.0.0",
-    "fs-extra-promise": "^1.0.1",
+    "file-upload-with-preview": "^2.1.1",
+    "firebase": "^5.4.1",
     "google-auth-library": "^1.6.1",
     "googleapis": "^33.0.0",
     "gotrue-js": "^0.9.22",
-    "graceful-fs": "^4.1.11",
-    "gulp-util": "^3.0.8",
-    "lodash": "^4.17.10",
     "netlify-auth-providers": "^1.0.0-alpha5",
     "netlify-identity-widget": "^1.4.14",
-    "react": "^16.5.0",
-    "react-dom": "^16.5.0",
-    "react-router": "^4.2.0",
-    "react-router-dom": "^4.2.2",
-    "realtime-messaging": "^2.1.42"
+    "node-fetch": "^2.2.0",
+    "eslint-plugin-import": "1.16.0",
+    "react": "^15.0.2",
+    "react-addons-update": "^15.0.2",
+    "react-dom": "^15.0.2",
+    "utf-8-validate": "^5.0.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.0.0-beta.51",
-    "@babel/core": "^7.0.0-beta.51",
-    "@babel/plugin-proposal-class-properties": "^7.0.0-beta.51",
-    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.51",
-    "@babel/plugin-syntax-dynamic-import": "^7.0.0-beta.51",
-    "@babel/plugin-transform-async-to-generator": "^7.0.0",
-    "@babel/plugin-transform-react-constant-elements": "^7.0.0-beta.51",
-    "@babel/plugin-transform-react-inline-elements": "^7.0.0-beta.51",
-    "@babel/plugin-transform-react-jsx-self": "^7.0.0-beta.51",
-    "@babel/plugin-transform-react-jsx-source": "^7.0.0-beta.51",
-    "@babel/preset-env": "^7.0.0-beta.51",
-    "@babel/preset-react": "^7.0.0-beta.51",
-    "@webpack-cli/init": "^0.1.0",
-    "babel-loader": "^8.0.2",
-    "babel-minify-webpack-plugin": "^0.3.1",
-    "babel-plugin-external-helpers": "^6.22.0",
-    "babel-plugin-lodash": "^3.3.4",
-    "babel-plugin-react-transform": "^3.0.0",
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-react-hmre": "^1.1.1",
-    "babel-preset-stage-2": "^6.24.1",
-    "copy-webpack-plugin": "^4.5.1",
-    "css-loader": "^1.0.0",
-    "eslint": "^5.5.0",
-    "eslint-cli": "^1.1.1",
-    "https-proxy-agent": "^2.2.1",
-    "node-fetch": "^2.2.0",
-    "npm-run-all": "^4.1.3",
-    "react-hot-loader": "^4.3.6",
-    "style-loader": "^0.23.0",
-    "stylelint": "^9.5.0",
-    "stylelint-config-standard": "^18.2.0",
-    "webpack": "^4.17.2",
-    "webpack-bundle-analyzer": "^2.13.1",
-    "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "^3.1.8",
-    "worker-loader": "^2.0.0"
-  },
-  "babel": {
-    "presets": [
-      "env",
-      "react"
-    ]
-  },
-  "optionalDependencies": {
-    "bufferutil": "^4.0.0",
-    "utf-8-validate": "^5.0.1"
+    "babel-loader": "6.2.5",
+    "babel-preset-es2015": "6.16.0",
+    "babel-preset-es2017": "6.16.0",
+    "babel-preset-react": "6.16.0",
+    "babel-register": "6.16.3",
+    "css-loader": "0.25.0",
+    "eslint": "3.7.1",
+    "eslint-config-airbnb": "12.0.0",
+    "eslint-plugin-import": "1.16.0",
+    "eslint-plugin-jsx-a11y": "2.2.3",
+    "eslint-plugin-react": "6.4.1",
+    "extract-text-webpack-plugin": "1.0.1",
+    "file-loader": "0.9.0",
+    "html-webpack-plugin": "2.22.0",
+    "sass-loader": "4.0.2",
+    "style-loader": "0.13.1",
+    "webpack": "1.13.2",
+    "webpack-dev-server": "1.16.2"
   }
 }

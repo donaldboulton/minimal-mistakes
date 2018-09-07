@@ -1,19 +1,13 @@
-import React, { Component } from "react";
+import React from 'react';
+import ReactDOM from 'react-dom';
+
 import './assets/js/main.min.js';
 import './assets/js/staticman/staticman-reviews.js';
 import './assets/js/vendor/real-time/WebPushManager.js';
 
-class App extends Component {
-    render() {
-        return (
-            <div>
-                <h1>My React App!</h1>
-            </div>
-        );
-    }
-}
+import App from './components/App';
 
-export default App;
+ReactDOM.render(<App />, document.getElementById('app'));
 
 var Worker = require("worker-loader?name=hash.worker.js!./worker");
 var worker = new Worker();
