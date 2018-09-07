@@ -4,14 +4,15 @@ const path = require('path');
 module.exports = {
   entry: ['./webpack/entry.js'],
   output: {
-    path: path.resolve(__dirname, 'dest'),
+    path: path.resolve(__dirname, 'dist'),
     filename: '[name].bundle.js',
     chunkFilename: '[name].[id].js',
+    publicPath: '/'
   },
   mode: 'production',
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: './dest',
+    contentBase: './dist',
     port: 3000
   },
   node: {

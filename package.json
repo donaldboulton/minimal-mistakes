@@ -50,8 +50,8 @@
     "lodash": "^4.17.10",
     "netlify-auth-providers": "^1.0.0-alpha5",
     "netlify-identity-widget": "^1.4.14",
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "realtime-messaging": "^2.1.42"
@@ -70,7 +70,6 @@
     "@babel/preset-env": "^7.0.0-beta.51",
     "@babel/preset-react": "^7.0.0-beta.51",
     "@webpack-cli/init": "^0.1.0",
-    "babel-jest": "^23.4.2",
     "babel-loader": "^8.0.2",
     "babel-minify-webpack-plugin": "^0.3.1",
     "babel-plugin-external-helpers": "^6.22.0",
@@ -93,14 +92,13 @@
     "webpack": "^4.17.2",
     "webpack-bundle-analyzer": "^2.13.1",
     "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "^3.1.7",
+    "webpack-dev-server": "^3.1.8",
     "worker-loader": "^2.0.0"
   },
   "babel": {
     "presets": [
       "env",
-      "react",
-      "stage-2"
+      "react"
     ]
   },
   "optionalDependencies": {

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import './assets/js/main.min.js';
 import './assets/js/staticman/staticman-reviews.js';
 import './assets/js/vendor/real-time/WebPushManager.js';
+
 class App extends Component {
     render() {
         return (

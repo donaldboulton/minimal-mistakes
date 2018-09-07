@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import {render} from 'react-dom';
-import Main from "./components/Main.js";
+import Main from './components/Main';
 class App extends Component {
-  render() {
-    return (
-      <Main />
-    )
-  }
+ render() {
+ return (
+ <Main />
+ )
+ }
 }
-
-render(<App />, document.getElementById('app-root'));
-
+render(<App />, document.getElementById('root'));
