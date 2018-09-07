@@ -27,7 +27,7 @@
   "scripts": {
     "build": "npm run compile && webpack",
     "lint": "eslint --ext .js,.jsx src",
-    "start": "webpack-dev-server"
+    "start:dev": "webpack-dev-server"
   },
   "dependencies": {
     "file-upload-with-preview": "^2.1.1",
@@ -56,6 +56,7 @@
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.4.1",
     "webpack": "^4.17.2",
+    "webpack-bundle-analyzer": "^2.13.1",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.8",
     "worker-loader": "^2.0.0"
