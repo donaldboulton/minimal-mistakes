@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/donaldboulton/#readme",
   "scripts": {
-    "build": "npm run compile && webpack",
+    "build": "npm run compile && webpack && jekyll build",
     "lint": "eslint --ext .js,.jsx src",
     "start:dev": "webpack-dev-server"
   },
@@ -36,6 +36,7 @@
     "google-auth-library": "^1.6.1",
     "googleapis": "^33.0.0",
     "gotrue-js": "^0.9.22",
+    "jquery-pjax": "^2.0.1",
     "netlify-auth-providers": "^1.0.0-alpha5",
     "netlify-identity-widget": "^1.4.14",
     "node-fetch": "^2.2.0",

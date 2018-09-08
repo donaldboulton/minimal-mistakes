@@ -6,8 +6,8 @@ module.exports = {
   entry: ['./webpack/entry.js'],
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].bundle.js',
-    chunkFilename: '[name].chunk.js',
+    filename: '[name].bundle.[hash].js',
+    chunkFilename: 'vendor.chunck.[hash].js',
   },
   mode: 'production',
   devtool: 'inline-source-map',
