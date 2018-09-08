@@ -33,15 +33,7 @@ module.exports = {
     }),
     new BundleAnalyzerPlugin({
         analyzerMode: 'static'
-    }),
-    new webpack.optimize.CommonsChunkPlugin({
-        name: 'node-static',
-        filename: 'node-static.js',
-        minChunks(module, count) {
-            var context = module.context;
-            return context && context.indexOf('node_modules') >= 0;
-        },
-    }),
+    })
   ],
   optimization: {
     splitChunks: {
