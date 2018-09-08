@@ -30,6 +30,7 @@
     "start:dev": "webpack-dev-server"
   },
   "dependencies": {
+    "default-passive-events": "^1.0.10",
     "file-upload-with-preview": "^2.1.1",
     "firebase": "^5.4.1",
     "google-auth-library": "^1.6.1",

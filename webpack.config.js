@@ -1,3 +1,4 @@
+var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const webpack = require('webpack');
 const path = require('path');
 
@@ -6,8 +7,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].bundle.js',
-    chunkFilename: '[name].[id].js',
-    publicPath: '/'
+    chunkFilename: '[name].chunk.js',
   },
   mode: 'production',
   devtool: 'inline-source-map',
@@ -30,13 +30,34 @@ module.exports = {
                 }
             }
         }
-    })
+    }),
+    new BundleAnalyzerPlugin({
+        analyzerMode: 'static'
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+        name: 'node-static',
+        filename: 'node-static.js',
+        minChunks(module, count) {
+            var context = module.context;
+            return context && context.indexOf('node_modules') >= 0;
+        },
+    }),
   ],
   optimization: {
     splitChunks: {
        chunks: 'all',
        minSize: 100000
     }
+  },
+  resolve: {
+    alias: {
+        'passive-events': 'node_modules/default-passive-events/dist/index.js',
+        'letter-avatar': 'util/letter-avatar.js'
+    },
+    modules: [
+        path.resolve('./'),
+        path.resolve('./node_modules'),
+    ]
   },
   module: {
     rules: [
@@ -48,8 +69,5 @@ module.exports = {
           }
       }
     ]
-  },
-  resolve: {
-    extensions: ['*', '.js', '.jsx']
   },
 };
