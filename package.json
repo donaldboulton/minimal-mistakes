@@ -37,6 +37,7 @@
     "google-auth-library": "^1.6.1",
     "googleapis": "^33.0.0",
     "gotrue-js": "^0.9.22",
+    "jquery": "^3.3.1",
     "jquery-pjax": "^2.0.1",
     "netlify-auth-providers": "^1.0.0-alpha5",
     "netlify-identity-widget": "^1.4.14",
@@ -44,6 +45,7 @@
     "react": "^16.1.0",
     "react-addons-update": "^15.5.2",
     "react-dom": "^16.1.0",
+    "realtime-messaging": "^2.1.42",
     "utf-8-validate": "^5.0.1"
   },
   "devDependencies": {
