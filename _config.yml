@@ -219,13 +219,13 @@ exclude:
   - "*.sublime-workspace"
   - .asset-cache
   - vendor
-  - .bundle
+  - .require.content
   - .jekyll-assets-cache
   - .jekyll-metadata
   - .sass-cache
   - assets/js/plugins
   - assets/js/_main.js
-  - src/build/index.bundle.js
+  - dist/main.bundle.js
   - Capfile
   - CHANGELOG
   - config
@@ -245,8 +245,8 @@ exclude:
   - log
   - Rakefile
   - template.md
-  - src
-  - src/
+  - webpack
+  - webpack/
   - README
   - README.md
   - admin/index.js
