@@ -25,8 +25,8 @@
   },
   "homepage": "https://github.com/donaldboulton/#readme",
   "scripts": {
-    "build": "npm run compile && webpack && jekyll build",
-    "lint": "eslint --ext .js,.jsx src",
+    "build": "webpack",
+    "lint": "eslint --ext .js,.jsx dist",
     "start:dev": "webpack-dev-server"
   },
   "dependencies": {
