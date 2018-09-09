@@ -91,10 +91,6 @@
 
 {% comment %} <!--  my own validation scripts and scss from sitepoint.com/instant-validation/ -->{% endcomment %}
 
-{% if page.reviews == true %}
-  <script src="{{ '/assets/js/staticman/staticman-reviews.js' | relative_url }}"></script>
-{% endif %}
-
 {% if page.support contains 'dragula' %}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js" crossorigin="anonymous"></script>
   <script src="{{ '/assets/js/vendor/dragula/example.min.js' | relative_url }}"></script>
