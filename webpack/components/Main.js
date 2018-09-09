@@ -13,6 +13,7 @@ var comments = require('./staticman.comments.min.js');
 var fileupload = require('./file-upload-with-preview.min.js');
 var comments = require('./staticman.reviews.min.js');
 var pjax = require("jquery-pjax");
+var passiveevents = require('default-passive-events');
 
 var Worker = require("worker-loader?name=hash.worker.js!./worker");
 var worker = new Worker();

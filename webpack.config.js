@@ -39,18 +39,9 @@ module.exports = {
     splitChunks: {
         cacheGroups: {
             commons: {
-                chunks: "initial",
-                minChunks: 2,
-                maxAsyncRequests: 5,
-                maxInitialRequests: 5, // The default limit is too small to showcase the effect
-                minSize: 30000 // This is example is too small to create commons chunks
-            },
-            vendor: {
-                test: /node_modules/,
-                chunks: "initial",
-                name: "vendor",
-                priority: 10,
-                enforce: true
+                test: /[\\/]node_modules[\\/]/,
+                name: "vendors",
+                chunks: "all"
             }
         }
     }
