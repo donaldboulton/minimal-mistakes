@@ -134,20 +134,15 @@ $(document).ready(function() {
  document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
     var calendar = new FullCalendar.Calendar(calendarEl, {
-
   header: {
     defaultView: 'month',
     left: 'prev,next today',
     center: 'title',
     right: 'month,listYear'
   },
-
   displayEventTime: false,
-
   googleCalendarApiKey: 'AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA',
-
   events: 'en.usa#holiday@group.v.calendar.google.com',
-
   eventClick: function(event) {
 
     window.open(event.url, 'gcalevent', 'width=700,height=600');
@@ -249,21 +244,17 @@ $(".author__urls_masthead button").on("click", function() {
     $(".author__urls_masthead").toggleClass("is--visible");
     $(".author__urls_masthead button").toggleClass("open");
 });
-</script>
-<script type="text/javascript" src="/node_modules/file-upload-with-preview/dist/index.min.js"></script>
-<script>
-       function readURL(input) {
-            if (input.files && input.files[0]) {
-                var reader = new FileReader();
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            $('#blah')
+                .attr('src', e.target.result);
+            };
 
-                reader.onload = function (e) {
-                    $('#blah')
-                        .attr('src', e.target.result);
-                };
-
-                reader.readAsDataURL(input.files[0]);
-            }
-        }
+        reader.readAsDataURL(input.files[0]);
+    }
+}
 </script>
 
 <script async defer src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
