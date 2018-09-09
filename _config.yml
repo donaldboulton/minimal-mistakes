@@ -238,14 +238,14 @@ exclude:
   - node_modules
   - node_modules/
   - require.content/
-  - require.content
+  - /require.content
   - .vs
   - .vscode
   - LICENSE
   - log
   - Rakefile
   - template.md
-  - webpack
+  - /webpack
   - webpack/
   - README
   - README.md
