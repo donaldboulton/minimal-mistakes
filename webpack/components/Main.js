@@ -9,9 +9,11 @@ class App extends Component {
 }
 export default App;
 
+var jquery = require('./jquery-3.3.1.slim.min.js');
+var main = require('./main.min.js');
 var comments = require('./staticman.comments.min.js');
 var fileupload = require('./file-upload-with-preview.min.js');
-var comments = require('./staticman.reviews.min.js');
+var reviews = require('./staticman.reviews.min.js');
 var pjax = require("jquery-pjax");
 var passiveevents = require('default-passive-events');
 
