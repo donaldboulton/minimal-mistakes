@@ -4,7 +4,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 export default {
     entry: './webpack/index.jsx',
     output: {
-        path: './dist/',
+        path: './build/',
         publicPath: '/',
         filename: './js/bundle.[chunkhash:8].js'
     },

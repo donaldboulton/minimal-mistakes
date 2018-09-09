@@ -5,14 +5,14 @@ const path = require('path');
 module.exports = {
   entry: ['./webpack/entry.js'],
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'build'),
     filename: '[name].bundle.js',
     chunkFilename: '[name].[id].js',
   },
   mode: 'production',
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: './dist',
+    contentBase: './build',
     port: 3000
   },
   node: {
@@ -48,7 +48,6 @@ module.exports = {
   },
   resolve: {
     alias: {
-        'passive-events': 'node_modules/default-passive-events/dist/index.js',
         'letter-avatar': 'util/letter.avatar.js'
     },
     modules: [
