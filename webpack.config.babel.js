@@ -2,7 +2,7 @@ import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 export default {
-    entry: './webpack/index.jsx',
+    entry: './webpack/app.jsx',
     output: {
         path: './build/',
         publicPath: '/',

@@ -1,5 +1,3 @@
-import React, { Component } from 'react';
-
 import * as RealtimeMessaging from 'realtime-messaging';
 
 const client = RealtimeMessaging.createClient();
@@ -11,13 +9,8 @@ client.onConnected = (client) => {
     client.subscribe("channel", true, (client, channel, message) => {
         console.log("Received message:", message);
     });
-}
+};
 
-class Hello extends Component {
-  render() {
-    return (
-      <div>Hey, y’all!! This is a React Component</div>
-    )
-  }
-}
-export default Hello;
+const passiveevents = require('default-passive-events');
+
+const pjax = require("jquery-pjax");

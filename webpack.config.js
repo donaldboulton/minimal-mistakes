@@ -3,16 +3,20 @@ const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
-  entry: ['./webpack/entry.js'],
+  entry: {
+    main: './webpack/entry.js',
+    app: './webpack/components/App.jsx',
+    vendor: './webpack/components/vendor.js'
+  },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, '/build'),
     filename: '[name].bundle.js',
-    chunkFilename: '[name].[id].js',
+    chunkFilename: '[name].chunckhash.js',
   },
   mode: 'production',
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: './dist',
+    contentBase: './build',
     port: 3000
   },
   node: {
@@ -58,11 +62,22 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /.jsx|.js?$/,
           exclude: /node_modules/,
           use: {
             loader: 'babel-loader'
-          }
+        }
+      },
+      {
+        test: /\.css$/,
+        use: [
+            { loader: "style-loader/url" },
+            { loader: "file-loader" }
+        ]
+      },
+      {
+        test: /\.js$/,
+        use: [ 'script-loader' ]
       }
     ]
   },

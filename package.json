@@ -2,7 +2,7 @@
   "name": "donaldboulton",
   "version": "4.12.0",
   "description": "Donald Boulton theme npm server scripts",
-  "main": "main.bundle.js",
+  "main": "build/main.bundle.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/donaldboulton/DWB.git"
@@ -26,7 +26,7 @@
   "homepage": "https://github.com/donaldboulton/#readme",
   "scripts": {
     "build": "webpack",
-    "lint": "eslint --ext .js,.jsx dist",
+    "lint": "eslint --ext .js, .jsx build",
     "start:dev": "webpack-dev-server"
   },
   "dependencies": {
@@ -45,6 +45,7 @@
     "react-addons-update": "^15.5.2",
     "react-dom": "^16.1.0",
     "realtime-messaging": "^2.1.42",
+    "url-loader": "^1.1.1",
     "utf-8-validate": "^5.0.1"
   },
   "devDependencies": {
@@ -54,11 +55,15 @@
     "babel-preset-es2017": "^6.16.0",
     "babel-preset-react": "^6.16.0",
     "babel-register": "6.16.3",
+    "css-loader": "^0.28.8",
     "eslint": "^3.7.1",
     "eslint-config-airbnb": "^12.0.0",
     "eslint-plugin-import": "^1.16.0",
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.4.1",
+    "file-loader": "^2.0.0",
+    "script-loader": "^0.7.2",
+    "style-loader": "^0.20.0",
     "webpack": "^4.17.2",
     "webpack-bundle-analyzer": "^2.13.1",
     "webpack-cli": "^3.1.0",
