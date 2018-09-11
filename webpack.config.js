@@ -4,9 +4,9 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    main: './webpack/entry.js',
-    app: './webpack/components/Main.jsx',
-    vendor: './webpack/components/vendor.js'
+    Load: './webpack/entry.js',
+    Main: './webpack/components/Main.jsx',
+    Site: './webpack/components/Site.js'
   },
   output: {
     path: path.resolve(__dirname, 'assets/js/'),
@@ -72,8 +72,8 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-            { loader: "style-loader/url" },
-            { loader: "file-loader" }
+            { loader: "style-loader" },
+            { loader: "css-loader" },
         ]
       },
       {
