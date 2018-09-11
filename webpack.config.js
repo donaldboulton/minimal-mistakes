@@ -9,14 +9,15 @@ module.exports = {
     vendor: './webpack/components/vendor.js'
   },
   output: {
-    path: path.resolve(__dirname, '/build'),
+    path: path.resolve(__dirname, 'assets/js/'),
+    publicPath: "/assets/",
     filename: '[name].bundle.js',
     chunkFilename: '[name].chunckhash.js',
   },
   mode: 'production',
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: './build',
+    contentBase: 'assets/js/',
     port: 3000
   },
   node: {
@@ -55,7 +56,7 @@ module.exports = {
         'letter-avatar': 'util/letter.avatar.js'
     },
     modules: [
-        path.resolve('./'),
+        path.resolve('assets/js/'),
         path.resolve('./node_modules'),
     ]
   },
