@@ -1,10 +1,12 @@
 import React from "react";
+import { render } from 'react-dom';
 
 import 'assets/css/main.css';
-import $ from 'jquery';
-import Comments from './Comments';
-import Reviews from './Reviews';
-import File from './File';
+require("expose-loader?$!jquery");
+require("script-loader!./Site.js");
+require("script-loader!./Comments.js");
+require("script-loader!./Reviews.js");
+require("script-loader!./File.js")
 export default class Hello extends Component {
     render() {
       return (

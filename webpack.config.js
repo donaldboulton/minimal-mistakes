@@ -89,6 +89,11 @@ module.exports = {
             loader: 'expose-loader',
             options: '$'
         }]
+        },
+        {
+            test: /\.js$/,
+            use: ["source-map-loader"],
+            enforce: "pre"
         }
     ]
   },

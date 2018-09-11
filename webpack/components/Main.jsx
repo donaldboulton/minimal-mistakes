@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 // eslint-disable-next-line
 import myWorker from 'worker-loader!./worker.js';
-
 class App extends Component {
   constructor(props) {
     super();
