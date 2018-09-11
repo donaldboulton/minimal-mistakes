@@ -79,7 +79,20 @@ module.exports = {
       {
         test: /\.js$/,
         use: [ 'script-loader' ]
-      }
+      },
+      {
+        test: /jquery.+\.js$/,
+        use: [{
+            loader: 'expose-loader',
+            options: 'jQuery'
+        },{
+            loader: 'expose-loader',
+            options: '$'
+        }]
+        }
     ]
   },
+  externals: {
+    jquery: 'jQuery'
+  }
 };

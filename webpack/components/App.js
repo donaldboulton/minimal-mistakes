@@ -1,13 +1,10 @@
-import React, { Component } from "react";
-import { render } from 'react-dom';
+import React from "react";
 
-import url from 'style-loader!./assets/css/main.css';
-import jquery from 'script-loader!./jquery';
-import site from 'script-loader!./site';
-import comments from 'script-loader!./comments';
-import file from 'script-loader!./file';
-import reviews from 'script-loader!./reviews';
-
+import 'assets/css/main.css';
+import $ from 'jquery';
+import Comments from './Comments';
+import Reviews from './Reviews';
+import File from './File';
 export default class Hello extends Component {
     render() {
       return (
