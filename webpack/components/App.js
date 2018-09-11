@@ -1,7 +1,8 @@
 import React from "react";
 import { render } from 'react-dom';
 
-import 'assets/css/main.css';
+import style from 'main.css';
+
 require("expose-loader?$!jquery");
 require("script-loader!./Site.js");
 require("script-loader!./Comments.js");

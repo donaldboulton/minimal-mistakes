@@ -4,9 +4,10 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    Load: './webpack/entry.js',
+    App: './webpack/components/App.js',
     Main: './webpack/components/Main.jsx',
-    Site: './webpack/components/Site.js'
+    Site: './webpack/components/Site.js',
+    Realtime: './webpack/components/Realtime.js'
   },
   output: {
     path: path.resolve(__dirname, 'assets/js/'),
@@ -31,7 +32,7 @@ module.exports = {
             worker: {
                 output: {
                     filename: "./worker.js",
-                    chunkFilename: "[id].hash.worker.js"
+                    chunkFilename: "chunck.worker.js"
                 }
             }
         }
@@ -75,6 +76,15 @@ module.exports = {
             { loader: "style-loader" },
             { loader: "css-loader" },
         ]
+      },
+      {
+        test: /\.useable\.css$/,
+        use: [
+          {
+            loader: "style-loader/useable"
+          },
+          { loader: "css-loader" },
+        ],
       },
       {
         test: /\.js$/,

@@ -2,7 +2,7 @@
   "name": "donaldboulton",
   "version": "4.12.0",
   "description": "Donald Boulton theme npm server scripts",
-  "main": "build/main.bundle.js",
+  "main": "assets/js/App.bundle.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/donaldboulton/DWB.git"

@@ -2,8 +2,7 @@ const VERSION = '12';
 
 this.addEventListener('install', (e) => {
     e.waitUntil(caches.open(VERSION).then(cache => cache.addAll([
-        '/assets/js/main.min.js',
-        '/assets/css/main.css',
+        '/assets/js/App.bundle.js',
         '/assets/js/vendor/bigfoot/bigfoot.min.js',
         '/manifest.webmanifest',
     ])));
