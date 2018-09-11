@@ -5,7 +5,7 @@ const path = require('path');
 module.exports = {
   entry: {
     main: './webpack/entry.js',
-    app: './webpack/components/App.jsx',
+    app: './webpack/components/Main.jsx',
     vendor: './webpack/components/vendor.js'
   },
   output: {
