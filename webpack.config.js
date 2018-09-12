@@ -32,7 +32,7 @@ module.exports = {
             worker: {
                 output: {
                     filename: "./worker.js",
-                    chunkFilename: "chunck.worker.js"
+                    chunkFilename: "[name].worker.js"
                 }
             }
         }

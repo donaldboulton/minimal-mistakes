@@ -1,6 +1,10 @@
 import React from "react";
 import { render } from 'react-dom';
 
+import $ from 'jquery';
+window.jQuery = $;
+window.$ = $;
+
 require("style-loader!.main.css");
 require("expose-loader?$!jquery");
 require("script-loader!./Site.js");

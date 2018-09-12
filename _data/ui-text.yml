@@ -8,9 +8,9 @@ en: &DEFAULT_EN
   pagination_next            : "Next"
   breadcrumb_home_label      : "Home"
   breadcrumb_separator       : "/"
-  menu_label                 : "Toggle Menu"
-  toc_label                  : "On This Page"
-  ext_link_label             : "Direct Link"
+  menu_label                 : "Toggle menu"
+  toc_label                  : "On this page"
+  ext_link_label             : "Direct link"
   less_than                  : "less than"
   minute_read                : "minute read"
   share_on_label             : "Share on"
@@ -18,16 +18,16 @@ en: &DEFAULT_EN
   tags_label                 : "Tags:"
   categories_label           : "Categories:"
   date_label                 : "Updated:"
-  comments_label             : "Leave a Comment"
+  comments_label             : "Leave a comment"
   comments_title             : "Comments"
-  more_label                 : "Learn More"
-  related_label              : "You May Also Enjoy"
+  more_label                 : "Learn more"
+  related_label              : "You may also enjoy"
   follow_label               : "Follow:"
   feed_label                 : "Feed"
   powered_by                 : "Powered by"
   website_label              : "Website"
   email_label                : "Email"
-  recent_posts               : "Recent Posts"
+  recent_posts               : "Recent posts"
   undefined_wpm              : "Undefined parameter words_per_minute at _config.yml"
   comment_form_info          : "Your email address will not be published. Required fields are marked"
   comment_form_comment_label : "Comment"
@@ -35,7 +35,7 @@ en: &DEFAULT_EN
   comment_form_name_label    : "Name"
   comment_form_email_label   : "Email address"
   comment_form_website_label : "Website (optional)"
-  comment_btn_submit         : "Submit Comment"
+  comment_btn_submit         : "Submit comment"
   comment_btn_submitted      : "Submitted"
   comment_success_msg        : "Thanks for your comment! It will show on the site once it has been approved."
   comment_error_msg          : "Sorry, there was an error with your submission. Please make sure all required fields have been completed and try again."
@@ -109,7 +109,7 @@ fr: &DEFAULT_FR
   toc_label                  : "Sur cette page"
   ext_link_label             : "Lien direct"
   less_than                  : "moins de"
-  minute_read                : "minute de lecture"
+  minute_read                : "minute(s) de lecture"
   share_on_label             : "Partager sur"
   meta_label                 :
   tags_label                 : "Tags :"
@@ -137,6 +137,9 @@ fr: &DEFAULT_FR
   comment_success_msg        : "Merci pour votre commentaire, il sera visible sur le site une fois approuvé."
   comment_error_msg          : "Désolé, une erreur est survenue lors de la soumission. Vérifiez que les champs obligatoires ont été remplis et réessayez."
   loading_label              : "Chargement..."
+  search_placeholder_text    : "Entrez votre recherche..."
+  results_found              : "Aucun résultat trouvé"
+  back_to_top                : "Retour en haut"
 fr-FR:
   <<: *DEFAULT_FR
 fr-BE:
@@ -309,6 +312,9 @@ it: &DEFAULT_IT
   comment_success_msg        : "Grazie per il tuo commento! Verrà visualizzato nel sito una volta che sarà approvato."
   comment_error_msg          : "C'è stato un errore con il tuo invio. Assicurati che tutti i campi richiesti siano stati completati e riprova."
   loading_label              : "Caricamento..."
+  search_placeholder_text    : "Inserisci termini di ricerca..."
+  results_found              : "Risultati"
+  back_to_top                : "Vai su"
 it-IT:
   <<: *DEFAULT_IT
 
@@ -1074,6 +1080,52 @@ hu: &DEFAULT_HU
 hu-HU:
   <<: *DEFAULT_HU
 
+# Romanian
+# -----------------
+ro: &DEFAULT_RO
+  page                       : "Pagina"
+  pagination_previous        : "Anterior"
+  pagination_next            : "Următor"
+  breadcrumb_home_label      : "Acasă"
+  breadcrumb_separator       : "/"
+  menu_label                 : "Comută meniul"
+  toc_label                  : "Pe această pagină"
+  ext_link_label             : "Link direct"
+  less_than                  : "mai puțin de"
+  minute_read                : "minute de citit"
+  share_on_label             : "Distribuie pe"
+  meta_label                 :
+  tags_label                 : "Etichete:"
+  categories_label           : "Categorii:"
+  date_label                 : "Actualizat:"
+  comments_label             : "Lasă un comentariu"
+  comments_title             : "Comentarii"
+  more_label                 : "Citește mai departe"
+  related_label              : "S-ar putea să-ți placă"
+  follow_label               : "Urmărește:"
+  feed_label                 : "Feed RSS"
+  powered_by                 : "Cu sprijinul"
+  website_label              : "Site"
+  email_label                : "Email"
+  recent_posts               : "Articole recente"
+  undefined_wpm              : "Parametru words_per_minute nedefinit în _config.yml"
+  comment_form_info          : "Adresa ta de email nu va fi făcută publică. Câmpurile marcate sunt obligatorii"
+  comment_form_comment_label : "Comentariu"
+  comment_form_md_info       : "Markdown este suportat."
+  comment_form_name_label    : "Nume"
+  comment_form_email_label   : "Adresă de email"
+  comment_form_website_label : "Site (opțional)"
+  comment_btn_submit         : "Trimite comentariul"
+  comment_btn_submitted      : "Trimis"
+  comment_success_msg        : "Mulțumesc pentru comentariu! Va apărea pe site în momentul în care va fi aprobat."
+  comment_error_msg          : "Scuze, este o problemă cu comentariul tău. Asigură-te că toate câmpurile obligatorii au fost completate și încearcă din nou."
+  loading_label              : "Se încarcă..."
+  search_placeholder_text    : "Caută ceva..."
+  results_found              : "Rezultate găsite"
+  back_to_top                : "Înapoi în susul paginii"
+ro-RO:
+  <<: *DEFAULT_RO
+  
 # Another locale
 # --------------
 #
