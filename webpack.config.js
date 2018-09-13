@@ -5,7 +5,7 @@ const path = require('path');
 module.exports = {
   entry: {
     App: './webpack/components/App.js',
-    Main: './webpack/components/Main.jsx',
+    Main: './webpack/components/Main.js',
     Site: './webpack/components/Site.js',
     Realtime: './webpack/components/Realtime.js'
   },
@@ -91,20 +91,10 @@ module.exports = {
         use: [ 'script-loader' ]
       },
       {
-        test: /jquery.+\.js$/,
-        use: [{
-            loader: 'expose-loader',
-            options: 'jQuery'
-        },{
-            loader: 'expose-loader',
-            options: '$'
-        }]
-        },
-        {
-            test: /\.js$/,
-            use: ["source-map-loader"],
-            enforce: "pre"
-        }
+        test: /\.js$/,
+        use: ["source-map-loader"],
+        enforce: "pre"
+      }
     ]
   },
   externals: {
