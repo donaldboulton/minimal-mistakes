@@ -2,10 +2,10 @@ import React from "react";
 import { render } from 'react-dom';
 
 require("style-loader!.main.css");
-require("script-loader!./Site.js");
-require("script-loader!./Comments.js");
-require("script-loader!./Reviews.js");
-require("script-loader!./File.js");
+require('./Site');
+require("./Comments");
+require("./Reviews");
+require("./File");
 export default class Hello extends Component {
     render() {
       return (

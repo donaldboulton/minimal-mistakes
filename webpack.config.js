@@ -3,12 +3,7 @@ const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
-  entry: {
-    App: './webpack/components/App.js',
-    Main: './webpack/components/Main.js',
-    Site: './webpack/components/Site.js',
-    Realtime: './webpack/components/Realtime.js'
-  },
+  entry: ["./webpack/components/App.js", "./webpack/components/Main.js", "./webpack/components/Site.js", "./webpack/components/Realtime.js", "./webpack/components/worker.js"],
   output: {
     path: path.resolve(__dirname, 'assets/js/'),
     publicPath: "/assets/",
