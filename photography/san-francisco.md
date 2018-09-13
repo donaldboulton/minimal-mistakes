@@ -21,16 +21,16 @@ category:
 tags: [Gallery, San Francisco Ca] 
 sidebar:
   - title: "Golden Gate"
-    image: /assets/photography/san-francisco-gallery/VS-2012-5948-2999x1999.jpg
+    image: /dest/assets/photography/san-francisco-gallery/VS-2012-5948-2999x1999.jpg
     image_alt: "Golden Gate Bridge"
     text: "Take a walk across this baby"
   - title: "Golden Gate Bridge"
     text: "Drove walked rode a bicycle even took a nap on this bridge."
 image:
     cover: true
-    path: &image /assets/photography/san-francisco/VS-2012-5930-2999x1999.jpg
+    path: &image /dest/assets/photography/san-francisco/VS-2012-5930-2999x1999.jpg
     feature: *image
-    thumbnail: /assets/photography/san-francisco/VS-2012-5930-thumbnail.jpg
+    thumbnail: /dest/assets/photography/san-francisco/VS-2012-5930-thumbnail.jpg
 
 header:
   image: /dest/assets/images/pages/letter-avatar-header-1200.png

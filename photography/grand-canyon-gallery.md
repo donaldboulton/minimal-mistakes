@@ -18,7 +18,7 @@ cookies: false
 breadcrumb: true
 sidebar:
   - title: Grand Canyon"
-    image: /assets/photography/grand-canyon-gallery/grand-canyon-mather.jpg
+    image: /dest/assets/photography/grand-canyon-gallery/grand-canyon-mather.jpg
     image_alt: "Grand Canyon"
     text: "Lost most all my pics of the Canyon, wish I had some from the hike to the bottom"
   - title: "Majestic"
@@ -26,8 +26,8 @@ sidebar:
 category:
   - Gallerys
 header:
-  image: /assets/photography/grand-canyon-gallery/lifelist-grand-canyon-631.jpg
-  teaser: /assets/photography/grand-canyon-gallery/lifelist-grand-canyon-631.jpg
+  image: /dest/assets/photography/grand-canyon-gallery/lifelist-grand-canyon-631.jpg
+  teaser: /dest/assets/photography/grand-canyon-gallery/lifelist-grand-canyon-631.jpg
 locations:
   - Grand Canyon
 support: [gallery]
@@ -38,4 +38,4 @@ support: [gallery]
   {% include archive-single.html %}
 {% endfor %}
 
-{% include image-gallery.html folder="/assets/photography/grand-canyon-gallery" %}
+{% include image-gallery.html folder="/dest/assets/photography/grand-canyon-gallery" %}

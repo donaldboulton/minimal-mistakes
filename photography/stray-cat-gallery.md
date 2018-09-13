@@ -19,14 +19,14 @@ category:
 tags: [Gallery, Stray Cats] 
 sidebar:
   - title: "My Hun Kitty"
-    image: /assets/photography/old-cat-gallery/Little-Hun-th.jpg
+    image: /dest/assets/photography/old-cat-gallery/Little-Hun-th.jpg
     image_alt: "Hun Kitty"
     text: "Hun at 3 weaks"
   - title: "Responsibilities"
     text: "I take care of about 20 stray cats in three different parts of OKC and any kitty that comes my way."
 header:
-  image: /assets/photography/stray-cat-gallery/Pretty-Girl-1200.jpg
-  teaser: /assets/photography/stray-cat-gallery/Pretty-Girl-th.jpg
+  image: /dest/assets/photography/stray-cat-gallery/Pretty-Girl-1200.jpg
+  teaser: /dest/assets/photography/stray-cat-gallery/Pretty-Girl-th.jpg
 locations:
   - Idabel Oklahoma
   - 4 Oaks Storaage

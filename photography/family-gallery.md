@@ -17,7 +17,7 @@ cookies: false
 breadcrumb: true
 sidebar:
   - title: "Raced Motocross from 1971 to 1994"
-    image: /assets/photography/family-gallery/250 Maico 83.jpg
+    image: /dest/assets/photography/family-gallery/250 Maico 83.jpg
     image_alt: "Factory 250 Maico"
     text: "Factory 250 Maico"
   - title: "Motocross the toughest sport"
@@ -26,8 +26,8 @@ category:
   - Gallerys
 tags: [Gallery, Family]
 header:
-  image: /assets/photography/family-gallery/First-Grade.jpg
-  teaser: /assets/photography/family-gallery/First-Grade.jpg
+  image: /dest/assets/photography/family-gallery/First-Grade.jpg
+  teaser: /dest/assets/photography/family-gallery/First-Grade.jpg
 locations:
   - Oklahoma City, Oklahoma
   - Idabel Oklahoma
@@ -39,4 +39,4 @@ support: [gallery]
   {% include archive-single.html %}
 {% endfor %}
 
-{% include image-gallery.html folder="/assets/photography/family-gallery" %}
+{% include image-gallery.html folder="/dest/assets/photography/family-gallery" %}

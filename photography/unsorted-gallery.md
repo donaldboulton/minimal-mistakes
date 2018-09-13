@@ -17,7 +17,7 @@ cookies: true
 breadcrumb: true
 sidebar:
   - title: "My Hun Kitty"
-    image: /assets/photography/old-cat-gallery/Little-Hun-th.jpg
+    image: /dest/assets/photography/old-cat-gallery/Little-Hun-th.jpg
     image_alt: "Hun Kitty"
     text: "Hun at 3 weaks"
   - title: "Responsibilities"
@@ -26,8 +26,8 @@ category:
   - Gallerys
 tags: [Gallery]
 header:
-  image: /assets/photography/unsorted-gallery/jesus_500.jpg
-  teaser: /assets/photography/unsorted-gallery/jesus_500.jpg
+  image: /dest/assets/photography/unsorted-gallery/jesus_500.jpg
+  teaser: /dest/assets/photography/unsorted-gallery/jesus_500.jpg
 locations:
   - All
 support: [gallery, adds, cookies]
@@ -38,4 +38,4 @@ support: [gallery, adds, cookies]
   {% include archive-single.html %}
 {% endfor %}
 
-{% include image-gallery.html folder="/assets/photography/unsorted-gallery" %}
+{% include image-gallery.html folder="/dest/assets/photography/unsorted-gallery" %}
