@@ -1,10 +1,8 @@
-import React, { Component } from 'react';
+import Worker from './worker.js';
 
-// eslint-disable-next-line
-import Worker from 'worker-loader!./worker';
+const worker = new Worker();
 
-let w = new Worker();
-w.postMessage('ping');
-w.onmessage = (event) => {
-  console.log(event.data);
-};
+worker.postMessage({ a: 1 });
+worker.onmessage = function (event) {};
+
+worker.addEventListener("message", function (event) {});

@@ -1,11 +1,7 @@
 import React from "react";
 import { render } from 'react-dom';
 
-require("style-loader!.main.css");
-require('./Site');
-require("./Comments");
-require("./Reviews");
-require("./File");
+require("./main.css");
 export default class Hello extends Component {
     render() {
       return (

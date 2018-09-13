@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
-  entry: ["./webpack/components/App.js", "./webpack/components/Main.js", "./webpack/components/Site.js", "./webpack/components/Realtime.js", "./webpack/components/worker.js"],
+  entry: ["./webpack/components/App.js", "./webpack/components/Main.js", "./webpack/components/Site.js", "./webpack/components/Comments.js", "./webpack/components/Reviews.js", "./webpack/components/File.js", "./webpack/components/Realtime.js"],
   output: {
     path: path.resolve(__dirname, 'assets/js/'),
     publicPath: "/assets/",
@@ -22,34 +22,36 @@ module.exports = {
     net: "empty"
   },
   plugins: [
-    new webpack.LoaderOptionsPlugin({
-        options: {
-            worker: {
-                output: {
-                    filename: "./worker.js",
-                    chunkFilename: "[name].worker.js"
-                }
-            }
-        }
-    }),
     new BundleAnalyzerPlugin({
         analyzerMode: 'static'
     })
   ],
   optimization: {
     splitChunks: {
-        cacheGroups: {
-            commons: {
-                test: /[\\/]node_modules[\\/]/,
-                name: "vendors",
-                chunks: "all"
-            }
+      chunks: 'async',
+      minSize: 30000,
+      maxSize: 0,
+      minChunks: 1,
+      maxAsyncRequests: 5,
+      maxInitialRequests: 3,
+      automaticNameDelimiter: '~',
+      name: true,
+      cacheGroups: {
+        vendors: {
+          test: /[\\/]node_modules[\\/]/,
+          priority: -10
+        },
+        default: {
+          minChunks: 2,
+          priority: -20,
+          reuseExistingChunk: true
         }
+      }
     }
   },
   resolve: {
     alias: {
-        'letter-avatar': 'util/letter.avatar.js'
+        'letter-avatar': 'assets/js/vendor/letter-avatar/letter.avatar.js'
     },
     modules: [
         path.resolve('assets/js/'),
@@ -89,10 +91,11 @@ module.exports = {
         test: /\.js$/,
         use: ["source-map-loader"],
         enforce: "pre"
+      },
+      {
+        test: /\.worker\.js$/,
+        use: { loader: 'worker-loader' }
       }
     ]
   },
-  externals: {
-    jquery: 'jQuery'
-  }
 };

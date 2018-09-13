@@ -1,6 +1,8 @@
 import * as firebase from 'firebase/app';
 import 'firebase/messaging';
 
+const _ = require('lodash');
+
 const getFirebaseMessagingObject = () => {
     // Initialize Firebase
     const config = {
@@ -16,12 +18,6 @@ const getFirebaseMessagingObject = () => {
 
     return firebase.messaging();
 };
-
-self.addEventListener('message', (event) => {
-    if (event.data === 'ping') {
-      self.postMessage('pong')
-    }
-});
 
 onconnect = function(e) {
     var port = e.ports[0];
