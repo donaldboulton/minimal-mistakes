@@ -29,7 +29,7 @@ Have a website or use social networking sites like Twitter, Google+ or Facebook?
 
 ## Follow Me on Social Media
 
-I post fairly infrequently on social media --- Dont have to much kindness to share.
+I post fairly infrequently on social media --- Don't have to much kindness to share.
 
 If these sorts of things interest you, follow along on:
 
