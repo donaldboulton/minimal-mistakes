@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/donaldboulton/#readme",
   "scripts": {
-    "build": "webpack && bundle exec jekyll build",
+    "build": "npm install && webpack && bundle exec jekyll build",
     "lint": "eslint --ext .js, .jsx /assets/js/",
     "start:dev": "webpack-dev-server"
   },
