@@ -2,6 +2,10 @@
 layout: default
 ---
 
+{% if page.path contains '_posts' %}
+  <link rel="amphtml" href="{{ page.id | prepend: '/amp' | prepend: site.baseurl | prepend: site.url }}">
+{% endif %}
+
 {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
   {% include page__hero.html %}
 {% elsif page.header.video.id and page.header.video.provider %}
@@ -97,7 +101,7 @@ layout: default
   </article>
   </div>
   {% if page.cookies == true %}
-    {% include cookies-en.html %}
+    {% include cookie-consent.html %}
   {% endif %}
   {% comment %}<!-- only show related on a post page when `related: true` -->{% endcomment %}
   {% if page.id and page.related and site.related_posts.size > 0 %}

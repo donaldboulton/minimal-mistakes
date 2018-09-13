@@ -168,6 +168,11 @@ author:
   xing                   :
   youtube                : # None
 
+languages: ["en"]
+ampdir: amp
+
+cookie_consent: true
+
 weather:
   - platform             : "openweathermap"
     api_key              : "8f4c1537b5fad3b111dae7b441fd0937"
@@ -246,12 +251,21 @@ exclude:
   - log
   - Rakefile
   - template.md
-  - /webpack
-  - webpack/
   - README
   - README.md
   - admin/index.js
+  - _src
+  - _images
+  - LICENSE
+  - package.json
+  - README.md
   - webpack.config.js
+  - yarn-error.log
+  - yarn.lock
+  - config
+  - optimization-fix
+  - optimization-fix-this-file-is-ignored.js
+  - icon.png
   - tmp
   - /docs
 keep_files:
@@ -369,9 +383,9 @@ collections:
   photography:
     output: true
     permalink: /:photography/:name/
-  amp-html:
+  amp:
     output: true
-    permalink: /:amp-html/:name/
+    permalink: /:amp/:name/
   products:
     output: true
     permalink: /:products/:name/
@@ -418,10 +432,10 @@ defaults:
           url: /year-archive/
   # amp-html
   - scope:
-      path: "amp-html"
+      path: "amp"
       type: posts
     values:
-      layout: amp-single
+      layout: amp
       author_profile: true
       read_time: true
       comments: false
@@ -434,7 +448,7 @@ defaults:
       notifications: true
       breadcrumbs:
         - label: "Amp Posts"
-          url: /:amp-html/:name/
+          url: /:amp/:name/
   # _pages
   - scope:
       path: "_pages"
