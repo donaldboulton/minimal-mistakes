@@ -1,15 +1,15 @@
 // CSS and SASS files
-import './index.scss';
+import './main.css';
 
-import './App';
+import './jquery';
 import './Site';
 import './Comments';
-import './letter.avatar';
 import './Main';
 import './Reviews';
 import './Realtime';
-import './upload';
 import './WebPushManager';
-import './jquery.pjax';
 
 require('default-passive-events');
+require('anchor-js');
+require('jquery-pjax');
+require('file-upload-with-preview');

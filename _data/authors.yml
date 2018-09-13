@@ -5,7 +5,7 @@ Donald Boulton:
   uri: "https://donboulton.com"
   email: "donaldboulton@gmail.com"
   bio: "Away from ASP. Jekyll for Me"
-  avatar: "/assets/images/pages/donald-boulton-100.jpg"
+  avatar: "/dest/assets/images/pages/donald-boulton-100.jpg"
   twitter: "donboulton"
   google_plus: "donaldboulton"
 
@@ -14,6 +14,6 @@ Michael Rose:
   uri: "https://mademistakes.com"
   email: "michaelrose@mademistakes.com"
   bio: "Just making mistakes"
-  avatar: "/assets/images/pages/michael-rose.jpg"
+  avatar: "/dest/assets/images/pages/michael-rose.jpg"
   twitter: "mademistakes"
   google_plus: "mademistakes"

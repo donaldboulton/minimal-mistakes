@@ -37,12 +37,12 @@ excerpt: "Create a Jekyll image Gallery that loops through all images in a folde
 
 image:
   cover: true
-  path: &image /assets/images/pages/jekyll-reversed.jpg
+  path: &image /dest/assets/images/pages/jekyll-reversed.jpg
   feature: *image
-  thumbnail: /assets/images/pages/jekyll-reversed-320.jpg
+  thumbnail: /dest/assets/images/pages/jekyll-reversed-320.jpg
 header:
-  image: /assets/images/pages/jekyll-reversed.jpg
-  teaser: /assets/images/pages/jekyll-reversed-320.jpg
+  image: /dest/assets/images/pages/jekyll-reversed.jpg
+  teaser: /dest/assets/images/pages/jekyll-reversed-320.jpg
 share: twitter --twitter-hashtags facebook linkedin
 support: [adds, cookies]
 folder: _posts
@@ -99,7 +99,7 @@ defaults:
 
 ## Adding Images
 
-I added images in my /assets/images/photography/ folders for each gallery. as listed in my data/overwiew.yml file and configured in each of my /photography/Gallery.md files
+I added images in my /dest/assets/images/photography/ folders for each gallery. as listed in my data/overwiew.yml file and configured in each of my /photography/Gallery.md files
 
 ## Data YML Files
 

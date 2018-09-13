@@ -8,8 +8,8 @@
 <script src="{{ script_path }}"></script>
   {% endfor %}
 {% else %}
-<script src="{{ '/assets/js/jquery.js' | relative_url }}"></script>
-<script src="{{ '/assets/js/vendor/letter-avatar/letter-avatar.js' | relative_url }}"></script>
+<script src="{{ '/dest/assets/js/jquery.js' | relative_url }}"></script>
+<script src="{{ '/dest/assets/js/vendor/letter-avatar/letter-avatar.js' | relative_url }}"></script>
 {% endif %}
 
 {% if site.search == true or page.layout == "search" %}
@@ -28,17 +28,17 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.5/isotope.pkgd.min.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js" crossorigin="anonymous"></script>
-  <script src="{{ '/assets/dist/js/imagesloaded.pkgd.min.js' | relative_url }}"></script>
-  <script src="{{ '/assets/dist/modules/lg-autoplay.min.js' | relative_url }}"></script>
-  <script src="{{ '/assets/dist/modules/lg-fullscreen.min.js' | relative_url }}"></script>
-  <script src="{{ '/assets/dist/modules/lg-share.min.js' | relative_url }}"></script>
-  <script src="{{ '/assets/dist/modules/lg-thumbnail.min.js' | relative_url }}"></script>
-  <script src="{{ '/assets/dist/modules/lg-zoom.min.js' | relative_url }}"></script>
-  <script src="{{ '/assets/dist/js/init-lightgallery.js' | relative_url }}"></script>
+  <script src="{{ '/dest/assets/dist/js/imagesloaded.pkgd.min.js' | relative_url }}"></script>
+  <script src="{{ '/dest/assets/dist/modules/lg-autoplay.min.js' | relative_url }}"></script>
+  <script src="{{ '/dest/assets/dist/modules/lg-fullscreen.min.js' | relative_url }}"></script>
+  <script src="{{ '/dest/assets/dist/modules/lg-share.min.js' | relative_url }}"></script>
+  <script src="{{ '/dest/assets/dist/modules/lg-thumbnail.min.js' | relative_url }}"></script>
+  <script src="{{ '/dest/assets/dist/modules/lg-zoom.min.js' | relative_url }}"></script>
+  <script src="{{ '/dest/assets/dist/js/init-lightgallery.js' | relative_url }}"></script>
 {% endif %}
 
 {% if page.support contains 'places' %}
-  <script src="{{ '/assets/js/vendor/google-places/google-places.js' | relative_url }}" crossorigin="anonymous"></script>
+  <script src="{{ '/dest/assets/js/vendor/google-places/google-places.js' | relative_url }}" crossorigin="anonymous"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA&libraries=places" crossorigin="anonymous"></script>
   <script>
     $(document).ready(function() {
@@ -93,7 +93,7 @@
 
 {% if page.support contains 'dragula' %}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js" crossorigin="anonymous"></script>
-  <script src="{{ '/assets/js/vendor/dragula/example.min.js' | relative_url }}"></script>
+  <script src="{{ '/dest/assets/js/vendor/dragula/example.min.js' | relative_url }}"></script>
 {% endif %}
 
 {% if page.support contains 'lightbox' %}
@@ -101,7 +101,7 @@
 {% endif %}
 
 {% if page.support contains 'weather' %}
-<script src="{{ '/assets/js/vendor/weather/weather.js' | relative_url }}"></script>
+<script src="{{ '/dest/assets/js/vendor/weather/weather.js' | relative_url }}"></script>
 <script>
     Weather.getCurrent( "4544349", function( current ) {
         $( "#current" ).html( "Temperature: " + current.temperature() + "&deg;K or " +
@@ -157,7 +157,7 @@ $(document).ready(function() {
 {% endif %}
 
 {% if page.youtube == true %}
-<script src="{{ '/assets/js/vendor/fitvids/jquery.fitvids.min.js' | relative_url }}"></script>
+<script src="{{ '/dest/assets/js/vendor/fitvids/jquery.fitvids.min.js' | relative_url }}"></script>
 <script>
   $("#main").fitVids();
 </script>
@@ -189,7 +189,7 @@ function addNavItem(ul, href, text) {
 {% endif %}
 
 {% if page.footnotes == true %}
-  <script src="{{ '/assets/js/vendor/bigfoot/bigfoot.min.js' | relative_url }}"></script>
+  <script src="{{ '/dest/assets/js/vendor/bigfoot/bigfoot.min.js' | relative_url }}"></script>
   <script>
     var bigfoot = $.bigfoot(
         {
@@ -254,4 +254,4 @@ function readURL(input) {
 </script>
 
 <script async defer src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script src="{{ '/assets/js/main.bundle.js' | relative_url }}"></script>
+<script src="{{ '/assets/app.bundle.js' | relative_url }}"></script>

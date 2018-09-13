@@ -14,7 +14,7 @@
 <meta name="apple-mobile-web-app-title" content="donboulton">
 <meta name="msapplication-starturl" content="https://donboulton.com">
 <meta name="author" Content="Donald Boulton">
-<meta name="twitter:thumbnailUrl" Content="/assets/images/donald-boulton_100.jpg">
+<meta name="twitter:thumbnailUrl" Content="/dest/assets/images/donald-boulton_100.jpg">
 <meta name="twitter:id" Content="105217183">
 <meta name="twitter:creator:id" Content="105217183">
 <meta name="twitter:creator:username" Content="@donboulton">
@@ -36,9 +36,9 @@
 <meta http-equiv="x-pjax-version" content="d4d26263aff43b9e6848743a02fdedef">
 <link rel="pingback" href="https://webmention.io/donboulton.com/xmlrpc" />
 <link rel="webmention" href="https://webmention.io/donboulton.com/webmention" />
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/fav-icons/apple-touch-icon-180x180.png" sizes="180x180">
-<link rel="icon" type="image/png" href="/assets/images/fav-icons/favicon.png" sizes="32x32">
-<link rel='shortcut icon' type='image/png' href='/assets/images/fav-icons/favicon.png' />
+<link rel="apple-touch-icon" sizes="180x180" href="/dest/assets/images/fav-icons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/dest/assets/images/fav-icons/favicon.png" sizes="32x32">
+<link rel='shortcut icon' type='image/png' href='/dest/assets/images/fav-icons/favicon.png' />
 <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
 <link rel="alternate" title="{{ site.title }} Feed" type="application/atom+xml" href="{{ 'atom.xml' | absolute_url }}">
 <link rel="alternate" title="{{ site.title }} Feed" type="application/json" href="{{ 'feed.json' | absolute_url }}">
@@ -69,7 +69,7 @@
 <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
 </script>
-<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/dest/assets/css/main.css' | relative_url }}">
 {% if site.head_scripts %}
   {% for script in site.head_scripts %}
     {% if script contains "://" %}
@@ -82,11 +82,11 @@
 {% endif %}
 
 {% if page.support contains 'gallery' %}
-   <link rel="stylesheet" href="{{ '/assets/dist/css/lightgallery.min.css' | relative_url }}">
+   <link rel="stylesheet" href="{{ '/dist/assets/dist/css/lightgallery.min.css' | relative_url }}">
 {% endif %}
 
 {% if page.support contains 'places' %}
-   <link rel="stylesheet" href="{{ '/assets/css/vendor/google-places/google-places.css' | relative_url }}">
+   <link rel="stylesheet" href="{{ '/dist/assets/css/vendor/google-places/google-places.css' | relative_url }}">
 {% endif %}
 
 {% if page.support contains 'products' %}
@@ -111,4 +111,4 @@
   {% endunless %}
 {% endif %}
 <script src="https://identity-js.netlify.com/v1/netlify-identity-widget.js"></script>
-<script src="{{ '/assets/js/vendor/real-time/index.js' | relative_url }}" async></script>
+<script src="{{ '/dist/assets/js/vendor/real-time/index.js' | relative_url }}" async></script>

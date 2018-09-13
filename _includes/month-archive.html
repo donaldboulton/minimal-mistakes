@@ -56,14 +56,14 @@
     
     {% if month != n_month %}
       <li class="list-month">
-        <span><svg class="icon icon--calendar-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-calendar-alt' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;
+        <span><svg class="icon icon--calendar-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-calendar-alt' | prepend: 'dest/assets/icons/' | relative_url }}"></use></svg>&nbsp;
           <span class ="archive-month" 
               id="{{ year }}-{{ month }}">
               {{ post.date | date: '%B %Y' }}</span></span>
           <ul class="archive-item list-unstyled">
     {% endif %}
           <li class="list-content {{ li_class }}">
-            <span><svg class="icon icon--chevron-right" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-chevron-right' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;<time>{{ post.date | date:"%d %b" }}&nbsp;</time></span>  
+            <span><svg class="icon icon--chevron-right" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-chevron-right' | prepend: 'dest/assets/icons/' | relative_url }}"></use></svg>&nbsp;<time>{{ post.date | date:"%d %b" }}&nbsp;</time></span>  
             <a href="{{ post.url }}">              
               {{ post.title }}
             </a>        

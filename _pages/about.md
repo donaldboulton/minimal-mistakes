@@ -22,15 +22,15 @@ category:
   - Donald Boulton
 image:
   cover: true
-  path: &image /assets/images/pages/digital.jpg
+  path: &image /dest/assets/images/pages/digital.jpg
   feature: *image
-  thumbnail: /assets/images/pages/digital-320.jpg
+  thumbnail: /dest/assets/images/pages/digital-320.jpg
 header:
-  image: /assets/images/pages/digital-.jpg
-  teaser: /assets/images/pages/digital-320.jpg
+  image: /dest/assets/images/pages/digital-.jpg
+  teaser: /dest/assets/images/pages/digital-320.jpg
 sidebar:
   - title: "Rockwell RV"
-    image: /assets/images/pages/rockwell-rv-sitemap-sm.jpg
+    image: /dest/assets/images/pages/rockwell-rv-sitemap-sm.jpg
     text: "Rockwell Rv Park in a Jacko Travel Trainer"
   - title: "Rv Living"
     text: "I live a the Best RV Park Around. With a pool, hot tub, Dish 150 Channels and High Speed Internet. Right by the Oklahoma River Walk and City Lake."
@@ -39,28 +39,28 @@ locations:
   - Rockwell+RV+Park+%26+Campground
 header:
   overlay_color: "#5e616c"
-  overlay_image: /assets/images/pages/digital.jpg
+  overlay_image: /dest/assets/images/pages/digital.jpg
   cta_label: "Posts"
   cta_url: "/year-archive/"
   caption: Gods Digital World
 excerpt: 'Jekyll on a GitHub Repo Netlify Hosting.<br /> <small><a href="https://donboulton.com">About Donald Boulton at donboulton.com</a></small><br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
 
 feature_row:
-  - image_path: /assets/images/pages/octocat.svg
+  - image_path: /dest/assets/images/pages/octocat.svg
     alt: "Cool and Free"
     title: "Cool and Free"
     excerpt: "Repo GitHub, Netlify Ubuntu Server, Jekyll React Webpack Node, Docker Build."
     url: "https://donboulton.com"
     btn_class: "btn--primary"
     btn_label: "Learn More"
-  - image_path: /assets/images/pages/staticman.svg
+  - image_path: /dest/assets/images/pages/staticman.svg
     alt: "Staticman Comments"
     title: "Comments push"
     excerpt: "Staticman Comments cause a regeneration of a static site. Good for Remote Work."
     url: "https://staticman.net/"
     btn_class: "btn--primary"
     btn_label: "Learn More"
-  - image_path: /assets/images/demo/michael-rose-320.jpg
+  - image_path: /dest/assets/images/demo/michael-rose-320.jpg
     alt: "Michael Rose"
     title: "Developer"
     excerpt: "Free to use but under a MIT License. Clone it, fork it, customize it, whatever!"
@@ -68,21 +68,21 @@ feature_row:
     btn_class: "btn--primary"
     btn_label: "Learn More"
     feature_row:
-  - image_path: /assets/images/demo/mm-customizable-feature.png
+  - image_path: /dest/assets/images/demo/mm-customizable-feature.png
     alt: "customizable"
     title: "Customizable"
     excerpt: "Everything from the menus, sidebars, comments, config in YAML Front Matter."
     url: "https://mademistakes.com/work/minimal-mistakes-jekyll-theme/"
     btn_class: "btn--primary"
     btn_label: "Learn More"
-  - image_path: /assets/images/demo/mm-responsive-feature.png
+  - image_path: /dest/assets/images/demo/mm-responsive-feature.png
     alt: "fully responsive"
     title: "Responsive Layouts"
     excerpt: "Built on HTML5 + CSS3. All layouts are fully responsive with helpers to augment your content."
     url: "https://github.com/mmistakes/minimal-mistakes"
     btn_class: "btn--primary"
     btn_label: "Learn More"
-  - image_path: /assets/images/demo/mm-free-feature.png
+  - image_path: /dest/assets/images/demo/mm-free-feature.png
     alt: "Cool 100% free"
     title: "Cool 100% Free"
     excerpt: "Free to use however you want under the MIT License. Clone it, fork it, customize it, whatever!"

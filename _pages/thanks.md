@@ -15,12 +15,12 @@ category:
   - Donald Boulton
 image:
   cover: true
-  path: &image /assets/images/pages/support.jpg
+  path: &image /dest/assets/images/pages/support.jpg
   feature: *image
-  thumbnail: /assets/images/pages/support-320.png
+  thumbnail: /dest/assets/images/pages/support-320.png
 header:
-  image: /assets/images/pages/support-1200.jpg
-  teaser: /assets/images/pages/support-320.jpg
+  image: /dest/assets/images/pages/support-1200.jpg
+  teaser: /dest/assets/images/pages/support-320.jpg
   excerpt: "Sitemap of Posts"
 support: [adds, cookies, anchor]
 adds: true

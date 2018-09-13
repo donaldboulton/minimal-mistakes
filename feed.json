@@ -12,7 +12,7 @@ sitemap: false
     "feed_url": "{{ "/feed.json" | absolute_url }}",
     "description": {{ site.description | jsonify }},
     "icon": "{{ "/apple-touch-icon-precomposed.png" | absolute_url }}",
-    "favicon": "{{ "/assets/images/fav-icon/favicon.ico" | absolute_url }}",
+    "favicon": "{{ "/dest/assets/images/fav-icon/favicon.ico" | absolute_url }}",
     "expired": false,
     "author": {
       "name": {{ site.author.name | jsonify }},

@@ -31,7 +31,8 @@
     "build": "npm run-script clean:project && cross-env NODE_ENV=production webpack --env=prod --progress --profile --colors && cross-env JEKYLL_ENV=production bundle exec jekyll build",
     "build:pwa": "npm run-script clean:project && cross-env NODE_ENV=production webpack --env=pwa --progress --profile --colors && cross-env JEKYLL_ENV=pwa bundle exec jekyll build && sw-precache --config=config/sw.config.js --verbose",
     "serve:dist": "http-server _site",
-    "clean:project": "rimraf ./_site ./assets"
+    "clean:project": "rimraf ./_site ./assets",
+    "start:dev": "webpack-dev-server"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
@@ -70,6 +71,7 @@
     "webpack-pwa-manifest": "^3.1.6"
   },
   "dependencies": {
+    "anchor-js": "^4.1.1",
     "atob": "^2.1.2",
     "default-passive-events": "^1.0.10",
     "file-upload-with-preview": "^2.1.1",
@@ -78,6 +80,15 @@
     "googleapis": "^33.0.0",
     "gotrue-js": "^0.9.22",
     "jquery-pjax": "^2.0.1",
+    "lg-autoplay": "^1.0.4",
+    "lg-fullscreen": "^1.0.1",
+    "lg-hash": "^1.0.4",
+    "lg-pager": "^1.0.2",
+    "lg-share": "^1.1.0",
+    "lg-thumbnail": "^1.1.0",
+    "lg-video": "^1.2.2",
+    "lg-zoom": "^1.1.0",
+    "lightgallery": "^1.6.11",
     "netlify-auth-providers": "^1.0.0-alpha5",
     "netlify-identity-widget": "^1.4.14",
     "node-fetch": "^2.2.0",

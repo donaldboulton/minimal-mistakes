@@ -45,10 +45,10 @@
         <p class="page__lead">{{ page.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>
       {% endif %}
       {% if site.read_time and page.read_time %}
-        <p class="page__meta"><svg class="icon icon--stopwatch" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-stopwatch' | prepend: 'assets/icons/' | relative_url }}"></use></svg> {% include read-time.html %}</p>
+        <p class="page__meta"><svg class="icon icon--stopwatch" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-stopwatch' | prepend: 'dest/assets/icons/' | relative_url }}"></use></svg> {% include read-time.html %}</p>
       {% endif %}
       {% if page.header.cta_url %}
-        <p><a href="{{ cta_path }}" class="btn btn--light-outline btn--large"><svg class="icon icon--folder-open" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-folder-open' | prepend: 'assets/icons/' | relative_url }}"></use></svg>{{ page.header.cta_label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a></p>
+        <p><a href="{{ cta_path }}" class="btn btn--light-outline btn--large"><svg class="icon icon--folder-open" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-folder-open' | prepend: 'dest/assets/icons/' | relative_url }}"></use></svg>{{ page.header.cta_label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a></p>
       {% endif %}
     </div>
   {% else %}

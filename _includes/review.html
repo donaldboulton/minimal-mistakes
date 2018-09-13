@@ -26,7 +26,7 @@
        <div class="field-group1" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
         <span>Rating</span>
         {% for i in (1..reviewData.review) %}
-          <svg class="icon icon--star rating-star rating-radio-star--on"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'assets/icons/' | relative_url }}"></use></svg>
+          <svg class="icon icon--star rating-star rating-radio-star--on"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'dest/assets/icons/' | relative_url }}"></use></svg>
         {% endfor %}
         <meta class="hidden" itemprop="ratingValue" content="{{ reviewData.review }}">
         <span class="heading">Title:</span>&nbsp;<span class="title-text">{{ reviewData.title }}</span>

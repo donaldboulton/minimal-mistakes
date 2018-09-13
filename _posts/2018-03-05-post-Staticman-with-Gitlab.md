@@ -30,12 +30,12 @@ toc_label: "Page Contents"
 excerpt: "Use Staticman push to Gitlab. The first step is to create staticman app, according to the official document operation, you can also view the repository I created."
 image:
   cover: true
-  path: &image /assets/images/pages/staticman-github-gitlab.png
+  path: &image /dest/assets/images/pages/staticman-github-gitlab.png
   feature: *image
-  thumbnail: /assets/images/pages/staticman-github-gitlab-320.png
+  thumbnail: /dest/assets/images/pages/staticman-github-gitlab-320.png
 header:
-  image: /assets/images/pages/staticman-github-gitlab.png
-  teaser: /assets/images/pages/staticman-github-gitlab-320.png
+  image: /dest/assets/images/pages/staticman-github-gitlab.png
+  teaser: /dest/assets/images/pages/staticman-github-gitlab-320.png
 support: [adds, cookies]
 folder: _posts
 product: staticman-gitlab

@@ -1,4 +1,4 @@
-var WebPushManager = function(){
+let WebPushManager = function(){
 }
 
 WebPushManager.prototype.start = function(callback) {
@@ -11,9 +11,9 @@ WebPushManager.prototype.start = function(callback) {
 }
 
 WebPushManager.prototype.getRegistrationId = function (callback) {
-  navigator.serviceWorker.ready.then(function(serviceWorkerRegistration) {
+  navigator.serviceWorker.ready.then((serviceWorkerRegistration) => {
 
-    var fb_messaging = firebase.messaging();
+    let fb_messaging = firebase.messaging();
     fb_messaging.useServiceWorker(serviceWorkerRegistration);
 
     fb_messaging.requestPermission()
@@ -38,7 +38,7 @@ WebPushManager.prototype.getRegistrationId = function (callback) {
 }
 
 WebPushManager.prototype.forceNotification = function(message) {
-  navigator.serviceWorker.ready.then(function(serviceWorkerRegistration) {
+  navigator.serviceWorker.ready.then((serviceWorkerRegistration) => {
     serviceWorkerRegistration.active.postMessage(message);
   });
 };

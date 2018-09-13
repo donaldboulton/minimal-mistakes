@@ -34,12 +34,12 @@ locations:
 excerpt: "Check SQL Server a specified database index fragmentation percentage (SQL). A Dynamic CMS using SQL Server most always has fragmentation. When files or data are in the wrong place then SQL Server has to spend time looking for the missing data, slowing the whole process down and increasing load times for your site."
 image:
   cover: true
-  path: &image /assets/images/pages/check_sql_fragmentation.png
+  path: &image /dest/assets/images/pages/check_sql_fragmentation.png
   feature: *image
-  thumbnail: /assets/images/pages/check_sql_fragmentation-320.png
+  thumbnail: /dest/assets/images/pages/check_sql_fragmentation-320.png
 header:
-  image: /assets/images/pages/check_sql_fragmentation-1200.png
-  teaser: /assets/images/pages/check_sql_fragmentation-320.png
+  image: /dest/assets/images/pages/check_sql_fragmentation-1200.png
+  teaser: /dest/assets/images/pages/check_sql_fragmentation-320.png
 
 support: [adds, cookies]
 folder: _posts
@@ -73,7 +73,7 @@ Step 1\. Open Microsoft SQL Server 2008 R2
 Step 2\. Open Microsoft SQL Server Management Studio
 Start- All programs- Microsoft SQL Server 2008 R2- Microsoft SQL Server Management Studio
 
-![SQL Management](/assets/images/pages/sql_management.png){: .align-left}
+![SQL Management](/dest/assets/images/pages/sql_management.png){: .align-left}
 
 Step 3\. Drag the script file to SQL Server Management Studio
 
@@ -83,7 +83,7 @@ indexstats.avg_fragmentation_in_percent: In the script the  indexstats.avg_frag
 
 Step 5\. Run the script
 
-![Script Results](/assets/images/pages/script-results.jpg){: .align-left}
+![Script Results](/dest/assets/images/pages/script-results.jpg){: .align-left}
 
 This script selects AdventureWorks2008.
 
@@ -93,11 +93,11 @@ After the script executing, we will get this result:
 
 Open Web Matrix select databases and logon to your database, Select new query and paste IndexDefrag query in workspace the execute.
 
-![Web Matrix](/assets/images/pages/IndexFragmentation_WebMatrix.png){: .align-left}
+![Web Matrix](/dest/assets/images/pages/IndexFragmentation_WebMatrix.png){: .align-left}
 
 Here is my result on a database that is less than a month old. Media Library is 87% FRAGMENTED.
 
-![Web Matrix Script Results](/assets/images/pages/IndexFragmentation_WebMatrix_Script_Results.png){: .align-left}
+![Web Matrix Script Results](/dest/assets/images/pages/IndexFragmentation_WebMatrix_Script_Results.png){: .align-left}
 
 Additional Resources
 

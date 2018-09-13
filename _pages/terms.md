@@ -48,7 +48,7 @@ All of this information is not linked to anything that is personally identifiabl
 
 ## Cookies & Beacons
 
-![Cookie](/assets/images/pages/svg/cookies.svg){:.align-left}
+![Cookie](/dest/assets/images/pages/svg/cookies.svg){:.align-left}
 
 When you visit this site "convenience" cookies are stored on your computer when you submit a comment to help you log in faster to [Twitter](https://twitter.com/donboulton){:id="open-website" rel="noreferrer"} the next time you do a tweet.
 

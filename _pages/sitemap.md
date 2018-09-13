@@ -13,12 +13,12 @@ adds: true
 excerpt: "Sitemap with Post by Catagories, by Tags and by Years"
 image:
   cover: true
-  path: &image /assets/images/pages/sitemap.png
+  path: &image /dest/assets/images/pages/sitemap.png
   feature: *image
-  thumbnail: /assets/images/pages/sitemap-320.png
+  thumbnail: /dest/assets/images/pages/sitemap-320.png
 header:
-  image: /assets/images/pages/sitemap-1200.png
-  teaser: /assets/images/pages/sitemap-320.png
+  image: /dest/assets/images/pages/sitemap-1200.png
+  teaser: /dest/assets/images/pages/sitemap-320.png
   excerpt: "Sitemap of Posts"
 support: [adds, cookies, anchor]
 folder: _pages

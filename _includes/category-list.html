@@ -14,7 +14,7 @@
   {% assign category_hashes = page_categories | split: ',' | sort %}
 
   <div class="page__taxonomy">
-    <strong><svg class="icon icon--folder" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-folder-open' | prepend: 'assets/icons/' | relative_url }}"></use></svg> {{ site.data.ui-text[site.locale].categories_label | default: "Categories:" }} </strong>
+    <strong><svg class="icon icon--folder" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-folder-open' | prepend: 'dest/assets/icons/' | relative_url }}"></use></svg> {{ site.data.ui-text[site.locale].categories_label | default: "Categories:" }} </strong>
     <span itemprop="keywords">
     {% for hash in category_hashes %}
       {% assign keyValue = hash | split: '#' %}
