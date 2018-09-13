@@ -11,6 +11,4 @@ client.onConnected = (client) => {
     });
 };
 
-const passiveevents = require('default-passive-events');
 
-const pjax = require("jquery-pjax");
