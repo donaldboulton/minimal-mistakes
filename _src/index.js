@@ -13,7 +13,7 @@ import './Realtime';
 
 import './WebPushManager';
 
-import './worker';
+import './Firebase';
 
 require('lazysizes');
 require('svg4everybody');
