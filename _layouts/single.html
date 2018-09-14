@@ -39,7 +39,7 @@ layout: default
           <aside class="sidebar__right" role="complementary" itemscope itemtype="https://schema.org/WPSideBar">
             {% if page.toc %}
                <nav class="toc">
-                 <header><h4 class="nav__title"><svg class="icon icon--file-alt fa-file-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-file-alt' | prepend: 'src/assets/icons/' | relative_url }}"></use></svg>&nbsp;<span itemprop="name">{{ page.toc_label | default: site.data.ui-text[site.locale].toc_label }}</span></h4></header>
+                 <header><h4 class="nav__title"><svg class="icon icon--file-alt fa-file-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-file-alt' | prepend: '/assets/images/' | relative_url }}"></use></svg>&nbsp;<span itemprop="name">{{ page.toc_label | default: site.data.ui-text[site.locale].toc_label }}</span></h4></header>
                  {% include toc.html sanitize=true html=content h_min=2 h_max=3 class="toc__menu" %}
                </nav>
             {% endif %}
@@ -77,9 +77,9 @@ layout: default
         {% endif %}
         {% include page__taxonomy.html %}
         {% if page.last_modified_at %}
-          <div class="page__date"><strong><svg class="icon icon--calendar-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-calendar-alt' | prepend: 'src/assets/icons/' | relative_url }}"></use></svg> {{ site.data.ui-text[site.locale].date_label | default: "Updated:" }}</strong> <time datetime="{{ page.last_modified_at | date: "%Y-%m-%d" }}">{{ page.last_modified_at | date: "%B %d, %Y" }}</time></div>
+          <div class="page__date"><strong><svg class="icon icon--calendar-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-calendar-alt' | prepend: '/assets/images/' | relative_url }}"></use></svg> {{ site.data.ui-text[site.locale].date_label | default: "Updated:" }}</strong> <time datetime="{{ page.last_modified_at | date: "%Y-%m-%d" }}">{{ page.last_modified_at | date: "%B %d, %Y" }}</time></div>
         {% elsif page.date %}
-          <div class="page__date"><strong><svg class="icon icon--calendar-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-calendar-alt' | prepend: 'src/assets/icons/' | relative_url }}"></use></svg> {{ site.data.ui-text[site.locale].date_label | default: "Updated:" }}</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time></div>
+          <div class="page__date"><strong><svg class="icon icon--calendar-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-calendar-alt' | prepend: '/assets/images/' | relative_url }}"></use></svg> {{ site.data.ui-text[site.locale].date_label | default: "Updated:" }}</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time></div>
         {% endif %}
       </footer>
 
