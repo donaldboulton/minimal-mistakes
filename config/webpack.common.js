@@ -1,10 +1,10 @@
 /* eslint-disable import/no-extraneous-dependencies */
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer');
 
 module.exports = {
   entry: {
@@ -13,7 +13,7 @@ module.exports = {
   plugins: [
     new FaviconsWebpackPlugin({
       logo: './favicon.png',
-      background: 'transparent',
+      background: '#1d1d1d',
     }),
     new HtmlWebpackPlugin({
       template: './_src/template/default.html',
