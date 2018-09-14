@@ -23,6 +23,15 @@ module.exports = {
       to: 'images/',
     }]),
   ],
+  devServer: {
+    contentBase: './assets',
+    port: 3000,
+  },
+  node: {
+    fs: 'empty',
+    tls: 'empty',
+    net: 'empty',
+  },
   module: {
     rules: [
       {
