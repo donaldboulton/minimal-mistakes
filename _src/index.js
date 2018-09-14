@@ -3,8 +3,6 @@ import './main.css';
 
 import './jqueryload';
 
-import './Site';
-
 import './Comments';
 
 import './Reviews';
