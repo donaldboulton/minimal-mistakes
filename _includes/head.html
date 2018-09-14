@@ -69,7 +69,6 @@
 <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
 </script>
-<link rel="stylesheet" href="{{ '/dest/assets/css/main.css' | relative_url }}">
 {% if site.head_scripts %}
   {% for script in site.head_scripts %}
     {% if script contains "://" %}
