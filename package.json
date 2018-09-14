@@ -81,7 +81,9 @@
     "google-auth-library": "^1.6.1",
     "googleapis": "^33.0.0",
     "gotrue-js": "^0.9.22",
+    "jquery": "^3.3.1",
     "jquery-pjax": "^2.0.1",
+    "lazysizes": "^4.1.2",
     "lg-autoplay": "^1.0.4",
     "lg-fullscreen": "^1.0.1",
     "lg-hash": "^1.0.4",
@@ -99,6 +101,7 @@
     "react-addons-update": "^15.0.2",
     "react-dom": "^15.0.2",
     "realtime-messaging": "^2.1.42",
+    "svg4everybody": "^2.1.9",
     "utf-8-validate": "^5.0.1",
     "worker-loader": "^2.0.0"
   }

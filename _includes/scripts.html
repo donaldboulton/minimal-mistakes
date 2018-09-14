@@ -8,8 +8,7 @@
 <script src="{{ script_path }}"></script>
   {% endfor %}
 {% else %}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" crossorigin="anonymous"></script>
-<script src="{{ '/dest/assets/js/vendor/letter-avatar/letter-avatar.js' | relative_url }}"></script>
+<script src="{{ '/src/assets/js/vendor/letter-avatar/letter-avatar.js' | relative_url }}"></script>
 {% endif %}
 
 {% if site.search == true or page.layout == "search" %}
@@ -28,17 +27,17 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.5/isotope.pkgd.min.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js" crossorigin="anonymous"></script>
-  <script src="{{ '/dest/assets/dist/js/imagesloaded.pkgd.min.js' | relative_url }}"></script>
-  <script src="{{ '/dest/assets/dist/modules/lg-autoplay.min.js' | relative_url }}"></script>
-  <script src="{{ '/dest/assets/dist/modules/lg-fullscreen.min.js' | relative_url }}"></script>
-  <script src="{{ '/dest/assets/dist/modules/lg-share.min.js' | relative_url }}"></script>
-  <script src="{{ '/dest/assets/dist/modules/lg-thumbnail.min.js' | relative_url }}"></script>
-  <script src="{{ '/dest/assets/dist/modules/lg-zoom.min.js' | relative_url }}"></script>
-  <script src="{{ '/dest/assets/dist/js/init-lightgallery.js' | relative_url }}"></script>
+  <script src="{{ '/src/assets/dist/js/imagesloaded.pkgd.min.js' | relative_url }}"></script>
+  <script src="{{ '/src/assets/dist/modules/lg-autoplay.min.js' | relative_url }}"></script>
+  <script src="{{ '/src/assets/dist/modules/lg-fullscreen.min.js' | relative_url }}"></script>
+  <script src="{{ '/src/assets/dist/modules/lg-share.min.js' | relative_url }}"></script>
+  <script src="{{ '/src/assets/dist/modules/lg-thumbnail.min.js' | relative_url }}"></script>
+  <script src="{{ '/src/assets/dist/modules/lg-zoom.min.js' | relative_url }}"></script>
+  <script src="{{ '/src/assets/dist/js/init-lightgallery.js' | relative_url }}"></script>
 {% endif %}
 
 {% if page.support contains 'places' %}
-  <script src="{{ '/dest/assets/js/vendor/google-places/google-places.js' | relative_url }}" crossorigin="anonymous"></script>
+  <script src="{{ '/src/assets/js/vendor/google-places/google-places.js' | relative_url }}" crossorigin="anonymous"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA&libraries=places" crossorigin="anonymous"></script>
   <script>
     $(document).ready(function() {
@@ -93,7 +92,7 @@
 
 {% if page.support contains 'dragula' %}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js" crossorigin="anonymous"></script>
-  <script src="{{ '/dest/assets/js/vendor/dragula/example.min.js' | relative_url }}"></script>
+  <script src="{{ '/src/assets/js/vendor/dragula/example.min.js' | relative_url }}"></script>
 {% endif %}
 
 {% if page.support contains 'lightbox' %}
@@ -101,7 +100,7 @@
 {% endif %}
 
 {% if page.support contains 'weather' %}
-<script src="{{ '/dest/assets/js/vendor/weather/weather.js' | relative_url }}"></script>
+<script src="{{ '/src/assets/js/vendor/weather/weather.js' | relative_url }}"></script>
 <script>
     Weather.getCurrent( "4544349", function( current ) {
         $( "#current" ).html( "Temperature: " + current.temperature() + "&deg;K or " +
@@ -157,7 +156,7 @@ $(document).ready(function() {
 {% endif %}
 
 {% if page.youtube == true %}
-<script src="{{ '/dest/assets/js/vendor/fitvids/jquery.fitvids.min.js' | relative_url }}"></script>
+<script src="{{ '/src/assets/js/vendor/fitvids/jquery.fitvids.min.js' | relative_url }}"></script>
 <script>
   $("#main").fitVids();
 </script>
@@ -189,7 +188,7 @@ function addNavItem(ul, href, text) {
 {% endif %}
 
 {% if page.footnotes == true %}
-  <script src="{{ '/dest/assets/js/vendor/bigfoot/bigfoot.min.js' | relative_url }}"></script>
+  <script src="{{ '/src/assets/js/vendor/bigfoot/bigfoot.min.js' | relative_url }}"></script>
   <script>
     var bigfoot = $.bigfoot(
         {
@@ -201,55 +200,4 @@ function addNavItem(ul, href, text) {
   </script>
 {% endif %}
 
-<script>
-  $(document).ready(function(){svg4everybody();$("a").smoothScroll({offset:-20})});var coll=document.getElementsByClassName("collapsible");var i;for(i=0;i<coll.length;i++){coll[i].addEventListener("click",function(){this.classList.toggle("active");var content=this.nextElementSibling;if(content.style.maxHeight){content.style.maxHeight=null}else{content.style.maxHeight=content.scrollHeight+"px"}})}
-  function external_new_window() {
-    for(var c = document.getElementsByTagName("a"), a = 0;a < c.length;a++) {
-    var b = c[a];
-    b.getAttribute("href") && b.hostname !== location.hostname && (b.target = "_blank")
-    }
-  }
-  external_new_window();
-  grecaptcha.ready(function() {
-      grecaptcha.execute('6Le-JGIUAAAAAItP3anxYzixThXd6EUvsDjXZevh', {action: 'home'}).then(function(token) {
-    });
-  });
-  if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/service-worker.js');
-  });
-
-  navigator.serviceWorker.ready.then(function (registration) {
-    console.log('Service worker successfully registered on scope', registration.scope);
-  });
-}
-if ($.support.pjax) {
-    $(document).on('click', 'a[data-pjax]', function(event) {
-        const container = $(this).closest('[data-pjax-container]');
-        $.pjax.click(event, {container: containerSelector})
-    })
-};
-function addEvent(node,type,callback){if(node.addEventListener){node.addEventListener(type,function(e){callback(e,e.target)},!1)}else if(node.attachEvent){node.attachEvent("on"+type,function(e){callback(e,e.srcElement)})}}
-  function shouldBeValidated(field){return(!(field.getAttribute("readonly")||field.readonly)&&!(field.getAttribute("disabled")||field.disabled)&&(field.getAttribute("pattern")||field.getAttribute("required")))}
-  function instantValidation(field){if(shouldBeValidated(field)){var invalid=(field.getAttribute("required")&&!field.value)||(field.getAttribute("pattern")&&field.value&&!new RegExp(field.getAttribute("pattern")).test(field.value));if(!invalid&&field.getAttribute("aria-invalid")){field.removeAttribute("aria-invalid")}else if(invalid&&!field.getAttribute("aria-invalid")){field.setAttribute("aria-invalid","true")}}}
-  var fields=[document.getElementsByTagName("input"),document.getElementsByTagName("textarea")];for(var a=fields.length,i=0;i<a;i++){for(var b=fields[i].length,j=0;j<b;j++){addEvent(fields[i][j],"change",function(e,target){instantValidation(target)})}}
-  function checkForm(form)
-    {if(!form.conditions.checked){alert("Please indicate that you accept the Terms and Conditions");form.conditions.focus();return!1}
-    return!0}
-$(".author__urls_masthead button").on("click", function() {
-    $(".author__urls_masthead").toggleClass("is--visible");
-    $(".author__urls_masthead button").toggleClass("open");
-});
-function readURL(input) {
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
-        reader.onload = function (e) {
-            $('#blah')
-                .attr('src', e.target.result);
-            };
-
-        reader.readAsDataURL(input.files[0]);
-    }
-}
-</script>
 <script async defer src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
