@@ -3,8 +3,6 @@ import './main.css';
 
 import './jqueryload';
 
-import './Comments';
-
 import './Reviews';
 
 import './Realtime';
@@ -13,6 +11,7 @@ import './WebPushManager';
 
 import './Firebase';
 
+require('lightgallery');
 require('lazysizes');
 require('svg4everybody');
 require('default-passive-events');
