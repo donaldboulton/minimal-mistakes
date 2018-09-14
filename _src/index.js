@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {render} from 'react-dom';
-import Hello from './components/Hello';
+import Hello from './Hello';
 class App extends Component {
  render() {
  return (
@@ -8,7 +8,7 @@ class App extends Component {
  )
  }
 }
-render(<App />, document.getElementById('root'));
+render(<App />, document.getElementById('initial-content'));
 
 // CSS and SASS files
 import './main.css';

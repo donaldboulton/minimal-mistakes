@@ -171,7 +171,7 @@ author:
 languages: ["en"]
 ampdir: amp
 
-cookie_consent: true
+cookie_consent: false
 
 weather:
   - platform             : "openweathermap"
