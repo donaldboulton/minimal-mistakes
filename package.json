@@ -2,7 +2,7 @@
   "name": "donaldboulton",
   "version": "4.12.0",
   "description": "Donald Boulton theme npm server scripts",
-  "main": "assets/app.bundle.js",
+  "main": "assets/app-9c36025b8daad84046e6.bundle.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/donaldboulton/DWB.git"
@@ -39,6 +39,7 @@
     "babel-loader": "^7.1.1",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-2": "^6.24.1",
     "babel-register": "6.16.3",
     "browser-sync": "^2.24.7",
     "browser-sync-webpack-plugin": "^2.2.2",

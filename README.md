@@ -9,141 +9,204 @@
 [![Ruby gem](https://img.shields.io/gem/v/minimal-mistakes-jekyll.svg)](https://rubygems.org/gems/minimal-mistakes-jekyll)
 [![Tip Me via PayPal](https://img.shields.io/badge/PayPal-tip%20me-green.svg?logo=paypal)](https://www.paypal.me/donaldboulton)
 
-Minimal Mistakes is a flexible two-column Jekyll theme. Perfect for hosting your personal site, blog, or portfolio on GitHub or self-hosting on your own server. As the name implies --- styling is purposely minimalistic to be enhanced and customized by you :smile:.
 
-:sparkles: See what's new in the [CHANGELOG](CHANGELOG.md).
+Adding a Jekyll boilerplate supercharged with React & Webpack to build modern performant websites (including Progressive Web Apps).
+Read more about how this boilerplate has been built: https://medium.com/learning-lab/5-how-i-learnt-webpack-3-and-created-a-jekyll-and-webpack-boilerplate-edd86645fd5e
 
-[![Minimal Mistakes live preview][2]][1]
+## Features
 
-[1]: https://mmistakes.github.io/minimal-mistakes/
+**Improved workflow**
 
-## Notable Features
+* Webpack working along with Jekyll
+* BrowserSync live reload
 
-- Bundled as a "theme gem" for easier install/upgrading.
-- Compatible with GitHub Pages.
-- Support for Jekyll's built-in Sass/SCSS preprocessor.
-- Nine different skins (color variations).
-- Several responsive layout options (single, archive index, search, splash, and paginated home page).
-- Optimized for search engines with support for [Twitter Cards](https://dev.twitter.com/cards/overview) and [Open Graph](https://ogp.me/) data
-- Optional [header images](https://mmistakes.github.io/minimal-mistakes/docs/layouts/#headers), [custom sidebars](https://mmistakes.github.io/minimal-mistakes/docs/layouts/#sidebars), [table of contents](https://mmistakes.github.io/minimal-mistakes/docs/helpers/#table-of-contents), [galleries](https://mmistakes.github.io/minimal-mistakes/docs/helpers/#gallery), related posts, [breadcrumb links](https://mmistakes.github.io/minimal-mistakes/docs/configuration/#breadcrumb-navigation-beta), [navigation lists](https://mmistakes.github.io/minimal-mistakes/docs/helpers/#navigation-list), and more.
-- Commenting and Reviews support (powered by [Disqus](https://disqus.com/), [Facebook](https://developers.facebook.com/docs/plugins/comments), Google+, [Discourse](https://www.discourse.org/), static-based via [Staticman v1 and v2](https://staticman.net/), and custom).
-- [Google Analytics](https://www.google.com/analytics/) support.
-- UI localized text in English (default), Brazilian Portuguese (Português brasileiro), Chinese, Danish, Dutch, French (Français), German (Deutsch), Greek, Indonesian, Italian (Italiano), Japanese, Korean, Nepali (Nepalese), Polish, Russian, Spanish (Español), Swedish, Turkish (Türkçe), and Vietnamese.
+**Optimized Style and SASS**
 
-## Skins (Color Variations)
+* SASS Style
+* PostCSS Auto Preffixer
+* CSS minified
+* Critical CSS Path added to the main template (using the command with optim)
 
-This theme comes in nine different skins (including the default one).
+**ES6 & Optimization**
 
-| `air` | `contrast` | `dark` |
-| --- | --- | --- |
-| ![air skin](https://mmistakes.github.io/minimal-mistakes/dest/assets/images/air-skin-archive.png) | ![contrast skin](https://mmistakes.github.io/minimal-mistakes/dest/assets/images/contrast-skin-archive.png) | ![dark skin](https://mmistakes.github.io/minimal-mistakes/dest/assets/images/dark-skin-archive.png) |
+* ES6 Babel
+* JS minified and uglified
+* ES Lint
 
-| `dirt` | `mint` | `sunrise` |
-| --- | --- | --- |
-| ![dirt skin](https://mmistakes.github.io/minimal-mistakes/dest/assets/images/dirt-skin-archive.png) | ![mint skin](https://mmistakes.github.io/minimal-mistakes/dest/assets/images/mint-skin-archive.png) | ![sunrise skin](https://mmistakes.github.io/minimal-mistakes/dest/assets/images/sunrise-skin-archive.png) |
+**Images optimized**
+* Imagemin, images optimizations
 
-| `aqua` | `neon` | `plum` |
-| --- | --- | --- |
-| ![aqua skin](https://mmistakes.github.io/minimal-mistakes/dest/assets/images/aqua-skin-archive.png) | ![neon skin](https://mmistakes.github.io/minimal-mistakes/dest/assets/images/neon-skin-archive.png) | ![plum skin](https://mmistakes.github.io/minimal-mistakes/dest/assets/images/plum-skin-archive.png) |
+**Write less code**
+* Theme color in config
+* Favicon generated automatically
+* Google Analytics setup in config file (optional)
+* Doorbell setup in config file (optional)
+* Cookie consent setup in config file (optional)
 
-## Demo Pages
+**SEO Ready**
 
-| Name                                        | Description                                           |
-| ------------------------------------------- | ----------------------------------------------------- |
-| [Post with Header Image][header-image-post] | A post with a large header image. |
-| [HTML Tags and Formatting Post][html-tags-post] | A variety of common markup showing how the theme styles them. |
-| [Syntax Highlighting Post][syntax-post] | Post displaying highlighted code. |
-| [Post with a Gallery][gallery-post] | A post showing several images wrapped in `<figure>` elements. |
-| [Sample Collection Page][sample-collection] | Single page from a collection. |
-| [Categories Archive][categories-archive] | Posts grouped by category. |
-| [Tags Archive][tags-archive] | Posts grouped by tag. |
+* SEO Plugin Jekyll
+* Sitemap generated
+* Accelerated Mobile Pages enabled for Posts
 
-Additional sample posts are available under [posts archive][year-archive] on the demo site. Source files for these (and the entire demo site) can be found in [`/docs`](docs).
+**Write better code**
 
-[header-image-post]: https://mmistakes.github.io/minimal-mistakes/layout-header-image-text-readability/
-[gallery-post]: https://mmistakes.github.io/minimal-mistakes/post%20formats/post-gallery/
-[html-tags-post]: https://mmistakes.github.io/minimal-mistakes/markup/markup-html-tags-and-formatting/
-[syntax-post]: https://mmistakes.github.io/minimal-mistakes/markup-syntax-highlighting/
-[sample-collection]: https://mmistakes.github.io/minimal-mistakes/recipes/chocolate-chip-cookies/
-[categories-archive]: https://mmistakes.github.io/minimal-mistakes/categories/
-[tags-archive]: https://mmistakes.github.io/minimal-mistakes/tags/
-[year-archive]: https://mmistakes.github.io/minimal-mistakes/year-archive/
+* Internationalization plugin
 
-## Installation
+**Progressive Web Apps (optional)**
 
-There are three ways to install the theme: as a Ruby gem (for self-hosted sites), as a Ruby gem + jekyll-remote-theme plugin (GitHub Pages hosted sites), or forking/directly copying all of the theme files into your project.
+* Generation of the Manifest
+* Generation of Service worker
 
-### Ruby Gem Method
+**Easy to deploy**
 
-1. Install the theme as a Ruby Gem by adding it to your `Gemfile` like so:
+* Easy deployment with Netlify
 
-   ```ruby
-   gem "minimal-mistakes-jekyll"
-   ```
+## Prerequisites
 
-2. Fetch and update bundled gems by running the following [Bundler](https://bundler.io/) command:
+The following tools should be installed before starting:
+* NodeJS, npm
+* Ruby, Gem, Bundler
+* Jekyll
+* Sass
 
-   ```bash
-   bundle
-   ```
+## Quick start
 
-3. Set the `theme` in your project's Jekyll `_config.yml` file:
+1. Make sure you have all the prerequisites above installed.
+2. Clone this repo using `git clone https://github.com/sandoche/Jekyll-webpack-boilerplate.git`
+3. Move to the appropriate directory: `cd Jekyll-webpack-boilerplate`.
+4. Run `npm install` and `bundler install` in order to install dependencies and clean the git repo.
+5. Run `npm start` to start the development server (or use `npm start`).
 
-   ```yaml
-   theme: minimal-mistakes-jekyll
-   ```
+## Quick deployment
 
-To update the theme run `bundle update`.
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/sandoche/Jekyll-webpack-boilerplate)
 
-### GitHub Pages Method
-
-1. Create/replace the contents of your `Gemfile` with the following:
-
-   ```ruby
-   source "https://rubygems.org"
-
-   gem "github-pages", group: :jekyll_plugins
-   ```
-
-2. Fetch and update bundled gems by running the following [Bundler](https://bundler.io/) command:
-
-   ```bash
-   bundle
-   ```
-
-3. Add `remote_theme: "mmistakes/minimal-mistakes"` to your `_config.yml` file. Remove any other `theme:` or `remote_theme:` entry.
-
-## Usage
-
-For detailed instructions on how to configure, customize, add/migrate content, and more read the [theme's documentation](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/).
-
----
-
-## Contributing
-
-Having trouble working with the theme? Found a typo in the documentation? Interested in adding a feature or [fixing a bug](https://github.com/mmistakes/minimal-mistakes/issues)? Then by all means [submit an issue](https://github.com/mmistakes/minimal-mistakes/issues/new) or [pull request](https://help.github.com/articles/using-pull-requests/). If this is your first pull request, it may be helpful to read up on the [GitHub Flow](https://guides.github.com/introduction/flow/) first.
-
-Minimal Mistakes has been designed as a base for you to customize and fit your site's unique needs. Please keep this in mind when requesting features and/or submitting pull requests. If it's not something that most people will use, I probably won't consider it. When in doubt ask. 
-
-This goes for author sidebar links and "share button" additions -- I have no intention of merging in every possibly option, the essentials are there to get you started :smile:.
-
-### Pull Requests
-
-When submitting a pull request:
-
-1. Clone the repo.
-2. Create a branch off of `master` and give it a meaningful name (e.g. `my-awesome-new-feature`).
-3. Open a pull request on GitHub and describe the feature or fix.
-
-Theme documentation and demo pages can be found in the [`/docs`](docs) if submitting improvements, typo corrections, etc.
+Here is a demo of the Netlify build: https://dazzling-swartz-9738b5.netlify.com
 
 ## Development
 
-To set up your environment to develop this theme, run `bundle install`.
+To start the development server just run  `npm start`
 
-To test the theme, run `bundle exec rake preview` and open your browser at `https://localhost:4000/test/`. This starts a Jekyll server using content in the `test/` directory. As modifications are made to the theme and test site, it will regenerate and you should see the changes in the browser after a refresh.
+### Folder structure
 
----
+```
+.
+├── 404.html
+├── about.md
+├── blog.md
+├── config <--- This folder contains the different Webpack config files
+│   ├── optimization-fix <--- A fix for optimization, do not delete this folder
+│   ├── postcss.config.js <--- Post css config
+│   ├── sw.config.js <--- The service worker config file
+│   ├── webpack.common.js <--- The common Webpack config file for all the environment
+│   ├── webpack.dev.js <--- Dev Webpack environment config file
+│   ├── webpack.optim.js <--- This is used to add the css critical path in the default template
+│   ├── webpack.prod.js <--- Prod Webpack environment config file
+│   └── webpack.pwa.js <--- Please edit this file if you want a PWA
+├── _config.yml <--- The Jekyll config file that you need to set up
+├── Gemfile
+├── Gemfile.lock
+├── _i18n <--- Contains your posts and data in the language you need (check below how to remove it)
+├── _images <--- Put all your images here, you will access them with this path /assets/images/
+│   ├── icon.png <--- Replace this with your icon
+│   └── large-icon.png <--- Replace this with your Facebook Open Graph picture
+├── icon.png <--- Same with this one
+├── _includes
+├── index.md
+├── _layouts
+│   ├── amp.html <--- The layout for Accelerated mobile page
+│   ├── blog.html
+│   ├── home.html
+│   ├── page.html
+│   └── post.html
+├── LICENSE
+├── package.json <--- Update this file with your information especially the name which is used for the meta tags
+├── README.md
+├── _scss <--- Put your partials here
+│   └── _default.scss
+├── _src <--- This folder contains your JS and SASS entry points
+│   ├── index.js
+│   ├── index.scss
+│   └── template
+│       └── default.html <--- Here is the main default template, feel free to edit it but do not delete it
+├── webpack.config.js
+└── package-lock.json
+```
+
+You can see above the basic structure of the boilerplate and the main differences with the official Jekyll folder structure
+
+### Configurations
+
+* The required configurations are all in `_config.yml`
+* Also edit `package.json` the name is used in the meta tags
+* If you want a `manifest.json` file please edit `config/webpack.pwa.js`
+* Replace the different icon by yours in `_images` and in the root folder
+
+### Assets
+* SCSS partials should be located in `_scss` for better reading
+* Put all your images in `_images` the content of this folder will be moved to the `_site/assets/images` so you can access them with this path `/assets/images/**` in your templates, check the examples
+* Put all your Javascript files inside `_src` and import them from `index.js` or you can also add them as a new entry point in your webpack configuration file
+
+### Internationalization
+* All the posts should be there in inside `_i18n` folder inside its language, check the boilerplate examples
+* You can put your variables inside `_i18n/en.yml` (replace en with your language) and call them in your template with `{% t variable_name.sub_variable %}`
+* You can remove the plugin by removing `gem 'jekyll-multiple-languages-plugin'` from `gemfile` and `jekyll-multiple-languages-plugin` from `plugins` in `_config.yml`
+* We invite you to read the very good [official documentation](https://github.com/Anthony-Gaudino/jekyll-multiple-languages-plugin) of the plugin Jekyll multiple language plugin
+
+## Build
+
+### Optimized website
+To build the website run the following line
+
+```
+npm run build
+
+# or if you want the critical css
+npm run build:optim
+```
+The built website will be in `_site` folder.
+
+You can also run a local server to test it with this command
+```
+npm run serve:dist
+```
+
+### PWA
+If you want to build a PWA (including the manifest.json and the service worker) run the following. Please ensure to have configured this file `config/webpack.pwa.js`
+The built website will be in `_site` folder.
+```
+npm run build:pwa
+
+# or if you want the critical css
+npm run build:pwa:optim
+```
+
+### Clean assets & \_site folders
+This will remove the generated folders
+```
+npm run clean:project
+```
+
+## Known issues
+* Jekyll watch doesn't reload / rebuild when a translation file is updated inside `_i18n` folder, I recommand to remove `jekyll-multiple-languages-plugin` if you don't want a multi language website and if you want to watch / rebuild faster. Otherwise close and start  `npm run start` to rebuild and see your changes from `_i18n`
+* The critical CSS Path may show some weird behavior when the page is loading that is why there are separated npm scripts
+
+## Websites using Jekyll Webpack Boilerplate
+
+* Donald Boulton - https://donboulton.com
+* Typster - https://typster.xyz
+* TEDxMarseille - https://tedxmarseille.com
+* Motive network - https://motive.network
+* CoinGenerator - https://coingenerator.sh
+
+## Other documentations
+* [Jekyll](https://jekyllrb.com/)
+* [Webpack](https://webpack.js.org/)
+* [Jekyll multiple languages plugin](https://github.com/Anthony-Gaudino/jekyll-multiple-languages-plugin)
+* [Jekyll SEO tag](https://github.com/jekyll/jekyll-seo-tag)
+* [BrowserSync Webpack plugin](https://www.npmjs.com/package/browser-sync-webpack-plugin)
+* [PostCSS](http://postcss.org/)
 
 ## Credits
 
@@ -155,19 +218,12 @@ To test the theme, run `bundle exec rake preview` and open your browser at `http
 - <https://twitter.com/mmistakes>
 - <https://github.com/mmistakes>
 
-### Icons + Demo Images:
-
-- [The Noun Project](https://thenounproject.com) -- Garrett Knoll, Arthur Shlain, and [tracy tam](https://thenounproject.com/tracytam)
-- [Font Awesome](https://fontawesome.io/)
-- [Unsplash](https://unsplash.com/)
-
 ### Other:
 
 - [Jekyll](https://jekyllrb.com/)
 - [jQuery](https://jquery.com/)
 - [Susy](https://susy.oddbird.net/)
 - [Breakpoint](https://breakpoint-sass.com/)
-- [Magnific Popup](https://dimsemenov.com/plugins/magnific-popup/)
 - [FitVids.JS](https://fitvidsjs.com/)
 - [GreedyNav.js](https://github.com/lukejacksonn/GreedyNav)
 - [jQuery Smooth Scroll](https://github.com/kswedberg/jquery-smooth-scroll)
