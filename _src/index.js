@@ -1,7 +1,6 @@
 // CSS and SASS files
 import './main.css';
 
-import './App';
 import './Site';
 import './Comments';
 import './Reviews';

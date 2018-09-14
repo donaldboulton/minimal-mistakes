@@ -14,7 +14,7 @@ module.exports = {
       inline: true,
       minify: true,
       dest: '_layouts/default.html',
-      css: ['assets/css/main.css'],
+      css: ['assets/app.css'],
     }),
   ],
 };
