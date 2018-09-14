@@ -6,6 +6,7 @@ import './Comments';
 import './Reviews';
 import './Realtime';
 import './WebPushManager';
+import './worker';
 
 require('default-passive-events');
 require('anchor-js');

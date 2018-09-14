@@ -1,95 +1,94 @@
-// Give the service worker access to Firebase Messaging.
-// Note that you can only use Firebase Messaging here, other Firebase libraries
-// are not available in the service worker.
-importScripts('https://www.gstatic.com/firebasejs/3.5.0/firebase-app.js');
-importScripts('https://www.gstatic.com/firebasejs/3.5.0/firebase-messaging.js');
+import * as firebase from 'firebase/app';
+import 'firebase/messaging';
 
-// Initialize the Firebase app in the service worker by passing in the
-// messagingSenderId.
-firebase.initializeApp({
-  'messagingSenderId': '915139563807'
-});
+const getFirebaseMessagingObject = () => {
+  const config = {
+    apiKey: 'AIzaSyBoZgIki3tEgCtgSVVWDdastZCqW9WWGKE',
+    authDomain: 'airy-office-413.firebaseapp.com',
+    databaseURL: 'https://airy-office-413.firebaseio.com',
+    projectId: 'airy-office-413',
+    storageBucket: 'airy-office-413.appspot.com',
+    messagingSenderId: '857761645811',
+  };
 
-// Retrieve an instance of Firebase Messaging so that it can handle background
-// messages.
+  firebase.initializeApp(config);
+
+  return firebase.messaging();
+};
+
 const fb_messaging = firebase.messaging();
 
-// Buffer to save multipart messages
-var messagesBuffer = {};
+const messagesBuffer = {};
 
-// Gets the number of keys in a dictionary
-var countKeys = function (dic) {
-  var count = 0;
-  for (var i in dic) {
-      count++;
+const countKeys = function (dic) {
+  let count = 0;
+  for (const i in dic) {
+    count++;
   }
   return count;
 };
 
-// Parses the Realtime messages using multipart format
-var parseRealtimeMessage = function (message) {
-  // Multi part
-  var regexPattern = /^(\w[^_]*)_{1}(\d*)-{1}(\d*)_{1}([\s\S.]*)$/;
-  var match = regexPattern.exec(message);
+const parseRealtimeMessage = function (message) {
+  const regexPattern = /^(\w[^_]*)_{1}(\d*)-{1}(\d*)_{1}([\s\S.]*)$/;
+  const match = regexPattern.exec(message);
 
-  var messageId = null;
-  var messageCurrentPart = 1;
-  var messageTotalPart = 1;
-  var lastPart = false;
+  let messageId = null;
+  let messageCurrentPart = 1;
+  let messageTotalPart = 1;
+  let lastPart = false;
 
   if (match && match.length > 0) {
-      if (match[1]) {
-          messageId = match[1];
-      }
-      if (match[2]) {
-          messageCurrentPart = match[2];
-      }
-      if (match[3]) {
-          messageTotalPart = match[3];
-      }
-      if (match[4]) {
-          message = match[4];
-      }
+    if (match[1]) {
+      messageId = match[1];
+    }
+    if (match[2]) {
+      messageCurrentPart = match[2];
+    }
+    if (match[3]) {
+      messageTotalPart = match[3];
+    }
+    if (match[4]) {
+      message = match[4];
+    }
   }
 
   if (messageId) {
-      if (!messagesBuffer[messageId]) {
-          messagesBuffer[messageId] = {};
-      }
-      messagesBuffer[messageId][messageCurrentPart] = message;
-      if (countKeys(messagesBuffer[messageId]) == messageTotalPart) {
-          lastPart = true;
-      }
+    if (!messagesBuffer[messageId]) {
+      messagesBuffer[messageId] = {};
+    }
+    messagesBuffer[messageId][messageCurrentPart] = message;
+    if (countKeys(messagesBuffer[messageId]) == messageTotalPart) {
+      lastPart = true;
+    }
   }
   else {
-      lastPart = true;
+    lastPart = true;
   }
 
   if (lastPart) {
-      if (messageId) {
-          message = "";
+    if (messageId) {
+      message = "";
 
-          // Aggregate all parts
-          for (var i = 1; i <= messageTotalPart; i++) {
-              message += messagesBuffer[messageId][i];
-              delete messagesBuffer[messageId][i];
-          }
-
-          delete messagesBuffer[messageId];
+      // Aggregate all parts
+      for (let i = 1; i <= messageTotalPart; i++) {
+        message += messagesBuffer[messageId][i];
+        delete messagesBuffer[messageId][i];
       }
 
-      return message;
-  } else {
+      delete messagesBuffer[messageId];
+    }
+
+    return message;
+  }
     // We don't have yet all parts, we need to wait ...
     return null;
-  } 
-}
+};
 
 // Shows a notification
-function showNotification(message) { 
+function showNotification(message) {
   // In this example we are assuming the message is a simple string
   // containing the notification text. The target link of the notification
-  // click is fixed, but in your use case you could send a JSON message with 
+  // click is fixed, but in your use case you could send a JSON message with
   // a link property and use it in the click_url of the notification
 
   // The notification title
@@ -98,63 +97,60 @@ function showNotification(message) {
   // The notification properties
   const notificationOptions = {
     body: message,
-    icon: 'img/realtime-logo.jpg',
+    icon: 'assets/images/realtime-logo@2x.png',
     data: {
-      click_url: '/index.html'          
+      click_url: '/index.html',
     },
-    tag: Date.now()
+    tag: Date.now(),
   };
 
   return self.registration.showNotification(notificationTitle,
-      notificationOptions);
+    notificationOptions);
 }
 
 // If you would like to customize notifications that are received in the
 // background (Web app is closed or not in browser focus) then you should
 // implement this optional method.
-fb_messaging.setBackgroundMessageHandler(function(payload) {
+fb_messaging.setBackgroundMessageHandler((payload) => {
   console.log('Received background message ', payload);
 
   // Customize notification here
-  if(payload.data && payload.data.M) {
-    var message = parseRealtimeMessage(payload.data.M);
+  if (payload.data && payload.data.M) {
+    const message = parseRealtimeMessage(payload.data.M);
     return showNotification(message);
   }
 });
 
 // Forces a notification
-self.addEventListener('message', function (evt) {
-   evt.waitUntil(showNotification(evt.data));
+self.addEventListener('message', (evt) => {
+  evt.waitUntil(showNotification(evt.data));
 });
 
 // The user has clicked on the notification ...
-self.addEventListener('notificationclick', function(event) {
+self.addEventListener('notificationclick', (event) => {
   // Android doesn’t close the notification when you click on it
   // See: http://crbug.com/463146
   event.notification.close();
 
-  if(event.notification.data && event.notification.data.click_url) {
+  if (event.notification.data && event.notification.data.click_url) {
     // gets the notitication click url
-    var click_url = event.notification.data.click_url;
+    const click_url = event.notification.data.click_url;
 
     // This looks to see if the current is already open and
     // focuses if it is
     event.waitUntil(clients.matchAll({
-      type: "window"
-    }).then(function(clientList) {
-      for (var i = 0; i < clientList.length; i++) {
-        var client = clientList[i];
+      type: 'window',
+    }).then((clientList) => {
+      for (let i = 0; i < clientList.length; i++) {
+        const client = clientList[i];
         if (client.url == click_url && 'focus' in client)
           return client.focus();
       }
       if (clients.openWindow) {
-        var url = click_url;    
+        const url = click_url;
         return clients.openWindow(url);
-      }     
-        
+      }
     }));
   }
 });
-
-
 
