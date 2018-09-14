@@ -1,5 +1,4 @@
 /* eslint-disable import/no-extraneous-dependencies */
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -19,7 +18,6 @@ module.exports = {
       template: './_src/template/default.html',
       filename: '../_layouts/default.html',
     }),
-    new BundleAnalyzerPlugin(),
     new ExtractTextPlugin('[name].css'),
     new CopyWebpackPlugin([{
       from: path.resolve('_images'),
