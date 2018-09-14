@@ -29,12 +29,12 @@ related: true
 excerpt: "I use colorbox in my ASP.Core2 apps. A lot of developers still do in their applications. Mobile First Responsive Colorbox Window to open a link, div, code, about anything. Including a iframe using external data."
 image:
   cover: true
-  path: &image /dest/assets/images/pages/colorbox-html.jpg
+  path: &image /assets/images/colorbox-html.jpg
   feature: *image
-  thumbnail: /dest/assets/images/pages/colorbox-html-320.jpg
+  thumbnail: /assets/images/colorbox-html-320.jpg
 header:
-  image: /dest/assets/images/pages/colorbox-html-1200.jpg
-  teaser: /dest/assets/images/pages/colorbox-html-320.jpg
+  image: /assets/images/colorbox-html-1200.jpg
+  teaser: /assets/images/colorbox-html-320.jpg
 
 support: [adds, cookies]
 folder: _posts

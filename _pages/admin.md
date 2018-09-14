@@ -18,13 +18,13 @@ admin: true
 
 image:
   cover: true
-  path: &image /dest/assets/images/pages/digital-box-compressor.jpg
+  path: &image /assets/images/digital-box-compressor.jpg
   feature: *image
-  thumbnail: /dest/assets/images/pages/digital-box-compressor-320.jpg
+  thumbnail: /assets/images/digital-box-compressor-320.jpg
 
 header:
   overlay_color: "#5e616c"
-  overlay_image: /dest/assets/images/pages/digital_box_1400-compressor.jpg
+  overlay_image: /assets/images/digital_box_1400-compressor.jpg
   cta_label: "Posts"
   cta_url: "/categories/#posts"
   caption: Lost In A Digital Box

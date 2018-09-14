@@ -31,12 +31,12 @@ related: true
 excerpt: "This Tweaks page has evolved from Windows XP to Now upgrading this to Windows 10. Included is My testing and Opinions, try at you own risk."
 image:
   cover: true
-  path: &image /dest/assets/images/pages/windows-tweaks.png
+  path: &image /assets/images/windows-tweaks.png
   feature: *image
-  thumbnail: /dest/assets/images/pages/windows-tweaks-320.png
+  thumbnail: /assets/images/windows-tweaks-320.png
 header:
-  image: /dest/assets/images/pages/windows-tweaks-1200.png
-  teaser: /dest/assets/images/pages/windows-tweaks-320.png
+  image: /assets/images/windows-tweaks-1200.png
+  teaser: /assets/images/windows-tweaks-320.png
 
 support: [adds, cookies]
 folder: _posts

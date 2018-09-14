@@ -34,12 +34,12 @@ excerpt: "Using just links in Asp.NET Core 2 add like included below  @Context.R
 
 image:
   cover: true
-  path: &image /dest/assets/images/pages/social-sharing.jpg
+  path: &image /assets/images/social-sharing.jpg
   feature: *image
-  thumbnail: /dest/assets/images/pages/social-sharing-320.jpg
+  thumbnail: /assets/images/social-sharing-320.jpg
 header:
-  image: /dest/assets/images/pages/social-sharing.jpg
-  teaser: /dest/assets/images/pages/social-sharing-320.jpg       
+  image: /assets/images/social-sharing.jpg
+  teaser: /assets/images/social-sharing-320.jpg       
 
 support: [adds, cookies]
 folder: _posts

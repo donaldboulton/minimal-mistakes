@@ -33,8 +33,8 @@ image:
     thumbnail: /dest/assets/photography/san-francisco/VS-2012-5930-thumbnail.jpg
 
 header:
-  image: /dest/assets/images/pages/letter-avatar-header-1200.png
-  teaser: /dest/assets/images/pages/letter-avatar-header-320.png
+  image: /assets/images/letter-avatar-header-1200.png
+  teaser: /assets/images/letter-avatar-header-320.png
 support: [gallery]
 ---
 # Golden Gate park what a trip

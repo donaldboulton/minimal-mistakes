@@ -31,12 +31,12 @@ category:
 permalink: 2018-06-06-post-Drag-Drop-No-Spambots.html
 image:
   cover: true
-  path: &image /dest/assets/images/pages/stop-spam.jpg
+  path: &image /assets/images/stop-spam.jpg
   feature: *image
-  thumbnail: /dest/assets/images/pages/stop-spam-320.jpg
+  thumbnail: /assets/images/stop-spam-320.jpg
 header:
-  image: /dest/assets/images/pages/stop-spam.jpg
-  teaser: /dest/assets/images/pages/stop-spam-320.jpg
+  image: /assets/images/stop-spam.jpg
+  teaser: /assets/images/stop-spam-320.jpg
 locations:
   - OKC, Oklahoma
 
@@ -56,7 +56,7 @@ lcb: "{"
 
 # Defeat Spambots with dragula
 
-![Drag and Drop with Drgaula](/dest/assets/images/pages/dragula-logo.png){:class="align-center"}
+![Drag and Drop with Drgaula](/assets/images/dragula-logo.png){:class="align-center"}
 
 This is a simple 13kb .js its init.js and .scss using a lightweight flawless way to defeat spambots.
 

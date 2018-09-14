@@ -30,12 +30,12 @@ toc_label: "Admin Contents"
 
 image:
   cover: true
-  path: &image /dest/assets/images/pages/jekyll-admin.jpg
+  path: &image /assets/images/jekyll-admin.jpg
   feature: *image
-  thumbnail: /dest/assets/images/pages/jekyll-admin-320.jpg
+  thumbnail: /assets/images/jekyll-admin-320.jpg
 header:
-  image: /dest/assets/images/pages/jekyll-admin-1200.jpg
-  teaser: /dest/assets/images/pages/jekyll-admin-320.jpg
+  image: /assets/images/jekyll-admin-1200.jpg
+  teaser: /assets/images/jekyll-admin-320.jpg
 
 excerpt: "Jekyll admin makes it so easy for me to add new pages, posts or any type of content, including file management, adding images to .md pages and Changing Configuration."
 

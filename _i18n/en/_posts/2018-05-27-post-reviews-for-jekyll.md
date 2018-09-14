@@ -29,12 +29,12 @@ category:
 permalink: 2018-05-27-post-reviews-for-jekyll.html
 image:
   cover: true
-  path: &image /dest/assets/images/pages/reviews.jpg
+  path: &image /assets/images/reviews.jpg
   feature: *image
-  thumbnail: /dest/assets/images/pages/reviews-320.jpg
+  thumbnail: /assets/images/reviews-320.jpg
 header:
-  image: /dest/assets/images/pages/reviews.jpg
-  teaser: /dest/assets/images/pages/reviews-320.jpg
+  image: /assets/images/reviews.jpg
+  teaser: /assets/images/reviews-320.jpg
 locations:
   - OKC, Oklahoma
 anchor: true
@@ -79,19 +79,19 @@ Doing so means perfect microdata with aggregate, "Averaged" page and site rating
 
 Hoping to get somthing like this on search results
 
-{% include figure image_path="/dest/assets/images/pages/db-reviews-goolgle-search.jpg" alt="Search Results" caption="Search Results" %}
+{% include figure image_path="/assets/images/db-reviews-goolgle-search.jpg" alt="Search Results" caption="Search Results" %}
 
 ### Structured data My site
 
 I have perfect nested structured data in my site. Try this.
 
-{% include figure image_path="/dest/assets/images/pages/review-structured-data-800.jpg" alt="Search Results" caption="Site Test Results" %}
+{% include figure image_path="/assets/images/review-structured-data-800.jpg" alt="Search Results" caption="Site Test Results" %}
 
 ### Structured data My reviews
 
 This is my reviews data fron Google's Structured Data Testing Tool. My microdata is perfect for what I wanted for Reviews with Ratings with review count and aggergate ratings per item as in any Page, Post, Gallery, Gallery Item, and others.
 
-{% include figure image_path="/dest/assets/images/pages/just-review-structured-data-800.jpg" alt="Search Results" caption="Review Results" %}
+{% include figure image_path="/assets/images/just-review-structured-data-800.jpg" alt="Search Results" caption="Review Results" %}
 
 ## Jekyll Reviews-Anyone
 

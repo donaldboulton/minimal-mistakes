@@ -6,7 +6,7 @@
 		"uri": "https://donboulton.com",
 		"email": "donaldboulton@gmail.com",
 		"bio": "Away from ASP. Jekyll for me.",
-		"avatar": "/dest/assets/images/pages/donald-boulton-100.jpg",
+		"avatar": "/assets/images/donald-boulton-100.jpg",
 		"twitter": "donboulton",
 		"google_plus": "donaldboulton"
 	},
@@ -15,7 +15,7 @@
 		"uri": "https://mademistakes.com",
 		"email": "michaelrose@mademistakes.com",
 		"bio": "Just making mistakes.",
-		"avatar": "/dest/assets/images/pages/michael-rose.jpg",
+		"avatar": "/assets/images/michael-rose.jpg",
 		"twitter": "mademistakes",
 		"google_plus": "mademistakes"
 	}

@@ -22,15 +22,15 @@ category:
   - Donald Boulton
 image:
   cover: true
-  path: &image /dest/assets/images/pages/digital.jpg
+  path: &image /assets/images/digital.jpg
   feature: *image
-  thumbnail: /dest/assets/images/pages/digital-320.jpg
+  thumbnail: /assets/images/digital-320.jpg
 header:
-  image: /dest/assets/images/pages/digital-.jpg
-  teaser: /dest/assets/images/pages/digital-320.jpg
+  image: /assets/images/digital-.jpg
+  teaser: /assets/images/digital-320.jpg
 sidebar:
   - title: "Rockwell RV"
-    image: /dest/assets/images/pages/rockwell-rv-sitemap-sm.jpg
+    image: /assets/images/rockwell-rv-sitemap-sm.jpg
     text: "Rockwell Rv Park in a Jacko Travel Trainer"
   - title: "Rv Living"
     text: "I live a the Best RV Park Around. With a pool, hot tub, Dish 150 Channels and High Speed Internet. Right by the Oklahoma River Walk and City Lake."
@@ -39,21 +39,21 @@ locations:
   - Rockwell+RV+Park+%26+Campground
 header:
   overlay_color: "#5e616c"
-  overlay_image: /dest/assets/images/pages/digital.jpg
+  overlay_image: /assets/images/digital.jpg
   cta_label: "Posts"
   cta_url: "/year-archive/"
   caption: Gods Digital World
 excerpt: 'Jekyll on a GitHub Repo Netlify Hosting.<br /> <small><a href="https://donboulton.com">About Donald Boulton at donboulton.com</a></small><br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
 
 feature_row:
-  - image_path: /dest/assets/images/pages/octocat.svg
+  - image_path: /assets/images/octocat.svg
     alt: "Cool and Free"
     title: "Cool and Free"
     excerpt: "Repo GitHub, Netlify Ubuntu Server, Jekyll React Webpack Node, Docker Build."
     url: "https://donboulton.com"
     btn_class: "btn--primary"
     btn_label: "Learn More"
-  - image_path: /dest/assets/images/pages/staticman.svg
+  - image_path: /assets/images/staticman.svg
     alt: "Staticman Comments"
     title: "Comments push"
     excerpt: "Staticman Comments cause a regeneration of a static site. Good for Remote Work."

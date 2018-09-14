@@ -37,12 +37,12 @@ excerpt: "Create a Jekyll image Gallery that loops through all images in a folde
 
 image:
   cover: true
-  path: &image /dest/assets/images/pages/jekyll-reversed.jpg
+  path: &image /assets/images/jekyll-reversed.jpg
   feature: *image
-  thumbnail: /dest/assets/images/pages/jekyll-reversed-320.jpg
+  thumbnail: /assets/images/jekyll-reversed-320.jpg
 header:
-  image: /dest/assets/images/pages/jekyll-reversed.jpg
-  teaser: /dest/assets/images/pages/jekyll-reversed-320.jpg
+  image: /assets/images/jekyll-reversed.jpg
+  teaser: /assets/images/jekyll-reversed-320.jpg
 share: twitter --twitter-hashtags facebook linkedin
 support: [adds, cookies]
 folder: _posts

@@ -37,12 +37,12 @@ A lot of people do not even know about gravatar and you get a generic image for 
 
 image:
   cover: true
-  path: &image /dest/assets/images/pages/letter-avatar-header.png
+  path: &image /assets/images/letter-avatar-header.png
   feature: *image
-  thumbnail: /dest/assets/images/pages/letter-avatar-single-letter-320.png
+  thumbnail: /assets/images/letter-avatar-single-letter-320.png
 header:
-  image: /dest/assets/images/pages/letter-avatar-header-1200.png
-  teaser: /dest/assets/images/pages/letter-avatar-header-320.png        
+  image: /assets/images/letter-avatar-header-1200.png
+  teaser: /assets/images/letter-avatar-header-320.png        
 support: [adds, cookies]
 product: letter-avatar 
 slug: letter-avatar

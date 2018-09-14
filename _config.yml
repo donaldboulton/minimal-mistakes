@@ -17,7 +17,7 @@ description              : "DWB's Jekyll Website."
 url                      : "https://donboulton.com"
 baseurl                  : "/"
 repository               : "donaldboulton/DWB"
-teaser                   : "/dest/assets/images/pages/digital_box_1400-compressor.jpg"
+teaser                   : "/assets/images/digital_box_1400-compressor.jpg"
 breadcrumbs              : true
 words_per_minute         : 200
 comments:
@@ -136,8 +136,8 @@ amp_googleanalytics_id   : "UA-30162465-2"
 # Site Author
 author:
   name                   : "Donald Boulton"
-  avatar                 : "/dest/assets/images/pages/donald-boulton-100.jpg"
-  picture                : "/dest/assets/images/pages/donald-boulton-100.jpg"
+  avatar                 : "/assets/images/donald-boulton-100.jpg"
+  picture                : "/assets/images/donald-boulton-100.jpg"
   bio                    : "Away from Asp. Anything."
   location               : "OKC Oklahoma"
   email                  : "donaldboulton@gmail.com"
