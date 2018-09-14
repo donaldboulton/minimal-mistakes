@@ -1,10 +1,9 @@
 // CSS and SASS files
 import './main.css';
 
-import './jquery';
+import './App';
 import './Site';
 import './Comments';
-import './Main';
 import './Reviews';
 import './Realtime';
 import './WebPushManager';
