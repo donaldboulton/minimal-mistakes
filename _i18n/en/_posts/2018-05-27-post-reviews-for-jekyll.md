@@ -40,7 +40,7 @@ locations:
 anchor: true
 excerpt: "Comments Ratings, Reviews with ratings unlike comments can increase your Google Positioning with correct microdata. Your site Internet search results will then show page review and aggregate rating.
 
-Got the idea from the Staticman Popcorn repo. This is still a work in progress so Leave a Review for any page in donboulton.com and the page aggregate rating will increase after a successfull push to my github repo. The aggregate rating and review per page are working review and rate and it soon will show up as a review rating on that page."
+Got the idea from the Staticman Popcorn repo. This is still a work in progress so Leave a Review for any page in donboulton.com and the page aggregate rating will increase after a successful push to my GitHub repo. The aggregate rating and review per page are working review and rate and it soon will show up as a review rating on that page."
 
 support: [adds, cookies]
 folder: _posts
@@ -58,17 +58,17 @@ lcb: "{"
 
 Reviews [Powered by Staticman](https://staticman.net) Built for the need of rating and reviews micro data for Google Search Results and Search positioning. Built Using and extending [Staticman Popcorn repo](https://github.com/eduardoboucas/popcorn).
 
-This is still a work in progress so Leave a Review for any page in donboulton.com and the page aggregate rating will increase after a successfull push to my github repo. The aggregate rating and review count per page are working.
+This is still a work in progress so Leave a Review for any page in donboulton.com and the page aggregate rating will increase after a successful push to my GitHub repo. The aggregate rating and review count per page are working.
 
 The review and ratings for just that page so the reviews show up as a review rating for just that page I am working on.
 
-Its simplely reversed for now and not page specific so random reviews will show up for reviews on every page when my my frontmatter is set to reviews: true
+Its simple reversed for now and not page specific so random reviews will show up for reviews on every page when my my frontmatter is set to reviews: true
 
 Gota fix this. The random reviews in the side bar will be changed to ramdom-reviews.html and adding reviews with ratings for each page specific to that page.
 
 ## Reviews and the Web
 
-Here are several prespectives on website reviews I found. [Advanced Web Ranking](https://www.advancedwebranking.com/blog/how-to-use-schema-markup-for-reviews/) and [Nick Pierno at Whitespark](https://whitespark.ca/blog/how-to-use-aggregate-review-schema-to-get-stars-in-the-serps/)
+Here are several perspectives on website reviews I found. [Advanced Web Ranking](https://www.advancedwebranking.com/blog/how-to-use-schema-markup-for-reviews/) and [Nick Pierno at Whitespark](https://whitespark.ca/blog/how-to-use-aggregate-review-schema-to-get-stars-in-the-serps/)
 
 There is not a real good way to do this if it is not data-database javascript driven. All the internet examples are hard coded json files which work with google's structured data testing tool, but not what I want to do, I want to get the accurate user review counts and rating sum averages. I could not find any examples of doing it the Jekyll way.
 
@@ -77,7 +77,7 @@ There is not a real good way to do this if it is not data-database javascript dr
 My goal is to have my Reviews-Ratings show up on Google search and increase my positioning and show a page review rating in search results, incorporated with Google Reviews.
 Doing so means perfect microdata with aggregate, "Averaged" page and site ratings, or it would be useless for my goal.
 
-Hoping to get somthing like this on search results
+Hoping to get something like this on search results
 
 {% include figure image_path="/assets/images/db-reviews-goolgle-search.jpg" alt="Search Results" caption="Search Results" %}
 
@@ -89,7 +89,7 @@ I have perfect nested structured data in my site. Try this.
 
 ### Structured data My reviews
 
-This is my reviews data fron Google's Structured Data Testing Tool. My microdata is perfect for what I wanted for Reviews with Ratings with review count and aggergate ratings per item as in any Page, Post, Gallery, Gallery Item, and others.
+This is my reviews data from Google's Structured Data Testing Tool. My microdata is perfect for what I wanted for Reviews with Ratings with review count and aggregated ratings per item as in any Page, Post, Gallery, Gallery Item, and others.
 
 {% include figure image_path="/assets/images/just-review-structured-data-800.jpg" alt="Search Results" caption="Review Results" %}
 
@@ -97,7 +97,7 @@ This is my reviews data fron Google's Structured Data Testing Tool. My microdata
 
 I searched the internet for someone using Jekyll having a page reviews - ratings system. Most all are for Books, Movies or Products. And some I found for products were liquid and "no js" with no external content as a database.
 
-They were built with sliders,"not stars" for ratings and per several products on a single page. And none had aggregate product ratings. So I used Staticman's Popcorn repo, basically the scss and the way he used images for the Stars Ratings without material design styling and images. I added a star.svg and star_border.svg to my icons.svg file for the stars, which needs [svg4everybody.js](https://github.com/jonathantneal/svg4everybody) to work.
+They were built with sliders,"not stars" for ratings and per several products on a single page. And none had aggregate product ratings. So I used Staticman's Popcorn repo, basically the .scss and the way he used images for the Stars Ratings without material design styling and images. I added a star.svg and star_border.svg to my icons.svg file for the stars, which needs [svg4everybody.js](https://github.com/jonathantneal/svg4everybody) to work.
 
 When I make a repo for this and  I will just include or inline the svg's, not us a sprite so svg4everybody.js, will not be needed.
 
@@ -109,7 +109,7 @@ When I make a repo for this and  I will just include or inline the svg's, not us
 
 ## How I built Jekyll Ratings
 
-I have not completed this reviews system. It will post throught Staticman, send me a email, give me a review-rating for that page slug and calculate the sum, "average" of all ratings on that page with a review's per page count.
+I have not completed this reviews system. It will post through Staticman, send me a email, give me a review-rating for that page slug and calculate the sum, "average" of all ratings on that page with a review's per page count.
 
 What I have left to finish is overall site aggregate averaged rating and a overall review total count.
 
@@ -133,13 +133,13 @@ slug: reviews-for-jekyll
 
 ### The Images
 
-The svg sprite I use for all icons in my site, there are two types of stars included fontawesome as icon-ratings-star and icon-ratings-star-open which I chose not to use. I am using two stars I created with paint in 1999 that I have used in may sites since then as: "star" an "star_border".
+The svg sprite I use for all icons in my site, there are two types of stars included font awesome as icon-ratings-star and icon-ratings-star-open which I chose not to use. I am using two stars I created with paint in 1999 that I have used in may sites since then as: "star" an "star_border".
 
 Most of the svgs in this file are from [FontAwesome at github raw-svgs](https://github.com/FortAwesome/Font-Awesome/tree/master/advanced-options/raw-svg)
 
 A few are [Octicons svgs raw](https://octicons.github.com/)
 
-My [icons.svg](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/dest/dest/assets/icons/icons.svg) file requires [svg4everybody.js](https://github.com/jonathantneal/svg4everybody) to work correctly, unless your using fontawesome 5.0+, it's javascript will allow browsers to view svg icon files.
+My [icons.svg](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/dest/src/assets/icons/icons.svg) file requires [svg4everybody.js](https://github.com/jonathantneal/svg4everybody) to work correctly, unless your using fontawesome 5.0+, it's javascript will allow browsers to view svg icon files.
 
 ```html
 <?xml version="1.0" encoding="UTF-8"?>
@@ -162,7 +162,7 @@ The new Review Rating form as a include [reviews-new-page.html](https://github.c
       </svg> Add A Page Review</h3>
       </header>
   <form id="review-form" class="page__form js-form form" method="post" action="https://api.staticman.net/v2/entry/donaldboulton/DWB/gh-pages/reviews" oninput="result.value=parseInt(this['fields[review]'].value)">
-    <div class="field-group rating-select"> <span>Add A Rating:&nbsp;</span> <label class="rating-radio-label" for="comment-form[star-1]"> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/dest/dest/assets/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="1" name="fields[review]" id="comment-form[star-1]" checked=""> <label class="rating-radio-label" for="comment-form[star-2]"> <svg class="icon icon--star_border rating-star rating-radio-star--off"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/dest/dest/assets/icons/icons.svg#icon-star_border"></use>star_border</svg> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/dest/dest/assets/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="2" name="fields[review]" id="comment-form[star-2]"> <label class="rating-radio-label" for="comment-form[star-3]"> <svg class="icon icon--star_border rating-star rating-radio-star--off"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/dest/dest/assets/icons/icons.svg#icon-star_border"></use>star_border</svg> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/dest/dest/assets/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="3" name="fields[review]" id="comment-form[star-3]"> <label class="rating-radio-label" for="comment-form[star-4]"> <svg class="icon icon--star_border rating-star rating-radio-star--off"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/dest/dest/assets/icons/icons.svg#icon-star_border"></use>star_border</svg> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/dest/dest/assets/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="4" name="fields[review]" id="comment-form[star-4]"> <label class="rating-radio-label" for="comment-form[star-5]"> <svg class="icon icon--star_border rating-star rating-radio-star--off"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/dest/dest/assets/icons/icons.svg#icon-star_border"></use>star_border</svg> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/dest/dest/assets/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="5" name="fields[review]" id="comment-form[star-5]"></div>
+    <div class="field-group rating-select"> <span>Add A Rating:&nbsp;</span> <label class="rating-radio-label" for="comment-form[star-1]"> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/dest/src/assets/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="1" name="fields[review]" id="comment-form[star-1]" checked=""> <label class="rating-radio-label" for="comment-form[star-2]"> <svg class="icon icon--star_border rating-star rating-radio-star--off"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/dest/src/assets/icons/icons.svg#icon-star_border"></use>star_border</svg> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/dest/src/assets/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="2" name="fields[review]" id="comment-form[star-2]"> <label class="rating-radio-label" for="comment-form[star-3]"> <svg class="icon icon--star_border rating-star rating-radio-star--off"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/dest/src/assets/icons/icons.svg#icon-star_border"></use>star_border</svg> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/dest/src/assets/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="3" name="fields[review]" id="comment-form[star-3]"> <label class="rating-radio-label" for="comment-form[star-4]"> <svg class="icon icon--star_border rating-star rating-radio-star--off"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/dest/src/assets/icons/icons.svg#icon-star_border"></use>star_border</svg> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/dest/src/assets/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="4" name="fields[review]" id="comment-form[star-4]"> <label class="rating-radio-label" for="comment-form[star-5]"> <svg class="icon icon--star_border rating-star rating-radio-star--off"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/dest/src/assets/icons/icons.svg#icon-star_border"></use>star_border</svg> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/dest/src/assets/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="5" name="fields[review]" id="comment-form[star-5]"></div>
       <div class="form-group">
         <label class="sr-only" for="review-form[name]">Your name</label>
         <input type="text" id="review-form[name]" name="fields[name]" required placeholder="Your Name *"/>
@@ -232,7 +232,7 @@ And the loading icon is from the icons.svg file above
 
       $(form).addClass('disabled');
       $("#review-form-submit").html(
-        '<svg class="icon spin"><use xlink:href="/dest/dest/assets/icons/icons.svg#icon-loading"></use></svg> Loading...'
+        '<svg class="icon spin"><use xlink:href="/dest/src/assets/icons/icons.svg#icon-loading"></use></svg> Loading...'
       );
 
       $.ajax({
@@ -311,7 +311,7 @@ This code below is to be changed to have the include file [reviews.html](https:/
              Title:&nbsp;<span itemprop="itemReviewed" class="title-text">{{ page.lcb }}{ reviewData.title }}</span>
 <span>Rating</span>
 {{ page.lcb }}% for i in (1..reviewData.review) %}
-<svg class="icon icon--star rating-star rating-radio-star--on"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'dest/assets/icons/' | relative_url }}"></use></svg>
+<svg class="icon icon--star rating-star rating-radio-star--on"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'src/assets/icons/' | relative_url }}"></use></svg>
 {{ page.lcb }}% endfor %}
 <meta class="hidden" itemprop="ratingValue" content="{{ page.lcb }}{ reviewData.review }}">
 </div>

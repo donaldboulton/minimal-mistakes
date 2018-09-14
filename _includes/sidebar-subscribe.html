@@ -2,7 +2,7 @@
     <div>
         <span class="section-title">
            <h3 class="nav__title1">
-           <svg class="icon icon--bell fa-bell" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-bell' | prepend: 'dest/assets/icons/' | relative_url }}"></use></svg>&nbsp;
+           <svg class="icon icon--bell fa-bell" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-bell' | prepend: 'src/assets/icons/' | relative_url }}"></use></svg>&nbsp;
            Notications</h3>
         </span>
     </div>
@@ -21,7 +21,7 @@
     <div class="toc1__menu">
       <h3>Firebase Comments</h3>
         <span class="byline-item">
-          <h3><svg class="icon icon--comments-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comments-alt' | prepend: 'dest/assets/icons/' | relative_url }}"></use></svg>&nbsp;{% if site.data.comments[page.slug].size > 1 %}{{ site.data.comments[page.slug] | size | append: ' ' }}{% endif %}<a href="https://donboulton.com/{{ page.url }}#comments">Comments</a></h3>
+          <h3><svg class="icon icon--comments-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comments-alt' | prepend: 'src/assets/icons/' | relative_url }}"></use></svg>&nbsp;{% if site.data.comments[page.slug].size > 1 %}{{ site.data.comments[page.slug] | size | append: ' ' }}{% endif %}<a href="https://donboulton.com/{{ page.url }}#comments">Comments</a></h3>
         </span>
         <ul id="list" class="mdl-list"></ul>
     </div>

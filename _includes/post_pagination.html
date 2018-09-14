@@ -9,7 +9,7 @@
     <li>
       <a href="{{ page.previous.url | relative_url }}" class="previous">
         <span class="pager-title">
-          <svg class="icon icon--chevron-left" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-chevron-left' | prepend: 'dest/assets/icons/' | relative_url }}"></use></svg>
+          <svg class="icon icon--chevron-left" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-chevron-left' | prepend: 'src/assets/icons/' | relative_url }}"></use></svg>
           {{ page.previous.title | markdownify | remove: '<p>' | remove: '</p>' }}
         </span>
       </a>
@@ -20,7 +20,7 @@
       <a href="{{ page.next.url | relative_url }}" class="next">
         <span class="pager-title">
           {{ page.next.title | markdownify | remove: '<p>' | remove: '</p>' }}
-          <svg class="icon icon--chevron-right" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-chevron-right' | prepend: 'dest/assets/icons/' | relative_url }}"></use></svg>
+          <svg class="icon icon--chevron-right" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-chevron-right' | prepend: 'src/assets/icons/' | relative_url }}"></use></svg>
         </span>
       </a>
     </li>

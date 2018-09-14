@@ -28,21 +28,21 @@
   <footer class="entry-meta">
       <div class="archive-right">
       {% if post.work %}
-      <span class="byline-item"><svg class="icon icon--folder fa-folder" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-folder-open' | prepend: 'dest/assets/icons/' | relative_url }}"></use></svg>&nbsp;{{ post.work | markdownify | remove: '<p>' | remove: '</p>' }}</span>
+      <span class="byline-item"><svg class="icon icon--folder fa-folder" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-folder-open' | prepend: 'src/assets/icons/' | relative_url }}"></use></svg>&nbsp;{{ post.work | markdownify | remove: '<p>' | remove: '</p>' }}</span>
       {% endif %}
       {% if post.date %}
-      <span class="byline-item"><svg class="icon icon--calendar-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-calendar-alt' | prepend: 'dest/assets/icons/' | relative_url }}"></use></svg>&nbsp;<time class="entry-time" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time></span>
+      <span class="byline-item"><svg class="icon icon--calendar-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-calendar-alt' | prepend: 'src/assets/icons/' | relative_url }}"></use></svg>&nbsp;<time class="entry-time" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time></span>
       {% endif %}
       {% if post.read_time %}
-      <span class="byline-item"><svg class="icon icon--stopwatch" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-stopwatch' | prepend: 'dest/assets/icons/' | relative_url }}"></use></svg>&nbsp;{% capture read_time %}{% include read-time.html %}{% endcapture %}{{ read_time | strip }}</span>
+      <span class="byline-item"><svg class="icon icon--stopwatch" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-stopwatch' | prepend: 'src/assets/icons/' | relative_url }}"></use></svg>&nbsp;{% capture read_time %}{% include read-time.html %}{% endcapture %}{{ read_time | strip }}</span>
       {% endif %}
       {% if site.data.comments[post.slug].size > 0 and post.comments %}
-      <span class="byline-item"><a href="{{ post.url | relative_url }}#comments-list"><svg class="icon icon--comments-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comments-alt' | prepend: 'dest/assets/icons/' | relative_url }}"></use></svg>&nbsp;{{ site.data.comments[post.slug] | size }} Comment{% if site.data.comments[post.slug].size > 1 %}s{% endif %}</a></span>
+      <span class="byline-item"><a href="{{ post.url | relative_url }}#comments-list"><svg class="icon icon--comments-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comments-alt' | prepend: 'src/assets/icons/' | relative_url }}"></use></svg>&nbsp;{{ site.data.comments[post.slug] | size }} Comment{% if site.data.comments[post.slug].size > 1 %}s{% endif %}</a></span>
       {% endif %}
       {% case site.comments.provider %}
       {% when "disqus" %}
       {% if page.comments == true %}
-      <span class="byline-item"><svg class="icon icon--comments-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comments-alt' | prepend: 'dest/assets/icons/' | relative_url }}"></use></svg>&nbsp;<a href="https://donboulton.com{{ page.url }}#comments-list">0 Comments</a></span>
+      <span class="byline-item"><svg class="icon icon--comments-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comments-alt' | prepend: 'src/assets/icons/' | relative_url }}"></use></svg>&nbsp;<a href="https://donboulton.com{{ page.url }}#comments-list">0 Comments</a></span>
       {% endif %}
       {% endcase %}
       </div>
