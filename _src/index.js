@@ -1,7 +1,7 @@
 // CSS and SASS files
 import './main.css';
 
-import 'jqueryload';
+import './jqueryload';
 
 import './Site';
 
