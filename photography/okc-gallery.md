@@ -20,14 +20,14 @@ category:
 tags: [Gallery, OKC OK]
 sidebar:
   - title: "Grew up in OKC"
-    image: /dest/assets/photography/okc-gallery/OKC PC from top.jpg
+    image: /build/photography/okc-gallery/OKC PC from top.jpg
     image_alt: "My High School"
     text: "Putnam City High School"
   - title: "12 Years at PC"
     text: "Spen alot of my High School days in the parking lot or across the street riding my dirt bikes in the Sand Pits - Dolise Park."
 header:
-  image: /dest/assets/photography/okc-gallery/Memorial Chairs.jpg
-  teaser: /dest/assets/photography/okc-gallery/Memorial Chairs.jpg
+  image: /build/photography/okc-gallery/Memorial Chairs.jpg
+  teaser: /build/photography/okc-gallery/Memorial Chairs.jpg
 locations:
   - Oklahoma City, OK
 support: [gallery]
@@ -38,4 +38,4 @@ support: [gallery]
   {% include archive-single.html %}
 {% endfor %}
 
-{% include image-gallery.html folder="/dest/assets/photography/okc-gallery" %}
+{% include image-gallery.html folder="/build/photography/okc-gallery" %}

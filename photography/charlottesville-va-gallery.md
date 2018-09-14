@@ -18,7 +18,7 @@ cookies: false
 breadcrumb: true
 sidebar:
   - title: "The Mall"
-    image: /dest/assets/photography/charlottesville-va-gallery/Downtown Mall.jpg
+    image: /build/photography/charlottesville-va-gallery/Downtown Mall.jpg
     image_alt: "Charlottesville Downtown Mall"
     text: "Charlottesville Downtown Mall"
   - title: "Responsibilities"
@@ -27,8 +27,8 @@ category:
   - Gallerys
 tags: [Gallery]
 header:
-  image: /dest/assets/photography/charlottesville-va-gallery/Downtown Mall.jpg
-  teaser: /dest/assets/photography/charlottesville-va-gallery/Downtown Mall.jpg
+  image: /build/photography/charlottesville-va-gallery/Downtown Mall.jpg
+  teaser: /build/photography/charlottesville-va-gallery/Downtown Mall.jpg
 locations:
   - Charlottesville Va
 support: [gallery]
@@ -39,4 +39,4 @@ support: [gallery]
   {% include archive-single.html %}
 {% endfor %}
 
-{% include image-gallery.html folder="/dest/assets/photography/charlottesville-va-gallery" %}
+{% include image-gallery.html folder="/build/photography/charlottesville-va-gallery" %}

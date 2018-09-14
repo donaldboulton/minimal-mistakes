@@ -20,14 +20,14 @@ category:
 tags: [Gallery, Us Fest]  
 sidebar:
   - title: "Quaterflash"
-    image: /dest/assets/photography/us-fest-gallery/Quarterflash US.jpg
+    image: /build/photography/us-fest-gallery/Quarterflash US.jpg
     image_alt: "Quarter Flash"
     text: "Cool at the fest"
   - title: "Four days of fun"
     text: "Scott Fife and I drove to LA, stayed in Pamona with my Grandparents for the two weekends and 4 days of fun."
 header:
-  image: /dest/assets/photography/us-fest-gallery/US Fest Stage.jpg
-  teaser: /dest/assets/photography/us-fest-gallery/US Fest Stage.jpg
+  image: /build/photography/us-fest-gallery/US Fest Stage.jpg
+  teaser: /build/photography/us-fest-gallery/US Fest Stage.jpg
 
 locations:
   - Glen Helen Recreational Park
@@ -40,4 +40,4 @@ support: [gallery]
   {% include archive-single.html %}
 {% endfor %}
 
-{% include image-gallery.html folder="/dest/assets/photography/us-fest-gallery" %}
+{% include image-gallery.html folder="/build/photography/us-fest-gallery" %}

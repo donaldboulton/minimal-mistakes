@@ -34,19 +34,19 @@ catagory: true
 breakcrumb: true
 sidebar:
   - title: "My Hun Kitty"
-    image: /dest/assets/photography/old-cat-gallery/Little-Hun-th.jpg
+    image: /build/photography/old-cat-gallery/Little-Hun-th.jpg
     image_alt: "Hun Kitty"
     text: "Hun at 3 weaks"
   - title: "Responsibilities"
     text: "I take care of about 20 stray cats in three different parts of OKC and any kitty that comes my way."
 image:
     cover: true
-    path: &image /dest/assets/photography/cat-gallery/einstine.jpg
+    path: &image /build/photography/cat-gallery/einstine.jpg
     feature: *image
-    thumbnail: /dest/assets/photography/cat-gallery/einstine-320.jpg
+    thumbnail: /build/photography/cat-gallery/einstine-320.jpg
 header:
-  image: /dest/assets/photography/cat-gallery/einstine-1200.jpg
-  teaser: /dest/assets/photography/cat-gallery/einstine-th.jpg"
+  image: /build/photography/cat-gallery/einstine-1200.jpg
+  teaser: /build/photography/cat-gallery/einstine-th.jpg"
 folder: photography
 product: gallerys
 slug: photography/index.html
@@ -83,7 +83,7 @@ github_editme_path: donaldboulton/DWB/blob/gh-pages/photography/index.html
    <div>
     <h2 class="page__title">{{ gallery.title }}</h2>
     <a href="{{ site.url }}{{ site.baseurl }}/photography/{{ gallery.directory }}">
-      <img class="gallery-image" alt="{{ gallery.title }}" src="{{ site.url }}{{ site.baseurl }}/dest/assets/photography/{% if gallery.picture_path %}{{ gallery.picture_path }}{% else %}{{ gallery.directory }}{% endif %}/{{ gallery.preview.thumbnail }}" />
+      <img class="gallery-image" alt="{{ gallery.title }}" src="{{ site.url }}{{ site.baseurl }}/build/photography/{% if gallery.picture_path %}{{ gallery.picture_path }}{% else %}{{ gallery.directory }}{% endif %}/{{ gallery.preview.thumbnail }}" />
     </a>
   </div>
   {% endfor %}

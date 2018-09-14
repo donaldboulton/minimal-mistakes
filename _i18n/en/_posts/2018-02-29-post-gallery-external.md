@@ -32,20 +32,20 @@ reviews: true
 excerpt: "Pictures of my Kitty Cats and Travels. My Kitty Gallery has my 4 male House Cats, Past Cats and the 20 or so strays I feed every day. Computers Cats are my passion, I love kitty cats"
 image:
   cover: true
-  path: &image /dest/assets/photography/cat-gallery/einstine.jpg
+  path: &image /build/photography/cat-gallery/einstine.jpg
   feature: *image
-  thumbnail: /dest/assets/photography/cat-gallery/einstine-320.jpg
+  thumbnail: /build/photography/cat-gallery/einstine-320.jpg
 sidebar:
   - title: "My Hun Kitty"
-    image: /dest/assets/photography/old-cat-gallery/Little-Hun-th.jpg
+    image: /build/photography/old-cat-gallery/Little-Hun-th.jpg
     image_alt: "Hun Kitty"
     text: "Hun at 3 weaks"
   - title: "Responsibilities"
     text: "I take care of any kitty that comes my way."
 
 header:
-  image: /dest/assets/photography/cat-gallery/einstine-1200.jpg
-  teaser: /dest/assets/photography/cat-gallery/einstine-320.jpg
+  image: /build/photography/cat-gallery/einstine-1200.jpg
+  teaser: /build/photography/cat-gallery/einstine-320.jpg
 
 support: [adds, cookies]
 folder: _posts

@@ -19,14 +19,14 @@ category:
 tags: [Gallery, My Cats]
 sidebar:
   - title: "My Hun Kitty"
-    image: /dest/assets/photography/old-cat-gallery/Little-Hun-th.jpg
+    image: /build/photography/old-cat-gallery/Little-Hun-th.jpg
     image_alt: "Hun Kitty"
     text: "Hun at 3 weaks"
   - title: "Responsibilities"
     text: "I take care of about 20 stray cats in three different parts of OKC and any kitty that comes my way."  
 header:
-  image: /dest/assets/photography/cat-gallery/Little-Hun-1200.jpg
-  teaser: /dest/assets/photography/cat-gallery/Little-Hun-th.jpg"
+  image: /build/photography/cat-gallery/Little-Hun-1200.jpg
+  teaser: /build/photography/cat-gallery/Little-Hun-th.jpg"
 locations:
   - Oklahoma City, Oklahoma
   - Idabel Oklahoma
