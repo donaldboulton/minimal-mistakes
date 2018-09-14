@@ -31,7 +31,7 @@
             <div class="field-group1">
 							<span class="heading">Rating:</span>
 		  				{% for i in (1..reviewData.review) %}
-    						<svg class="icon icon--star rating-star rating-radio-star--on"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: '/assets/images/' | relative_url }}"></use></svg>
+    						<svg class="icon icon--star rating-star rating-radio-star--on"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'build/icons/' | relative_url }}"></use></svg>
               {% endfor %}
             </div>
             {% assign reviews = site.data.reviews | where:'product',page.slug %}

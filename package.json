@@ -75,6 +75,7 @@
   },
   "dependencies": {
     "anchor-js": "^4.1.1",
+    "babel-eslint": "^9.0.0",
     "default-passive-events": "^1.0.10",
     "file-upload-with-preview": "^2.1.1",
     "firebase": "^5.4.1",
