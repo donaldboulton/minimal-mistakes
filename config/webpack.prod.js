@@ -7,7 +7,6 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 module.exports = Merge(CommonConfig, {
-  mode: 'production',
   output: {
     filename: '[name]-[hash].bundle.js',
     chunkFilename: '[name]-[chunkhash].js',
