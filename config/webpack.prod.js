@@ -8,7 +8,6 @@ const ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 module.exports = Merge(CommonConfig, {
   output: {
-    common: ['jquery'],
     filename: '[name]-[hash].bundle.js',
     chunkFilename: '[name]-[chunkhash].js',
     path: path.resolve('assets'),
