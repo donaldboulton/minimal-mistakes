@@ -76,6 +76,3 @@ $('.gallery').each( function() {
 
   var items = getItems();
 });
-
-
-npm run build:pwa:optim

@@ -19,8 +19,6 @@ import './WebPushManager';
 
 import './Firebase';
 
-import './Site';
-
 require('lightgallery');
 require('lazysizes');
 require('lunr');
