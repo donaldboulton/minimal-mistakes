@@ -220,6 +220,7 @@ strict_front_matter      : true
 include:
   - .htaccess
   - _pages
+  - build
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
