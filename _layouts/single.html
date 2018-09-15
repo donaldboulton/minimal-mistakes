@@ -89,7 +89,7 @@ layout: default
       {% include post_pagination.html %}
 
       {% if page.comments == true %}
-        {% include comments-all.html %}
+        {% include disqus.html %}
       {% endif %}
 
       {% if page.reviews == true %}

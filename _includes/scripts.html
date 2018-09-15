@@ -8,8 +8,7 @@
 <script src="{{ script_path }}"></script>
   {% endfor %}
 {% else %}
-<script src="{{ '/build/js/vendor/letter-avatar/letter-avatar.js' | relative_url }}"></script>
-{% endif %}
+{% endif %}<script src="{{ '/build/js/vendor/letter-avatar/letter-avatar.min.js.gz' | relative_url }}"></script>
 
 {% if site.search == true or page.layout == "search" %}
   {%- assign search_provider = site.search_provider | default: "lunr" -%}
@@ -91,7 +90,7 @@
 {% comment %} <!--  my own validation scripts and scss from sitepoint.com/instant-validation/ -->{% endcomment %}
 
 {% if page.support contains 'dragula' %}
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js.gz" crossorigin="anonymous"></script>
   <script src="{{ '/build/js/vendor/dragula/example.min.js' | relative_url }}"></script>
 {% endif %}
 
