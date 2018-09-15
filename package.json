@@ -75,6 +75,7 @@
   },
   "dependencies": {
     "anchor-js": "^4.1.1",
+    "atob": "^2.1.2",
     "babel-eslint": "^9.0.0",
     "default-passive-events": "^1.0.10",
     "file-upload-with-preview": "^2.1.1",
@@ -95,6 +96,7 @@
     "lightgallery": "^1.6.11",
     "netlify-auth-providers": "^1.0.0-alpha5",
     "netlify-identity-widget": "^1.4.14",
+    "normalize.css": "^7.0.0",
     "node-fetch": "^2.2.0",
     "react": "^15.0.2",
     "react-addons-update": "^15.0.2",
