@@ -76,6 +76,7 @@
     "anchor-js": "^4.1.1",
     "atob": "^2.1.2",
     "babel-eslint": "^9.0.0",
+    "curl": "^0.1.4",
     "default-passive-events": "^1.0.10",
     "file-upload-with-preview": "^2.1.1",
     "firebase": "^5.4.1",

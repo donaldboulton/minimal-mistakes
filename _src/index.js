@@ -19,10 +19,21 @@ import './WebPushManager';
 
 import './Firebase';
 
-var jsdom = require('jsdom');
-const { JSDOM } = jsdom;
-const { window } = new JSDOM('<html></html>');
-var $ = require('jquery')(window);
+const { JSDOM } = require( 'jsdom' );
+const jsdom = new JSDOM( testHTML );
+
+// Set window and document from jsdom
+const { window } = jsdom;
+const { document } = window;
+// Also set global window and document before requiring jQuery
+global.window = window;
+global.document = document;
+
+const $ = global.jQuery = require( 'jquery' );
+
+console.log( `jQuery ${jQuery.fn.jquery} working! Yay!!!` );
+const inputElement = $( '#fiptest' );
+console.log( inputElement.length );
 
 require('lightgallery');
 require('lazysizes');
