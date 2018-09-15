@@ -13,10 +13,6 @@ render(<App />, document.getElementById('initial-content'));
 // CSS and SASS files
 import './main.css';
 
-import './jqueryload';
-
-import './Reviews';
-
 import './Realtime';
 
 import './WebPushManager';
