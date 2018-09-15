@@ -23,10 +23,6 @@ module.exports = Merge(CommonConfig, {
       name: 'common',
       minChunks: 2,
     }),
-    new webpack.ProvidePlugin({
-      $: path.join(__dirname, './node_modules', 'jquery/dist/jquery'),
-      jQuery: path.join(__dirname, './node_modules', 'jquery/dist/jquery'),
-    }),
     new webpack.optimize.UglifyJsPlugin({
       beautify: false,
       mangle: {
