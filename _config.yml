@@ -368,15 +368,6 @@ jekyll-archives:
      category: /categories/:name/
      tag: /tags/:name/
 
-# HTML Compression
-# - https://jch.penibelst.de/
-compress_html:
-  clippings: all
-  comments:  ["<!-- ", " -->"]
-  endings:   all
-  ignore:
-    envs: development
-
 # Collections
 collections:
   photography:
