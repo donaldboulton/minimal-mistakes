@@ -1,5 +1,4 @@
 /* eslint-disable import/no-extraneous-dependencies */
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -33,7 +32,6 @@ module.exports = {
       threshold: 10240,
       minRatio: 0.8
     }),
-    new BundleAnalyzerPlugin(),
   ],
   devServer: {
     contentBase: './assets',

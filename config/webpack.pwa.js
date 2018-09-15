@@ -7,7 +7,7 @@ const WebpackPwaManifest = require('webpack-pwa-manifest');
 module.exports = Merge(ProdConfig, {
   plugins: [
     new WebpackPwaManifest({
-      name: 'Donald Boulton',
+      name: 'donboulton.com',
       short_name: 'DWB',
       description: 'A React Jekyll site with love',
       orientation: 'portrait',
