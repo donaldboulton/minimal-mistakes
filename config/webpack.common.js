@@ -9,7 +9,7 @@ const CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports = {
   entry: {
-    common: ['jquery'],
+    common: ['jsdom', 'jquery'],
     app: './_src/index.js',
   },
   plugins: [
