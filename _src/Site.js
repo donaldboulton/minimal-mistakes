@@ -37,5 +37,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   
     // init smooth scroll
-    $('a').smoothScroll({ offset: -20 })
+    $('a').smoothScroll({ offset: -20 });
 }
