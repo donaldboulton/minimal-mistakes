@@ -14,7 +14,7 @@
 <meta name="apple-mobile-web-app-title" content="donboulton">
 <meta name="msapplication-starturl" content="https://donboulton.com">
 <meta name="author" Content="Donald Boulton">
-<meta name="twitter:thumbnailUrl" Content="/dest/assets/images/donald-boulton_100.jpg">
+<meta name="twitter:thumbnailUrl" Content="/assets/images/donald-boulton_100.jpg">
 <meta name="twitter:id" Content="105217183">
 <meta name="twitter:creator:id" Content="105217183">
 <meta name="twitter:creator:username" Content="@donboulton">
@@ -81,15 +81,15 @@
 {% endif %}
 
 {% if page.support contains 'gallery' %}
-   <link rel="stylesheet" href="{{ '/dist/assets/dist/css/lightgallery.min.css' | relative_url }}">
+   <link rel="stylesheet" href="{{ '/build/assets/dist/css/lightgallery.min.css' | relative_url }}">
 {% endif %}
 
 {% if page.support contains 'places' %}
-   <link rel="stylesheet" href="{{ '/dist/assets/css/vendor/google-places/google-places.css' | relative_url }}">
+   <link rel="stylesheet" href="{{ '/build/assets/css/vendor/google-places/google-places.css' | relative_url }}">
 {% endif %}
 
 {% if page.support contains 'products' %}
-  <link rel="stylesheet" href="{{ '/assets/css/vendor/snipcart/snipcart.min.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/build/assets/css/vendor/snipcart/snipcart.min.css' | relative_url }}">
 {% endif %}
 
 {% if page.support contains 'calendar' %}
@@ -110,4 +110,4 @@
   {% endunless %}
 {% endif %}
 <script src="https://identity-js.netlify.com/v1/netlify-identity-widget.js"></script>
-<script src="{{ '/dist/assets/js/vendor/real-time/index.js' | relative_url }}" async></script>
+<script src="{{ '/build/assets/js/vendor/real-time/index.js' | relative_url }}" async></script>

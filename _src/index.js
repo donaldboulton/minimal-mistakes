@@ -19,8 +19,11 @@ import './WebPushManager';
 
 import './Firebase';
 
+import './Site';
+
 require('lightgallery');
 require('lazysizes');
+require('lunr');
 require('svg4everybody');
 require('default-passive-events');
 require('anchor-js');
