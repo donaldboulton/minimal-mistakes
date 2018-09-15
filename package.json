@@ -104,7 +104,6 @@
     "react-dom": "^15.0.2",
     "realtime-messaging": "^2.1.42",
     "svg4everybody": "^2.1.9",
-    "uglify-js-brunch": "^2.10.0",
     "utf-8-validate": "^5.0.1"
   }
 }
