@@ -7,6 +7,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 module.exports = Merge(CommonConfig, {
+  mode: 'production',
   output: {
     filename: '[name]-[hash].bundle.js',
     chunkFilename: '[name]-[chunkhash].js',
@@ -24,8 +25,8 @@ module.exports = Merge(CommonConfig, {
       minChunks: 2,
     }),
     new webpack.ProvidePlugin({
-      $: path.join(__dirname, './node_modules', 'jquery/dist/jquery'),
-      jQuery: path.join(__dirname, './node_modules', 'jquery/dist/jquery'),
+      $: path.join(__dirname, './node_modules', 'jquery/src/jquery'),
+      jQuery: path.join(__dirname, './node_modules', 'jquery/src/jquery'),
     }),
     new webpack.optimize.UglifyJsPlugin({
       beautify: false,

@@ -10,7 +10,7 @@ class App extends Component {
 }
 render(<App />, document.getElementById('initial-content'));
 
-// CSS and SASS files
+// CSS JS and SASS files
 import './main.css';
 
 import './Realtime';
@@ -18,6 +18,11 @@ import './Realtime';
 import './WebPushManager';
 
 import './Firebase';
+
+var jsdom = require('jsdom');
+const { JSDOM } = jsdom;
+const { window } = new JSDOM('<html></html>');
+var $ = require('jquery')(window);
 
 require('lightgallery');
 require('lazysizes');
