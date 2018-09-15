@@ -8,6 +8,7 @@ const ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 module.exports = Merge(CommonConfig, {
   output: {
+    mode: 'production',
     filename: '[name]-[hash].bundle.js',
     chunkFilename: '[name]-[chunkhash].js',
     path: path.resolve('assets'),

@@ -26,9 +26,6 @@ module.exports = {
       from: path.resolve('_images'),
       to: 'images/',
     }]),
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production')
-    }),
     new CompressionPlugin({
       asset: '[path].gz[query]',
       algorithm: 'gzip',
