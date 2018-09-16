@@ -97,6 +97,18 @@ layout: default
         {% include reviews-form.html %}
       {% endif %}
     </div>
+    <div class="text-center" role="note" itemscope itemtype="https://schema.org/WPAdBlock">
+      <meta itemprop="name" content="Adsense for {{ page.title }}"/>
+      <meta itemprop="description" content="Support {{ site.title }} by using Adsense and other advertisements."/>
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-7655495105068461"
+           data-ad-slot="5601054893"
+           data-ad-format="auto"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>    
   </article>
   </div>
   {% if page.cookies == true %}
@@ -123,18 +135,6 @@ layout: default
       </div>
     </div>
   {% endif %}
-  <div class="text-center" role="note" itemscope itemtype="https://schema.org/WPAdBlock">
-    <meta itemprop="name" content="Adsense for {{ page.title }}"/>
-    <meta itemprop="description" content="Support {{ site.title }} by using Adsense and other advertisements."/>
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-7655495105068461"
-         data-ad-slot="5601054893"
-         data-ad-format="auto"></ins>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-</div>
-<div data-netlify-identity-menu hidden></div>
-<script src="{{ '/build/js/vendor/jquery/jquery-3.3.1.min.js' | relative_url }}"></script>
+  <div data-netlify-identity-menu hidden></div>
+  <script src="{{ '/build/js/vendor/jquery/jquery-3.3.1.min.js' | relative_url }}"></script>
 </div>
