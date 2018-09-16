@@ -1,4 +1,5 @@
-import * as firebase from 'firebase/app';
+import firebase from 'firebase/app';
+import 'firebase/database';
 import 'firebase/messaging';
 
 const getFirebaseMessagingObject = () => {
@@ -16,7 +17,9 @@ const getFirebaseMessagingObject = () => {
   return firebase.messaging();
 };
 
-const fb_messaging = firebase.messaging();
+const messaging = firebase.messaging();
+
+messaging.usePublicVapidKey("AIzaSyBugEuIeQPsKqGyrgn5UWh9PtJDmBaZS6Y");
 
 const messagesBuffer = {};
 
