@@ -81,15 +81,15 @@
 {% endif %}
 
 {% if page.support contains 'gallery' %}
-   <link rel="stylesheet" href="{{ '/build/assets/dist/css/lightgallery.min.css' | relative_url }}">
+   <link rel="stylesheet" href="{{ '/build/dist/css/lightgallery.min.css' | relative_url }}">
 {% endif %}
 
 {% if page.support contains 'places' %}
-   <link rel="stylesheet" href="{{ '/build/assets/css/vendor/google-places/google-places.css' | relative_url }}">
+   <link rel="stylesheet" href="{{ '/build/css/vendor/google-places/google-places.css' | relative_url }}">
 {% endif %}
 
 {% if page.support contains 'products' %}
-  <link rel="stylesheet" href="{{ '/build/assets/css/vendor/snipcart/snipcart.min.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/build/css/vendor/snipcart/snipcart.min.css' | relative_url }}">
 {% endif %}
 
 {% if page.support contains 'calendar' %}
@@ -106,8 +106,8 @@
 <!-- AMP Article -->
 {% if page.path contains 'posts' %}
   {% unless page.amp_skip %}
-    <link rel="amphtml" href="{{ site.baseurl }}/amp-html/{{ page.amp_path }}.html">
+    <link rel="amphtml" href="{{ site.baseurl }}/amp/{{ page.amp_path }}.html">
   {% endunless %}
 {% endif %}
 <script src="https://identity-js.netlify.com/v1/netlify-identity-widget.js"></script>
-<script src="{{ '/build/assets/js/vendor/notifications/index.js' | relative_url }}" async></script>
+<script src="{{ '/build/js/vendor/notifications/index.js' | relative_url }}" async></script>
