@@ -19,6 +19,10 @@ import './WebPushManager';
 
 import './Firebase';
 
+import './Site';
+
+import './WebIntents';
+
 require('lightgallery');
 require('lazysizes');
 require('svg4everybody');
