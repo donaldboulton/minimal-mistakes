@@ -1,6 +1,6 @@
 import React from 'react';
 import icon from './icon.png';
-import './App.css';
+import './Rapp.css';
 import { askForPermissioToReceiveNotifications } from './push-notification';
 
 const App = () => (
