@@ -76,7 +76,6 @@
   },
   "dependencies": {
     "anchor-js": "^4.1.1",
-    "atob": "^2.1.2",
     "compression-webpack-plugin": "^1.1.10",
     "default-passive-events": "^1.0.10",
     "file-upload-with-preview": "^2.1.1",
@@ -100,7 +99,7 @@
     "normalize.css": "^7.0.0",
     "react": "^16.5.0",
     "react-dom": "^16.5.1",
-    "react-scripts": "1.1.5",
+    "react-scripts": "1.0.16",
     "svg4everybody": "^2.1.9",
     "utf-8-validate": "^5.0.1"
   }
