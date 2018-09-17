@@ -541,7 +541,6 @@
   float: left;
   margin-top: 1em;
   padding-top: 1em;
-  border-top: 1px solid $border-color;
 
   @include breakpoint($large) {
     float: right;
