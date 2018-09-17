@@ -201,7 +201,7 @@ function addNavItem(ul, href, text) {
   </script>
 {% endif %}
 <script>
- $(document).ready(function(){svg4everybody();$("a").smoothScroll({offset:-20})});var coll=document.getElementsByClassName("collapsible");var i;for(i=0;i<coll.length;i++){coll[i].addEventListener("click",function(){this.classList.toggle("active");var content=this.nextElementSibling;if(content.style.maxHeight){content.style.maxHeight=null}else{content.style.maxHeight=content.scrollHeight+"px"}})}
+ $(document).ready(function(){
   function external_new_window() {
     for(var c = document.getElementsByTagName("a"), a = 0;a < c.length;a++) {
     var b = c[a];
@@ -224,6 +224,9 @@ $(".author__urls_masthead button").on("click", function() {
     $(".author__urls_masthead").toggleClass("is--visible");
     $(".author__urls_masthead button").toggleClass("open");
 });
+svg4everybody();
+$("a").smoothScroll({offset:-20})});var coll=document.getElementsByClassName("collapsible");var i;for(i=0;i<coll.length;i++){coll[i].addEventListener("click",function(){this.classList.toggle("active");var content=this.nextElementSibling;if(content.style.maxHeight){content.style.maxHeight=null}else{content.style.maxHeight=content.scrollHeight+"px"}})}
 </script>
 <script async defer src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script src="https://messaging-public.realtime.co/js/2.1.0/ortc.js"></script>
+<script src="{{ '/build/js/vendor/twitter/web-intents.js' | relative_url }}"></script>
+<script src="{{ '/build/js/init.site.js' | relative_url }}"></script>

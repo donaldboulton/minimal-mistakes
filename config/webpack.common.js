@@ -8,7 +8,7 @@ const CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports = {
   entry: {
-    common: ['firebase', 'realtime-messaging'],
+    common: ['firebase'],
     app: './_src/index.js',
   },
   plugins: [

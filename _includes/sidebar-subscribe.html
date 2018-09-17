@@ -2,7 +2,7 @@
     <div>
         <span class="section-title">
            <h3 class="nav__title1">
-           <svg class="icon icon--bell fa-bell" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-bell' | prepend: '/assets/images/' | relative_url }}"></use></svg>&nbsp;
+           <svg class="icon icon--bell fa-bell" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-bell' | prepend: '/build/icons/' | relative_url }}"></use></svg>&nbsp;
            Notications</h3>
         </span>
     </div>
@@ -14,11 +14,8 @@
     <p>
       Your channel is: <code><span id="channel">...</span></code>
     </p>
-    <div class="form-group">
-        <input type="text" id="fiptest">
-        <input type="text" id="msgInput" class="materialize-textarea" placeholder="Enter your message">
-        <button id="sendButton" class="btn btn--primary" onclick="javascript:send();">Send me a push notification</button>
-    </div>
+    <div id="app" class="form-group"></div>
+    <div id="root"></div>
     <div class="toc1__menu">
       <h3>Firebase Comments</h3>
         <span class="byline-item">

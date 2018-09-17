@@ -13,15 +13,9 @@ render(<App />, document.getElementById('initial-content'));
 // CSS JS and SASS files
 import './main.css';
 
-import './Realtime';
+import './Hello';
 
-import './WebPushManager';
-
-import './Firebase';
-
-import './Site';
-
-import './WebIntents';
+import './Init.Firebase';
 
 require('lightgallery');
 require('lazysizes');
