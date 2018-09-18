@@ -22,7 +22,7 @@ import './lightgallery-all';
 import './registerServiceWorker';
 
 require('jquery-mousewheel');
-require('isotope');
+import './isotope.pkgd.min';
 require('picturefill');
 require('imagesloaded');
 require('lazysizes');
