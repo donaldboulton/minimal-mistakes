@@ -15,15 +15,9 @@
             {% if page.read_time %}
               <span class="byline-item"><svg class="icon icon--stopwatch" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-stopwatch' | prepend: 'build/icons/' | relative_url }}"></use></svg>&nbsp;{% capture read_time %}{% include read-time.html %}{% endcapture %}{{ read_time | strip }}</span>
             {% endif %}
-            {% if page.comments == true and site.data.comments[page.slug].size > 0 %}
-              <span class="byline-item"><a href="#comments"><svg class="icon icon--comments-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comments-alt' | prepend: 'build/icons/' | relative_url }}"></use></svg>&nbsp;{{ site.data.comments[page.slug] | size }} Comment{% if site.data.comments[page.slug].size > 1 %}s{% endif %}</a></span>
-            {% endif %}
-            {% case site.comments.provider %}
-            {% when "disqus" %}
             {% if page.comments == true %}
-              <span class="byline-item"><svg class="icon icon--comments-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comments-alt' | prepend: 'build/icons/' | relative_url }}"></use></svg>&nbsp;<a href="https://donboulton.com/{{ page.url }}#disqus_thread">0 Comments</a></span>
+              <span class="byline-item"><svg class="icon icon--comments-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comments-alt' | prepend: 'build/icons/' | relative_url }}"></use></svg>&nbsp;<a href="https://donboulton.com/{{ page.url }}#disqus_thread">Comments</a></span>
             {% endif %}
-            {% endcase %}
           </div>
           <div class="entry-meta" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
             {% if page.reviews == true and site.data.reviews | where:'product',page.slug.size > 0 %}

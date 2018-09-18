@@ -17,8 +17,11 @@ import './Hello';
 
 import './Init.Firebase';
 
+import './registerServiceWorker';
+
 require('lightgallery');
 require('lazysizes');
 require('svg4everybody');
 require('default-passive-events');
+require('file-upload-with-preview');
 require('anchor-js');
