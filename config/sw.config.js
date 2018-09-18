@@ -1,4 +1,3 @@
-importScripts: ['../src/firebase-messaging-sw.js'],
 module.exports = {
   staticFileGlobs: [
     '_site/assets/**.css',
@@ -12,4 +11,9 @@ module.exports = {
     handler: 'networkFirst',
   }],
   root: '_site',
-}
+  importScripts: [
+    {
+      filename: './src/firebase-messaging-sw.js'
+    }
+  ],
+};
