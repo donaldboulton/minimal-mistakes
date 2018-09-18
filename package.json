@@ -106,6 +106,7 @@
     "react": "^16.5.0",
     "react-dom": "^16.5.1",
     "svg4everybody": "^2.1.9",
+    "toastr": "^2.1.4",
     "utf-8-validate": "^5.0.1"
   }
 }

@@ -17,9 +17,14 @@ import './Hello';
 
 import './Init.Firebase';
 
+import './LightGallery';
+
 import './registerServiceWorker';
 
-require('lightgallery');
+require('jquery-mousewheel');
+require('isotope');
+require('picturefill');
+require('imagesloaded');
 require('lazysizes');
 require('svg4everybody');
 require('default-passive-events');

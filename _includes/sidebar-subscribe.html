@@ -7,7 +7,7 @@
         </span>
     </div>
     <p>
-        Your own private channel to receive notifications.
+        Your private channel to receive notifications.
     </p>
 
     <p>
@@ -19,7 +19,7 @@
       <button id="sendButton" class="btn btn--primary" onclick="javascript:send();">Send me a push notification</button> 
     </div>
     <div id="root"></div>
-    <div class="toc1__menu">
+    <div id="App" class="toc1__menu">
       <h3>Firebase Comments</h3>
         <span class="byline-item">
           <h3><svg class="icon icon--comments-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comments-alt' | prepend: '/assets/images/' | relative_url }}"></use></svg>&nbsp;{% if site.data.comments[page.slug].size > 1 %}{{ site.data.comments[page.slug] | size | append: ' ' }}{% endif %}<a href="https://donboulton.com/{{ page.url }}#comments">Comments</a></h3>

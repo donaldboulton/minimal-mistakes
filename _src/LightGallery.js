@@ -16,10 +16,23 @@
         // import('lg-hash.js')
      ])
         .then(([]) => {
-           lightGallery(document.getElementById('aniimated-thumbnials'), {
-              thumbnail: true,
-              selector : '.gallery-item'
-           });
+          window.prettyPrint && prettyPrint()
+          
+          var $gallery = $("#aniimated-thumbnials").lightGallery({
+            thumbnail: true,
+            selector: '.image'
+          });
+          var $grid = $('#aniimated-thumbnials').isotope({
+            percentPosition: true,
+            columnWidth: '#gallery-sizer',
+            itemSelector: '.image-wrapper',
+            layoutMode: "masonry"
+          });
+          
+          // layout Isotope after each image loads
+          $grid.imagesLoaded().progress( function() {
+            $grid.masonry();
+          });          
         })
         .catch(error => {
            console.log(error);
