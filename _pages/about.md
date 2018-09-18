@@ -46,21 +46,21 @@ header:
 excerpt: 'Jekyll on a GitHub Repo Netlify Hosting.<br /> <small><a href="https://donboulton.com">About Donald Boulton at donboulton.com</a></small><br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
 
 feature_row:
-  - image_path: /assets/images/octocat.svg
+  - image_path: /assets/images/octocat.png
     alt: "Cool and Free"
     title: "Cool and Free"
     excerpt: "Repo GitHub, Netlify Ubuntu Server, Jekyll React Webpack Node, Docker Build."
     url: "https://donboulton.com"
     btn_class: "btn--primary"
     btn_label: "Learn More"
-  - image_path: /assets/images/staticman.svg
+  - image_path: /assets/images/staticman.png
     alt: "Staticman Comments"
     title: "Comments push"
     excerpt: "Staticman Comments cause a regeneration of a static site. Good for Remote Work."
     url: "https://staticman.net/"
     btn_class: "btn--primary"
     btn_label: "Learn More"
-  - image_path: /assets/images/demo/michael-rose-320.jpg
+  - image_path: /assets/images/michael-rose-320.jpg
     alt: "Michael Rose"
     title: "Developer"
     excerpt: "Free to use but under a MIT License. Clone it, fork it, customize it, whatever!"
@@ -68,21 +68,21 @@ feature_row:
     btn_class: "btn--primary"
     btn_label: "Learn More"
     feature_row:
-  - image_path: /assets/images/demo/mm-customizable-feature.png
+  - image_path: /assets/images/mm-customizable-feature.png
     alt: "customizable"
     title: "Customizable"
     excerpt: "Everything from the menus, sidebars, comments, config in YAML Front Matter."
     url: "https://mademistakes.com/work/minimal-mistakes-jekyll-theme/"
     btn_class: "btn--primary"
     btn_label: "Learn More"
-  - image_path: /assets/images/demo/mm-responsive-feature.png
+  - image_path: /assets/images/mm-responsive-feature.png
     alt: "fully responsive"
     title: "Responsive Layouts"
     excerpt: "Built on HTML5 + CSS3. All layouts are fully responsive with helpers to augment your content."
     url: "https://github.com/mmistakes/minimal-mistakes"
     btn_class: "btn--primary"
     btn_label: "Learn More"
-  - image_path: /assets/images/demo/mm-free-feature.png
+  - image_path: /assets/images/mm-free-feature.png
     alt: "Cool 100% free"
     title: "Cool 100% Free"
     excerpt: "Free to use however you want under the MIT License. Clone it, fork it, customize it, whatever!"
@@ -126,9 +126,9 @@ Always worked for Father Creator since the beginning of time. Just hanging out w
 
 ## Just Moved from ASP. Everything
 
-Whooo what a relief. Ruby Jekyll and Gihub Pages is the kind, figured this out in a few days with the help of [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/){: id="open-website" rel="noreferrer"}, and lots of documentation on Ruby, Jekyll with Github Pages.
+Whooo what a relief. Ruby Jekyll and GitHub Pages is the kind, figured this out in a few days with the help of [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/){: id="open-website" rel="noreferrer"}, and lots of documentation on Ruby, Jekyll with GitHub Pages.
 
-Ruby, Jeckyll, Gihub pages, and even liquid are super simple; Or "Super Logical, if you think like a human". I've been hitting my head for not using Ruby and the kind much sooner.
+Ruby, Jekyll, GitHub pages, and even liquid are super simple; Or "Super Logical, if you think like a human". I've been hitting my head for not using Ruby and the kind much sooner.
 
 > Go Sooners!
 
@@ -140,7 +140,7 @@ Ruby, Jeckyll, Gihub pages, and even liquid are super simple; Or "Super Logical,
 
 {% include credits.html %}
 
-Links to CloudFlare this Github repo, Staticman Comments, MMistakes Framework Designer Michael Rose.
+Links to CloudFlare this GitHub repo, Staticman Comments, MMistakes Framework Designer Michael Rose.
 
 {% include feature_row id="intro" type="center" %}
 {% include feature_row %}

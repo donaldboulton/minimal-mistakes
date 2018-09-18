@@ -12,7 +12,7 @@ new CopyWebpackPlugin([
   },
   {
     // copy custom service worker
-    from: path.resolve(__dirname, './_src/firebase-messaging-sw.js'),
+    from: path.resolve(__dirname, './public/firebase-messaging-sw.js'),
     to: config.build.assetsRoot + '/[name].js',
     transform: (content, path) => {
       // and transpile it while copying
@@ -25,7 +25,7 @@ new SWPrecacheWebpackPlugin({
     cacheId: 'donboulton',
     importScripts: [
       {
-        filename: 'firebase-messaging-sw.js'
+        filename: './public/firebase-messaging-sw.js'
       }
     ],
     filename: 'service-worker.js',
