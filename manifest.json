@@ -15,8 +15,8 @@
       "type": "image/png"
     },
     {
-      "src": "https://donboulton.com/assets/icons-850ff6118610b1db2616874ac111f893/favicon-96x96.png",
-      "sizes": "96x96",
+      "src": "https://donboulton.com/assets/icons-850ff6118610b1db2616874ac111f893/apple-touch-icon-76x76.png",
+      "sizes": "76x76",
       "type": "image/png"
     },
     {
@@ -26,7 +26,7 @@
     },
     {
       "src": "https://donboulton.com/assets/icons-850ff6118610b1db2616874ac111f893/apple-touch-icon-180x180.png",
-      "sizes": "512x512",
+      "sizes": "180x180",
       "type": "image/png"
     }
   ],

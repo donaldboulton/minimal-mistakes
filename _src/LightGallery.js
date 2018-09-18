@@ -16,7 +16,7 @@
         // import('lg-hash.js')
      ])
         .then(([]) => {
-           lightGallery(document.getElementById('lightgallery'), {
+           lightGallery(document.getElementById('aniimated-thumbnials'), {
               thumbnail: true,
               selector : '.gallery-item'
            });
