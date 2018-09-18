@@ -17,7 +17,7 @@ import './Hello';
 
 import './Init.Firebase';
 
-import './Gallery';
+import './lightgallery-all';
 
 import './registerServiceWorker';
 
