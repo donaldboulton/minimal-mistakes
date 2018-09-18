@@ -1,4 +1,4 @@
-require(['./lightgallery-all.js'], function() {
+require(['lightgallery-all.js'], function() {
   require([], function() {
     window.prettyPrint && prettyPrint()
 
