@@ -5,9 +5,11 @@ import * as babel from 'babel-core';
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 
+const PUBLIC_PATH = 'https://donboulton.com/';
+
 new CopyWebpackPlugin([
   {
-    from: path.resolve('_src'),
+    from: path.resolve('public'),
       to: '/',
   },
   {
