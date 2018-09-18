@@ -13,7 +13,7 @@ module.exports = {
   root: '_site',
   importScripts: [
     {
-      filename: './src/firebase-messaging-sw.js'
+      filename: './_src/firebase-messaging-sw.js'
     }
   ],
 };
