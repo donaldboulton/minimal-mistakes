@@ -1,4 +1,9 @@
-<div id="disqus_thread"></div>
+<div id="comments" class="comment" itemscope itemtype="https://schema.org/UserComments">
+  <header class="section-title">
+    <h3><svg class="icon icon--comments-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comments-alt' | prepend: '/build/icons/' | relative_url }}"></use></svg>&nbsp;Comments</h3>
+  </header>
+  <div id="disqus_thread"></div>
+</div>
   <script>
     var disqus_config = function () {
       this.page.url = "{{ page.url | absolute_url }}";
