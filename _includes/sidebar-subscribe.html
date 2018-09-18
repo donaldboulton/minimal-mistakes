@@ -7,14 +7,17 @@
         </span>
     </div>
     <p>
-        You probably noticed that your browser asked if you allowed notifications from this website.
-        If you accepted you are already subscribed to your own private channel to receive notifications.
+        Your own private channel to receive notifications.
     </p>
 
     <p>
       Your channel is: <code><span id="channel">...</span></code>
     </p>
-    <div id="app" class="form-group"></div>
+    <div class="form-group"> 
+      <input type="text" id="fiptest"> 
+      <input type="text" id="msgInput" placeholder="Enter your message"> 
+      <button id="sendButton" class="btn btn--primary" onclick="javascript:send();">Send me a push notification</button> 
+    </div>
     <div id="root"></div>
     <div class="toc1__menu">
       <h3>Firebase Comments</h3>

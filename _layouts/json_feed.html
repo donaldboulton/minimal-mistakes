@@ -18,8 +18,8 @@ layout: null
   {% elsif site.description %}
     "description": {{ site.description | strip_html | normalize_whitespace | jsonify }},
   {% endif %}
-  "icon": "{{ 'apple-touch-icon.png' | prepend: '/dest/assets/images/' | absolute_url }}",
-  "favicon": "{{ 'apple-touch-icon.png' | prepend: '/dest/assets/images/' | absolute_url }}",
+  "icon": "{{ 'apple-touch-icon.png' | prepend: '/assets/images/' | absolute_url }}",
+  "favicon": "{{ 'apple-touch-icon.png' | prepend: '/assets/images/' | absolute_url }}",
   {% if site.author %}
     "author": {
       "name": "{{ site.author.name }}"

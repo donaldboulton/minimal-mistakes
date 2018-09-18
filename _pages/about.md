@@ -60,7 +60,7 @@ feature_row:
     url: "https://staticman.net/"
     btn_class: "btn--primary"
     btn_label: "Learn More"
-  - image_path: /dest/assets/images/demo/michael-rose-320.jpg
+  - image_path: /assets/images/demo/michael-rose-320.jpg
     alt: "Michael Rose"
     title: "Developer"
     excerpt: "Free to use but under a MIT License. Clone it, fork it, customize it, whatever!"
@@ -68,21 +68,21 @@ feature_row:
     btn_class: "btn--primary"
     btn_label: "Learn More"
     feature_row:
-  - image_path: /dest/assets/images/demo/mm-customizable-feature.png
+  - image_path: /assets/images/demo/mm-customizable-feature.png
     alt: "customizable"
     title: "Customizable"
     excerpt: "Everything from the menus, sidebars, comments, config in YAML Front Matter."
     url: "https://mademistakes.com/work/minimal-mistakes-jekyll-theme/"
     btn_class: "btn--primary"
     btn_label: "Learn More"
-  - image_path: /dest/assets/images/demo/mm-responsive-feature.png
+  - image_path: /assets/images/demo/mm-responsive-feature.png
     alt: "fully responsive"
     title: "Responsive Layouts"
     excerpt: "Built on HTML5 + CSS3. All layouts are fully responsive with helpers to augment your content."
     url: "https://github.com/mmistakes/minimal-mistakes"
     btn_class: "btn--primary"
     btn_label: "Learn More"
-  - image_path: /dest/assets/images/demo/mm-free-feature.png
+  - image_path: /assets/images/demo/mm-free-feature.png
     alt: "Cool 100% free"
     title: "Cool 100% Free"
     excerpt: "Free to use however you want under the MIT License. Clone it, fork it, customize it, whatever!"

@@ -99,7 +99,7 @@ defaults:
 
 ## Adding Images
 
-I added images in my /dest/assets/images/photography/ folders for each gallery. as listed in my data/overwiew.yml file and configured in each of my /photography/Gallery.md files
+I added images in my /assets/images/photography/ folders for each gallery. as listed in my data/overwiew.yml file and configured in each of my /photography/Gallery.md files
 
 ## Data YML Files
 

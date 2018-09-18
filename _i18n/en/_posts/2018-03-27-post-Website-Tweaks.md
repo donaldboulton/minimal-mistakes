@@ -570,7 +570,7 @@ All scripts, main.css and external files from Google, Twitter and my API's do no
 
 Page load time went from 3.5s to 2.5s with a page that's 948.6kb, pretty fast.
 
-{% include figure image_path="/dest/assets/images/pjax-hidden-files-800.jpg
+{% include figure image_path="/assets/images/pjax-hidden-files-800.jpg
 " alt="Pjax Hidden files" caption="Chrome Dev Hidden files" class="align-center" %}
 
 My page loads are super fast add a service worker and pjax. On some page loads I am only fetching 3 files 2018-03-27-post-Website-Tweaks.html, the Images for the Page, and for some reason the main.css file. Nothing from Google or any of my Scripts.

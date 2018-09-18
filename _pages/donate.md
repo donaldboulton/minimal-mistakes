@@ -11,10 +11,10 @@ sidenav: true
 layout: productdetails
 name: "Donate"
 products: true
-image: /dest/assets/images/cart/sponser-us.png
+image: /assets/images/cart/sponser-us.png
 header:
-  image: /dest/assets/images/cart/sponser-us.png
-  teaser: /dest/assets/images/cart/sponser-us-320.png
+  image: /assets/images/cart/sponser-us.png
+  teaser: /assets/images/cart/sponser-us-320.png
 support: [lightbox, products, adds]  
 ---
 

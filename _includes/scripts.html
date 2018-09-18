@@ -92,7 +92,7 @@
 {% comment %} <!--  my own validation scripts and scss from sitepoint.com/instant-validation/ -->{% endcomment %}
 
 {% if page.support contains 'dragula' %}
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.gz" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js" crossorigin="anonymous"></script>
   <script src="{{ '/build/js/vendor/dragula/example.min.js' | relative_url }}"></script>
 {% endif %}
 
@@ -231,4 +231,5 @@ $("a").smoothScroll({offset:-20})});var coll=document.getElementsByClassName("co
 <script src="{{ '/build/js/vendor/twitter/web-intents.js' | relative_url }}"></script>
 <script src="{{ '/build/js/init.site.js' | relative_url }}"></script>
 <script src="{{ '/build/js/vendor/notifications/index.js' | relative_url }}" async></script>
+<script id="dsq-count-scr" src="https://donald-boulton.disqus.com/count.js" async></script>
 
