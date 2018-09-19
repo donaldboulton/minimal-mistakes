@@ -29,12 +29,12 @@ category:
 permalink: 2018-05-27-post-reviews-for-jekyll.html
 image:
   cover: true
-  path: &image /build/icons/reviews.jpg
+  path: &image /assets/images/reviews.jpg
   feature: *image
-  thumbnail: /build/icons/reviews-320.jpg
+  thumbnail: /assets/images/reviews-320.jpg
 header:
-  image: /build/icons/reviews.jpg
-  teaser: /build/icons/reviews-320.jpg
+  image: /assets/images/reviews.jpg
+  teaser: /assets/images/reviews-320.jpg
 locations:
   - OKC, Oklahoma
 anchor: true
@@ -79,19 +79,19 @@ Doing so means perfect microdata with aggregate, "Averaged" page and site rating
 
 Hoping to get something like this on search results
 
-{% include figure image_path="/build/icons/db-reviews-goolgle-search.jpg" alt="Search Results" caption="Search Results" %}
+{% include figure image_path="/assets/images/db-reviews-goolgle-search.jpg" alt="Search Results" caption="Search Results" %}
 
 ### Structured data My site
 
 I have perfect nested structured data in my site. Try this.
 
-{% include figure image_path="/build/icons/review-structured-data-800.jpg" alt="Search Results" caption="Site Test Results" %}
+{% include figure image_path="/assets/images/review-structured-data-800.jpg" alt="Search Results" caption="Site Test Results" %}
 
 ### Structured data My reviews
 
 This is my reviews data from Google's Structured Data Testing Tool. My microdata is perfect for what I wanted for Reviews with Ratings with review count and aggregated ratings per item as in any Page, Post, Gallery, Gallery Item, and others.
 
-{% include figure image_path="/build/icons/just-review-structured-data-800.jpg" alt="Search Results" caption="Review Results" %}
+{% include figure image_path="/assets/images/just-review-structured-data-800.jpg" alt="Search Results" caption="Review Results" %}
 
 ## Jekyll Reviews-Anyone
 
@@ -162,7 +162,7 @@ The new Review Rating form as a include [reviews-new-page.html](https://github.c
       </svg> Add A Page Review</h3>
       </header>
   <form id="review-form" class="page__form js-form form" method="post" action="https://api.staticman.net/v2/entry/donaldboulton/DWB/gh-pages/reviews" oninput="result.value=parseInt(this['fields[review]'].value)">
-    <div class="field-group rating-select"> <span>Add A Rating:&nbsp;</span> <label class="rating-radio-label" for="comment-form[star-1]"> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="1" name="fields[review]" id="comment-form[star-1]" checked=""> <label class="rating-radio-label" for="comment-form[star-2]"> <svg class="icon icon--star_border rating-star rating-radio-star--off"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star_border"></use>star_border</svg> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="2" name="fields[review]" id="comment-form[star-2]"> <label class="rating-radio-label" for="comment-form[star-3]"> <svg class="icon icon--star_border rating-star rating-radio-star--off"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star_border"></use>star_border</svg> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="3" name="fields[review]" id="comment-form[star-3]"> <label class="rating-radio-label" for="comment-form[star-4]"> <svg class="icon icon--star_border rating-star rating-radio-star--off"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star_border"></use>star_border</svg> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="4" name="fields[review]" id="comment-form[star-4]"> <label class="rating-radio-label" for="comment-form[star-5]"> <svg class="icon icon--star_border rating-star rating-radio-star--off"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star_border"></use>star_border</svg> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="5" name="fields[review]" id="comment-form[star-5]"></div>
+    <div class="field-group rating-select"> <span>Add A Rating:&nbsp;</span> <label class="rating-radio-label" for="comment-form[star-1]"> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="1" name="fields[review]" id="comment-form[star-1]" checked=""> <label class="rating-radio-label" for="comment-form[star-2]"> <svg class="icon icon--star_border rating-star rating-radio-star--off"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/.svg#icon-star_border"></use>star_border</svg> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="2" name="fields[review]" id="comment-form[star-2]"> <label class="rating-radio-label" for="comment-form[star-3]"> <svg class="icon icon--star_border rating-star rating-radio-star--off"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star_border"></use>star_border</svg> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="3" name="fields[review]" id="comment-form[star-3]"> <label class="rating-radio-label" for="comment-form[star-4]"> <svg class="icon icon--star_border rating-star rating-radio-star--off"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star_border"></use>star_border</svg> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="4" name="fields[review]" id="comment-form[star-4]"> <label class="rating-radio-label" for="comment-form[star-5]"> <svg class="icon icon--star_border rating-star rating-radio-star--off"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star_border"></use>star_border</svg> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="5" name="fields[review]" id="comment-form[star-5]"></div>
       <div class="form-group">
         <label class="sr-only" for="review-form[name]">Your name</label>
         <input type="text" id="review-form[name]" name="fields[name]" required placeholder="Your Name *"/>
