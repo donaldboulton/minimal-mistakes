@@ -11,9 +11,4 @@ module.exports = {
     handler: 'networkFirst',
   }],
   root: '_site',
-  importScripts: [
-    {
-      filename: './public/firebase-messaging-sw.js'
-    }
-  ],
 };
