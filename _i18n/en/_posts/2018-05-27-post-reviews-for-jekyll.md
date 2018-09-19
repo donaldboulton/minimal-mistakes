@@ -29,12 +29,12 @@ category:
 permalink: 2018-05-27-post-reviews-for-jekyll.html
 image:
   cover: true
-  path: &image /assets/images/reviews.jpg
+  path: &image /build/icons/reviews.jpg
   feature: *image
-  thumbnail: /assets/images/reviews-320.jpg
+  thumbnail: /build/icons/reviews-320.jpg
 header:
-  image: /assets/images/reviews.jpg
-  teaser: /assets/images/reviews-320.jpg
+  image: /build/icons/reviews.jpg
+  teaser: /build/icons/reviews-320.jpg
 locations:
   - OKC, Oklahoma
 anchor: true
@@ -79,19 +79,19 @@ Doing so means perfect microdata with aggregate, "Averaged" page and site rating
 
 Hoping to get something like this on search results
 
-{% include figure image_path="/assets/images/db-reviews-goolgle-search.jpg" alt="Search Results" caption="Search Results" %}
+{% include figure image_path="/build/icons/db-reviews-goolgle-search.jpg" alt="Search Results" caption="Search Results" %}
 
 ### Structured data My site
 
 I have perfect nested structured data in my site. Try this.
 
-{% include figure image_path="/assets/images/review-structured-data-800.jpg" alt="Search Results" caption="Site Test Results" %}
+{% include figure image_path="/build/icons/review-structured-data-800.jpg" alt="Search Results" caption="Site Test Results" %}
 
 ### Structured data My reviews
 
 This is my reviews data from Google's Structured Data Testing Tool. My microdata is perfect for what I wanted for Reviews with Ratings with review count and aggregated ratings per item as in any Page, Post, Gallery, Gallery Item, and others.
 
-{% include figure image_path="/assets/images/just-review-structured-data-800.jpg" alt="Search Results" caption="Review Results" %}
+{% include figure image_path="/build/icons/just-review-structured-data-800.jpg" alt="Search Results" caption="Review Results" %}
 
 ## Jekyll Reviews-Anyone
 
@@ -311,7 +311,7 @@ This code below is to be changed to have the include file [reviews.html](https:/
              Title:&nbsp;<span itemprop="itemReviewed" class="title-text">{{ page.lcb }}{ reviewData.title }}</span>
 <span>Rating</span>
 {{ page.lcb }}% for i in (1..reviewData.review) %}
-<svg class="icon icon--star rating-star rating-radio-star--on"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: '/assets/images/' | relative_url }}"></use></svg>
+<svg class="icon icon--star rating-star rating-radio-star--on"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: '/build/icons/' | relative_url }}"></use></svg>
 {{ page.lcb }}% endfor %}
 <meta class="hidden" itemprop="ratingValue" content="{{ page.lcb }}{ reviewData.review }}">
 </div>
