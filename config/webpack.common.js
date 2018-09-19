@@ -41,7 +41,6 @@ module.exports = {
     fs: 'empty',
     tls: 'empty',
     net: 'empty',
-    child_process: 'empty',
   },
   module: {
     rules: [
