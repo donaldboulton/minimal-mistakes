@@ -204,6 +204,15 @@ function addNavItem(ul, href, text) {
       grecaptcha.execute('6Le-JGIUAAAAAItP3anxYzixThXd6EUvsDjXZevh', {action: 'home'}).then(function(token) {
     });
  });
+ if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/service-worker.js');
+  });
+
+  navigator.serviceWorker.ready.then(function (registration) {
+    console.log('Service worker successfully registered on scope', registration.scope);
+  });
+ }
  function addEvent(node,type,callback){if(node.addEventListener){node.addEventListener(type,function(e){callback(e,e.target)},!1)}else if(node.attachEvent){node.attachEvent("on"+type,function(e){callback(e,e.srcElement)})}}
   function shouldBeValidated(field){return(!(field.getAttribute("readonly")||field.readonly)&&!(field.getAttribute("disabled")||field.disabled)&&(field.getAttribute("pattern")||field.getAttribute("required")))}
   function instantValidation(field){if(shouldBeValidated(field)){var invalid=(field.getAttribute("required")&&!field.value)||(field.getAttribute("pattern")&&field.value&&!new RegExp(field.getAttribute("pattern")).test(field.value));if(!invalid&&field.getAttribute("aria-invalid")){field.removeAttribute("aria-invalid")}else if(invalid&&!field.getAttribute("aria-invalid")){field.setAttribute("aria-invalid","true")}}}
@@ -222,5 +231,6 @@ $("a").smoothScroll({offset:-20})});var coll=document.getElementsByClassName("co
 <script src="{{ '/build/js/vendor/twitter/web-intents.js' | relative_url }}"></script>
 <script src="{{ '/build/js/init.site.js' | relative_url }}"></script>
 <script src="{{ '/build/js/vendor/notifications/index.js' | relative_url }}" async></script>
+<script src="{{ '/build/js/vendor/notifications/WebPushManager.js' | relative_url }}" async></script>
 <script id="dsq-count-scr" src="https://donald-boulton.disqus.com/count.js" async></script>
 

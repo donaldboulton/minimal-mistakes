@@ -19,8 +19,6 @@ import './Init.Firebase';
 
 import './lightgallery-all';
 
-import './registerServiceWorker';
-
 require('jquery-mousewheel');
 import './isotope.pkgd.min';
 require('picturefill');
