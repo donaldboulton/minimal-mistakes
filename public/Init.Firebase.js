@@ -1,4 +1,5 @@
 import firebase from "firebase";
+
 export function initializePush() {
    const messaging = firebase.messaging();
    messaging

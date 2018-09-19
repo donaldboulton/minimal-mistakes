@@ -8,21 +8,17 @@ class App extends Component {
  )
  }
 }
-render(<App />, document.getElementById('initial-content'));
+render(<App />, document.getElementById('main'));
 
 // CSS JS and SASS files
 import './main.css';
 
 import './Hello';
 
-import './Init.Firebase';
+import './push-notification';
 
-import './lightgallery-all';
+import './registerServiceWorker';
 
-require('jquery-mousewheel');
-import './isotope.pkgd.min';
-require('picturefill');
-require('imagesloaded');
 require('lazysizes');
 require('svg4everybody');
 require('default-passive-events');

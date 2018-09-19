@@ -25,6 +25,16 @@
 {% endif %}
 
 {% if page.support contains 'gallery' %}
+  <script src="{{ '/public/lightgallery.min.js' | relative_url }}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.5/isotope.pkgd.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js" crossorigin="anonymous"></script>
+  <script src="{{ '/build/dist/js/imagesloaded.pkgd.min.js' | relative_url }}"></script>
+  <script src="{{ '/build/dist/modules/lg-autoplay.min.js' | relative_url }}"></script>
+  <script src="{{ '/button/dist/modules/lg-fullscreen.min.js' | relative_url }}"></script>
+  <script src="{{ '/build/dist/modules/lg-share.min.js' | relative_url }}"></script>
+  <script src="{{ '/build/dist/modules/lg-thumbnail.min.js' | relative_url }}"></script>
+  <script src="{{ '/build/dist/modules/lg-zoom.min.js' | relative_url }}"></script>
   <script src="{{ '/build/dist/js/init-lightgallery.js' | relative_url }}"></script>
 {% endif %}
 
@@ -229,7 +239,8 @@ $("a").smoothScroll({offset:-20})});var coll=document.getElementsByClassName("co
 </script>
 <script async defer src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script src="{{ '/build/js/vendor/twitter/web-intents.js' | relative_url }}"></script>
-<script src="{{ '/build/js/init.site.js' | relative_url }}"></script>
+<script src="{{ '/public/init.site.js' | relative_url }}"></script>
+<script src="{{ '/public/init.firebase.js' | relative_url }}"></script>
 <script src="{{ '/build/js/vendor/notifications/index.js' | relative_url }}" async></script>
 <script src="{{ '/build/js/vendor/notifications/WebPushManager.js' | relative_url }}" async></script>
 <script id="dsq-count-scr" src="https://donald-boulton.disqus.com/count.js" async></script>
