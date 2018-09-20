@@ -238,10 +238,27 @@ $(".author__urls_masthead button").on("click", function() {
     $(".author__urls_masthead button").toggleClass("open");
 });
 svg4everybody();
-$("a").smoothScroll({offset:-20})});var coll=document.getElementsByClassName("collapsible");var i;for(i=0;i<coll.length;i++){coll[i].addEventListener("click",function(){this.classList.toggle("active");var content=this.nextElementSibling;if(content.style.maxHeight){content.style.maxHeight=null}else{content.style.maxHeight=content.scrollHeight+"px"}})}
+$(window).bind("hashchange", function(event) {
+    $.smoothScroll({
+      // Replace '#/' with '#' to go to the correct target
+      scrollTarget: location.hash.replace(/^\#\/?/, "#"),
+      offset: -20
+    });
+  });
+  $('a[href*="#"]').bind("click", function(event) {
+    // Remove '#' from the hash.
+    var hash = this.hash.replace(/^#/, "");
+    if (this.pathname === location.pathname && hash) {
+      event.preventDefault();
+      // Change '#' (removed above) to '#/' so it doesn't jump without the smooth scrolling
+      location.hash = "#/" + hash;
+    }
+  });
+  // Trigger hashchange event on page load if there is a hash in the URL.
+  if (location.hash) {
+    $(window).trigger("hashchange");
+  }
 </script>
 <script async defer src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script src="{{ '/public/init.site.js' | relative_url }}"></script>
-<script src="{{ '/public/init.firebase.js' | relative_url }}"></script>
 <script id="dsq-count-scr" src="https://donald-boulton.disqus.com/count.js" async></script>
-
