@@ -15,8 +15,6 @@ import './main.css';
 
 import './Hello';
 
-import './push-notification';
-
 import './Init.Firebase';
 
 require('lazysizes');

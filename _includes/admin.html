@@ -16,11 +16,12 @@
               <label for="updateLastName" class="control-label">Last Name:</label>
               <input type="text" class="form-control" name="lastName" id="updateLastName">
             </div>
-            <div class="custom-file-container" data-upload-id="myUniqueUploadId">
+            <div class="custom-file-container" data-upload-id="myimgInp">
               <label>Upload File <a href="javascript:void(0)" class="custom-file-container__image-clear" title="Clear Image">x</a></label>
 
               <label class="custom-file-container__custom-file" >
-                  <input type='file' class="btn btn--primary" onchange="readURL(this);" accept="*" multiple /><img id="blah" src="/asstes/images/180.png" alt="your image" />
+                  <input type='file' id="imgInp" class="btn btn--primary" onchange="readURL(this);" accept="*" multiple />
+                  <img id="blah" src="/assets/images/180.png" alt="your image" />
                   <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
                   <span class="custom-file-container__custom-file__custom-file-control"></span>
               </label>
