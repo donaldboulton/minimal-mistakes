@@ -220,13 +220,13 @@ Adding included Isotope and LightGallery files as below seen in my [includes/scr
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.5/isotope.pkgd.min.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js" crossorigin="anonymous"></script>
-  <script src="{{ page.lcb }}{ '/assets/dist/js/imagesloaded.pkgd.min.js' | relative_url }}"></script>
-  <script src="{{ page.lcb }}{ '/assets/dist/modules/lg-autoplay.min.js' | relative_url }}"></script>
-  <script src="{{ page.lcb }}{ '/assets/dist/modules/lg-fullscreen.min.js' | relative_url }}"></script>
-  <script src="{{ page.lcb }}{ '/assets/dist/modules/lg-share.min.js' | relative_url }}"></script>
-  <script src="{{ page.lcb }}{ '/assets/dist/modules/lg-thumbnail.min.js' | relative_url }}"></script>
-  <script src="{{ page.lcb }}{ '/assets/dist/modules/lg-zoom.min.js' | relative_url }}"></script>
-  <script src="{{ page.lcb }}{ '/assets/dist/js/init-lightgallery.js' | relative_url }}"></script>
+  <script src="{{ page.lcb }}{ '/build/dist/js/imagesloaded.pkgd.min.js' | relative_url }}"></script>
+  <script src="{{ page.lcb }}{ '/build/dist/modules/lg-autoplay.min.js' | relative_url }}"></script>
+  <script src="{{ page.lcb }}{ '/build/dist/modules/lg-fullscreen.min.js' | relative_url }}"></script>
+  <script src="{{ page.lcb }}{ '/build/dist/modules/lg-share.min.js' | relative_url }}"></script>
+  <script src="{{ page.lcb }}{ '/build/dist/modules/lg-thumbnail.min.js' | relative_url }}"></script>
+  <script src="{{ page.lcb }}{ '/build/dist/modules/lg-zoom.min.js' | relative_url }}"></script>
+  <script src="{{ page.lcb }}{ '/build/dist/js/init-lightgallery.js' | relative_url }}"></script>
 {{ page.lcb }}% endif %}
 ```
 
@@ -435,7 +435,7 @@ support: [gallery]
 I added the Css  same way to my [/includes/head.html](https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/_includes/head.html) file and the above frontmatter support will include the lightgallery.min.css, with a conditional if statement % if page.support contains 'gallery' %
 
 ```html
-   <link rel="stylesheet" href="{{ page.lcb }}{ '/assets/dist/css/lightgallery.min.css' | relative_url }}">
+   <link rel="stylesheet" href="{{ page.lcb }}{ '/build/dist/css/lightgallery.min.css' | relative_url }}">
 ```
 
 ### The Sass styling
@@ -650,7 +650,7 @@ The gallery.scss code below
 
 ## Jekyll Simple Gallery
 
-Create a Jekyll images Gallery that loops through all images in a folder. Displayed with [MetaFuzzy Isotope](https://isotope.metafizzy.co/) and viewed with [Sachinchoolur LightGallery](https://sachinchoolur.github.io/lightGallery/demos/){:id="open-website" rel="noreferrer"}. Not Configured by yml Frontmatter, thus much eaiser to create. Using [Images resizing by images.weserv.nl](weserv.nl), which gives a thumbnail image displayed in the Isotope gallery and the original images which are opened by LightGallery.
+Create a Jekyll images Gallery that loops through all images in a folder. Displayed with [MetaFuzzy Isotope](https://isotope.metafizzy.co/) and viewed with [Sachinchoolur LightGallery](https://sachinchoolur.github.io/lightGallery/demos/){:id="open-website" rel="noreferrer"}. Not Configured by yml Frontmatter, thus much easier to create. Using [Images resizing by images.weserv.nl](weserv.nl), which gives a thumbnail image displayed in the Isotope gallery and the original images which are opened by LightGallery.
 
 ### The _includes file Simple Gallery
 
@@ -663,8 +663,7 @@ Gallery layout download [galleryloop.html](https://raw.githubusercontent.com/don
 The gallery layout file code with the tile of my page being in my single layout or your default layout file.
 
 ```html
----
-layout: single
+--layout: single
 author: Donald Boulton
 author_profile: false
 support: [gallery]

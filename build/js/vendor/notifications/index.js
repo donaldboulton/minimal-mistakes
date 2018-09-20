@@ -35,7 +35,6 @@
       client.setClusterUrl('https://ortc-developers.realtime.co/server/ssl/2.1/');
     
       client.onConnected = function (theClient) {
-        // client is connected
 
         // subscribe users to their private channels
         theClient.subscribeWithNotifications(channel, true, registrationId,

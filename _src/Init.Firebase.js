@@ -1,4 +1,10 @@
+import { config } from "./firebaseConfig";
 import firebase from "firebase";
+import 'firebase/database';
+import 'firebase/messaging';
+
+firebase.initializeApp(config);
+
 export function initializePush() {
    const messaging = firebase.messaging();
    messaging

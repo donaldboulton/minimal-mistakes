@@ -27,9 +27,9 @@
   "scripts": {
     "start": "npm run-script clean:project && webpack -p --env=dev --progress --profile --colors && concurrently \"webpack-dev-server --env=dev\" \"bundle exec jekyll serve\"",
     "build:optim": "npm run-script clean:project && cross-env NODE_ENV=production webpack --env=prod --progress --profile --colors && webpack --env=optim  --progress --profile --colors && cross-env JEKYLL_ENV=production bundle exec jekyll build",
-    "build:pwa:optim": "npm run-script clean:project && cross-env NODE_ENV=production webpack --env=pwa --progress --profile --colors && webpack --env=optim  --progress --profile --colors && cross-env JEKYLL_ENV=pwa bundle exec jekyll build && sw-precache --config=config/sw.config.js --verbose",
+    "build:pwa:optim": "npm run-script clean:project && cross-env NODE_ENV=production webpack --env=pwa --progress --profile --colors && webpack --env=optim  --progress --profile --colors && cross-env JEKYLL_ENV=pwa bundle exec jekyll build && sw-precache --verbose",
     "build": "npm run-script clean:project && cross-env NODE_ENV=production webpack -p --env=prod --progress --profile --colors && cross-env JEKYLL_ENV=production bundle exec jekyll build",
-    "build:pwa": "npm run-script clean:project && cross-env NODE_ENV=production webpack -p --env=pwa --progress --profile --colors && cross-env JEKYLL_ENV=pwa bundle exec jekyll build && sw-precache --config=config/sw.config.js --verbose",
+    "build:pwa": "npm run-script clean:project && cross-env NODE_ENV=production webpack -p --env=pwa --progress --profile --colors && cross-env JEKYLL_ENV=pwa bundle exec jekyll build && sw-precache --verbose",
     "serve:dist": "http-server _site",
     "clean:project": "rimraf ./_site ./assets"
   },
@@ -67,6 +67,7 @@
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "sw-precache": "^5.2.0",
+    "sw-precache-webpack-plugin": "^0.11.5",
     "webpack": "^3.4.1",
     "webpack-bundle-analyzer": "^2.13.1",
     "webpack-dev-server": "^2.6.1",
@@ -106,7 +107,6 @@
     "react": "^16.5.0",
     "react-dom": "^16.5.1",
     "svg4everybody": "^2.1.9",
-    "sw-precache-webpack-plugin": "^0.11.4",
     "toastr": "^2.1.4",
     "utf-8-validate": "^5.0.1"
   }

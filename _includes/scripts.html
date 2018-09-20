@@ -31,7 +31,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js" crossorigin="anonymous"></script>
   <script src="{{ '/build/dist/js/imagesloaded.pkgd.min.js' | relative_url }}"></script>
   <script src="{{ '/build/dist/modules/lg-autoplay.min.js' | relative_url }}"></script>
-  <script src="{{ '/button/dist/modules/lg-fullscreen.min.js' | relative_url }}"></script>
+  <script src="{{ '/build/dist/modules/lg-fullscreen.min.js' | relative_url }}"></script>
   <script src="{{ '/build/dist/modules/lg-share.min.js' | relative_url }}"></script>
   <script src="{{ '/build/dist/modules/lg-thumbnail.min.js' | relative_url }}"></script>
   <script src="{{ '/build/dist/modules/lg-zoom.min.js' | relative_url }}"></script>
@@ -213,10 +213,13 @@ function addNavItem(ul, href, text) {
   grecaptcha.ready(function() {
       grecaptcha.execute('6Le-JGIUAAAAAItP3anxYzixThXd6EUvsDjXZevh', {action: 'home'}).then(function(token) {
     });
+    var onloadCallback = function() {
+    alert("grecaptcha is ready!");
+    };
  });
  if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/firebase-messaging-sw.js');
+    navigator.serviceWorker.register('/service-worker.js');
   });
 
   navigator.serviceWorker.ready.then(function (registration) {
@@ -238,10 +241,7 @@ svg4everybody();
 $("a").smoothScroll({offset:-20})});var coll=document.getElementsByClassName("collapsible");var i;for(i=0;i<coll.length;i++){coll[i].addEventListener("click",function(){this.classList.toggle("active");var content=this.nextElementSibling;if(content.style.maxHeight){content.style.maxHeight=null}else{content.style.maxHeight=content.scrollHeight+"px"}})}
 </script>
 <script async defer src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script src="{{ '/build/js/vendor/twitter/web-intents.js' | relative_url }}"></script>
 <script src="{{ '/public/init.site.js' | relative_url }}"></script>
 <script src="{{ '/public/init.firebase.js' | relative_url }}"></script>
-<script src="{{ '/build/js/vendor/notifications/index.js' | relative_url }}" async></script>
-<script src="{{ '/build/js/vendor/notifications/WebPushManager.js' | relative_url }}" async></script>
 <script id="dsq-count-scr" src="https://donald-boulton.disqus.com/count.js" async></script>
 

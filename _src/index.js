@@ -8,7 +8,7 @@ class App extends Component {
  )
  }
 }
-render(<App />, document.getElementById('main'));
+render(<App />, document.getElementById('initial-content'));
 
 // CSS JS and SASS files
 import './main.css';
@@ -17,7 +17,9 @@ import './Hello';
 
 import './push-notification';
 
-import './registerServiceWorker';
+import './Init.Firebase';
+
+import 'firebase-messaging-sw';
 
 require('lazysizes');
 require('svg4everybody');

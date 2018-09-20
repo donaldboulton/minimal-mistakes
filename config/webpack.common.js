@@ -5,6 +5,9 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
+const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
+
+const PUBLIC_PATH = 'https://donboulton.com/';
 
 module.exports = {
   entry: {
@@ -32,6 +35,26 @@ module.exports = {
       threshold: 10240,
       minRatio: 0.8
     }),
+    new SWPrecacheWebpackPlugin({
+      cacheId: 'donboulton',
+      filename: 'service-worker.js',
+      staticFileGlobs: [
+        '_site/assets/**.css',
+        '_site/**.html',
+        '_site/assets/images/**.*',
+        '_site/assets/**.js',
+        '/'
+      ],
+      stripPrefix: '_site/',
+      runtimeCaching: [{
+        urlPattern: '/',
+        handler: 'networkFirst',
+      }],
+      root: '_site',
+      importScripts: [{
+        chunkName: 'firebase-messaging-sw' 
+      }]
+    })
   ],
   devServer: {
     contentBase: './assets',
@@ -50,7 +73,7 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['env', 'react', 'stage-2'],
+            presets: [ 'env', 'react' ],
           },
         },
       },

@@ -1,8 +1,3 @@
-import { config } from "./firebaseConfig";
-import firebase from "firebase";
-
-firebase.initializeApp(config);
-
 $(document).ready(function() {
     var bumpIt = function() {
         $("body").css("margin-bottom", $(".page__footer").outerHeight(true));
@@ -76,5 +71,8 @@ $(document).ready(function() {
         };
   
     var items = getItems();
-  });
+});
+(function(){function a(i){i=i||window.event;for(var k,l,n,j=i.target||i.srcElement;j&&'a'!==j.nodeName.toLowerCase();)j=j.parentNode;j&&'a'===j.nodeName.toLowerCase()&&j.href&&(k=j.href.match(b),k&&(l=Math.round(h/2-d/2),n=0,g>f&&(n=Math.round(g/2-f/2)),window.open(j.href,'intent',c+',width='+d+',height='+f+',left='+l+',top='+n),i.returnValue=!1,i.preventDefault&&i.preventDefault()))}if(!window.__twitterIntentHandler){var b=/twitter\.com\/intent\/(\w+)/,c='scrollbars=yes,resizable=yes,toolbar=no,location=yes',d=550,f=420,g=screen.height,h=screen.width;document.addEventListener?document.addEventListener('click',a,!1):document.attachEvent&&document.attachEvent('onclick',a),window.__twitterIntentHandler=!0}})();
+
+
   
