@@ -1,4 +1,5 @@
-import firebase from 'firebase';
+const firebaseApp = require('firebase-app');
+const firebaseMessaging = require('firebase-messaging');
 
 export const initializeFirebase = () => {
   firebase.initializeApp({
@@ -6,7 +7,7 @@ export const initializeFirebase = () => {
   });
 
   navigator.serviceWorker
-  .register('/firebase-messaging-sw.js')
+  .register('/service-worker.js')
   .then((registration) => {
     firebase.messaging().useServiceWorker(registration);
   });

@@ -54,7 +54,7 @@ module.exports = {
       }],
       root: '_site',
       importScripts: [{
-        fileName: 'public/firebase-messaging-sw.js' 
+        fileName: './public/firebase-messaging-sw.js' 
       }]
     })
   ],

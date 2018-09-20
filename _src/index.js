@@ -19,10 +19,9 @@ import './push-notification';
 
 import './Init.Firebase';
 
-import 'firebase-messaging-sw';
-
 require('lazysizes');
 require('svg4everybody');
+require('jquery-smooth-scroll');
 require('default-passive-events');
 require('file-upload-with-preview');
 require('anchor-js');
