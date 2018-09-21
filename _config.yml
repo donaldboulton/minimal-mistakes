@@ -313,7 +313,6 @@ plugins:
   - jekyll-tagging-related_posts
   - jekyll-redirect-from
   - jekyll-algolia
-  - mailgun-ruby
   - lazyload
   - notice
   - jemoji
@@ -334,7 +333,6 @@ whitelist:
   - jekyll-tagging-related_posts
   - jekyll-redirect-from
   - jekyll-algolia
-  - mailgun-ruby
   - lazyload
   - notice
   - jemoji

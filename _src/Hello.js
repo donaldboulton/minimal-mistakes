@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+
 
 export default class Hello extends Component {
     render() {
@@ -10,4 +12,4 @@ export default class Hello extends Component {
     }
   }
 
-  render(<Hello />, document.getElementById('initial-content'));
+  ReactDOM.render(<Hello />, document.getElementById('initial-content'));
