@@ -1,15 +1,10 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+const React = require('react');
+const ReactDOM = require('react-dom');
 
-
-export default class Hello extends Component {
-    render() {
-      return (
-        <div>
-          Hello Jekyll React Webpack
-        </div>
-      );
-    }
+const hello = React.createClass({
+  render: function() {
+    return <div>Hello World</div>;
   }
+});
 
-  ReactDOM.render(<Hello />, document.getElementById('initial-content'));
+ReactDOM.render(hello, document.getElementById('root'));
