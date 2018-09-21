@@ -5,7 +5,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
-const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
+const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 
 const PUBLIC_PATH = 'https://donboulton.com/';
 
@@ -45,6 +45,14 @@ module.exports = {
         '_site/assets/**.js',
         '/'
       ],
+      _staticFileGlobsIgnorePatterns: ['./public/firebase-messaging-sw.js'],
+      get staticFileGlobsIgnorePatterns() {
+        return this._staticFileGlobsIgnorePatterns;
+      },
+      set staticFileGlobsIgnorePatterns(value) {
+        this._staticFileGlobsIgnorePatterns = value;
+      },
+      exclude: /(node_modules|bower_components)/,
       stripPrefix: '_site/',
       runtimeCaching: [{
         urlPattern: '/',

@@ -37,6 +37,13 @@ new SWPrecacheWebpackPlugin({
       '_site/assets/images/**.*',
       '_site/assets/**.js',
     ],
+    _staticFileGlobsIgnorePatterns: ['./public/firebase-messaging-sw.js'],
+    get staticFileGlobsIgnorePatterns() {
+      return this._staticFileGlobsIgnorePatterns;
+    },
+    set staticFileGlobsIgnorePatterns(value) {
+      this._staticFileGlobsIgnorePatterns = value;
+    },
     stripPrefix: '_site/',
     runtimeCaching: [{
       urlPattern: '/',
