@@ -114,7 +114,7 @@ layout: default
   {% if page.cookies == true %}
     {% include cookies-en.html %}
   {% endif %}
-  <div id="root"></div>
+  <div id="root" class="root"></div>
   {% comment %}<!-- only show related on a post page when `related: true` -->{% endcomment %}
   {% if page.id and page.related and site.related_posts.size > 0 %}
     <div class="page__related">

@@ -17,6 +17,8 @@ import './Hello';
 
 import './Init.Firebase';
 
+import './FileUpload';
+
 require('lazysizes');
 require('svg4everybody');
 require('jquery-smooth-scroll');
