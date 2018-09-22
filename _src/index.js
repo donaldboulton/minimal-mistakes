@@ -23,5 +23,4 @@ require('lazysizes');
 require('svg4everybody');
 require('jquery-smooth-scroll');
 require('default-passive-events');
-require('file-upload-with-preview');
 require('anchor-js');
