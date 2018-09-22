@@ -3,7 +3,7 @@ const ReactDOM = require('react-dom');
 
 const hello = React.createClass({
   render: function() {
-    return <div>Hello World</div>;
+    return <div>React Says Hello World</div>;
   }
 });
 

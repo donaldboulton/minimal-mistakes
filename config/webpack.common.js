@@ -1,13 +1,10 @@
 /* eslint-disable import/no-extraneous-dependencies */
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
-const CompressionPlugin = require('compression-webpack-plugin');
-const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
-
-const PUBLIC_PATH = 'https://donboulton.com/';
 
 module.exports = {
   entry: {
@@ -28,41 +25,7 @@ module.exports = {
       from: path.resolve('_images'),
       to: 'images/',
     }]),
-    new CompressionPlugin({
-      asset: '[path].gz[query]',
-      algorithm: 'gzip',
-      test: /\.js$|\.css$|\.eot?.+$|\.ttf?.+$|\.woff?.+$|\.svg?.+$/,
-      threshold: 10240,
-      minRatio: 0.8
-    }),
-    new SWPrecacheWebpackPlugin({
-      cacheId: 'donboulton',
-      filename: 'service-worker.js',
-      staticFileGlobs: [
-        '_site/assets/**.css',
-        '_site/**.html',
-        '_site/assets/images/**.*',
-        '_site/assets/**.js',
-        '/'
-      ],
-      _staticFileGlobsIgnorePatterns: ['./public/firebase-messaging-sw.js'],
-      get staticFileGlobsIgnorePatterns() {
-        return this._staticFileGlobsIgnorePatterns;
-      },
-      set staticFileGlobsIgnorePatterns(value) {
-        this._staticFileGlobsIgnorePatterns = value;
-      },
-      exclude: /(node_modules|bower_components)/,
-      stripPrefix: '_site/',
-      runtimeCaching: [{
-        urlPattern: '/',
-        handler: 'networkFirst',
-      }],
-      root: '_site',
-      importScripts: [{
-        fileName: './public/firebase-messaging-sw.js' 
-      }]
-    })
+    new BundleAnalyzerPlugin(),
   ],
   devServer: {
     contentBase: './assets',
@@ -81,7 +44,7 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: [ 'env', 'react' ],
+            presets: ['env', 'react', 'stage-2'],
           },
         },
       },
