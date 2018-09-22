@@ -1,5 +1,4 @@
-module.exports = {
-  
+module.exports = {  
   staticFileGlobs: [
     '_site/assets/**.css',
     '_site/**.html',
