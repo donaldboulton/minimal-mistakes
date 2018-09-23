@@ -1,9 +1,8 @@
 const path = require('path');
 var babel = require("babel-core");
 import { transform } from 'babel-core';
-import * as babel from 'babel-core';
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
+const SWPrecache = require('sw-precache');
 
 const PUBLIC_PATH = 'https://donboulton.com/';
 
@@ -23,7 +22,7 @@ new CopyWebpackPlugin([
   }
 ]),
 // service worker caching
-new SWPrecacheWebpackPlugin({
+new SWPrecache({
     cacheId: 'donboulton',
     importScripts: [
       {
@@ -50,4 +49,4 @@ new SWPrecacheWebpackPlugin({
       handler: 'networkFirst',
   }],
   root: '_site'
-});
+})

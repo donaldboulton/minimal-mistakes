@@ -81,7 +81,7 @@ algolia:
   files_to_exclude:
     - index.html
     - index.md
-    - subdirectory/*.html
+    - photography/*.html
 google:
   search_engine_id       : "013988495707638373148:g116y1r0c-a"
   instant_search         : # false (default), true
@@ -451,16 +451,6 @@ defaults:
       type: category
     values:
       layout: "category"
-  # _products
-  - scope:
-      path: "_products"
-      type: "products" # a collection in your site, in plural form
-    values:
-      layout: "product"
-      breadcrumbs:
-        - label: "products"
-          url: /products/
-      permalink: /:products/:name/
 
 posts_json_path: posts.json
 ipstack:

@@ -28,9 +28,5 @@ export function initializePush() {
         });
         messaging.onMessage(payload => {
           console.log("Notification Received", payload);
-          //this is the function that gets triggered when you receive a 
-          //push notification while you’re on the page. So you can 
-          //create a corresponding UI for you to have the push 
-          //notification handled.
        });
 }
