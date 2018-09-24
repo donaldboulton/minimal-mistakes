@@ -219,11 +219,11 @@ function addNavItem(ul, href, text) {
  });
  if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/service-worker.js');
+    navigator.serviceWorker.register('/firebase-messaging-sw.js');
   });
 
   navigator.serviceWorker.ready.then(function (registration) {
-    console.log('Service worker successfully registered on scope', registration.scope);
+    console.log('Firebase Service worker successfully registered on scope', registration.scope);
   });
  }
  function addEvent(node,type,callback){if(node.addEventListener){node.addEventListener(type,function(e){callback(e,e.target)},!1)}else if(node.attachEvent){node.attachEvent("on"+type,function(e){callback(e,e.srcElement)})}}
@@ -233,31 +233,28 @@ function addNavItem(ul, href, text) {
   function checkForm(form)
     {if(!form.conditions.checked){alert("Please indicate that you accept the Terms and Conditions");form.conditions.focus();return!1}
     return!0}
-$(".author__urls_masthead button").on("click", function() {
+    $(".author__urls_masthead button").on("click", function() {
     $(".author__urls_masthead").toggleClass("is--visible");
     $(".author__urls_masthead button").toggleClass("open");
 });
 svg4everybody();
 $(window).bind("hashchange", function(event) {
     $.smoothScroll({
-      // Replace '#/' with '#' to go to the correct target
       scrollTarget: location.hash.replace(/^\#\/?/, "#"),
       offset: -20
     });
   });
   $('a[href*="#"]').bind("click", function(event) {
-    // Remove '#' from the hash.
     var hash = this.hash.replace(/^#/, "");
     if (this.pathname === location.pathname && hash) {
       event.preventDefault();
-      // Change '#' (removed above) to '#/' so it doesn't jump without the smooth scrolling
       location.hash = "#/" + hash;
     }
   });
-  // Trigger hashchange event on page load if there is a hash in the URL.
   if (location.hash) {
     $(window).trigger("hashchange");
-  }
+  };
+})
 </script>
 
 <script async defer src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
