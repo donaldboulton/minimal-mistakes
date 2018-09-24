@@ -1,6 +1,7 @@
 import { config } from "./firebaseConfig";
-import firebase from "firebase";
-import 'firebase/database';
+import firebase from 'firebase/app';
+import 'firebase/database'; // If using Firebase database
+import 'firebase/storage';  // If using Firebase storage
 import 'firebase/messaging';
 
 firebase.initializeApp(config);

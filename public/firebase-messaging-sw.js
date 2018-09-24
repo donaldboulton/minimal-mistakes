@@ -1,5 +1,6 @@
-const firebaseApp = require('firebase-app');
-const firebaseMessaging = require('firebase-messaging');
+import firebase from 'firebase/app';
+import 'firebase/database';
+import 'firebase/messaging';
 
 const getFirebaseMessagingObject = () => {
   const config = {

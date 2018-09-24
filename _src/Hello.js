@@ -1,10 +1,16 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
+var createClass = require('create-react-class');
 
-const hello = React.createClass({
-  render: function() {
-    return <div>React Says Hello World</div>;
+// Create component
+var TodoComponent = createClass({
+  render: function () {
+    return(
+      <h1>Hello!!</h1>
+    );
   }
 });
 
-ReactDOM.render(hello, document.getElementById('root'));
+// put component into html page
+
+ReactDOM.render(<TodoComponent />, document.getElementById('todo-container'));
