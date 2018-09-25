@@ -41,11 +41,11 @@ class Main extends Component {
         <form className="App" onSubmit={this.onSubmit}>
           <input placeholder="add task" value={this.state.term} onChange={(e) => this.onChange(e.target.value)}
           className="inputField"/>
-          <button>Add to the List</button>
+          <button className="btn btn--primary">Add</button>
         </form>
         <List items={this.state.items}  onDeleteList={this.onDelete}/>
         <div className="footer-outer">
-          <span className="footer"> Number of completed items in an array:  {this.state.items.length} </span>
+          <span className="footer"> Completed Items:  {this.state.items.length} </span>
         </div>
       </div>
     </div>
