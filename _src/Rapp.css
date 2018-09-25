@@ -64,14 +64,12 @@ hr{
 }
 .item-remove{
   align-self: center;
-  width: 32px;
-  height: 32px;
+  width: 16px;
+  height: 16px;
   background-color: transparent;
-  background-image: url('./cancel-32.png');
+  background-image: url('./trash-alt.svg');
   background-size: 100% 100%;
   border: 0;
-  color: white;
-  font-size: 0;
   vertical-align: middle;
   cursor: pointer;
   outline: none;
