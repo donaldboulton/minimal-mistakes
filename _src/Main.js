@@ -45,7 +45,7 @@ class Main extends Component {
        <form className="App" onSubmit={this.onSubmit}>
           <input placeholder="add task" value={this.state.term} onChange={this.handleChange}
           className="inputField"/>
-          <button>Add to the List</button>
+          <button className="btn btn--primary">Add to the List</button>
         </form>
         <TodoList 
           onTodoClick={this.handleItemClick}
