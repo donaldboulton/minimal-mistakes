@@ -11,10 +11,6 @@ var _app = require("firebase/app");
 
 var _app2 = _interopRequireDefault(_app);
 
-require("firebase/database");
-
-require("firebase/storage");
-
 require("firebase/messaging");
 
 function _interopRequireDefault(obj) {
