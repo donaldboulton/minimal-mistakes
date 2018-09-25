@@ -36,7 +36,6 @@ class List extends Component {
               </div>
               <div className="item-remove-div">
                 <button className="item-remove" onClick={() => this.props.onDeleteList(index)}>
-                  Remove
                 </button>
               </div>
             </div>
