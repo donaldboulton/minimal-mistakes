@@ -38,7 +38,7 @@ module.exports = {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        exclude: /(node_modules|bower_components)/,
+        exclude: /node_modules\/svg4everybody/,
         use: {
           loader: 'babel-loader',
           options: {
@@ -76,6 +76,10 @@ module.exports = {
           'file-loader',
         ],
       },
+      {
+        test: require.resolve("svg4everybody"),
+        loader: "imports?this=>window"
+      }
     ],
   },
 };

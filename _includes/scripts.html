@@ -238,7 +238,6 @@ function addNavItem(ul, href, text) {
     $(".author__urls_masthead").toggleClass("is--visible");
     $(".author__urls_masthead button").toggleClass("open");
 });
-svg4everybody();
 $(window).bind("hashchange", function(event) {
     $.smoothScroll({
       scrollTarget: location.hash.replace(/^\#\/?/, "#"),
@@ -256,6 +255,7 @@ $(window).bind("hashchange", function(event) {
     $(window).trigger("hashchange");
   };
 })
+svg4everybody()
 </script>
 
 <script async defer src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

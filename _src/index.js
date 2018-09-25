@@ -1,14 +1,21 @@
 import React, { Component } from 'react';
-import {render} from 'react-dom';
+import { render } from 'react-dom';
 import Hello from './Hello';
+import './Rapp.css';
+import Main from './Main';
+
 class App extends Component {
- render() {
- return (
- <Hello />
- )
- }
+
+  render() {
+    return (
+      <div>
+        <Main />
+      </div>
+    );
+  }
 }
-ReactDOM.render(<App />, document.getElementById('initial-content'));
+
+render(<App />, document.getElementById('root'));
 
 // CSS JS and SASS files
 import './main.css';

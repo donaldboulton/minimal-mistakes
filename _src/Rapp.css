@@ -3,23 +3,107 @@
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 5s linear;
+  animation: App-logo-spin infinite 20s linear;
   height: 80px;
 }
 
 .App-header {
-  background-color: #1d1d1d;
+  background-color: #222;
   height: 150px;
   padding: 20px;
   color: white;
 }
 
 .App-title {
-  font-size: 1em;
+  font-size: 1.5em;
 }
 
 .App-intro {
-  font-size: 14px;
+  font-size: large;
+}
+
+.Appcenter{
+  width: 550px;
+  height: 550px;
+  margin: 0 auto;
+}
+
+.Appheader{
+  text-align: center;
+}
+
+.mainCenter{
+  width: 450px;
+  height: 450px;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid black;
+  position: relative;
+}
+
+.inputField{
+  margin-bottom: 10px;
+}
+
+.item-list{
+  width: 90%;
+  background-color: #00c100;
+  border: 2px solid green;
+}
+
+hr{
+  width: 75%;
+}
+
+.item-checkbox{
+  display: inline-block;
+  width: 5%;
+}
+.item-remove-div{
+  display: inline-block;
+}
+.item-remove{
+  align-self: center;
+  width: 22px;
+  height: 32px;
+  background-color: transparent;
+  background-image: url('./icons/cancel.svg');
+  background-size: 100% 100%;
+  border: 0;
+  color: white;
+  font-size: 0;
+  vertical-align: middle;
+  cursor: pointer;
+  outline: none;
+}
+
+.item-text{
+  display: inline-block;
+  width: 75%;
+}
+
+.list-style{
+  list-style: none;
+}
+
+.outer-div{
+  width: 90%;
+  background-color: #00c100;
+}
+
+.footer{
+  width: 100px;
+  height: 30px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-outer{
+  border: 1px solid black;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: 0;
 }
 
 @keyframes App-logo-spin {
@@ -27,20 +111,8 @@
   to { transform: rotate(360deg); }
 }
 
-button {
-  margin-top: 20px;
-  border-radius:  4px;
-  border: 0;
-  padding: 15px;
-  font-size: 16px;
-  cursor: pointer;
-  background-color: #00c100;
-  color: #fff;
-  transition: .3s ease-in-out;
-}
-
-button:hover {
-  background-color: #009100;
-  color: #222;
-  border: 1px solid #222;
+.list-unstyled {
+  padding: 0!important;
+  margin: 0!important;
+  list-style: none;
 }
