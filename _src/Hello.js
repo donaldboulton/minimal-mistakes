@@ -13,4 +13,4 @@ var TodoComponent = createClass({
 
 // put component into html page
 
-(<TodoComponent />, document.getElementById('todo-container'));
+ReactDOM.render(<TodoComponent />, document.getElementById('todo-container'));
