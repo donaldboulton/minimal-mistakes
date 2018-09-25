@@ -4,7 +4,7 @@
 <!-- https://t.co/dKP3o1e -->
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
-<meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+<meta name="viewport" content="width=device-width,minimum-scale=, initial-scale=1.0">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="robots" Content="index, follow, archive">
 <meta name="revisit-after" Content="3 days">
@@ -45,6 +45,12 @@
 <link rel="alternate" title="{{ site.title }} Feed" type="application/json" href="{{ 'feed.json' | absolute_url }}">
 <link rel="manifest" href="{{ 'manifest.json' | absolute_url }}">
 <link rel="amphtml" href="{{ site.url }}{{ amp.page.url }}" />
+
+{% comment %}
+  <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+{% endcomment %}
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-30162465-2"></script>
 <script>
@@ -111,3 +117,11 @@
   {% endunless %}
 {% endif %}
 <script src="https://identity-js.netlify.com/v1/netlify-identity-widget.js"></script>
+<style amp-custom>
+    {% capture include_to_scssify %}
+      {% include styles.scss %}
+    {% endcapture %}
+    {{ include_to_scssify | scssify }}
+</style>
+<style amp- >body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+<script async src="https://cdn.ampproject.org/v0.js"></script>
