@@ -35,8 +35,8 @@ class Main extends Component {
 
   render() {
     return (
-      <div className="center">
-       <h1 className="header" > TODO-LIST </h1>
+      <div className="Appcenter">
+       <h3 className="Appheader" > TODO-LIST </h3>
        <div className='mainCenter'>
         <form className="App" onSubmit={this.onSubmit}>
           <input placeholder="add task" value={this.state.term} onChange={(e) => this.onChange(e.target.value)}
