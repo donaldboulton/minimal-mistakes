@@ -9,7 +9,6 @@
 
 .App-header {
   background-color: #222;
-  height: 50px;
   padding: 2em;
   color: white;
 }
@@ -23,8 +22,8 @@
 }
 
 .Appcenter{
-  width: 280px;
-  height: 380px;
+  width: 230px;
+  min-height: 200px;
   margin: 0 auto;
 }
 
@@ -33,8 +32,8 @@
 }
 
 .mainCenter{
-  width: 3000px;
-  height: 350px;
+  width: 230px;
+  min-height: 210px;
   margin: 0 auto;
   text-align: center;
   border: 1px solid black;
@@ -53,6 +52,7 @@
 
 hr{
   width: 75%;
+  color: #ffffff;
 }
 
 .item-checkbox{
