@@ -57,9 +57,12 @@ layout: default
             {% if page.adds == true %}
                {% include google-adds.html %}
             {% endif %}          
-               {% include sidebar-subscribe.html %}
+               {% include sidebar-react.html %}
             {% if page.notifications-admin == true %}
               {% include sidebar-subscribe-admin.html %}
+            {% endif %}
+            {% if page.notifications == true %}
+              {% include sidebar-subscribe.html %}
             {% endif %}
           </aside>
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
