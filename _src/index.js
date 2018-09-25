@@ -8,7 +8,7 @@ class App extends Component {
  )
  }
 }
-render(<App />, document.getElementById('initial-content'));
+ReactDOM.render(<App />, document.getElementById('initial-content'));
 
 // CSS JS and SASS files
 import './main.css';
@@ -17,8 +17,7 @@ import './Hello';
 
 import './Init.Firebase';
 
-import './FileUpload';
-
+require('file-upload-with-preview');
 require('lazysizes');
 require('svg4everybody');
 require('jquery-smooth-scroll');

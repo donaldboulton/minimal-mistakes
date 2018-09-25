@@ -6,11 +6,11 @@ var createClass = require('create-react-class');
 var TodoComponent = createClass({
   render: function () {
     return(
-      <h1>Hello!!</h1>
+      <h3>Jekyll React Hello!</h3>
     );
   }
 });
 
 // put component into html page
 
-ReactDOM.render(<TodoComponent />, document.getElementById('todo-container'));
+(<TodoComponent />, document.getElementById('todo-container'));

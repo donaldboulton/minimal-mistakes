@@ -18,7 +18,10 @@
     {% endif %}
     <li><a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | absolute_url }}{% endif %}"> <svg class="icon icon--rss icon-footer fa-rss" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-rss' | prepend: 'build/icons/' | relative_url }}"></use></svg> {{ site.data.ui-text[site.locale].feed_label | default: "Feed" }}</a></li>
   </ul><svg class="icon icon--power-off fa-power-off" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-power-off' | prepend: 'build/icons/' | relative_url }}"></use></svg>&nbsp;
-  {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }} <a href="https://jekyllrb.com" rel="noreferrer"><img src="/assets/images/red-flask-32.png" alt="Jekyll Icon" class="icon icon-footer icon--red-flask" onclick="window.open('https://jekyllrb.com');">Jekyll</a>&amp;&nbsp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="noreferrer">
+  <a href="https://jekyllrb.com" rel="noreferrer"><img src="/assets/images/red-flask-32.png" alt="Jekyll Icon" class="icon icon-footer icon--red-flask" onclick="window.open('https://jekyllrb.com');">Jekyll</a>&amp;&nbsp;
+  <a href="https://reactjs.org/" rel="noreferrer"><img src="/assets/images/react-32.png" alt="React Icon" class="icon icon-footer icon--react" onclick="window.open('https://reactjs.org/');">React</a>&nbsp;
+  <a href="https://webpack.js.org/" rel="noreferrer"><img src="/assets/images/webpack-32.png" alt="Webpack Icon" class="icon icon-footer icon--webpack" onclick="window.open('https://webpack.js.org/');">Webpack</a>&nbsp;On&nbsp;
+  <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="noreferrer">
     <svg class="icon icon-footer icon--mmistakes" version="1.1" id="Layer_1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" x="0px" y="0px"
     viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
  <polygon points="3,11 3,11 4,11 4,7 2,7 2,5 3.2,5 3.3,5 5,5 5,7 7,7 7,11 8.5,11 9,11 9,11 10,11 10,7 8,7 8,5.1 8,5 9.6,5 11,5
