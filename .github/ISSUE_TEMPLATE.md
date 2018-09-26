@@ -1,10 +1,4 @@
-<!--
-  Before submitting please search open and closed issues at 
-  https://github.com/mmistakes/minimal-mistakes/issues to avoid duplication.
-
-  Feel free to use the following as a template and remove or add fields as you 
-  see fit. You can convert `[ ]` into `[x]` completed check boxes.
--->
+# do
 
 - [ ] This is a question about using the theme.
 - [ ] This is a feature request or enhancement.
@@ -16,7 +10,7 @@
 
 ---
 
-# Environment information
+## Environment information
 
 <!--
   Please include theme version, Jekyll version, whether you are hosting with
