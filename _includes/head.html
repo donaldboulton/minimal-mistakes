@@ -45,6 +45,7 @@
 <link rel="alternate" title="{{ site.title }} Feed" type="application/json" href="{{ 'feed.json' | absolute_url }}">
 <link rel="manifest" href="{{ 'manifest.json' | absolute_url }}">
 <link rel="amphtml" href="{{ site.url }}{{ amp.page.url }}" />
+<link rel="canonical" href="{{ page.canonical_url | prepend: site.baseurl | prepend: site.url }}" />
 
 {% comment %}
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
