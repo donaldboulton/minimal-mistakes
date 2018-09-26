@@ -136,8 +136,8 @@ amp_googleanalytics_id   : "UA-30162465-2"
 # Site Author
 author:
   name                   : "Donald Boulton"
-  avatar                 : "/assets/images/donald-boulton-100.jpg"
-  picture                : "/assets/images/donald-boulton-100.jpg"
+  avatar                 : "/assets/images/donald-boulton.jpg"
+  picture                : "/assets/images/donald-boulton.jpg"
   bio                    : "Away from Asp. Anything."
   location               : "OKC Oklahoma"
   email                  : "donaldboulton@gmail.com"
