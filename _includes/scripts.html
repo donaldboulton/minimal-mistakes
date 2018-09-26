@@ -166,6 +166,7 @@ $(document).ready(function() {
 {% endif %}
 
 {% if page.anchor == true %}
+<script src="{{ '/build/js/vendor/anchor/anchor.js' | relative_url }}"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function(event) {
 anchors.add('h2, h3, h4, h5');
