@@ -19,4 +19,5 @@ group :jekyll_plugins do
   gem 'jekyll-figure'
   gem 'jekyll-multiple-languages-plugin'
   gem 'amp-jekyll'
+  gem 'public_suffix'
 end

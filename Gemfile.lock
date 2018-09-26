@@ -297,6 +297,7 @@ DEPENDENCIES
   jekyll-typogrify
   jemoji
   json
+  public_suffix
   rake (~> 12)
   tzinfo-data
   wdm (~> 0.1.0)

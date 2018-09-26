@@ -83,7 +83,7 @@ github_editme_path: donaldboulton/DWB/blob/gh-pages/photography/index.html
    <div>
     <h2 class="page__title">{{ gallery.title }}</h2>
     <a href="{{ site.url }}{{ site.baseurl }}/photography/{{ gallery.directory }}">
-      <img class="gallery-image" alt="{{ gallery.title }}" src="{{ site.url }}{{ site.baseurl }}/build/photography/{% if gallery.picture_path %}{{ gallery.picture_path }}{% else %}{{ gallery.directory }}{% endif %}/{{ gallery.preview.thumbnail }}" />
+      <img class="gallery-image" alt="{{ gallery.title }}" src="{{ site.url }}{{ site.baseurl }}/build/photography/{% if gallery.picture_path %}{{ gallery.picture_path }}{% else %}{{ gallery.directory }}{% endif %}/{{ gallery.preview.thumbnail }}"/>
     </a>
   </div>
   {% endfor %}
