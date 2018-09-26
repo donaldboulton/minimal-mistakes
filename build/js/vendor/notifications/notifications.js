@@ -8,7 +8,7 @@
     'What you been up to?',
     'These aren\'t real messages.',
   ];
-  const userIcon = '/assets/images/fav-icons/fav-icon-512x512.png';
+  const userIcon = '/assets/icons/favicon-32x32.png';
   const userName = 'donaldboulton';
 
   const promiseTimeout = function(cb, timeout) {
@@ -24,17 +24,17 @@
     const options = {
       body: 'Comment Updates Notifications.\n' +
         'There has been a new comment on donboulton.com.',
-      icon: '/assets/images/fav-icons/favicon-512x512.png',
-      badge: '/assets/images/fav-icons/favicon-192x192.png',
+      icon: '/assets/icons/favicon-32x32.png',
+      badge: '/assets/icons/favicon-32x32.png',
       image: '/assets/images/letter-avatar-header.png',
-      sound: '/assets/audio/notification-sound.mp3',
+      sound: '/build/audio/notification-sound.mp3',
       tag: 'notification',
       vibrate: [500,110,500,110,450,110,200,110,170,40,450,110,200,110,170,40,500],
       actions: [
         {
           action: 'download-book-action',
           title: 'Download Book',
-          icon: '/assets/icons/download.svg'
+          icon: '/build/icons/download.svg'
         }
       ]
     };
@@ -73,7 +73,7 @@
     /**** START iconNotification ****/
     const title = 'Icon Notification';
     const options = {
-      icon: '/assets/images/fav-icons/favicon-192x192.png'
+      icon: '/assets/icons/favicon-32x32.png'
     };
     registration.showNotification(title, options);
     /**** END iconNotification ****/
@@ -83,7 +83,7 @@
     /**** START badgeNotification ****/
     const title = 'Badge Notification';
     const options = {
-      badge: '/assets/images/fav-icons/favicon-192x192.png'
+      badge: '/assets/icons/favicon-32x32.png'
     };
     registration.showNotification(title, options);
     /**** END badgeNotification ****/
@@ -93,7 +93,7 @@
     /**** START imageNotification ****/
     const title = 'Image Notification';
     const options = {
-      image: '/assets/images/fav-icons/favicon-192x192.png'
+      image: '/assets/icons/favicon-32x32.png'
     };
     registration.showNotification(title, options);
     /**** END imageNotification ****/
@@ -115,7 +115,7 @@
     /**** START soundNotification ****/
     const title = 'Sound Notification';
     const options = {
-      sound: '/assets/audio/notification-sound.mp3'
+      sound: '/build/audio/notification-sound.mp3'
     };
     registration.showNotification(title, options);
     /**** END soundNotification ****/
