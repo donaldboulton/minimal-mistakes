@@ -20,14 +20,14 @@ category:
 tags: [Gallery, San Diego Ca] 
 sidebar:
   - title: "Chicono Park"
-    image: /dest/build/photography/and-diego-gallery/CC Park Balboa Bridge2.jpg
+    image: /build/photography/and-diego-gallery/CC Park Balboa Bridge2.jpg
     image_alt: "Chicono Park"
     text: "Chicono Park next to Chezar Chavez Continuing ed Center"
   - title: "Learned Computers"
     text: "Figured out computers and programing hanging out at San Diegos Continuing ed centers."
 header:
-  image: /dest/build/photography/san-diego-gallery/Greenflash06.jpg
-  teaser: /dest/build/photography/san-diego-gallery/Greenflash06.jpg
+  image: /build/photography/san-diego-gallery/Greenflash06.jpg
+  teaser: /build/photography/san-diego-gallery/Greenflash06.jpg
 locations:
   - San Diego Ca
 support: [gallery]

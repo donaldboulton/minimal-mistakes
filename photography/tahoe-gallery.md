@@ -20,7 +20,7 @@ category:
 tags: [Gallery, Tahoe Ca] 
 sidebar:
   - title: "Tim Ewers"
-    image: /dest/build/photography/tahoe-gallery/Tim Playing.jpg
+    image: /build/photography/tahoe-gallery/Tim Playing.jpg
     image_alt: "Tim Ewers"
     text: "Tim and Friends Jammin"
   - title: "Tahoe 1983"
@@ -28,12 +28,13 @@ sidebar:
 category:
   - Gallerys
 header:
-  image: /dest/build/photography/tahoe-gallery/Rubicon Trail.jpg
-  teaser: /dest/build/photography/tahoe-gallery/Rubicon Trail.jpg
+  image: /build/photography/tahoe-gallery/Rubicon Trail.jpg
+  teaser: /build/photography/tahoe-gallery/Rubicon Trail.jpg
 locations:
   - Tahoe California
 support: [gallery]
 ---
+
 # Tahoe Ca in 1983
 
 {% for gallery in site.photography %}
