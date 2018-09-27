@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import Hello from './Hello';
+import logo from './logo.svg';
 import './Rapp.css';
 import List from './List';
 
@@ -36,6 +37,7 @@ class Main extends Component {
   render() {
     return (
       <div className="Appcenter">
+      <img src={logo} className="App-logo" alt="logo" />
        <h3 className="Appheader" > TODO-LIST </h3>
        <div className='mainCenter'>
         <form className="App" onSubmit={this.onSubmit}>

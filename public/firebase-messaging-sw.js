@@ -1,8 +1,10 @@
 "use strict";
 
-var firebase = require("firebase/app");
-require("firebase/database");
-require("firebase/messaging");
+import firebase from 'firebase/app';
+import 'firebase/auth';
+import 'firebase/database';
+import 'firebase/datastore';
+import 'firebase/messaging';
 
 var getFirebaseMessagingObject = function getFirebaseMessagingObject() {
   var config = {
