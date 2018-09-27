@@ -22,12 +22,12 @@ category:
   - Donald Boulton
 image:
   cover: true
-  path: &image /assets/images/digital.jpg
+  path: &image /assets/images/about-stack.jpg
   feature: *image
-  thumbnail: /assets/images/digital-320.jpg
+  thumbnail: /assets/images/about-stack-320.jpg
 header:
-  image: /assets/images/digital-.jpg
-  teaser: /assets/images/digital-320.jpg
+  image: /assets/images/about-stack.jpg
+  teaser: /assets/images/about-stack-320.jpg
 sidebar:
   - title: "Rockwell RV"
     image: /assets/images/rockwell-rv-sitemap-sm.jpg
