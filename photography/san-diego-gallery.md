@@ -32,6 +32,7 @@ locations:
   - San Diego Ca
 support: [gallery]
 ---
+
 # San Diego 1998
 
 {% for gallery in site.photography %}

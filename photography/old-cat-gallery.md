@@ -32,6 +32,7 @@ locations:
   - Idabel Oklahoma
 support: [gallery]
 ---
+
 # Cats from the past
 
 {% include gallery-layout.html gallery=site.data.galleries.old-cat-gallery %}

@@ -33,6 +33,7 @@ locations:
   - Charlottesville Va
 support: [gallery]
 ---
+
 # Charlottesville Va 2002
 
 {% for gallery in site.photography %}
