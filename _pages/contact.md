@@ -17,16 +17,16 @@ author_profile: true
 tags:
   - Contact
   - Donald Boulton
-
-adds: true
+notifications: false
 toc: false
 sidenav: true
 reviews: false
 comments: false
 cookies: true
 contact: false
+adds: false
 excerpt: 'Github CloudFlare Hosting with Full SSL.<br /> <small><a href="https://github.com/donaldboulton/DWB/">Jekyll Gulp Travis CI Build</a></small><br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
-support: [adds, cookies, validate]
+support: [cookies, validate]
 folder: _pages
 slug: contact
 product: contact
