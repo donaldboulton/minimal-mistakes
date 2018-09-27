@@ -5,11 +5,15 @@
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
+  animation-name: spin;
+  animation-duration: 10000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
 }
 
 .App-header {
   background-color: #222;
-  padding: 2em;
+  padding: 1em;
   color: white;
 }
 
