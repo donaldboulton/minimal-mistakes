@@ -18,6 +18,5 @@ group :jekyll_plugins do
   gem 'jekyll-redirect-from', '~> 0.13.0'
   gem 'jekyll-figure'
   gem 'jekyll-multiple-languages-plugin'
-  gem 'amp-jekyll'
   gem 'public_suffix'
 end

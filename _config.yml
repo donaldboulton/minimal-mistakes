@@ -316,7 +316,6 @@ plugins:
   - notice
   - jemoji
   - json
-  - amp-jekyll
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -336,7 +335,6 @@ whitelist:
   - notice
   - jemoji
   - json
-  - amp-jekyll
 
 # Archives
 #  Type
