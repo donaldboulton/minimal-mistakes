@@ -239,23 +239,7 @@ function addNavItem(ul, href, text) {
     $(".author__urls_masthead").toggleClass("is--visible");
     $(".author__urls_masthead button").toggleClass("open");
 });
-$(window).bind("hashchange", function(event) {
-    $.smoothScroll({
-      scrollTarget: location.hash.replace(/^\#\/?/, "#"),
-      offset: -20
-    });
-  });
-  $('a[href*="#"]').bind("click", function(event) {
-    var hash = this.hash.replace(/^#/, "");
-    if (this.pathname === location.pathname && hash) {
-      event.preventDefault();
-      location.hash = "#/" + hash;
-    }
-  });
-  if (location.hash) {
-    $(window).trigger("hashchange");
-  };
-})
+$('#style-3').smoothScroll();
 svg4everybody()
 </script>
 
