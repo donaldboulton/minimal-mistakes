@@ -39,7 +39,7 @@ locations:
   - Rockwell+RV+Park+%26+Campground
 header:
   overlay_color: "#5e616c"
-  overlay_image: /assets/images/digital.jpg
+  overlay_image: /assets/images/about-stack.jpg
   cta_label: "Posts"
   cta_url: "/year-archive/"
   caption: Gods Digital World

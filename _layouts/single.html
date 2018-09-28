@@ -3,7 +3,7 @@ layout: default
 ---
 
 {% if page.path contains '_posts' %}
-  <link rel="amphtml" href="{{ page.id | prepend: '/amp' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="amphtml" href="{{ page.id | prepend: 'amp' | prepend: site.baseurl | prepend: site.url }}">
 {% endif %}
 
 {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}

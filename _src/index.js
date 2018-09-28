@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import Hello from './Hello';
+import Async from 'react-code-splitting';
+import Hello from './components/Hello';
 import './Rapp.css';
-import Main from './Main';
+const Main = import('./components/Main');
+const App = import('./components/App');
 
 class App extends Component {
 
@@ -15,12 +17,17 @@ class App extends Component {
   }
 }
 
+const Main = () => (<Async load={import('./components/Main')} />);
+const App = () => (<Async load={import('./components/App')} />);
+const Countdown = () => (<Async load={import('./views/countdown')} />);
+
 render(<App />, document.getElementById('root'));
+
 
 // CSS JS and SASS files
 import './main.css';
 
-import './Hello';
+import './components/Hello';
 
 import './Init.Firebase';
 
