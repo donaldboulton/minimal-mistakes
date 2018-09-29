@@ -2,9 +2,11 @@
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const path = require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const WebpackMd5Hash = require('webpack-md5-hash');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -23,6 +25,12 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "[name].css",
       chunkFilename: "[id].css"
+    }),
+    new WebpackMd5Hash(),
+    new StyleLintPlugin({
+      configFile: './postcss.config.js',
+      files: './_src/*.css',
+      syntax: 'css'
     }),
     new CopyWebpackPlugin([{
       from: path.resolve('_images'),
@@ -63,22 +71,14 @@ module.exports = {
       },
       {
         test: /\.(css|scss)$/,
-        use: MiniCssExtractPlugin.extract({
-          fallback: 'style-loader',
           use: [
-            { loader: 'css-loader', options: { importLoaders: 1 } },
-            {
-              loader: 'postcss-loader',
-              options: {
-                config: {
-                  path: 'config/postcss.config.js',
-                },
-              },
-            },
-            { loader: 'sass-loader' },
-          ],
-        }),
-      },
+            'style-loader',
+            MiniCssExtractPlugin.loader,
+            'css-loader',
+            'postcss-loader',
+            'sass-loader'
+          ]
+      },        
       {
         test: /\.(png|svg|jpg|gif)$/,
         use: [
