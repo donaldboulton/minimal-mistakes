@@ -13,11 +13,16 @@ module.exports = {
     vendor: ['firebase', 'loadash', 'jquery'],
     app: './_src/index.js',
   },
-  optimization :  { 
-    SplitChunks :  { 
-      name :  'vendor' ,
-      chunks :  'initial' , 
-    } 
+  optimization: {
+    splitChunks: {
+        cacheGroups: {
+            commons: {
+                test: /[\\/]node_modules[\\/]/,
+                name: 'vendor',
+                chunks: 'all'
+            }
+        }
+    }
   },
   plugins: [
     new FaviconsWebpackPlugin({
