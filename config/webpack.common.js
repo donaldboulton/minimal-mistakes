@@ -1,8 +1,8 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebPackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
@@ -16,11 +16,14 @@ module.exports = {
       logo: './favicon.png',
       background: '#212529',
     }),
-    new HtmlWebpackPlugin({
+    new HtmlWebPackPlugin({
       template: './_src/template/default.html',
       filename: '../_layouts/default.html',
     }),
-    new ExtractTextPlugin('[name].css'),
+    new MiniCssExtractPlugin({
+      filename: "[name].css",
+      chunkFilename: "[id].css"
+    }),
     new CopyWebpackPlugin([{
       from: path.resolve('_images'),
       to: 'images/',
@@ -50,8 +53,17 @@ module.exports = {
         },
       },
       {
+        test: /\.html$/,
+        use: [
+          {
+            loader: "html-loader",
+            options: { minimize: true }
+          }
+        ]
+      },
+      {
         test: /\.(css|scss)$/,
-        use: ExtractTextPlugin.extract({
+        use: MiniCssExtractPlugin.extract({
           fallback: 'style-loader',
           use: [
             { loader: 'css-loader', options: { importLoaders: 1 } },
