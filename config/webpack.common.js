@@ -29,16 +29,11 @@ module.exports = {
         cache: true,
         parallel: true,
         uglifyOptions: {
-          compress: {
-            screw_ie8: true,
-          },
+          compress: true,
           ecma: 6,
-          mangle: {
-            screw_ie8: true,
-            keep_fnames: true,
-          },
-        },
-        comments: false,
+          mangle: true,
+          comments: false,
+        },        
       })
     ]
   },
@@ -56,6 +51,7 @@ module.exports = {
       chunkFilename: "[id].css"
     }),
     new WebpackMd5Hash(),
+    new webpack.optimize.UglifyJsPlugin(),
     new StyleLintPlugin({
       configFile: './postcss.config.js',
       files: './_src/*.css',
