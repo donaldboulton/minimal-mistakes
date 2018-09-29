@@ -3,7 +3,7 @@ const Merge = require('webpack-merge');
 const CommonConfig = require('./webpack.common.js');
 const path = require('path');
 const webpack = require('webpack');
-const WebpackCleanPlugin = require('webpack-clean-plugin');
+const WebpackCleanPlugin = require('webpack-clean');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 module.exports = Merge(CommonConfig, {
