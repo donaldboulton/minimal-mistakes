@@ -24,18 +24,6 @@ module.exports = {
             }
         }
     },
-    minimizer: [
-      new UglifyJsPlugin({
-        cache: true,
-        parallel: true,
-        uglifyOptions: {
-          compress: true,
-          ecma: 6,
-          mangle: true,
-          comments: false,
-        },        
-      })
-    ]
   },
   plugins: [
     new FaviconsWebpackPlugin({
@@ -51,7 +39,16 @@ module.exports = {
       chunkFilename: "[id].css"
     }),
     new WebpackMd5Hash(),
-    new webpack.optimize.UglifyJsPlugin(),
+    new UglifyJsPlugin({
+      cache: true,
+      parallel: true,
+      uglifyOptions: {
+        compress: true,
+        ecma: 6,
+        mangle: true,
+        comments: false,
+      },        
+    }),
     new StyleLintPlugin({
       configFile: './postcss.config.js',
       files: './_src/*.css',
