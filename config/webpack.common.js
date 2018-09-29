@@ -8,6 +8,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
+const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -59,6 +60,7 @@ module.exports = {
       to: 'images/',
     }]),
     new BundleAnalyzerPlugin(),
+    new FriendlyErrorsWebpackPlugin(),
   ],
   devServer: {
     contentBase: './assets',
@@ -100,7 +102,7 @@ module.exports = {
             'postcss-loader',
             'sass-loader'
           ]
-      },        
+      },
       {
         test: /\.(png|svg|jpg|gif)$/,
         use: [
