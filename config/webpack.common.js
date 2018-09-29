@@ -10,8 +10,14 @@ const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
   entry: {
-    common: ['firebase', 'loadash'],
+    vendor: ['firebase', 'loadash', 'jquery'],
     app: './_src/index.js',
+  },
+  optimization :  { 
+    SplitChunks :  { 
+      name :  'vendor' ,
+      chunks :  'initial' , 
+    } 
   },
   plugins: [
     new FaviconsWebpackPlugin({
