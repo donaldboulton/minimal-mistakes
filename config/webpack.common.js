@@ -50,7 +50,7 @@ module.exports = {
       },        
     }),
     new StyleLintPlugin({
-      configFile: './postcss.config.js',
+      configFile: './config/postcss.config.js',
       files: './_src/*.css',
       syntax: 'css'
     }),
