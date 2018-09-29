@@ -21,8 +21,7 @@ module.exports = Merge(CommonConfig, {
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'common',
-      minChunks: 2,
-      vendor: ['react', 'react-dom', 'react-router'],
+      minChunks: 3,
     }),
     new webpack.optimize.UglifyJsPlugin({
       beautify: false,

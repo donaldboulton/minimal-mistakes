@@ -8,7 +8,7 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 module.exports = {
   entry: {
-    common: ['firebase'],
+    common: ['firebase', 'loadash'],
     app: './_src/index.js',
   },
   plugins: [
