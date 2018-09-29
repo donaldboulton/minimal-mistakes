@@ -5,7 +5,6 @@ const path = require('path');
 const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = Merge(CommonConfig, {
   output: {
@@ -19,18 +18,6 @@ module.exports = Merge(CommonConfig, {
     new webpack.LoaderOptionsPlugin({
       minimize: true,
       debug: false,
-    }),
-    new UglifyJsPlugin({
-      test: /\.js(\?.*)?$/i,
-      beautify: false,
-      mangle: {
-        screw_ie8: true,
-        keep_fnames: true,
-      },
-      compress: {
-        screw_ie8: true,
-      },
-      comments: false,
     }),
     new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i }),
   ],

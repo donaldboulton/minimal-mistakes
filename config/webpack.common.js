@@ -6,6 +6,7 @@ const WebpackMd5Hash = require('webpack-md5-hash');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
@@ -22,7 +23,24 @@ module.exports = {
                 chunks: 'all'
             }
         }
-    }
+    },
+    minimizer: [
+      new UglifyJsPlugin({
+        cache: true,
+        parallel: true,
+        uglifyOptions: {
+          compress: {
+            screw_ie8: true,
+          },
+          ecma: 6,
+          mangle: {
+            screw_ie8: true,
+            keep_fnames: true,
+          },
+        },
+        comments: false,
+      })
+    ]
   },
   plugins: [
     new FaviconsWebpackPlugin({
