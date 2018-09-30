@@ -29,4 +29,3 @@ require('lazysizes');
 require('svg4everybody');
 require('jquery-smooth-scroll');
 require('default-passive-events');
-require('anchor-js');
