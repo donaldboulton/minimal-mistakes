@@ -17,6 +17,4 @@ group :jekyll_plugins do
   gem 'jemoji'
   gem 'jekyll-redirect-from', '~> 0.13.0'
   gem 'jekyll-figure'
-  gem 'jekyll-multiple-languages-plugin'
-  gem 'public_suffix'
 end

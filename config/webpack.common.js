@@ -7,7 +7,6 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const StyleLintPlugin = require('stylelint-webpack-plugin');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 
 module.exports = {
@@ -49,11 +48,6 @@ module.exports = {
         mangle: true,
         comments: false,
       },        
-    }),
-    new StyleLintPlugin({
-      configFile: './config/postcss.config.js',
-      files: './_src/*.css',
-      syntax: 'css'
     }),
     new CopyWebpackPlugin([{
       from: path.resolve('_images'),
