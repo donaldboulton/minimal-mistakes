@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 import Hello from './Hello';
 import './Rapp.css';
-import Main from './Todo';
+import Main from './Main';
 
 class App extends Component {
 

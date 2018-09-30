@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import Hello from './Hello';
-import logo from '../logo.svg';
-import '../Rapp.css';
-import List from '../List';
+import logo from './logo.svg';
+import './Rapp.css';
+import List from './List';
 
 class Main extends Component {
 
@@ -32,7 +32,7 @@ class Main extends Component {
         items: [...this.state.items, this.state.term]
       });
     }
-  };
+  }
 
   render() {
     return (

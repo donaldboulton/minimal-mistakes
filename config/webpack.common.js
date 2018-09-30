@@ -1,60 +1,31 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const path = require('path');
-const HtmlWebPackPlugin = require("html-webpack-plugin");
-const WebpackMd5Hash = require('webpack-md5-hash');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 
 module.exports = {
   entry: {
-    vendor: ['firebase', 'loadash', 'jquery'],
+    common: ['firebase'],
     app: './_src/index.js',
-  },
-  optimization: {
-    splitChunks: {
-        cacheGroups: {
-            commons: {
-                test: /[\\/]node_modules[\\/]/,
-                name: 'vendor',
-                chunks: 'all'
-            }
-        }
-    },
   },
   plugins: [
     new FaviconsWebpackPlugin({
       logo: './favicon.png',
       background: '#212529',
     }),
-    new HtmlWebPackPlugin({
+    new HtmlWebpackPlugin({
       template: './_src/template/default.html',
       filename: '../_layouts/default.html',
     }),
-    new MiniCssExtractPlugin({
-      filename: "[name].css",
-      chunkFilename: "[id].css"
-    }),
-    new WebpackMd5Hash(),
-    new UglifyJsPlugin({
-      cache: true,
-      parallel: true,
-      uglifyOptions: {
-        compress: true,
-        ecma: 6,
-        mangle: true,
-        comments: false,
-      },        
-    }),
+    new ExtractTextPlugin('[name].css'),
     new CopyWebpackPlugin([{
       from: path.resolve('_images'),
       to: 'images/',
     }]),
     new BundleAnalyzerPlugin(),
-    new FriendlyErrorsWebpackPlugin(),
   ],
   devServer: {
     contentBase: './assets',
@@ -73,57 +44,27 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['env', 'react'],
-            plugins: ["syntax-dynamic-import", "transform-react-jsx"]
+            presets: ['env', 'react', 'stage-2'],
           },
         },
       },
       {
-        test: /\.html$/,
-        use: [
-          {
-            loader: "html-loader",
-            options: { minimize: true }
-          }
-        ]
-      },
-      {
-        test: /\.css$/,
-        include: /node_modules/,
-        loader: [
-          'style-loader',
-          'css-loader',
-        ]
-      },
-      // sass
-      {
-        test: /\.scss$/,
-        use: [
-          {
-            loader: 'style-loader'
-          },
-          {
-            loader: 'css-loader',
-            options: {
-              sourceMap: true,
+        test: /\.(css|scss)$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            { loader: 'css-loader', options: { importLoaders: 1 } },
+            {
+              loader: 'postcss-loader',
+              options: {
+                config: {
+                  path: 'config/postcss.config.js',
+                },
+              },
             },
-          },
-          {
-            loader: 'postcss-loader',
-            options: {
-              sourceMap: true,
-              plugins() {
-                return [autoprefixer('last 2 version')];
-              }
-            }
-          },
-          {
-            loader: 'sass-loader',
-            options: {
-              sourceMap: true,
-            },
-          }
-        ]
+            { loader: 'sass-loader' },
+          ],
+        }),
       },
       {
         test: /\.(png|svg|jpg|gif)$/,

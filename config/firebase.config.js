@@ -1,5 +1,5 @@
 const path = require('path');
-const babel = require("babel-core");
+var babel = require("babel-core");
 import { transform } from 'babel-core';
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const SWPrecache = require('sw-precache');

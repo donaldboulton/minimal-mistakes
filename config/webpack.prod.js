@@ -3,7 +3,7 @@ const Merge = require('webpack-merge');
 const CommonConfig = require('./webpack.common.js');
 const path = require('path');
 const webpack = require('webpack');
-const WebpackCleanPlugin = require('webpack-clean');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 module.exports = Merge(CommonConfig, {
@@ -14,10 +14,26 @@ module.exports = Merge(CommonConfig, {
     publicPath: '/assets/',
   },
   plugins: [
-    new WebpackCleanPlugin(['assets'], { root: path.resolve(__dirname, '..'), verbose: true }),
+    new CleanWebpackPlugin(['assets'], { root: path.resolve(__dirname, '..'), verbose: true }),
     new webpack.LoaderOptionsPlugin({
       minimize: true,
       debug: false,
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'common',
+      children: true,
+      minChunks: 6,
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      beautify: false,
+      mangle: {
+        screw_ie8: true,
+        keep_fnames: true,
+      },
+      compress: {
+        screw_ie8: true,
+      },
+      comments: false,
     }),
     new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i }),
   ],

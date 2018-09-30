@@ -21,7 +21,7 @@ module.exports = Merge(CommonConfig, {
         files: ['_site', '_src'],
       },
       {
-        reload: false,
+        reload: false
       }
     ),
     new webpack.HotModuleReplacementPlugin(),
@@ -34,44 +34,7 @@ module.exports = Merge(CommonConfig, {
         exclude: /node_modules/,
         loader: 'eslint-loader',
       },
-      {
-        test: /\.css$/,
-        include: /node_modules/,
-        loader: [
-          'style-loader',
-          'css-loader',
-        ]
-      },
-      {
-        test: /\.scss$/,
-        use: [
-          {
-            loader: 'style-loader'
-          },
-          {
-            loader: 'css-loader',
-            options: {
-              sourceMap: true,
-            },
-          },
-          {
-            loader: 'postcss-loader',
-            options: {
-              sourceMap: true,
-              plugins() {
-                return [autoprefixer('last 2 version')];
-              }
-            }
-          },
-          {
-            loader: 'sass-loader',
-            options: {
-              sourceMap: true,
-            },
-          }
-        ]
-      },
-    ]
+    ],
   },
   devServer: {
     contentBase: [
