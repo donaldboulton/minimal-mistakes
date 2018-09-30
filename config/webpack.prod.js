@@ -20,9 +20,24 @@ module.exports = Merge(CommonConfig, {
       debug: false,
     }),
     new webpack.optimize.CommonsChunkPlugin({
-      name: 'common',
+      name: 'vendor',
+      minChunks: ({ resource }) => (
+        resource !== undefined &&
+        resource.indexOf('node_modules') !== -1
+      ),
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'main',
       children: true,
-      minChunks: 6,
+      async: true,
+      minChunks: ({ resource }) => (
+        resource !== undefined &&
+        resource.indexOf('node_modules') !== -1
+      ),
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'manifest',
+      minChunks: Infinity,
     }),
     new webpack.optimize.UglifyJsPlugin({
       beautify: false,
