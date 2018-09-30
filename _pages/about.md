@@ -13,11 +13,11 @@ classes: wide
 adds: false
 cookies: true
 tags: 
-  - Rockwell RV
-  - Staticman
+  - Donald Boulton
+  - React
   - Jekyll
   - Github Pages
-  - MMistakes
+  - Webpack
 category:
   - Donald Boulton
 image:
