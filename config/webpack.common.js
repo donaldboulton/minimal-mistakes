@@ -94,14 +94,42 @@ module.exports = {
         ]
       },
       {
-        test: /\.(css|scss)$/,
-          use: [
-            'style-loader',
-            MiniCssExtractPlugin.loader,
-            'css-loader',
-            'postcss-loader',
-            'sass-loader'
-          ]
+        test: /\.css$/,
+        include: /node_modules/,
+        loader: [
+          'style-loader',
+          'css-loader',
+        ]
+      },
+      // sass
+      {
+        test: /\.scss$/,
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: true,
+              plugins() {
+                return [autoprefixer('last 2 version')];
+              }
+            }
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+            },
+          }
+        ]
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
