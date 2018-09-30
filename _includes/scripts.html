@@ -203,6 +203,7 @@ function addNavItem(ul, href, text) {
     );
   </script>
 {% endif %}
+<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
 <script>
  $(document).ready(function(){
   function external_new_window() {
@@ -240,9 +241,15 @@ function addNavItem(ul, href, text) {
     $(".author__urls_masthead button").toggleClass("open");
 });
 $('#style-3').smoothScroll();
+window.onerror = function() {
+    if (typeof window.console !== "undefined" && typeof window.console.log === "function") {
+    console.log("Uncatched error: ", arguments);
+    }
+};
 svg4everybody()
 </script>
 
 <script async defer src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script src="{{ '/public/init.site.js' | relative_url }}"></script>
+
 <script id="dsq-count-scr" src="https://donald-boulton.disqus.com/count.js" async></script>
