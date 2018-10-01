@@ -169,7 +169,6 @@ author:
   youtube                : # None
 
 languages: ["en"]
-ampdir: amp
 
 cookie_consent: false
 
@@ -234,7 +233,6 @@ exclude:
   - assets/js/_main.js
   - Capfile
   - CHANGELOG
-  - config
   - Gemfile
   - Gemfile.lock
   - vendor/bundle/
@@ -257,7 +255,6 @@ exclude:
   - package.json
   - README.md
   - webpack.config.js
-  - config
   - optimization-fix
   - optimization-fix-this-file-is-ignored.js
   - favicon.png
