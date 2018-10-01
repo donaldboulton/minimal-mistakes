@@ -5,11 +5,12 @@
 for = "/*"
 [headers.values]
 Cache-Control = "public, max-age=360000"
-Feature-Policy = "notifications '*' donboulton.com"
+Feature-Policy = "vibrate 'self'; usermedia *; sync-xhr 'self' https://donboulton.com"
 Referrer-Policy = "strict-origin"
 X-Content-Type-Options = "nosniff"
 X-Frame-Options = "DENY"
 X-XSS-Protection = "1; mode=block"
+Content-Security-Policy = "style-src 'self'"
 [[headers]]
 for = "/assets/*"
 [headers.values]
