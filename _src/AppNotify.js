@@ -90,7 +90,7 @@ class App extends React.Component {
 
     return (
       <div>
-        <button onClick={this.handleButtonClick.bind(this)}>Notif!</button>
+        <button className="btn btn--primary" onClick={this.handleButtonClick.bind(this)}>Notif!</button>
         <Notification
           ignore={this.state.ignore && this.state.title !== ''}
           notSupported={this.handleNotSupported.bind(this)}

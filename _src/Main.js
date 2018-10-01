@@ -55,4 +55,4 @@ class Main extends Component {
   }
 }
 
-export default Main
+ReactDom.render(<Main/>, document.getElementById('main'));

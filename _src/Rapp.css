@@ -32,7 +32,7 @@
 }
 
 .mainCenter{
-  width: 230px;
+  max-width: 230px;
   min-height: 210px;
   margin: 0 auto;
   text-align: center;
