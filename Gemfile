@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 
-gem "github-pages", group: :jekyll_plugins
+# gem "github-pages", group: :jekyll_plugins
+gem "jekyll", "~> 3.8"
 
 gem "rake", "~> 12"
 gem "tzinfo-data"
@@ -18,5 +19,4 @@ group :jekyll_plugins do
   gem 'jekyll-redirect-from', '~> 0.13.0'
   gem 'jekyll-figure'
   gem 'jekyll-multiple-languages-plugin'
-  gem 'public_suffix'
 end

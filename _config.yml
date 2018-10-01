@@ -242,7 +242,6 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - node_modules
-  - node_modules/
   - .vs
   - .vscode
   - LICENSE
@@ -258,14 +257,11 @@ exclude:
   - package.json
   - README.md
   - webpack.config.js
-  - yarn-error.log
-  - yarn.lock
   - config
   - optimization-fix
   - optimization-fix-this-file-is-ignored.js
   - favicon.png
   - tmp
-  - /docs
 keep_files:
   - .git
   - .svn
