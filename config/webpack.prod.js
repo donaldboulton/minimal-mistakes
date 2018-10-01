@@ -5,6 +5,7 @@ const path = require('path');
 const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports = Merge(CommonConfig, {
   output: {
@@ -33,6 +34,13 @@ module.exports = Merge(CommonConfig, {
         screw_ie8: true,
       },
       comments: false,
+    }),
+    new CompressionPlugin({
+      asset: '[path].gz[query]',
+      algorithm: 'gzip',
+      test: /\.js$|\.css$|\.html$|\.eot?.+$|\.ttf?.+$|\.woff?.+$|\.svg?.+$/,
+      threshold: 10240,
+      minRatio: 0.8,
     }),
     new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i }),
   ],

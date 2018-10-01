@@ -201,13 +201,7 @@ anchors.add('p');
     }
   }
   external_new_window();
-  grecaptcha.ready(function() {
-      grecaptcha.execute('6Le-JGIUAAAAAItP3anxYzixThXd6EUvsDjXZevh', {action: 'home'}).then(function(token) {
-    });
-    var onloadCallback = function() {
-    alert("grecaptcha is ready!");
-    };
- });
+
  if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
     navigator.serviceWorker.register('/firebase-messaging-sw.js');

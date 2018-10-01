@@ -103,16 +103,8 @@
   <link rel="stylesheet" media="print" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.0.0-alpha/fullcalendar.print.min.css">
 {% endif %}
 
-<script async defer src='https://www.google.com/recaptcha/api.js?render=6Le-JGIUAAAAAItP3anxYzixThXd6EUvsDjXZevh'></script>
-
 {% if site.webmention_url %}
   <link rel="webmention" href="{{ site.webmention_url }}">
 {% endif %}
 
-<!-- AMP Article -->
-{% if page.path contains 'posts' %}
-  {% unless page.amp_skip %}
-    <link rel="amphtml" href="{{ site.baseurl }}/amp/{{ page.amp_path }}.html">
-  {% endunless %}
-{% endif %}
 <script src="https://identity-js.netlify.com/v1/netlify-identity-widget.js"></script>

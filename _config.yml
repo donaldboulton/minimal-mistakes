@@ -32,7 +32,7 @@ comments:
     colorscheme          : "dark"
 
 reCaptcha:
-  enabled: true
+  enabled: false
   siteKey: "6Le-JGIUAAAAAItP3anxYzixThXd6EUvsDjXZevh"
   secret: "PgN6O5VvZ+nm04p7v9hqtKX6fcUpMh7Kl+qyiVggoE1l0kQ424yXdu7Zhk/YS2xeenFuo4E8Js9X2DlFo4WVKXkyvrbpthyQMz4T4KTRqdHX/fzOP1FKqLmgqdr8LJaTvBrWmAMbYveHby7qDnSnCW1yZdHdjvW9/I36x5ivRGc="
 
