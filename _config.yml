@@ -32,7 +32,7 @@ comments:
     colorscheme          : "dark"
 
 reCaptcha:
-  enabled: false
+  enabled: true
   siteKey: "6Le-JGIUAAAAAItP3anxYzixThXd6EUvsDjXZevh"
   secret: "PgN6O5VvZ+nm04p7v9hqtKX6fcUpMh7Kl+qyiVggoE1l0kQ424yXdu7Zhk/YS2xeenFuo4E8Js9X2DlFo4WVKXkyvrbpthyQMz4T4KTRqdHX/fzOP1FKqLmgqdr8LJaTvBrWmAMbYveHby7qDnSnCW1yZdHdjvW9/I36x5ivRGc="
 
@@ -169,6 +169,7 @@ author:
   youtube                : # None
 
 languages: ["en"]
+ampdir: amp
 
 cookie_consent: false
 
@@ -233,6 +234,7 @@ exclude:
   - assets/js/_main.js
   - Capfile
   - CHANGELOG
+  - config
   - Gemfile
   - Gemfile.lock
   - vendor/bundle/
@@ -240,6 +242,7 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - node_modules
+  - node_modules/
   - .vs
   - .vscode
   - LICENSE
@@ -255,10 +258,14 @@ exclude:
   - package.json
   - README.md
   - webpack.config.js
+  - yarn-error.log
+  - yarn.lock
+  - config
   - optimization-fix
   - optimization-fix-this-file-is-ignored.js
   - favicon.png
   - tmp
+  - /docs
 keep_files:
   - .git
   - .svn
@@ -282,7 +289,6 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
-  
 # Sass/SCSS
 sass:
   sass_dir: _sass
@@ -292,6 +298,43 @@ permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
 timezone: America/Chicago
+# Plugins (previously gems:)
+plugins:
+  - posts_json
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-archives
+  - jekyll-figure
+  - jekyll-tagging
+  - jekyll-tagging-related_posts
+  - jekyll-redirect-from
+  - jekyll-algolia
+  - lazyload
+  - notice
+  - jemoji
+  - json
+
+# mimic GitHub Pages with --safe
+whitelist:
+  - posts_json
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-archives
+  - jekyll-figure
+  - jekyll-tagging
+  - jekyll-tagging-related_posts
+  - jekyll-redirect-from
+  - jekyll-algolia
+  - lazyload
+  - notice
+  - jemoji
+  - json
 
 # Archives
 #  Type
@@ -373,6 +416,25 @@ defaults:
       breadcrumbs:
         - label: "Posts"
           url: /year-archive/
+  # amp-html
+  - scope:
+      path: "amp"
+      type: posts
+    values:
+      layout: amp
+      author_profile: true
+      read_time: true
+      comments: false
+      share: true
+      related: true
+      toc: true
+      adds: true
+      reviews: true
+      cookies: true
+      notifications: true
+      breadcrumbs:
+        - label: "Amp Posts"
+          url: /:amp/:name/
   # _pages
   - scope:
       path: "_pages"
