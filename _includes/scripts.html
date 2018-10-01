@@ -169,24 +169,12 @@ $(document).ready(function() {
 <script src="{{ '/build/js/vendor/anchor/anchor.js' | relative_url }}"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function(event) {
-anchors.add('h2, h3, h4, h5');
 anchors.options = {
   visible: 'always',
   placement: 'left',
   icon: '¶'
 };
 anchors.add('p');
-
-function addNavItem(ul, href, text) {
-  var listItem = document.createElement('LI'),
-		  anchorItem = document.createElement('A'),
-  	  textNode = document.createTextNode(text);
-
-  anchorItem.href = href;
-  ul.appendChild(listItem);
-  listItem.appendChild(anchorItem);
-  anchorItem.appendChild(textNode);
-  };
 });
 </script>
 {% endif %}
@@ -251,5 +239,4 @@ svg4everybody()
 
 <script async defer src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script src="{{ '/public/init.site.js' | relative_url }}"></script>
-
 <script id="dsq-count-scr" src="https://donald-boulton.disqus.com/count.js" async></script>

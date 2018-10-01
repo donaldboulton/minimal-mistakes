@@ -1,9 +1,0 @@
-/*
- X-Frame-Options: DENY
- X-XSS-Protection: 1; mode=block
- Referrer-Policy: strict-origin
- X-Content-Type-Options: nosniff
- Cache-Control: public, max-age=360000
- Feature-Policy: notifications '*' donboulton.com
-/assets/*
- Cache-Control: public, max-age=31536000

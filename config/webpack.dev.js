@@ -21,8 +21,8 @@ module.exports = Merge(CommonConfig, {
         files: ['_site', '_src'],
       },
       {
-        reload: false
-      }
+        reload: false,
+      },
     ),
     new webpack.HotModuleReplacementPlugin(),
   ],
