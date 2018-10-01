@@ -8,7 +8,7 @@ gem "html-proofer"
 gem "activesupport"
 
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.6"
+  gem 'jekyll-feed', '~> 0.6'
   gem 'jekyll-archives'
   gem 'jekyll-typogrify'
   gem 'jekyll-tagging'
