@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 import Hello from './Hello';
 import './Rapp.css';
 import Main from './Main';
+import AppNotify from './AppNotify';
 
 class App extends Component {
 
@@ -10,6 +11,7 @@ class App extends Component {
     return (
       <div>
         <Main />
+        <AppNotify />
       </div>
     );
   }
