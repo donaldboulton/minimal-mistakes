@@ -10,13 +10,8 @@
           <span itemprop="name"><a class="site-title" href="{{ '/' | absolute_url }}">{{ site.title }}</a><meta itemprop="description" content="{{ site.title }}"></span></span>
         <ul class="visible-links" itemscope itemtype="https://schema.org/SiteNavigationElement">
           {% for link in site.data.navigation.main %}
-            {% if link.url contains 'http' %}
-              {% assign domain = '' %}
-            {% else %}
-              {% assign domain = site.url | append: site.baseurl %}
-            {% endif %}
             <li class="masthead__menu-item">
-              <a itemprop="url" href="{{ domain }}{{ link.url }}" {% if link.description %}title="{{ link.description }}"{% endif %} data-pjax>{{ link.title }}</a>
+              <a itemprop="url" href="{{ domain }}{{ link.url }}" {% if link.description %}title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
             </li>
           {% endfor %}
           {% if products == true %}
