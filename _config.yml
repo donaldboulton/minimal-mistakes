@@ -289,7 +289,6 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
-  parse_block_html: true
   
 # Sass/SCSS
 sass:
@@ -418,25 +417,6 @@ defaults:
       breadcrumbs:
         - label: "Posts"
           url: /year-archive/
-  # amp-html
-  - scope:
-      path: "amp"
-      type: posts
-    values:
-      layout: amp
-      author_profile: true
-      read_time: true
-      comments: false
-      share: true
-      related: true
-      toc: true
-      adds: true
-      reviews: true
-      cookies: true
-      notifications: true
-      breadcrumbs:
-        - label: "Amp Posts"
-          url: /:amp/:name/
   # _pages
   - scope:
       path: "_pages"
