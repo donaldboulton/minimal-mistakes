@@ -44,7 +44,6 @@ $(document).ready(function() {
     }, 400);
   });
 });
-$('.toTop').smoothScroll({offset: -100});
 
 (function() {
   if (window.__twitterIntentHandler) return;

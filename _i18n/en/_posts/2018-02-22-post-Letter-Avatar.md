@@ -30,7 +30,7 @@ web-intents: true
 tweet_id: 1021888928280924161
 social-share: twitter --twitter-hashtags facebook
 related: true
-anchor: false
+anchor: true
 excerpt: "Many of us got really tired of the Gravatar Service being down or slow and having multiple server calls to download the Gravatar. 
 A lot of people do not even know about gravatar and you get a generic image for the User Avatar."
 
