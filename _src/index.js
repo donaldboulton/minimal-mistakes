@@ -16,7 +16,8 @@ class App extends Component {
   }
 }
 
-render(<App />, document.getElementById('root'));
+render(<App />, document.getElementById('out'));
+render(<Main />, document.getElementById('root'));
 
 // CSS JS and SASS files
 import './main.css';
