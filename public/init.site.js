@@ -36,11 +36,6 @@ $(document).ready(function() {
     stickySideBar();
   });
 
-  $(".author__urls-wrapper button").on("click", function() {
-    $(".author__urls").toggleClass("is--visible");
-    $(".author__urls-wrapper button").toggleClass("open");
-  });
-
   $(".search__toggle").on("click", function() {
     $(".search-content").toggleClass("is--visible");
     $(".initial-content").toggleClass("is--hidden");
@@ -49,83 +44,48 @@ $(document).ready(function() {
     }, 400);
   });
 });
-$(window).bind("hashchange", function(event) {
-  $.smoothScroll({
-    scrollTarget: location.hash.replace(/^\#\/?/, "#"),
-    offset: -20
-  });
-});
-$('a[href*="#"]').bind("click", function(event) {
-  var hash = this.hash.replace(/^#/, "");
-  if (this.pathname === location.pathname && hash) {
-    event.preventDefault();
-    location.hash = "#/" + hash;
-  }
-});
-if (location.hash) {
-  $(window).trigger("hashchange");
-}
-$(".gallery").each(function() {
-  var $pic = $(this),
-    getItems = function getItems() {
-      var items = [];
-      $pic.find("a").each(function() {
-        var $href = $(this).attr("href"),
-          $size = $(this)
-            .data("size")
-            .split("x"),
-          $width = $size[0],
-          $height = $size[1];
+$('.toTop').smoothScroll({offset: -100});
 
-        var item = {
-          src: $href,
-          w: $width,
-          h: $height
-        };
-
-        items.push(item);
-      });
-      return items;
-    };
-
-  var items = getItems();
-});
 (function() {
-  function a(i) {
-    i = i || window.event;
-    for (
-      var k, l, n, j = i.target || i.srcElement;
-      j && "a" !== j.nodeName.toLowerCase();
+  if (window.__twitterIntentHandler) return;
+  var intentRegex = /twitter\.com\/intent\/(\w+)/,
+      windowOptions = 'scrollbars=yes,resizable=yes,toolbar=no,location=yes',
+      width = 550,
+      height = 420,
+      winHeight = screen.height,
+      winWidth = screen.width;
 
-    ) {
-      j = j.parentNode;
+  function handleIntent(e) {
+    e = e || window.event;
+    var target = e.target || e.srcElement,
+        m, left, top;
+
+    while (target && target.nodeName.toLowerCase() !== 'a') {
+      target = target.parentNode;
     }
-    j &&
-      "a" === j.nodeName.toLowerCase() &&
-      j.href &&
-      ((k = j.href.match(b)),
-      k &&
-        ((l = Math.round(h / 2 - d / 2)),
-        (n = 0),
-        g > f && (n = Math.round(g / 2 - f / 2)),
-        window.open(
-          j.href,
-          "intent",
-          c + ",width=" + d + ",height=" + f + ",left=" + l + ",top=" + n
-        ),
-        (i.returnValue = !1),
-        i.preventDefault && i.preventDefault()));
+
+    if (target && target.nodeName.toLowerCase() === 'a' && target.href) {
+      m = target.href.match(intentRegex);
+      if (m) {
+        left = Math.round((winWidth / 2) - (width / 2));
+        top = 0;
+
+        if (winHeight > height) {
+          top = Math.round((winHeight / 2) - (height / 2));
+        }
+
+        window.open(target.href, 'intent', windowOptions + ',width=' + width +
+                                           ',height=' + height + ',left=' + left + ',top=' + top);
+        e.returnValue = false;
+        e.preventDefault && e.preventDefault();
+      }
+    }
   }
-  if (!window.__twitterIntentHandler) {
-    var b = /twitter\.com\/intent\/(\w+)/,
-      c = "scrollbars=yes,resizable=yes,toolbar=no,location=yes",
-      d = 550,
-      f = 420,
-      g = screen.height,
-      h = screen.width;
-    document.addEventListener
-      ? document.addEventListener("click", a, !1)
-      : document.attachEvent && document.attachEvent("onclick", a),
-      (window.__twitterIntentHandler = !0);
+
+  if (document.addEventListener) {
+    document.addEventListener('click', handleIntent, false);
+  } else if (document.attachEvent) {
+    document.attachEvent('onclick', handleIntent);
   }
-})();
+  window.__twitterIntentHandler = true;
+}());
