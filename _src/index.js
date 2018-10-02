@@ -22,7 +22,7 @@ render(<App />, document.getElementById('root'));
 // CSS JS and SASS files
 import './main.css';
 
-import './lib/components/Hello';
+import '../lib/components/Hello';
 
 import './Init.Firebase';
 

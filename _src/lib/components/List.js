@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Rapp.css';
+import '../css/Rapp.css';
 
 class List extends Component {
 
