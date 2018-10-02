@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import Hello from './Hello';
-import logo from './logo.svg';
-import './Rapp.css';
+import logo from './images/logo.svg';
+import './css/Rapp.css';
 import List from './List';
 
 class Main extends Component {
@@ -55,4 +55,4 @@ class Main extends Component {
   }
 }
 
-ReactDom.render(<Main/>, document.getElementById('main'));
+export default Main

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import ReactDom from 'react-dom';
-import Notification  from './lib/components/Notification';
+import Notification  from './Notification';
 
 //allow react dev tools work
 window.React = React;
@@ -67,7 +67,7 @@ class App extends React.Component {
     const title = 'React-Web-Notification' + now;
     const body = 'Hello' + new Date();
     const tag = now;
-    const icon = './Notifications_button_24.png';
+    const icon = './images/Notifications_button_24.png';
     // const icon = 'http://localhost:3000/Notifications_button_24.png';
 
     // Available options
@@ -78,7 +78,7 @@ class App extends React.Component {
       icon: icon,
       lang: 'en',
       dir: 'ltr',
-      sound: './sound.mp3'  // no browsers supported https://developer.mozilla.org/en/docs/Web/API/notification/sound#Browser_compatibility
+      sound: './audio/sound.mp3'  // no browsers supported https://developer.mozilla.org/en/docs/Web/API/notification/sound#Browser_compatibility
     }
     this.setState({
       title: title,
@@ -105,8 +105,8 @@ class App extends React.Component {
           options={this.state.options}
         />
         <audio id='sound' preload='auto'>
-          <source src='./sound.mp3' type='audio/mpeg' />
-          <source src='./sound.ogg' type='audio/ogg' />
+          <source src='./audio/sound.mp3' type='audio/mpeg' />
+          <source src='./audio/sound.ogg' type='audio/ogg' />
           <embed hidden='true' autostart='false' loop='false' src='./sound.mp3' />
         </audio>
       </div>
