@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "github-pages", ">= 187", group: :jekyll_plugins
+gem "github-pages", ">= 192", group: :jekyll_plugins
 
 gem "tzinfo-data"
 gem "wdm", "~> 0.1.0"
