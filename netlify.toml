@@ -10,7 +10,6 @@ Referrer-Policy = "strict-origin"
 X-Content-Type-Options = "nosniff"
 X-Frame-Options = "DENY"
 X-XSS-Protection = "1; mode=block"
-Content-Security-Policy = "report-uri https://0bf9fa45800cbfbd1670dbf9b379b88e.report-uri.com/r/d/csp/reportOnly;"
 [[headers]]
 for = "/assets/*"
 [headers.values]
