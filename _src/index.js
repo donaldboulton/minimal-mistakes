@@ -21,9 +21,10 @@ render(<App />, document.getElementById('root'));
 // CSS JS and SASS files
 import './main.css';
 import './Init.Firebase';
-
+require('./jqueryload');
+import '../node_modules/jquery-smooth-scroll/jquery.smooth-scroll.js';
 require('file-upload-with-preview');
 require('lazysizes');
 require('svg4everybody');
-require('jquery-smooth-scroll');
+
 require('default-passive-events');
