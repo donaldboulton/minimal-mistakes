@@ -5,12 +5,12 @@
 for = "/*"
 [headers.values]
 Cache-Control = "public, max-age=360000"
+Feature-Policy = "usermedia *; https://donboulton.com"
 Referrer-Policy = "strict-origin"
 X-Content-Type-Options = "nosniff"
 X-Frame-Options = "DENY"
 X-XSS-Protection = "1; mode=block"
 Content-Security-Policy = "default-src 'none'; object-src 'none'; report-uri https://0bf9fa45800cbfbd1670dbf9b379b88e.report-uri.com/r/d/csp/reportOnly;"
-Feature-Policy = "vibrate 'self'; usermedia *; sync-xhr 'self' https://donboulton.com"
 [[headers]]
 for = "/assets/*"
 [headers.values]
