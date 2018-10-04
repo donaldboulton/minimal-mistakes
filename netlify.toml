@@ -5,8 +5,7 @@
 for = "/*"
 [headers.values]
 Cache-Control = "public, max-age=360000"
-Feature-Policy = "usermedia *; https://donboulton.com"
-Referrer-Policy = "strict-origin"
+Referrer-Policy = "same-origin"
 X-Content-Type-Options = "nosniff"
 X-Frame-Options = "DENY"
 X-XSS-Protection = "1; mode=block"
