@@ -2,16 +2,14 @@
 layout: single
 permalink: about.html
 title: "About"
-author_profile: true
-toc: false
+author_profile: false
+toc: true
 author: Donald Boulton
 email: donaldboulton@gmail.com
-read_time: false
+read_time: true
 comments: false
 share: false
-classes: wide
-adds: false
-webintents: true
+adds: true
 cookies: true
 tags: 
   - Donald Boulton
@@ -41,7 +39,7 @@ header:
   cta_label: "Posts"
   cta_url: "/year-archive/"
   caption: Jekyll React Webpack
-excerpt: 'Jekyll on a GitHub Repo Netlify Hosting.<br /> <small><a href="https://donboulton.com">About Donald Boulton at donboulton.com</a></small><br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
+excerpt: 'Jekyll GitHub Repo Netlify Hosting.<br /> <small><a href="https://donboulton.com">Donald Boulton at donboulton.com</a></small><br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
 
 feature_row:
   - image_path: /assets/images/octocat.png
