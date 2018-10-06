@@ -91,7 +91,7 @@ class App extends React.Component {
     return (
       <div className="Appcenter">
         <h3 className="Appheader"> React Notify </h3>
-        <div className='mainCenter'>
+        <div className='notifyCenter'>
         <button className="btn btn--primary" onClick={this.handleButtonClick.bind(this)}>Notif!</button>
         <Notification
           ignore={this.state.ignore && this.state.title !== ''}
