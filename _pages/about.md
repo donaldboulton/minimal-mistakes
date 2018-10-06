@@ -23,12 +23,12 @@ category:
   - Donald Boulton
 image:
   cover: true
-  path: &image /assets/images/aboutStack.png
+  path: &image /build/images/aboutStack.png
   feature: *image
-  thumbnail: /assets/images/aboutStack-320.png
+  thumbnail: /build/images/aboutStack-320.png
 header:
-  image: /assets/images/aboutStack.png
-  teaser: /assets/images/aboutStack-320.png
+  image: /build/images/aboutStack.png
+  teaser: /build/images/aboutStack-320.png
 sidebar:
   - title: "React Notifications"
     image: /assets/images/about-bundle-320.jpg
@@ -39,7 +39,7 @@ locations:
   - Oklahoma City, OKC
 header:
   overlay_color: "#5e616c"
-  overlay_image: /assets/images/aboutStack.png
+  overlay_image: /build/images/aboutStack.png
   cta_label: "Posts"
   cta_url: "/year-archive/"
   caption: Jekyll React Webpack
