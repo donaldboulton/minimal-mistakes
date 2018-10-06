@@ -41,7 +41,7 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "babel-register": "6.24.1",
-    "browser-sync": "^2.24.7",
+    "browser-sync": "^2.26.0",
     "browser-sync-webpack-plugin": "^2.2.2",
     "clean-webpack-plugin": "^0.1.16",
     "compression-webpack-plugin": "^1.1.12",
