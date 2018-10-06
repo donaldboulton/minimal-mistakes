@@ -1,9 +1,4 @@
-/* ==========================================================================
-   jQuery plugin settings and other scripts
-   ========================================================================== */
-var $ = require("jquery");
-
-$(document).ready(function() {
+document.addEventListener('DOMContentLoaded', function() {
   var bumpIt = function() {
       $("body").css("margin-bottom", $(".page__footer").outerHeight(true));
     },

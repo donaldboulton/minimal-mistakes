@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
+import ReactDom from 'react-dom';
 import logo from './images/logo.svg';
 import './css/Rapp.css';
 import List from './List';
-
 class Main extends Component {
 
   state = {
@@ -15,9 +15,6 @@ class Main extends Component {
  }
 
  onDelete= (item) =>{
-   // this.setState ({
-   //   items: this.state.items.filter((i) => i.index !== item.index)
-   // })
    this.state.items.splice(item, 1);
    this.setState({items: this.state.items});
  }
@@ -30,7 +27,7 @@ class Main extends Component {
         items: [...this.state.items, this.state.term]
       });
     }
-  }
+  };
 
   render() {
     return (
@@ -53,4 +50,4 @@ class Main extends Component {
   }
 }
 
-export default Main
+ReactDom.render(<Main/>, document.getElementById('main'));

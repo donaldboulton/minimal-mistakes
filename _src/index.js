@@ -3,10 +3,6 @@ import { render } from 'react-dom';
 import './lib/components/css/Rapp.css';
 import Main from './lib/components/Main';
 import AppNotify from './lib/components/AppNotify';
-import $ from 'jquery';
-window.jQuery = $;
-window.$ = $;
-
 class Title extends React.Component{
   render(){
     return(
@@ -17,7 +13,7 @@ class Title extends React.Component{
 class Footer extends React.Component{
   render(){
     return (
-    <footer>footer</footer>
+    <footer>Adding Footer</footer>
     );
   }
 }
@@ -37,7 +33,7 @@ class Layout extends React.Component {
         <Main/>
         <AppNotify/>
         <Footer/>
-        </div>
+      </div>
     );
   }
 }
@@ -66,7 +62,7 @@ ReactDOM.render(<LayoutList/>, appList)
 import './main.css';
 import './InitSite';
 import './Init.Firebase';
-import '../node_modules/jquery/src/jquery';
+import '../node_modules/jquery/dist/jquery.min.js';
 import '../node_modules/jqueryooth-scroll/jquery.smooth-scroll.js';
 require('file-upload-with-preview');
 require('lazysizes');
