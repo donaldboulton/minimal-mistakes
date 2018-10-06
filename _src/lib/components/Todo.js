@@ -3,7 +3,7 @@ import ReactDom from 'react-dom';
 import logo from './images/logo.svg';
 import './css/Rapp.css';
 import List from './List';
-class Main extends Component {
+class Todo extends Component {
 
   state = {
     items: [],
@@ -50,4 +50,4 @@ class Main extends Component {
   }
 }
 
-ReactDom.render(<Main/>, document.getElementById('main'));
+ReactDom.render(<Todo/>, document.getElementById('todo'));

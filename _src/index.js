@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import './lib/components/css/Rapp.css';
-import Main from './lib/components/Main';
+import Todo from './lib/components/Todo';
 import AppNotify from './lib/components/AppNotify';
 class Title extends React.Component{
   render(){
     return(
-    <h1>Welcome Jekyll React</h1>
+    <h3>Jekyll React Components</h3>
     )
   }
 }
@@ -44,7 +44,7 @@ class LayoutList extends React.Component{
   render(){
     var list = [
       <Header/>,
-      <Main/>,
+      <Todo/>,
       <AppNotify/>,
       <Footer/>,
     ];
