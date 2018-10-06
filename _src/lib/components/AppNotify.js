@@ -89,7 +89,9 @@ class App extends React.Component {
   render() {
 
     return (
-      <div>
+      <div className="Appcenter">
+        <h3 className="Appheader"> React Notify </h3>
+        <div className='mainCenter'>
         <button className="btn btn--primary" onClick={this.handleButtonClick.bind(this)}>Notif!</button>
         <Notification
           ignore={this.state.ignore && this.state.title !== ''}
@@ -109,6 +111,7 @@ class App extends React.Component {
           <source src='./audio/sound.ogg' type='audio/ogg' />
           <embed hidden='true' autostart='false' loop='false' src='./sound.mp3' />
         </audio>
+        </div>
       </div>
     )
   }

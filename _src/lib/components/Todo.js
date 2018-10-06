@@ -33,7 +33,7 @@ class Todo extends Component {
     return (
       <div className="Appcenter">
       <img src={logo} className="App-logo" alt="logo" />
-       <h3 className="Appheader" > TODO-LIST </h3>
+       <h3 className="Appheader"> TODO-LIST </h3>
        <div className='mainCenter'>
         <form className="App" onSubmit={this.onSubmit}>
           <input placeholder="add task" value={this.state.term} onChange={(e) => this.onChange(e.target.value)}

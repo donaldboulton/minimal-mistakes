@@ -3,9 +3,6 @@ import { render } from 'react-dom';
 import './lib/components/css/Rapp.css';
 import Todo from './lib/components/Todo';
 import AppNotify from './lib/components/AppNotify';
-require("expose-loader?$!jquery");
-window.jQuery = $;
-window.$ = $;
 class Title extends React.Component{
   render(){
     return(
