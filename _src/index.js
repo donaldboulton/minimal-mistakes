@@ -3,23 +3,68 @@ import { render } from 'react-dom';
 import './lib/components/css/Rapp.css';
 import Main from './lib/components/Main';
 import AppNotify from './lib/components/AppNotify';
-import 'jquery';
-class App extends Component {
+import $ from 'jquery';
+window.jQuery = $;
+window.$ = $;
 
-  render() {
+class Title extends React.Component{
+  render(){
+    return(
+    <h1>Welcome Jekyll React</h1>
+    )
+  }
+}
+class Footer extends React.Component{
+  render(){
     return (
-      <div>
-        <Main />
-        <AppNotify />
-      </div>
+    <footer>footer</footer>
+    );
+  }
+}
+class Header extends React.Component{
+  render(){
+    return (
+    <Title />
     );
   }
 }
 
-render(<App />, document.getElementById('root'));
+class Layout extends React.Component {
+  render() {
+    return (
+      <div>
+        <Header />
+        <Main/>
+        <AppNotify/>
+        <Footer/>
+        </div>
+    );
+  }
+}
+const app = document.getElementById('app')
+ReactDOM.render(<Layout/>,app)
 
-// CSS JS and SASS files
+class LayoutList extends React.Component{
+  render(){
+    var list = [
+      <Header/>,
+      <Main/>,
+      <AppNotify/>,
+      <Footer/>,
+    ];
+    return (
+    <u1>
+        {list}
+        </u1>
+    );
+  }
+}
+
+const appList = document.getElementById('app');
+ReactDOM.render(<LayoutList/>, appList)
+
 import './main.css';
+import './InitSite';
 import './Init.Firebase';
 import '../node_modules/jquery-smooth-scroll/jquery.smooth-scroll.js';
 require('file-upload-with-preview');
