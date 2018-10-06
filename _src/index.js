@@ -3,6 +3,9 @@ import { render } from 'react-dom';
 import './lib/components/css/Rapp.css';
 import Todo from './lib/components/Todo';
 import AppNotify from './lib/components/AppNotify';
+require("expose-loader?$!jquery");
+window.jQuery = $;
+window.$ = $;
 class Title extends React.Component{
   render(){
     return(
@@ -56,13 +59,9 @@ class LayoutList extends React.Component{
   }
 }
 
-const appList = document.getElementById('app');
-ReactDOM.render(<LayoutList/>, appList)
-
 import './main.css';
 import './InitSite';
 import './Init.Firebase';
-import '../node_modules/jquery/dist/jquery.min.js';
 import '../node_modules/jquery-smooth-scroll/jquery.smooth-scroll.min.js';
 require('file-upload-with-preview');
 require('lazysizes');
