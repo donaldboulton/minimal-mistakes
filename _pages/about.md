@@ -33,7 +33,7 @@ sidebar:
   - title: "React Notifications"
     image: /assets/images/about-bundle-320.jpg
     text: "React build"
-  - title: "Rv Living"
+  - title: "Jekyll React"
     text: "Took a bit. Here is Jekyll Mixed With React and Webpack"
 locations: 
   - Oklahoma City, OKC
@@ -120,10 +120,6 @@ Modern Continuous Deployment (CD) Git workflows with instant rollbacks
 Headless CMS for complete separation from your app/site and with full version control
 Modern authentication methods such as OAuth 2 for ultimate security.
 
-## Working for Father God
-
-Always worked for Father Creator since the beginning of time. Just hanging out watching our children play; till my day then playtime ends, to my new way.
-
 ## Just Moved from ASP. Everything
 
 Whooo what a relief. Ruby Jekyll and GitHub Pages is the kind, figured this out in a few days with the help of [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/){: id="open-website" rel="noreferrer"}, and lots of documentation on Ruby, Jekyll with GitHub Pages.
@@ -141,3 +137,7 @@ Links to CloudFlare this GitHub repo, Staticman Comments, MMistakes Framework De
 {% include feature_row id="intro" type="center" %}
 {% include feature_row %}
 {% include github.html %}
+
+## Working for Father God
+
+Always worked for Father Creator since the beginning of time. Just hanging out watching our children play; till my day then playtime ends, to my new way.

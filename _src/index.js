@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import './lib/components/css/Rapp.css';
 import Main from './lib/components/Main';
 import AppNotify from './lib/components/AppNotify';
-
+import 'jquery';
 class App extends Component {
 
   render() {
@@ -21,7 +21,6 @@ render(<App />, document.getElementById('root'));
 // CSS JS and SASS files
 import './main.css';
 import './Init.Firebase';
-require('./jqueryload');
 import '../node_modules/jquery-smooth-scroll/jquery.smooth-scroll.js';
 require('file-upload-with-preview');
 require('lazysizes');

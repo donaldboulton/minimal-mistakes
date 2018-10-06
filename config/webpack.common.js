@@ -77,6 +77,16 @@ module.exports = {
         ],
       },
       {
+        test: require.resolve('jquery'),
+        use: [{
+          loader: 'expose-loader',
+          options: 'jQuery'
+        },{
+          loader: 'expose-loader',
+          options: '$'
+        }]
+      },
+      {
         test: require.resolve("svg4everybody"),
         loader: "imports-loader?this=>window"
       }
