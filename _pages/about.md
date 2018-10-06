@@ -30,10 +30,8 @@ header:
   image: /build/images/stack.png
   teaser: /build/images/stack-320.png
 sidebar:
-  - title: "React Notifications"
-    image: /assets/images/about-bundle-320.jpg
-    text: "React build"
   - title: "Jekyll React"
+    image: /assets/images/about-bundle-320.jpg
     text: "Took a bit. Here is Jekyll Mixed With React and Webpack"
 locations: 
   - Oklahoma City, OKC
