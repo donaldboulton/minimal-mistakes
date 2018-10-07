@@ -86,10 +86,6 @@ feature_row:
     btn_label: "Learn More"
 github:
   - excerpt: '{::nomarkdown}<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
-intro:
-  - excerpt: 'Showing off MMistakes, Jekyll React Webpack, GitHub Repo Netlify Docker Build'
-  - excerpt: 'Just Learning Ubuntu, Ruby, Jekyll, GitHub Pages with React & Webpack, see any mistakes please feel free to go to one of the post pages and comment on site issues.'
-  - excerpt: 'Notifications & Tips for Donald Boulton -- Just another Front End Developer - designer of donboulton.com, bibwoe.com, mansbooks.com and publiuslogic.com'
 
 support: [cookies]
 folder: _pages
@@ -128,7 +124,6 @@ Ruby, Jekyll, GitHub pages, and even liquid are super simple; Or "Super Logical,
 
 Links to Netlify this GitHub repo, Staticman Reviews, MMistakes Framework Designer Donald Boulton.
 
-{% include feature_row id="intro" type="center" %}
 {% include feature_row %}
 {% include github.html %}
 
