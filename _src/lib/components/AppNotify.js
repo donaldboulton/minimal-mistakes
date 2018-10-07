@@ -65,6 +65,7 @@ class App extends React.Component {
     const now = Date.now();
 
     const title = 'React-Web-Notification' + now;
+    const image = './images/logo.svg';
     const body = 'Hello' + new Date();
     const tag = now;
     const icon = './images/Notifications_button_24.png';
@@ -75,6 +76,7 @@ class App extends React.Component {
     const options = {
       tag: tag,
       body: body,
+      image: image,
       icon: icon,
       lang: 'en',
       dir: 'ltr',
