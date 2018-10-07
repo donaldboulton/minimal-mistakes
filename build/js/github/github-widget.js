@@ -22,10 +22,10 @@ r.onreadystatechange = function () {
 };
 r.send();
 function appendCSS(name){
-  var stylesheet = document.createElement("link")
-  stylesheet.setAttribute("rel", "stylesheet")
-  stylesheet.setAttribute("href", name)
-  document.getElementsByTagName("head")[0].appendChild(stylesheet)
+  var stylesheet = document.createElement("link");
+  stylesheet.setAttribute("rel", "stylesheet");
+  stylesheet.setAttribute("href", name);
+  document.getElementsByTagName("head")[0].appendChild(stylesheet);
 }
 
-appendCSS('//cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/font/octicons.min.css')
+appendCSS('//cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/font/octicons.min.css');

@@ -60,9 +60,8 @@ import './main.css';
 import './InitSite';
 import './Init.Firebase';
 import '../node_modules/jquery-smooth-scroll/jquery.smooth-scroll.min.js';
+import '../node_modules/github-card/dist/widget.js';
+import '../node_modules/default-passive-events/dist/index.js';
 require('file-upload-with-preview');
 require('lazysizes');
 require('svg4everybody');
-require('github-card');
-
-require('default-passive-events');
