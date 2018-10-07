@@ -221,6 +221,7 @@ include:
   - .htaccess
   - _pages
   - build
+  - _headers
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"

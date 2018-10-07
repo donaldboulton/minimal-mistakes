@@ -1,0 +1,5 @@
+/
+  Link: </assets/app.css>; rel=preload; as=stylesheet
+  Link: </build/js/vendor/jquery/jquery-3.3.1.min.js>; rel=preload; as=script
+  Link: </assets/images/bg10-min.png>; rel=preload; as=image
+  Cache-Control: private,max-age=3153600
