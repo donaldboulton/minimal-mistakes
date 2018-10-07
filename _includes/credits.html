@@ -13,3 +13,10 @@
     </div>
   </div>
 </div>
+<div class="center">  
+  <span>Get notified when Donald Boulton @donboulton.com adds new stuff </span>
+    <a rel="noreferrer" class="btn btn--twitter" href="https://twitter.com/intent/retweet?tweet_id={{ page.tweet_id }}{% if site.twitter.username %}via={{ site.twitter.username | url_encode }}&{% endif %}text={{ page.title | url_encode }}%20{{ page.url | absolute_url | url_encode }}" title="{{ site.data.ui-text[site.locale].retweet_on_label | default: 'Tweet On' }} Twitter">
+      <svg id="icon-twitter" viewBox="0 0 16 16" class="icon fa--twitter"><path d="M16 3.038a6.62 6.62 0 0 1-1.885.517 3.299 3.299 0 0 0 1.443-1.816c-.634.37-1.337.64-2.085.79a3.282 3.282 0 0 0-5.593 2.99 9.307 9.307 0 0 1-6.766-3.42A3.222 3.222 0 0 0 .67 3.75c0 1.14.58 2.143 1.46 2.732a3.278 3.278 0 0 1-1.487-.41v.04c0 1.59 1.13 2.918 2.633 3.22a3.336 3.336 0 0 1-1.475.056 3.29 3.29 0 0 0 3.07 2.28 6.578 6.578 0 0 1-4.85 1.359 9.332 9.332 0 0 0 5.04 1.474c6.04 0 9.34-5 9.34-9.33 0-.14 0-.28-.01-.42a6.63 6.63 0 0 0 1.64-1.7z" fill-rule="nonzero"></path></svg>
+      &nbsp; @donboulton</a>&nbsp;    
+    <a href="https://www.paypal.me/donbldboulton" class="btn btn--primary" id="open-website" rel="noreferrer"></a><svg class="icon icon--paypal" width="16" height="16" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M111.4 295.9c-3.5 19.2-17.4 108.7-21.5 134-.3 1.8-1 2.5-3 2.5H12.3c-7.6 0-13.1-6.6-12.1-13.9L58.8 46.6c1.5-9.6 10.1-16.9 20-16.9 152.3 0 165.1-3.7 204 11.4 60.1 23.3 65.6 79.5 44 140.3-21.5 62.6-72.5 89.5-140.1 90.3-43.4.7-69.5-7-75.3 24.2zM357.1 152c-1.8-1.3-2.5-1.8-3 1.3-2 11.4-5.1 22.5-8.8 33.6-39.9 113.8-150.5 103.9-204.5 103.9-6.1 0-10.1 3.3-10.9 9.4-22.6 140.4-27.1 169.7-27.1 169.7-1 7.1 3.5 12.9 10.6 12.9h63.5c8.6 0 15.7-6.3 17.4-14.9.7-5.4-1.1 6.1 14.4-91.3 4.6-22 14.3-19.7 29.3-19.7 71 0 126.4-28.8 142.9-112.3 6.5-34.8 4.6-71.4-23.8-92.6z"/></svg>&nbsp;Tip Me</a>
+</div>
