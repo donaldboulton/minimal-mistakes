@@ -34,15 +34,15 @@ class Todo extends Component {
       <div className="Appcenter">
       <img src={logo} className="App-logo" alt="logo" />
        <h3 className="Appheader"> TODO-LIST </h3>
-       <div className='mainCenter'>
+       <div className='AppCenterMain'>
         <form className="App" onSubmit={this.onSubmit}>
           <input placeholder="add task" value={this.state.term} onChange={(e) => this.onChange(e.target.value)}
           className="inputField"/>
           <button className="btn btn--primary">Add</button>
         </form>
         <List items={this.state.items}  onDeleteList={this.onDelete}/>
-        <div className="footer-outer">
-          <span className="footer"> Completed Items:  {this.state.items.length} </span>
+        <div className="bottom-outer">
+          <span className="bottom-app"> Completed Items:  {this.state.items.length} </span>
         </div>
       </div>
     </div>

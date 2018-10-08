@@ -37,7 +37,7 @@ header:
   image: /build/images/stack.png
   cta_label: "Posts"
   cta_url: "/year-archive/"
-  caption: Jekyll React Webpack
+  caption: Jekyll React
 excerpt: 'Jekyll GitHub Repo Netlify Hosting.<br /> <small><a href="https://donboulton.com">Donald Boulton at donboulton.com</a></small><br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
 
 feature_row:
