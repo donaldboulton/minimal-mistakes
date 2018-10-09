@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './lib/components/css/Rapp.css';
 import Todo from './lib/components/Todo';
 import AppNotify from './lib/components/AppNotify';
-import ReactComments from './lib/components/ReactComments';
+import ContactForm from './lib/components/ContactForm';
 class Title extends React.Component{
   render(){
     return(
