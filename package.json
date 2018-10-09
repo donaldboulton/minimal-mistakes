@@ -50,7 +50,6 @@
     "create-react-class": "^15.6.3",
     "cross-env": "^5.0.5",
     "css-loader": "^0.28.4",
-    "curl": "^0.1.4",
     "eslint": "^5.6.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-loader": "^2.1.0",
@@ -87,7 +86,9 @@
     "default-passive-events": "^1.0.10",
     "express": "^4.16.3",
     "file-upload-with-preview": "^2.1.1",
-    "firebase": "^5.4.1",
+    "firebase": "^5.5.3",
+    "firebase-admin": "^6.0.0",
+    "firebase-functions": "^2.0.5",
     "github-card": "^1.2.1",
     "google-auth-library": "^1.6.1",
     "googleapis": "^33.0.0",
@@ -104,6 +105,7 @@
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-web-notification": "^0.3.2",
+    "source-map-loader": "^0.2.4",
     "svg4everybody": "^2.1.9",
     "utf-8-validate": "^5.0.1"
   }
