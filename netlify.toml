@@ -4,7 +4,7 @@
 [[headers]]
 for = "/*"
 [headers.values]
-Cache-Control = "public, max-age=360000"
+Cache-Control = "public, max-age=3153600"
 Referrer-Policy = "same-origin"
 X-Content-Type-Options = "nosniff"
 X-Frame-Options = "DENY"

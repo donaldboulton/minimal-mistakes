@@ -95,6 +95,7 @@ hr{
 .outer-div{
   width: 90%;
   background-color: #00c100;
+  border-radius: 3px;
 }
 
 .bottom-app{
@@ -106,9 +107,8 @@ hr{
 
 .bottom-outer{
   border: 1px solid black;
-  position: absolute;
   left: 0;
-  width: 100%;
+  text-align: center;
 }
 
 @keyframes App-logo-spin {
