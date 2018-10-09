@@ -1,19 +1,11 @@
-<form name="contact" netlify netlify-honeypot="bot-field" hidden>
-    <input type="text" name="name" />
-    <input type="email" name="email" />
-    <textarea name="message"></textarea>
-    <input type="hidden" name="form-name" value="contact" />
-  </form>
+import React, { Component } from 'react';
 
-  <div id="root"></div>
 
-  <script type="text/babel">
-
-    const encode = (data) => {
+const encode = (data) => {
       return Object.keys(data)
           .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
           .join("&");
-    }
+};
 
     class ContactForm extends React.Component {
       constructor(props) {
@@ -57,7 +49,7 @@
               </label>
             </p>
             <p>
-              <button type="submit">Send</button>
+              <button className="btn btn--primary" type="submit">Send</button>
             </p>
           </form>
         );
@@ -65,5 +57,3 @@
     }
 
     ReactDOM.render(<ContactForm />, document.getElementById("root"));
-
-  </script>

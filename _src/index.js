@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { render } from 'react-dom';
 import './lib/components/css/Rapp.css';
 import Todo from './lib/components/Todo';
 import AppNotify from './lib/components/AppNotify';
+import ReactComments from './lib/components/ReactComments';
 class Title extends React.Component{
   render(){
     return(
@@ -31,6 +31,7 @@ class Layout extends React.Component {
       <div>
         <Header />
         <Main/>
+        <ContactForm />
         <AppNotify/>
         <Footer/>
       </div>
