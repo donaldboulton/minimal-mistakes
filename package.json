@@ -97,13 +97,11 @@
     "node-fetch": "^2.2.0",
     "normalize.css": "^7.0.0",
     "prop-types": "^15.6.2",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
     "react-web-notification": "^0.3.2",
     "source-map-loader": "^0.2.4",
     "svg4everybody": "^2.1.9",
     "utf-8-validate": "^5.0.1"
-  },
-  "peerDependencies": {
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2"
   }
 }
