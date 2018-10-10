@@ -40,7 +40,6 @@ class Layout extends React.Component {
 }
 const app = document.getElementById('app')
 ReactDOM.render(<Layout/>,app)
-
 class LayoutList extends React.Component{
   render(){
     var list = [

@@ -8,7 +8,7 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 module.exports = {
   entry: {
-    common: ['react, react-dom, jquery'],
+    common: ['react, react-dom'],
     app: './_src/index.js',
   },
   plugins: [
