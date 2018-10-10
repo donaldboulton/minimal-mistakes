@@ -8,7 +8,7 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 module.exports = {
   entry: {
-    common: ['lazysizes, file-upload-with-preview, express'],
+    common: ['lazysizes, file-upload-with-preview, express, react, react-dom'],
     app: './_src/index.js',
   },
   plugins: [
