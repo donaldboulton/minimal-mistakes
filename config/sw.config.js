@@ -5,9 +5,6 @@ module.exports = {
     '_site/assets/images/**.*',
     '_site/assets/**.js',
   ],
-  importScripts: [
-    'public/firebase-messaging-sw.js'
-  ],
   stripPrefix: '_site/',
   runtimeCaching: [{
     urlPattern: '/',

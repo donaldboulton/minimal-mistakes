@@ -4,9 +4,7 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import Notification  from './Notification';
 
-//allow react dev tools work
 window.React = React;
-
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -65,22 +63,16 @@ class App extends React.Component {
     const now = Date.now();
 
     const title = 'React-Web-Notification' + now;
-    const image = './images/logo.svg';
     const body = 'Hello' + new Date();
     const tag = now;
     const icon = './images/Notifications_button_24.png';
-    // const icon = 'http://localhost:3000/Notifications_button_24.png';
-
-    // Available options
-    // See https://developer.mozilla.org/en-US/docs/Web/API/Notification/Notification
     const options = {
       tag: tag,
       body: body,
-      image: image,
       icon: icon,
       lang: 'en',
       dir: 'ltr',
-      sound: './audio/sound.mp3'  // no browsers supported https://developer.mozilla.org/en/docs/Web/API/notification/sound#Browser_compatibility
+      sound: './audio/sound.mp3'
     }
     this.setState({
       title: title,
