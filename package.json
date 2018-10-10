@@ -15,8 +15,6 @@
     "Web Push API",
     "Web Notifications API",
     "Service Worker",
-    "Firebase Cloud Messaging",
-    "FCM"
   ],
   "author": "Donald Boulton",
   "license": "MPL-2.0",
@@ -79,19 +77,12 @@
     "webpack-worker": "0.0.20"
   },
   "dependencies": {
-    "ajv": "^6.5.4",
-    "algoliasearch": "^3.30.0",
     "anchor-js": "^4.1.1",
     "babel-preset-react-app": "^3.1.0",
     "default-passive-events": "^1.0.10",
     "express": "^4.16.3",
     "file-upload-with-preview": "^2.1.1",
-    "firebase": "^5.5.3",
-    "firebase-admin": "^6.0.0",
-    "firebase-functions": "^2.0.5",
     "github-card": "^1.2.1",
-    "google-auth-library": "^1.6.1",
-    "googleapis": "^33.0.0",
     "imports-loader": "^0.8.0",
     "jquery-smooth-scroll": "^2.2.0",
     "lazysizes": "^4.1.2",
