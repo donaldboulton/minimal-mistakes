@@ -1,4 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -7,7 +8,7 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 module.exports = {
   entry: {
-    common: ['lazysizes, file-upload-with-preview, express, react, react-dom'],
+    common: ['jquery, react, react-dom'],
     app: './_src/index.js',
   },
   plugins: [
@@ -24,6 +25,7 @@ module.exports = {
       from: path.resolve('_images'),
       to: 'images/',
     }]),
+    new BundleAnalyzerPlugin(),
   ],
   devServer: {
     contentBase: './assets',
@@ -42,7 +44,7 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['env', 'react'],
+            presets: ['env', 'react', 'stage-2'],
           },
         },
       },
