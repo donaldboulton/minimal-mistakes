@@ -86,8 +86,6 @@
     "express": "^4.16.3",
     "file-upload-with-preview": "^2.1.1",
     "github-card": "^1.2.1",
-    "google-auth-library": "^1.6.1",
-    "googleapis": "^33.0.0",
     "imports-loader": "^0.8.0",
     "jquery-smooth-scroll": "^2.2.0",
     "lazysizes": "^4.1.2",
