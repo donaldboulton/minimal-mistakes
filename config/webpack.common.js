@@ -1,4 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -25,6 +26,7 @@ module.exports = {
       from: path.resolve('_images'),
       to: 'images/',
     }]),
+    new BundleAnalyzerPlugin(),
   ],
   devServer: {
     contentBase: './assets',
