@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "github-pages", group: :jekyll_plugins
+gem 'github-pages', '~> 192', group: :jekyll_plugins
 
 gem "rake", "~> 12"
 gem "tzinfo-data"
