@@ -34,8 +34,8 @@ class Layout extends React.Component {
     return (
       <div>
         <Header />
-        <Main/>
         <ContactForm />
+        <Todo/>
         <AppNotify/>
         <Footer/>
       </div>
@@ -49,6 +49,7 @@ class LayoutList extends React.Component{
   render(){
     var list = [
       <Header/>,
+      <ContactForm />,
       <Todo/>,
       <AppNotify/>,
       <Footer/>,
@@ -62,4 +63,3 @@ class LayoutList extends React.Component{
 }
 
 import './main.css';
-import './jquery.greedy-navigation';
