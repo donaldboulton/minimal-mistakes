@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
     $(".author__urls_masthead").toggleClass("is--visible");
     $(".author__urls_masthead button").toggleClass("open");
   });
-  svg4everybody();
+
   var $btn = $("nav.greedy-nav .greedy-nav__toggle");
   var $vlinks = $("nav.greedy-nav .visible-links");
   var $hlinks = $("nav.greedy-nav .hidden-links");

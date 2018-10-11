@@ -7,22 +7,10 @@ import FormContainer from "./FormContainer";
 var $ = require('jquery');
 window.jQuery = $;
 window.$ = $;
-class App extends Component {
-  render() {
-    return (
-      <div className="col-md-6">
-        <h3> Sample Form Container </h3>
-        <FormContainer />
-      </div>
-    );
-  }
-}
-
-render(<App />, document.getElementById("root"));
 class Title extends React.Component{
   render(){
     return(
-    <h3>Jekyll React Components</h3>
+    <h3> Jekyll React Components </h3>
     )
   }
 }
