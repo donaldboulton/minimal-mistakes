@@ -89,8 +89,6 @@ class Notification extends React.Component {
     }
   }
 
-
-
   render() {
     let doNotShowOnActiveWindow = this.props.disableActiveWindow && this.windowFocus;
     if (!this.props.ignore && this.props.title && this.state.supported && this.state.granted && !doNotShowOnActiveWindow) {

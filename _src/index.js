@@ -3,10 +3,23 @@ import './lib/components/css/Rapp.css';
 import Todo from './lib/components/Todo';
 import AppNotify from './lib/components/AppNotify';
 import ContactForm from './lib/components/ContactForm';
+import FormContainer from "./lib/containers/FormContainer";
 
 var $ = require('jquery');
 window.jQuery = $;
 window.$ = $;
+class App extends Component {
+  render() {
+    return (
+      <div className="col-md-6">
+        <h3> Sample Form Container </h3>
+        <FormContainer />
+      </div>
+    );
+  }
+}
+
+render(<App />, document.getElementById("root"));
 class Title extends React.Component{
   render(){
     return(
@@ -33,8 +46,7 @@ class Layout extends React.Component {
   render() {
     return (
       <div>
-        <Header />
-        <ContactForm />
+        <Header />        
         <Todo/>
         <AppNotify/>
         <Footer/>
@@ -49,7 +61,6 @@ class LayoutList extends React.Component{
   render(){
     var list = [
       <Header/>,
-      <ContactForm />,
       <Todo/>,
       <AppNotify/>,
       <Footer/>,
