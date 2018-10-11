@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './lib/components/css/Rapp.css';
 import Todo from './lib/components/Todo';
 import AppNotify from './lib/components/AppNotify';
-import ContactForm from './lib/components/ContactForm';
 import FormContainer from "./lib/containers/FormContainer";
 
 var $ = require('jquery');
@@ -48,6 +47,7 @@ class Layout extends React.Component {
       <div>
         <Header />        
         <Todo/>
+        <FormContainer />
         <AppNotify/>
         <Footer/>
       </div>
