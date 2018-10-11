@@ -95,6 +95,6 @@
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-web-notification": "^0.3.2",
-    "svg4everybody": "^2.1.9",
+    "svg4everybody": "^2.1.9"
   }
 }
