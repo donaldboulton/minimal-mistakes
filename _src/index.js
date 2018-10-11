@@ -62,4 +62,4 @@ class LayoutList extends React.Component{
 }
 
 import './main.css';
-import './InitSite';
+import './jquery.greedy-navigation';
