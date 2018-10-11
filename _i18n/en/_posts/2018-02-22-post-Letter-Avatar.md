@@ -14,13 +14,11 @@ footnotes: true
 tags:
   - Gravatar
   - Letter Avatar
-  - Staticman
   - Jekyll
 category:
   - Programing
 locations:
   - OKC Oklahoma
-  - Rockwell Rv Park
 toc: true
 toc_label: "Page Contents"
 read_time: true
