@@ -3,6 +3,10 @@ import './lib/components/css/Rapp.css';
 import Todo from './lib/components/Todo';
 import AppNotify from './lib/components/AppNotify';
 import ContactForm from './lib/components/ContactForm';
+
+var $ = require('jquery');
+window.jQuery = $;
+window.$ = $;
 class Title extends React.Component{
   render(){
     return(

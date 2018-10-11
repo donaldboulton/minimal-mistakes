@@ -1,14 +1,16 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const path = require('path');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const pkg = require('./package.json');
 
 module.exports = {
   entry: {
-    common: ['jquery'],
-    app: './_src/index.js',
+    filename: './_src/index.js',
+    vendor: Object.keys(pkg.dependencies),
   },
   plugins: [
     new FaviconsWebpackPlugin({
@@ -24,6 +26,7 @@ module.exports = {
       from: path.resolve('_images'),
       to: 'images/',
     }]),
+    new BundleAnalyzerPlugin(),
   ],
   devServer: {
     contentBase: './assets',
