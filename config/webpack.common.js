@@ -12,6 +12,9 @@ module.exports = {
     app: './_src/index.js',
     vendor: Object.keys(pkg.dependencies),
   },
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
   plugins: [
     new FaviconsWebpackPlugin({
       logo: './favicon.png',
