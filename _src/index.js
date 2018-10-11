@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './lib/components/css/Rapp.css';
 import Todo from './lib/components/Todo';
 import AppNotify from './lib/components/AppNotify';
-import FormContainer from "./lib/containers/FormContainer";
+import FormContainer from "./containers/FormContainer";
 
 var $ = require('jquery');
 window.jQuery = $;
