@@ -89,8 +89,6 @@
     "jquery-smooth-scroll": "^2.2.0",
     "lazysizes": "^4.1.2",
     "lightgallery.js": "^1.1.1",
-    "netlify-auth-providers": "^1.0.0-alpha5",
-    "netlify-identity-widget": "^1.4.14",
     "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
