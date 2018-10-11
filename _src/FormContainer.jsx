@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
-import FormContainer from "./containers/FormContainer";
+import FormContainer from "./FormContainer";
 
 class App extends Component {
   render() {
