@@ -21,6 +21,9 @@ module.exports = {
       template: './_src/template/default.html',
       filename: '../_layouts/default.html',
     }),
+    new ScriptExtHtmlWebpackPlugin({
+      defaultAttribute: 'async'
+    }),
     new ExtractTextPlugin('[name].css'),
     new CopyWebpackPlugin([{
       from: path.resolve('_images'),
