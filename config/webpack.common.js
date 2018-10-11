@@ -9,7 +9,7 @@ const pkg = require('../package.json');
 
 module.exports = {
   entry: {
-    filename: './_src/index.js',
+    app: './_src/index.js',
     vendor: Object.keys(pkg.dependencies),
   },
   plugins: [
