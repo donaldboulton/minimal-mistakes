@@ -84,11 +84,9 @@
   "dependencies": {
     "anchor-js": "^4.1.1",
     "default-passive-events": "^1.0.10",
-    "file-upload-with-preview": "^2.1.1",
-    "github-card": "^1.2.1",
+    "jquery":  "^3.3.1",
     "jquery-smooth-scroll": "^2.2.0",
     "lazysizes": "^4.1.2",
-    "lightgallery.js": "^1.1.1",
     "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
