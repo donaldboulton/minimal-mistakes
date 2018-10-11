@@ -15,7 +15,7 @@ group :jekyll_plugins do
   gem 'jekyll-tagging-related_posts'
   gem 'json'
   gem 'jemoji'
-  gem 'jekyll-redirect-from', '~> 0.13.0'
+  gem 'jekyll-redirect-from', '~> 0.14.0'
   gem 'jekyll-figure'
   gem 'jekyll-multiple-languages-plugin'
   gem 'public_suffix'
