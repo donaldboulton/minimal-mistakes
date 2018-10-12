@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './lib/components/css/Rapp.css';
 import Todo from './lib/components/Todo';
 import AppNotify from './lib/components/AppNotify';
+import ContactForm from './lib/components/ContactForm';
 
 var $ = require('jquery');
 window.jQuery = $;
@@ -13,14 +14,14 @@ class Title extends React.Component{
     )
   }
 }
-class Footer extends React.Component{
+class Footer extends React.Component {
   render(){
     return (
     <footer>Adding Footer</footer>
     );
   }
 }
-class Header extends React.Component{
+class Header extends React.Component {
   render(){
     return (
     <Title />
@@ -35,6 +36,7 @@ class Layout extends React.Component {
         <Header />        
         <Todo/>
         <AppNotify/>
+        <ContactForm/>
         <Footer/>
       </div>
     );
@@ -43,12 +45,13 @@ class Layout extends React.Component {
 const app = document.getElementById('app')
 ReactDOM.render(<Layout/>,app)
 
-class LayoutList extends React.Component{
+class LayoutList extends React.Component {
   render(){
     var list = [
       <Header/>,
       <Todo/>,
       <AppNotify/>,
+      <ContactForm/>,
       <Footer/>,
     ];
     return (
