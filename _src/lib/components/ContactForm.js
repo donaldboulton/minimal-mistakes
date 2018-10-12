@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import 'Time.js';
 
 // App
 // Smart. Does data stuff.
@@ -17,6 +16,19 @@ var App = React.createClass({
       
     }
     
+    var h =  {
+      getTime: function() {
+        var month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+        var d = new Date();
+        var mon = month[d.getMonth()];
+        var day = d.getDate();
+        var year = d.getFullYear();
+        var dateAll = mon + " " + day + ", " + year;
+    
+        return dateAll;
+      }
+    }
+
     var timeStamp = (new Date()).getTime();
     
     this.state.comments['comment-id' + timeStamp] = commentData;
