@@ -39,7 +39,7 @@ var App = React.createClass({
   
   renderComment: function(key) {
     return (
-      <li className="">
+      <li className="list">
         <NewComment key={key} index={key} details={this.state.comments[key]} />
       </li>
     )
@@ -47,9 +47,9 @@ var App = React.createClass({
   
   render : function() {
     return (
-	    <div className="row medium-8 large-7 columns">
+	    <div className="entry-comments">
         
-	      <ol className="comment-list block-comments">
+	      <ol className="js-comments">
             {
               Object
                 .keys(this.state.comments)
@@ -95,7 +95,7 @@ var AddCommentForm = React.createClass({
     return (
       <div className="callout secondary">
         <h4 className="leave-comment">Add a Comment</h4>
-        <form className="post-edit" ref="commentForm" onSubmit={this.processComment}>
+        <form className="comment-form post-edit" ref="commentForm" onSubmit={this.processComment}>
           <input type="text" ref="name" placeholder="Your Name" required/>
           <textarea ref="desc" placeholder="Add your comment here" required/>
           <button id="submit" type="submit" className="btn btn--primary">Add Comment</button>
@@ -117,11 +117,11 @@ var NewComment = React.createClass({
         <div className="form-group">
           <div className="comment-avatar">
             <a>
-              <img avatar="{{ include.name }}" className="comment-avatar-img" alt="{{ include.name }}" />
+              <img avatar="commentName" className="comment-avatar-img" alt="commentName" />
             </a>
           </div>
           <div className="form-group">
-            <a href="#0" data-username="{{ include.name }}" className="comment-author">
+            <a href="#0" data-username="commentName" className="comment-author">
                 <span className="comment-author-name">
                   {this.props.details.commentName}
                 </span>
