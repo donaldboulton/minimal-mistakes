@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDom from 'react-dom';
 
 // App
 // Smart. Does data stuff.
@@ -144,4 +145,4 @@ var NewComment = React.createClass({
   }
 });
 
-React.render(<App/>, document.querySelector("#root"));
+ReactDom.render(<App/>, document.getElementById('out'));
