@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import 'Time.js';
 
 // App
 // Smart. Does data stuff.
