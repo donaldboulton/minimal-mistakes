@@ -101,15 +101,15 @@ var NewComment = React.createClass({
   render : function() {
     return (
       <div className="comment module">
-        <div className="comment-avatar">
-          <div className="comment-avatar-img">
+        <div className="form-group">
+          <div className="comment-avatar">
             <a>
-              <img src="/assets/images/icons/user-round.svg" className="comment-avatar" alt="" />
+              <img avatar="{{ include.name }}" className="comment-avatar-img" alt="{{ include.name }}" />
             </a>
           </div>
-          <div className="comment-user-text">
-            <a href="#0" data-username="donaldboulton" className="comment-author-name">
-                <span className="username">
+          <div className="form-group">
+            <a href="#0" data-username="{{ include.name }}" className="comment-author">
+                <span className="comment-author-name">
                   {this.props.details.commentName}
                 </span>
             </a>
@@ -122,7 +122,7 @@ var NewComment = React.createClass({
           </div>
         </div>
 
-        <div className="comment-text">
+        <div className="comment-content">
           <p>{this.props.details.commentBody}</p>
         </div>
       </div>
@@ -130,6 +130,5 @@ var NewComment = React.createClass({
     )
   }
 });
-
 
 React.render(<App/>, document.querySelector("#root"));
