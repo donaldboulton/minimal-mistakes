@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDom from 'react-dom';
-
+var createReactClass = require('create-react-class');
 // App
 // Smart. Does data stuff.
 var App = React.createClass({
@@ -145,4 +145,4 @@ var NewComment = React.createClass({
   }
 });
 
-ReactDom.render(<App/>, document.getElementById('root'));
+ReactDOM.render(<commentForm/>,app);
