@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import ReactDom from 'react-dom';
-var createReactClass = require('create-react-class');
+const createReactClass = require('create-react-class');
 // App
 // Smart. Does data stuff.
-var App = React.createClass({
+const App = createReactClass({
   
   getInitialState: function() {
     return { 
@@ -17,20 +17,20 @@ var App = React.createClass({
       
     }
     
-    var h =  {
+    const h =  {
       getTime: function() {
-        var month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-        var d = new Date();
-        var mon = month[d.getMonth()];
-        var day = d.getDate();
-        var year = d.getFullYear();
-        var dateAll = mon + " " + day + ", " + year;
+        const month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+        const d = new Date();
+        const mon = month[d.getMonth()];
+        const day = d.getDate();
+        const year = d.getFullYear();
+        const dateAll = mon + " " + day + ", " + year;
     
         return dateAll;
       }
     }
 
-    var timeStamp = (new Date()).getTime();
+    const timeStamp = (new Date()).getTime();
     
     this.state.comments['comment-id' + timeStamp] = commentData;
     this.setState({
@@ -73,13 +73,13 @@ var App = React.createClass({
   <AddCommentForm />
 */
 // Semi-Dumb
-var AddCommentForm = React.createClass({
+const AddCommentForm = createReactClass({
   
   processComment: function(event) {
     event.preventDefault();
     
     // 1. Take data from from form
-    var commentData = {
+    const commentData = {
       commentName: this.refs.name.value,
       commentBody: this.refs.desc.value
     }
@@ -111,7 +111,7 @@ var AddCommentForm = React.createClass({
   Newcomment
   <NewComment />
 */
-var NewComment = React.createClass({
+const NewComment = React.createClass({
   render : function() {
     return (
       <div className="comment module">
