@@ -28,7 +28,6 @@ class Header extends React.Component {
     );
   }
 }
-
 class Layout extends React.Component {
   render() {
     return (
@@ -42,6 +41,7 @@ class Layout extends React.Component {
     );
   }
 }
+
 const app = document.getElementById('app')
 ReactDOM.render(<Layout/>,app)
 
