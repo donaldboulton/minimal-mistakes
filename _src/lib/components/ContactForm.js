@@ -3,7 +3,7 @@ import ReactDom from 'react-dom';
 const createReactClass = require('create-react-class');
 // App
 // Smart. Does data stuff.
-const App = createReactClass({
+module.exports=createReactClass({
   
   getInitialState: function() {
     return { 
@@ -111,7 +111,7 @@ const AddCommentForm = createReactClass({
   Newcomment
   <NewComment />
 */
-const NewComment = React.createClass({
+const NewComment = createReactClass({
   render : function() {
     return (
       <div className="comment module">
