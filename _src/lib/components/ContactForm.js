@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactDom from 'react-dom';
+import PropTypes from 'prop-types';
 const createReactClass = require('create-react-class');
 // App
 // Smart. Does data stuff.
@@ -145,4 +146,4 @@ const NewComment = createReactClass({
   }
 });
 
-ReactDOM.render(<commentForm/>,app);
+ReactDom.render(<ContactForm/>, document.getElementById('contactForm'));
