@@ -145,4 +145,4 @@ var NewComment = React.createClass({
   }
 });
 
-ReactDom.render(<App/>, document.getElementById('out'));
+ReactDom.render(<App/>, document.getElementById('root'));

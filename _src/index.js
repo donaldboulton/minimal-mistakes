@@ -33,10 +33,10 @@ class Layout extends React.Component {
   render() {
     return (
       <div>
-        <Header />        
+        {/* <Header /> */}
         <Todo/>
         <AppNotify/>
-        <ContactForm/>
+        {/* <ContactForm/> */}
         <Footer/>
       </div>
     );
@@ -51,7 +51,7 @@ class LayoutList extends React.Component {
       <Header/>,
       <Todo/>,
       <AppNotify/>,
-      <ContactForm/>,
+      // <ContactForm/>,
       <Footer/>,
     ];
     return (
