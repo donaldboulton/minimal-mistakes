@@ -10,7 +10,7 @@ sidenav: true
 sidenav-gen: true
 reviews: false
 adds: true
-excerpt: "Sitemap with Post by Catagories, by Tags and by Years"
+excerpt: "Sitemap with Post by Categories, by Tags and by Years"
 image:
   cover: true
   path: &image /assets/images/sitemap.png

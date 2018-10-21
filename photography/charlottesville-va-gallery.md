@@ -22,7 +22,7 @@ sidebar:
     image_alt: "Charlottesville Downtown Mall"
     text: "Charlottesville Downtown Mall"
   - title: "Responsibilities"
-    text: "Charlottesville Va one of the nicest places I lived at for about 2 months in 2002, while on the way to Washington DC."
+    text: "Charlottesville VA one of the nicest places I lived at for about 2 months in 2002, while on the way to Washington DC."
 category:
   - Gallerys
 tags: [Gallery]
