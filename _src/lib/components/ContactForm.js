@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import ReactDom from 'react-dom';
+import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-const createReactClass = require('create-react-class');
-// App
-// Smart. Does data stuff.
+
+var createReactClass = require('create-react-class');
+
 module.exports=createReactClass({
   
   getInitialState: function() {
@@ -18,20 +18,20 @@ module.exports=createReactClass({
       
     }
     
-    const h =  {
+    var h =  {
       getTime: function() {
-        const month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-        const d = new Date();
-        const mon = month[d.getMonth()];
-        const day = d.getDate();
-        const year = d.getFullYear();
-        const dateAll = mon + " " + day + ", " + year;
+        var month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+        var d = new Date();
+        var mon = month[d.getMonth()];
+        var day = d.getDate();
+        var year = d.getFullYear();
+        var dateAll = mon + " " + day + ", " + year;
     
         return dateAll;
       }
     }
 
-    const timeStamp = (new Date()).getTime();
+    var timeStamp = (new Date()).getTime();
     
     this.state.comments['comment-id' + timeStamp] = commentData;
     this.setState({
@@ -55,7 +55,7 @@ module.exports=createReactClass({
             {
               Object
                 .keys(this.state.comments)
-                 // Creating a NEW array
+                
                 .map(this.renderComment)
             }
 	      </ol>
@@ -69,26 +69,18 @@ module.exports=createReactClass({
   }
 });
 
-/*
-  Add comment Form
-  <AddCommentForm />
-*/
-// Semi-Dumb
-const AddCommentForm = createReactClass({
+var AddCommentForm = createReactClass({
   
   processComment: function(event) {
     event.preventDefault();
     
-    // 1. Take data from from form
-    const commentData = {
+    var commentData = {
       commentName: this.refs.name.value,
       commentBody: this.refs.desc.value
     }
-    
-    // 2. Pass data back to App
+
     this.props.addComment(commentData);
     
-    // 3. Reset the form
     this.refs.commentForm.reset();
     
   },
@@ -112,7 +104,7 @@ const AddCommentForm = createReactClass({
   Newcomment
   <NewComment />
 */
-const NewComment = createReactClass({
+var NewComment = createReactClass({
   render : function() {
     return (
       <div className="comment module">
@@ -146,4 +138,4 @@ const NewComment = createReactClass({
   }
 });
 
-ReactDom.render(<ContactForm/>, document.getElementById('contactForm'));
+ReactDOM.render(<ContactForm/>, document.getElementById('contactForm'));
