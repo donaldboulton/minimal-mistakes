@@ -50,13 +50,13 @@ pictures:
   - DSCN1477-800.jpg
   - DSCN1477-1320.jpg
   thumbnail: DSCN1477-th.jpg
-- filename: DSCN1479
-  original: DSCN1479-1200.jpg
+- filename: topcat-idabel
+  original: topcat-idabel-1200.jpg
   sizes:
-  - DSCN1479-1200.jpg
-  - DSCN1479-800.jpg
-  - DSCN1479-320.jpg
-  thumbnail: DSCN1479-th.jpg
+  - topcat-idabel-1200.jpg
+  - topcat-idabel-800.jpg
+  - topcat-idabel-320.jpg
+  thumbnail: topcat-idabel-th.jpg
 - filename: GrandPaw-My-Cats
   original: GrandPaw-My-Cats-1200.jpg
   sizes:
