@@ -11,6 +11,7 @@ gallery: true
 comments: false
 reviews: true
 share: true
+reviews: true
 related: true
 sidenav-gallery: true
 adds: false
