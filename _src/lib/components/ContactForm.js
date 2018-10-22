@@ -138,4 +138,5 @@ var NewComment = createReactClass({
   }
 });
 
-ReactDOM.render(<ContactForm/>, document.getElementById('contactForm'));
+ReactDom.render(<App/>, document.getElementById('contactForm'));
+

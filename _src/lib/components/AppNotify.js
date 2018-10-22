@@ -65,14 +65,14 @@ class App extends React.Component {
     const title = 'React-Web-Notification' + now;
     const body = 'Hello' + new Date();
     const tag = now;
-    const icon = './Notifications_button_24.png';
+    const icon = 'https://donboulton.com/assets/images/Notifications_button_24.png';
     const options = {
       tag: tag,
       body: body,
       icon: icon,
       lang: 'en',
       dir: 'ltr',
-      sound: './audio/sound.mp3'
+      sound: 'https://donboulton.com/build/audio/sound.mp3'
     }
     this.setState({
       title: title,
@@ -101,9 +101,9 @@ class App extends React.Component {
           options={this.state.options}
         />
         <audio id='sound' preload='auto'>
-          <source src='./audio/sound.mp3' type='audio/mpeg' />
-          <source src='./audio/sound.ogg' type='audio/ogg' />
-          <embed hidden='true' autostart='false' loop='false' src='./sound.mp3' />
+          <source src='https://donboulton.com/build/audio/sound.mp3' type='audio/mpeg' />
+          <source src='https://donboulton.com/build/audio/sound.ogg' type='audio/ogg' />
+          <embed hidden='true' autostart='false' loop='false' src='https://donboulton.com/build/audio/sound.mp3' />
         </audio>
         </div>
       </div>
