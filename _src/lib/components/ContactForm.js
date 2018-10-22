@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
+import ReactDom from 'react-dom';
 
 const createReactClass = require('create-react-class');
 
-var App = createReactClass({ displayName: "App",
+  var App = createReactClass({ displayName: "App",
 
   getInitialState: function getInitialState() {
     return {
@@ -136,5 +137,4 @@ var NewComment = createReactClass({
   }
 });
 
-React.render(React.createElement(App, null), document.querySelector("#contactForm"));
-
+ReactDom.render(<ContactForm/>, document.getElementById('contactform'));
