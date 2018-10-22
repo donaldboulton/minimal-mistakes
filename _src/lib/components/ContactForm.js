@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import PropTypes from 'prop-types';
 
-var createReactClass = require('create-react-class');
+const createReactClass = require('create-react-class');
 
-module.exports=createReactClass({
-  
-  getInitialState: function() {
-    return { 
-      comments: {}
-    }
+var App = createReactClass({ displayName: "App",
+
+  getInitialState: function getInitialState() {
+    return {
+      comments: {} };
+
   },
   
   addComment: function(commentData) {
@@ -138,5 +136,5 @@ var NewComment = createReactClass({
   }
 });
 
-ReactDom.render(<App/>, document.getElementById('contactForm'));
+React.render(React.createElement(App, null), document.querySelector("#contactForm"));
 
