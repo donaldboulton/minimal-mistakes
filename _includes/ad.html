@@ -1,5 +1,5 @@
 {% if page.adds != true %}
-<div class="adds toc1" role="note" itemscope itemtype="https://schema.org/WPAdBlock"></div>>
+<div class="adds toc1 clear-both" role="note" itemscope itemtype="https://schema.org/WPAdBlock">
     <span class="section-title">
         <h3 class="nav__title1"><svg class="icon icon--google-plus" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-google+ | prepend: '/assets/images/' | relative_url }}"></use></svg> Google Adds</span></h3>
         <meta itemprop="name" content="Adsense for {{ page.title }}"/>
@@ -14,6 +14,6 @@
     <script>
       (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
-</div>
+  </div>
 </div>
 {% endif %}
