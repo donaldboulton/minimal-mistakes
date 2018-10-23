@@ -186,3 +186,12 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   window.__twitterIntentHandler = true;
 }());
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/push-worker.js');
+  });
+
+  navigator.serviceWorker.ready.then(function (registration) {
+    console.log('Service worker successfully registered on scope', registration.scope);
+  });
+}
