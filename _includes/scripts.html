@@ -9,7 +9,7 @@
   {% endfor %}
 {% else %}
 <script src="{{ '/build/js/vendor/jquery/jquery-3.3.1.min.js' | relative_url }}"></script>
-<script src="{{ '/build/js/vendor/letter-avatar/letter-avatar.js' | relative_url }}"></script>
+<script asnyc src="{{ '/build/js/vendor/letter-avatar/letter-avatar.js' | relative_url }}"></script>
 {% endif %}
 
 {% if site.search == true or page.layout == "search" %}
@@ -208,7 +208,7 @@ $(document).ready(function() {
 {% endif %}
 
 {% if page.anchor == true %}
-<script src="{{ '/build/js/vendor/anchor/anchor.js' | relative_url }}"></script>
+<script asnyc src="{{ '/build/js/vendor/anchor/anchor.js' | relative_url }}"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function(event) {
 anchors.options = {
@@ -222,7 +222,7 @@ anchors.add('p');
 {% endif %}
 
 {% if page.footnotes == true %}
-  <script src="{{ '/build/js/vendor/bigfoot/bigfoot.min.js' | relative_url }}"></script>
+  <script asnyc src="{{ '/build/js/vendor/bigfoot/bigfoot.min.js' | relative_url }}"></script>
   <script>
     var bigfoot = $.bigfoot(
         {
@@ -233,7 +233,7 @@ anchors.add('p');
     );
   </script>
 {% endif %}
-<script src="{{ '/public/init.site.sw.js' | relative_url }}"></script>
+<script asnyc src="{{ '/public/init.site.sw.js' | relative_url }}"></script>
 <script async defer src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script type="text/javascript">
   // 86acbd31cd7c09cf30acb66d2fbedc91daa48b86:1532977531.56
