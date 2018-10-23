@@ -69,7 +69,7 @@ class App extends React.Component {
     const options = {
       tag: tag,
       body: 'Jekyll React Webpack and My Stack!',
-      image: 'https://donboulton.com/build/images/stack-320.png',
+      image: 'https://donboulton.com/build/images/notify-stack-250.png',
       icon: icon,
       lang: 'en',
       dir: 'ltr',
