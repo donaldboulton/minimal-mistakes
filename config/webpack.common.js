@@ -11,7 +11,7 @@ const pkg = require('../package.json');
 module.exports = {
   entry: {
     app: './_src/index.js',
-    common: Object.keys(pkg.dependencies),
+    vendor: Object.keys(pkg.dependencies),
   },
   resolve: {
     extensions: ['.js', '.jsx']
