@@ -1,4 +1,4 @@
-const VERSION = '1';
+const VERSION = '01';
 
 this.addEventListener('install', (e) => {
     e.waitUntil(caches.open(VERSION).then(cache => cache.addAll([
@@ -128,61 +128,41 @@ this.addEventListener('install', (e) => {
 });
 
 this.addEventListener('fetch', (e) => {
-    const tryInCachesFirst = caches.open(VERSION)
-        .then(cache => cache.match(e.request).then((response) => {
-            if (!response) {
-                return handleNoCacheMatch(e);
-            }
-            fetchFromNetworkAndCache(e);
+  const tryInCachesFirst = caches.open(VERSION)
+      .then(cache => cache.match(e.request).then((response) => {
+          if (!response) {
+              return handleNoCacheMatch(e);
+          }
+          fetchFromNetworkAndCache(e);
 
-            return response;
-        }));
-    e.respondWith(tryInCachesFirst);
+          return response;
+      }));
+  e.respondWith(tryInCachesFirst);
 });
 
 this.addEventListener('activate', (e) => {
-    e.waitUntil(caches.keys().then(keys => Promise.all(keys.map((key) => {
-        if (key !== VERSION) { return caches.delete(key); }
-    }))));
+  e.waitUntil(caches.keys().then(keys => Promise.all(keys.map((key) => {
+      if (key !== VERSION) { return caches.delete(key); }
+  }))));
 });
 
 function fetchFromNetworkAndCache(e) {
-    if (e.request.cache === 'only-if-cached' && e.request.mode !== 'same-origin') return;
-    return fetch(e.request).then((res) => {
-        if (!res.url) return res;
-        if (new URL(res.url).origin !== location.origin) return res;
-        return caches.open(VERSION).then((cache) => {
-            cache.put(e.request, res.clone());
-            return res;
-        });
-    }).catch(err => console.error(e.request.url, err));
+  if (e.request.cache === 'only-if-cached' && e.request.mode !== 'same-origin') return;
+  return fetch(e.request).then((res) => {
+      if (!res.url) return res;
+      if (new URL(res.url).origin !== location.origin) return res;
+      return caches.open(VERSION).then((cache) => {
+          cache.put(e.request, res.clone());
+          return res;
+      });
+  }).catch(err => console.error(e.request.url, err));
 }
 
 function handleNoCacheMatch(e) {
-    return fetchFromNetworkAndCache(e);
-}
-
-/* eslint-disable max-len */
-
-const applicationServerPublicKey = 'BOew5Tx7fTX51GzJ7tpF3dDLNS54OvUST_dGGqzJEy54jqW2qghIRTiK7BfOpCPp8xNfMH7Mtprl3hp_WGjgslU';
-
-/* eslint-enable max-len */
-
-function urlB64ToUint8Array(base64String) {
-  const padding = '='.repeat((4 - base64String.length % 4) % 4);
-  const base64 = (base64String + padding)
-    .replace(/\-/g, '+')
-    .replace(/_/g, '/');
-
-  const rawData = window.atob(base64);
-  const outputArray = new Uint8Array(rawData.length);
-
-  for (let i = 0; i < rawData.length; ++i) {
-    outputArray[i] = rawData.charCodeAt(i);
-  }
-  return outputArray;
+  return fetchFromNetworkAndCache(e);
 }
 // 86acbd31cd7c09cf30acb66d2fbedc91daa48b86:1540240125.4
+
 importScripts('https://web-sdk.urbanairship.com/notify/v1/ua-sdk.min.js');
 uaSetup.worker(self, {
   defaultIcon: 'https://d33wubrfki0l68.cloudfront.net/bc89e0f5c80795717601622b4735b32afa498ce2/5504d/assets/icons-850ff6118610b1db2616874ac111f893/favicon.ico',

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './lib/components/css/Rapp.css';
 import Todo from './lib/components/Todo';
 import AppNotify from './lib/components/AppNotify';
-import ContactForm from './lib/components/CommentForm';
+import CommentForm from './lib/components/CommentForm';
 
 var $ = require('jquery');
 window.jQuery = $;

@@ -87,4 +87,8 @@
   <link rel="webmention" href="{{ site.webmention_url }}">
 {% endif %}
 
+{% if page.support contains 'admin' %}
+  <link rel="stylesheet" href="{{ '/build/css/vendor/fileupload/file-upload-with-preview.css' | relative_url }}">
+{% endif %}
+
 <script src="https://identity-js.netlify.com/v1/netlify-identity-widget.js"></script>
