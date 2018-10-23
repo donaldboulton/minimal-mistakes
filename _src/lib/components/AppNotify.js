@@ -62,13 +62,14 @@ class App extends React.Component {
 
     const now = Date.now();
 
-    const title = 'React-Web-Notification' + now;
+    const title = 'Don Boulton Notifications' + now;
     const body = 'Hello' + new Date();
     const tag = now;
     const icon = 'https://donboulton.com/assets/images/Notifications_button_24.png';
     const options = {
       tag: tag,
-      body: body,
+      body: 'Jekyll React Webpack and My Stack!',
+      image: 'https://donboulton.com/build/images/stack-320.png',
       icon: icon,
       lang: 'en',
       dir: 'ltr',
