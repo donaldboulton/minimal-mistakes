@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './lib/components/css/Rapp.css';
 import Todo from './lib/components/Todo';
 import AppNotify from './lib/components/AppNotify';
-import ContactForm from './lib/components/ContactForm';
+import ContactForm from './lib/components/CommentForm';
 
 var $ = require('jquery');
 window.jQuery = $;
@@ -36,7 +36,7 @@ class Layout extends React.Component {
         {/* <Header /> */}
         <Todo/>
         <AppNotify/>
-        <ContactForm/>
+        <CommentForm/>
         <Footer/>
       </div>
     );
@@ -52,7 +52,7 @@ class LayoutList extends React.Component {
       <Header/>,
       <Todo/>,
       <AppNotify/>,
-      <ContactForm/>,
+      <CommentForm/>,
       <Footer/>,
     ];
     return (
