@@ -21,8 +21,8 @@ module.exports = Merge(CommonConfig, {
       debug: false,
     }),
     new webpack.optimize.CommonsChunkPlugin({
-      name: 'common',
-      minChunks: 2,
+      name: 'vendor',
+      minChunks: Infinity,
     }),
     new webpack.optimize.UglifyJsPlugin({
       beautify: false,

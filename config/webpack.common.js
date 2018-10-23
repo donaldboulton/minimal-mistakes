@@ -1,4 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
@@ -10,7 +11,7 @@ const pkg = require('../package.json');
 module.exports = {
   entry: {
     app: './_src/index.js',
-    vendor: Object.keys(pkg.dependencies),
+    common: Object.keys(pkg.dependencies),
   },
   resolve: {
     extensions: ['.js', '.jsx']
@@ -32,6 +33,7 @@ module.exports = {
       from: path.resolve('_images'),
       to: 'images/',
     }]),
+    new BundleAnalyzerPlugin(),
   ],
   devServer: {
     contentBase: './assets',
