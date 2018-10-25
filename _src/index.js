@@ -61,3 +61,4 @@ class LayoutList extends React.Component {
 }
 
 import './main.css';
+import 'SlackChat.js';

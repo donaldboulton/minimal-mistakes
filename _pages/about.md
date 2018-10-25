@@ -15,8 +15,9 @@ tags:
   - Donald Boulton
   - React
   - Jekyll
-  - Github Pages
+  - GitHub Pages
   - Webpack
+  - Netlify
 category:
   - Donald Boulton
 image:
@@ -80,7 +81,7 @@ feature_row:
   - image_path: /assets/images/mm-free-feature.png
     alt: "Cool & free"
     title: "Cool & Free"
-    excerpt: "Free to use however you want under the MIT License. Clone it, fork it, customize it, whatever!"
+    excerpt: "Fell free to install this app with the Netlify button above, change assets pages and posts to yours!"
     url: "https://mmistakes.github.io/minimal-mistakes/terms/"
     btn_class: "btn--primary"
     btn_label: "Learn More"
@@ -98,9 +99,10 @@ github_editme_path: donaldboulton/DWB/blob/gh-pages/_pages/about.md
 
 # Technical notes about this website
 
-This website is built as static HTML with Jekyll and served on Netlify via a continuous deployment (CD) workflow. Pull requests are automatically built into preview apps, while commits to the master branch trigger the production build and deploy onto Netlify’s CDN edge node infrastructure. Since the whole site is just a bunch of static files copied onto multiple CDN nodes around the world, time to first byte (TTFB) is consistently fast at around 1ms to 2ms.
+This website is built as static HTML with Jekyll Node React and Webpack, and served on Netlify via a continuous deployment (CD) workflow. Pull requests are automatically built into preview apps, while commits to the master branch trigger the production build and deploy onto Netlify’s CDN edge node infrastructure. Since the whole site is just a bunch of static files copied onto multiple CDN nodes around the world, time to first byte (TTFB) is consistently fast at around 1ms to 2ms.
+React Notifications through my Slack Bots and Zapier for my Mansbooks donboulton.com workspace.
 
-## Serverless
+## Server-less
 
 No run time dependency or vulnerable server stack required
 Pre-built pages served over a CDN for fastest time to first byte
@@ -116,13 +118,15 @@ Whooo what a relief. Ruby Jekyll and GitHub Pages is the kind, figured this out 
 
 Ruby, Jekyll, GitHub pages, and even liquid are super simple; Or "Super Logical, if you think like a human". I've been hitting my head for not using Ruby and the kind much sooner.
 
+Full Webpack integration of all static assets, Working on react components to replace native Jekyll Menu, footer and page contents.
+
 > Go Sooners!
 
 ## Credits
 
 {% include credits.html %}
 
-Links to Netlify this GitHub repo, Staticman Reviews, MMistakes Framework Designer Donald Boulton.
+Links to Netlify this GitHub repo, Staticman Reviews, MMistakes Framework Designers Michel Rose and Donald Boulton.
 
 {% include feature_row %}
 {% include github.html %}

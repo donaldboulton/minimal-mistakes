@@ -116,3 +116,20 @@ hr{
   to { transform: rotate(360deg); }
 }
 
+#greeting {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #141010;
+}
+#greeting > span {
+  font-size: 4vh;
+  margin-bottom: 3vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1vw;
+}
+
