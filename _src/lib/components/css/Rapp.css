@@ -116,20 +116,27 @@ hr{
   to { transform: rotate(360deg); }
 }
 
-#greeting {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+#react-chat-slack {
+  z-index: 1000;
+  width: 400px;
+  max-width: 95vw;
+  position: fixed;
+  right: 50px;
+  bottom: -1px;
+  border: 1px solid #434040;
+  border-radius: 3px 3px 0 0;
   background: #141010;
+  color: #ffffff;
 }
-#greeting > span {
-  font-size: 4vh;
-  margin-bottom: 3vw;
+
+#react-chat-slack #react-chat-slack-greeting {
+  width: 400px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1vw;
+  cursor: pointer;
+  color: #ffffff;
 }
+
 
