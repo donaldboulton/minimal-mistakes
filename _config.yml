@@ -412,7 +412,7 @@ defaults:
       adds: true
       reviews: true
       cookies: true
-      notifications: true
+      notifications: false
       breadcrumbs:
         - label: "Posts"
           url: /year-archive/
@@ -442,7 +442,7 @@ defaults:
     values:
       layout: single
       author_profile: true
-      notifications: true
+      notifications: false
   - scope:
       path: ""
       type: category
