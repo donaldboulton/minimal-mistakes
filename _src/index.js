@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './lib/components/css/Rapp.css';
 import Todo from './lib/components/Todo';
 import AppNotify from './lib/components/AppNotify';
+import ReactChatSlack from './lib/components/ReactChatSlack.js';
 
 var $ = require('jquery');
 window.jQuery = $;
@@ -35,6 +36,7 @@ class Layout extends React.Component {
         {/* <Header /> */}
         <Todo/>
         <AppNotify/>
+        <ReactChatSlack/>
         <Footer/>
       </div>
     );
@@ -61,4 +63,3 @@ class LayoutList extends React.Component {
 }
 
 import './main.css';
-import '../lib/components/ReactChatSlack.js';
