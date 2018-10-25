@@ -3,6 +3,7 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import Notification  from './Notification';
+import bell from './images/bell.svg';
 
 window.React = React;
 class App extends React.Component {
@@ -85,7 +86,7 @@ class App extends React.Component {
 
     return (
       <div className="Appcenter">
-        <h3 className="Appheader"> React Notify </h3>
+        <h3 className="Appheader"><img src={bell} className="icon icon--bell" alt="Notify" /> React Notify </h3>
         <div className='notifyCenter'>
         <button className="btn btn--primary" onClick={this.handleButtonClick.bind(this)}>Notif!</button>
         <Notification

@@ -23,41 +23,11 @@ layout: compress
       {{ content }}
     </div>
   </div>
-  <aside class="sidebar__right" role="complementary" itemscope itemtype="https://schema.org/WPSideBar">
-    {% if page.toc %}
-       <nav class="toc">
-         <header><h4 class="nav__title"><svg class="icon icon--file-alt fa-file-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-file-alt' | prepend: '/build/icons/' | relative_url }}"></use></svg>&nbsp;<span itemprop="name">{{ page.toc_label | default: site.data.ui-text[site.locale].toc_label }}</span></h4></header>
-         {% include toc.html sanitize=true html=content h_min=2 h_max=3 class="toc__menu" %}
-       </nav>
-    {% endif %}
-    {% if page.sidenav-gallery == true %}
-       {% include sidenav-gallery.html %}
-    {% endif %}
-    {% if page.sidenav == true %}
-       {% include sidenav.html %}
-    {% endif %}
-    {% if page.reviews == true %}
-       {% include reviews-sidebar.html %}
-    {% endif %}
-    {% if page.reviews-sidebar == true %}
-       {% include reviews-sidebar.html %}
-    {% endif %}
-    {% if page.adds == true %}
-       {% include google-adds.html %}
-    {% endif %}          
-       {% include sidebar-react.html %}
-    {% if page.notifications-admin == true %}
-      {% include sidebar-subscribe-admin.html %}
-    {% endif %}
-    {% if page.notifications == true %}
-      {% include sidebar-subscribe.html %}
-    {% endif %}
-  </aside>
   <div class="page__footer" itemscope itemtype="https://schema.org/WPFooter">
     <footer>
       {% include footer.html %}
     </footer>
   </div>
   {% include scripts.html %}
-<script type="text/javascript" src="/assets/common-b634484431482118cf14.bundle.js" async></script><script type="text/javascript" src="/assets/vendor-b634484431482118cf14.bundle.js" async></script><script type="text/javascript" src="/assets/app-b634484431482118cf14.bundle.js" async></script></body>
+<script type="text/javascript" src="/assets/common-c135bf330e91241da07e.bundle.js" async></script><script type="text/javascript" src="/assets/vendor-c135bf330e91241da07e.bundle.js" async></script><script type="text/javascript" src="/assets/app-c135bf330e91241da07e.bundle.js" async></script></body>
 </html>
