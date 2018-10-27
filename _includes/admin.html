@@ -5,7 +5,7 @@
           <div>
             <h4 class="title" id="messageLabel">Update Profile</h4>
           </div>
-          <div>
+          <div class="profile-group">
             <div class="form-group">
               <label for="updateFirstName" class="control-label">First Name&nbsp;<abbr class="abbr" title="Required">*</abbr></label>
               <input type="text" class="form-control" name="firstName" required="required" aria-required="true" id="updateFirstName" pattern="^([- \w\d\u00c0-\u024f]+)$">
@@ -40,10 +40,10 @@
               <textarea name="Bio" id="message" class="form-control" maxlength="200" rows="6" spellcheck="true" placeholder="Your Personal Info..." value="" required="required" aria-required="true"></textarea>
             </div>
           </div>
-          <div class="form-group custom-file-container" data-upload-id="mySecondImage">
+          <div class="form-group" data-upload-id="mySecondImage">
             <label>Upload Profile Image (Allow Multiple) <a href="javascript:void(0)" class="custom-file-container__image-clear" title="Clear Image">&times;</a></label>
             <label class="custom-file-container__custom-file" >
-            <input type="file" class="form-control custom-file-container__custom-file__custom-file-input" onchange="readURL(this);" accept="*" multiple>
+            <input type="file" class="form-control" onchange="readURL(this);" accept="*" multiple>
           </div>            
         <div>Please Agree to Our <a href="https://donboulton.com/terms">Terms and Conditions</a>&nbsp;<abbr class="abbr" title="Required">&nbsp;*&nbsp;</abbr></div>
         <div class="form-group">
@@ -69,7 +69,6 @@
         <div class="form-group">
             <input type="submit" id="submit_button" name="submit_button" value="Update Info" class="btn btn--primary">
         </div>      
-      </div>
         <div> 
           <input type="hidden" name="_replyto" value="{{ page.email }}">
           <input type="hidden" name="_cc" value="donboulton@hotmail.com">

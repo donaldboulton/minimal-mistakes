@@ -4,10 +4,9 @@ backend:
   branch: gh-pages
   squash_merges: true
 
+media_folder: "build/img/uploads"
 publish_mode: editorial_workflow
-
-media_folder: "/assets/img" # Folder where user uploaded files should go
-public_folder: "img"
+display_url: https://donboulton.com
 
 collections: # A list of collections the CMS should be able to edit
   - name: "pages" # Used in routes, ie.: /admin/collections/:slug/edit
@@ -22,7 +21,7 @@ collections: # A list of collections the CMS should be able to edit
   - name: "posts"
     label: "Posts"
     label_singular: "Post"
-    folder: "_posts"
+    folder: "_i18n/en/_posts"
     create: true
     fields:
       - {label: "Title", name: "title", widget: "string", tagname: "h1"}

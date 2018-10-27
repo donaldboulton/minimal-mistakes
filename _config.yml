@@ -208,6 +208,8 @@ backend:
   branch: gh-pages # Branch to update (master by default)
 
 media_folder: "build/img/uploads"
+publish_mode: editorial_workflow
+display_url: https://donboulton.com
 
 extlinks:
   attributes: {rel: noreferrer, target: _blank}
