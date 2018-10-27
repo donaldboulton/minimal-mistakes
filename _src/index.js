@@ -35,12 +35,10 @@ class Layout extends React.Component {
         {/* <Header /> */}
         <Todo/>
         <AppNotify/>
-        <ReactChatSlack/>
         <Footer/>
       </div>
     );
   }
 }
 
-import './init.site.sw.js';
 import './main.css';
