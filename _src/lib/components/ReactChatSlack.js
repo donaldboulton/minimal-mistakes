@@ -4,9 +4,9 @@ class App extends Component {
   render() {
     return (
       <ReactChatSlack
-        token="eG94cC0yOTU3MzIyMDM3ODAtMjk2NTU4OTA5MTU4LTQ2MTgzODU5OTc3Ni05ZDEyNDI3MzQ0NTdhNmJlNmQ2MWIxYzAyMjdjZTIwMg="
+        token="xoxb-465463990983-466950233063-2Cw0IV1XmiNBiacPnb7RQKUE"
         channel_id="D8PMJ6MQC"
-        username="Donald Boulton"
+        username="donboulton"
         title="Need Help"
         saveSession={true} // default is false
       />
