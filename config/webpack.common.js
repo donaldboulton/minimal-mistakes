@@ -10,7 +10,7 @@ const pkg = require('../package.json');
 
 module.exports = {
   entry: {
-    app: ['babel-polyfill', './_src/index.js'],
+    app: ['babel-regenerator-runtime', './_src/index.js'],
     vendor: Object.keys(pkg.dependencies),
   },
   resolve: {
