@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './lib/components/css/Rapp.css';
 import Todo from './lib/components/Todo';
 import AppNotify from './lib/components/AppNotify';
-import ReactChatSlack from './lib/components/ReactChatSlack.js';
 
 var $ = require('jquery');
 window.jQuery = $;
@@ -39,25 +38,6 @@ class Layout extends React.Component {
         <ReactChatSlack/>
         <Footer/>
       </div>
-    );
-  }
-}
-
-const app = document.getElementById('app')
-ReactDOM.render(<Layout/>,app)
-
-class LayoutList extends React.Component {
-  render(){
-    var list = [
-      <Header/>,
-      <Todo/>,
-      <AppNotify/>,
-      <Footer/>,
-    ];
-    return (
-    <u1>
-        {list}
-        </u1>
     );
   }
 }
