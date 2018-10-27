@@ -30,7 +30,7 @@ header:
   cta_url: "/categories/#posts"
   caption: Lost In A Digital Box
 excerpt: 'User Profile Subscriptions Page.<br /> <small><a title="Don Boulton" href="https://donboulton.com">Jekyll Node Netlify CMS & React Webpack Identity Build</a></small><br /><br /> {::nomarkdown}<iframe title="Github" style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe title="Fork" style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
-support: [adds, cookies]
+support: [adds, cookies, admin, validate]
 folder: /
 slug: admin
 product: admin

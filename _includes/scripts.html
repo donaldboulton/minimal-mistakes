@@ -76,11 +76,10 @@
         }
     });
   </script>
-{% endif %}
+  {% endif %}
 
-{% if page.support contains 'admin' %}
-<script src="{{ '/public/admin.js' | relative_url }}"></script>
-
+{% if page.support contains 'validation' %}
+<script src="{{ '/public/validation.js' | relative_url }}"></script>
 {% endif %}
 
 {% if page.support contains 'cart' %}
