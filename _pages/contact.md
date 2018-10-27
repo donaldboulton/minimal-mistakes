@@ -3,6 +3,7 @@ title: Contact
 description: Get in touch
 email: donboulton@hotmail.com
 creator: donboulton
+chat: true
 hero: Get in touch
 permalink: /contact/
 map:

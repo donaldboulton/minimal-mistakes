@@ -42,4 +42,5 @@ class Layout extends React.Component {
   }
 }
 
+import './init.site.sw.js';
 import './main.css';

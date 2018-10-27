@@ -2,6 +2,7 @@
 title: "Support"
 excerpt: "Support for the Cat Lover, Or Donations to donboulton.com."
 no_menu_item: true
+chat: true
 youtube: true
 youtubeId: IGMCAZk5xlg
 sitemap: false

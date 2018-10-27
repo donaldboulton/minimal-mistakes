@@ -8,6 +8,7 @@ tags:
 
 adds: true
 toc: false
+chat: true
 sidenav: true
 reviews: false
 comments: false

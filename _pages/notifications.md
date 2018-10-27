@@ -8,6 +8,7 @@ tags:
   - Donald Boulton
 
 adds: true
+chat: true
 toc: false
 sidenav: true
 reviews: false
