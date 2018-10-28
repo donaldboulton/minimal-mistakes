@@ -1,12 +1,13 @@
 backend:
-  name: git-gateway
+  name: github
   repo: donaldboulton/DWB
   branch: gh-pages
   squash_merges: true
 
-media_folder: "build/img/uploads"
 publish_mode: editorial_workflow
-display_url: https://donboulton.com
+
+media_folder: "/build/img/uploads/" # Folder where user uploaded files should go
+public_folder: "uploads"
 
 collections: # A list of collections the CMS should be able to edit
   - name: "pages" # Used in routes, ie.: /admin/collections/:slug/edit
