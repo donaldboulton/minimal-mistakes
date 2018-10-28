@@ -4,6 +4,8 @@ backend:
   branch: gh-pages
   squash_merges: true
 
+display_url: https://donboulton.com
+
 publish_mode: editorial_workflow
 
 media_folder: "/build/img/uploads/" # Folder where user uploaded files should go
