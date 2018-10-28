@@ -144,3 +144,34 @@ hr{
   color: #fff;
 }
 
+.modalDialog {
+  background-color: #141010!important;
+}
+
+.modalContent {
+  background: #141010;
+}
+.btnLink {
+  color: #fff!important;
+}
+.btnClose {
+  background: #3c3333;
+  color: #fff;
+}
+
+.btnHeader {
+  background: #0e0d0d!important;
+  color: #a3a9ac!important;
+}
+
+.btnHeader:focus, .btnHeader.active {
+  background: #3c3333!important;
+  color: #ccc!important;
+}
+
+.formcontrol {
+  border: 2px solid #434040!important;
+  background: #141010!important;
+  color: rgb(212, 218, 220)!important;
+}
+
