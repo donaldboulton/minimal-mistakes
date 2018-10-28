@@ -1,6 +1,7 @@
 ---
 layout: single
 author_profile: true
+title: User Profile
 permalink: /userProfile.html
 tags:
   - Home
