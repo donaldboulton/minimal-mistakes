@@ -132,7 +132,7 @@ Links to Netlify this GitHub repo, Staticman Reviews, MMistakes Framework Design
 {% include feature_row %}
 {% include github.html %}
 
-## latest Netlify Docker build
+## Latest Netlify Docker build
 
 1:51:35 PM: Build ready to start
 1:51:36 PM: build-image version: 42bca793ccd33055023c56c4ca8510463a56d317
