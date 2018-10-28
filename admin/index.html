@@ -7,7 +7,6 @@ layout: compress
 <html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js" itemscope itemtype="https://schema.org/WebSite">
 <head>
   {% include head.html %}
-  <link rel="stylesheet" href="https://unpkg.com/netlify-cms@^1.0/dist/cms.css" />
   {% if page.layout == amp %}
     {% include amp-head.html %}
   {% endif %}
@@ -15,7 +14,7 @@ layout: compress
 
 <body id="style-3" class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %} auth-false" itemscope itemtype="https://schema.org/WebPage">
 <div class="page">
-<script src="https://unpkg.com/netlify-cms@^1.0/dist/cms.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/netlify-cms@2.1.3/dist/cms.js"></script>
 {% raw %}
 <script type="text/x-handlebars" data-template-name='cms/preview/authors'>
   {{#cms-preview field="authors" as |author|}}

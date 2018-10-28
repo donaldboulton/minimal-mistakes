@@ -18,13 +18,12 @@ admin: true
 
 image:
   cover: true
-  path: &image /assets/images/digital-box-compressor.jpg
+  path: &image /assets/images/support-1200.jpg
   feature: *image
-  thumbnail: /assets/images/digital-box-compressor-320.jpg
+  thumbnail: /assets/images/support-320.jpg
 
 header:
-  overlay_color: "#5e616c"
-  overlay_image: /assets/images/digital_box_1400-compressor.jpg
+  overlay_image: /assets/images/support.jpg
   cta_label: "Posts"
   cta_url: "/categories/#posts"
   caption: Lost In A Digital Box
@@ -42,7 +41,7 @@ github_editme_path: donaldboulton/DWB/blob/gh-pages/_pages/admin.html
 
 Your User Profile will be saved as a Netlify form, as this Sites User's data .
 
-Exported cvs/json, and saved in Jekyll data directory.
+Exported as cvs/json, and saved in Jekyll data directory.
 
 JWT authentication tokens automatically added.
 
