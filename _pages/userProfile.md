@@ -15,7 +15,7 @@ comments: false
 cookies: true
 notifications: false
 admin: true
-file-upload: true
+
 image:
   cover: true
   path: &image /assets/images/support.jpg
@@ -28,18 +28,18 @@ header:
   cta_url: "/categories/#posts"
   caption: Lost In A Digital Box
 excerpt: 'User Profile and Subscriptions Page.<br /> <small><a title="Don Boulton" href="https://donboulton.com">Jekyll Node Netlify CMS & React Webpack Identity Build</a></small><br /><br /> {::nomarkdown}<iframe title="Github" style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe title="Fork" style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
-support: [adds, cookies, admin, validate, file-upload]
+support: [adds, cookies, admin, validate]
 folder: /
-slug: admin
-product: admin
-github_editme_path: donaldboulton/DWB/blob/gh-pages/_pages/admin.html
+slug: userProfile
+product: userProfile
+github_editme_path: donaldboulton/DWB/blob/gh-pages/_pages/userProfile.html
 ---
 
 # User Profile Admin
 
 {% include octo-arm.html %}
 
-Your User Profile will be saved as a Netlify form, as this Sites User's data .
+Your User Profile will be saved as a Netlify form, as this Sites User's data.
 
 Exported cvs/json, and saved in Jekyll data directory.
 
