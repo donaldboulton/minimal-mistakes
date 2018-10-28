@@ -1,8 +1,5 @@
 backend:
   name: git-gateway
-  accept_roles:
-    - admin
-    - editor
   repo: donaldboulton/DWB
   branch: gh-pages
   squash_merges: true
