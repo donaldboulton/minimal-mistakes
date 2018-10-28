@@ -89,7 +89,12 @@
 {% endif %}
 
 {% if page.support contains 'admin' %}
-  <link rel="stylesheet" href="{{ '/build/css/vendor/fileupload/file-upload-with-preview.css' | relative_url }}">
+<script>
+  UPLOADCARE_LOCALE = "en";
+  UPLOADCARE_TABS = "file url facebook gdrive gphotos dropbox instagram evernote flickr skydrive";
+  UPLOADCARE_PUBLIC_KEY = "a10993e96ebedcb0dd54";
+</script>
+<script charset="utf-8" src="//ucarecdn.com/libs/widget/3.6.1/uploadcare.full.min.js"></script>
 {% endif %}
 
 <script src="https://identity-js.netlify.com/v1/netlify-identity-widget.js"></script>

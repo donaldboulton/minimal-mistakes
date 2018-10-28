@@ -9,6 +9,11 @@ backend:
 
 display_url: https://donboulton.com
 
+media_library:
+ name: uploadcare
+ config:
+   publicKey: a10993e96ebedcb0dd54
+   
 publish_mode: editorial_workflow
 
 media_folder: "/build/img/uploads/" # Folder where user uploaded files should go
