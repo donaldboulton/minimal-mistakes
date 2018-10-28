@@ -207,10 +207,6 @@ backend:
   name: git-gateway
   branch: gh-pages # Branch to update (master by default)
 
-media_folder: "build/img/uploads"
-publish_mode: editorial_workflow
-display_url: https://donboulton.com
-
 extlinks:
   attributes: {rel: noreferrer, target: _blank}
   rel_exclude: ['facebook.com', 'twitter.com']
@@ -232,8 +228,8 @@ exclude:
   - .jekyll-assets-cache
   - .jekyll-metadata
   - .sass-cache
-  - assets/js/plugins
-  - assets/js/_main.js
+  - build/js/plugins
+  - build/js/_main.js
   - Capfile
   - CHANGELOG
   - config
