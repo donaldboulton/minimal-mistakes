@@ -27,7 +27,7 @@ header:
   cta_url: "/categories/#posts"
   caption: Lost In A Digital Box
 excerpt: 'Jekyll GitHub Repo with Netlify Hosting.<br /> <small><a title="Don Boulton" href="https://donboulton.com">Jekyll Node Babel Travis CI Build</a></small><br /><br /> {::nomarkdown}<iframe title="Github" style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe title="Fork" style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
-support: [adds, cookies, admin, verify]
+support: [adds, cookies, admin, validate, file-upload]
 folder: /admin
 slug: admin
 product: admin
@@ -35,31 +35,32 @@ github_editme_path: donaldboulton/DWB/blob/gh-pages/admin/admin.html
 ---
 
 {% include octo-arm.html %}
+
 <article>
   <div id="formBlock" tabindex="-1" class="js-contact">
-      <form id="userUpdateForm" method="POST" onsubmit="return checkForm(this);" netlify-honeypot="bot-field" netlify-recaptcha netlify>
+      <form id="userUpdateFormAdmin" method="POST" onsubmit="return checkForm(this);" netlify-honeypot="bot-field" netlify-recaptcha netlify>
         <div class="content">
           <div>
-            <h4 class="title" id="messageLabel">Update Profile</h4>
+            <h2 class="title" id="messageLabel">Update Profile</h2>
           </div>
           <div class="profile-group">
             <div class="form-group">
               <label for="firstName" class="control-label">First Name&nbsp;<abbr class="abbr" title="Required">*</abbr></label>
-              <input type="text" class="form-control" name="firstName" required="required" aria-required="true" id="firstName" pattern="^([- \w\d\u00c0-\u024f]+)$">
+              <input type="text" class="form-control" name="firstName" value="" placeholder="First Name (required)" required="required" aria-required="true" id="firstName" pattern="^([- \w\d\u00c0-\u024f]+)$">
             </div>
             <div class="form-group">
               <label for="lastName" class="control-label">Last Name&nbsp;<abbr class="abbr" title="Required">*</abbr></label>
-              <input type="text" class="form-control" name="lastName" required="required" aria-required="true" id="lastName" pattern="^([- \w\d\u00c0-\u024f]+)$">
+              <input type="text" class="form-control" name="lastName" value="" required="required" placeholder="Last Name (required)" aria-required="true" id="lastName" pattern="^([- \w\d\u00c0-\u024f]+)$">
             </div>
             <div class="form-group">
               <label for="email">Email Address&nbsp;<abbr class="abbr" title="Required">*</abbr></label>
-              <input type="email" name="email" id="email" value="" required="required" aria-required="true" pattern="^(([-\w\d]+)(\.[-\w\d]+)*@([-\w\d]+)(\.[-\w\d]+)*(\.([a-zA-Z]{2,5}|[\d]{1,3})){1,2})$" title="Your email address" type="email" spellcheck="false" placeholder="Enter your email..." inputmode="email">
+              <input type="email" name="email" id="email" value="" required="required" aria-required="true" pattern="^(([-\w\d]+)(\.[-\w\d]+)*@([-\w\d]+)(\.[-\w\d]+)*(\.([a-zA-Z]{2,5}|[\d]{1,3})){1,2})$" title="Your email address" type="email" spellcheck="false" placeholder="Valid email (required)" inputmode="email">
             </div>
             <div class="form-group">
               <label for="url">Website</label>
-              <input type="url" name="url" id="url" pattern="^(http[s]?:\/\/)?([-\w\d]+)(\.[-\w\d]+)*(\.([a-zA-Z]{2,5}|[\d]{1,3})){1,2}(\/([-~%\.\(\)\w\d]*\/*)*(#[-\w\d]+)?)?$" title="Your website address" type="url" spellcheck="false" size="30" inputmode="url">
+              <input type="url" name="url" id="url" placeholder="Website" pattern="^(http[s]?:\/\/)?([-\w\d]+)(\.[-\w\d]+)*(\.([a-zA-Z]{2,5}|[\d]{1,3})){1,2}(\/([-~%\.\(\)\w\d]*\/*)*(#[-\w\d]+)?)?$" title="Your website address" type="url" spellcheck="false" size="30" inputmode="url">
             </div>
-            <h3>Location</h3>
+            <h2>Location</h2>
             <div class="form-group">
               <label for="city">City</label>
               <input type="text" class="form-control" name="city" id="city" placeholder="Enter City">
@@ -69,21 +70,22 @@ github_editme_path: donaldboulton/DWB/blob/gh-pages/admin/admin.html
               <input type="text" class="form-control" name="state" id="state" placeholder="Enter State">
             </div>
             <div class="form-group">
-              <label for="zip">Zip</label>
+              <label for="zip">Zip Code</label>
               <input type="text" class="form-control" name="zip" id="zip" placeholder="Enter Zip Code">
             </div>
             <div class="form-group">
-              <label for="Bio">Bio&nbsp;<abbr class="abbr" title="Required">*</abbr>&nbsp;<small>(<a href="https://kramdown.gettalong.org/quickref.html">Markdown</a> is allowed)</small></label>
-              <textarea name="Bio" id="message" class="form-control" maxlength="200" rows="6" spellcheck="true" placeholder="Your Personal Info..." value="" required="required" aria-required="true"></textarea>
+              <label for="Bio">Bio/Profile&nbsp;<abbr class="abbr" title="Required">*</abbr>&nbsp;<small>(<a href="https://kramdown.gettalong.org/quickref.html">Markdown</a> is allowed)</small></label>
+              <textarea name="Bio" id="Bio" class="form-control" maxlength="200" rows="6" spellcheck="true" placeholder="Your Personal Info..." value="" required="required" aria-required="true"></textarea>
             </div>
           </div>
-          <div class="form-group" data-upload-id="mySecondImage">
-            <label>Upload Profile Image (Allow Multiple) <a href="javascript:void(0)" class="custom-file-container__image-clear" title="Clear Image">&times;</a></label>
-            <input type="file" class="btn btn--primary" onchange="readURL(this);" accept="*" multiple>
-          </div>            
+          <h2>Upload Your Profile Image</h2>
+          <div class="box form-group">
+            <input type="file" name="file-5[]" id="file-5" class="inputfile inputfile-4" data-multiple-caption="{count} files selected" multiple="">
+            <label for="file-5"><figure><svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"></path></svg></figure> <span>Choose file…</span></label>
+          </div>           
         <div>Please Agree to Our <a href="https://donboulton.com/terms">Terms and Conditions</a>&nbsp;<abbr class="abbr" title="Required">&nbsp;*&nbsp;</abbr></div>
         <div class="form-group">
-          <div class="checkbox">
+          <div class="checkbox_wrapper">
             <label class="checkbox-label" for="checkbox">
                 <div class="checkbox_wrapper">
                   <input aria-label="Terms Checkbox" type="checkbox" id="checkbox" name="conditions" value="conditions" required>
@@ -128,3 +130,4 @@ github_editme_path: donaldboulton/DWB/blob/gh-pages/admin/admin.html
      document.getElementById("submit_button").disabled = false;
   }
 </script>
+

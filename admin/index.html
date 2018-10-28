@@ -10,6 +10,7 @@ layout: compress
   {% if page.layout == amp %}
     {% include amp-head.html %}
   {% endif %}
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 
 <body id="style-3" class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %} auth-false" itemscope itemtype="https://schema.org/WebPage">
