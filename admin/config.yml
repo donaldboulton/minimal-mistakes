@@ -3,6 +3,9 @@ backend:
   repo: donaldboulton/DWB
   branch: gh-pages
   squash_merges: true
+  accept_roles: #optional - accepts all users if left out
+    - admin
+    - editor
 
 display_url: https://donboulton.com
 
@@ -25,7 +28,9 @@ collections: # A list of collections the CMS should be able to edit
     label: "Posts"
     label_singular: "Post"
     folder: "_i18n/en/_posts"
+    sort: "date:desc" # Default is title:asc
     create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string", tagname: "h1"}
       - {label: "Author", name: "author", widget: "string"}
@@ -33,6 +38,9 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Meta Description (defaults to Description)", name: "meta_description", widget: "text", required: false}
       - {label: "Date", name: "date", widget: "date"}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Categories", name: "categories", widget: "string", required: false}
+      meta: # Meta data fields. Just like fields, but without any preview element
+      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
   - name: "layouts"
     label: "Layouts"
     folder: "_layouts"
