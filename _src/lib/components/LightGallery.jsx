@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import HelloDom from './Hello';
 import $ from 'jquery';
 import 'lightgallery';
 

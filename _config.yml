@@ -204,7 +204,7 @@ firebase:
 
 netlifycms: true
 backend:
-  name: git-gateway
+  name: github
   branch: gh-pages # Branch to update (master by default)
 
 extlinks:

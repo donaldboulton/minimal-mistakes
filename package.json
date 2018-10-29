@@ -93,10 +93,10 @@
     "jquery": "^3.3.1",
     "jquery-smooth-scroll": "^2.2.0",
     "lazysizes": "^4.1.2",
-    "netlify-identity-widget": "^1.4.14",
     "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
+    "react-modal": "^3.6.1",
     "react-web-notification": "^0.3.2",
     "svg4everybody": "^2.1.9"
   }

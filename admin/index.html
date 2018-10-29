@@ -1,5 +1,5 @@
 ---
-layout: compress
+layout: none
 ---
 
 <!doctype html>
@@ -7,9 +7,6 @@ layout: compress
 <html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js" itemscope itemtype="https://schema.org/WebSite">
 <head>
   {% include head.html %}
-  {% if page.layout == amp %}
-    {% include amp-head.html %}
-  {% endif %}
 </head>
 
 <body id="style-3" class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %} auth-false" itemscope itemtype="https://schema.org/WebPage">
