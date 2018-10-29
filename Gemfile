@@ -20,4 +20,5 @@ group :jekyll_plugins do
   gem 'jekyll-tagging'
   gem 'jekyll-tagging-related_posts'
   gem 'jekyll-webmention_io'
+  gem 'openssl', '~> 2.1', '>= 2.1.2'
 end
