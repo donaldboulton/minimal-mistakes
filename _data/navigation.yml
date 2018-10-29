@@ -4,7 +4,3 @@ main:
     url: /about/
   - title: "Posts"
     url: /categories/
-  - title: "Gallery"
-    url: /photography/
-  - title: "Sitemap"
-    url: /sitemap/
