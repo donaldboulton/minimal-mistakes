@@ -30,9 +30,9 @@ header:
   image: /build/images/stack.png
   teaser: /build/images/stack-320.png
 sidebar:
-  - title: "Jekyll React"
+  - title: "Jekyll React Webpack"
     image: /assets/images/about-bundle-320.jpg
-    text: "Took a bit. Here is Jekyll Mixed With React and Webpack"
+    text: "Took a bit. Here is Jekyll Mixed With React and Webpack, above is Bundle Analyzer build image."
 locations: 
   - Oklahoma City, OKC
 header:
@@ -89,7 +89,7 @@ feature_row:
 github:
   - excerpt: '{::nomarkdown}<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
 
-support: [cookies]
+support: [cookies, adds]
 folder: _pages
 slug: about
 product: about
