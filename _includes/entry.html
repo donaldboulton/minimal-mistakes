@@ -36,8 +36,10 @@
       {% if post.read_time %}
       <span class="byline-item"><svg class="icon icon--stopwatch" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-stopwatch' | prepend: 'build/icons/' | relative_url }}"></use></svg>&nbsp;{% capture read_time %}{% include read-time.html %}{% endcapture %}{{ read_time | strip }}</span>
       {% endif %}
-      {% if page.comments == true %}
-      <span class="byline-item"><svg class="icon icon--comments-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comments-alt' | prepend: 'build/icons/' | relative_url }}"></use></svg>&nbsp;<a href="https://donboulton.com/{{ page.url }}#disqus_thread">Comments</a></span>
+      {% capture webmention_count_value %}{% webmention_count include.page.url %}{% endcapture %}
+      {% assign webmention_count_int = webmention_count_value | strip_html | plus: 0 %}
+      {% if webmention_count_int > 0 %}
+      <span class="byline-item"><svg class="icon icon--comments-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comments-alt' | prepend: 'build/icons/' | relative_url }}"></use></svg>&nbsp;<a href="{{ include.page.url }}#webmentions">{{ webmention_count_int }} webmention{% if webmention_count_int > 1 %}s{% endif %}</a></span>
       {% endif %}
       </div>
   </footer>

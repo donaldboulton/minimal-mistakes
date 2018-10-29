@@ -36,10 +36,11 @@ reCaptcha:
   siteKey: "6Le-JGIUAAAAAItP3anxYzixThXd6EUvsDjXZevh"
   secret: "PgN6O5VvZ+nm04p7v9hqtKX6fcUpMh7Kl+qyiVggoE1l0kQ424yXdu7Zhk/YS2xeenFuo4E8Js9X2DlFo4WVKXkyvrbpthyQMz4T4KTRqdHX/fzOP1FKqLmgqdr8LJaTvBrWmAMbYveHby7qDnSnCW1yZdHdjvW9/I36x5ivRGc="
 
+# Webmention
 webmentions:
   username: donboulton.com
   api_key: "jZUrcysy0Lrx2JjkchWJuQ"
-  cache_folder: data/webmentions
+  cache_folder: _data/webmentions
   cache_bad_uris_for: 5
   pause_lookups: false
   collections:
@@ -127,6 +128,7 @@ webmention:
   pingback_url          : "https://webmention.io/donboulton.com/xmlrpc"
   webmention_url        : "https://webmention.io/donboulton.com/webmention"
   micropub_url          : ""
+
 # Analytics
 analytics:
   provider               : "google"
@@ -328,7 +330,8 @@ whitelist:
   - jekyll-tagging
   - jekyll-tagging-related_posts
   - jekyll-redirect-from
-  - jekyll-algolia
+  - jekyll-algolia  
+  - jekyll-webmention_io
   - lazyload
   - notice
   - jemoji
