@@ -42,5 +42,3 @@ class Layout extends React.Component {
 }
 
 import './main.css';
-
-import './netlify-identity.js';
