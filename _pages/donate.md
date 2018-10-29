@@ -1,5 +1,5 @@
 ---
-title: "Donate"
+title: Donate
 permalink: /donate/
 excerpt: "Donate to feed stray cats or me."
 no_menu_item: true

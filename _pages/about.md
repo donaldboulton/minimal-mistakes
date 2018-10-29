@@ -1,7 +1,7 @@
 ---
 layout: single
 permalink: about.html
-title: "About"
+title: About
 author_profile: false
 chat: true
 toc: true
