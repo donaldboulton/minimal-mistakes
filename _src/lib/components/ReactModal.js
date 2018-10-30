@@ -3,7 +3,7 @@ import ReactModal from 'react-modal';
 
 ReactModal.defaultStyles.overlay.backgroundColor = '#1d1d1d';
 
-ReactModal.setAppElement('#main');
+ReactModal.setAppElement('#menu');
 
 class ExampleApp extends React.Component {
   constructor () {
@@ -41,4 +41,4 @@ class ExampleApp extends React.Component {
 
 const props = {};
 
-ReactDOM.render(<ExampleApp {...props} />, document.getElementById('main'))
+ReactDOM.render(<ExampleApp {...props} />, document.getElementById('menu'))
