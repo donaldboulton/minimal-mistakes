@@ -15,10 +15,8 @@
             {% if page.read_time %}
               <span class="byline-item"><svg class="icon icon--stopwatch" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-stopwatch' | prepend: 'build/icons/' | relative_url }}"></use></svg>&nbsp;{% capture read_time %}{% include read-time.html %}{% endcapture %}{{ read_time | strip }}</span>
             {% endif %}
-            {% capture webmention_count_value %}{% webmention_count include.page.url %}{% endcapture %}
-            {% assign webmention_count_int = webmention_count_value | strip_html | plus: 0 %}
-            {% if webmention_count_int > 0 %}
-            <span class="byline-item"><svg class="icon icon--comments-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comments-alt' | prepend: 'build/icons/' | relative_url }}"></use></svg>&nbsp;<a href="{{ include.page.url }}#webmentions">{{ webmention_count_int }} webmention{% if webmention_count_int > 1 %}s{% endif %}</a></span>
+            {% if page.webmentions %}
+            <span class="byline-item" data-webmention-count data-url="{{ include.page.url }}"><svg class="icon icon--comments-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comments-alt' | prepend: 'build/icons/' | relative_url }}"></use></svg>&nbsp;<a href="{{ include.page.url }}#webmentions"></a></span>
             {% endif %}
           </div>
           <div class="entry-meta" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
