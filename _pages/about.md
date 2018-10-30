@@ -94,6 +94,7 @@ folder: _pages
 slug: about
 product: about
 menu: true
+webmentions: true
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_pages/about.md
 ---
 

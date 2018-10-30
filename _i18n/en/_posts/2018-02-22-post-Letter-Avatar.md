@@ -11,6 +11,7 @@ reviews: true
 adds: true
 cookies: true
 footnotes: true
+webmentions: true
 tags:
   - Gravatar
   - Letter Avatar

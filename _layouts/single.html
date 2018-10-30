@@ -65,7 +65,9 @@ layout: default
         {% if page.web-intents == true %}
           {% include twitter-web-intents.html %}
         {% endif %}
-        {% include webmentions.html %}
+        {% if page.web-intents == true %}
+          {% include webmentions.html %}
+        {% endif %}
         {% include to-top.html %}
       </section>
       <footer class="page__meta">
