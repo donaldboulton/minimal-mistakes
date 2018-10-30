@@ -2,7 +2,6 @@ import React from 'react';
 import './lib/components/css/Rapp.css';
 import Todo from './lib/components/Todo';
 import AppNotify from './lib/components/AppNotify';
-import Menu from './lib/components/Menu';
 
 var $ = require('jquery');
 window.jQuery = $;
@@ -36,11 +35,11 @@ class Layout extends React.Component {
         {/* <Header /> */}
         <Todo/>
         <AppNotify/>
-        <Menu/>
-        <Footer/>
+        {/* <Footer/> */}
       </div>
     );
   }
 }
 
 import './main.css';
+import './ReactModal.js';
