@@ -1,6 +1,9 @@
+'use strict';
+
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDom from 'react-dom';
 import Modal from 'react-modal';
+import bars from './images/bars.svg';
 
 const customStyles = {
   content : {
@@ -45,7 +48,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={this.openModal}>Open Modal</button>
+        <button onClick={this.openModal}><img src={bars} className="icon" alt="menu" /></button>
         <Modal
           isOpen={this.state.modalIsOpen}
           onAfterOpen={this.afterOpenModal}
@@ -57,12 +60,12 @@ class App extends React.Component {
           <h2 ref={subtitle => this.subtitle = subtitle}>Pages </h2>
           <button onClick={this.closeModal}>close</button>
           <div>I am a modal</div>
-          <form>
+          <form id="menuForm" className="form-group">
             <input />
-            <button>tab navigation</button>
-            <button>stays</button>
-            <button>inside</button>
-            <button>the modal</button>
+            <button className="btn btn--primary">tab navigation</button>
+            <button className="btn btn--primary">stays</button>
+            <button className="btn btn--primary">inside</button>
+            <button className="btn btn--primary">the modal</button>
           </form>
         </Modal>
       </div>
@@ -70,4 +73,4 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App />, appElement);
+ReactDom.render(<App/>, document.getElementById('menu'));
