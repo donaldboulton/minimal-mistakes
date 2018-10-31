@@ -1,7 +1,5 @@
 import React from 'react';
-import './style.css';
-
-
+import bars from './images/bars.svg';
 class Dropdown extends React.Component {
 constructor(){
  super();
@@ -31,8 +29,8 @@ showDropdownMenu(event) {
 
   render() {
     return (
-        <div  className="dropdown" style = {{background:"red",width:"200px"}} >
-         <div className="button" onClick={this.showDropdownMenu}> My Setting </div>
+        <div className="dropdown" style = {{background:"transparent",width:"32px"}} >
+         <div className="button" onClick={this.showDropdownMenu}><img src={bars} className="icon icon--bars fa-bars" alt="Dropdown Menu" /></div>
 
           { this.state.displayMenu ? (
           <ul>
