@@ -29,17 +29,20 @@ showDropdownMenu(event) {
 
   render() {
     return (
-        <div className="dropdown" style = {{background:"transparent",width:"32px"}} >
-         <div className="button" onClick={this.showDropdownMenu}><img src={bars} className="icon icon--bars fa-bars" alt="Dropdown Menu" /></div>
+        <div className="dropdown" style = {{background:"#1d1d1d",width:"80px"}} >
+         <div className="button button.nav masthead__menu-item" onClick={this.showDropdownMenu}>Menu
+         <img src={bars} className="icon icon--bars fa-bars" alt="Dropdown Menu" />
+         </div>
 
           { this.state.displayMenu ? (
-          <ul>
-         <li><a className="active" href="#Create Page">Create Page</a></li>
-         <li><a href="#Manage Pages">Manage Pages</a></li>
-         <li><a href="#Create Ads">Create Ads</a></li>
-         <li><a href="#Manage Ads">Manage Ads</a></li>
-         <li><a href="#Activity Logs">Activity Logs</a></li>
-         <li><a href="#Setting">Setting</a></li>
+          <ul className="toc__menu">
+         <li><a className="active" href="/admin/index.html">Create Page</a></li>
+         <li><a href="/">Home</a></li>
+         <li><a href="/About">About</a></li>
+         <li><a href="#Setting"></a>Posts</li>
+         <li><a href="/photography/">Gallery</a></li>
+         <li><a href="/contact/">Contact</a></li>
+         <li><a href="#Profile Settings">Profile</a></li>
          <li><a href="#Log Out">Log Out</a></li>
           </ul>
         ):
