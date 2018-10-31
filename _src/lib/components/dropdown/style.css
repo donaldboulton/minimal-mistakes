@@ -21,3 +21,17 @@
   right:6px;
   top:18px;
 }
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  left: 36px;
+  top: 36px;
+}
+.right .bm-burger-button {
+  left: initial;
+  right: 36px;
+}
+.bm-burger-bars {
+  background: #373a47;
+}

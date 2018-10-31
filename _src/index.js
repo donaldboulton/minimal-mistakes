@@ -48,6 +48,6 @@ var displayDropdown = (
   </div>
 );
 
-ReactDOM.render(displayDropdown, document.getElementById('root'));
+ReactDOM.render(displayDropdown, document.getElementById('menu'));
 
 import './main.css';
