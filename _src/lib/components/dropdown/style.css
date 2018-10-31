@@ -3,14 +3,6 @@
   display: inline-block;
 }
 
-.button.nav{
-  width:80px;
-  height:18px;
-  background-color:#1d1d1d ;
-  padding:12px;
-  border-radius:5px;
-  color:white;
-}
 .button:before{
   content:"";
   position:absolute;
@@ -25,7 +17,7 @@
   position: fixed;
   width: 36px;
   height: 30px;
-  left: 36px;
+  right: 36px;
   top: 36px;
 }
 .right .bm-burger-button {
