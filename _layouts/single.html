@@ -54,6 +54,9 @@ layout: default
                {% include google-adds.html %}
             {% endif %}          
                {% include sidebar-react.html %}
+            {% if page.web-intents == true %}
+              {% include webmentions.html %}
+            {% endif %}
             {% if page.notifications-admin == true %}
               {% include sidebar-subscribe-admin.html %}
             {% endif %}
@@ -64,10 +67,7 @@ layout: default
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
         {% if page.web-intents == true %}
           {% include twitter-web-intents.html %}
-        {% endif %}
-        {% if page.web-intents == true %}
-          {% include webmentions.html %}
-        {% endif %}
+        {% endif %}        
         {% include to-top.html %}
       </section>
       <footer class="page__meta">
