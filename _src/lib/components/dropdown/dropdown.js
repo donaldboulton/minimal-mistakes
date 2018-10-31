@@ -1,5 +1,5 @@
 import React from 'react';
-import bars from './images/bars.svg';
+import bars from '../images/bars.svg';
 class Dropdown extends React.Component {
 constructor(){
  super();
