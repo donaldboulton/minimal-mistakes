@@ -4,10 +4,10 @@ import Dropdown from './dropdown/Dropdown';
 
 //ReactDOM.render(<App />, document.getElementById('root'));
 
-var displayDropdown = (
-      <div>
-        <Dropdown />
-      </div>
-      );
+var displayDropdown = React.createElement(
+  'div',
+  null,
+  React.createElement(Dropdown, null)
+);
 
 ReactDOM.render(displayDropdown, document.getElementById('menu'));

@@ -1,24 +1,5 @@
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.button:before{
-  content:"";
-  position:absolute;
-  width:0px;
-  height:0px;
-  border: 10px solid;
-  border-color: white transparent transparent transparent;
-  right:6px;
-  top:18px;
-}
 .bm-burger-button {
-  position: fixed;
   width: 36px;
-  height: 30px;
-  right: 36px;
-  top: 36px;
 }
 .right .bm-burger-button {
   left: 10px;
