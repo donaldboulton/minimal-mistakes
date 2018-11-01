@@ -96,7 +96,6 @@
     "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "react-modal": "^3.6.1",
     "react-web-notification": "^0.3.2",
     "svg4everybody": "^2.1.9"
   }
