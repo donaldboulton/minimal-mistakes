@@ -14,7 +14,7 @@ layout: compress
 <body id="style-3" class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %} auth-false" itemscope itemtype="https://schema.org/WebPage">
   <meta itemprop="url" content="{{ site.url }}{{ page.url }}">  
   {% include masthead.html %}
-  <div>
+  <div id="app">
     {% if site.search == true %}
     <div class="search-content">
       {% include search/search_form.html %}
@@ -31,5 +31,5 @@ layout: compress
   </div>
   <div id="root"></div>
   {% include scripts.html %}
-<script type="text/javascript" src="/assets/common-02a759a93f891da7ce7f.bundle.js" async></script><script type="text/javascript" src="/assets/app-02a759a93f891da7ce7f.bundle.js" async></script><script type="text/javascript" src="/assets/vendor-02a759a93f891da7ce7f.bundle.js" async></script></body>
+<script type="text/javascript" src="/assets/common-1005caea80b43844a4b8.bundle.js" async></script><script type="text/javascript" src="/assets/app-1005caea80b43844a4b8.bundle.js" async></script><script type="text/javascript" src="/assets/vendor-1005caea80b43844a4b8.bundle.js" async></script></body>
 </html>
