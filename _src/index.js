@@ -37,18 +37,11 @@ class Layout extends React.Component {
         {/* <Header /> */}
         <Todo/>
         <AppNotify/>
+        <Dropdown />
         {/* <Footer/> */}
       </div>
     );
   }
 }
-
-var displayDropdown = (
-  <div style={{display: 'flex', justifyContent: 'center'}} >
-    <Dropdown />
-  </div>
-);
-
-ReactDOM.render(displayDropdown, document.getElementById('menu'));
 
 import './main.css';

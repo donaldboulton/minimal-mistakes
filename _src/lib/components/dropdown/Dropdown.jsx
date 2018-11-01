@@ -56,3 +56,5 @@ showDropdownMenu(event) {
 }
 
 export default Dropdown;
+
+ReactDom.render(<App/>, document.getElementById('menu'));
