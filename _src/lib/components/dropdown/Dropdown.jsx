@@ -33,10 +33,12 @@ showDropdownMenu(event) {
         <div className="dropdown" style = {{background:"#1d1d1d",width:"80px"}} >
          <div className="bm-burger-button" style="z-index: 1000;" onClick={this.showDropdownMenu}>
          <button className="button">
+            <span>
             <span className="bm-burger-bars" style="position: absolute; height: 20%; left: 0px; right: 0px; top: 0%; opacity: 1;"></span>
             <span className="bm-burger-bars" style="position: absolute; height: 20%; left: 0px; right: 0px; top: 40%; opacity: 1;"></span>
             <span className="bm-burger-bars" style="position: absolute; height: 20%; left: 0px; right: 0px; top: 80%; opacity: 1;"></span>
-            Menu</button>
+            </span>
+          </button>
          </div>
           { this.state.displayMenu ? (
           <ul className="toc__menu">
