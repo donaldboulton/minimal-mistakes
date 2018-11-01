@@ -45,3 +45,11 @@ class Layout extends React.Component {
 }
 
 import './main.css';
+
+var displayDropdown = (
+  <div>
+    <Dropdown />
+  </div>
+);
+
+ReactDOM.render(displayDropdown, document.getElementById('menu'));
