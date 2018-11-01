@@ -111,6 +111,6 @@ class App extends React.Component {
       </div>
     )
   }
-};
+}
 
 ReactDom.render(<App/>, document.getElementById('out'));

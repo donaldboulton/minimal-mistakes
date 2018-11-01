@@ -31,7 +31,13 @@ showDropdownMenu(event) {
   render() {
     return (
         <div className="dropdown" style = {{background:"#1d1d1d",width:"80px"}} >
-         <div className="bm-burger-button button" style="z-index: 1000;" onClick={this.showDropdownMenu}><span><span className="bm-burger-bars" style="position: absolute; height: 20%; left: 0px; right: 0px; top: 0%; opacity: 1;"></span><span className="bm-burger-bars" style="position: absolute; height: 20%; left: 0px; right: 0px; top: 40%; opacity: 1;"></span><span className="bm-burger-bars" style="position: absolute; height: 20%; left: 0px; right: 0px; top: 80%; opacity: 1;"></span></span><button style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; margin: 0px; padding: 0px; border: none; opacity: 0; font-size: 8px; cursor: pointer;">Menu</button></div>
+         <div className="bm-burger-button" style="z-index: 1000;" onClick={this.showDropdownMenu}>
+         <button className="button">
+            <span className="bm-burger-bars" style="position: absolute; height: 20%; left: 0px; right: 0px; top: 0%; opacity: 1;"></span>
+            <span className="bm-burger-bars" style="position: absolute; height: 20%; left: 0px; right: 0px; top: 40%; opacity: 1;"></span>
+            <span className="bm-burger-bars" style="position: absolute; height: 20%; left: 0px; right: 0px; top: 80%; opacity: 1;"></span>
+            Menu</button>
+         </div>
           { this.state.displayMenu ? (
           <ul className="toc__menu">
          <li><a className="active" href="/admin/index.html">Create Page</a></li>
@@ -56,5 +62,3 @@ showDropdownMenu(event) {
 }
 
 export default Dropdown;
-
-ReactDom.render(<App/>, document.getElementById('menu'));
