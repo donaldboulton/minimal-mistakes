@@ -17,7 +17,7 @@ export class Example extends Component {
   render() {
     return (
       <div>
-        <button onClick={this.openPopupbox}>Click me</button>
+        <button onClick={this.openPopupbox}>React</button>
         <PopupboxContainer />
       </div>
     )
