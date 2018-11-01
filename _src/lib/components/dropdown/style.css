@@ -25,5 +25,6 @@
   right: 36px;
 }
 .bm-burger-bars {
+  position: absolute; height: 20%; left: 0px; right: 0px; top: 80%; opacity: 1;
   background: #373a47;
 }
