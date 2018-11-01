@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './lib/components/css/Rapp.css';
 import Todo from './lib/components/Todo';
 import AppNotify from './lib/components/AppNotify';
-import Dropdown from './lib/components/dropdown/dropdown';
+import Dropdown from './lib/components/dropdown/Dropdown';
 
 var $ = require('jquery');
 window.jQuery = $;
