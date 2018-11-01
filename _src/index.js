@@ -1,9 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import './lib/components/css/Rapp.css';
 import Todo from './lib/components/Todo';
 import AppNotify from './lib/components/AppNotify';
-import Dropdown from './lib/components/dropdown/Dropdown';
+import Menu from './lib/components/Menu';
 
 var $ = require('jquery');
 window.jQuery = $;
@@ -37,7 +36,7 @@ class Layout extends React.Component {
         {/* <Header /> */}
         <Todo/>
         <AppNotify/>
-        <Dropdown />
+        <Menu />
         {/* <Footer/> */}
       </div>
     );
@@ -46,10 +45,3 @@ class Layout extends React.Component {
 
 import './main.css';
 
-var displayDropdown = (
-  <div>
-    <Dropdown />
-  </div>
-);
-
-ReactDOM.render(displayDropdown, document.getElementById('menu'));
