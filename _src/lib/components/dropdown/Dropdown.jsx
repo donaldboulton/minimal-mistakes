@@ -31,7 +31,7 @@ showDropdownMenu(event) {
   render() {
     return (
         <div className="dropdown">
-         <div className="bm-burger-button button" style="z-index: 1000;" onClick={this.showDropdownMenu}>
+         <div className="bm-burger-button button" onClick={this.showDropdownMenu}>
             <span>
             <span className="bm-burger-bars"></span>
             <span className="bm-burger-bars"></span>
