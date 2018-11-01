@@ -31,7 +31,7 @@ class Dropdown extends React.Component {
       'div',
       { className: 'author__urls-wrapper' },
       React.createElement(
-        'button',
+        'div',
         { className: 'btn btn--light-outline icon', onClick: this.showDropdownMenu }        
       ),
       this.state.displayMenu ? React.createElement(
