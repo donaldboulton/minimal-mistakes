@@ -1,4 +1,5 @@
 import React, { Component}  from 'react';
+import ReactDOM from 'react-dom';
 import ReactChatSlack from 'react-chat-slack';
  
 class App extends Component {

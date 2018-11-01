@@ -1,0 +1,18 @@
+#greeting {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fcfcfc;
+}
+#greeting > span {
+  font-family: 'Comfortaa', cursive;
+  font-size: 4vh;
+  margin-bottom: 3vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1vw;
+}
+
