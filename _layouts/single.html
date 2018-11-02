@@ -87,7 +87,10 @@ layout: default
       {% endif %}
 
       {% include post_pagination.html %}
-
+    </div>
+      {% if page.comments == true %}
+        {% include comments.html %}
+      {% endif %}
       {% if page.reviews == true %}
         {% include reviews-page-footer.html %}
         {% include reviews-form.html %}
