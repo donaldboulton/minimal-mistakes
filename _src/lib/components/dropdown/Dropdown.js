@@ -29,10 +29,10 @@ class Dropdown extends React.Component {
   render() {
     return React.createElement(
       'div',
-      { className: 'author__urls-wrapper' },
+      { className: 'dropdown author__urls-wrapper' },
       React.createElement(
         'div',
-        { className: 'btn btn--light-outline icon', onClick: this.showDropdownMenu }        
+        { className: 'button btn btn--light-outline icon', onClick: this.showDropdownMenu }        
       ),
       this.state.displayMenu ? React.createElement(
         'ul',
