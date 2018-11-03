@@ -67,8 +67,7 @@ showDropdownMenu(event) {
           null
         )
         }
-	      </div>
-        <div className="overlay"></div>
+	      </div>       
     );
   }
 
