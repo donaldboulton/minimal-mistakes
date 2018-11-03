@@ -3,7 +3,6 @@ import './lib/components/css/Rapp.css';
 import Todo from './lib/components/Todo';
 import AppNotify from './lib/components/AppNotify';
 import PopupboxContainer from './lib/components/Popup';
-import Menu from './lib/components/Menu';
 
 var $ = require('jquery');
 window.jQuery = $;
@@ -37,7 +36,6 @@ class Layout extends React.Component {
         {/* <Header /> */}
         <Todo/>
         <AppNotify/>
-        <Menu/>
         <PopupboxContainer/>
         {/* <Footer/> */}
       </div>
