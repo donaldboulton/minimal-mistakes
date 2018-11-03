@@ -1,5 +1,5 @@
 import React from 'react';
-import burgerbars from './images/burgerbars.svg';
+import burgerbars from '../images/burgerbars.svg';
 import './style.css';
 
 
