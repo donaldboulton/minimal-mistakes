@@ -4,7 +4,7 @@
     <h3><svg class="icon icon--comment" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comment' | prepend: '/build/icons/' | relative_url }}"></use></svg>&nbsp;Comment Form Moderated<small><a rel="noreferrer" id="cancel-comment-reply-link" href="{{ page.url | relative_url }}#respond" style="display:none;">Cancel reply</a></small></h3>
   </header>
         <div class="page__comments-form wrapper left-form">
-        <form id="comment-form" class="page__form js-form driver-fix-stacking" method="Post" netlify-honeypot="bot-field" netlify-recaptcha netlify action="https://api.staticman.net/v2/entry/donaldboulton/DWB/gh-pages/comments>
+        <form id="comment-form" class="page__form js-form driver-fix-stacking" method="Post" netlify-honeypot="bot-field" netlify-recaptcha data-netlify="true" action="https://api.staticman.net/v2/entry/donaldboulton/DWB/gh-pages/comments>
           <div class="form-group">
               <label class="sr-only" for="comment-form-name"><strong>Your Name</strong></label>
               <input type="text" id="comment-form-name" name="fname] spellcheck="false" placeholder="Your Name (required *)" required="required" aria-required="true" pattern="^([- \w\d\u00c0-\u024f]+)$" title="Your name (no special characters, diacritics are okay)" autofocus>
