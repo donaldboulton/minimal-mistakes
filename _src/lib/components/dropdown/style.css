@@ -5,7 +5,7 @@ div.menu-trigger {
   height: 36px;
   width: 32px;
   z-index: 1001;
-  opacity: 0;
+  opacity: .8;
   cursor: pointer;
 }
 
