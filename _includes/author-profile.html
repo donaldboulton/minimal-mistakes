@@ -1,10 +1,10 @@
 {% assign author = page.author | default: page.authors[0] | default: site.author %}
 {% assign author = site.data.authors[author] | default: author %}
 
-<div itemscope itemtype="https://schema.org/Person">
+<div class="u-author h-card src" itemscope itemtype="https://schema.org/Person">
 
   {% if author.avatar %}
-    <div class="author__avatar">
+    <div class="author__avatar u-photo">
       {% if author.avatar contains "://" %}
         {% assign author_src = author.avatar %}
       {% else %}
@@ -18,17 +18,17 @@
           {% assign author_link = author.home | absolute_url %}
         {% endif %}
         <a href="{{ author_link }}">
-          <img src="{{ author_src }}" alt="{{ author.name }}" itemprop="image">
+          <img class="u-photo" src="{{ author_src }}" alt="{{ author.name }}" itemprop="image">
         </a>
       {% else %}
-        <img src="{{ author_src }}" alt="{{ author.name }}" itemprop="image">
+        <img class="u-photo" src="{{ author_src }}" alt="{{ author.name }}" itemprop="image">
       {% endif %}
     </div>
   {% endif %}
 
   <div class="author__content">
     {% if author.home %}
-      <a href="{{ author_link }}"><h3 class="author__name" itemprop="name">{{ author.name }}</h3></a>
+      <a href="{{ author_link }}"><h3 class="author__name p-name u-url" itemprop="name">{{ author.name }}</h3></a>
     {% else %}
       <h3 class="author__name" itemprop="name">{{ author.name }}</h3>
     {% endif %}
@@ -75,14 +75,14 @@
 
       {% if author.twitter %}
         <li>
-          <a rel="me noreferrer" itemprop="sameAs" href="https://twitter.com/intent/tweet?{% if site.twitter.username %}via={{ site.twitter.username | url_encode }}&{% endif %}text={{ page.title | url_encode }}%20{{ page.url | absolute_url | url_encode }}" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} Twitter">
+          <a rel="me noreferrer" class="u-syndication" itemprop="sameAs" href="https://twitter.com/intent/tweet?{% if site.twitter.username %}via={{ site.twitter.username | url_encode }}&{% endif %}text={{ page.title | url_encode }}%20{{ page.url | absolute_url | url_encode }}" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} Twitter">
             <svg class="icon icon--twitter fa-twitter" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-twitter' | prepend: 'build/icons/' | relative_url }}"></use></svg> <span> Twitter</span></a>
         </li>
       {% endif %}
 
       {% if author.facebook %}
         <li>
-          <a rel="me noreferrer" href="https://www.facebook.com/{{ author.facebook }}" itemprop="sameAs">
+          <a rel="me noreferrer" class="u-syndication" href="https://www.facebook.com/{{ author.facebook }}" itemprop="sameAs">
             <svg class="icon icon--email fa-facebook" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-facebook' | prepend: 'build/icons/' | relative_url }}"></use></svg>  Facebook
           </a>
         </li>
@@ -90,7 +90,7 @@
 
       {% if author.google_plus %}
         <li>
-          <a rel="me noreferrer" itemprop="sameAs" href="https://plus.google.com/share?url={{ page.url | absolute_url | url_encode }}" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} Google Plus">
+          <a rel="me noreferrer" class="u-syndication" itemprop="sameAs" href="https://plus.google.com/share?url={{ page.url | absolute_url | url_encode }}" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} Google Plus">
             <svg class="icon icon--google-plus fa-google-plus" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-google-plus-g' | prepend: 'build/icons/' | relative_url }}"></use></svg> Google+
           </a>
         </li>

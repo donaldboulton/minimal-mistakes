@@ -1,21 +1,9 @@
-.bm-burger-button {
-  width: 36px;
-}
-.right .bm-burger-button {
-  left: 10px;
-  right: 36px;
-}
-.bm-burger-bars {
-  position: absolute; height: 20%; left: 0px; right: 0px; top: 80%; opacity: 1;
-  background: #373a47;
-}
-
 div.menu-trigger {
   position: fixed;
-  left: 0;
-  top: 0;
-  height: 53px;
-  width: 52px;
+  right: 20px;
+  top: 20px;
+  height: 36px;
+  width: 32px;
   z-index: 1001;
   opacity: 0;
   cursor: pointer;
@@ -31,7 +19,7 @@ ul.menu {
   padding: 0;
   margin: 0;
   list-style-type: none;
-  background: #B71C1C;
+  background: #1d1d1d;
   transition: all 0.2s ease;
   z-index: 1000;
 }
@@ -45,7 +33,7 @@ ul.menu li a {
   transition: all 0.2s ease;
 }
 ul.menu li a:hover {
-  background: #D32F2F;
+  background: #000;
   color: #fff;
 }
 ul.menu li ul {
@@ -62,12 +50,12 @@ ul.menu > li {
 ul.menu > li.start {
   position: fixed;
   visibility: visible;
-  background: #B71C1C;
+  background: transparent;
   text-align: center;
 }
 ul.menu > li.start a {
-  width: 52px;
-  height: 52px;
+  width: 32px;
+  height: 32px;
   text-align: center;
   padding: 0;
 }
@@ -112,7 +100,7 @@ input.menu-trigger:checked + ul.menu + div.overlay {
   z-index: 999;
 }
 input.menu-trigger:checked + ul.menu > li.start {
-  background: #D32F2F;
+  background: #1d1d1d;
 }
 
 div.overlay {
@@ -163,7 +151,7 @@ div.overlay {
   }
   ul.menu > li:hover > ul {
     top: 100% !important;
-    left: 0 !important;
+    right: 0 !important;
     opacity: 1;
   }
   ul.menu > li:hover > ul li {
@@ -187,7 +175,7 @@ div.overlay {
     margin-left: 0;
     min-width: 200px;
     visibility: hidden;
-    background: #B71C1C;
+    background: #1d1d1d;
     transition: visibility 0s linear 0.5s, opacity 0.5s cubic-bezier(1, 0, 0.58, 1);
     top: 0;
     left: 100%;

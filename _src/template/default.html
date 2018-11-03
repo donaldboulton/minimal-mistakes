@@ -12,7 +12,7 @@ layout: compress
 </head>
 
 <body id="style-3" class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %} auth-false" itemscope itemtype="https://schema.org/WebPage">
-  <meta itemprop="url" content="{{ site.url }}{{ page.url }}">  
+  <meta class="u-url" itemprop="url" content="{{ site.url }}{{ page.url }}">  
   {% include masthead.html %}
   <div id="app">
     {% if site.search == true %}

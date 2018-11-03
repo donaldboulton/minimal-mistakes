@@ -4,35 +4,35 @@
     <h3><svg class="icon icon--comment" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comment' | prepend: '/build/icons/' | relative_url }}"></use></svg>&nbsp;Comment Form Moderated<small><a rel="noreferrer" id="cancel-comment-reply-link" href="{{ page.url | relative_url }}#respond" style="display:none;">Cancel reply</a></small></h3>
   </header>
         <div class="page__comments-form wrapper left-form">
-        <form id="comment-form" class="page__form js-form driver-fix-stacking" method="Post" netlify-honeypot="bot-field" netlify-recaptcha netlify>
+        <form id="comment-form" class="page__form js-form driver-fix-stacking" method="Post" netlify-honeypot="bot-field" netlify-recaptcha netlify action="https://api.staticman.net/v2/entry/donaldboulton/DWB/gh-pages/comments>
           <div class="form-group">
               <label class="sr-only" for="comment-form-name"><strong>Your Name</strong></label>
-              <input type="text" id="comment-form-name" name="fields[name]" spellcheck="false" placeholder="Your Name (required *)" required="required" aria-required="true" pattern="^([- \w\d\u00c0-\u024f]+)$" title="Your name (no special characters, diacritics are okay)" autofocus>
+              <input type="text" id="comment-form-name" name="fname] spellcheck="false" placeholder="Your Name (required *)" required="required" aria-required="true" pattern="^([- \w\d\u00c0-\u024f]+)$" title="Your name (no special characters, diacritics are okay)" autofocus>
             </div>
             <div class="form-group">
               <label class="sr-only" for="comment-form-email"><strong>Email address</strong> <small>(used for <a href="https://gravatar.com">Gravatar</a> image and reply notifications)</small></label>
-              <input id="comment-form-email" name="fields[email]" placeholder="Email address (used for Gravatar image)" aria-required="true" pattern="^(([-\w\d]+)(\.[-\w\d]+)*@([-\w\d]+)(\.[-\w\d]+)*(\.([a-zA-Z]{2,5}|[\d]{1,3})){1,2})$" title="Your email address" type="email" spellcheck="false" inputmode="email">
+              <input id="comment-form-email" name="email" placeholder="Email address (used for Gravatar image)" aria-required="true" pattern="^(([-\w\d]+)(\.[-\w\d]+)*@([-\w\d]+)(\.[-\w\d]+)*(\.([a-zA-Z]{2,5}|[\d]{1,3})){1,2})$" title="Your email address" type="email" spellcheck="false" inputmode="email">
             </div>
             <div class="form-group">
               <label class="sr-only" for="comment-form-url"><strong>Website</strong> <small>(optional)</small></label>
-              <input type="url" id="comment-form-url" name="fields[url]" pattern="^(http[s]?:\/\/)?([-\w\d]+)(\.[-\w\d]+)*(\.([a-zA-Z]{2,5}|[\d]{1,3})){1,2}(\/([-~%\.\(\)\w\d]*\/*)*(#[-\w\d]+)?)?$" placeholder="Website (optional)" inputmode="url">
+              <input type="url" id="comment-form-url" name="url" pattern="^(http[s]?:\/\/)?([-\w\d]+)(\.[-\w\d]+)*(\.([a-zA-Z]{2,5}|[\d]{1,3})){1,2}(\/([-~%\.\(\)\w\d]*\/*)*(#[-\w\d]+)?)?$" placeholder="Website (optional)" inputmode="url">
             </div>
             <div class="form-group hidden" style="display: none">
               <label class="sr-only" for="bot-field">Address</label>
-              <input type="text" id="comment-form[address]" name="bot-field"/>
+              <input type="text" id="address" name="bot-field"/>
             </div>
             <div class="comment__title form-group">
               <label class="sr-only" for="comment-form-title"><strong>Title</strong> <small>(required)</small></label>
-              <input type="text" id="comment-form-title" name="fields[title]" required placeholder="Title (required *)">
+              <input type="text" id="comment-form-title" name="title" required placeholder="Title (required *)">
             </div>
             <div class="form-group">
               <label for="comment-form-message"><strong>Comment</strong><abbr class="abbr" title="Required">&nbsp;*</abbr><small>&nbsp;(<a rel="noreferrer" href="https://kramdown.gettalong.org/quickref.html">Markdown</a> is allowed)</small></label>
-              <textarea type="text" rows="6" id="comment-form-message" name="fields[message]" spellcheck="true" placeholder="Comment (required *)" value="" required="required" aria-required="true"></textarea>
+              <textarea type="text" rows="6" id="comment-form-message" name="message spellcheck="true" placeholder="Comment (required *)" value="" required="required" aria-required="true"></textarea>
             </div>
               <input type="hidden" name="options[origin]" value="{{ page.url | relative_url }}">
               <input type="hidden" name="options[parent]" value="{{ page.url | relative_url }}">
               <input type="hidden" name="comment-form" value="comment" />
-              <input type="hidden" id="comment-replying-to" name="fields[replying_to]" value="">
+              <input type="hidden" id="comment-replying-to" name="replying_to" value="">
               <input type="hidden" id="comment-post-id" name="options[slug]" value="{{ page.slug }}">
               <input type="hidden" name="_next" value="https://donboulton.com/thanks/" />
               <input type="text" name="_gotcha" style="display: none;" />

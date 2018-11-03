@@ -174,7 +174,7 @@ languages: ["en"]
 ampdir: amp
 
 cookie_consent: false
-
+keybase-site-verification: "j_5ZqCt462kr8ezGyD274sa0Iwxn-wFIEfm91ehNj2Y"
 weather:
   - platform             : "openweathermap"
     api_key              : "8f4c1537b5fad3b111dae7b441fd0937"

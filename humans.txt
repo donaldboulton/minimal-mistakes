@@ -14,3 +14,5 @@
                 Gulp <https://gulpjs.com>
                 Travis CI <https://travis-ci.org>
                 Algolia <https://www.algolia.com>
+
+(dig donboulton.com TXT ; dig _keybase.donboulton.com TXT) | grep keybase
