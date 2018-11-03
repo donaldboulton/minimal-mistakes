@@ -10,7 +10,7 @@
   background: #373a47;
 }
 
-input.menu-trigger {
+div.menu-trigger {
   position: fixed;
   left: 0;
   top: 0;

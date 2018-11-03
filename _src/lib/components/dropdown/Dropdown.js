@@ -31,7 +31,7 @@ showDropdownMenu(event) {
 
   render() {
     return (
-        <div  className="dropdown">
+        <div className="dropdown">
 	        <div className="menu-trigger" onClick={this.showDropdownMenu}>
           <span className="start">
             <a href="#">
