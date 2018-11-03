@@ -1,4 +1,5 @@
 import React from 'react';
+import burgerbars from './images/burgerbars.svg';
 import './style.css';
 
 
@@ -35,9 +36,7 @@ showDropdownMenu(event) {
 	        <div className="menu-trigger" onClick={this.showDropdownMenu}>
           <span className="start">
             <a href="#">
-                <svg preserveAspectRatio="xMidYMid meet" focusable="false" viewBox="-5 -5 34 34">
-                    <g><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" fill="white"></path></g>
-                </svg>
+               <img src={burgerbars} className="burgerbars" alt="burgerbars" />
             </a>
           </span>
           </div>
@@ -69,6 +68,7 @@ showDropdownMenu(event) {
         )
         }
 	      </div>
+        <div class="overlay"></div>
     );
   }
 
