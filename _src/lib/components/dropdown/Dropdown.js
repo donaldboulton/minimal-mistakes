@@ -36,7 +36,7 @@ showDropdownMenu(event) {
 	        <div className="menu-trigger" onClick={this.showDropdownMenu}>
           <span className="start">
             <a href="#">
-               <img src={burgerbars} className="burgerbars" alt="burgerbars" />
+               <img src={burgerbars} alt="burgerbars" />
             </a>
           </span>
           </div>
@@ -68,7 +68,7 @@ showDropdownMenu(event) {
         )
         }
 	      </div>
-        <div class="overlay"></div>
+        <div className="overlay"></div>
     );
   }
 

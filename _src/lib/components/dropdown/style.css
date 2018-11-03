@@ -226,4 +226,9 @@ div.overlay {
     display: none;
   }
 }
-
+.content {
+  padding: 1em;
+  display: none;
+  overflow: hidden;
+  background-color: rgb(20, 16, 16);
+}
