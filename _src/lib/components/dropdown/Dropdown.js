@@ -29,14 +29,21 @@ class Dropdown extends React.Component {
   render() {
     return React.createElement(
       'div',
-      { className: 'dropdown author__urls-wrapper' },
+      { className: 'dropdown' },
       React.createElement(
         'div',
-        { className: 'button btn btn--light-outline icon', onClick: this.showDropdownMenu }        
+        { className: 'button', onClick: this.showDropdownMenu },
+        React.createElement(
+          'span',
+          null,
+          React.createElement('span', { 'class': 'bm-burger-bars' }),
+          React.createElement('span', { 'class': 'bm-burger-bars' }),
+          React.createElement('span', { 'class': 'bm-burger-bars' })
+        )
       ),
       this.state.displayMenu ? React.createElement(
         'ul',
-        { className: 'author__urls social-icons' },
+        null,
         React.createElement(
           'li',
           null,
@@ -60,23 +67,26 @@ class Dropdown extends React.Component {
           null,
           React.createElement(
             'a',
-            { href: '/About' },
+            { href: '/year-archive/' },
+            'Posts'
+          )
+        ),
+        React.createElement(
+          'li',
+          null,
+          React.createElement(
+            'a',
+            { href: '/about/' },
             'About'
           )
         ),
         React.createElement(
           'li',
           null,
-          React.createElement('a', { href: '#Setting' }),
-          'Posts'
-        ),
-        React.createElement(
-          'li',
-          null,
           React.createElement(
             'a',
-            { href: '/photography/' },
-            'Gallery'
+            { href: '/sitemap/' },
+            'Sitemap'
           )
         ),
         React.createElement(
@@ -84,8 +94,8 @@ class Dropdown extends React.Component {
           null,
           React.createElement(
             'a',
-            { href: '/contact/' },
-            'Contact'
+            { href: '/userProfile.html' },
+            'Admin Profile'
           )
         ),
         React.createElement(
@@ -93,22 +103,14 @@ class Dropdown extends React.Component {
           null,
           React.createElement(
             'a',
-            { href: '/user-profile/' },
-            'Profile'
-          )
-        ),
-        React.createElement(
-          'li',
-          null,
-          React.createElement(
-            'a',
-            { href: '#Log Out' },
+            { href: '/logout/' },
             'Log Out'
           )
         )
       ) : null
     );
   }
+
 }
 
 export default Dropdown;

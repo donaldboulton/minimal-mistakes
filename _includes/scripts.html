@@ -181,7 +181,6 @@ anchors.add('p');
 });
 </script>
 {% endif %}
-
 {% if page.footnotes == true %}
   <script asnyc src="{{ '/build/js/vendor/bigfoot/bigfoot.min.js' | relative_url }}"></script>
   <script>
@@ -201,4 +200,7 @@ anchors.add('p');
 {% endif %}
 {% if page.webmentions == true %}
 <script type="text/javascript" src="https://webmention.io/js/mentions.js"></script>
+{% endif %}
+{% if page.comments == true %}
+  <script src="{{ '/build/js/staticman/staticman-comments.js' | relative_url }}"></script>
 {% endif %}

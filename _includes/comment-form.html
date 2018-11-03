@@ -8,9 +8,10 @@
     <div class="content-collapsible">
       <div class="flex-container">
         <div class="page__comments-form wrapper left-form">
-        <form id="comment-form" class="page__form js-form driver-fix-stacking" method="Post" action="https://api.staticman.net/v2/entry/donaldboulton/DWB/gh-pages/comments" netlify-honeypot="bot-field" netlify>
+        <form id="comment-form" class="page__form js-form driver-fix-stacking" method="Post" action="https://api.staticman.net/v2/entry/donaldboulton/DWB/gh-pages/comments" onsubmit="return checkForm(this);" netlify-honeypot="bot-field" netlify-recaptcha netlify>
           <div class="form-group">
               <label class="sr-only" for="comment-form-name"><strong>Your Name</strong></label>
+
               <input type="text" id="comment-form-name" name="fields[name]" spellcheck="false" placeholder="Your Name (required *)" required="required" aria-required="true" pattern="^([- \w\d\u00c0-\u024f]+)$" title="Your name (no special characters, diacritics are okay)" autofocus>
             </div>
             <div class="form-group">
@@ -38,8 +39,11 @@
               <input type="hidden" name="comment-form" value="comment" />
               <input type="hidden" id="comment-replying-to" name="fields[replying_to]" value="">
               <input type="hidden" id="comment-post-id" name="options[slug]" value="{{ page.slug }}">
-              <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.reCaptcha.siteKey }}">
-              <input type="hidden" name="options[reCaptcha][secret]" value="{{ site.reCaptcha.secret }}">
+              <input type="hidden" name="_next" value="https://donboulton.com/thanks/" />
+              <input type="text" name="_gotcha" style="display: none;" />
+              <input type="hidden" name="_language" value="en" />
+              <input type="hidden" name="SITE_RECAPTCHA_KEY" value="6LerR1MUAAAAACWH7t30s7V4aApQZaIVVPcvH21X">
+              <input type="hidden" name="SITE_RECAPTCHA_SECRET" value="{{ site.reCaptcha.secret }}">
               <div>Please Agree to Our <a href="https://donboulton.com/terms">Terms and Conditions</a>&nbsp;<abbr class="abbr" title="Required">&nbsp;*&nbsp;</abbr></div>
               <div class="enable-push">
                 <div class="toggle-switch">
@@ -47,6 +51,13 @@
                   <label for="checkbox"></label>
                 </div>
               </div>
+              <p class="hidden">
+                <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+              </p>
+            <div data-netlify-recaptcha class="dark"></div>  <p class="hidden">
+              <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+            </p>
+            <div data-netlify-recaptcha class="dark"></div>
             <div class="form-group">
                 <button type="submit" id="comment-form-submit" class="btn btn--primary" value="Submit Comment" id="submit_button" data-callback="enableBtn">Submit Comment</button>
               <br/>
@@ -64,3 +75,11 @@
     </div>
   </div>
 </div>
+<script type="text/javascript">
+  function disableBtn(){
+    document.getElementById("submit_button").disabled = true;
+  }
+  function enableBtn(){
+     document.getElementById("submit_button").disabled = false;
+  }
+</script
