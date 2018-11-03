@@ -4,22 +4,32 @@ title: Terms and Privacy Policy
 last_modified_at: 2018-03-27T12:42:38-04:00
 toc: true
 toc_label: "Terms Contents"
+sidenav: true
 youtube: true
 youtubeId: yoE9-tNvhRs
 adds: true
 reviews: true
 reviews-sidebar: true
-comments: false
+comments: true
 web-intents: true
 tweet_id: 145116818707714048
 cookies: true
 anchor: true
-support: [adds, cookies]
+support: [adds, cookies, anchor]
 folder: _pages
 product: terms
 slug: terms
 web-intents: true
 tweet_id: 145116818707714048
+image:
+  cover: true
+  path: &image /assets/images/terms-conditions.jpg
+  feature: *image
+  thumbnail: /assets/images/terms-conditions.png
+header:
+  image: /assets/images/terms-conditions-1200.jpg
+  teaser: /assets/images/terms-conditionst-320.jpg
+  excerpt: "Terms of Usage"
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_pages/terms.md
 ---
 
