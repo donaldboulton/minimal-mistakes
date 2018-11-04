@@ -40,9 +40,11 @@
               <textarea name="Bio" id="Bio" class="form-control" maxlength="200" rows="6" spellcheck="true" placeholder="Your Personal Info..." value="" required="required" aria-required="true"></textarea>
             </div>
           </div>
-          <h3>Upload Your Profile Image</h3>
           <div class="form-group">
-            <input type="hidden" role="uploadcare-uploader" name="content" data-public-key="a10993e96ebedcb0dd54" data-images-only data-effects="crop,rotate,enhance,sharp,grayscale" />
+            <p>
+              <label for="images">Your images</label>
+              <input type="hidden" id="images" name="images" role="uploadcare-uploader" data-clearable="" data-public-key="a10993e96ebedcb0dd54" data-images-only="true" data-crop="free,2:3,4:3,16:9" data-integration="" />
+            </p>
           </div>           
         <div>Please Agree to Our <a href="https://donboulton.com/terms">Terms and Conditions</a>&nbsp;<abbr class="abbr" title="Required">&nbsp;*&nbsp;</abbr></div>
         <div class="form-group">
