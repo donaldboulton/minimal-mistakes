@@ -1,35 +1,146 @@
----
-layout: compress
----
-
-<!doctype html>
-
-<html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js" itemscope itemtype="https://schema.org/WebSite">
-<head>
-  {% include head.html %}
-  {% include head/custom.html %}
-  <script type="text/javascript" asnyc src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-<link rel="apple-touch-icon" sizes="57x57" href="/assets/icons-850ff6118610b1db2616874ac111f893/apple-touch-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="/assets/icons-850ff6118610b1db2616874ac111f893/apple-touch-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="/assets/icons-850ff6118610b1db2616874ac111f893/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="/assets/icons-850ff6118610b1db2616874ac111f893/apple-touch-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="/assets/icons-850ff6118610b1db2616874ac111f893/apple-touch-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="/assets/icons-850ff6118610b1db2616874ac111f893/apple-touch-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="/assets/icons-850ff6118610b1db2616874ac111f893/apple-touch-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="/assets/icons-850ff6118610b1db2616874ac111f893/apple-touch-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="/assets/icons-850ff6118610b1db2616874ac111f893/apple-touch-icon-180x180.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="donaldboulton"><link rel="icon" type="image/png" sizes="32x32" href="/assets/icons-850ff6118610b1db2616874ac111f893/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/icons-850ff6118610b1db2616874ac111f893/favicon-16x16.png"><link rel="shortcut icon" href="/assets/icons-850ff6118610b1db2616874ac111f893/favicon.ico"><meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#212529"><meta name="application-name" content="donaldboulton"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" href="/assets/icons-850ff6118610b1db2616874ac111f893/apple-touch-startup-image-320x460.png"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href="/assets/icons-850ff6118610b1db2616874ac111f893/apple-touch-startup-image-640x920.png"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="/assets/icons-850ff6118610b1db2616874ac111f893/apple-touch-startup-image-640x1096.png"><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="/assets/icons-850ff6118610b1db2616874ac111f893/apple-touch-startup-image-750x1294.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)" href="/assets/icons-850ff6118610b1db2616874ac111f893/apple-touch-startup-image-1182x2208.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)" href="/assets/icons-850ff6118610b1db2616874ac111f893/apple-touch-startup-image-1242x2148.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" href="/assets/icons-850ff6118610b1db2616874ac111f893/apple-touch-startup-image-748x1024.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" href="/assets/icons-850ff6118610b1db2616874ac111f893/apple-touch-startup-image-768x1004.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="/assets/icons-850ff6118610b1db2616874ac111f893/apple-touch-startup-image-1496x2048.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="/assets/icons-850ff6118610b1db2616874ac111f893/apple-touch-startup-image-1536x2008.png"><link href="/assets/app.css" rel="stylesheet"></head>
-
-<body id="style-3" class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %} auth-false" itemscope itemtype="https://schema.org/WebPage">
-  <meta class="u-url" itemprop="url" content="{{ site.url }}{{ page.url }}">  
-  {% include masthead.html %}
-  <div id="app-root">
-    {% if site.search == true %}
-    <div class="search-content">
-      {% include search/search_form.html %}
-    </div>
-    {% endif %}
-    <div id="initial-content" class="initial-content">
-      {{ content }}
-    </div>
-  </div>
-  <div class="page__footer" itemscope itemtype="https://schema.org/WPFooter">
-    <footer>
-      {% include footer.html %}
-    </footer>
-  </div>
-  <div id="root"></div>
-  {% include scripts.html %}
-<script type="text/javascript" src="/assets/common-e887584a56ec20c3e7a6.bundle.js" async></script><script type="text/javascript" src="/assets/app-e887584a56ec20c3e7a6.bundle.js" async></script><script type="text/javascript" src="/assets/vendor-e887584a56ec20c3e7a6.bundle.js" async></script></body>
-</html>
+Html Webpack Plugin:
+<pre>
+  Error: Child compilation failed:
+  Module build failed: Error: Plugin/Preset files are not allowed to export objects, only functions. In C:\Users\Donald Boulton\Docu  ments\GitHub\DWB\node_modules\babel-preset-react\lib\index.js
+  
+  - config-descriptors.js:178 createDescriptor
+    [Documents]/[@babel]/core/lib/config/config-descriptors.js:178:11
+  
+  - config-descriptors.js:109 items.map
+    [Documents]/[@babel]/core/lib/config/config-descriptors.js:109:50
+  
+  - Array.map
+  
+  - config-descriptors.js:109 createDescriptors
+    [Documents]/[@babel]/core/lib/config/config-descriptors.js:109:29
+  
+  - config-descriptors.js:101 createPresetDescriptors
+    [Documents]/[@babel]/core/lib/config/config-descriptors.js:101:10
+  
+  - config-descriptors.js:58 passPerPreset
+    [Documents]/[@babel]/core/lib/config/config-descriptors.js:58:96
+  
+  - caching.js:33 cachedFunction
+    [Documents]/[@babel]/core/lib/config/caching.js:33:19
+  
+  - config-descriptors.js:29 presets.presets
+    [Documents]/[@babel]/core/lib/config/config-descriptors.js:29:84
+  
+  - config-chain.js:315 mergeChainOpts
+    [Documents]/[@babel]/core/lib/config/config-chain.js:315:26
+  
+  - config-chain.js:278 
+    [Documents]/[@babel]/core/lib/config/config-chain.js:278:7
+  
+  - config-chain.js:68 buildRootChain
+    [Documents]/[@babel]/core/lib/config/config-chain.js:68:29
+  
+  - partial.js:57 loadPrivatePartialConfig
+    [Documents]/[@babel]/core/lib/config/partial.js:57:55
+  
+  - partial.js:82 Object.loadPartialConfig
+    [Documents]/[@babel]/core/lib/config/partial.js:82:18
+  
+  - index.js:140 Object.<anonymous>
+    [DWB]/[babel-loader]/lib/index.js:140:26
+  
+  - Generator.next
+  
+  - index.js:3 asyncGeneratorStep
+    [DWB]/[babel-loader]/lib/index.js:3:103
+  
+  - index.js:5 _next
+    [DWB]/[babel-loader]/lib/index.js:5:194
+  
+  - index.js:5 
+    [DWB]/[babel-loader]/lib/index.js:5:364
+  
+  - new Promise
+  
+  - index.js:5 Object.<anonymous>
+    [DWB]/[babel-loader]/lib/index.js:5:97
+  
+  - index.js:56 Object.loader
+    [DWB]/[babel-loader]/lib/index.js:56:18
+  
+  
+  - Error: Plugin/Preset files are not allowed to export objects, only functions. In C:\Users\Donald Boulton\Documents\GitHub\DWB\no    de_modules\babel-preset-react\lib\index.js
+  
+  - Module build failed: Error: Plugin/Preset files are not allowed to export objects, only functions. In C:\Users\Donald Boulton\Do    cuments\GitHub\DWB\node_modules\babel-preset-react\lib\index.js
+  
+  - config-descriptors.js:178 createDescriptor
+    [Documents]/[@babel]/core/lib/config/config-descriptors.js:178:11
+  
+  - config-descriptors.js:109 items.map
+    [Documents]/[@babel]/core/lib/config/config-descriptors.js:109:50
+  
+  - Array.map
+  
+  - config-descriptors.js:109 createDescriptors
+    [Documents]/[@babel]/core/lib/config/config-descriptors.js:109:29
+  
+  - config-descriptors.js:101 createPresetDescriptors
+    [Documents]/[@babel]/core/lib/config/config-descriptors.js:101:10
+  
+  - config-descriptors.js:58 passPerPreset
+    [Documents]/[@babel]/core/lib/config/config-descriptors.js:58:96
+  
+  - caching.js:33 cachedFunction
+    [Documents]/[@babel]/core/lib/config/caching.js:33:19
+  
+  - config-descriptors.js:29 presets.presets
+    [Documents]/[@babel]/core/lib/config/config-descriptors.js:29:84
+  
+  - config-chain.js:315 mergeChainOpts
+    [Documents]/[@babel]/core/lib/config/config-chain.js:315:26
+  
+  - config-chain.js:278 
+    [Documents]/[@babel]/core/lib/config/config-chain.js:278:7
+  
+  - config-chain.js:68 buildRootChain
+    [Documents]/[@babel]/core/lib/config/config-chain.js:68:29
+  
+  - partial.js:57 loadPrivatePartialConfig
+    [Documents]/[@babel]/core/lib/config/partial.js:57:55
+  
+  - partial.js:82 Object.loadPartialConfig
+    [Documents]/[@babel]/core/lib/config/partial.js:82:18
+  
+  - index.js:140 Object.<anonymous>
+    [DWB]/[babel-loader]/lib/index.js:140:26
+  
+  - Generator.next
+  
+  - index.js:3 asyncGeneratorStep
+    [DWB]/[babel-loader]/lib/index.js:3:103
+  
+  - index.js:5 _next
+    [DWB]/[babel-loader]/lib/index.js:5:194
+  
+  - index.js:5 
+    [DWB]/[babel-loader]/lib/index.js:5:364
+  
+  - new Promise
+  
+  - index.js:5 Object.<anonymous>
+    [DWB]/[babel-loader]/lib/index.js:5:97
+  
+  - index.js:56 Object.loader
+    [DWB]/[babel-loader]/lib/index.js:56:18
+  
+  
+  - Error: Plugin/Preset files are not allowed to export objects, only functions. In C:\Users\Donald Boulton\Documents\GitHub\DWB\no    de_modules\babel-preset-react\lib\index.js
+  
+  - compiler.js:79 childCompiler.runAsChild
+    [DWB]/[html-webpack-plugin]/lib/compiler.js:79:16
+  
+  - Compiler.js:300 compile
+    [DWB]/[webpack]/lib/Compiler.js:300:11
+  
+  - Compiler.js:510 applyPluginsAsync.err
+    [DWB]/[webpack]/lib/Compiler.js:510:14
+  
+  - Tapable.js:202 next
+    [DWB]/[tapable]/lib/Tapable.js:202:11
+  
+</pre><script type="text/javascript" src="/assets/common-a7b5967bf0982576825d.bundle.js" async></script><script type="text/javascript" src="/assets/vendor-a7b5967bf0982576825d.bundle.js" async></script><script type="text/javascript" src="/assets/app-a7b5967bf0982576825d.bundle.js" async></script>

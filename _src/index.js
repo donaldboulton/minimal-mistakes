@@ -34,9 +34,9 @@ class Layout extends React.Component {
     return (
       <div>
         {/* <Header /> */}
-        <Todo/>
-        <AppNotify/>
-        <Menu/>
+        <Todo />
+        <AppNotify />
+        <Menu />
         {/* <Footer/> */}
       </div>
     );
