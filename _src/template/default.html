@@ -14,7 +14,7 @@ layout: compress
 <body id="style-3" class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %} auth-false" itemscope itemtype="https://schema.org/WebPage">
   <meta class="u-url" itemprop="url" content="{{ site.url }}{{ page.url }}">  
   {% include masthead.html %}
-  <div id="app">
+  <div id="app-root">
     {% if site.search == true %}
     <div class="search-content">
       {% include search/search_form.html %}
@@ -29,7 +29,7 @@ layout: compress
       {% include footer.html %}
     </footer>
   </div>
-  <div id="root"></div>
+  <div id="root-popup"></div>
   {% include scripts.html %}
 </body>
 </html>
