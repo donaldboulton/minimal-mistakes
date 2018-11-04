@@ -1,7 +1,4 @@
 import React from 'react';
-import burgerbars from './burgerbars.svg';
-import './Style.css';
-
 
 class Dropdown extends React.Component {
 constructor(){
@@ -35,8 +32,7 @@ showDropdownMenu(event) {
         <div className="dropdown">
 	        <div className="menu-trigger" onClick={this.showDropdownMenu}>
           <span className="start">
-            <a href="#">
-               <img src={burgerbars} alt="burgerbars" />
+            <a href="#">Menu
             </a>
           </span>
           </div>
@@ -52,8 +48,8 @@ showDropdownMenu(event) {
     		            <li><a href="/about/">About</a></li>
                     <li><a href="/photography/">Gallery</a></li>
     		            <li><a href="/sitemap/">Sitemap</a></li>
-    		            <li><a href="/userProfile.html">Admin Profile</a></li>
-    		            <li><a href="/admin/index.html">Admint</a></li>
+    		            <li><a href="/userProfile.html">User Profile</a></li>
+    		            <li><a href="/admin/index.html">Admin</a></li>
                   </ul>
                   </li>
                       <li><a href="#">Level 3</a></li>
