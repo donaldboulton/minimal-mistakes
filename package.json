@@ -97,7 +97,6 @@
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-popupbox": "^2.0.8",
-    "react-router": "^4.3.1",
     "react-web-notification": "^0.3.2",
     "svg4everybody": "^2.1.9"
   }
