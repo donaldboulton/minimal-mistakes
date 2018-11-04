@@ -201,6 +201,13 @@ anchors.add('p');
 {% if page.webmentions == true %}
 <script type="text/javascript" src="https://webmention.io/js/mentions.js"></script>
 {% endif %}
-{% if page.comments == true %}
-  <script src="{{ '/build/js/staticman/staticman-comments.js' | relative_url }}"></script>
+{% if page.admin == true %}
+<script src="https://ucarecdn.com/libs/widget/3.6.1/uploadcare.min.js" charset="utf-8"></script>
+<script>
+  uploadcare.openDialog(null, {
+  publicKey: 'a10993e96ebedcb0dd54',
+  imagesOnly: true,
+  crop: '800x450'
+});
+</script>
 {% endif %}
