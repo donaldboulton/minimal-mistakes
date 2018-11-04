@@ -1,5 +1,5 @@
 div.menu-trigger {
-  position: fixed;
+  position: absolute;
   right: 20px;
   top: 20px;
   height: 36px;
@@ -50,7 +50,7 @@ ul.menu > li {
 ul.menu > li.start {
   position: fixed;
   visibility: visible;
-  background: transparent;
+  background: #1d1d1d;
   text-align: center;
 }
 ul.menu > li.start a {

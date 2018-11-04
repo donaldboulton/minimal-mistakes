@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { PopupboxManager, PopupboxContainer } from 'react-popupbox';
-import './css/react-popupbox.css';
+import './css/ReactPopupbox.css';
 export class Example extends Component {
   openPopupbox() {
     const content = (

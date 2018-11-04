@@ -1,6 +1,6 @@
 import React from 'react';
 import burgerbars from './burgerbars.svg';
-import './style.css';
+import './Style.css';
 
 
 class Dropdown extends React.Component {

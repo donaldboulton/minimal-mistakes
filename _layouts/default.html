@@ -14,7 +14,7 @@ layout: compress
 <body id="style-3" class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %} auth-false" itemscope itemtype="https://schema.org/WebPage">
   <meta class="u-url" itemprop="url" content="{{ site.url }}{{ page.url }}">  
   {% include masthead.html %}
-  <div id="app">
+  <div id="app-root">
     {% if site.search == true %}
     <div class="search-content">
       {% include search/search_form.html %}
@@ -29,11 +29,7 @@ layout: compress
       {% include footer.html %}
     </footer>
   </div>
-  <div id="root"></div>
+  <div id="root-popup"></div>
   {% include scripts.html %}
-<<<<<<< HEAD
-<script type="text/javascript" src="/assets/common-bc10509b83b9b037999b.bundle.js" async></script><script type="text/javascript" src="/assets/app-bc10509b83b9b037999b.bundle.js" async></script><script type="text/javascript" src="/assets/vendor-bc10509b83b9b037999b.bundle.js" async></script></body>
-=======
-<script type="text/javascript" src="/assets/common-1db2cf78f3303444260f.bundle.js" async></script><script type="text/javascript" src="/assets/app-1db2cf78f3303444260f.bundle.js" async></script><script type="text/javascript" src="/assets/vendor-1db2cf78f3303444260f.bundle.js" async></script></body>
->>>>>>> parent of fe899a90b... default
+<script type="text/javascript" src="/assets/common-8c37ec42da5c7ba7a4d5.bundle.js" async></script><script type="text/javascript" src="/assets/app-8c37ec42da5c7ba7a4d5.bundle.js" async></script><script type="text/javascript" src="/assets/vendor-8c37ec42da5c7ba7a4d5.bundle.js" async></script></body>
 </html>
