@@ -5,8 +5,10 @@ class Popup extends React.Component {
     return (
       <div className='popup'>
         <div className='popup_inner'>
-          <h2 className="popup_header">{this.props.text}
-        <button className="popup_close" onClick={this.props.closePopup}><span aria-hidden="true">×</span></button></h2>
+        <div className="popup_header">
+          <h2>{this.props.text}</h2>
+           <button className="popup_close" onClick={this.props.closePopup}><span>X</span></button>
+        </div>
         <p>
             This modal is build with just React Code no extra npm module or external .js.
             This will be great for form notifications and site alerts.
