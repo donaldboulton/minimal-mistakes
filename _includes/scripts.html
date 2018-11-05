@@ -12,6 +12,10 @@
 <script src="{{ '/build/js/vendor/letter-avatar/letter-avatar.js' | relative_url }}"></script>
 {% endif %}
 
+{% if page.comments == true %}
+  <script src="{{ '/build/js/staticman/staticman-comments.js' | relative_url }}"></script>
+{% endif %}
+
 {% if site.search == true or page.layout == "search" %}
   {%- assign search_provider = site.search_provider | default: "lunr" -%}
   {%- case search_provider -%}

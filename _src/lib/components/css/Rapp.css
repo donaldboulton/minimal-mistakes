@@ -22,8 +22,7 @@
 }
 
 .Appcenter{
-  width: 230px;
-  min-height: 200px;
+  max-width: 230px;
   margin: 0 auto;
 }
 
@@ -33,7 +32,7 @@
 
 .AppCentermain{
   max-width: 230px;
-  min-height: 80px;
+  min-height: 60px;
   margin: 0 auto;
   text-align: center;
   border: 1px solid black;
