@@ -8,6 +8,7 @@ sidenav: true
 youtube: true
 youtubeId: yoE9-tNvhRs
 adds: true
+chat: true
 reviews: true
 reviews-sidebar: true
 comments: true

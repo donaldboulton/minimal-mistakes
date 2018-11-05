@@ -12,6 +12,7 @@ comments: false
 share: false
 adds: true
 cookies: true
+slack: true
 tags: 
   - Donald Boulton
   - React

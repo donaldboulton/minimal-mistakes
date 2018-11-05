@@ -26,6 +26,7 @@ support: [adds, cookies, anchor]
 adds: true
 toc: false
 sidenav: true
+chat: true
 reviews: false
 comments: true
 cookies: true

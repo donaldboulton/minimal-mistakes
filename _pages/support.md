@@ -7,9 +7,12 @@ youtube: true
 youtubeId: IGMCAZk5xlg
 sitemap: false
 permalink: /support/
+slack: true
 toc: true
 toc_label: "Support"
 comments: false
+webmentions: false
+notifications: false
 sidenav: true
 reviews: false
 adds: true

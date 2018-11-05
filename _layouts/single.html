@@ -91,6 +91,11 @@ layout: default
       {% if page.comments == true %}
         {% include comments.html %}
       {% endif %}
+
+      {% if page.slack == true %}
+        {% include sidebar-slack.html %}
+      {% endif %}
+
       {% if page.reviews == true %}
         {% include reviews-page-footer.html %}
         {% include reviews-form.html %}
