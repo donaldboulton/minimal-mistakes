@@ -28,9 +28,10 @@ class App extends React.Component {
     return (
       <div className='app'>
         <h1>hihi</h1>
-        <button onClick={this.togglePopup.bind(this)}>show react popup</button>        
+        <button className="btn btn--primary" onClick={this.togglePopup.bind(this)}>show react popup</button>        
         {this.state.showPopup ? 
           <Popup
+            className="btn btn--primary"
             text='Close Me'
             closePopup={this.togglePopup.bind(this)}
           />
@@ -40,8 +41,6 @@ class App extends React.Component {
     );
   }
 }
-
-
 
 ReactDOM.render(
   <App />,
