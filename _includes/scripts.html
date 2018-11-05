@@ -12,10 +12,6 @@
 <script src="{{ '/build/js/vendor/letter-avatar/letter-avatar.js' | relative_url }}"></script>
 {% endif %}
 
-{% if page.comments == true %}
-  <script src="{{ '/build/js/staticman/staticman-comments.js' | relative_url }}"></script>
-{% endif %}
-
 {% if site.search == true or page.layout == "search" %}
   {%- assign search_provider = site.search_provider | default: "lunr" -%}
   {%- case search_provider -%}
@@ -172,6 +168,10 @@ $(document).ready(function() {
 </script>
 {% endif %}
 
+{% if page.comments == true %}
+  <script src="{{ '/build/js/staticman/staticman-comments.js' | relative_url }}"></script>
+{% endif %}
+
 {% if page.anchor == true %}
 <script asnyc src="{{ '/build/js/vendor/anchor/anchor.js' | relative_url }}"></script>
 <script>
@@ -215,3 +215,8 @@ anchors.add('p');
 });
 </script>
 {% endif %}
+
+{% if page.support contains 'github' %}
+<script src="https://npmcdn.com/github-card@1.2.0/dist/widget.js"></script>
+{% endif %}
+
