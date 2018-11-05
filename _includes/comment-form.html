@@ -4,7 +4,7 @@
     <h3><svg class="icon icon--comment" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comment' | prepend: '/build/icons/' | relative_url }}"></use></svg>&nbsp;Comment Form Moderated<small><a rel="noreferrer" id="cancel-comment-reply-link" href="{{ page.url | relative_url }}#respond" style="display:none;">Cancel reply</a></small></h3>
   </header>
         <div class="page__comments-form">
-        <form id="comment-form" class="page__form js-form" method="Post" netlify-honeypot="bot-field" netlify-recaptcha data-netlify="true" action="https://donboulton.com/thanks/">
+        <form id="comment-form" class="page__form js-form" onsubmit="return checkForm(this);" method="Post" netlify-honeypot="bot-field" netlify-recaptcha data-netlify="true" action="https://donboulton.com/thanks/">
           <div class="form-group">
               <label class="sr-only" for="comment-form-name"><strong>Your Name</strong></label>
               <input type="text" id="comment-form-name" name="name" spellcheck="false" placeholder="Your Name (required *)" required="required" aria-required="true" pattern="^([- \w\d\u00c0-\u024f]+)$" title="Your name (no special characters, diacritics are okay)">
@@ -43,8 +43,8 @@
               <div>Please Agree to Our <a href="https://donboulton.com/terms">Terms and Conditions</a>&nbsp;<abbr class="abbr" title="Required">&nbsp;*&nbsp;</abbr></div>
               <div class="enable-push">
                 <div class="toggle-switch">
-                  <input aria-label="Terms and Conditions" id="terms" name="checkbox1" value="terms" type="checkbox" onclick="checkTerms();" />
-                  <label for="checkbox1"></label>
+                  <input aria-label="Terms and Conditions" id="terms" name="terms" value="terms" type="checkbox" required />
+                  <label for="terms"></label>
                 </div>
               </div>
               <p class="hidden">
@@ -52,7 +52,7 @@
               </p>
             <div data-netlify-recaptcha class="dark"></div>
             <div class="form-group">
-                <button type="submit" id="comment-form-submit" class="btn btn--primary" name="comment-form-submit" value="Submit Comment" data-callback="enableBtn">Submit Comment</button>
+                <button type="submit" id="comment-form-submit" class="btn btn--primary submit-button" name="comment-form-submit" value="Submit Comment">Submit Comment</button>
               <br/>
             </div>
             <div class="form-group">
@@ -65,15 +65,14 @@
         </form>
         </div>
 </div>
-<script type="text/javascript">
-function checkTerms() {
-     if($('input[name="checkbox1"]').is(":checked")
-     {
-         $('input[name="comment-form-submit"]').attr('disabled', 'disabled');
-     }
-     else
-     {
-         $('input[name="comment-form-submit"]').removeAttr('disabled');
-     }
- }
+<script>
+  function checkForm(form)
+  {
+    if(!form.terms.checked) {
+      alert("Please indicate that you accept the Terms and Conditions");
+      form.terms.focus();
+      return false;
+    }
+    return true;
+  }
 </script>

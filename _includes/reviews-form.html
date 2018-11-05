@@ -9,7 +9,7 @@
       </svg> Add A Page Review</h3>
     </header>
  <div class="page__reviews-form">
-  <form id="review-form" class="page__form js-form form" method="Post" action="https://api.staticman.net/v2/entry/donaldboulton/DWB/gh-pages/reviews" oninput="result.value=parseInt(this['fields[review]'].value)" netlify-honeypot="bot-field" data-netlify="true">
+  <form id="review-form" class="page__form js-form form" method="Post" onsubmit="return checkForm(this);" action="https://api.staticman.net/v2/entry/donaldboulton/DWB/gh-pages/reviews" oninput="result.value=parseInt(this['fields[review]'].value)" netlify-honeypot="bot-field" data-netlify="true">
     <div class="field-group rating-select"> <span>Add A Rating:&nbsp;</span> <label class="rating-radio-label" for="comment-form[star-1]"> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="1" name="fields[review]" id="comment-form[star-1]" checked=""> <label class="rating-radio-label" for="comment-form[star-2]"> <svg class="icon icon--star_border rating-star rating-radio-star--off"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star_border"></use>star_border</svg> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="2" name="fields[review]" id="comment-form[star-2]"> <label class="rating-radio-label" for="comment-form[star-3]"> <svg class="icon icon--star_border rating-star rating-radio-star--off"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star_border"></use>star_border</svg> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="3" name="fields[review]" id="comment-form[star-3]"> <label class="rating-radio-label" for="comment-form[star-4]"> <svg class="icon icon--star_border rating-star rating-radio-star--off"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star_border"></use>star_border</svg> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="4" name="fields[review]" id="comment-form[star-4]"> <label class="rating-radio-label" for="comment-form[star-5]"> <svg class="icon icon--star_border rating-star rating-radio-star--off"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star_border"></use>star_border</svg> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="5" name="fields[review]" id="comment-form[star-5]"></div>
       <div class="form-group">
         <label class="sr-only" for="name">Your name</label>
@@ -44,7 +44,7 @@
         <div>Please Agree to Our <a href="https://donboulton.com/terms">Terms and Conditions</a>&nbsp;<abbr class="abbr" title="Required">&nbsp;*&nbsp;</abbr></div>
         <div class="enable-push">
           <div class="toggle-switch">
-            <input aria-label="Terms and Conditions" id="checkbox" name="conditions" value="conditions" type="checkbox" onchange="activateButton(this)" />
+            <input aria-label="Terms and Conditions" onchange="this.setCustomValidity(validity.valueMissing ? 'Please indicate that you accept the Terms and Conditions' : '');" id="field_terms_review" name="conditions" value="conditions" type="checkbox" onchange="activateButton(this)" />
             <label for="checkbox"></label>
           </div>
         </div>
@@ -59,4 +59,7 @@
   </form>
  </div>
 </div>
+<script type="text/javascript">
+  document.getElementById("field_terms_ review").setCustomValidity("Please indicate that you accept the Terms and Conditions");
+</script>
 
