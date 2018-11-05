@@ -88,7 +88,6 @@
   },
   "dependencies": {
     "anchor-js": "^4.1.1",
-    "create-react-class": "^15.6.3",
     "default-passive-events": "^1.0.10",
     "jquery": "^3.3.1",
     "jquery-smooth-scroll": "^2.2.0",

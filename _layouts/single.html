@@ -63,6 +63,9 @@ layout: default
             {% if page.notifications == true %}
               {% include sidebar-subscribe.html %}
             {% endif %}
+            {% if page.slack == true %}
+              {% include sidebar-slack.html %}
+            {% endif %}
           </aside>
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
         {% if page.web-intents == true %}
@@ -90,10 +93,6 @@ layout: default
     </div>
       {% if page.comments == true %}
         {% include comments.html %}
-      {% endif %}
-
-      {% if page.slack == true %}
-        {% include sidebar-slack.html %}
       {% endif %}
 
       {% if page.reviews == true %}
