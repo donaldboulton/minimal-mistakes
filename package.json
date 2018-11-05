@@ -89,7 +89,6 @@
   "dependencies": {
     "anchor-js": "^4.1.1",
     "default-passive-events": "^1.0.10",
-    "jquery": "^3.3.1",
     "jquery-smooth-scroll": "^2.2.0",
     "lazysizes": "^4.1.2",
     "prop-types": "^15.6.2",

@@ -4,11 +4,6 @@ import Todo from './lib/components/Todo';
 import AppNotify from './lib/components/AppNotify';
 import Menu from './lib/components/Menu';
 import Popup from './lib/components/Popup';
-
-var $ = require('jquery');
-window.jQuery = $;
-window.$ = $;
-  
 class Title extends React.Component{
   render(){
     return(
