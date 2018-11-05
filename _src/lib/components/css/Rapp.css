@@ -388,6 +388,7 @@ div.overlay {
   margin: auto;
   background-color: rgba(0,0,0, 0.5);
 }
+
 .popup_inner {
   position: absolute;
   left: 25%;
@@ -425,6 +426,8 @@ div.overlay {
   color: #000;
   text-shadow: 0 1px 0 #1d1d1d;
   opacity: .5;
+  top: 10px;
+  right: 10px;
 }
 
 .popup_header .close {
