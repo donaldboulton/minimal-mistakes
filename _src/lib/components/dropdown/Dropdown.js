@@ -32,7 +32,7 @@ showDropdownMenu(event) {
         <div className="dropdown">
 	        <div className="menu-trigger" onClick={this.showDropdownMenu}>
           <span className="start">
-            <a href="#">Menu
+            <a href="#">
             </a>
           </span>
           </div>
