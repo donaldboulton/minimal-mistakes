@@ -44,7 +44,7 @@
         <div>Please Agree to Our <a href="https://donboulton.com/terms">Terms and Conditions</a>&nbsp;<abbr class="abbr" title="Required">&nbsp;*&nbsp;</abbr></div>
         <div class="enable-push">
           <div class="toggle-switch">
-            <input aria-label="Terms and Conditions" onchange="this.setCustomValidity(validity.valueMissing ? 'Please indicate that you accept the Terms and Conditions' : '');" id="field_terms_review" name="conditions" value="conditions" type="checkbox" onchange="activateButton(this)" />
+            <input aria-label="Terms and Conditions" id="field_terms_review" name="conditions" value="conditions" type="checkbox" onchange="activateButton(this)" />
             <label for="checkbox"></label>
           </div>
         </div>
@@ -60,6 +60,34 @@
  </div>
 </div>
 <script type="text/javascript">
-  document.getElementById("field_terms_ review").setCustomValidity("Please indicate that you accept the Terms and Conditions");
+
+  document.addEventListener("DOMContentLoaded", function() {
+
+    var myForm = document.getElementById("review-form");
+    var checkForm = function(e) {
+      if(!this.terms.checked) {
+        alert("Please indicate that you accept the Terms and Conditions");
+        this.terms.focus();
+        e.preventDefault(); // equivalent to return false
+        return;
+      }
+    };
+
+    // attach the form submit handler
+    myForm.addEventListener("submit", checkForm, true);
+
+    var myCheckbox = document.getElementById("field_terms_reviews");
+    var myCheckboxMsg = "Please indicate that you accept the Terms and Conditions";
+
+    // set the starting error message
+    myCheckbox.setCustomValidity(myCheckboxMsg);
+
+    // attach checkbox handler to toggle error message
+    myCheckbox.addEventListener("change", function() {
+      this.setCustomValidity(this.validity.valueMissing ? myCheckboxMsg : "");
+    }, false);
+
+  }, false);
+
 </script>
 
