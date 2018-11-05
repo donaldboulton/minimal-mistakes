@@ -398,7 +398,7 @@ div.overlay {
   margin: auto;
   color: #ffffff;
   background-color: rgb(20, 16, 16);
-  margin-bottom: 1.5em;
+  margin-bottom: .5em;
   border-width: 1px;
   border-style: solid;
   border-color: rgb(67, 64, 64);
@@ -415,7 +415,6 @@ div.overlay {
   justify-content: space-between;
   padding: 1rem;
   border-bottom: 1px solid  rgb(67, 64, 64);
-  border-color: rgb(67, 64, 64);
 }
 
 .popup_close {
@@ -433,7 +432,10 @@ div.overlay {
   border-color: transparent;
 }
 
-.popup_header .close {
-  padding: 1rem;
-  margin: -1rem;
+.popup_header_text {
+  margin: .5em;
+  float: left;
+  top: .5em;
+  font-weight: 700;
+
 }

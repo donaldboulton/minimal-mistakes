@@ -6,8 +6,8 @@ class Popup extends React.Component {
       <div className='popup'>
         <div className='popup_inner'>
         <div className="popup_header">
-          <h2>{this.props.text}</h2>
-           <button className="popup_close" onClick={this.props.closePopup}><span>X</span></button>
+          <div className="popup_header_text">{this.props.text}</div>
+           <button className="popup_close" onClick={this.props.closePopup}><span>x</span></button>
         </div>
         <p>
             This modal is build with just React Code no extra npm module or external .js.
