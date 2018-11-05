@@ -41,20 +41,14 @@ showDropdownMenu(event) {
           <ul className="menu" role="menu">
     		   <li><a className="active" href="/">Home</a></li>
               <ul>
-                <li><a href="#">Links</a>
-                  <ul>
-                    <li><a href="/">Home</a></li>
-    		            <li><a href="/year-archive/">Posts</a></li>
-    		            <li><a href="/about/">About</a></li>
-                    <li><a href="/photography/">Gallery</a></li>
-    		            <li><a href="/sitemap/">Sitemap</a></li>
-    		            <li><a href="/userProfile.html">User Profile</a></li>
-    		            <li><a href="/admin/index.html">Admin</a></li>
-                  </ul>
-                  </li>
-                      <li><a href="#">Level 3</a></li>
-                      <li><a href="#">Level 3</a></li>
-                </ul>
+                <li><a href="/">Home</a></li>
+    		        <li><a href="/year-archive/">Posts</a></li>
+    		        <li><a href="/about/">About</a></li>
+                <li><a href="/photography/">Gallery</a></li>
+    		        <li><a href="/sitemap/">Sitemap</a></li>
+    		        <li><a href="/userProfile.html">User Profile</a></li>
+    		        <li><a href="/admin/index.html">Admin</a></li>
+              </ul>
           </ul>
         ):
         (
