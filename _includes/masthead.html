@@ -27,7 +27,8 @@
             </svg></a>
           </li>
           {% endif %}
-        </ul>
+        </ul> 
+        <li id="menu" class="masthead__menu-item"></li>
         {% if site.search == true %}
         <li class="masthead__menu-item">
         <button class="search__toggle" aria-label="Search" type="button">
@@ -36,8 +37,7 @@
           </svg>
         </button>
         </li>
-        {% endif %}         
-        <li id="menu" class="masthead__menu-item"><svg class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" focusable="false" viewBox="-5 -5 34 34"><g><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" fill="white"></path></g></svg></li> 
+        {% endif %}                 
         <button class="greedy-nav__toggle hidden" type="button">
           <span class="visually-hidden">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle Menu" }}</span>
           <div class="navicon"></div>

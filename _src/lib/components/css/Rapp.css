@@ -151,13 +151,14 @@ hr{
 
 div.menu-trigger {
   position: absolute;
-  right: 20px;
-  top: 20px;
-  height: 36px;
-  width: 32px;
+  right: 60px;
+  top: 12px;
   z-index: 1001;
   opacity: .8;
   cursor: pointer;
+  background-color: transparent;
+  background-image: url('../images/bars.svg');
+  background-size: 100% 100%; 
 }
 
 ul.menu {
