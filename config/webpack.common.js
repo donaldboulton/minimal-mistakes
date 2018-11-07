@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const pkg = require('../package.json');
 
@@ -32,6 +33,7 @@ module.exports = {
       from: path.resolve('_images'),
       to: 'images/',
     }]),
+    new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i })
   ],
   devServer: {
     contentBase: './assets',
