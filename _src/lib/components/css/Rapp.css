@@ -148,18 +148,27 @@ hr{
   color: #fff;
 }
 
+.icon-white {
+  color: #fff!important;
+}
+
+.start{
+  color:#fff;
+  background-image: url('./bars.svg');
+}
+
 div.menu-trigger {
   position: absolute;
   right: 57px;
-  top: 20px;
+  top: 90px;
   z-index: 1001;
   cursor: pointer;
-  background-image: url('../images/bars.svg');
+  background-image: url('./bars.svg');
   background-size: 100% 100%; 
 }
 
 li.menu {
-  background-image: url('../images/bars.svg');
+  background-image: url('./bars.svg');
   background-size: 100% 100%; 
 }
 
