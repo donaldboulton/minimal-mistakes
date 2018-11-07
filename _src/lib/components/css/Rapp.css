@@ -475,7 +475,8 @@ dialog::backdrop {
 }
 
 .dialog-content {
-  background-color: rgb(255, 255, 255);
+  background-color: #141010;
+  border: 1px solid #434040;
   z-index: 3;
   position: fixed;
   top: 50%;
@@ -541,6 +542,7 @@ dialog::backdrop {
   text-align: center;
   cursor: pointer;
   transition: 0.15s;
+  color: #fff;
 }
 
 @media screen and (min-width: 700px) {
@@ -552,7 +554,7 @@ dialog::backdrop {
 
 .link-like,
 a {
-  color: #00b4f1;
+  color: #ffffff!important;
 }
 
 .link-like:hover,
@@ -561,10 +563,6 @@ a:hover,
 a:active {
   color: #E50050;
 }
-
-/* -------------------------------------------------------------------------- *\
- * Helpers
- * -------------------------------------------------------------------------- */
 
 .link-like {
   background-color: transparent;

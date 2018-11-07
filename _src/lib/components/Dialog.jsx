@@ -15,13 +15,13 @@ class MyComponent extends React.Component {
           <img src={bars} className="icon" alt="Menu" />
         </button>
 
-        <Dialog className="dialog" id="my-accessible-dialog"
+        <Dialog id="my-accessible-dialog"
                 appRoot="#menu"
                 dialogRoot="#dialog-root"
                 dialogRef={(dialog) => (this.dialog = dialog)}
-                title="donboulton.com Internal Links">
-          <p id="dialogDescription" className="dialog-content">
-          <ul>
+                title="Internal Links">
+          <p id="dialogDescription">
+          <ul className="list-unstyled">
     		    <li><a rel="noreferrer" itemProp="url" href="/">Home</a></li>
             <li><a itemProp="url" href="/about/">About</a></li>
     		    <li><a itemProp="url" href="/year-archive/">Posts</a></li>
