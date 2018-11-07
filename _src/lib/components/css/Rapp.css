@@ -448,22 +448,10 @@ div.overlay {
 
 }
 
-/* -------------------------------------------------------------------------- *\
- * Necessary styling for the dialog to work
- * -------------------------------------------------------------------------- */
-
-/**
- * When `<dialog>` is properly supported, the overlay is implied and can be
- * styled with `::backdrop`, which means the DOM one should be removed.
- */
  [data-a11y-dialog-native] .dialog-overlay {
   display: none;
 }
 
-/**
- * When `<dialog>` is not supported, its default display is `inline` which can
- * cause layout issues.
- */
 dialog[open] {
   display: block;
 }
@@ -471,10 +459,6 @@ dialog[open] {
 .dialog[aria-hidden="true"] {
   display: none;
 }
-
-/* -------------------------------------------------------------------------- *\
- * Styling to make the dialog look like a dialog
- * -------------------------------------------------------------------------- */
 
 .dialog-overlay {
   z-index: 2;
@@ -501,10 +485,6 @@ dialog::backdrop {
   transform: translate(-50%, -50%);
   margin: 0;
 }
-
-/* -------------------------------------------------------------------------- *\
- * Extra dialog styling to make it shiny
- * -------------------------------------------------------------------------- */
 
 @keyframes fade-in {
   from { opacity: 0;  }
@@ -568,33 +548,6 @@ dialog::backdrop {
     top: 1em;
     right: 1em;
   }
-}
-
-/* -------------------------------------------------------------------------- *\
- * Base stuff
- * -------------------------------------------------------------------------- */
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font: 125% / 1.5 'ESPI', serif;
-  padding: 2em 0;
-}
-
-h1 {
-  font-size: 1.6em;
-  line-height: 1.1;
-}
-
-h1 span {
-  color: #E50050;
-}
-
-h1, h2 {
-  font-family: 'ESPI Slab', sans-serif;
-  margin-bottom: 0;
 }
 
 .link-like,

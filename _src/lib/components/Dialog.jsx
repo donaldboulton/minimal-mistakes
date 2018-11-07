@@ -12,16 +12,16 @@ class MyComponent extends React.Component {
     return (
       <div>
         <button type="button" onClick={this.handleClick}>
-          Menu <img src={bars} className="dialog icon" alt="Menu" />
+          <img src={bars} className="icon" alt="Menu" />
         </button>
 
-        <Dialog id="my-accessible-dialog"
-                appRoot="#main"
+        <Dialog className="dialog" id="my-accessible-dialog"
+                appRoot="#menu"
                 dialogRoot="#dialog-root"
                 dialogRef={(dialog) => (this.dialog = dialog)}
-                title="Menu">
-          <p>
-          <ul className="navicon" role="list">
+                title="donboulton.com Internal Links">
+          <p id="dialogDescription" className="dialog-content">
+          <ul>
     		    <li><a rel="noreferrer" itemProp="url" href="/">Home</a></li>
             <li><a itemProp="url" href="/about/">About</a></li>
     		    <li><a itemProp="url" href="/year-archive/">Posts</a></li>
@@ -39,5 +39,5 @@ class MyComponent extends React.Component {
 
 ReactDOM.render(
   <MyComponent />,
-  document.getElementById('main')
+  document.getElementById('menu')
 )
