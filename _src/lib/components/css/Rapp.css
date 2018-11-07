@@ -575,7 +575,7 @@ a:active {
 
 .link-like {
   background-color: transparent;
-  text-decoration: underline;
+  text-decoration: none;
   border: 0;
   margin: 0;
   padding: 0;
@@ -611,7 +611,7 @@ a:active {
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 1rem;
-  border-bottom: 1px solid  rgb(67, 64, 64);
+  border-bottom: 1px solid rgb(67, 64, 64);
  }
 
  .closeButton {
