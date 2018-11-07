@@ -584,14 +584,15 @@ a:active {
 }
 
  button {
-   background-color: transparent!important;
    border: none;
    color: #fff;
+   -webkit-appearance: button;
+   text-transform: none;
+   overflow: visible;
  }
 
  button:hover {
   background-color: #009a00;
-  border-radius: 50%;
  }
 
 
@@ -600,4 +601,32 @@ a:active {
   border: 1px solid #141010;
   color: #ffffff;
   border-radius: 4px;
+  min-width: 300px;
+ }
+
+ #my-accessible-dialog-title{
+  color: #ffffff;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid  rgb(67, 64, 64);
+ }
+
+ .closeButton {
+  float: right;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-shadow: 0 1px 0 #1d1d1d;
+  opacity: .5;
+  top: 1px;
+  right: 1px;
+  background-color: transparent;
+  border-radius: 50%;
+  border-color: transparent;
  }

@@ -12,7 +12,7 @@ class MyComponent extends React.Component {
     return (
       <div>
         <button type="button" onClick={this.handleClick}>
-          <img src={bars} className="icon" alt="Menu" />
+          Menu
         </button>
 
         <Dialog className="dialog" id="my-accessible-dialog"
