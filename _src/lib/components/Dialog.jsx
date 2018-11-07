@@ -21,14 +21,14 @@ class MyComponent extends React.Component {
                 dialogRef={(dialog) => (this.dialog = dialog)}
                 title="Internal Links">
           <p id="dialogDescription">
-          <ul className="list-unstyled">
+          <ul className="list-unstyled" itemsScope="itemscope" itemType="https://schema.org/SiteNavigationElement">
     		    <li><a rel="noreferrer" itemProp="url" href="/">Home</a></li>
-            <li><a itemProp="url" href="/about/">About</a></li>
-    		    <li><a itemProp="url" href="/year-archive/">Posts</a></li>
-            <li><a itemProp="url" href="/photography/">Gallery</a></li>
-    		    <li><a itemProp="url" href="/sitemap/">Sitemap</a></li>
-    		    <li><a itemProp="url" href="/userProfile.html">User Profile</a></li>
-    		    <li><a itemProp="url" href="/admin/index.html">Admin</a></li>              
+            <li><a rel="noreferrer" itemProp="url" href="/about/">About</a></li>
+    		    <li><a rel="noreferrer" itemProp="url" href="/year-archive/">Posts</a></li>
+            <li><a rel="noreferrer" itemProp="url" href="/photography/">Gallery</a></li>
+    		    <li><a rel="noreferrer" itemProp="url" href="/sitemap/">Sitemap</a></li>
+    		    <li><a rel="noreferrer" itemProp="url" href="/userProfile.html">User Profile</a></li>
+    		    <li><a rel="noreferrer" itemProp="url" href="/admin/index.html">Admin</a></li>              
           </ul>
           </p>
         </Dialog>
