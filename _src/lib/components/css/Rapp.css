@@ -452,7 +452,7 @@ div.overlay {
   display: none;
 }
 
-.dialog{
+dialog {
   background-color: #141010;
   border: 1px solid #141010;
   border-radius: 4px;
@@ -516,12 +516,15 @@ dialog::backdrop {
   padding: 1em;
   max-width: 90%;
   min-width: 600px;
+  color: #fff!important;
 }
 
 
 @media screen and (min-width: 700px) {
   .dialog-content {
     padding: 2em;
+    background-color: #141010;
+    border: 1px solid #434040;
   }
 }
 
@@ -589,4 +592,12 @@ a:active {
  button:hover {
   background-color: #009a00;
   border-radius: 50%;
+ }
+
+
+ #my-accessible-dialog {
+  background-color: #141010;
+  border: 1px solid #141010;
+  color: #ffffff;
+  border-radius: 4px;
  }
