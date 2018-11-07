@@ -452,6 +452,12 @@ div.overlay {
   display: none;
 }
 
+.dialog{
+  background-color: #141010;
+  border: 1px solid #141010;
+  border-radius: 4px;
+}
+
 dialog[open] {
   display: block;
 }
@@ -477,6 +483,7 @@ dialog::backdrop {
 .dialog-content {
   background-color: #141010;
   border: 1px solid #434040;
+  color: #fff;
   z-index: 3;
   position: fixed;
   top: 50%;
@@ -508,8 +515,7 @@ dialog::backdrop {
 .dialog-content {
   padding: 1em;
   max-width: 90%;
-  width: 600px;
-  border-radius: 2px;
+  min-width: 600px;
 }
 
 
@@ -561,7 +567,7 @@ a {
 .link-like:active,
 a:hover,
 a:active {
-  color: #E50050;
+  color: #009a00;
 }
 
 .link-like {
@@ -573,3 +579,14 @@ a:active {
   font: inherit;
   cursor: pointer;
 }
+
+ button {
+   background-color: transparent!important;
+   border: none;
+   color: #fff;
+ }
+
+ button:hover {
+  background-color: #009a00;
+  border-radius: 50%;
+ }

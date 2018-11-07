@@ -15,7 +15,7 @@ class MyComponent extends React.Component {
           <img src={bars} className="icon" alt="Menu" />
         </button>
 
-        <Dialog id="my-accessible-dialog"
+        <Dialog className="dialog" id="my-accessible-dialog"
                 appRoot="#menu"
                 dialogRoot="#dialog-root"
                 dialogRef={(dialog) => (this.dialog = dialog)}
