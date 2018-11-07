@@ -584,7 +584,6 @@ a:active {
 }
 
  button {
-   border: none;
    color: #fff;
    -webkit-appearance: button;
    text-transform: none;
@@ -594,7 +593,6 @@ a:active {
  button:hover {
   background-color: #009a00;
  }
-
 
  #my-accessible-dialog {
   background-color: #141010;
