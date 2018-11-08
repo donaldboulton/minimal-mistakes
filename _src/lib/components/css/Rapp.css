@@ -578,7 +578,7 @@ a:active {
   text-decoration: none;
   border: 0;
   margin: 0;
-  padding: 0;
+  padding: 0 .25em;
   font: inherit;
   cursor: pointer;
 }
@@ -588,10 +588,6 @@ a:active {
    -webkit-appearance: button;
    text-transform: none;
    overflow: visible;
- }
-
- button:hover {
-  background-color: #009a00;
  }
 
  #my-accessible-dialog {
