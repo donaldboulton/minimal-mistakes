@@ -4,37 +4,14 @@ import Todo from './lib/components/Todo';
 import AppNotify from './lib/components/AppNotify';
 import Dialog from './lib/components/Dialog';
 import Popup from './lib/components/Popup';
-class Title extends React.Component{
-  render(){
-    return(
-    <h3> Jekyll React Components </h3>
-    )
-  }
-}
-class Footer extends React.Component {
-  render(){
-    return (
-    <footer>Adding Footer</footer>
-    );
-  }
-}
-class Header extends React.Component {
-  render(){
-    return (
-    <Title />
-    );
-  }
-}
 class Layout extends React.Component {
   render() {
     return (
       <div>
-        {/* <Header /> */}
         <Todo />
         <AppNotify />
         <Dialog />
         <Popup />
-        {/* <Footer/> */}
       </div>
     );
   }
