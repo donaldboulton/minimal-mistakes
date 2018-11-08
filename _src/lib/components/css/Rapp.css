@@ -584,7 +584,8 @@ a:active {
 }
 
  button {
-   color: #fff;
+  background-color: #141010;
+  border: 1px solid #141010;
    -webkit-appearance: button;
    text-transform: none;
    overflow: visible;
