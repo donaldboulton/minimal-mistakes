@@ -589,6 +589,7 @@ a:active {
    -webkit-appearance: button;
    text-transform: none;
    overflow: visible;
+   color: #ffffff;
  }
 
  #my-accessible-dialog {
