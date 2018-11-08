@@ -3,6 +3,7 @@ layout: single
 title: Calendar
 permalink: /calendar/
 toc: false
+sidenav: true
 adds: true
 reviews: false
 comments: false
