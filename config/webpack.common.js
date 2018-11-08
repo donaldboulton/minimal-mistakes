@@ -26,7 +26,11 @@ module.exports = {
       filename: '../_layouts/default.html',
     }),
     new ScriptExtHtmlWebpackPlugin({
-      defaultAttribute: 'preload'
+      async: /\.js$/,
+      preload: {
+        test: /\.js$/,
+        chunks: 'async'
+      }
     }),
     new ExtractTextPlugin('[name].css'),
     new CopyWebpackPlugin([{
