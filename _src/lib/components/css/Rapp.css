@@ -6,6 +6,10 @@ a {
   text-decoration-color: #141010!important;
 }
 
+h1{
+  color: #ffffff!important;
+}
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px; 

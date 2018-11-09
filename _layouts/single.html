@@ -28,7 +28,7 @@ layout: default
           {% if page.title %}<h1 id="page__title" class="p-name" itemprop="name">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
         </header>
       {% endunless %}
-
+      <div id="dialog-root"></div>
       <section class="page__content e-content">
           {{ content }}
           <aside class="sidebar__right" role="complementary" itemscope itemtype="https://schema.org/WPSideBar">
@@ -115,8 +115,6 @@ layout: default
   </article>
   </div>
   <div id="root"></div>
-  <div id="dialog-root">
-  </div>
   {% if page.cookies == true %}
     {% include cookies-en.html %}
   {% endif %}
