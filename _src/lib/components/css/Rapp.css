@@ -467,6 +467,8 @@ dialog {
   top: 90px!important;
   width: 80%;
   height: 80%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 dialog[open] {
