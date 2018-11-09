@@ -605,15 +605,8 @@ a:active {
   min-width: 300px;
 }
 
-#my-accessible-dialog title{
+#my-accessible-dialog-title{
   color: #ffffff;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding: 1rem;
   border-bottom: 1px solid rgb(67, 64, 64);
 }
 
