@@ -465,7 +465,7 @@ dialog {
   border: 1px solid #141010;
   border-radius: 4px;
   top: 90px!important;
-  width: auto;
+  width: 80%;
   height: auto;
   margin-right: auto;
   margin-left: auto;
@@ -622,7 +622,7 @@ a:active {
   border: 1px solid #141010;
   color: #fff;
   float: right;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .closeButton {
