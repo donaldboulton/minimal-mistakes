@@ -12,7 +12,8 @@
         "react/prop-types": [1]
     },
     "globals": {
-      "importScripts": true
+      "importScripts": true,
+      "$": true
     },
     "extends": [
         "eslint:recommended",

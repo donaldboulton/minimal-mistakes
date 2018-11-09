@@ -3,6 +3,9 @@
     "env": {
         "browser": true
     },
+    "globals": {
+      "$": true
+    },
     "rules": {
         "comma-dangle": 0,
         "indent": [2, 4, { "SwitchCase": 1, "VariableDeclarator": 1 }],
