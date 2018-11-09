@@ -465,8 +465,8 @@ dialog {
   border: 1px solid #141010;
   border-radius: 4px;
   top: 90px!important;
-  width: 80%;
-  height: 80%;
+  width: auto;
+  height: auto;
   margin-right: auto;
   margin-left: auto;
 }
@@ -548,6 +548,7 @@ dialog::backdrop {
 .dialog h1 {
   margin: 0;
   font-size: 1.25em;
+  color: #ffffff;
 }
 
 .dialog-close {
@@ -621,11 +622,11 @@ a:active {
   border: 1px solid #141010;
   color: #fff;
   float: right;
+  font-size: 2em;
 }
 
 .closeButton {
   float: right;
-  font-size: 1.5rem;
   font-weight: 700;
   line-height: 1;
   color: #fff;
@@ -636,6 +637,7 @@ a:active {
   background-color: transparent;
   border-radius: 50%;
   border-color: transparent;
+  font-size: 2em;
 }
 
 .svg-icon path {
