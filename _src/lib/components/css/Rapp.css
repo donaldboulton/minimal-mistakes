@@ -587,15 +587,6 @@ a:active {
   cursor: pointer;
 }
 
- button {
-  background-color: #141010;
-  border: 1px solid #141010;
-   -webkit-appearance: button;
-   text-transform: none;
-   overflow: visible;
-   color: #ffffff;
- }
-
  #my-accessible-dialog {
   background-color: #141010;
   border: 1px solid #141010;
@@ -616,20 +607,13 @@ a:active {
   border-bottom: 1px solid rgb(67, 64, 64);
  }
 
- .closeButton {
-  float: right;
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1;
+ #my-accessible-dialog, button {
+  background-color: #141010;
+  border: 1px solid #141010;
   color: #fff;
-  text-shadow: 0 1px 0 #1d1d1d;
-  opacity: .5;
-  top: 1px;
-  right: 1px;
-  background-color: transparent;
-  border-radius: 50%;
-  border-color: transparent;
- }
- .svg-icon path {
+  float: right;
+}
+
+.svg-icon path {
   fill: #ffffff;
 }
