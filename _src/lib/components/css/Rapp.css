@@ -464,6 +464,9 @@ dialog {
   background-color: #141010;
   border: 1px solid #141010;
   border-radius: 4px;
+  top: 90px!important;
+  width: 80%;
+  height: 80%;
 }
 
 dialog[open] {
