@@ -587,15 +587,15 @@ a:active {
   cursor: pointer;
 }
 
- #my-accessible-dialog {
+#my-accessible-dialog {
   background-color: #141010;
   border: 1px solid #141010;
   color: #ffffff;
   border-radius: 4px;
   min-width: 300px;
- }
+}
 
- #my-accessible-dialog-title{
+#my-accessible-dialog title{
   color: #ffffff;
   display: -ms-flexbox;
   display: flex;
@@ -605,13 +605,28 @@ a:active {
   justify-content: space-between;
   padding: 1rem;
   border-bottom: 1px solid rgb(67, 64, 64);
- }
+}
 
- #my-accessible-dialog, button {
+#my-accessible-dialog button {
   background-color: #141010;
   border: 1px solid #141010;
   color: #fff;
   float: right;
+}
+
+.closeButton {
+  float: right;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-shadow: 0 1px 0 #1d1d1d;
+  opacity: .5;
+  top: 1px;
+  right: 1px;
+  background-color: transparent;
+  border-radius: 50%;
+  border-color: transparent;
 }
 
 .svg-icon path {
