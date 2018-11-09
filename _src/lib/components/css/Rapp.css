@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+a {
+  text-decoration-color: #141010!important;
+}
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px; 
