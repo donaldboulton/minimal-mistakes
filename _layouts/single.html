@@ -15,6 +15,7 @@ layout: default
 {% endif %}
 
 <div id="main" role="main">
+
   {% include sidebar.html %}
   <div itemprop="mainEntity" itemscope itemtype="https://schema.org/CreativeWork">
   <article class="page h-entry">
@@ -28,7 +29,7 @@ layout: default
           {% if page.title %}<h1 id="page__title" class="p-name" itemprop="name">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
         </header>
       {% endunless %}
-      <div id="dialog-root"></div>
+      
       <section class="page__content e-content">
           {{ content }}
           <aside class="sidebar__right" role="complementary" itemscope itemtype="https://schema.org/WPSideBar">
@@ -115,6 +116,7 @@ layout: default
   </article>
   </div>
   <div id="root"></div>
+  <div id="dialog-root"></div>
   {% if page.cookies == true %}
     {% include cookies-en.html %}
   {% endif %}
@@ -123,7 +125,7 @@ layout: default
     <div class="page__related">
       <h4 class="page__related-title">{{ site.data.ui-text[site.locale].related_label | default: "You May Also Enjoy" }}</h4>
       <div class="grid__wrapper">
-        {% for post in site.related_posts limit:3 %}
+        {% for post in site.related_posts limit: 3 %}
           {% include archive-single.html type="grid" %}
         {% endfor %}
       </div>
