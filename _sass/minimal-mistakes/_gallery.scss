@@ -63,6 +63,21 @@
   }
 }
 
+.gallery-4-col-unjustified {
+  display: grid;
+  grid-gap: 0.5em;
+  align-items: stretch;
+
+  @include breakpoint($small) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  caption {
+    width: 100%;
+    grid-column: 1 / -1;
+  }
+}
+
 .gallery-3-col-unjustified {
   display: grid;
   grid-gap: 0.5em;
