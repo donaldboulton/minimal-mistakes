@@ -27,9 +27,7 @@ image:
   path: &image /build/images/stack.png
   feature: *image
   thumbnail: /build/images/stack-320.png
-header:
-  image: /build/images/stack.png
-  teaser: /build/images/stack-320.png
+
 sidebar:
   - title: "Jekyll React Webpack"
     image: /assets/images/about-bundle-320.jpg

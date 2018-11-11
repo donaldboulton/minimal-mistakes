@@ -475,7 +475,11 @@ dialog[open] {
   display: block;
 }
 
-.dialog[aria-hidden="true"] {
+.dialog[aria-hidden="true"] {  
+  display: none;
+}
+
+#dialog-root[aria-hidden="true"] {  
   display: none;
 }
 
