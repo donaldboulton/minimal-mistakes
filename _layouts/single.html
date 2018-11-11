@@ -115,8 +115,9 @@ layout: default
     </div>    
   </article>
   </div>
-  <div id="root"></div>
-  <div id="dialog-root" class="hidden" role="dialog" aria-labelledby="dialog-content" aria-modal="true"></div>
+  <div id="root">
+     <div id="dialog-root" class="hidden" data-a11y-dialog-native></div>
+  </div>
   {% if page.cookies == true %}
     {% include cookies-en.html %}
   {% endif %}

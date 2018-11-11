@@ -456,8 +456,11 @@ div.overlay {
 
 }
 
- [data-a11y-dialog-native] .dialog-overlay {
+[data-a11y-dialog-native] .dialog-overlay {
   display: none;
+}
+.dialog:not([aria-hidden='true']) > .dialog-overlay {
+  animation: fade-in 200ms 1 both;
 }
 
 dialog {
