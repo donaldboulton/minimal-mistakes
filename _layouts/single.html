@@ -15,27 +15,27 @@ layout: default
 {% endif %}
 
 <div id="main" role="main">
-
   {% include sidebar.html %}
-  <div itemprop="mainEntity" itemscope itemtype="https://schema.org/CreativeWork">
-  <article class="page h-entry">
+  <div itemprop="mainEntity" itemscope itemtype="http://schema.org/CreativeWork">
+  <article class="page">
     {% if page.title %}<meta itemprop="name" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
     {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
-    {% if page.date %}<meta itemprop="datePublished" class="dt-published" content="{{ page.date | date: "%B %d, %Y" }}">{% endif %}
+    {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date: "%B %d, %Y" }}">{% endif %}
     {% if page.last_modified_at %}<meta itemprop="dateModified" content="{{ page.last_modified_at | date: "%B %d, %Y" }}">{% endif %}
     <div class="page__inner-wrap">
       {% unless page.header.overlay_color or page.header.overlay_image %}
         <header itemprop="mainEntityOfPage">
-          {% if page.title %}<h1 id="page__title" class="p-name" itemprop="name">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
+          {% if page.title %}<h1 id="page__title" itemprop="name">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
         </header>
       {% endunless %}
-      
-      <section class="page__content e-content">
+
+      <section class="page__content">
           {{ content }}
-          <aside class="sidebar__right" role="complementary" itemscope itemtype="https://schema.org/WPSideBar">
+          {% include page-navigation.html %}
+          <aside class="sidebar__right" role="complementary" itemscope itemtype="http://schema.org/WPSideBar">
             {% if page.toc %}
                <nav class="toc">
-                 <header><h4 class="nav__title"><svg class="icon icon--file-alt fa-file-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-file-alt' | prepend: '/build/icons/' | relative_url }}"></use></svg>&nbsp;<span itemprop="name">{{ page.toc_label | default: site.data.ui-text[site.locale].toc_label }}</span></h4></header>
+                 <header><h4 class="nav__title"><svg class="icon icon--file-alt fa-file-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-file-alt' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;<span itemprop="name">{{ page.toc_label | default: site.data.ui-text[site.locale].toc_label }}</span></h4></header>
                  {% include toc.html sanitize=true html=content h_min=2 h_max=3 class="toc__menu" %}
                </nav>
             {% endif %}
@@ -53,26 +53,18 @@ layout: default
             {% endif %}
             {% if page.adds == true %}
                {% include google-adds.html %}
-            {% endif %}          
-               {% include sidebar-react.html %}
-            {% if page.web-intents == true %}
-              {% include webmentions.html %}
             {% endif %}
             {% if page.notifications-admin == true %}
-              {% include sidebar-subscribe-admin.html %}
+               {% include subscribe.html %}
             {% endif %}
-            {% if page.notifications == true %}
-              {% include sidebar-subscribe.html %}
-            {% endif %}
-            {% if page.slack == true %}
-              {% include sidebar-slack.html %}
+            {% if page.notifications-admin == true %}
+              {% include subscribe-admin.html %}
             {% endif %}
           </aside>
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
         {% if page.web-intents == true %}
           {% include twitter-web-intents.html %}
-        {% endif %}        
-        {% include to-top.html %}
+        {% endif %}
       </section>
       <footer class="page__meta">
         {% if site.data.ui-text[site.locale].meta_label %}
@@ -80,9 +72,9 @@ layout: default
         {% endif %}
         {% include page__taxonomy.html %}
         {% if page.last_modified_at %}
-          <div class="page__date"><strong><svg class="icon icon--calendar-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-calendar-alt' | prepend: 'build/icons/' | relative_url }}"></use></svg> {{ site.data.ui-text[site.locale].date_label | default: "Updated:" }}</strong> <time datetime="{{ page.last_modified_at | date: "%Y-%m-%d" }}">{{ page.last_modified_at | date: "%B %d, %Y" }}</time></div>
+          <div class="page__date"><strong><svg class="icon icon--calendar-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-calendar-alt' | prepend: 'assets/icons/' | relative_url }}"></use></svg> {{ site.data.ui-text[site.locale].date_label | default: "Updated:" }}</strong> <time datetime="{{ page.last_modified_at | date: "%Y-%m-%d" }}">{{ page.last_modified_at | date: "%B %d, %Y" }}</time></div>
         {% elsif page.date %}
-          <div class="page__date"><strong><svg class="icon icon--calendar-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-calendar-alt' | prepend: 'build/icons/' | relative_url }}"></use></svg> {{ site.data.ui-text[site.locale].date_label | default: "Updated:" }}</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time></div>
+          <div class="page__date"><strong><svg class="icon icon--calendar-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-calendar-alt' | prepend: 'assets/icons/' | relative_url }}"></use></svg> {{ site.data.ui-text[site.locale].date_label | default: "Updated:" }}</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time></div>
         {% endif %}
       </footer>
 
@@ -91,7 +83,7 @@ layout: default
       {% endif %}
 
       {% include post_pagination.html %}
-    </div>
+
       {% if page.comments == true %}
         {% include comments.html %}
       {% endif %}
@@ -100,23 +92,12 @@ layout: default
         {% include reviews-page-footer.html %}
         {% include reviews-form.html %}
       {% endif %}
-    </div>
-    <div class="text-center add-block clear-both" role="note" itemscope itemtype="https://schema.org/WPAdBlock">
-      <meta itemprop="name" content="Adsense for {{ page.title }}"/>
-      <meta itemprop="description" content="Support {{ site.title }} by using Adsense and other advertisements."/>
-      <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-client="ca-pub-7655495105068461"
-           data-ad-slot="5601054893"
-           data-ad-format="auto"></ins>
-      <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
     </div>    
   </article>
-  </div>
-  <div id="root">
-     <div id="dialog-root" class="hidden" data-a11y-dialog-native></div>
+  <div id="dialog-root" class="hidden" data-a11y-dialog-native></div>
+ {% if page.cookies == true %}
+   {% include cookies-en.html %}
+ {% endif %
   </div>
   {% if page.cookies == true %}
     {% include cookies-en.html %}
@@ -126,7 +107,7 @@ layout: default
     <div class="page__related">
       <h4 class="page__related-title">{{ site.data.ui-text[site.locale].related_label | default: "You May Also Enjoy" }}</h4>
       <div class="grid__wrapper">
-        {% for post in site.related_posts limit: 3 %}
+        {% for post in site.related_posts limit:3 %}
           {% include archive-single.html type="grid" %}
         {% endfor %}
       </div>
