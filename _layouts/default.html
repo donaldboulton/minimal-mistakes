@@ -14,7 +14,7 @@ layout: compress
 <body id="style-3" class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %} auth-false" itemscope itemtype="https://schema.org/WebPage">
   <meta class="u-url" itemprop="url" content="{{ site.url }}{{ page.url }}">  
   {% include masthead.html %}
-  <div id="App">
+  <div id="app">
     {% if site.search == true %}
     <div class="search-content">
       {% include search/search_form.html %}
@@ -22,7 +22,8 @@ layout: compress
     {% endif %}
     <div id="initial-content" class="initial-content">
       {{ content }}
-    </div>
+    </div>  
+    {% include footer-ad.html %}
   </div>
   <div class="page__footer" itemscope itemtype="https://schema.org/WPFooter">
     <footer>
@@ -30,5 +31,5 @@ layout: compress
     </footer>
   </div>  
   {% include scripts.html %}
-<script type="text/javascript" src="/assets/common-ce6d8c3c8dcf9c2cc1d1.bundle.js" async></script><script type="text/javascript" src="/assets/app-ce6d8c3c8dcf9c2cc1d1.bundle.js" async></script><script type="text/javascript" src="/assets/vendor-ce6d8c3c8dcf9c2cc1d1.bundle.js" async></script></body>
+<script type="text/javascript" src="/assets/common-4233576cb88a72856ad2.bundle.js" async></script><script type="text/javascript" src="/assets/app-4233576cb88a72856ad2.bundle.js" async></script><script type="text/javascript" src="/assets/vendor-4233576cb88a72856ad2.bundle.js" async></script></body>
 </html>

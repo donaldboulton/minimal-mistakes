@@ -532,6 +532,10 @@ dialog::backdrop {
   animation: appear 400ms 150ms 1 both;
 }
 
+.dialog-container[aria-hidden='true'] {
+  display: none;
+}
+
 .dialog-content {
   padding: 1em;
   max-width: 90%;

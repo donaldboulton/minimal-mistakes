@@ -54,11 +54,18 @@ layout: default
             {% if page.adds == true %}
                {% include google-adds.html %}
             {% endif %}
-            {% if page.notifications-admin == true %}
-               {% include subscribe.html %}
+            {% include sidebar-react.html %}
+            {% if page.web-intents == true %}
+              {% include webmentions.html %}
             {% endif %}
             {% if page.notifications-admin == true %}
-              {% include subscribe-admin.html %}
+              {% include sidebar-subscribe-admin.html %}
+            {% endif %}
+            {% if page.notifications == true %}
+              {% include sidebar-subscribe.html %}
+            {% endif %}
+            {% if page.slack == true %}
+              {% include sidebar-slack.html %}
             {% endif %}
           </aside>
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
@@ -94,10 +101,10 @@ layout: default
       {% endif %}
     </div>    
   </article>
-  <div id="dialog-root" class="hidden" data-a11y-dialog-native></div>
+  <div id="appRoot"></div>
  {% if page.cookies == true %}
    {% include cookies-en.html %}
- {% endif % }
+ {% endif %}
   </div>
   {% if page.cookies == true %}
     {% include cookies-en.html %}
@@ -124,3 +131,5 @@ layout: default
     </div>
   {% endif %}
 </div>
+<div id="dialog-root" class="hidden" data-a11y-dialog-native></div>
+
