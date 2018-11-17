@@ -23,8 +23,7 @@ tags:
   - Stray Cats
 
 category:
-  - Gallerys
-
+  - Gallery
 sidenav: true
 adds: true
 cookies: true

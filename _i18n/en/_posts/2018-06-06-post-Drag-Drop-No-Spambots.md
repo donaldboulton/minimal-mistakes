@@ -16,6 +16,8 @@ author: Donald Boulton
 author_profile: true
 adds: true
 dragula: true
+category:
+  - Programing
 cookies: true
 reviews: true
 anchor: true

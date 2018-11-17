@@ -26,6 +26,7 @@ tags:
   - Ratings
 category:
   - Jekyll
+  - Programing
 permalink: 2018-05-27-post-reviews-for-jekyll.html
 image:
   cover: true

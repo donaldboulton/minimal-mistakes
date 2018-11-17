@@ -24,6 +24,7 @@ tags:
   - Jekyll Admin
 category:
   - Jekyll
+  - Admin
 
 toc: true
 toc_label: "Admin Contents"

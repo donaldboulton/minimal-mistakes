@@ -16,7 +16,7 @@ tags:
   - Programing
 category:
   - Jekyll
-  - Gallerys
+  - Gallery
 locations:
   - OKC Oklahoma
 toc: true

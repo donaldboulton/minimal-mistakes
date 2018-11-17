@@ -17,7 +17,6 @@ tags:
   - SQL Defragment
 category:
   - Programing
-
 toc: true
 toc_label: "Defrag Contents"
 related: true
