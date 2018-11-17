@@ -134,6 +134,3 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
-dialog.on('show', function (dialogEl, triggerEl) {
-  dialogEl.removeAttribute("style");
-});
