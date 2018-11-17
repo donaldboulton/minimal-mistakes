@@ -15,7 +15,7 @@ class DialogMenu extends React.Component {
 
         <Dialog className="dialog" id="my-accessible-dialog"
                 appRoot="#menu"
-                dialogRoot="#dialog-root"
+                dialogRoot="#dialogRoot"
                 dialogRef={(dialog) => (this.dialog = dialog)}
                 title="Internal Links">
           <p id="dialogDescription">
