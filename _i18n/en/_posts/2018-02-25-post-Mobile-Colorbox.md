@@ -40,7 +40,7 @@ support: [adds, cookies]
 folder: _posts
 product: mobile-colorbox 
 slug: mobile-colorbox
-github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2018-02-25-post-Mobile-Colorbox.md
+github_editme_path: donaldboulton/DWB/blob/gh-pages/_i18n/en/_posts/2018-02-25-post-Mobile-Colorbox.md
 ---
 
 {% include octo-arm.html %}

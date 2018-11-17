@@ -41,7 +41,7 @@ support: [adds, cookies]
 folder: _posts
 product: defrag-sql
 slug: defrag-sql
-github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2018-02-25-post-Defrag-SQL.md
+github_editme_path: donaldboulton/DWB/blob/gh-pages/_i18n/en/_posts/2018-02-25-post-Defrag-SQL.md
 ---
 
 {% include octo-arm.html %}

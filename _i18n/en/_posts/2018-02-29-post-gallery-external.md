@@ -51,7 +51,7 @@ support: [adds, cookies]
 folder: _posts
 product: gallery-external
 slug: gallery-external
-github_editme_path: https://github.com/donaldboulton/DWB/blob/gh-pages/_posts/2018-02-29-post-gallery-external.md
+github_editme_path: donaldboulton/DWB/blob/gh-pages/_i18n/en/_posts/2018-02-29-post-gallery-external.md
 ---
 
 {% include octo-arm.html %}

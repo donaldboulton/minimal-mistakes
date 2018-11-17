@@ -40,7 +40,7 @@ support: [adds, cookies]
 folder: _posts
 product: staticman-gitlab
 slug: staticman-gitlab
-github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2018-03-05-post-Staticman-with-Gitlab.md
+github_editme_path: donaldboulton/DWB/blob/gh-pages/_i18n/en/_posts/2018-03-05-post-Staticman-with-Gitlab.md
 ---
 
 {% include octo-arm.html %}

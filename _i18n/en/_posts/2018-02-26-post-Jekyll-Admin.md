@@ -43,7 +43,7 @@ support: [adds, cookies]
 folder: _posts
 product: jekyll-admin
 slug: jekyll-admin
-github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2018-02-26-post-Jekyll-Admin.md
+github_editme_path: donaldboulton/DWB/blob/gh-pages/_i18n/en/_posts/2018-02-26-post-Jekyll-Admin.md
 ---
 
 {% include octo-arm.html %}

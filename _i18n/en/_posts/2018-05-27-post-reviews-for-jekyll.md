@@ -46,7 +46,7 @@ support: [adds, cookies]
 folder: _posts
 product: reviews-for-jekyll
 slug: reviews-for-jekyll
-github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2018-05-27-post-reviews-for-jekyll.md
+github_editme_path: donaldboulton/DWB/blob/gh-pages/_i18n/en/_posts/2018-05-27-post-reviews-for-jekyll.md
 lcb: "{"
 ---
 

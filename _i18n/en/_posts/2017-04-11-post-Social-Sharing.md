@@ -45,7 +45,7 @@ support: [adds, cookies]
 folder: _posts
 product: social-sharing
 slug: social-sharing
-github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2017-04-11-post-Social-Sharing.md
+github_editme_path: donaldboulton/DWB/blob/gh-pages/_i18n/en/_posts/2017-04-11-post-Social-Sharing.md
 ---
 
 {% include octo-arm.html %}

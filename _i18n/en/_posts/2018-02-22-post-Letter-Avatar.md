@@ -44,7 +44,7 @@ header:
 support: [adds, cookies]
 product: letter-avatar 
 slug: letter-avatar
-github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2018-02-22-post-Letter-Avatar.md
+github_editme_path: donaldboulton/DWB/blob/gh-pages/_i18n/en/_posts/2018-02-22-post-Letter-Avatar.md
 lcb: "{"
 ---
 

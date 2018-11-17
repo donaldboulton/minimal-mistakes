@@ -48,7 +48,7 @@ support: [adds, cookies]
 folder: _posts
 product: jekyll-image-gallery
 slug: jekyll-image-gallery
-github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2018-05-14-post-Jekyll-Image-Gallery.md
+github_editme_path: donaldboulton/DWB/blob/gh-pages/_i18n/en/_posts/2018-05-14-post-Jekyll-Image-Gallery.md
 lcb: "{"
 ---
 

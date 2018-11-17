@@ -101,7 +101,8 @@ layout: default
       {% endif %}
     </div>    
   </article>
-  <div id="appRoot"></div>
+  <div id="root"></div>
+  <div id="dialog-root" class="hide" data-a11y-dialog-native></div>
  {% if page.cookies == true %}
    {% include cookies-en.html %}
  {% endif %}
@@ -131,5 +132,4 @@ layout: default
     </div>
   {% endif %}
 </div>
-<div id="dialog-root" class="hidden" data-a11y-dialog-native></div>
 

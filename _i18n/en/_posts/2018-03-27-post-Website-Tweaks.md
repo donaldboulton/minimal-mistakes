@@ -40,7 +40,7 @@ header:
 support: [adds, cookies]  
 product: website-tweaks
 slug: website-tweaks
-github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2018-03-27-post-Website-Tweaks.md
+github_editme_path: donaldboulton/DWB/blob/gh-pages/_i18n/en/_posts/2018-03-27-post-Website-Tweaks.md
 ---
 
 {% include octo-arm.html %}

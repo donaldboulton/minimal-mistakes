@@ -46,7 +46,7 @@ support: [adds, cookies, dragula]
 folder: _posts
 product: drag-drop-no-spambots
 slug: drag-drop-no-spambots
-github_editme_path: donaldboulton/DWB/blob/gh-pages/_posts/2018-06-06-post-Drag-Drop-No-Spambots.md
+github_editme_path: donaldboulton/DWB/blob/gh-pages/_i18n/en/_posts/2018-06-06-post-Drag-Drop-No-Spambots.md
 lcb: "{"
 ---
 

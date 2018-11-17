@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from 'react-dom';
 const Dialog = require('react-a11y-dialog');
-class MyComponent extends React.Component {
+class DialogMenu extends React.Component {
   handleClick = () => {
     this.dialog.show()
   }
@@ -41,6 +41,6 @@ class MyComponent extends React.Component {
 }
 
 ReactDOM.render(
-  <MyComponent />,
+  <DialogMenu />,
   document.getElementById('menu')
 )
