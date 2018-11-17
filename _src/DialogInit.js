@@ -14,6 +14,5 @@
   });
 }());
 
-const el = document.getElementById('my-accessible-dialog');
-
-const dialog = new A11yDialog(el);
+const el = document.querySelector('#my-accessible-dialog')
+const dialog = new A11yDialog(el, '#menu')
