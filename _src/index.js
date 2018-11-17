@@ -10,12 +10,12 @@ class Layout extends React.Component {
       <div>
         <Todo />
         <AppNotify />
-        <Dialog />
         <Popup />
       </div>
     );
   }
 }
 
+<Dialog />
 import './main.css';
 
