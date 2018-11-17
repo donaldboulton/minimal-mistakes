@@ -18,4 +18,5 @@ class Layout extends React.Component {
 
 <Dialog />
 import './main.css';
+import './DialogInit';
 
