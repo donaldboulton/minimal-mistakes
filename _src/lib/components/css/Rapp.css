@@ -263,7 +263,7 @@ dialog[open] {
   display: none;
 }
 
-#dialogRoot[aria-hidden="true"] {  
+dialogRoot[aria-hidden="true"] {  
   display: none;
 }
 
@@ -390,14 +390,6 @@ a:active {
   padding: 0 .25em;
   font: inherit;
   cursor: pointer;
-}
-
-#my-accessible-dialog {
-  background-color: #141010;
-  border: 1px solid #141010;
-  color: #ffffff;
-  border-radius: 4px;
-  min-width: 300px;
 }
 
 #my-accessible-dialog-title{
