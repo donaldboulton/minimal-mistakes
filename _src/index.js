@@ -9,13 +9,15 @@ class Layout extends React.Component {
     return (
       <div>
         <Todo />
-        <AppNotify />
-        <Dialog />
+        <AppNotify />        
         <Popup />
       </div>
     );
   }
+
+  newMethod() {
+    <Dialog />;
+  }
 }
 
 import './main.css';
-

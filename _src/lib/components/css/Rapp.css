@@ -256,7 +256,7 @@ dialog[open] {
   display: none;
 }
 
-#dialog-root[aria-hidden="true"] {  
+#dialogRoot[aria-hidden="true"] {  
   display: none;
 }
 
@@ -311,9 +311,8 @@ dialog::backdrop {
 }
 
 .dialog-content {
-  padding: 1em;
-  max-width: 90%;
-  min-width: 600px;
+  padding: .5em;
+  min-width: 300px;
   color: #fff!important;
 }
 
