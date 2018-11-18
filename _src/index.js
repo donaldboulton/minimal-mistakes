@@ -10,13 +10,10 @@ class Layout extends React.Component {
       <div>
         <Todo />
         <AppNotify />        
+        <Dialog />
         <Popup />
       </div>
     );
-  }
-
-  newMethod() {
-    <Dialog />;
   }
 }
 

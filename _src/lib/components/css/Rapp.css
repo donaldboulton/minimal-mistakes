@@ -246,6 +246,13 @@ dialog {
   height: auto;
   margin-right: auto;
   margin-left: auto;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  -ms-transform: none;
+  transform: none;
+  z-index: 3;
+  position: fixed;
 }
 
 dialog[open] {
@@ -313,6 +320,8 @@ dialog::backdrop {
 .dialog-content {
   padding: .5em;
   min-width: 300px;
+  z-index: 3;
+  position: fixed;
   color: #fff!important;
 }
 
@@ -320,6 +329,8 @@ dialog::backdrop {
 @media screen and (min-width: 700px) {
   .dialog-content {
     padding: 2em;
+    z-index: 3;
+    position: fixed;
     background-color: #141010;
     border: 1px solid #434040;
   }
