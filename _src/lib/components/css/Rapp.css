@@ -281,7 +281,7 @@ dialog::backdrop {
   background-color: #141010;
   border: 1px solid #434040;
   color: #fff;
-  z-index: 301;
+  z-index: 1001;
   position: fixed;
   top: auto;
   left: auto;
