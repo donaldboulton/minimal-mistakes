@@ -13,11 +13,5 @@ btn.onclick = function() {
     dialog.style.display = "none";
 };
 
-// When the user clicks anywhere outside of the dialog, close it
-window.onclick = function(event) {
-    if (event.target == dialog) {
-        dialog.style.display = "none";
-    }
-};
 const el = document.querySelector('#my-accessible-dialog');
 const dialog = new A11yDialog(el, '#menu');

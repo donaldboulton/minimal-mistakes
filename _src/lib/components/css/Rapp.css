@@ -238,21 +238,22 @@ hr{
 }
 
 dialog {
+  display: none;
+  z-index: 3;
+  position: fixed;
   background-color: #141010;
   border: 1px solid #141010;
   border-radius: 4px;
   top: 100px!important;
-  width: 80%;
-  height: auto;
-  margin-right: auto;
-  margin-left: auto;
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; 
   -moz-transform: none;
   -ms-transform: none;
   -o-transform: none;
   -ms-transform: none;
   transform: none;
-  z-index: 3;
-  position: fixed;
 }
 
 dialog[open] {
@@ -287,8 +288,8 @@ dialog::backdrop {
   color: #fff;
   z-index: 3;
   position: fixed;
-  top: 50%;
-  left: 50%;
+  top: auto;
+  left: auto;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
