@@ -1,5 +1,5 @@
 backend:
-  name: github
+  name: git-gateway
   repo: donaldboulton/DWB
   branch: gh-pages
   squash_merges: true

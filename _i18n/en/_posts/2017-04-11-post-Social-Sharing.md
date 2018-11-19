@@ -26,7 +26,8 @@ reviews: true
 adds: true
 cookies: true
 share: false
-web-intents: true
+web-intents: false
+slack: true
 tweet_id: 1027102649798287360
 anchor: true
 social-share: twitter --twitter-hashtags facebook

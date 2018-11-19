@@ -10,6 +10,7 @@ sidenav: true
 adds: true
 cookies: true
 reviews: true
+slack: true
 tags:
   - SQL Server
   - Fragmentation
