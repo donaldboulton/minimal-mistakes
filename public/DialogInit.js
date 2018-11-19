@@ -12,6 +12,3 @@ btn.onclick = function() {
 btn.onclick = function() {
     dialog.style.display = "none";
 };
-
-const el = document.querySelector('#my-accessible-dialog');
-const dialog = new A11yDialog(el, '#menu');
