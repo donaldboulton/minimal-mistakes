@@ -408,3 +408,7 @@ a:active {
 .svg-icon path {
   fill: #ffffff;
 }
+
+.toc1__menu {
+  margin-left: 2em
+}
