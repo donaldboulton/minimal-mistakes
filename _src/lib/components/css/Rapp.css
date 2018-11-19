@@ -178,7 +178,7 @@ hr{
   position: absolute;
   left: 25%;
   right: 25%;
-  top: auto;
+  top: 10%;
   bottom: auto;
   margin: auto;
   color: #ffffff;
@@ -404,11 +404,9 @@ a:active {
   border-color: transparent;
   font-size: 2em;
 }
-
 .svg-icon path {
   fill: #ffffff;
 }
-
-.toc1__menu {
-  margin-left: 2em
+.toc1__menu-popup {
+  margin-left: 1.2em
 }
