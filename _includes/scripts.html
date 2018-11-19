@@ -191,23 +191,13 @@ anchors.add('p');
 {% endif %}
 <script async defer src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script asnyc src="{{ '/public/init.site.sw.js' | relative_url }}"></script>
-<script asnyc src="{{ '/public/DialogInit.js' | relative_url }}"></script>
 {% if page.chat == true %}
 <script src="https://embed.small.chat/T8PMJ5ZNYGDRA9BJEA.js" async></script>
 {% endif %}
 {% if page.webmentions == true %}
 <script type="text/javascript" src="https://webmention.io/js/mentions.js"></script>
 {% endif %}
-{% if page.admin == true %}
-<script src="https://ucarecdn.com/libs/widget/3.6.1/uploadcare.min.js" charset="utf-8"></script>
-<script>
-  uploadcare.openDialog(null, {
-  publicKey: 'a10993e96ebedcb0dd54',
-  imagesOnly: true,
-  crop: '800x450'
-});
-</script>
-{% endif %}
+
 
 {% if page.support contains 'github' %}
 <script src="https://npmcdn.com/github-card@1.2.0/dist/widget.js"></script>
