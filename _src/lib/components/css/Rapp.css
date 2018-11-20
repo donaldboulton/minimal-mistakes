@@ -233,7 +233,7 @@ hr{
 
 dialog {
   display: none;
-  z-index: 1000;
+  z-index: 1000!important;
   position: fixed;
   background-color: #141010;
   border: 1px solid #141010;
@@ -314,7 +314,7 @@ dialog::backdrop {
 @media screen and (min-width: 700px) {
   .dialog-content {
     padding: 2em;
-    z-index: 3;
+    z-index: 301;
     position: fixed;
     background-color: #141010;
     border: 1px solid #434040;

@@ -15,6 +15,7 @@ layout: default
 {% endif %}
 
 <div id="main" role="main">
+  <div id="root"></div>
   {% include sidebar.html %}
   <div itemprop="mainEntity" itemscope itemtype="http://schema.org/CreativeWork">
   <article class="page">
@@ -31,7 +32,6 @@ layout: default
 
       <section class="page__content">
           {{ content }}
-          {% include page-navigation.html %}
           <aside class="sidebar__right" role="complementary" itemscope itemtype="http://schema.org/WPSideBar">
             {% if page.toc %}
                <nav class="toc">
@@ -102,11 +102,6 @@ layout: default
       {% endif %}
     </div>    
   </article>
-  <div id="root"></div>
-  <div id="dialogRoot" class="hide"></div>
- {% if page.cookies == true %}
-   {% include cookies-en.html %}
- {% endif %}
   </div>
   {% if page.cookies == true %}
     {% include cookies-en.html %}
