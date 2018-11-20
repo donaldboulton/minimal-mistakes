@@ -5,11 +5,11 @@ class Popup extends React.Component {
     return (
       <div className='popup'>
         <div className='popup_inner'>
-        <div className="popup_header">
-          <div className="popup_header_text">{this.props.text}</div>
-           <button className="popup_close" onClick={this.props.closePopup}><span>x</span></button>
-        </div>
-        <p>
+          <div className="popup_header">
+            <div className="popup_header_text">{this.props.text}</div>
+             <button className="popup_close" onClick={this.props.closePopup}><span>x</span></button>
+          </div>
+          <p>
             This modal is build with just React Code no extra npm module or external .js.
             This will be great for form notifications and site alerts.
           </p>
@@ -32,7 +32,7 @@ class App extends React.Component {
   }
   render() {
     return (
-      <div className='app'>
+      <div className="app">
         <h3>React POPUP</h3>
         <button className="btn btn--primary" onClick={this.togglePopup.bind(this)}>show react popup</button>        
         {this.state.showPopup ? 
