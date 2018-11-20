@@ -410,3 +410,15 @@ a:active {
 .toc1__menu-popup {
   margin-left: 1.2em
 }
+
+.toc1-li-popup {
+  margin-bottom: .25em;
+  line-height: 1.5;
+  margin-left: 20px;
+}
+
+[type="file"] {
+  height: 0;
+  overflow: hidden;
+  width: 0;
+}
