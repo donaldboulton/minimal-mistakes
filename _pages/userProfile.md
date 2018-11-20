@@ -32,7 +32,7 @@ support: [adds, cookies, validate]
 folder: /
 slug: userProfile
 product: userProfile
-github_editme_path: donaldboulton/DWB/blob/gh-pages/_pages/userProfile.html
+github_editme_path: donaldboulton/DWB/blob/gh-pages/_pages/userProfile.md
 ---
 
 # User Profile Admin
