@@ -6,7 +6,7 @@ permalink: /userProfile.html
 tags:
   - Home
   - Donald Boulton
-
+email: donaldboulton@gmail.com
 adds: true
 toc: false
 chat: true
@@ -41,10 +41,10 @@ github_editme_path: donaldboulton/DWB/blob/gh-pages/_pages/userProfile.html
 
 Your User Profile will be saved as a Netlify form, as this Sites User's data.
 
-Exported cvs/json, and saved in Jekyll data directory.
+Exported to netlify as cvs, zapped to google sheets then zapped to my site and saved as json in Jekyll data directory.
 
 JWT authentication tokens automatically added.
 
 {% include octo-arm.html %}
 
-{% include admin.html %}
+{% include userprofile.html %}
