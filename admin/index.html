@@ -11,7 +11,7 @@ layout: none
 
 <body id="style-3" class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %} auth-false" itemscope itemtype="https://schema.org/WebPage">
 <div class="page">
-<script src="https://cdn.jsdelivr.net/npm/netlify-cms@2.1.3/dist/netlify-cms.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/netlify-cms@2.2.0/dist/netlify-cms.js"></script>
 <script>
   CMS.registerEditorComponent({
     // Internal id of the component
@@ -69,5 +69,15 @@ layout: none
 </script>
 {% endraw %}
 </div>
+<script>
+  UPLOADCARE_LOCALE = "en";
+  UPLOADCARE_TABS = "file url facebook gdrive gphotos dropbox instagram evernote flickr skydrive";
+  UPLOADCARE_PUBLIC_KEY = "a10993e96ebedcb0dd54";
+  uploadcare.registerTab(
+  'preview',
+  uploadcareEffectsTab
+)
+</script>
+<script charset="utf-8" src="//ucarecdn.com/libs/widget/3.6.1/uploadcare.full.min.js"></script>
 </body>
 </html>
