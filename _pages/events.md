@@ -12,6 +12,7 @@ events: true
 support: [adds, cookies, events]
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_pages/events.md
 ---
-# Posts Event Calendar
+# Site Event Calendar
 
-{% include events-data.html %}
+{% include events.html %}
+{% include events-page.html %}
