@@ -153,12 +153,7 @@ eventSources: [
 <script type="text/javascript">
       var CLIENT_ID = '857761645811-8ceeuq6uao353t3vb2jpgfqe92ufn2sj.apps.googleusercontent.com';
       var API_KEY = 'AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA';
-
-      // Array of API discovery doc URLs for APIs used by the quickstart
       var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"];
-
-      // Authorization scopes required by the API; multiple scopes can be
-      // included, separated by spaces.
       var SCOPES = "https://www.googleapis.com/auth/calendar.readonly";
 
       var authorizeButton = document.getElementById('authorize_button');
@@ -182,10 +177,8 @@ eventSources: [
           discoveryDocs: DISCOVERY_DOCS,
           scope: SCOPES
         }).then(function () {
-          // Listen for sign-in state changes.
           gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
 
-          // Handle the initial sign-in state.
           updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
           authorizeButton.onclick = handleAuthClick;
           signoutButton.onclick = handleSignoutClick;
@@ -242,7 +235,7 @@ eventSources: [
        */
       function listUpcomingEvents() {
         gapi.client.calendar.events.list({
-          'calendarId': 'primary',
+          'calendarId': 'donaldboulton@gmail.com',
           'timeMin': (new Date()).toISOString(),
           'showDeleted': false,
           'singleEvents': true,
@@ -300,7 +293,7 @@ eventSources: [
      $('#calendar').fullCalendar({
        googleCalendarApiKey: 'AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA',
        themeSystem: 'jquery-ui',
-       height: 750,
+       height: 850,
        header: {
        left: 'prev,next today',
        center: 'title',
@@ -322,8 +315,8 @@ eventSources: [
     eventSources: [
     { url: 'https://donboulton.com/events/events.json',
       googleCalendarId: 'donaldboulton@gmail.com',
-      className: 'gcal-event', eventColor: '#378006',
-      textColor: '#cccccc' }   
+      className: 'fc-event'
+    }   
     ],
     eventRender: function( event, element, view ) {
  	  var title = element.find( '.fc-title' );
@@ -425,7 +418,7 @@ eventSources: [
        */
       function listUpcomingEvents() {
         gapi.client.calendar.events.list({
-          'calendarId': 'primary',
+          'calendarId': 'donaldboulton@gmail.com',
           'timeMin': (new Date()).toISOString(),
           'showDeleted': false,
           'singleEvents': true,
