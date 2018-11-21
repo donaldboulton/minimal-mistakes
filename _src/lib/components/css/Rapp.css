@@ -431,3 +431,23 @@ a:active {
   background: #141010!important;
   color: #e4e0e0!important;
 }
+
+.modalContent {
+  background: #141010!important;
+}
+
+.btnHeader {
+ 
+  background: #403d3d!important;
+  border-bottom: 2px solid #070808!important;
+
+}
+
+.btnHeader:focus, .btnHeader.active {
+  background: #131111!important;
+}
+
+.btnLink {
+  color: #cdcdcd!important;
+  border-bottom: 2px solid #070808!important;
+}
