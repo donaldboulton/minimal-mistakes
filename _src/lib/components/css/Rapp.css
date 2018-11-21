@@ -233,7 +233,7 @@ hr{
 
 dialog {
   display: none;
-  z-index: 1000!important;
+  z-index: 9!important;
   position: fixed;
   background-color: #141010;
   border: 1px solid #141010;
@@ -421,4 +421,13 @@ a:active {
   height: 0;
   overflow: hidden;
   width: 0;
+}
+
+.rc-anchor-light.rc-anchor-normal {
+  border: 1px solid #141010!important;
+}
+
+.rc-anchor-light {
+  background: #141010!important;
+  color: #e4e0e0!important;
 }
