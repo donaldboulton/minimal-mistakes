@@ -1,0 +1,17 @@
+---
+layout: 
+title: 
+permalink: /events/
+---
+
+[
+{% for event in site.events %}
+	{
+		"title":"{{event.title}}",
+		"start": "{{event.event_date}}",
+		"allDay":true,
+		"url":"{{event.url}}"
+	}
+	{%unless forloop.last %},{%endunless%}
+{% endfor %}
+]

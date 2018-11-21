@@ -378,6 +378,10 @@ collections:
   amp:
     output: true
     permalink: /:amp/:name/
+  events:
+    output: true
+    permalink: /events/:path/
+    title: Events
   products:
     output: true
     permalink: /:products/:name/
