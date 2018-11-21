@@ -1,9 +1,3 @@
----
-layout: 
-title: 
-permalink: /events/
----
-
 [
 {% for event in site.events %}
 	{
@@ -14,4 +8,18 @@ permalink: /events/
 	}
 	{%unless forloop.last %},{%endunless%}
 {% endfor %}
+
+{% for event in page.events %}
+{{page.title}} {{page.event_title}} {{page.event_comment}} {{page.event_date}}<br/>
+{% endfor %}
 ]
+
+<div class="form-froup">
+  <button id="authorize_button" class="btn btn-default" style="display: none;">Authorize</button>
+  <button id="signout_button" class="btn btn-default" style="display: none;">Sign Out</button>
+  <div>
+    <pre id="content" style="white-space: pre-wrap;"></pre>
+  </div>
+</div>
+
+<div id="calendar" class="fc ui-widget fc-ltr"></div>

@@ -13,6 +13,9 @@ share: false
 adds: true
 cookies: true
 slack: true
+event_title: Moms Birthday
+event_comment: Love ya Mom
+event_date: 2019-1-3
 tags: 
   - Donald Boulton
   - React

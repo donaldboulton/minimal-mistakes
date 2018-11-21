@@ -28,6 +28,9 @@ cookies: true
 share: false
 web-intents: false
 slack: true
+event_title: My Birthday
+event_comment: Love ya Mom
+event_date: 2019-15-1
 tweet_id: 1027102649798287360
 anchor: true
 social-share: twitter --twitter-hashtags facebook
