@@ -129,6 +129,7 @@
 <script type='text/javascript'>
 $(function () {
  $('#calendar').fullCalendar({
+  googleCalendarApiKey: 'AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA',
   themeSystem: 'jquery-ui',
   height: 650,                                                 
   header: {
@@ -143,9 +144,9 @@ buttonText: {
   day: 'day'
 },
 eventSources: [
-   { googleCalendarApiKey: 'AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA',
-   googleCalendarId: 'donboulton@bibwoe.com',
-   className: 'fc-event-email'}]
+   { googleCalendarId: 'donaldboulton@gmail.com',
+   className: 'fc-event-email' }
+   ]
  })
 });
 </script>
@@ -296,10 +297,11 @@ $(function () {
     day: 'day'
   },
   eventSources: [
-   { url: '/events/events.json',
-   googleCalendarId: 'donboulton@bibwoe.com',
+   { url: 'https://donboulton.com/events/events.json',
+   googleCalendarId: 'donaldboulton@gmail.com',
    className: 'gcal-event', eventColor: '#378006',
-   textColor: '#cccccc'}],
+   textColor: '#cccccc' }
+   ]
   })
 });
 </script>
