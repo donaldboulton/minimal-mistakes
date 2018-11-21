@@ -2,6 +2,7 @@
   "events": [
     {
       "title": "Test1",
+      "published": true,
       "id": "5",
       "start": "2018-11-21 05:03:01",
       "end": "2018-11-30 05:03:01",
