@@ -33,7 +33,7 @@ collections: # A list of collections the CMS should be able to edit
     label: "Posts"
     label_singular: "Post"
     folder: "_i18n/en/_posts"
-    sort: "date:desc" # Default is title:asc
+    sort: "date:desc"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
@@ -66,7 +66,7 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - {name: version, label: Version}
               - {name: date, label: Date, widget: date}
-              - {name: description, label: Description}
+              - {name: description, label: Description, widget: markdown}
       - name: notifications
         label: Notifications
         file: _data/notifications.yml
@@ -91,7 +91,10 @@ collections: # A list of collections the CMS should be able to edit
             widget: list
             fields:
               - {label: Title, name: title, widget: string, tagname: h1}
+              - {label: Published, name: published, widget: boolean}
               - {label: Id, name: id, widget: number}
-              - {label: resourceId, name: resourceId, widget: boolean}
+              - {label: resourceId, name: resourceId, widget: number}
               - {label: Start, name: start, widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
               - {label: End, name: end, widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
+              - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
+
