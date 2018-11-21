@@ -451,3 +451,50 @@ a:active {
   color: #cdcdcd!important;
   border-bottom: 2px solid #070808!important;
 }
+
+#external-events {
+  float: left;
+  width: 150px;
+  padding: 0 10px;
+  border: 1px solid #1d1d1d;
+  background: transparent;
+  text-align: left;
+}
+
+#external-events h4 {
+  font-size: 16px;
+  margin-top: 0;
+  padding-top: 1em;
+}
+
+#external-events .fc-event {
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+#external-events p {
+  margin: 1.5em 0;
+  font-size: 11px;
+  color: #ccc;
+}
+
+#external-events p input {
+  margin: 0;
+  vertical-align: middle;
+}
+
+.fc-event {
+  position: relative;
+  /* for resize handle and other inner positioning */
+  display: block;
+  /* make the <a> tag block */
+  font-size: .85em;
+  line-height: 1.3;
+  border-radius: 3px;
+  border: 1px solid #00c100!important;
+  /* default BORDER color */ }
+
+.fc-event,
+.fc-event-dot {
+  background-color: #00c100!important;
+}

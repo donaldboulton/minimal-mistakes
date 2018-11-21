@@ -23,6 +23,5 @@ locations:
 support: [cookies, events]
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_pages/events.md
 ---
-# Site Event Calendar
 
 {% include events.html %}
