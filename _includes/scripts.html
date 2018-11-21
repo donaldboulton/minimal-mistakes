@@ -294,11 +294,13 @@ $(function () {
     week: 'week',
     day: 'day'
   },
+  eventSources: [
+   { googleCalendarApiKey: 'AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA',
+   googleCalendarId: 'donboulton@bibwoe.com',
+   className: 'fc-event-email'}]
+  })
   events: { 
-    url: '_events/events.json',
-    error: function() {
-      $('#script-warning').show();
-    }
+    url: '_events/events.json'
   }
 });
 </script>

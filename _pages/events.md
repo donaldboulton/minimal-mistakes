@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: splash
 title: Event Calendar
 permalink: /events/
 toc: false
