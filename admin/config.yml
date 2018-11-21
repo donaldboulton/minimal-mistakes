@@ -81,3 +81,17 @@ collections: # A list of collections the CMS should be able to edit
               - {label: Loud, name: loud, widget: boolean}
               - {label: Message, name: message, widget: text}
               - {label: URL, name: url}
+      - name: events
+        label: Events
+        file: _events/events.json
+        description: Site-top Events - publish one at a time
+        fields:
+          - name: events
+            label: Events
+            widget: list
+            fields:
+              - {label: Title, name: title, widget: string, tagname: h1}
+              - {label: Id, name: id, widget: number}
+              - {label: resourceId, name: resourceId, widget: boolean}
+              - {label: Start, name: start, widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
+              - {label: End, name: end, widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
