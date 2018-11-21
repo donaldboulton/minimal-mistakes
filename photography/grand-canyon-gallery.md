@@ -9,9 +9,10 @@ last_modified_at: 2018-05-14T12:42:38-04:0
 author: Donald Boulton
 author_profile: false
 gallery: true
-comments: false
+comments: true
+side_react: true
 share: false
-reviews: true
+reviews: false
 related: true
 sidenav-gallery: true
 adds: false

@@ -10,7 +10,8 @@ author_profile: false
 gallery: true
 comments: true
 share: true
-reviews: true
+reviews: false
+side_react: true
 related: true
 sidenav-gallery: true
 adds: true

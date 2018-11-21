@@ -7,9 +7,9 @@ last_modified_at: 2018-04-05T12:42:38-04:0
 author: Donald Boulton
 author_profile: false
 gallery: true
-comments: false
+comments: true
 share: true
-reviews: true
+reviews: false
 related: true
 sidenav-gallery: true
 adds: false
