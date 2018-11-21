@@ -1,17 +1,18 @@
 ---
-layout: splash
+layout: single
 title: Calendar
 permalink: /calendar/
 toc: false
 sidenav: true
-adds: true
+adds: false
+side_react: true
 reviews: false
 comments: true
 cookies: true
 calendar: true
 event: Moms Birthday
 event_date: 2019-1-3
-support: [adds, cookies, calendar]
+support: [cookies, calendar]
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_pages/calendar.md
 ---
 

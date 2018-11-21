@@ -5,6 +5,7 @@ excerpt: "Donate to feed stray cats or me."
 no_menu_item: true
 sitemap: false
 author_profile: true
+side_react: true
 adds: true
 reviews: false
 sidenav: true

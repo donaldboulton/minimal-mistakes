@@ -9,7 +9,8 @@ web-intents: true
 tweet_id: 1005476246548033536
 social-share: twitter --twitter-hashtags facebook
 sidenav: true
-toc: 
+toc: true
+side_react: true
 toc_label: "Page Contents"
 search: true
 author: Donald Boulton

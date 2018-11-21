@@ -5,7 +5,8 @@ layout: single
 read_time: true
 comments: true
 share: false
-web-intents: true
+web-intents: false
+side_react: true
 tweet_id: 1027103870474960896
 social-share: twitter --twitter-hashtags facebook
 toc: true

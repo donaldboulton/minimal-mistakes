@@ -22,6 +22,7 @@ comments: true
 related: true
 share: true
 sidenav: true
+side_react: true
 reviews: true
 adds: true
 cookies: true

@@ -5,6 +5,7 @@ last_modified_at: 2018-03-27T12:42:38-04:00
 toc: true
 toc_label: "Terms Contents"
 sidenav: true
+side_react: true
 youtube: true
 youtubeId: yoE9-tNvhRs
 adds: true

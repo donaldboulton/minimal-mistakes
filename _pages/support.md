@@ -8,6 +8,7 @@ youtubeId: IGMCAZk5xlg
 sitemap: false
 permalink: /support/
 slack: false
+side_react: true
 toc: true
 toc_label: "Support"
 comments: true

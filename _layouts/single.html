@@ -52,9 +52,11 @@ layout: default
                {% include reviews-sidebar.html %}
             {% endif %}
             {% if page.adds == true %}
-               {% include google-adds.html %}
+              {% include google-adds.html %}
             {% endif %}
-            {% include sidebar-react.html %}
+            {% if page.side_react == true %}
+              {% include sidebar-react.html %}
+            {% endif %}
             {% if page.web-intents == true %}
               {% include webmentions.html %}
             {% endif %}

@@ -5,7 +5,8 @@ permalink: 2018-02-26-post-Staticman-with-Gitlab.html
 read_time: true
 comments: true
 share: false
-web-intents: true
+side_react: true
+web-intents: false
 tweet_id: 145116818707714048
 social-share: twitter --twitter-hashtags facebook
 related: true

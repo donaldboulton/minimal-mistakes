@@ -1,15 +1,16 @@
 ---
-layout: splash
+layout: single
 title: Event Calendar
 permalink: /events/
 toc: false
-sidenav: true
-adds: true
+sidenav: false
+side_react: true
+adds: false
 reviews: false
 comments: true
 cookies: true
 events: true
-support: [adds, cookies, events]
+support: [cookies, events]
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_pages/events.md
 ---
 # Site Event Calendar

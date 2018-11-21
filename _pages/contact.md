@@ -4,6 +4,7 @@ description: Get in touch
 email: donboulton@hotmail.com
 creator: donboulton
 chat: true
+side_react: false
 hero: Get in touch
 permalink: /contact/
 map:
@@ -21,6 +22,7 @@ tags:
 notifications: false
 toc: false
 sidenav: true
+side_react: true
 reviews: false
 comments: false
 cookies: true

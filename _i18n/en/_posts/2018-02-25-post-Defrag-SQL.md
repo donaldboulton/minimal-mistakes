@@ -8,6 +8,7 @@ search: true
 author: Donald Boulton
 author_profile: true
 sidenav: true
+side_react: true
 adds: true
 cookies: true
 reviews: true
@@ -23,7 +24,7 @@ related: true
 read_time: true
 comments: true
 share: false
-web-intents: true
+web-intents: false
 tweet_id: 1023374609566113793
 social-share: twitter --twitter-hashtags facebook
 excerpt: "Defrag SQL 2008 to 2016. In any SQL database and one that updates through migrations like Orchard CMS get defragmented and I have notice over the years dealing with SQL server that it needs defragging occasionally, keeping the performance optimized"

@@ -4,10 +4,9 @@ title: Sitemap
 permalink: /sitemap/
 toc: false
 sidenav: true
+side_react: true
 comments: false
 anchor: false
-sidenav: true
-sidenav-gen: true
 reviews: false
 adds: true
 excerpt: "Sitemap with Post by Categories, by Tags and by Years"

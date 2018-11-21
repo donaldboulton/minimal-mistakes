@@ -7,6 +7,7 @@ last_modified_at: 2018-03-02T12:42:38-04:00
 search: true
 author: Donald Boulton
 author_profile: true
+side_react: true
 sidenav: true
 adds: true
 cookies: true
@@ -18,7 +19,7 @@ tags:
   - Performance
 category:
   - Windows
-web-intents: true
+web-intents: false
 tweet_id: 1027105043496034304
 toc: true
 toc_label: "Page Contents"

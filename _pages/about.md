@@ -12,6 +12,7 @@ comments: false
 share: false
 adds: true
 cookies: true
+side_react: true
 slack: true
 event_title: Moms Birthday
 event_comment: Love ya Mom

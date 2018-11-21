@@ -5,6 +5,7 @@ permalink: 2018-05-14-post-Jekyll-Image-Gallery.html
 date: 2018-05-14 16:16:01 -0600
 last_modified_at: 2018-05-16T12:42:38-04:00
 search: true
+side_react: true
 author: Donald Boulton
 author_profile: true
 tags:

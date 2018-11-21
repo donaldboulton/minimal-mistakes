@@ -6,6 +6,7 @@ author_profile: true
 comments: false
 sidenav: true
 reviews: false
+side_react: true
 adds: true
 support: [adds]
 ---

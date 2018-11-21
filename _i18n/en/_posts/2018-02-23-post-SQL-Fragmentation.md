@@ -8,6 +8,7 @@ author: Donald Boulton
 author_profile: true
 sidenav: true
 adds: true
+side_react: true
 cookies: true
 reviews: true
 slack: true
@@ -24,7 +25,7 @@ toc_label: "Page Contents"
 read_time: true
 comments: true
 share: false
-web-intents: true
+web-intents: false
 tweet_id: 1023373858290786304
 social-share: twitter --twitter-hashtags facebook
 related: true
