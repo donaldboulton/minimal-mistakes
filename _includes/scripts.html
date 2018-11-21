@@ -131,7 +131,7 @@ $(function () {
  $('#calendar').fullCalendar({
   googleCalendarApiKey: 'AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA',
   themeSystem: 'jquery-ui',
-  height: 650,                                                 
+  height: 700,                                                 
   header: {
     left: 'prev,next today',
     center: 'title',
@@ -279,29 +279,59 @@ eventSources: [
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/superagent/3.8.3/superagent.min.js"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/gcal.min.js"></script>
+<script src="{{ '/build/js/jquery-ui/jquery-ui.min.js' | relative_url }}"></script>
 <script type='text/javascript'>
-$(function () {
- $('#calendar').fullCalendar( 'rerenderEvents' )({
-  googleCalendarApiKey: 'AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA',
-  themeSystem: 'jquery-ui',
-  height: 650,
-  header: {
-    left: 'prev,next today',
-    center: 'title',
-    right: 'month,agendaWeek,agendaDay'
-  },
-  buttonText: {
-    today: 'today',
-    month: 'month',
-    week: 'week',
-    day: 'day'
-  },
-  eventSources: [
-   { url: 'https://donboulton.com/events/events.json',
-   googleCalendarId: 'donaldboulton@gmail.com',
-   className: 'gcal-event', eventColor: '#378006',
-   textColor: '#cccccc' }
-   ]
+  $(document).ready(function() {
+     $('#external-events .fc-event').each(function() {
+
+     $(this).data('event', {
+       title: $.trim($(this).text()),
+       stick: true
+     });
+
+     $(this).draggable({
+       zIndex: 999,
+       revert: true,
+       revertDuration: 0
+     });
+
+     });
+     $('#calendar').fullCalendar({
+       googleCalendarApiKey: 'AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA',
+       themeSystem: 'jquery-ui',
+       height: 750,
+       header: {
+       left: 'prev,next today',
+       center: 'title',
+       right: 'month,agendaWeek,agendaDay'
+      },
+      buttonText: {
+      today: 'today',
+      month: 'month',
+      week: 'week',
+      day: 'day'
+      },
+      editable: true,
+      droppable: true,
+      drop: function() {
+        if ($('#drop-remove').is(':checked')) {
+           $(this).remove();
+      }
+    },
+    eventSources: [
+    { url: 'https://donboulton.com/events/events.json',
+      googleCalendarId: 'donaldboulton@gmail.com',
+      className: 'gcal-event', eventColor: '#378006',
+      textColor: '#cccccc' }   
+    ],
+    eventRender: function( event, element, view ) {
+ 	  var title = element.find( '.fc-title' );
+	  title.html( title.text() );
+    },
+    eventClick: function(event) {
+      window.open(event.url, '_blank', 'width=700,height=600');
+        return false;
+    }
   })
 });
 </script>
@@ -309,11 +339,8 @@ $(function () {
       var CLIENT_ID = '857761645811-8ceeuq6uao353t3vb2jpgfqe92ufn2sj.apps.googleusercontent.com';
       var API_KEY = 'AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA';
 
-      // Array of API discovery doc URLs for APIs used by the quickstart
       var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"];
 
-      // Authorization scopes required by the API; multiple scopes can be
-      // included, separated by spaces.
       var SCOPES = "https://www.googleapis.com/auth/calendar.readonly";
 
       var authorizeButton = document.getElementById('authorize_button');
@@ -337,10 +364,10 @@ $(function () {
           discoveryDocs: DISCOVERY_DOCS,
           scope: SCOPES
         }).then(function () {
-          // Listen for sign-in state changes.
+
           gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
 
-          // Handle the initial sign-in state.
+
           updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
           authorizeButton.onclick = handleAuthClick;
           signoutButton.onclick = handleSignoutClick;
