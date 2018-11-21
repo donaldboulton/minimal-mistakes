@@ -16,4 +16,5 @@ github_editme_path: donaldboulton/DWB/blob/gh-pages/_pages/events.md
 # Site Event Calendar
 
 {% include events.html %}
+
 {% include events-page.html %}
