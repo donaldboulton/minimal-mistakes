@@ -454,7 +454,7 @@ a:active {
 
 #external-events {
   float: left;
-  width: 150px;
+  max-width: 240px;
   padding: 0 10px;
   border: 1px solid #1d1d1d;
   background: transparent;
@@ -485,14 +485,11 @@ a:active {
 
 .fc-event {
   position: relative;
-  /* for resize handle and other inner positioning */
   display: block;
-  /* make the <a> tag block */
   font-size: .85em;
   line-height: 1.3;
   border-radius: 3px;
-  border: 1px solid #00c100!important;
-  /* default BORDER color */ }
+  border: 1px solid #00c100!important;}
 
 .fc-event,
 .fc-event-dot {
