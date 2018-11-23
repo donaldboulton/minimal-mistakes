@@ -82,15 +82,15 @@
 {% endif %}
 
 {% if page.support contains 'calendar' %}
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.0.0-alpha/fullcalendar.min.css">
+  <link rel="stylesheet" href="{{ '/build/jquery-ui/fullcalendar.min.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/build/jquery-ui/fullcalendar.print.min.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/build/jquery-ui/jquery-ui.theme.min.css' | relative_url }}">
-  <link rel="stylesheet" media="print" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.0.0-alpha/fullcalendar.print.min.css">
 {% endif %}
 
 {% if page.events == true %}
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.0.0-alpha/fullcalendar.min.css">
-<link rel="stylesheet" href="{{ '/build/jquery-ui/jquery-ui.theme.min.css' | relative_url }}">
-<link rel="stylesheet" media="print" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.0.0-alpha/fullcalendar.print.min.css">
+  <link rel="stylesheet" href="{{ '/build/jquery-ui/fullcalendar.min.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/build/jquery-ui/fullcalendar.print.min.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/build/jquery-ui/jquery-ui.theme.min.css' | relative_url }}">
 {% endif %}
 
 {% if site.webmention_url %}

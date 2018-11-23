@@ -122,10 +122,11 @@
 {% endif %}
 
 {% if page.support contains 'calendar' %}
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/superagent/3.8.3/superagent.min.js"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/gcal.min.js"></script>
+<script src="{{ '/build/js/jquery-ui/moment.min.js' | relative_url }}"></script>
+<script src="{{ '/build/js/jquery-ui/superagent.js' | relative_url }}"></script>
+<script src="{{ '/build/js/jquery-ui/fullcalendar.min.js' | relative_url }}"></script>
+<script src="{{ '/build/js/jquery-ui/gcal.min.js' | relative_url }}"></script>
+<script src="{{ '/build/js/jquery-ui/jquery-ui.min.js' | relative_url }}"></script>
 <script type='text/javascript'>
 $(function () {
  $('#calendar').fullCalendar({
@@ -142,10 +143,8 @@ $(function () {
     month: 'month',
     week: 'week',
     day: 'day',
-    prev: 'circle-triangle-w',
-    next: 'circle-triangle-e',
-    prevYear: 'seek-prev',
-    nextYear: 'seek-next'
+    prev: '<',
+    next: '>',
   },
   eventSources: [
     { 
@@ -278,12 +277,11 @@ $(function () {
 {% endif %}
 
 {% if page.support contains 'events' %}
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/superagent/3.8.3/superagent.min.js"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/gcal.min.js"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/gcal.min.js"></script>
-<script defer src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script src="{{ '/build/js/jquery-ui/moment.min.js' | relative_url }}"></script>
+<script src="{{ '/build/js/jquery-ui/superagent.js' | relative_url }}"></script>
+<script src="{{ '/build/js/jquery-ui/fullcalendar.min.js' | relative_url }}"></script>
+<script src="{{ '/build/js/jquery-ui/gcal.min.js' | relative_url }}"></script>
+<script src="{{ '/build/js/jquery-ui/jquery-ui.min.js' | relative_url }}"></script>
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function() {
   var containerEl = document.getElementById('external-events');
@@ -298,20 +296,7 @@ document.addEventListener('DOMContentLoaded', function() {
       };
     }
   });
-  $('#external-events .fc-event').each(function() {
 
-  $(this).data('event', {
-    title: $.trim($(this).text()),
-    stick: true
-  });
-
-  $(this).draggable({
-    zIndex: 999,
-    revert: true,
-    revertDuration: 0
-  });
-
-  });
   var calendar = new FullCalendar.Calendar(calendarEl, {
     googleCalendarApiKey: 'AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA',
     themeSystem: 'jquery-ui',
@@ -326,10 +311,8 @@ document.addEventListener('DOMContentLoaded', function() {
       month: 'month',
       week: 'week',
       day: 'day',
-      prev: 'circle-triangle-w',
-      next: 'circle-triangle-e',
-      prevYear: 'seek-prev',
-      nextYear: 'seek-next'
+      prev: '<',
+      next: '>',
     },
     editable: true,
     eventLimit: true,
@@ -341,7 +324,7 @@ document.addEventListener('DOMContentLoaded', function() {
         textColor: 'black'
       },
       {
-        googleCalendarId:  'en.usa#holiday@group.v.calendar.google.com',
+        googleCalendarId: 'en.usa#holiday@group.v.calendar.google.com',
         color: '#00c100',
         textColor: 'white'
       },
@@ -365,7 +348,6 @@ document.addEventListener('DOMContentLoaded', function() {
   calendar.render();
 });
 </script>
-
 <script type="text/javascript">
       var CLIENT_ID = '857761645811-8ceeuq6uao353t3vb2jpgfqe92ufn2sj.apps.googleusercontent.com';
       var API_KEY = 'AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA';
@@ -533,4 +515,3 @@ anchors.add('p');
 {% if page.support contains 'github' %}
 <script src="https://npmcdn.com/github-card@1.2.0/dist/widget.js"></script>
 {% endif %}
-
