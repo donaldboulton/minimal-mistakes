@@ -2,6 +2,7 @@
 layout: single
 title: Calendar
 permalink: /calendar/
+classes: wide
 toc: false
 sidenav: false
 adds: false

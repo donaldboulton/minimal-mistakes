@@ -120,7 +120,6 @@
 {% endif %}
 
 {% if page.support contains 'calendar' %}
-<script src="{{ '/build/jquery-ui/superagent.js' | relative_url }}"></script>
 <script src="{{ '/build/jquery-ui/fullcalendar.min.js' | relative_url }}"></script>
 <script src="{{ '/build/jquery-ui/gcal.min.js' | relative_url }}"></script>
 
@@ -148,19 +147,12 @@
       eventLimit: true,
       eventSources: [
         {
-          url: '{{ site.baseurl }}/events.json',
-          method: 'POST',
-          color: 'yellow',
-          textColor: 'black'
-        },
-        {
           googleCalendarId: 'en.usa#holiday@group.v.calendar.google.com',
-          color: '#00c100',
-          textColor: 'white'
+          className: 'fc-event-holiday'
         },
         {
           googleCalendarId: 'donboulton@bibwoe.com',
-          className: 'fc-event'
+          className: 'fc-event-user'
         }
     ],
       eventClick: function(arg) {
@@ -216,13 +208,18 @@
       },
       editable: true,
       eventSources: [
+        {
+          url: '{{ site.baseurl }}/events.json',
+          color: 'yellow',
+          textColor: 'black'
+        },
         { 
           googleCalendarId: 'donboulton@bibwoe.com',
-          className: 'fc-event' 
+          className: 'fc-event-user' 
         },
         { 
           googleCalendarId:  'en.usa#contacts@group.v.calendar.google.com',
-          className: 'fc-event-contacts' 
+          className: 'fc-event' 
         }
       ],
       droppable: true,
