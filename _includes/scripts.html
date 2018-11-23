@@ -132,13 +132,11 @@
       header: {
         left: 'prev,next today',
         center: 'title',
-        right: 'month,agendaWeek,agendaDay'
+        right: 'month,listYear'
       },
       buttonText: {
         today: 'today',
         month: 'month',
-        week: 'week',
-        day: 'day',
         prev: '<',
         next: '>',
       },
@@ -148,14 +146,14 @@
       eventSources: [
         {
           googleCalendarId: 'en.usa#holiday@group.v.calendar.google.com',
-          className: 'fc-event'
+          className: 'gcal-event'
         },
         {
-          googleCalendarId: 'donboulton@bibwoe.com'
+          googleCalendarId: 'donboulton@bibwoe.com',
+          className: 'gcal-event'
         }
       ],
       eventClick: function(arg) {
-
         window.open(arg.event.url, 'gcalevent', 'width=700,height=600');
         arg.jsEvent.preventDefault()
       },
