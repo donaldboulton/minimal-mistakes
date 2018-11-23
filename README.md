@@ -10,13 +10,37 @@
 [![Jekyll](https://img.shields.io/badge/jekyll-%3E%3D%203.6-blue.svg)](https://jekyllrb.com/)
 [![Tip Me via PayPal](https://img.shields.io/badge/PayPal-tip%20me-green.svg?logo=paypal)](https://www.paypal.me/donaldboulton)
 
+## React Components
+
+All react additions were hand build adding components individually in the DOM for now, soon at root levels. The following node react modules added.
+
+### Menu built with React A11yDialog
+
+react-a11y-dialog is a React component for [a11y-dialog](https://github.com/edenspiekermann/a11y-dialog) relying on [React portals](https://reactjs.org/docs/portals.html) to ease the use of accessible dialog windows in React applications.
+
+### Based on [A11y Dialog](http://edenspiekermann.github.io/a11y-dialog/)
+
+[a11y-dialog](http://edenspiekermann.github.io/a11y-dialog/) is a lightweight (1.3Kb) yet flexible script to create accessible dialog windows.log.
+
+## React Notifications
+
+### React-web-notification [![Build Status](https://travis-ci.org/georgeOsdDev/react-web-notification.svg?branch=develop)](https://travis-ci.org/georgeOsdDev/react-web-notification) [![npm version](https://badge.fury.io/js/react-web-notification.svg)](http://badge.fury.io/js/react-web-notification)
+
+React component with [HTML5 Web Notification API](https://developer.mozilla.org/en/docs/Web/API/notification).
+This component show nothing in dom element, but trigger HTML5 Web Notification API with `render` method in the life cycle of React.js.
+
+### Demo
+
+[View Demo](https://georgeosddev.github.io/react-web-notification/example/)
+
+## Jekyll Webpack boilerplate
 
 Adding a Jekyll boilerplate supercharged with React & Webpack to build modern performant websites (including Progressive Web Apps).
 Read more about how this boilerplate has been built: https://medium.com/learning-lab/5-how-i-learnt-webpack-3-and-created-a-jekyll-and-webpack-boilerplate-edd86645fd5e
 
-## Features
+### Features
 
-**Improved workflow**
+#### Improved workflow
 
 * Webpack working along with Jekyll
 * BrowserSync live reload
@@ -31,7 +55,7 @@ Read more about how this boilerplate has been built: https://medium.com/learning
 **ES6 & Optimization**
 
 * ENV Babel
-* JS webpack minified and uglified
+* JS Webpack minified and Uglified
 * ES Lint
 
 **Images optimized**
@@ -72,7 +96,11 @@ The following tools should be installed before starting:
 * Webpack
 * Sass
 
-## Quick start
+### Webpack Jekyll Example
+
+This repo Webpack build was originally taken from
+
+### Jekyll-webpack-boilerplate Quick start
 
 1. Make sure you have all the prerequisites above installed.
 2. Clone this repo using `git clone https://github.com/sandoche/Jekyll-webpack-boilerplate.git`
@@ -80,19 +108,19 @@ The following tools should be installed before starting:
 4. Run `npm install` and `bundler install` in order to install dependencies and clean the git repo.
 5. Run `npm start` to start the development server (or use `npm start`).
 
-## Quick deployment
+### Quick deployment
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/sandoche/Jekyll-webpack-boilerplate)
 
-Here is a demo of the Netlify build: https://dazzling-swartz-9738b5.netlify.com
+Here is a demo of the Webpack boilerplate Netlify build: https://dazzling-swartz-9738b5.netlify.com
 
-## Development
+### Development
 
 To start the development server just run  `npm start`
 
 ### Folder structure
 
-```
+```md
 .
 ├── 404.html
 ├── about.md
@@ -146,11 +174,13 @@ You can see above the basic structure of the boilerplate and the main difference
 * Replace the different icon by yours in `_images` and in the root folder
 
 ### Assets
+
 * SCSS partials should be located in `_scss` for better reading
 * Put all your images in `_images` the content of this folder will be moved to the `_site/assets/images` so you can access them with this path `/assets/images/**` in your templates, check the examples
-* Put all your Javascript files inside `_src` and import them from `index.js` or you can also add them as a new entry point in your webpack configuration file
+* Put all your JavaScript files inside `_src` and import them from `index.js` or you can also add them as a new entry point in your Webpack configuration file
 
 ### Internationalization
+
 * All the posts should be there in inside `_i18n` folder inside its language, check the boilerplate examples
 * You can put your variables inside `_i18n/en.yml` (replace en with your language) and call them in your template with `{% t variable_name.sub_variable %}`
 * You can remove the plugin by removing `gem 'jekyll-multiple-languages-plugin'` from `gemfile` and `jekyll-multiple-languages-plugin` from `plugins` in `_config.yml`
@@ -159,25 +189,30 @@ You can see above the basic structure of the boilerplate and the main difference
 ## Build
 
 ### Optimized website
+
 To build the website run the following line
 
-```
+```sh
 npm run build
 
 # or if you want the critical css
 npm run build:optim
 ```
+
 The built website will be in `_site` folder.
 
 You can also run a local server to test it with this command
-```
+
+```sh
 npm run serve:dist
 ```
 
 ### PWA
+
 If you want to build a PWA (including the manifest.json and the service worker) run the following. Please ensure to have configured this file `config/webpack.pwa.js`
 The built website will be in `_site` folder.
-```
+
+```sh
 npm run build:pwa
 
 # or if you want the critical css
@@ -185,12 +220,15 @@ npm run build:pwa:optim
 ```
 
 ### Clean assets & \_site folders
+
 This will remove the generated folders
-```
+
+```sh
 npm run clean:project
 ```
 
 ## Known issues
+
 * Jekyll watch doesn't reload / rebuild when a translation file is updated inside `_i18n` folder, I recommand to remove `jekyll-multiple-languages-plugin` if you don't want a multi language website and if you want to watch / rebuild faster. Otherwise close and start  `npm run start` to rebuild and see your changes from `_i18n`
 * The critical CSS Path may show some weird behavior when the page is loading that is why there are separated npm scripts
 
@@ -203,16 +241,45 @@ npm run clean:project
 * CoinGenerator - https://coingenerator.sh
 
 ## Other documentations
+
 * [Jekyll](https://jekyllrb.com/)
 * [Webpack](https://webpack.js.org/)
+* [React](https://react.com/) *
 * [Jekyll multiple languages plugin](https://github.com/Anthony-Gaudino/jekyll-multiple-languages-plugin)
 * [Jekyll SEO tag](https://github.com/jekyll/jekyll-seo-tag)
 * [BrowserSync Webpack plugin](https://www.npmjs.com/package/browser-sync-webpack-plugin)
 * [PostCSS](http://postcss.org/)
 
+## Netlify Identity Widget
+
+A component used to authenticate with Netlify's Identity service.
+[Live demo](https://identity.netlify.com)
+
+For a lower level library to the underlying [GoTrue](https://github.com/netlify/gotrue) API, see
+[gotrue-js](https://github.com/netlify/gotrue-js).
+
+## What is Netlify Identity
+
+Netlify’s Identity service is a plug-and-play microservice for handling site
+functionalities like signups, logins, password recovery, user metadata, and
+roles. You can use it from single page apps instead of rolling your own, and
+integrate with any service that understands JSON Web Tokens (JWTs).
+
+Learn more about this service from this
+[blog post](https://www.netlify.com/blog/2017/09/07/introducing-built-in-identity-service-to-streamline-user-management/).
+
+## Netlify CMS
+
+This donboulton.com website is a static website but has a administration backend through Netlify CMS.
+Adding custom notifications, events, contacts and updates to Netlify CMS _config.yml
+
+Users that register on this site will be added to My Netlify Contacts, Using Zapper to zap users data to Google Contacts, and to my event calendars and zapped to back my repo for a saved locally contacts.json data file which hashes email addresses and other personal for site and Users security.
+
+Events will be displayed on my [events calendar](https://donboulton.com/events/) calendar.
+
 ## Credits
 
-### Creator
+### Creator of Jekyll Framework
 
 **Michael Rose**
 
@@ -220,7 +287,7 @@ npm run clean:project
 - <https://twitter.com/mmistakes>
 - <https://github.com/mmistakes>
 
-### Other:
+### Other
 
 - [Jekyll](https://jekyllrb.com/)
 - [jQuery](https://jquery.com/)
@@ -237,7 +304,7 @@ npm run clean:project
 
 The MIT License (MIT)
 
-Copyright (c) 2013-2018 Michael Rose and contributors
+Copyright (c) 2013-2018 Donald Boulton and contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

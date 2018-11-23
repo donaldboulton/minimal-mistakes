@@ -137,16 +137,26 @@ $(function () {
     center: 'title',
     right: 'month,agendaWeek,agendaDay'
   },
-buttonText: {
-  today: 'today',
-  month: 'month',
-  week: 'week',
-  day: 'day'
-},
-eventSources: [
-   { googleCalendarId: 'donaldboulton@gmail.com',
-   className: 'fc-event-email' }
-   ]
+  buttonText: {
+    today: 'today',
+    month: 'month',
+    week: 'week',
+    day: 'day',
+    prev: 'circle-triangle-w',
+    next: 'circle-triangle-e',
+    prevYear: 'seek-prev',
+    nextYear: 'seek-next'
+  },
+  eventSources: [
+    { 
+      googleCalendarId: 'donaldboulton@gmail.com',
+      className: 'gcal-event' 
+    },
+    { 
+      googleCalendarId:  'en.usa#contacts@group.v.calendar.google.com',
+      className: 'fc-event-contacts' 
+    }
+  ]
  })
 });
 </script>
@@ -273,62 +283,89 @@ eventSources: [
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/gcal.min.js"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/gcal.min.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
-<script type='text/javascript'>
-  $(document).ready(function() {
-     $('#external-events .fc-event').each(function() {
+<script defer src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+  var containerEl = document.getElementById('external-events');
+  var calendarEl = document.getElementById('calendar');
+  var checkbox = document.getElementById('drop-remove');
 
-     $(this).data('event', {
-       title: $.trim($(this).text()),
-       stick: true
-     });
+  new FullCalendar.Draggable(containerEl, {
+    itemSelector: '.fc-event',
+    eventData: function(eventEl) {
+      return {
+        title: eventEl.innerText
+      };
+    }
+  });
+  $('#external-events .fc-event').each(function() {
 
-     $(this).draggable({
-       zIndex: 999,
-       revert: true,
-       revertDuration: 0
-     });
+  $(this).data('event', {
+    title: $.trim($(this).text()),
+    stick: true
+  });
 
-     });
-     $('#calendar').fullCalendar({
-       googleCalendarApiKey: 'AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA',
-       themeSystem: 'jquery-ui',
-       height: 900,
-       header: {
-       left: 'prev,next today',
-       center: 'title',
-       right: 'month,agendaWeek,agendaDay'
-      },
-      buttonText: {
+  $(this).draggable({
+    zIndex: 999,
+    revert: true,
+    revertDuration: 0
+  });
+
+  });
+  var calendar = new FullCalendar.Calendar(calendarEl, {
+    googleCalendarApiKey: 'AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA',
+    themeSystem: 'jquery-ui',
+    height: 900,
+    header: {
+      left: 'prev,next today',
+      center: 'title',
+      right: 'month,agendaWeek,agendaDay'
+    },
+    buttonText: {
       today: 'today',
       month: 'month',
       week: 'week',
-      day: 'day'
-      },
-      editable: true,
-      droppable: true,
-      drop: function() {
-        if ($('#drop-remove').is(':checked')) {
-           $(this).remove();
-      }
+      day: 'day',
+      prev: 'circle-triangle-w',
+      next: 'circle-triangle-e',
+      prevYear: 'seek-prev',
+      nextYear: 'seek-next'
     },
+    editable: true,
+    eventLimit: true,
     eventSources: [
-    { url: 'https://donboulton.com/events/events.json',
-      googleCalendarId: 'donaldboulton@gmail.com',
-      className: 'fc-event'
-    }   
+      {
+        url: '{{ site.baseurl }}/events/events.json',
+        method: 'POST',
+        color: 'yellow',
+        textColor: 'black'
+      },
+      {
+        googleCalendarId:  'en.usa#holiday@group.v.calendar.google.com',
+        color: '#00c100',
+        textColor: 'white'
+      },
+      {
+        googleCalendarId: 'donaldboulton@gmail.com',
+        className: 'gcal-event'
+      }
     ],
-    eventRender: function( event, element, view ) {
- 	  var title = element.find( '.fc-title' );
-	  title.html( title.text() );
-    },
     eventClick: function(event) {
       window.open(event.url, '_blank', 'width=700,height=600');
-        return false;
+         return false;
+    },
+    droppable: true,
+    drop: function(info) {
+      if (checkbox.checked) {
+        info.draggedEl.parentNode.removeChild(info.draggedEl);
+      }
     }
-  })
+  });
+
+  calendar.render();
 });
 </script>
+
 <script type="text/javascript">
       var CLIENT_ID = '857761645811-8ceeuq6uao353t3vb2jpgfqe92ufn2sj.apps.googleusercontent.com';
       var API_KEY = 'AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA';
@@ -345,7 +382,6 @@ eventSources: [
        */
       function handleClientLoad() {
         gapi.load('client:auth2', initClient);
-      }
 
       /**
        *  Initializes the API client library and sets up sign-in state

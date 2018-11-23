@@ -80,7 +80,7 @@ collections: # A list of collections the CMS should be able to edit
               - {label: Published, name: published, widget: boolean}
               - {label: Loud, name: loud, widget: boolean}
               - {label: Message, name: message, widget: text}
-              - {label: URL, name: url}
+              - {label: URL, name: url, widget: url}
       - name: events
         label: Events
         file: _events/events.json
@@ -97,4 +97,5 @@ collections: # A list of collections the CMS should be able to edit
               - {label: Start, name: start, widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
               - {label: End, name: end, widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
               - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
-
+              - {label: Message, name: message, widget: text}
+              - {label: URL, name: url, widget: url}
