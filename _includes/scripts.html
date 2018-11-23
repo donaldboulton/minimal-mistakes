@@ -101,7 +101,7 @@
 
 {% if page.support contains 'weather' %}
 <script src="{{ '/build/js/vendor/weather/weather.js' | relative_url }}"></script>
-<script>
+<script type="text/javascript">
     Weather.getCurrent( "4544349", function( current ) {
         $( "#current" ).html( "Temperature: " + current.temperature() + "&deg;K or " +
             Weather.kelvinToFahrenheit( current.temperature() ) + "&deg;F or " +
@@ -120,15 +120,15 @@
 {% endif %}
 
 {% if page.support contains 'calendar' %}
-<script src="{{ '/build/jquery-ui/moment.min.js' | relative_url }}"></script>
 <script src="{{ '/build/jquery-ui/superagent.js' | relative_url }}"></script>
 <script src="{{ '/build/jquery-ui/jquery-ui.min.js' | relative_url }}"></script>
 <script src="{{ '/build/jquery-ui/fullcalendar.min.js' | relative_url }}"></script>
 <script src="{{ '/build/jquery-ui/gcal.min.js' | relative_url }}"></script>
 
-<script>
+<script type="text/javascript">
   document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
+
     var calendar = new FullCalendar.Calendar(calendarEl, {
       themeSystem: 'jquery-ui',
       header: {
@@ -144,17 +144,14 @@
         prev: '<',
         next: '>',
       },
-      displayEventTime: false, // don't show the time column in list view
-      // THIS KEY WON'T WORK IN PRODUCTION!!!
-      // To make your own Google API key, follow the directions here:
-      // http://fullcalendar.io/docs/google_calendar/
+      displayEventTime: false, 
       googleCalendarApiKey: 'AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA',
-      // US Holidays
+
       events: 'en.usa#holiday@group.v.calendar.google.com',
       eventClick: function(arg) {
-        // opens events in a popup window
+
         window.open(arg.event.url, 'gcalevent', 'width=700,height=600');
-        arg.jsEvent.preventDefault() // don't navigate in main tab
+        arg.jsEvent.preventDefault()
       },
       loading: function(bool) {
         document.getElementById('loading').style.display =
@@ -286,29 +283,25 @@
 <script src="{{ '/build/jquery-ui/superagent.js' | relative_url }}"></script>
 <script src="{{ '/build/jquery-ui/fullcalendar.min.js' | relative_url }}"></script>
 <script src="{{ '/build/jquery-ui/gcal.min.js' | relative_url }}"></script>
-<script src="{{ '/build/jquery-ui/jquery-ui.min.js' | relative_url }}"></script>
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    new FullCalendar.ThirdPartyDraggable({
-      mirrorSelector: '.ui-draggable-dragging'
-    })
 
-    $('#external-events .fc-event').each(function() {
-      $(this).attr('data-event', JSON.stringify({
-        title: $.trim($(this).text()),
-        stick: true
-      }));
-      $(this).draggable({
-        zIndex: 999,
-        revert: true,
-        revertDuration: 0
-      });
-    });
-    /* initialize the calendar
-    -----------------------------------------------------------------*/
-    var calendarEl = document.getElementById('calendar');
-    var calendar = new FullCalendar.Calendar(calendarEl, {
+/* initialize the external events
+-----------------------------------------------------------------*/
+
+  var containerEl = document.getElementById('external-events-list');
+  new FullCalendar.Draggable(containerEl, {
+    itemSelector: '.fc-event',
+    eventData: function(eventEl) {
+      return {
+        title: eventEl.innerText.trim()
+      }
+    }
+  });
+
+  var calendarEl = document.getElementById('calendar');
+  var calendar = new FullCalendar.Calendar(calendarEl, {
       googleCalendarApiKey: 'AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA',
       themeSystem: 'jquery-ui',
       header: {
@@ -327,8 +320,8 @@
       editable: true,
       droppable: true,
       drop: function(arg) {
-        if ($('#drop-remove').is(':checked')) {
-          $(arg.draggedEl).remove();
+        if (document.getElementById('drop-remove').checked) {
+          arg.draggedEl.parentNode.removeChild(arg.draggedEl);
         }
       }
     });
