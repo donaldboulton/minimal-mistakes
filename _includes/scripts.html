@@ -90,8 +90,6 @@
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/cookie-bar/cookiebar-latest.min.js?tracking=1&showNoConsent=1&privacyPage=https%3A%2F%2Fdonboulton.com%2Fterms%23cookies--beacons"></script>
 {% endif %}
 
-{% comment %} <!--  my own validation scripts and scss from sitepoint.com/instant-validation/ -->{% endcomment %}
-
 {% if page.support contains 'dragula' %}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js" crossorigin="anonymous"></script>
   <script src="{{ '/build/js/vendor/dragula/example.min.js' | relative_url }}"></script>
@@ -512,6 +510,7 @@ anchors.add('p');
 {% if page.webmentions == true %}
 <script type="text/javascript" src="https://webmention.io/js/mentions.js"></script>
 {% endif %}
+
 {% if page.support contains 'github' %}
-<script src="https://npmcdn.com/github-card@1.2.0/dist/widget.js"></script>
+<script asnyc src="/public/widget.js"></script>
 {% endif %}
