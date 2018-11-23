@@ -148,11 +148,12 @@
       eventSources: [
         {
           googleCalendarId: 'en.usa#holiday@group.v.calendar.google.com',
-          className: 'fc-event-holiday'
+          className: 'fc-event'
         },
         {
-          googleCalendarId: 'donboulton@bibwoe.com',
-          className: 'fc-event-user'
+          googleCalendarId: 'donboulton@bibwoe.com',          
+          color: 'yellow',
+          textColor: 'black'
         }
       ],
       eventClick: function(arg) {
@@ -215,10 +216,6 @@
         },
         { 
           googleCalendarId: 'donboulton@bibwoe.com',
-          className: 'fc-event-user' 
-        },
-        { 
-          googleCalendarId:  'en.usa#contacts@group.v.calendar.google.com',
           className: 'fc-event' 
         }
       ],
