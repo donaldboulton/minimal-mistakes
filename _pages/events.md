@@ -2,6 +2,7 @@
 layout: single
 title: Event Calendar
 permalink: /events/
+classes: wide
 author_profile: false
 toc: false
 sidenav: false
