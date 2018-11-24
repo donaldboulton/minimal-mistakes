@@ -155,11 +155,11 @@
           className: 'gcal-event' 
         },
         { 
-          googleCalendarId:  'en.usa#holiday@group.v.calendar.google.com',
+          googleCalendarId: 'en.usa#holiday@group.v.calendar.google.com',
           className: 'fc-event' 
         },
         { 
-          googleCalendarId:  'nba_25_%4fklahoma+%43ity+%54hunder#sports@group.v.calendar.google.com', 
+          googleCalendarId: 'nba_25_%4fklahoma+%43ity+%54hunder#sports@group.v.calendar.google.com', 
         }
       ],
       eventClick: function(arg) {
@@ -518,5 +518,5 @@ anchors.add('p');
 {% endif %}
 
 {% if page.support contains 'github' %}
-<script asnyc src="/public/widget.js"></script>
+<script asnyc src="{{ '/public/widget.js' | relative_url }}"></script>
 {% endif %}
