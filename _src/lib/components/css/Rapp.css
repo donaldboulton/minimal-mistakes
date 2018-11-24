@@ -55,6 +55,7 @@ h1{
   border: 1px solid black;
   position: relative;
 }
+
 .inputField{
   margin-bottom: 1.5em;
 }
@@ -155,11 +156,13 @@ hr{
   color: #fff!important;
 }
 
-.content {
+.pre_content {
   padding: 1em;
   display: none;
   overflow: hidden;
   background-color: rgb(20, 16, 16);
+  border: 1px solid #141010;
+  border-radius: 4px;
 }
 
 .popup {
@@ -535,4 +538,10 @@ a:active {
   position: absolute;
   top: 10px;
   right: 10px;
+}
+
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+  border: 1px solid #666!important;
+  background: #332d2d url(images/ui-bg_highlight-soft_80_000000_1x100.png) 50% top repeat-x!important;
+  color: #58b22e;
 }

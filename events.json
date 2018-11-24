@@ -1,5 +1,6 @@
 [
   {
+    "id": "997",
     "title": "All Day Event",
     "start": "2018-10-01"
   },
@@ -9,9 +10,11 @@
     "end": "2018-10-10"
   },
   {
-    "id": "999",
+    "id": "998",
     "title": "Repeating Event",
-    "start": "2018-10-09T16:00:00-05:00"
+    "start": "2018-10-09T16:00:00-05:00",
+    "end": "2018-10-10",
+    "url": "https://donboulton.com/support/"
   },
   {
     "id": "999",

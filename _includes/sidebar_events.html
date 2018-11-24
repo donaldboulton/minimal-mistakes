@@ -1,26 +1,30 @@
 <div id="style-3" class="style-4 sidebar sticky">
     <div class="form-froup">
+      <h3>Login for GCal</h3>
       <button id="authorize_button" class="btn btn--primary" style="display: none;">Authorize</button>
       <button id="signout_button" class="btn btn--danger" style="display: none;">Sign Out</button>
-      <div>
-        <pre id="content" style="white-space: pre-wrap;"></pre>
-      </div>
     </div>
+    <h3>Calendar Events Lists</h3>
+    <div class="form-group">
+      <pre id="pre_content" style="white-space: pre-wrap;"></pre>
+    </div>    
     <div id="external-events">
       <h4>Draggable Events</h4>
       <div id='external-events-list' class="form-group">
-      <div class="fc-event ui-draggable ui-draggable-handle">My Event 1</div>
-      <div class="fc-event ui-draggable ui-draggable-handle">My Event 2</div>
-      <div class="fc-event ui-draggable ui-draggable-handle">My Event 3</div>
-      <div class="fc-event ui-draggable ui-draggable-handle">My Event 4</div>
-      <div class="fc-event ui-draggable ui-draggable-handle">My Event 5</div>        
+        <div class="fc-event">Avaliable</div>
+        <div class="fc-event">Busy</div>
+        <div class="fc-event">Notify</div>
+        <div class="fc-event">Todo</div>
+        <div class="fc-event">Work</div>        
       </div>
-          <div class="enable-push">
-              <div class="toggle-switch">
-                <input aria-label="drop-remove" id="drop-remove" name="drop-remove" value="drop-remove" type="checkbox" />
-                <label for="drop-remove"></label>
-              </div>
+      <div class="form-group">
+        <div class="enable-push">
+          <div class="toggle-switch">
+            <input aria-label="drop-remove" id="drop-remove" name="drop-remove" value="drop-remove" type="checkbox" />
+            <label for="drop-remove"></label>
           </div><span for="drop-remove">remove after drop</span>
+        </div>
+      </div>
     </div>
 </div>
 

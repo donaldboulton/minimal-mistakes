@@ -5,6 +5,7 @@ permalink: /categories/
 author_profile: true
 comments: false
 sidenav: true
+side_react: true
 reviews: false
 adds: true
 support: [adds]

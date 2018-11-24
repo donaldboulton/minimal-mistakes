@@ -27,5 +27,3 @@ github_editme_path: donaldboulton/DWB/blob/gh-pages/_pages/events.md
 ---
 
 {% include events.html %}
-
-{% include calendar.data.html %}

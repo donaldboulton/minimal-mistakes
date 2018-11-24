@@ -133,7 +133,7 @@
       header: {
         left: 'prev,next today',
         center: 'title',
-        right: 'month,listYear'
+        right: 'month,agendaWeek,agendaDay'
       },
       buttonText: {
         today: 'today',
@@ -145,8 +145,8 @@
       },
       displayEventTime: false, 
       eventLimit: true,
-      contentHeight:"auto",
-      handleWindowResize:true,
+      contentHeight: "auto",
+      handleWindowResize: true,
       googleCalendarApiKey: 'AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA',
       
       eventSources: [
@@ -245,7 +245,7 @@
        * @param {string} message Text to be placed in pre element.
        */
       function appendPre(message) {
-        var pre = document.getElementById('content');
+        var pre = document.getElementById('pre_content');
         var textContent = document.createTextNode(message + '\n');
         pre.appendChild(textContent);
       }
@@ -313,12 +313,13 @@
       right: 'month,agendaWeek,agendaDay,listWeek'
     },
     buttonText: {
-        today: 'today',
-        month: 'month',
-        week: 'week',
-        day: 'day',
-        prev: '<',
-        next: '>',
+      today: 'today',
+      month: 'month',
+      agendaWeek: 'week',
+      listWeek: 'list',
+      day: 'day',
+      prev: '<',
+      next: '>',
     },
     defaultDate: '2018-10-12',
     editable: true,
@@ -330,8 +331,8 @@
     },
     navLinks: true,
     eventLimit: true,
-    contentHeight:"auto",
-    handleWindowResize:true,
+    contentHeight: "auto",
+    handleWindowResize: true,
     events: {
       url: '{{ site.baseurl }}/events.json',
       failure: function() {
@@ -424,7 +425,7 @@
        * @param {string} message Text to be placed in pre element.
        */
       function appendPre(message) {
-        var pre = document.getElementById('content');
+        var pre = document.getElementById('pre_content');
         var textContent = document.createTextNode(message + '\n');
         pre.appendChild(textContent);
       }
@@ -436,7 +437,7 @@
        */
       function listUpcomingEvents() {
         gapi.client.calendar.events.list({
-          'calendarId': 'donaldboulton@gmail.com',
+          'calendarId': 'donboulton@bibwoe.com',
           'timeMin': (new Date()).toISOString(),
           'showDeleted': false,
           'singleEvents': true,
