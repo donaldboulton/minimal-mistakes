@@ -91,6 +91,7 @@ google:
   API_Key                : "AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA"
   secret                 : "JeQvTgrid7n-CrkGgcnyprWj"
   instant_search         : # false (default), true
+google-search_engine_id  : "013988495707638373148:g116y1r0c-a"
 github                   : [metadata]
 google-maps-api-key      : "ma8ylWAZUjNaRNN45C2CBJHnyw5Nt2A7MgJqoFFHQKtwHzxO9lMMdHmOpbBHuB0wVKVvBLr2gpBN5Sw/+6GtpUxy0CmBF6voPmcj8FMnhZKI1CYPoTMWgUzTZeVaZOQnTFipmx80+1KZPu9JPsjNQdRbmQKwOcaqVPocIqVs3Nk="
 repository               : "https://github.com/donaldboulton/DWB"
