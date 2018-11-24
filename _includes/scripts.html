@@ -144,8 +144,9 @@
         next: '>',
       },
       displayEventTime: false, 
+      eventLimit: true,
       googleCalendarApiKey: 'AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA',
-
+      
       eventSources: [
         { 
           googleCalendarId: 'donboulton@bibwoe.com',
@@ -302,8 +303,8 @@
     },
     defaultDate: '2018-10-12',
     editable: true,
-    navLinks: true, // can click day/week names to navigate views
-    eventLimit: true, // allow "more" link when too many events
+    navLinks: true,
+    eventLimit: true,
     events: {
       url: '{{ site.baseurl }}/events.json',
       failure: function() {

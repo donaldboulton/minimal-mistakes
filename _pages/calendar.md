@@ -2,6 +2,7 @@
 layout: single
 title: Calendar
 permalink: /calendar/
+classes: wide
 toc: false
 sidenav: false
 adds: true
@@ -16,6 +17,6 @@ support: [cookies, calendar, adds]
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_pages/calendar.md
 ---
 
-# Donald Boulton Calendar
+# Donald Boulton's Calendar
 
 {% include calendar.html %}
