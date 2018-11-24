@@ -520,6 +520,18 @@ a:active {
   background-color: #1d1d1d!important;
 }
 
+#script-warning {
+  display: none;
+  background: #eee;
+  border-bottom: 1px solid #ddd;
+  padding: 0 10px;
+  line-height: 40px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 12px;
+  color: red;
+}
+
 #loading {
   display: none;
   position: absolute;

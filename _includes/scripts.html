@@ -146,7 +146,16 @@
       displayEventTime: false, 
       googleCalendarApiKey: 'AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA',
 
-      events: 'en.usa#holiday@group.v.calendar.google.com',
+      eventSources: [
+        { 
+          googleCalendarId: 'donboulton@bibwoe.com',
+          className: 'gcal-event' 
+        },
+        { 
+          googleCalendarId:  'en.usa#contacts@group.v.calendar.google.com',
+          className: 'fc-event' 
+        }
+      ],
       eventClick: function(arg) {
 
         window.open(arg.event.url, 'gcalevent', 'width=700,height=600');
@@ -278,55 +287,39 @@
 {% endif %}
 
 {% if page.support contains 'events' %}
-<script src="{{ '/build/jquery-ui/moment.min.js' | relative_url }}"></script>
 <script src="{{ '/build/jquery-ui/superagent.js' | relative_url }}"></script>
 <script src="{{ '/build/jquery-ui/fullcalendar.min.js' | relative_url }}"></script>
-<script src="{{ '/build/jquery-ui/gcal.min.js' | relative_url }}"></script>
-
-<script>
+<script type="text/javascript">
   document.addEventListener('DOMContentLoaded', function() {
+  var calendarEl = document.getElementById('calendar');
 
-/* initialize the external events
------------------------------------------------------------------*/
-
-  var containerEl = document.getElementById('external-events-list');
-  new FullCalendar.Draggable(containerEl, {
-    itemSelector: '.fc-event',
-    eventData: function(eventEl) {
-      return {
-        title: eventEl.innerText.trim()
+  var calendar = new FullCalendar.Calendar(calendarEl, {
+    themeSystem: 'jquery-ui',
+    header: {
+      left: 'prev,next today',
+      center: 'title',
+      right: 'month,agendaWeek,agendaDay,listWeek'
+    },
+    defaultDate: '2018-10-12',
+    editable: true,
+    navLinks: true, // can click day/week names to navigate views
+    eventLimit: true, // allow "more" link when too many events
+    events: {
+      url: '{{ site.baseurl }}/events.json',
+      failure: function() {
+        document.getElementById('script-warning').style.display = 'block'
       }
+    },
+    loading: function(bool) {
+      document.getElementById('loading').style.display =
+        bool ? 'block' : 'none';
     }
   });
 
-  var calendarEl = document.getElementById('calendar');
-  var calendar = new FullCalendar.Calendar(calendarEl, {
-      googleCalendarApiKey: 'AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA',
-      themeSystem: 'jquery-ui',
-      header: {
-        left: 'prev,next today',
-        center: 'title',
-        right: 'month,agendaWeek,agendaDay'
-      },
-      buttonText: {
-        today: 'today',
-        month: 'month',
-        week: 'week',
-        day: 'day',
-        prev: '<',
-        next: '>',
-      },
-      editable: true,
-      droppable: true,
-      drop: function(arg) {
-        if (document.getElementById('drop-remove').checked) {
-          arg.draggedEl.parentNode.removeChild(arg.draggedEl);
-        }
-      }
-    });
-    calendar.render();
-  });
+  calendar.render();
+});
 </script>
+
 <script type="text/javascript">
       var CLIENT_ID = '857761645811-8ceeuq6uao353t3vb2jpgfqe92ufn2sj.apps.googleusercontent.com';
       var API_KEY = 'AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA';
