@@ -14,11 +14,11 @@ cookies: true
 events: true
 image:
   cover: true
-  path: &image /assets/images/support.png
+  path: &image /assets/images/support.jpg
   feature: *image
-  thumbnail: /assets/images/support-320.png
+  thumbnail: /assets/images/support-320.jpg
 header:
-  image: /assets/images/support.png
+  image: /assets/images/support.jpg
 sidebar_events: true
 locations: 
   - Oklahoma City, OKC
