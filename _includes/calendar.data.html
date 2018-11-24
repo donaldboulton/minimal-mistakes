@@ -1,17 +1,5 @@
----
-layout: none
-title:
-permalink: /calendar-data/
----
+<h3>Page events</h3>
 
-[
 {% for event in page.events %}
-	{
-		"title":"{{page.title}}",
-		"start": "{{page.event_date}}",
-		"allDay":true,
-		"url":"{{page.url}}"
-	}
-	{%unless forloop.last %},{%endunless%}
+{{page.title}} {{page.event_title}} {{page.event_comment}} {{page.event_date}} {{page.url}}<br/>
 {% endfor %}
-]

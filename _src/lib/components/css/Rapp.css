@@ -440,11 +440,9 @@ a:active {
   background: #141010!important;
 }
 
-.btnHeader {
- 
+.btnHeader { 
   background: #403d3d!important;
   border-bottom: 2px solid #070808!important;
-
 }
 
 .btnHeader:focus, .btnHeader.active {

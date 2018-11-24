@@ -3,7 +3,7 @@ layout: single
 title: Event Calendar
 permalink: /events/
 classes: wide
-author_profile: true
+author_profile: false
 toc: false
 sidenav: false
 side_react: true
@@ -14,11 +14,11 @@ cookies: true
 events: true
 image:
   cover: true
-  path: &image /build/images/support.png
+  path: &image /assets/images/support.png
   feature: *image
-  thumbnail: /build/images/support-320.png
+  thumbnail: /assets/images/support-320.png
 header:
-  image: /build/images/support.png
+  image: /assets/images/support.png
 sidebar_events: true
 locations: 
   - Oklahoma City, OKC

@@ -145,6 +145,8 @@
       },
       displayEventTime: false, 
       eventLimit: true,
+      contentHeight:"auto",
+      handleWindowResize:true,
       googleCalendarApiKey: 'AIzaSyAcWFi5XIFAY_L9Kkfh2fT46p_rFJyjDHA',
       
       eventSources: [
@@ -292,6 +294,15 @@
 <script src="{{ '/build/jquery-ui/fullcalendar.min.js' | relative_url }}"></script>
 <script type="text/javascript">
   document.addEventListener('DOMContentLoaded', function() {
+    var containerEl = document.getElementById('external-events-list');
+    new FullCalendar.Draggable(containerEl, {
+      itemSelector: '.fc-event',
+      eventData: function(eventEl) {
+        return {
+          title: eventEl.innerText.trim()
+        }
+      }
+  });
   var calendarEl = document.getElementById('calendar');
 
   var calendar = new FullCalendar.Calendar(calendarEl, {
@@ -301,10 +312,26 @@
       center: 'title',
       right: 'month,agendaWeek,agendaDay,listWeek'
     },
+    buttonText: {
+        today: 'today',
+        month: 'month',
+        week: 'week',
+        day: 'day',
+        prev: '<',
+        next: '>',
+    },
     defaultDate: '2018-10-12',
     editable: true,
+    droppable: true,
+      drop: function(arg) {
+        if (document.getElementById('drop-remove').checked) {
+          arg.draggedEl.parentNode.removeChild(arg.draggedEl);
+        }
+    },
     navLinks: true,
     eventLimit: true,
+    contentHeight:"auto",
+    handleWindowResize:true,
     events: {
       url: '{{ site.baseurl }}/events.json',
       failure: function() {
