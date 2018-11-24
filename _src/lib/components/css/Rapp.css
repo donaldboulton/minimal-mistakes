@@ -542,6 +542,5 @@ a:active {
 
 .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
   border: 1px solid #666!important;
-  background: #332d2d url(images/ui-bg_highlight-soft_80_000000_1x100.png) 50% top repeat-x!important;
-  color: #58b22e;
+  background: #332d2d url(../images/ui-bg_glass_20_555555_1x400.png) 50% top repeat-x!important
 }
