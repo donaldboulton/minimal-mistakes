@@ -2,9 +2,9 @@
 
 <!-- Portfolio Start -->
 <section id="portfolio-work">
-    <div class="container">
+    <div class="panel">
         <div class="row">
-          <div class="col-md-12">
+          <div class="group">
             <h1>Build Data</h1>
             <p>Use the Netlify CMS to maintain yaml files which is the source data for creating this chart.</p>
 
@@ -14,11 +14,10 @@
     </div>
 </section>
 
-
 <script>
 var chartData = {
             labels: [
-            {% for item in site.data.chartdata.builds %}
+            {% for item in site.data.builddata.builds %}
                 "{{item.label}}",
             {% endfor %}
                 ],
@@ -26,7 +25,7 @@ var chartData = {
                 label: 'Builds',
                 borderWidth: 1,
                 data: [
-                {% for item in site.data.chartdata.builds %}
+                {% for item in site.data.builddata.builds %}
                 "{{item.value}}",
                 {% endfor %}
 
