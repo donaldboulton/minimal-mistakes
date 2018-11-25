@@ -44,7 +44,10 @@
     <ul class="author__urls social-icons">
       {% if author.location %}
         <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
-          <svg class="icon icon--map-marker-alt fa-map-marker-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-map-marker-alt' | prepend: 'build/icons/' | relative_url }}"></use></svg><span itemprop="name">{{ author.location }}</span>
+          <a rel="noreferrer" href="/location/" itemprop="url">
+            <svg class="icon icon--map-marker-alt fa-map-marker-alt fa-google-plus" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-map-marker-alt' | prepend: 'build/icons/' | relative_url }}"></use></svg><span itemprop="name">&nbsp;{{ author.location }}</span>
+          </a>
+          </li>
         </li>
       {% endif %}
 
@@ -58,7 +61,7 @@
 
       {% if author.email %}
         <li>
-          <a rel="noreferrer" href="/contact/">
+          <a rel="noreferrer" href="/contact/" itemprop="url">
             <meta itemprop="email" content="{{ author.email }}" />
             <svg class="icon icon--email fa-email" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-email' | prepend: 'build/icons/' | relative_url }}"></use></svg> {{ site.data.ui-text[site.locale].email_label | default: "Email" }}
           </a>

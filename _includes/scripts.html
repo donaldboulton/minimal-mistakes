@@ -133,12 +133,13 @@
       header: {
         left: 'prev,next today',
         center: 'title',
-        right: 'month,agendaWeek,agendaDay'
+        right: 'month,agendaWeek,agendaDay,listWeek'
       },
       buttonText: {
         today: 'today',
         month: 'month',
-        week: 'week',
+        agendaWeek: 'week',
+        listWeek: 'list',
         day: 'day',
         prev: '<',
         next: '>',
@@ -295,6 +296,8 @@
 {% if page.support contains 'events' %}
 <script src="{{ '/build/jquery-ui/superagent.js' | relative_url }}"></script>
 <script src="{{ '/build/jquery-ui/fullcalendar.min.js' | relative_url }}"></script>
+<script src="{{ '/build/jquery-ui/gcal.min.js' | relative_url }}"></script>
+
 <script type="text/javascript">
   document.addEventListener('DOMContentLoaded', function() {
     var containerEl = document.getElementById('external-events-list');
@@ -338,6 +341,7 @@
     handleWindowResize: true,
     events: {
       url: '{{ site.baseurl }}/events.json',
+      type: 'POST',
       failure: function() {
         document.getElementById('script-warning').style.display = 'block'
       }

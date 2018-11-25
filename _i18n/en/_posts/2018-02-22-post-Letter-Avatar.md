@@ -11,6 +11,7 @@ author: Donald Boulton
 author_profile: true
 sidenav: true
 reviews: true
+side_react: true
 adds: true
 cookies: true
 footnotes: true
@@ -24,7 +25,6 @@ category:
 locations:
   - OKC Oklahoma
 toc: true
-side_react: true
 toc_label: "Page Contents"
 read_time: true
 comments: true

@@ -1,5 +1,5 @@
 backend:
-  name: github
+  name: git-gateway
   repo: donaldboulton/DWB
   branch: gh-pages
   squash_merges: true
@@ -80,11 +80,11 @@ collections: # A list of collections the CMS should be able to edit
               - {label: Published, name: published, widget: boolean}
               - {label: Loud, name: loud, widget: boolean}
               - {label: Message, name: message, widget: text}
-              - {label: URL, name: url, widget: url}
+              - {label: URL, name: url, widget: string}
       - name: events
         label: Events
         file: _events/events.json
-        description: Site-top Events - publish one at a time
+        description: Site Events - publish one at a time
         fields:
           - name: events
             label: Events
@@ -98,4 +98,14 @@ collections: # A list of collections the CMS should be able to edit
               - {label: End, name: end, widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
               - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
               - {label: Message, name: message, widget: text}
-              - {label: URL, name: url, widget: url}
+              - {label: URL, name: url, widget: string}
+      - label: "Chart Data"
+        name: "chart"
+        file: "_data/chartdata.yml"
+        fields:
+          - label: Builds
+            name: builds
+            widget: list
+            fields:
+              - {label: Label, name: label, widget: number}
+              - {label: Value, name: value, widget: num

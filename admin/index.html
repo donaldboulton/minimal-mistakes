@@ -2,11 +2,10 @@
 layout: none
 ---
 
-<!doctype html>
-
-<html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js" itemscope itemtype="https://schema.org/WebSite">
+<!doctype html><html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js" itemscope itemtype="https://schema.org/WebSite">
 <head>
   {% include head.html %}
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 
 <body id="style-3" class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %} auth-false" itemscope itemtype="https://schema.org/WebPage">
@@ -41,33 +40,6 @@ layout: none
     }
   });
   </script>
-  
-{% raw %}
-<script type="text/x-handlebars" data-template-name='cms/preview/authors'>
-  {{#cms-preview field="authors" as |author|}}
-    <div class="author">
-      <h2>{{author.name}}</h2>
-      <span class="author-avatar align-left">{{cms-preview field="avatar" from=author}}</span>
-      <div class="email">{{cms-preview field="email" from=author}}</div>
-      <div class="url">{{cms-preview field="url" from=author}}</div>
-      <div class="description">{{cms-preview field="description" from=author}}</div>
-    </div>
-  {{/cms-preview}}
-</script>
-<script type="text/x-handlebars" data-template-name='cms/widgets/author-control'>
-  <div class="form-group">
-    <label>{{widget.label}}</label>
-    {{view "select" content=widget.field.authors value=widget.value}}
-  </div>
-</script>
-
-<script type="text/x-handlebars" data-template-name='cms/widgets/author-preview'>
-  Written by
-  <span class="author">{{widget.value}}</span>
-  on
-  <span class="date">{{time-format widget.entry.cmsDate 'LL'}}</span>
-</script>
-{% endraw %}
 </div>
 <script>
   UPLOADCARE_LOCALE = "en";
@@ -79,5 +51,8 @@ layout: none
 )
 </script>
 <script charset="utf-8" src="//ucarecdn.com/libs/widget/3.6.1/uploadcare.full.min.js"></script>
+<script>
+    CMS.registerPreviewStyle("/assets/app.css");
+</script>
 </body>
 </html>

@@ -48,6 +48,9 @@ layout: default
             {% if page.sidenav == true %}
                {% include sidenav.html %}
             {% endif %}
+            {% if page.maps == true %}
+               {% include rockwell-rv-map.html %}
+            {% endif %}
             {% if page.reviews == true %}
                {% include reviews-sidebar.html %}
             {% endif %}
