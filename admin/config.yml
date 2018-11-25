@@ -108,4 +108,4 @@ collections: # A list of collections the CMS should be able to edit
             widget: list
             fields:
               - {label: Label, name: label, widget: number}
-              - {label: Value, name: value, widget: num
+              - {label: Value, name: value, widget: number}
