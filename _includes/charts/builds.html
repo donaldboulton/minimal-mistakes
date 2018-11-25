@@ -1,5 +1,5 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.js"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
 <!-- Portfolio Start -->
 <section id="portfolio-work">
     <div class="panel">
@@ -24,6 +24,7 @@ var chartData = {
             datasets: [{
                 label: 'Builds',
                 borderWidth: 1,
+                backgroundColor: "rgba(153,255,51,0.6)",
                 data: [
                 {% for item in site.data.builddata.builds %}
                 "{{item.value}}",
@@ -47,6 +48,13 @@ window.onload = function() {
             title: {
                 display: true,
                 text: 'Netlify Builds'
+            },
+            plugins: {
+                datalabels: {
+                    formatter: function(value, context) {
+                        return context.chart.data.labels[context.dataIndex];
+                    }
+                }
             }
         }
     });

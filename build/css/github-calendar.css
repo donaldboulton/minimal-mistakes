@@ -44,7 +44,7 @@
 .calendar-graph {
     padding: 5px 0 0;
     height: 126px;
-    text-align: center;
+    text-align: left;
 }
 
 .contrib-column {
@@ -61,7 +61,7 @@
 
 .table-column {
     display: table-cell;
-    width: 1%;
+    width: 33%;
     padding-right: 10px;
     padding-left: 10px;
     vertical-align: top;

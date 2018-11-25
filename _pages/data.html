@@ -6,7 +6,8 @@ title: data
 headerSubCopy: Maintain Charts with Netlify CMS
 ---
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
 
 <!-- Portfolio Start -->
 <section id="portfolio-work">
@@ -56,6 +57,13 @@ window.onload = function() {
             title: {
                 display: true,
                 text: 'Netlify Builds'
+            },
+            plugins: {
+                datalabels: {
+                    formatter: function(value, context) {
+                        return context.chart.data.labels[context.dataIndex];
+                    }
+                }
             }
         }
     });
