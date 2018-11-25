@@ -1,5 +1,5 @@
 .calendar {
-    width: 100%;
+    max-width: 100%;
     font-family: Helvetica, arial;
     border: 1px solid #434040;
     border-radius: 3px;
@@ -83,7 +83,7 @@
 
 .monospace {
     text-align: center;
-    color: #000;
+    color: #fff;
     font-family: monospace;
 }
 
