@@ -99,6 +99,22 @@ collections: # A list of collections the CMS should be able to edit
               - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
               - {label: Message, name: message, widget: text}
               - {label: URL, name: url, widget: string}
+  - name: "settings"
+    label: "Settings"
+    files:
+      - name: "general"
+        label: "Site Settings"
+        file: "_data/settings.json"
+        description: "General Site Settings"
+        fields:
+          - {label: "Global title", name: site_title, widget: "string"}
+          - label: "Post Settings"
+            name: posts
+            widget: "object"
+            fields:
+              - {label: "Number of posts on frontpage", name: front_limit, widget: number}
+              - {label: "Default Author", name: author, widget: string}
+              - {label: "Default Thumbnail", name: thumb, widget: image, class: "thumb"}
       - label: "Chart Data"
         name: "chart"
         file: "_data/chartdata.yml"
@@ -109,3 +125,14 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - {label: Label, name: label, widget: number}
               - {label: Value, name: value, widget: number}
+      - name: "authors"
+        label: "Authors"
+        file: "_data/authors.yml"
+        description: "Author descriptions"
+        fields:
+          - name: authors
+            label: Authors
+            widget: list
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Description", name: "description", widget: "markdown"}
