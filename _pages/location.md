@@ -16,14 +16,20 @@ notifications: false
 sidenav: true
 reviews: false
 adds: true
-support: [adds, cookies]
+support: [adds, cookies, here-maps]
 
 header:
   image: /assets/images/support-1200.jpg
   teaser: /assets/images/support-320.jpg
 ---
 
-# OKC Oklahoma
+# OKC Oklahoma Map
+
+{% include here-map.html %}
+
+## Google location map
+
+This Google api is now cost based so this map is not displaying correctly. But can still be used for 
 
 {% include rockwell-rv-map.html %}
 
