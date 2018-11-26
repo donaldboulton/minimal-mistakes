@@ -124,29 +124,6 @@ hr{
   to { transform: rotate(360deg); }
 }
 
-#react-chat-slack {
-  z-index: 1000;
-  width: 400px;
-  max-width: 95vw;
-  position: fixed;
-  right: 50px;
-  bottom: -1px;
-  border: 1px solid #434040;
-  border-radius: 3px 3px 0 0;
-  background: #141010;
-  color: #ffffff;
-}
-
-#react-chat-slack #react-chat-slack-greeting {
-  width: 400px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  color: #ffffff;
-}
-
 .hr::before {
   background-color: #3c3333!important;
   color: #fff;
@@ -543,4 +520,9 @@ a:active {
 .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
   border: 1px solid #666!important;
   background: #332d2d url(../images/ui-bg_glass_20_555555_1x400.png) 50% top repeat-x!important
+}
+
+.js-calendar-graph-svg {
+  text-align: left;
+  float: left
 }

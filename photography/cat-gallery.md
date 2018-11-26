@@ -7,14 +7,14 @@ last_modified_at: 2018-04-04T12:42:38-04:0
 author: Donald Boulton
 author_profile: false
 gallery: true
-comments: true
+comments: false
 share: false
 reviews: false
 side_react: true
 related: true
 sidenav-gallery: true
 adds: false
-cookies: false
+cookies: true
 breadcrumb: true
 category:
   - Gallerys

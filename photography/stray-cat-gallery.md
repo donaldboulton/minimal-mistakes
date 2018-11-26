@@ -12,6 +12,7 @@ share: true
 reviews: false
 related: true
 sidenav-gallery: true
+side_react: true
 adds: false
 cookies: false
 breadcrumb: true
@@ -33,6 +34,7 @@ locations:
   - 4 Oaks Storaage
 support: [gallery]
 ---
+
 # Feed stray cats every morning
 
 Stray cats I take care of every day, and have since 1999.

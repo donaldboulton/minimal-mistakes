@@ -3,7 +3,6 @@ import './lib/components/css/Rapp.css';
 import Todo from './lib/components/Todo';
 import AppNotify from './lib/components/AppNotify';
 import Dialog from './lib/components/Dialog';
-import Popup from './lib/components/Popup';
 class Layout extends React.Component {
   render() {
     return (
@@ -11,7 +10,6 @@ class Layout extends React.Component {
         <Todo />
         <AppNotify />        
         <Dialog />
-        <Popup />
       </div>
     );
   }
