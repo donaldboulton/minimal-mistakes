@@ -14,4 +14,4 @@ class Layout extends React.Component {
   }
 }
 
-import './main.min.css';
+import './main.css';
