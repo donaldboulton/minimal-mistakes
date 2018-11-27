@@ -1,7 +1,7 @@
 (function ($) {
   var $comments = $('.js-comments');
 
-  $('#comment-form').submit(function () {
+  $('#comments-queue').submit(function () {
     var form = this;
 
     $(form).addClass('disabled');
@@ -32,7 +32,7 @@
 
     return false;
   });
-  document.getElementById("comment-form").reset();
+  document.getElementById("comments-queue").reset();
   function showAlert(message) {
     $('.page__comments-form .js-notice').removeClass('hidden');
     $('.page__comments-form .js-notice-text').html(message);

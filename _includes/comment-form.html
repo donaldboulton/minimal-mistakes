@@ -4,7 +4,7 @@
     <h3><svg class="icon icon--comment" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-comment' | prepend: '/build/icons/' | relative_url }}"></use></svg>&nbsp;Comment Form Moderated<small><a rel="noreferrer" id="cancel-comment-reply-link" href="{{ page.url | relative_url }}#respond" style="display:none;">Cancel reply</a></small></h3>
   </header>
   <div class="page__comments-form">
-      <form id="comment-form" class="page__form js-form" netlify-honeypot="bot-field" data-netlify="true" action="https://donboulton.com/thanks/">
+      <form id="comments-queue" class="page__form js-form" netlify-honeypot="bot-field" data-netlify="true" action="/thanks/">
           <div class="form-group">
               <label class="sr-only" for="name"><strong>Your Name</strong></label>
               <input type="text" id="name" name="name" spellcheck="false" placeholder="Your Name (required *)" required="required" aria-required="true" pattern="^([- \w\d\u00c0-\u024f]+)$" title="Your name (no special characters, diacritics are okay)">
@@ -28,7 +28,7 @@
               <input type="hidden" name="options[origin]" value="{{ page.url | relative_url }}">
               <input type="hidden" name="path" value="{{ page.url }}">
               <input type="hidden" name="options[parent]" value="{{ page.url | relative_url }}">
-              <input type="hidden" name="comment-form" value="comment">
+              <input type="hidden" name="comments-queue" value="comment">
               <input type="hidden" id="comment-replying-to" name="replying_to" value="">
               <input type="hidden" id="comment-post-id" name="options[slug]" value="{{ page.slug }}">
               <input type="hidden" name="_next" value="https://donboulton.com/thanks/">
