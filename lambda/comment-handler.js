@@ -12,12 +12,12 @@ export function handler(event, context, callback) {
     "text": "New comment on " + process.env.URL,
 	  "attachments": [
       {
-        "fallback": "New comment on the comment example site",
+        "fallback": "New comment on donboulton.com",
         "color": "#444",
         "author_name": body.data.email,
         "title": body.data.path,
         "title_link": process.env.URL + body.data.path,
-        "text": body.data.comment
+        "text": body.data.message
       },
       {
         "fallback": "Manage comments on " + process.env.URL,

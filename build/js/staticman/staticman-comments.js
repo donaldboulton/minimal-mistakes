@@ -6,7 +6,7 @@
 
     $(form).addClass('disabled');
     $("#comment-form-submit").html(
-      '<svg class="icon spin"><use xlink:href="/assets/icons/icons.svg#icon-loading"></use></svg> Loading...'
+      '<img class="icon spin" src="/assets/icons/loading.svg" /> Loading...'
     );
 
     $.ajax({
@@ -15,17 +15,17 @@
       data: $(this).serialize(),
       contentType: 'application/x-www-form-urlencoded',
       success: function (data) {
-        $('#comment-form-submit').html('{{ site.data.ui-text[site.locale].comment_btn_submitted | default: "Submitted" }}');
+        $('#comment-form-submit').html('Submitted');
         $('.page__comments-form .js-notice').removeClass('notice--danger');
         $('.page__comments-form .js-notice').addClass('notice--success');
-        showAlert('{{ site.data.ui-text[site.locale].comment_success_msg | default: "Thanks for your comment! It will show on the site once it has been approved." }}');
+        showAlert('Thanks for your comment! It will show on the site once it has been approved.');
       },
       error: function (err) {
         console.log(err);
-        $('#comment-form-submit').html('{{ site.data.ui-text[site.locale].comment_btn_submit  | default: "Submit Comment" }}');
+        $('#comment-form-submit').html('Submit Comment');
         $('.page__comments-form .js-notice').removeClass('notice--success');
         $('.page__comments-form .js-notice').addClass('notice--danger');
-        showAlert('{{ site.data.ui-text[site.locale].comment_error_msg | default: "Sorry, there was an error with your submission. Please make sure all required fields have been completed and try again." }}');
+        showAlert('Sorry, there was an error with your submission. Please make sure all required fields have been completed and try again.');
         $(form).removeClass('disabled');
       }
     });
@@ -125,3 +125,44 @@ I: function(id) {
   return document.getElementById(id);
 }
 };
+
+function flagIfEmpty(input){
+  if(input.value.length < 1) {
+    input.classList.add("needs-content");
+  }
+}
+
+(function(){
+  var forms = document.querySelectorAll('form');
+  if(forms.length == 0){ return;}
+
+  for (let f = 0; f < forms.length; f++) {
+    forms[f].addEventListener('submit', function(event) {
+      event.preventDefault();
+      let form = event.target;
+
+      var flags = form.querySelectorAll('.needs-content');
+      for (let f = 0; f < flags.length; f++) {
+        flags[f].classList.remove('needs-content');
+      }
+
+      let inputs = form.querySelectorAll('input');
+      for (let i = 0; i < inputs.length; i++) {
+        flagIfEmpty(inputs[i]);
+      }
+      let text = form.querySelectorAll('textarea');
+      for (let t = 0; t < text.length; t++) {
+        flagIfEmpty(text[t]);
+      }
+
+      flags = form.querySelectorAll('.needs-content');
+      if(flags.length > 1) {
+        return false;
+      } else {
+        form.submit();
+      }
+
+    }, false);
+  }
+})();
+

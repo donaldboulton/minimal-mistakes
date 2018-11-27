@@ -42,9 +42,13 @@ export function handler(event, context, callback) {
           'form-name' : "approved-comments",
           'path': data.path,
           'received': new Date().toString(),
-          'email': data.email,
+          'avatar': data.name,
           'name': data.name,
-          'comment': data.comment
+          'email': data.email,
+          'url': data.url,
+          'title': data.title,
+          'message': data.message,
+          'replying_to': data.replying_to
         };
         var approvedURL = process.env.URL;
 
@@ -57,7 +61,7 @@ export function handler(event, context, callback) {
             msg = 'Post to approved comments failed:' + err;
             console.log(msg);
           } else {
-            msg = 'Post to approved comments list successful.'
+            msg = 'Post to approved comments list successful.';
             console.log(msg);
             purgeComment(id);
           }
