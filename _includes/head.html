@@ -94,12 +94,16 @@
   <link rel="stylesheet" href="{{ '/build/jquery-ui/fullcalendar.min.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/build/jquery-ui/jquery-ui.theme.min.css' | relative_url }}">
 {% endif %}
+
 {% if page.support contains 'here-maps' %}
-<script src="https://js.api.here.com/v3/3.0/mapsjs-core.js"
-type="text/javascript" charset="utf-8"></script>
-<script src="https://js.api.here.com/v3/3.0/mapsjs-service.js"
-type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.0/mapsjs-ui.css" />
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-core.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-service.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-ui.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js"></script>
+    <script src="{{ '/public/here-maps.js' | relative_url }}"></script>
 {% endif %}
+
 {% if site.webmention_url %}
   <link rel="webmention" href="{{ site.webmention_url }}">
 {% endif %}
