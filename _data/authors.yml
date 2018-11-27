@@ -1,19 +1,7 @@
-# Authors
+authors:
+  - description: |-
+      ![DWB](https://ucarecdn.com/7f7c639e-55a0-45c6-ac08-09091c4f1674/)
 
-Donald Boulton:
-  description: "Away from ASP, Jekyll for Me"
-  uri: "https://donboulton.com"
-  email: "donaldboulton@gmail.com"
-  bio: "Away from ASP. Jekyll for Me"
-  avatar: "/assets/images/donald-boulton.jpg"
-  twitter: "donboulton"
-  google_plus: "donaldboulton"
-
-Michael Rose:
-  description: "Another tattoed Time Travler"
-  uri: "https://mademistakes.com"
-  email: "michaelrose@mademistakes.com"
-  bio: "Just making mistakes"
-  avatar: "/assets/images/michael-rose.jpg"
-  twitter: "mademistakes"
-  google_plus: "mademistakes"
+      Front end web Developer
+    name: Donald Boulton
+  - {}
