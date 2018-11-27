@@ -29,7 +29,7 @@ header:
 
 ## Google location map
 
-This Google api is now cost based so this map is not displaying correctly. But can still be used for 
+This Google api is now cost based, so this map is not going to display correctly at the end of the free billing period. But can still be used for directions.
 
 {% include rockwell-rv-map.html %}
 
