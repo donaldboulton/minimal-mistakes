@@ -9,7 +9,7 @@
     var RealtimeAppKey = "K4xqxB";
 
     // update the UI  
-    $('#curl').text('curl "http://ortc-developers-useast1-s0001.realtime.co/send" --data "AK=' + RealtimeAppKey + '&AT=SomeToken&C=' + channel + '&M=12345678_1-1_This is a web push notification sent using the Realtime REST API"');
+    $('#curl').text('curl "https://www.w3.org/2000/svgortc-developers-useast1-s0001.realtime.co/send" --data "AK=' + RealtimeAppKey + '&AT=SomeToken&C=' + channel + '&M=12345678_1-1_This is a web push notification sent using the Realtime REST API"');
     $('#channel').text(channel);
       
     // start Web Push Manager to obtain device id and register it with Realtime

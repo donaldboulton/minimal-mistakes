@@ -16,7 +16,7 @@ const customStyles = {
   }
 };
 
-// Make sure to bind modal to your appElement (http://reactcommunity.org/react-modal/accessibility/)
+// Make sure to bind modal to your appElement (https://www.w3.org/2000/svgreactcommunity.org/react-modal/accessibility/)
 Modal.setAppElement('#menu')
 
 class App extends React.Component {

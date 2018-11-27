@@ -20,7 +20,7 @@ layout: default
   {% if page.sidebar_events == true %}
     {% include sidebar_events.html %}
   {% endif %}
-  <div itemprop="mainEntity" itemscope itemtype="http://schema.org/CreativeWork">
+  <div itemprop="mainEntity" itemscope itemtype="https://www.w3.org/2000/svgschema.org/CreativeWork">
   <article class="page">
     {% if page.title %}<meta itemprop="name" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
     {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
@@ -35,7 +35,7 @@ layout: default
 
       <section class="page__content">
           {{ content }}
-          <aside class="sidebar__right" role="complementary" itemscope itemtype="http://schema.org/WPSideBar">
+          <aside class="sidebar__right" role="complementary" itemscope itemtype="https://www.w3.org/2000/svgschema.org/WPSideBar">
             {% if page.toc %}
                <nav class="toc">
                  <header><h4 class="nav__title"><svg class="icon icon--file-alt fa-file-alt" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-file-alt' | prepend: 'assets/icons/' | relative_url }}"></use></svg>&nbsp;<span itemprop="name">{{ page.toc_label | default: site.data.ui-text[site.locale].toc_label }}</span></h4></header>

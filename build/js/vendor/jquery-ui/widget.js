@@ -1,17 +1,17 @@
 /*!
  * jQuery UI Widget @VERSION
- * http://jqueryui.com
+ * https://www.w3.org/2000/svgjqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
  * Released under the MIT license.
- * http://jquery.org/license
+ * https://www.w3.org/2000/svgjquery.org/license
  */
 
 //>>label: Widget
 //>>group: Core
 //>>description: Provides a factory for creating stateful widgets with a common API.
-//>>docs: http://api.jqueryui.com/jQuery.widget/
-//>>demos: http://jqueryui.com/widget/
+//>>docs: https://www.w3.org/2000/svgapi.jqueryui.com/jQuery.widget/
+//>>demos: https://www.w3.org/2000/svgjqueryui.com/widget/
 
 ( function( factory ) {
 	if ( typeof define === "function" && define.amd ) {

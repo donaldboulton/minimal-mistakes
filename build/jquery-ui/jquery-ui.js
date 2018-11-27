@@ -1,5 +1,5 @@
 /*! jQuery UI - v1.12.1 - 2018-11-21
-* http://jqueryui.com
+* https://www.w3.org/2000/svgjqueryui.com
 * Includes: widget.js, position.js, data.js, disable-selection.js, focusable.js, form-reset-mixin.js, keycode.js, labels.js, scroll-parent.js, tabbable.js, unique-id.js, widgets/draggable.js, widgets/droppable.js, widgets/resizable.js, widgets/selectable.js, widgets/sortable.js, widgets/accordion.js, widgets/autocomplete.js, widgets/button.js, widgets/checkboxradio.js, widgets/controlgroup.js, widgets/datepicker.js, widgets/dialog.js, widgets/menu.js, widgets/mouse.js, widgets/progressbar.js, widgets/selectmenu.js, widgets/slider.js, widgets/spinner.js, widgets/tabs.js, widgets/tooltip.js
 * Copyright jQuery Foundation and other contributors; Licensed MIT */
 
@@ -22,18 +22,18 @@ var version = $.ui.version = "1.12.1";
 
 /*!
  * jQuery UI Widget 1.12.1
- * http://jqueryui.com
+ * https://www.w3.org/2000/svgjqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
  * Released under the MIT license.
- * http://jquery.org/license
+ * https://www.w3.org/2000/svgjquery.org/license
  */
 
 //>>label: Widget
 //>>group: Core
 //>>description: Provides a factory for creating stateful widgets with a common API.
-//>>docs: http://api.jqueryui.com/jQuery.widget/
-//>>demos: http://jqueryui.com/widget/
+//>>docs: https://www.w3.org/2000/svgapi.jqueryui.com/jQuery.widget/
+//>>demos: https://www.w3.org/2000/svgjqueryui.com/widget/
 
 
 
@@ -52,7 +52,7 @@ $.cleanData = ( function( orig ) {
 					$( elem ).triggerHandler( "remove" );
 				}
 
-			// Http://bugs.jquery.com/ticket/8235
+			// https://www.w3.org/2000/svgbugs.jquery.com/ticket/8235
 			} catch ( e ) {}
 		}
 		orig( elems );
@@ -745,20 +745,20 @@ var widget = $.widget;
 
 /*!
  * jQuery UI Position 1.12.1
- * http://jqueryui.com
+ * https://www.w3.org/2000/svgjqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
  * Released under the MIT license.
- * http://jquery.org/license
+ * https://www.w3.org/2000/svgjquery.org/license
  *
- * http://api.jqueryui.com/position/
+ * https://www.w3.org/2000/svgapi.jqueryui.com/position/
  */
 
 //>>label: Position
 //>>group: Core
 //>>description: Positions elements relative to other elements.
-//>>docs: http://api.jqueryui.com/position/
-//>>demos: http://jqueryui.com/position/
+//>>docs: https://www.w3.org/2000/svgapi.jqueryui.com/position/
+//>>demos: https://www.w3.org/2000/svgjqueryui.com/position/
 
 
 ( function() {
@@ -1233,17 +1233,17 @@ var position = $.ui.position;
 
 /*!
  * jQuery UI :data 1.12.1
- * http://jqueryui.com
+ * https://www.w3.org/2000/svgjqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
  * Released under the MIT license.
- * http://jquery.org/license
+ * https://www.w3.org/2000/svgjquery.org/license
  */
 
 //>>label: :data Selector
 //>>group: Core
 //>>description: Selects elements which have data stored under the specified key.
-//>>docs: http://api.jqueryui.com/data-selector/
+//>>docs: https://www.w3.org/2000/svgapi.jqueryui.com/data-selector/
 
 
 var data = $.extend( $.expr[ ":" ], {
@@ -1262,17 +1262,17 @@ var data = $.extend( $.expr[ ":" ], {
 
 /*!
  * jQuery UI Disable Selection 1.12.1
- * http://jqueryui.com
+ * https://www.w3.org/2000/svgjqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
  * Released under the MIT license.
- * http://jquery.org/license
+ * https://www.w3.org/2000/svgjquery.org/license
  */
 
 //>>label: disableSelection
 //>>group: Core
 //>>description: Disable selection of text content within the set of matched elements.
-//>>docs: http://api.jqueryui.com/disableSelection/
+//>>docs: https://www.w3.org/2000/svgapi.jqueryui.com/disableSelection/
 
 // This file is deprecated
 
@@ -1298,17 +1298,17 @@ var disableSelection = $.fn.extend( {
 
 /*!
  * jQuery UI Focusable 1.12.1
- * http://jqueryui.com
+ * https://www.w3.org/2000/svgjqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
  * Released under the MIT license.
- * http://jquery.org/license
+ * https://www.w3.org/2000/svgjquery.org/license
  */
 
 //>>label: :focusable Selector
 //>>group: Core
 //>>description: Selects elements which can be focused.
-//>>docs: http://api.jqueryui.com/focusable-selector/
+//>>docs: https://www.w3.org/2000/svgapi.jqueryui.com/focusable-selector/
 
 
 
@@ -1382,17 +1382,17 @@ var form = $.fn.form = function() {
 
 /*!
  * jQuery UI Form Reset Mixin 1.12.1
- * http://jqueryui.com
+ * https://www.w3.org/2000/svgjqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
  * Released under the MIT license.
- * http://jquery.org/license
+ * https://www.w3.org/2000/svgjquery.org/license
  */
 
 //>>label: Form Reset Mixin
 //>>group: Core
 //>>description: Refresh input widgets when their form is reset
-//>>docs: http://api.jqueryui.com/form-reset-mixin/
+//>>docs: https://www.w3.org/2000/svgapi.jqueryui.com/form-reset-mixin/
 
 
 
@@ -1445,17 +1445,17 @@ var formResetMixin = $.ui.formResetMixin = {
 
 /*!
  * jQuery UI Keycode 1.12.1
- * http://jqueryui.com
+ * https://www.w3.org/2000/svgjqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
  * Released under the MIT license.
- * http://jquery.org/license
+ * https://www.w3.org/2000/svgjquery.org/license
  */
 
 //>>label: Keycode
 //>>group: Core
 //>>description: Provide keycodes as keynames
-//>>docs: http://api.jqueryui.com/jQuery.ui.keyCode/
+//>>docs: https://www.w3.org/2000/svgapi.jqueryui.com/jQuery.ui.keyCode/
 
 
 var keycode = $.ui.keyCode = {
@@ -1491,17 +1491,17 @@ var escapeSelector = $.ui.escapeSelector = ( function() {
 
 /*!
  * jQuery UI Labels 1.12.1
- * http://jqueryui.com
+ * https://www.w3.org/2000/svgjqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
  * Released under the MIT license.
- * http://jquery.org/license
+ * https://www.w3.org/2000/svgjquery.org/license
  */
 
 //>>label: labels
 //>>group: Core
 //>>description: Find all the labels associated with a given input
-//>>docs: http://api.jqueryui.com/labels/
+//>>docs: https://www.w3.org/2000/svgapi.jqueryui.com/labels/
 
 
 
@@ -1543,17 +1543,17 @@ var labels = $.fn.labels = function() {
 
 /*!
  * jQuery UI Scroll Parent 1.12.1
- * http://jqueryui.com
+ * https://www.w3.org/2000/svgjqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
  * Released under the MIT license.
- * http://jquery.org/license
+ * https://www.w3.org/2000/svgjquery.org/license
  */
 
 //>>label: scrollParent
 //>>group: Core
 //>>description: Get the closest ancestor element that is scrollable.
-//>>docs: http://api.jqueryui.com/scrollParent/
+//>>docs: https://www.w3.org/2000/svgapi.jqueryui.com/scrollParent/
 
 
 
@@ -1578,17 +1578,17 @@ var scrollParent = $.fn.scrollParent = function( includeHidden ) {
 
 /*!
  * jQuery UI Tabbable 1.12.1
- * http://jqueryui.com
+ * https://www.w3.org/2000/svgjqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
  * Released under the MIT license.
- * http://jquery.org/license
+ * https://www.w3.org/2000/svgjquery.org/license
  */
 
 //>>label: :tabbable Selector
 //>>group: Core
 //>>description: Selects elements which can be tabbed to.
-//>>docs: http://api.jqueryui.com/tabbable-selector/
+//>>docs: https://www.w3.org/2000/svgapi.jqueryui.com/tabbable-selector/
 
 
 
@@ -1603,17 +1603,17 @@ var tabbable = $.extend( $.expr[ ":" ], {
 
 /*!
  * jQuery UI Unique ID 1.12.1
- * http://jqueryui.com
+ * https://www.w3.org/2000/svgjqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
  * Released under the MIT license.
- * http://jquery.org/license
+ * https://www.w3.org/2000/svgjquery.org/license
  */
 
 //>>label: uniqueId
 //>>group: Core
 //>>description: Functions to generate and remove uniqueId's
-//>>docs: http://api.jqueryui.com/uniqueId/
+//>>docs: https://www.w3.org/2000/svgapi.jqueryui.com/uniqueId/
 
 
 
@@ -1647,17 +1647,17 @@ var ie = $.ui.ie = !!/msie [\w.]+/.exec( navigator.userAgent.toLowerCase() );
 
 /*!
  * jQuery UI Mouse 1.12.1
- * http://jqueryui.com
+ * https://www.w3.org/2000/svgjqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
  * Released under the MIT license.
- * http://jquery.org/license
+ * https://www.w3.org/2000/svgjquery.org/license
  */
 
 //>>label: Mouse
 //>>group: Widgets
 //>>description: Abstracts mouse-based interactions to assist in creating certain widgets.
-//>>docs: http://api.jqueryui.com/mouse/
+//>>docs: https://www.w3.org/2000/svgapi.jqueryui.com/mouse/
 
 
 
@@ -1933,18 +1933,18 @@ var safeBlur = $.ui.safeBlur = function( element ) {
 
 /*!
  * jQuery UI Draggable 1.12.1
- * http://jqueryui.com
+ * https://www.w3.org/2000/svgjqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
  * Released under the MIT license.
- * http://jquery.org/license
+ * https://www.w3.org/2000/svgjquery.org/license
  */
 
 //>>label: Draggable
 //>>group: Interactions
 //>>description: Enables dragging functionality for any element.
-//>>docs: http://api.jqueryui.com/draggable/
-//>>demos: http://jqueryui.com/draggable/
+//>>docs: https://www.w3.org/2000/svgapi.jqueryui.com/draggable/
+//>>demos: https://www.w3.org/2000/svgjqueryui.com/draggable/
 //>>css.structure: ../../themes/base/draggable.css
 
 
@@ -2294,7 +2294,7 @@ $.widget( "ui.draggable", $.ui.mouse, {
 				o.appendTo ) );
 		}
 
-		// Http://bugs.jqueryui.com/ticket/9446
+		// https://www.w3.org/2000/svgbugs.jqueryui.com/ticket/9446
 		// a helper function can return the original element
 		// which wouldn't have been set to relative in _create
 		if ( helperIsFunction && helper[ 0 ] === this.element[ 0 ] ) {
@@ -3163,18 +3163,18 @@ var widgetsDraggable = $.ui.draggable;
 
 /*!
  * jQuery UI Droppable 1.12.1
- * http://jqueryui.com
+ * https://www.w3.org/2000/svgjqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
  * Released under the MIT license.
- * http://jquery.org/license
+ * https://www.w3.org/2000/svgjquery.org/license
  */
 
 //>>label: Droppable
 //>>group: Interactions
 //>>description: Enables drop targets for draggable elements.
-//>>docs: http://api.jqueryui.com/droppable/
-//>>demos: http://jqueryui.com/droppable/
+//>>docs: https://www.w3.org/2000/svgapi.jqueryui.com/droppable/
+//>>demos: https://www.w3.org/2000/svgjqueryui.com/droppable/
 
 
 
@@ -3644,18 +3644,18 @@ var widgetsDroppable = $.ui.droppable;
 
 /*!
  * jQuery UI Resizable 1.12.1
- * http://jqueryui.com
+ * https://www.w3.org/2000/svgjqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
  * Released under the MIT license.
- * http://jquery.org/license
+ * https://www.w3.org/2000/svgjquery.org/license
  */
 
 //>>label: Resizable
 //>>group: Interactions
 //>>description: Enables resize functionality for any element.
-//>>docs: http://api.jqueryui.com/resizable/
-//>>demos: http://jqueryui.com/resizable/
+//>>docs: https://www.w3.org/2000/svgapi.jqueryui.com/resizable/
+//>>demos: https://www.w3.org/2000/svgjqueryui.com/resizable/
 //>>css.structure: ../../themes/base/core.css
 //>>css.structure: ../../themes/base/resizable.css
 //>>css.theme: ../../themes/base/theme.css
@@ -4828,18 +4828,18 @@ var widgetsResizable = $.ui.resizable;
 
 /*!
  * jQuery UI Selectable 1.12.1
- * http://jqueryui.com
+ * https://www.w3.org/2000/svgjqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
  * Released under the MIT license.
- * http://jquery.org/license
+ * https://www.w3.org/2000/svgjquery.org/license
  */
 
 //>>label: Selectable
 //>>group: Interactions
 //>>description: Allows groups of elements to be selected with the mouse.
-//>>docs: http://api.jqueryui.com/selectable/
-//>>demos: http://jqueryui.com/selectable/
+//>>docs: https://www.w3.org/2000/svgapi.jqueryui.com/selectable/
+//>>demos: https://www.w3.org/2000/svgjqueryui.com/selectable/
 //>>css.structure: ../../themes/base/selectable.css
 
 
@@ -5123,18 +5123,18 @@ var widgetsSelectable = $.widget( "ui.selectable", $.ui.mouse, {
 
 /*!
  * jQuery UI Sortable 1.12.1
- * http://jqueryui.com
+ * https://www.w3.org/2000/svgjqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
  * Released under the MIT license.
- * http://jquery.org/license
+ * https://www.w3.org/2000/svgjquery.org/license
  */
 
 //>>label: Sortable
 //>>group: Interactions
 //>>description: Enables items in a list to be sorted using the mouse.
-//>>docs: http://api.jqueryui.com/sortable/
-//>>demos: http://jqueryui.com/sortable/
+//>>docs: https://www.w3.org/2000/svgapi.jqueryui.com/sortable/
+//>>demos: https://www.w3.org/2000/svgjqueryui.com/sortable/
 //>>css.structure: ../../themes/base/sortable.css
 
 
@@ -6659,11 +6659,11 @@ var widgetsSortable = $.widget( "ui.sortable", $.ui.mouse, {
 
 /*!
  * jQuery UI Accordion 1.12.1
- * http://jqueryui.com
+ * https://www.w3.org/2000/svgjqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
  * Released under the MIT license.
- * http://jquery.org/license
+ * https://www.w3.org/2000/svgjquery.org/license
  */
 
 //>>label: Accordion
@@ -6671,8 +6671,8 @@ var widgetsSortable = $.widget( "ui.sortable", $.ui.mouse, {
 // jscs:disable maximumLineLength
 //>>description: Displays collapsible content panels for presenting information in a limited amount of space.
 // jscs:enable maximumLineLength
-//>>docs: http://api.jqueryui.com/accordion/
-//>>demos: http://jqueryui.com/accordion/
+//>>docs: https://www.w3.org/2000/svgapi.jqueryui.com/accordion/
+//>>demos: https://www.w3.org/2000/svgjqueryui.com/accordion/
 //>>css.structure: ../../themes/base/core.css
 //>>css.structure: ../../themes/base/accordion.css
 //>>css.theme: ../../themes/base/theme.css
@@ -7256,18 +7256,18 @@ var widgetsAccordion = $.widget( "ui.accordion", {
 
 /*!
  * jQuery UI Menu 1.12.1
- * http://jqueryui.com
+ * https://www.w3.org/2000/svgjqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
  * Released under the MIT license.
- * http://jquery.org/license
+ * https://www.w3.org/2000/svgjquery.org/license
  */
 
 //>>label: Menu
 //>>group: Widgets
 //>>description: Creates nestable menus.
-//>>docs: http://api.jqueryui.com/menu/
-//>>demos: http://jqueryui.com/menu/
+//>>docs: https://www.w3.org/2000/svgapi.jqueryui.com/menu/
+//>>demos: https://www.w3.org/2000/svgjqueryui.com/menu/
 //>>css.structure: ../../themes/base/core.css
 //>>css.structure: ../../themes/base/menu.css
 //>>css.theme: ../../themes/base/theme.css
@@ -7911,18 +7911,18 @@ var widgetsMenu = $.widget( "ui.menu", {
 
 /*!
  * jQuery UI Autocomplete 1.12.1
- * http://jqueryui.com
+ * https://www.w3.org/2000/svgjqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
  * Released under the MIT license.
- * http://jquery.org/license
+ * https://www.w3.org/2000/svgjquery.org/license
  */
 
 //>>label: Autocomplete
 //>>group: Widgets
 //>>description: Lists suggested words as the user is typing.
-//>>docs: http://api.jqueryui.com/autocomplete/
-//>>demos: http://jqueryui.com/autocomplete/
+//>>docs: https://www.w3.org/2000/svgapi.jqueryui.com/autocomplete/
+//>>demos: https://www.w3.org/2000/svgjqueryui.com/autocomplete/
 //>>css.structure: ../../themes/base/core.css
 //>>css.structure: ../../themes/base/autocomplete.css
 //>>css.theme: ../../themes/base/theme.css
@@ -8575,18 +8575,18 @@ var widgetsAutocomplete = $.ui.autocomplete;
 
 /*!
  * jQuery UI Controlgroup 1.12.1
- * http://jqueryui.com
+ * https://www.w3.org/2000/svgjqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
  * Released under the MIT license.
- * http://jquery.org/license
+ * https://www.w3.org/2000/svgjquery.org/license
  */
 
 //>>label: Controlgroup
 //>>group: Widgets
 //>>description: Visually groups form control widgets
-//>>docs: http://api.jqueryui.com/controlgroup/
-//>>demos: http://jqueryui.com/controlgroup/
+//>>docs: https://www.w3.org/2000/svgapi.jqueryui.com/controlgroup/
+//>>demos: https://www.w3.org/2000/svgjqueryui.com/controlgroup/
 //>>css.structure: ../../themes/base/core.css
 //>>css.structure: ../../themes/base/controlgroup.css
 //>>css.theme: ../../themes/base/theme.css
@@ -8860,18 +8860,18 @@ var widgetsControlgroup = $.widget( "ui.controlgroup", {
 
 /*!
  * jQuery UI Checkboxradio 1.12.1
- * http://jqueryui.com
+ * https://www.w3.org/2000/svgjqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
  * Released under the MIT license.
- * http://jquery.org/license
+ * https://www.w3.org/2000/svgjquery.org/license
  */
 
 //>>label: Checkboxradio
 //>>group: Widgets
 //>>description: Enhances a form with multiple themeable checkboxes or radio buttons.
-//>>docs: http://api.jqueryui.com/checkboxradio/
-//>>demos: http://jqueryui.com/checkboxradio/
+//>>docs: https://www.w3.org/2000/svgapi.jqueryui.com/checkboxradio/
+//>>demos: https://www.w3.org/2000/svgjqueryui.com/checkboxradio/
 //>>css.structure: ../../themes/base/core.css
 //>>css.structure: ../../themes/base/button.css
 //>>css.structure: ../../themes/base/checkboxradio.css
@@ -9130,18 +9130,18 @@ var widgetsCheckboxradio = $.ui.checkboxradio;
 
 /*!
  * jQuery UI Button 1.12.1
- * http://jqueryui.com
+ * https://www.w3.org/2000/svgjqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
  * Released under the MIT license.
- * http://jquery.org/license
+ * https://www.w3.org/2000/svgjquery.org/license
  */
 
 //>>label: Button
 //>>group: Widgets
 //>>description: Enhances a form with themeable buttons.
-//>>docs: http://api.jqueryui.com/button/
-//>>demos: http://jqueryui.com/button/
+//>>docs: https://www.w3.org/2000/svgapi.jqueryui.com/button/
+//>>demos: https://www.w3.org/2000/svgjqueryui.com/button/
 //>>css.structure: ../../themes/base/core.css
 //>>css.structure: ../../themes/base/button.css
 //>>css.theme: ../../themes/base/theme.css
@@ -9498,18 +9498,18 @@ var widgetsButton = $.ui.button;
 /* jscs:disable requireCamelCaseOrUpperCaseIdentifiers */
 /*!
  * jQuery UI Datepicker 1.12.1
- * http://jqueryui.com
+ * https://www.w3.org/2000/svgjqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
  * Released under the MIT license.
- * http://jquery.org/license
+ * https://www.w3.org/2000/svgjquery.org/license
  */
 
 //>>label: Datepicker
 //>>group: Widgets
 //>>description: Displays a calendar from an input or inline for selecting dates.
-//>>docs: http://api.jqueryui.com/datepicker/
-//>>demos: http://jqueryui.com/datepicker/
+//>>docs: https://www.w3.org/2000/svgapi.jqueryui.com/datepicker/
+//>>demos: https://www.w3.org/2000/svgjqueryui.com/datepicker/
 //>>css.structure: ../../themes/base/core.css
 //>>css.structure: ../../themes/base/datepicker.css
 //>>css.theme: ../../themes/base/theme.css
@@ -9806,7 +9806,7 @@ $.extend( Datepicker.prototype, {
 		}
 
 		// Set display:block in place of inst.dpDiv.show() which won't work on disconnected elements
-		// http://bugs.jqueryui.com/ticket/7552 - A Datepicker created on a detached div has zero height
+		// https://www.w3.org/2000/svgbugs.jqueryui.com/ticket/7552 - A Datepicker created on a detached div has zero height
 		inst.dpDiv.css( "display", "block" );
 	},
 
@@ -11602,18 +11602,18 @@ var widgetsDatepicker = $.datepicker;
 
 /*!
  * jQuery UI Dialog 1.12.1
- * http://jqueryui.com
+ * https://www.w3.org/2000/svgjqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
  * Released under the MIT license.
- * http://jquery.org/license
+ * https://www.w3.org/2000/svgjquery.org/license
  */
 
 //>>label: Dialog
 //>>group: Widgets
 //>>description: Displays customizable dialog windows.
-//>>docs: http://api.jqueryui.com/dialog/
-//>>demos: http://jqueryui.com/dialog/
+//>>docs: https://www.w3.org/2000/svgapi.jqueryui.com/dialog/
+//>>demos: https://www.w3.org/2000/svgjqueryui.com/dialog/
 //>>css.structure: ../../themes/base/core.css
 //>>css.structure: ../../themes/base/dialog.css
 //>>css.theme: ../../themes/base/theme.css
@@ -12517,11 +12517,11 @@ var widgetsDialog = $.ui.dialog;
 
 /*!
  * jQuery UI Progressbar 1.12.1
- * http://jqueryui.com
+ * https://www.w3.org/2000/svgjqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
  * Released under the MIT license.
- * http://jquery.org/license
+ * https://www.w3.org/2000/svgjquery.org/license
  */
 
 //>>label: Progressbar
@@ -12529,8 +12529,8 @@ var widgetsDialog = $.ui.dialog;
 // jscs:disable maximumLineLength
 //>>description: Displays a status indicator for loading state, standard percentage, and other progress indicators.
 // jscs:enable maximumLineLength
-//>>docs: http://api.jqueryui.com/progressbar/
-//>>demos: http://jqueryui.com/progressbar/
+//>>docs: https://www.w3.org/2000/svgapi.jqueryui.com/progressbar/
+//>>demos: https://www.w3.org/2000/svgjqueryui.com/progressbar/
 //>>css.structure: ../../themes/base/core.css
 //>>css.structure: ../../themes/base/progressbar.css
 //>>css.theme: ../../themes/base/theme.css
@@ -12681,11 +12681,11 @@ var widgetsProgressbar = $.widget( "ui.progressbar", {
 
 /*!
  * jQuery UI Selectmenu 1.12.1
- * http://jqueryui.com
+ * https://www.w3.org/2000/svgjqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
  * Released under the MIT license.
- * http://jquery.org/license
+ * https://www.w3.org/2000/svgjquery.org/license
  */
 
 //>>label: Selectmenu
@@ -12693,8 +12693,8 @@ var widgetsProgressbar = $.widget( "ui.progressbar", {
 // jscs:disable maximumLineLength
 //>>description: Duplicates and extends the functionality of a native HTML select element, allowing it to be customizable in behavior and appearance far beyond the limitations of a native select.
 // jscs:enable maximumLineLength
-//>>docs: http://api.jqueryui.com/selectmenu/
-//>>demos: http://jqueryui.com/selectmenu/
+//>>docs: https://www.w3.org/2000/svgapi.jqueryui.com/selectmenu/
+//>>demos: https://www.w3.org/2000/svgjqueryui.com/selectmenu/
 //>>css.structure: ../../themes/base/core.css
 //>>css.structure: ../../themes/base/selectmenu.css, ../../themes/base/button.css
 //>>css.theme: ../../themes/base/theme.css
@@ -13347,18 +13347,18 @@ var widgetsSelectmenu = $.widget( "ui.selectmenu", [ $.ui.formResetMixin, {
 
 /*!
  * jQuery UI Slider 1.12.1
- * http://jqueryui.com
+ * https://www.w3.org/2000/svgjqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
  * Released under the MIT license.
- * http://jquery.org/license
+ * https://www.w3.org/2000/svgjquery.org/license
  */
 
 //>>label: Slider
 //>>group: Widgets
 //>>description: Displays a flexible slider with ranges and accessibility via keyboard.
-//>>docs: http://api.jqueryui.com/slider/
-//>>demos: http://jqueryui.com/slider/
+//>>docs: https://www.w3.org/2000/svgapi.jqueryui.com/slider/
+//>>demos: https://www.w3.org/2000/svgjqueryui.com/slider/
 //>>css.structure: ../../themes/base/core.css
 //>>css.structure: ../../themes/base/slider.css
 //>>css.theme: ../../themes/base/theme.css
@@ -14083,18 +14083,18 @@ var widgetsSlider = $.widget( "ui.slider", $.ui.mouse, {
 
 /*!
  * jQuery UI Spinner 1.12.1
- * http://jqueryui.com
+ * https://www.w3.org/2000/svgjqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
  * Released under the MIT license.
- * http://jquery.org/license
+ * https://www.w3.org/2000/svgjquery.org/license
  */
 
 //>>label: Spinner
 //>>group: Widgets
 //>>description: Displays buttons to easily input numbers via the keyboard or mouse.
-//>>docs: http://api.jqueryui.com/spinner/
-//>>demos: http://jqueryui.com/spinner/
+//>>docs: https://www.w3.org/2000/svgapi.jqueryui.com/spinner/
+//>>demos: https://www.w3.org/2000/svgjqueryui.com/spinner/
 //>>css.structure: ../../themes/base/core.css
 //>>css.structure: ../../themes/base/spinner.css
 //>>css.theme: ../../themes/base/theme.css
@@ -14641,18 +14641,18 @@ var widgetsSpinner = $.ui.spinner;
 
 /*!
  * jQuery UI Tabs 1.12.1
- * http://jqueryui.com
+ * https://www.w3.org/2000/svgjqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
  * Released under the MIT license.
- * http://jquery.org/license
+ * https://www.w3.org/2000/svgjquery.org/license
  */
 
 //>>label: Tabs
 //>>group: Widgets
 //>>description: Transforms a set of container elements into a tab structure.
-//>>docs: http://api.jqueryui.com/tabs/
-//>>demos: http://jqueryui.com/tabs/
+//>>docs: https://www.w3.org/2000/svgapi.jqueryui.com/tabs/
+//>>demos: https://www.w3.org/2000/svgjqueryui.com/tabs/
 //>>css.structure: ../../themes/base/core.css
 //>>css.structure: ../../themes/base/tabs.css
 //>>css.theme: ../../themes/base/theme.css
@@ -15490,7 +15490,7 @@ $.widget( "ui.tabs", {
 				.done( function( response, status, jqXHR ) {
 
 					// support: jQuery <1.8
-					// http://bugs.jquery.com/ticket/11778
+					// https://www.w3.org/2000/svgbugs.jquery.com/ticket/11778
 					setTimeout( function() {
 						panel.html( response );
 						that._trigger( "load", event, eventData );
@@ -15501,7 +15501,7 @@ $.widget( "ui.tabs", {
 				.fail( function( jqXHR, status ) {
 
 					// support: jQuery <1.8
-					// http://bugs.jquery.com/ticket/11778
+					// https://www.w3.org/2000/svgbugs.jquery.com/ticket/11778
 					setTimeout( function() {
 						complete( jqXHR, status );
 					}, 1 );
@@ -15547,18 +15547,18 @@ var widgetsTabs = $.ui.tabs;
 
 /*!
  * jQuery UI Tooltip 1.12.1
- * http://jqueryui.com
+ * https://www.w3.org/2000/svgjqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
  * Released under the MIT license.
- * http://jquery.org/license
+ * https://www.w3.org/2000/svgjquery.org/license
  */
 
 //>>label: Tooltip
 //>>group: Widgets
 //>>description: Shows additional information for any element on hover or focus.
-//>>docs: http://api.jqueryui.com/tooltip/
-//>>demos: http://jqueryui.com/tooltip/
+//>>docs: https://www.w3.org/2000/svgapi.jqueryui.com/tooltip/
+//>>demos: https://www.w3.org/2000/svgjqueryui.com/tooltip/
 //>>css.structure: ../../themes/base/core.css
 //>>css.structure: ../../themes/base/tooltip.css
 //>>css.theme: ../../themes/base/theme.css

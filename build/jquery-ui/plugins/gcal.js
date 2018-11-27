@@ -124,7 +124,7 @@ fullcalendar_1.registerEventSourceDef({
         var apiKey = meta.googleCalendarApiKey || calendar.opt('googleCalendarApiKey');
         if (!apiKey) {
             onFailure({
-                message: 'Specify a googleCalendarApiKey. See http://fullcalendar.io/docs/google_calendar/'
+                message: 'Specify a googleCalendarApiKey. See https://www.w3.org/2000/svgfullcalendar.io/docs/google_calendar/'
             });
         }
         else {

@@ -17,7 +17,7 @@ module.exports = Merge(CommonConfig, {
       {
         host: 'localhost',
         port: 3000,
-        proxy: 'http://localhost:8080',
+        proxy: 'https://www.w3.org/2000/svglocalhost:8080',
         files: ['_site', '_src'],
       },
       {

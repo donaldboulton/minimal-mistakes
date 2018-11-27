@@ -1415,7 +1415,7 @@ function Response(req) {
      : null;
   this.statusText = this.req.xhr.statusText;
   var status = this.xhr.status;
-  // handle IE9 bug: http://stackoverflow.com/questions/10046972/msie-returns-status-code-of-1223-for-ajax-request
+  // handle IE9 bug: https://www.w3.org/2000/svgstackoverflow.com/questions/10046972/msie-returns-status-code-of-1223-for-ajax-request
   if (status === 1223) {
     status = 204;
   }

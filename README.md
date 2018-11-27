@@ -18,13 +18,13 @@ All react additions were hand build adding components individually in the DOM fo
 
 react-a11y-dialog is a React component for [a11y-dialog](https://github.com/edenspiekermann/a11y-dialog) relying on [React portals](https://reactjs.org/docs/portals.html) to ease the use of accessible dialog windows in React applications.
 
-### Based on [A11y Dialog](http://edenspiekermann.github.io/a11y-dialog/)
+### Based on [A11y Dialog](https://www.w3.org/2000/svgedenspiekermann.github.io/a11y-dialog/)
 
-[a11y-dialog](http://edenspiekermann.github.io/a11y-dialog/) is a lightweight (1.3Kb) yet flexible script to create accessible dialog windows.log.
+[a11y-dialog](https://www.w3.org/2000/svgedenspiekermann.github.io/a11y-dialog/) is a lightweight (1.3Kb) yet flexible script to create accessible dialog windows.log.
 
 ## React Notifications
 
-### React-web-notification [![Build Status](https://travis-ci.org/georgeOsdDev/react-web-notification.svg?branch=develop)](https://travis-ci.org/georgeOsdDev/react-web-notification) [![npm version](https://badge.fury.io/js/react-web-notification.svg)](http://badge.fury.io/js/react-web-notification)
+### React-web-notification [![Build Status](https://travis-ci.org/georgeOsdDev/react-web-notification.svg?branch=develop)](https://travis-ci.org/georgeOsdDev/react-web-notification) [![npm version](https://badge.fury.io/js/react-web-notification.svg)](https://www.w3.org/2000/svgbadge.fury.io/js/react-web-notification)
 
 React component with [HTML5 Web Notification API](https://developer.mozilla.org/en/docs/Web/API/notification).
 This component show nothing in dom element, but trigger HTML5 Web Notification API with `render` method in the life cycle of React.js.
@@ -248,7 +248,7 @@ npm run clean:project
 * [Jekyll multiple languages plugin](https://github.com/Anthony-Gaudino/jekyll-multiple-languages-plugin)
 * [Jekyll SEO tag](https://github.com/jekyll/jekyll-seo-tag)
 * [BrowserSync Webpack plugin](https://www.npmjs.com/package/browser-sync-webpack-plugin)
-* [PostCSS](http://postcss.org/)
+* [PostCSS](https://www.w3.org/2000/svgpostcss.org/)
 
 ## Netlify Identity Widget
 

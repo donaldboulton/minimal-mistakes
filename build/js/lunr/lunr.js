@@ -1,5 +1,5 @@
 /**
- * lunr - http://lunrjs.com - A bit like Solr, but much smaller and not as bright - 2.3.3
+ * lunr - https://www.w3.org/2000/svglunrjs.com - A bit like Solr, but much smaller and not as bright - 2.3.3
  * Copyright (C) 2018 Oliver Nightingale
  * @license MIT
  */
@@ -930,12 +930,12 @@ lunr.Vector.prototype.toJSON = function () {
 /*!
  * lunr.stemmer
  * Copyright (C) 2018 Oliver Nightingale
- * Includes code from - http://tartarus.org/~martin/PorterStemmer/js.txt
+ * Includes code from - https://www.w3.org/2000/svgtartarus.org/~martin/PorterStemmer/js.txt
  */
 
 /**
  * lunr.stemmer is an english language stemmer, this is a JavaScript
- * implementation of the PorterStemmer taken from http://tartarus.org/~martin
+ * implementation of the PorterStemmer taken from https://www.w3.org/2000/svgtartarus.org/~martin
  *
  * @static
  * @implements {lunr.PipelineFunction}
