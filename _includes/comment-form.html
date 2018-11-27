@@ -25,18 +25,9 @@
               <label for="message"><strong>Comment</strong><abbr class="abbr" title="Required">&nbsp;*</abbr><small>&nbsp;(<a rel="noreferrer" href="https://kramdown.gettalong.org/quickref.html">Markdown</a> is allowed)</small></label>
               <textarea type="text" rows="6" id="message" name="message" spellcheck="true" placeholder="Comment (required *)" value="" required="required" aria-required="true"></textarea>
           </div>
-              <input type="hidden" name="options[origin]" value="{{ page.url | relative_url }}">
               <input type="hidden" name="path" value="{{ page.url }}">
               <input type="hidden" name="options[parent]" value="{{ page.url | relative_url }}">
-              <input type="hidden" name="comments-queue" value="comment">
               <input type="hidden" id="comment-replying-to" name="replying_to" value="">
-              <input type="hidden" id="comment-post-id" name="options[slug]" value="{{ page.slug }}">
-              <input type="hidden" name="_next" value="https://donboulton.com/thanks/">
-              <input type="text" name="_gotcha" style="display: none;">
-              <input type="hidden" name="_language" value="en">
-              <input type="hidden" name="SITE_RECAPTCHA_KEY" value="6LerR1MUAAAAACWH7t30s7V4aApQZaIVVPcvH21X">
-              <input type="hidden" name="SITE_RECAPTCHA_SECRET" value="{{ site.reCaptcha.secret }}">
-              <input name="options[redirect]" type="hidden" value="{{site.url}}{{site.baseurl}}/thanks">
               <div>Please Agree to Our <a href="https://donboulton.com/terms">Terms and Conditions</a>&nbsp;<abbr class="abbr" title="Required">&nbsp;*&nbsp;</abbr></div>
               <div class="form-group">
                 <div class="enable-push">
