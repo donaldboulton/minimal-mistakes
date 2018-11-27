@@ -1,0 +1,32 @@
+<div class="note">
+
+## You've still got a little config to do
+
+It looks like you are just setting this up in a new site on Netlify. Woohoo!
+
+{% if init.siteName %}
+  {% set envHelpLink = "https://app.netlify.com/sites/" + init.siteName + "/settings/deploys#build-environment-variables" %}
+{% else %}
+  {% set envHelpLink = "https://www.netlify.com/docs/continuous-deployment/#build-environment-variables" %}
+{% endif %}
+
+You'll just need to [add a few environment variables]({{envHelpLink}}) your site before everything will work.
+
+
+👉 `API_AUTH`
+
+Grants permission to use the Forms API. Get this by [creating new Personal Access Token](https://app.netlify.com/account/applications)
+
+
+
+👉 `APPROVED_COMMENTS_FORM_ID`
+
+This Identifies where to find the approved comment data in the submissions API during your build. All of your forms are listed in the in your [Netlify Admin](https://app.netlify.com/sites/{{init.siteName}}/forms/) and can find this ID at the end of the URL for your `approved-comments` form.
+
+
+
+👉 `SLACK_WEBHOOK_URL`
+
+In order to have the notifications appear in Slack, you'll need to create a Slack app with a webhook URL. [Here's how]().
+
+</div>

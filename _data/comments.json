@@ -1,0 +1,56 @@
+{
+  "/posts/no-performance-bottlenecks/": [
+    {
+      "name": "Phil Hawksworth",
+      "avatar": "https://s.gravatar.com/avatar/10ca8fcb1f434f8929dca2a8867fb71d?s=100&r=x&d=retro",
+      "comment": "\nWhere does the content come from? Well, at build time, it is pulled from Netlify's [form submissions API](https://www.netlify.com/docs/api/)",
+      "date": "2018-03-26T22:42:13.085Z"
+    },
+    {
+      "name": "Phil Hawksworth",
+      "avatar": "https://s.gravatar.com/avatar/10ca8fcb1f434f8929dca2a8867fb71d?s=100&r=x&d=retro",
+      "comment": "\nThat should be good news for anyone who cares about performance (which should be everyone!).",
+      "date": "2018-03-26T22:42:10.334Z"
+    }
+  ],
+  "/posts/comments-on-your-content-in-your-content/": [
+    {
+      "name": "Phil Hawksworth",
+      "avatar": "https://s.gravatar.com/avatar/10ca8fcb1f434f8929dca2a8867fb71d?s=100&r=x&d=retro",
+      "comment": "\nThis approach should work nicely with most any [static site generator](https://www.staticgen.com). ",
+      "date": "2018-03-26T22:38:44.099Z"
+    },
+    {
+      "name": "Phil",
+      "avatar": "https://s.gravatar.com/avatar/10ca8fcb1f434f8929dca2a8867fb71d?s=100&r=x&d=retro",
+      "comment": "\nThis content should be here when the page loads up. No waiting for javascript or any third party services. That should have all happened at site build time.",
+      "date": "2018-03-26T22:36:34.428Z"
+    }
+  ],
+  "/posts/enough-discussion-closing-comments/": [
+    {
+      "name": "Phil Hawksworth",
+      "avatar": "https://s.gravatar.com/avatar/10ca8fcb1f434f8929dca2a8867fb71d?s=100&r=x&d=retro",
+      "comment": "\nOk. Hush now. I'm going to close comments on this page. All the existing comments will remain, but there will no longer be a form to post comments with.",
+      "date": "2018-03-26T22:47:19.031Z"
+    },
+    {
+      "name": "Annony Mouse",
+      "avatar": "https://s.gravatar.com/avatar/97250817aa5c2f1a3582c4097d980477?s=100&r=x&d=retro",
+      "comment": "\nI've got lots of ranty things to say and this text box is exactly where I'm going to say them all.",
+      "date": "2018-03-26T22:45:20.936Z"
+    },
+    {
+      "name": "Phil Hawksworth",
+      "avatar": "https://s.gravatar.com/avatar/10ca8fcb1f434f8929dca2a8867fb71d?s=100&r=x&d=retro",
+      "comment": "\nI guess though, that sometimes when lots of people get passionate about things, the conversations can get out of hand, or off topic.",
+      "date": "2018-03-26T22:44:01.300Z"
+    },
+    {
+      "name": "Phil Hawksworth",
+      "avatar": "https://s.gravatar.com/avatar/10ca8fcb1f434f8929dca2a8867fb71d?s=100&r=x&d=retro",
+      "comment": "\nComments are wonderful! I'll never get tired of all of the things people will want to post here for discussion.",
+      "date": "2018-03-26T22:43:55.969Z"
+    }
+  ]
+}
