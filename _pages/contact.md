@@ -1,10 +1,11 @@
 ---
+layout: single
 title: Contact
 description: Get in touch
 email: donboulton@hotmail.com
 creator: donboulton
 chat: true
-side_react: false
+side_react: true
 hero: Get in touch
 permalink: /contact/
 maps: true
@@ -13,8 +14,6 @@ map:
   longitude: -97.634299097
   address: Rockwell RV Park'
   zoom: 13
-
-layout: single
 author_profile: true
 
 tags:
@@ -25,7 +24,7 @@ toc: false
 sidenav: true
 side_react: true
 reviews: false
-comments: false
+comments: true
 cookies: true
 contact: false
 adds: false

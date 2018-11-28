@@ -9,7 +9,7 @@
       </svg> Add A Page Review</h3>
     </header>
  <div class="page__reviews-form">
-  <form id="review-form" class="page__form js-form form" method="Post" onsubmit="return checkForm(this);" action="https://api.staticman.net/v2/entry/donaldboulton/DWB/gh-pages/reviews" oninput="result.value=parseInt(this['fields[review]'].value)" netlify-honeypot="bot-field" data-netlify="true">
+  <form id="review-form" class="page__form js-form form" action="https://api.staticman.net/v2/entry/donaldboulton/DWB/gh-pages/reviews" oninput="result.value=parseInt(this['fields[review]'].value)" netlify-honeypot="bot-field" data-netlify="true">
     <div class="field-group rating-select"> <span>Add A Rating:&nbsp;</span> <label class="rating-radio-label" for="comment-form[star-1]"> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="1" name="fields[review]" id="comment-form[star-1]" checked=""> <label class="rating-radio-label" for="comment-form[star-2]"> <svg class="icon icon--star_border rating-star rating-radio-star--off"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star_border"></use>star_border</svg> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="2" name="fields[review]" id="comment-form[star-2]"> <label class="rating-radio-label" for="comment-form[star-3]"> <svg class="icon icon--star_border rating-star rating-radio-star--off"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star_border"></use>star_border</svg> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="3" name="fields[review]" id="comment-form[star-3]"> <label class="rating-radio-label" for="comment-form[star-4]"> <svg class="icon icon--star_border rating-star rating-radio-star--off"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star_border"></use>star_border</svg> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="4" name="fields[review]" id="comment-form[star-4]"> <label class="rating-radio-label" for="comment-form[star-5]"> <svg class="icon icon--star_border rating-star rating-radio-star--off"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star_border"></use>star_border</svg> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="5" name="fields[review]" id="comment-form[star-5]"></div>
       <div class="form-group">
         <label class="sr-only" for="name">Your name</label>
@@ -33,7 +33,7 @@
       </div>
       <div class="form-group">
         <label for="review-form[description]">Review Message<abbr class="abbr" title="Required">&nbsp;*</abbr><small>&nbsp;(<a href="https://kramdown.gettalong.org/quickref.html">Markdown</a> is allowed)</small></label>
-        <textarea maxlength="200" name="fields[description]" type="text" name="description" rows="6" id="review-form[description]" placeholder="Message * 200 chars"></textarea>
+        <textarea maxlength="200" name="fields[description]" type="text" name="description" rows="6" id="review-form[description]" placeholder="Message * 200 chars" required></textarea>
       </div>
         <input type="hidden" name="options[origin]" value="{{ page.url | relative_url }}">
         <input type="hidden" name="options[parent]" value="{{ page.url | relative_url }}">
@@ -44,7 +44,7 @@
         <div>Please Agree to Our <a href="https://donboulton.com/terms">Terms and Conditions</a>&nbsp;<abbr class="abbr" title="Required">&nbsp;*&nbsp;</abbr></div>
         <div class="enable-push">
           <div class="toggle-switch">
-            <input aria-label="Terms and Conditions" id="field_terms_review" name="field_terms_review" value="field_terms_review" type="checkbox" onchange="activateButton(this)" />
+            <input aria-label="Terms and Conditions" id="field_terms_review" name="field_terms_review" value="field_terms_review" type="checkbox" required/>
             <label for="field_terms_review"></label>
           </div>
         </div>
@@ -59,35 +59,4 @@
   </form>
  </div>
 </div>
-<script type="text/javascript">
-
-  document.addEventListener("DOMContentLoaded", function() {
-
-    var myForm = document.getElementById("review-form");
-    var checkForm = function(e) {
-      if(!this.terms.checked) {
-        alert("Please indicate that you accept the Terms and Conditions");
-        this.terms.focus();
-        e.preventDefault(); // equivalent to return false
-        return;
-      }
-    };
-
-    // attach the form submit handler
-    myForm.addEventListener("submit", checkForm, true);
-
-    var myCheckbox = document.getElementById("field_terms_reviews");
-    var myCheckboxMsg = "Please indicate that you accept the Terms and Conditions";
-
-    // set the starting error message
-    myCheckbox.setCustomValidity(myCheckboxMsg);
-
-    // attach checkbox handler to toggle error message
-    myCheckbox.addEventListener("change", function() {
-      this.setCustomValidity(this.validity.valueMissing ? myCheckboxMsg : "");
-    }, false);
-
-  }, false);
-
-</script>
 

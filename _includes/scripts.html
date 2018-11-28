@@ -340,7 +340,7 @@
     contentHeight: "auto",
     handleWindowResize: true,
     events: {
-      url: '{{ site.baseurl }}/events.json',
+      url: '{{ site.baseurl }}/events/events.json',
       type: 'POST',
       failure: function() {
         document.getElementById('script-warning').style.display = 'block'
@@ -487,7 +487,12 @@
   <script src="{{ '/build/js/staticman/staticman-comments.js' | relative_url }}"></script>
 {% endif %}
 
+{% if page.reviewss == true %}
+  <script src="{{ '/build/js/staticman/staticman-reviews.js' | relative_url }}"></script>
+{% endif %}
+
 {% if page.anchor == true %}
+<script asnyc src="{{ '/build/js/vendor/anchor/anchor.js' | relative_url }}"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function(event) {
 anchors.options = {
