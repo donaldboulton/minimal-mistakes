@@ -17,7 +17,8 @@ notifications: false
 sidenav: true
 reviews: false
 adds: true
-support: [adds, cookies, here-, youtube]
+here-maps: true
+support: [adds, cookies, here-maps, youtube]
 
 header:
   image: /assets/images/support-1200.jpg
