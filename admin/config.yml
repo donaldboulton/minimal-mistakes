@@ -136,4 +136,6 @@ collections: # A list of collections the CMS should be able to edit
             widget: list
             fields:
               - {label: "Name", name: "name", widget: "string"}
+              - {label: "Email", name: "email", widget: "string"}
+              - {label: "Url", name: "url", widget: "string"}            
               - {label: "Description", name: "description", widget: "markdown"}
