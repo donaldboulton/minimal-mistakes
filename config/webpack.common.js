@@ -1,5 +1,4 @@
 /* eslint-disable import/no-extraneous-dependencies */
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
@@ -38,7 +37,6 @@ module.exports = {
       to: 'images/',
     }]),
     new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i }),
-    new BundleAnalyzerPlugin(),
   ],
   devServer: {
     contentBase: './assets',
