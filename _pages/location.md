@@ -3,7 +3,8 @@ title: "Location"
 excerpt: "Location of donboulton.com."
 no_menu_item: true
 chat: true
-youtubeId: IGMCAZk5xlg
+youtube: true
+youtubeId: 86_vnQc1oBE
 sitemap: false
 permalink: /location/
 slack: false
@@ -16,7 +17,7 @@ notifications: false
 sidenav: true
 reviews: false
 adds: true
-support: [adds, cookies, here-maps]
+support: [adds, cookies, here-, youtube]
 
 header:
   image: /assets/images/support-1200.jpg

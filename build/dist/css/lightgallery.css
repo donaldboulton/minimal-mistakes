@@ -713,6 +713,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   line-height: 1;
   margin-top: -3px;
   vertical-align: middle;
+  color: #000
 }
 .lg-outer .lg-dropdown .lg-icon {
   color: #333;
