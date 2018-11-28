@@ -1,4 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
@@ -6,12 +7,11 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
-const pkg = require('../package.json');
 
 module.exports = {
   entry: {
-    app: ['babel-polyfill', './_src/index.js'],
-    vendor: Object.keys(pkg.dependencies),
+    app: './_src/index.js',
+    vendor: ['a11y-dialog', 'default-passive-events', 'jquery-smooth-scroll', 'lazysizes', 'prop-types', 'react', 'react-a11y-dialog', 'react-dom', 'react-web-notification', 'svg4everybody'],
   },
   resolve: {
     extensions: ['.js', '.jsx']
@@ -38,6 +38,7 @@ module.exports = {
       to: 'images/',
     }]),
     new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i }),
+    new BundleAnalyzerPlugin(),
   ],
   devServer: {
     contentBase: './assets',
