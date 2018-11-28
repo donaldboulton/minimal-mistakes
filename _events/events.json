@@ -1,14 +1,15 @@
 {
   "events": [
     {
-      "title": "Going to see Mom",
-      "id": "1",
-      "resourceId": "1",
       "start": "2018-11-28 11:07:07",
-      "end": "2018-11-28 11:07:07",
-      "date": "2018-11-28 11:07:07",
       "message": "Going to see Mom",
-      "url": "https://donboulton.com/events/"
+      "resourceId": "1",
+      "published": true,
+      "date": "2018-11-28 11:07:07",
+      "url": "https://donboulton.com/events/",
+      "title": "Going to see Mom",
+      "end": "2018-12-08 11:07:07",
+      "id": "1"
     }
   ]
 }
