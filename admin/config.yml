@@ -7,6 +7,7 @@ backend:
     - admin
     - editor
     - user
+logo_url: https://donboulton.com/assets/images/apple-touch-icon.png
 
 display_url: https://donboulton.com
 
@@ -17,7 +18,7 @@ media_library:
    
 publish_mode: editorial_workflow
 
-media_folder: "build/img/uploads/" # Folder where user uploaded files should go
+media_folder: "build/img/uploads" # Folder where user uploaded files should go
 public_folder: "/build/img/uploads"
 
 collections: # A list of collections the CMS should be able to edit
@@ -84,18 +85,18 @@ collections: # A list of collections the CMS should be able to edit
               - {label: URL, name: url, widget: string}
       - name: events
         label: Events
+        extension: "html"
         file: _events/events.json
         description: Site Events - publish one at a time
         fields:
           - name: events
             label: Events
-            widget: list
+            widget: object
             fields:
               - {label: Id, name: id, widget: number}
               - {label: Title, name: title, widget: string, tagname: h1}
               - {label: Start, name: start, widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
               - {label: End, name: end, widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
-              - {label: Message, name: message, widget: text}
               - {label: URL, name: url, widget: string}
   - name: settings
     label: Settings

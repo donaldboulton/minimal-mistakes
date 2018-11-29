@@ -94,7 +94,7 @@
     "dotenv": "^6.1.0",
     "jquery-smooth-scroll": "^2.2.0",
     "lazysizes": "^4.1.2",
-    "netlify-lambda": "^0.4.0",
+    "netlify-lambda": "^1.0.0",
     "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-a11y-dialog": "^4.1.0",
