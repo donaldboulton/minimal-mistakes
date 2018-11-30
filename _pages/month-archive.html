@@ -1,5 +1,5 @@
 ---
-title: "Posts by Month"
+title: Posts by Month
 permalink: /month-archive/
 layout: posts
 date: 2018-05-01 16:16:01 -0900

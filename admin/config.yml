@@ -3,7 +3,7 @@ backend:
   repo: donaldboulton/DWB
   branch: gh-pages
   squash_merges: true
-  accept_roles: #optional - accepts all users if left out
+  accept_roles:
     - admin
     - editor
     - user
@@ -85,19 +85,15 @@ collections: # A list of collections the CMS should be able to edit
               - {label: URL, name: url, widget: string}
       - name: events
         label: Events
-        extension: "html"
-        file: _events/events.json
-        description: Site Events - publish one at a time
+        folder: "_events"
+        description: Site Events
         fields:
-          - name: events
-            label: Events
-            widget: object
-            fields:
-              - {label: Id, name: id, widget: number}
-              - {label: Title, name: title, widget: string, tagname: h1}
-              - {label: Start, name: start, widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
-              - {label: End, name: end, widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
-              - {label: URL, name: url, widget: string}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "default"}
+          - {label: Title, name: title, widget: string, tagname: h1}
+          - {label: Start, name: start, widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
+          - {label: End, name: end, widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
+          - {label: All Day, name: allDay, widget: boolean}
+          - {label: URL, name: url, widget: string}
   - name: settings
     label: Settings
     files:

@@ -1,5 +1,5 @@
 ---
-title: "Location"
+title: Location
 excerpt: "Location of donboulton.com."
 no_menu_item: true
 chat: true

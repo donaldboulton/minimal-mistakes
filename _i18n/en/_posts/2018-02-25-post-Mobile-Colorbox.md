@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Mobile Colorbox"
+title: Mobile Colorbox
 permalink: 2018-02-25-post-Mobile-Colorbox.html
 date: 2018-02-25 15:16:01 -0600
 last_modified_at: 2018-02-28T12:42:38-04:00

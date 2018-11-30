@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Letter Avatar"
+title: Letter Avatar
 date: 2018-02-22 16:16:01 -0600
 event_title: Testing events
 event_comment: Is this working
