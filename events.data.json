@@ -1,14 +1,14 @@
 ---
-layout: none
+layout: null
 ---
 [
 {% for event in site.events %}
 	{
-		"title":"{{event.title}}",
+		"title": "{{event.title}}",
 		"start": "{{event.start}}",
     "end": "{{event.end}}",
 		"allDay": "{{event.allDay}}",
-		"url":"{{event.event_url}}"
+		"url": "{{event.event_url}}"
 	}
 	{%unless forloop.last %},{%endunless%}
 {% endfor %}
