@@ -55,6 +55,17 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Layout", name: "layout", widget: "hidden", default: "default"}
       - {label: "Title", name: "title", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown", required: false}
+  - name: events
+    label: Events
+    folder: "_events"
+    description: Site Events
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "default"}
+      - {label: Title, name: title, widget: string, tagname: h1}
+      - {label: Start, name: start, widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
+      - {label: End, name: end, widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
+      - {label: All Day, name: allDay, widget: boolean}
+      - {label: URL, name: event_url, widget: string}
   - name: updates
     label: Updates
     files:
@@ -83,17 +94,6 @@ collections: # A list of collections the CMS should be able to edit
               - {label: Loud, name: loud, widget: boolean}
               - {label: Message, name: message, widget: text}
               - {label: URL, name: url, widget: string}
-      - name: events
-        label: Events
-        folder: "_events"
-        description: Site Events
-        fields:
-          - {label: "Layout", name: "layout", widget: "hidden", default: "default"}
-          - {label: Title, name: title, widget: string, tagname: h1}
-          - {label: Start, name: start, widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
-          - {label: End, name: end, widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
-          - {label: All Day, name: allDay, widget: boolean}
-          - {label: URL, name: url, widget: string}
   - name: settings
     label: Settings
     files:
