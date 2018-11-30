@@ -3,7 +3,7 @@ layout: null
 title: "Don's Birthday"
 start: "2018-11-15"
 end: "2018-11-15"
-allDay: true
+allDay: allDay
 event_url: https://donboulton.com/
 ---
 

@@ -18,8 +18,8 @@ media_library:
    
 publish_mode: editorial_workflow
 
-media_folder: "build/img/uploads" # Folder where user uploaded files should go
-public_folder: "/build/img/uploads"
+media_folder: "build/uploads" # Folder where user uploaded files should go
+public_folder: "uploads"
 
 collections: # A list of collections the CMS should be able to edit
   - name: "pages" # Used in routes, ie.: /admin/collections/:slug/edit
@@ -61,10 +61,10 @@ collections: # A list of collections the CMS should be able to edit
     description: Site Events
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "default"}
-      - {label: Title, name: title, widget: string, tagname: h1}
+      - {label: Title, name: title, widget: string}
       - {label: Start, name: start, widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
       - {label: End, name: end, widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
-      - {label: All Day, name: allDay, widget: boolean}
+      - {label: All Day, name: allDay, widget: string}
       - {label: URL, name: event_url, widget: string}
   - name: updates
     label: Updates
