@@ -8,7 +8,7 @@ backend:
     - editor
     - user
     
-logo_url: https://donboulton.com/assets/images/apple-touch-icon.png
+logo_url: https://donboulton.com/build/firefox_app_60x60.png
 
 display_url: https://donboulton.com
 
@@ -91,7 +91,6 @@ collections: # A list of collections the CMS should be able to edit
         description: Site Events
         slug: "{{slug}}"
         fields:
-          - {name: layout, label: Layout, widget: hidden, default: null}
           - {label: Title, name: title, widget: string}
           - {label: Start, name: start, widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
           - {label: End, name: end, widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}

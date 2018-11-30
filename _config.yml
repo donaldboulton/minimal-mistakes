@@ -442,7 +442,7 @@ defaults:
       adds: true
       reviews: true
       cookies: true
-      notifications: true
+      notifications: false
       breadcrumbs:
         - label: "Amp Posts"
           url: /:amp/:name/
@@ -459,7 +459,26 @@ defaults:
       type: category
     values:
       layout: "category"
-
+  - scope:
+      path: "_events"
+      type: events
+    values:
+      layout: null
+      author_profile: true
+      read_time: true
+      comments: true
+      share: false
+      side_react: true
+      related: true
+      toc: true
+      adds: true
+      reviews: false
+      cookies: true
+      notifications: false
+      breadcrumbs:
+        - label: "Events"
+          url:  /events/:path/
+     
 posts_json_path: posts.json
 ipstack:
   api_key: b3e3a6f8d63be4a25492fef554f9e28a
