@@ -26,4 +26,6 @@ support: [cookies, events]
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_pages/events.md
 ---
 
+# Site events
+
 {% include events.html %}
