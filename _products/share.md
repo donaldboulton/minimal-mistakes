@@ -1,5 +1,5 @@
 ---
-title: "Share"
+title: Share
 name: Share
 sku: Share
 permalink: /products/share/

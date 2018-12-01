@@ -1,5 +1,6 @@
 ---
-title: "Buy Me Beer"
+title: Beer
+name: Beer
 subtitle: Buy me a beer
 excerpt: "Buy me a bottle of Beer."
 sitemap: false

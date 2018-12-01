@@ -1,5 +1,6 @@
 ---
 title: Feature
+name: Feature
 subtitle: Sponsor a feature
 excerpt: "Sponser Us"
 no_menu_item: true
