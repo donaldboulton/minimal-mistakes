@@ -145,21 +145,6 @@
         next: '>',
       },
       displayEventTime: false, 
-      selectable: true,
-      selectMirror: true,
-      select: function(arg) {
-        var title = prompt('Event Title:');
-        if (title) {
-          calendar.addEvent({
-            title: title,
-            start: arg.start,
-            end: arg.end,
-            allDay: arg.allDay
-            url: arg.url
-          })
-        }
-        calendar.unselect()
-      },
       editable: true,
       eventLimit: true,
       contentHeight: "auto",
@@ -352,7 +337,7 @@
     navLinks: true,
     defaultDate: '2018-12-12',
     selectable: true,
-      selectMirror: true,
+    selectMirror: true,
       select: function(arg) {
         var title = prompt('Event Title:');
         if (title) {
