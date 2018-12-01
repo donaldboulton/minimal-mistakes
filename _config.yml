@@ -479,6 +479,16 @@ defaults:
       breadcrumbs:
         - label: "Events"
           url: /events/:path/
+  # _products
+  - scope:
+      path: "_products"
+      type: "products" # a collection in your site, in plural form
+    values:
+      layout: "product"
+      breadcrumbs:
+        - label: "products"
+          url: /products/
+      permalink: /:products/:name/
      
 posts_json_path: posts.json
 ipstack:

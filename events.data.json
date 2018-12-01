@@ -4,11 +4,12 @@ layout: null
 [
 {% for event in site.events %}
 	{
+    "id": "{{event.id}}",
 		"title": "{{event.title}}",
 		"start": "{{event.start}}",
     "end": "{{event.end}}",
 		"allDay": "{{event.allDay}}",
-		"url": "{{event.event_url}}"
+		"url": "{{event.url}}"
 	}
 	{%unless forloop.last %},{%endunless%}
 {% endfor %}
