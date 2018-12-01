@@ -45,6 +45,18 @@ collections: # A list of collections the CMS should be able to edit
       - {label: allDay, name: allDay, widget: boolean}
       - {label: URL, name: url, widget: string}
       - {label: "Body", name: "body", widget: "markdown", required: false}
+  - name: "products" 
+    label: "Products"
+    folder: "_products"
+    slug: "{{slug}}"
+    create: true 
+    fields: 
+      - {label: "SKU", name: "sku", widget: "string" }
+      - {label: "Price", name: "price", widget: "number"}
+      - {label: "Image", name: "image", widget: "string"}
+      - {label: "Body", name: "body", widget: "string"}  
+      - {label: "Slug", name: "slug", widget: "string" }
+      - {label: "Layout", name: "layout", widget: "hidden", default: "productdetails"}
   - name: "layouts"
     label: "Layouts"
     folder: "_layouts"

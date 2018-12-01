@@ -513,6 +513,13 @@
 </script>
 {% endif %}
 
+{% if page.vimeo == true %}
+<script src="{{ '/build/js/vendor/fitvids/jquery.fitvids.min.js' | relative_url }}"></script>
+<script>
+  $("#main").fitVids();
+</script>
+{% endif %}
+
 {% if page.comments == true %}
   <script src="{{ '/build/js/staticman/staticman-comments.js' | relative_url }}"></script>
 {% endif %}

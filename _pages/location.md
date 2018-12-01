@@ -3,8 +3,8 @@ title: Location
 excerpt: "Location of donboulton.com."
 no_menu_item: true
 chat: true
-youtube: true
-youtubeId: 86_vnQc1oBE
+vimeo: true
+vimeoId: 86_vnQc1oBE
 sitemap: false
 permalink: /location/
 slack: false
@@ -34,6 +34,7 @@ header:
 This Google api is now cost based, so this map is not going to display correctly at the end of the free billing period. But can still be used for directions.
 
 {% include rockwell-rv-map.html %}
+{% include youtubePlayer_be.html %}
 
 ## Follow Me on Social Media
 
