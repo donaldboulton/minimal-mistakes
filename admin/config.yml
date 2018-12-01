@@ -49,6 +49,23 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "allDay", name: "allDay", widget: "boolean"}
       - {label: "Url", name: "url", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown", required: false}
+  - name: "posts"
+    label: "Posts"
+    label_singular: "Post"
+    folder: "_i18n/en/_posts"
+    extension: "md"
+    sort: "date:desc"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
+      - {label: "Author", name: "author", widget: "string"}
+      - {label: "Description (for blog list)", name: "description", widget: "text"}
+      - {label: "Meta Description (defaults to Description)", name: "meta_description", widget: "text", required: false}
+      - {label: "Date", name: "date", widget: "date"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Categories", name: "categories", widget: "string", required: false}
+      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
   - name: "products" 
     label: "Products"
     folder: "_products"

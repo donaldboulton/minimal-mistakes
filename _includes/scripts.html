@@ -298,7 +298,6 @@
 <script src="{{ '/build/jquery-ui/superagent.js' | relative_url }}"></script>
 <script src="{{ '/build/jquery-ui/fullcalendar.min.js' | relative_url }}"></script>
 <script src="{{ '/build/jquery-ui/gcal.min.js' | relative_url }}"></script>
-
 <script type="text/javascript">
   document.addEventListener('DOMContentLoaded', function() {
     var containerEl = document.getElementById('external-events-list');
@@ -311,7 +310,6 @@
       }
   });
   var calendarEl = document.getElementById('calendar');
-
   var calendar = new FullCalendar.Calendar(calendarEl, {
     themeSystem: 'jquery-ui',
     header: {
@@ -328,6 +326,8 @@
       prev: '<',
       next: '>',
     },
+    defaultDate: '2018-10-12',
+    editable: true,
     droppable: true,
       drop: function(arg) {
         if (document.getElementById('drop-remove').checked) {
@@ -335,28 +335,12 @@
         }
     },
     navLinks: true,
-    defaultDate: '2018-12-12',
-    selectable: true,
-    selectMirror: true,
-      select: function(arg) {
-        var title = prompt('Event Title:');
-        if (title) {
-          calendar.addEvent({
-            title: title,
-            start: arg.start,
-            end: arg.end,
-            allDay: arg.allDay
-            url: arg.url
-          })
-        }
-        calendar.unselect()
-    },
-    editable: true,
     eventLimit: true,
     contentHeight: "auto",
     handleWindowResize: true,
     events: {
-      url: 'https://donboulton.com/events.data.json',
+      url: 'https://donboulton.com/events.data/',
+      type: 'POST',
       failure: function() {
         document.getElementById('script-warning').style.display = 'block'
       }
@@ -366,7 +350,6 @@
         bool ? 'block' : 'none';
     }
   });
-
   calendar.render();
 });
 </script>
