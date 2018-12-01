@@ -9,7 +9,7 @@ backend:
     - user
 
 display_url: https://donboulton.com
-logo_url: https://donboulton.com/build/firefox_app_60x60.png
+logo_url: https://donboulton.com/build/images/digital-box-compressor-backend.jpg
 
 media_library:
  name: uploadcare
@@ -25,16 +25,20 @@ collections: # A list of collections the CMS should be able to edit
   - name: "pages" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Pages" # Used in the UI, ie.: "New Post"
     folder: "_pages" # The path to the folder where the documents are stored
+    extension: "md"
     create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}"
     fields: # The fields each document in this collection have
       - {label: "Title", name: "title", widget: "string", tagname: "h1"}
       - {label: "Group", name: "group", widget: "string"}
       - {label: "Weight", name: "weight", widget: "number"}
       - {label: "Body", name: "body", widget: "markdown"}
-  - name: "posts"
-    label: "Posts"
-    label_singular: "Post"
+  - name: "events"
+    label: "Events"
+    label_singular: "Event"
     folder: "_events"
+    extension: "md"
+    format: "frontmatter"
     create: true
     slug: "{{slug}}"
     fields:
@@ -48,6 +52,7 @@ collections: # A list of collections the CMS should be able to edit
   - name: "products" 
     label: "Products"
     folder: "_products"
+    extension: "md"
     slug: "{{slug}}"
     create: true 
     fields: 
@@ -130,6 +135,7 @@ collections: # A list of collections the CMS should be able to edit
             widget: list
             fields:
               - {label: "Name", name: "name", widget: "string"}
+              - {label: "Avatar", name: avatar, widget: image, class: "comment-avatar-img"}
               - {label: "Email", name: "email", widget: "string"}
               - {label: "Url", name: "url", widget: "string"}            
               - {label: "Description", name: "description", widget: "markdown"}
