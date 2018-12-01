@@ -459,6 +459,7 @@ defaults:
       type: category
     values:
       layout: "category"
+  # _events
   - scope:
       path: "_events"
       type: events
@@ -477,7 +478,7 @@ defaults:
       notifications: false
       breadcrumbs:
         - label: "Events"
-          url:  /events/:path/
+          url: /events/:path/
      
 posts_json_path: posts.json
 ipstack:
