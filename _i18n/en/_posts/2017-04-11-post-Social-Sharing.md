@@ -20,7 +20,7 @@ toc_label: "Page Contents"
 read_time: true
 comments: true
 related: true
-share: true
+share: false
 sidenav: true
 side_react: true
 reviews: true

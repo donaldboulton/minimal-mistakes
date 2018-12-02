@@ -8,7 +8,7 @@ author: Donald Boulton
 author_profile: false
 gallery: true
 comments: true
-share: true
+share: false
 reviews: false
 related: true
 sidenav-gallery: true

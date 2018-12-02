@@ -11,7 +11,7 @@ gallery: true
 comments: true
 side_react: true
 reviews: false
-share: true
+share: false
 reviews: true
 related: true
 sidenav-gallery: true

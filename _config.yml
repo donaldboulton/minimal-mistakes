@@ -398,7 +398,7 @@ defaults:
       author_profile: false
       gallery: true
       comments: true
-      share: true
+      share: false
       related: true
       sidenav-gallery: true
       adds: true
@@ -417,7 +417,7 @@ defaults:
       author_profile: true
       read_time: true
       comments: false
-      share: true
+      share: false
       related: true
       toc: true
       adds: true
@@ -436,7 +436,7 @@ defaults:
       author_profile: true
       read_time: true
       comments: false
-      share: true
+      share: false
       related: true
       toc: true
       adds: true
