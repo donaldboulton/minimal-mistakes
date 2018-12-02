@@ -43,4 +43,6 @@ github_editme_path: donaldboulton/DWB/blob/gh-pages/_products/coffee.md
 
 A perfect coffee in the morning absolutely makes my day. Buy me a small one for a good start or a big one to keep going all day!
 
+{% include donate_coffee.html %}
+
 {% include links.html %}

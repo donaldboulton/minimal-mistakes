@@ -37,4 +37,6 @@ github_editme_path: donaldboulton/DWB/blob/gh-pages/_products/catfood.md
 
 Buy the kittys some cat food.
 
+{% include donate_catfood.html %}
+
 {% include links.html %}

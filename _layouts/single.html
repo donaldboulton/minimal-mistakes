@@ -63,6 +63,9 @@ layout: default
             {% if page.side_react == true %}
               {% include sidebar-react.html %}
             {% endif %}
+            {% if page.newsletters == true %}
+              {% include sidebar-newsletters.html %}
+            {% endif %}            
             {% if page.web-intents == true %}
               {% include webmentions.html %}
             {% endif %}

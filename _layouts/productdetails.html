@@ -34,9 +34,7 @@ layout: default
       (Rating Average: {{ sum | round: 1 }})
     {% endif %}
   </h3>
-  <form method="POST"
-        action="https://api.staticman.net/v2/entry/donaldboulton/DWB/gh-pages/reviews"
-        oninput="result.value=parseInt(this['fields[review]'].value)">
+  <form method="POST" action="https://api.staticman.net/v2/entry/donaldboulton/DWB/gh-pages/reviews" oninput="result.value=parseInt(this['fields[review]'].value)">
     <input name="fields[product]" type="hidden" value="{{ page.slug }}" />
     <input name="options[redirect]" type="hidden" value="{{site.url}}{{site.baseurl}}{{ page.url }}" />
 
