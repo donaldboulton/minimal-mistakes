@@ -25,10 +25,10 @@
   },
   "homepage": "https://github.com/donaldboulton/#readme",
   "scripts": {
-    "start": "npm run-script clean:project && webpack --env=dev --progress --profile --colors && concurrently \"webpack-dev-server --env=dev\" \"bundle exec jekyll serve\" \"netlify lambda serve functions\"",
+    "start": "npm run-script clean:project && webpack --env=dev --progress --profile --colors && concurrently \"webpack-dev-server --env=dev\" \"bundle exec jekyll serve\" \"netlify lambda serve lambda\"",
     "build:optim": "npm run-script clean:project && cross-env NODE_ENV=production webpack --env=prod --progress --profile --colors && webpack --env=optim  --progress --profile --colors && cross-env JEKYLL_ENV=production bundle exec jekyll build",
     "build:pwa:optim": "npm run-script clean:project && cross-env NODE_ENV=production webpack --env=pwa --progress --profile --colors && webpack --env=optim  --progress --profile --colors && cross-env JEKYLL_ENV=pwa bundle exec jekyll build && sw-precache --config=config/sw.config.js --verbose",
-    "build": "npm run-script clean:project && cross-env NODE_ENV=production webpack -p --env=prod --progress --profile --colors && cross-env JEKYLL_ENV=production bundle exec jekyll build",
+    "build": "npm run-script clean:project && cross-env NODE_ENV=production webpack -p --env=prod --progress --profile --colors && cross-env JEKYLL_ENV=production bundle exec jekyll build && netlify-lambda build lambda",
     "build:pwa": "npm run-script clean:project && cross-env NODE_ENV=production webpack -p --env=pwa --progress --profile --colors && cross-env JEKYLL_ENV=pwa bundle exec jekyll build && sw-precache --config=config/sw.config.js --verbose",
     "serve:dist": "http-server _site",
     "clean:project": "rimraf ./_site ./assets"
@@ -66,6 +66,7 @@
     "http-server": "^0.10.0",
     "imagemin-webpack-plugin": "^2.3.0",
     "imports-loader": "^0.8.0",
+    "netlify-lambda": "^1.0.0",
     "node-fetch": "^2.2.0",
     "node-sass": "^4.5.3",
     "postcss-import": "^10.0.0",
@@ -94,7 +95,6 @@
     "dotenv": "^6.1.0",
     "jquery-smooth-scroll": "^2.2.0",
     "lazysizes": "^4.1.2",
-    "netlify-lambda": "^1.0.0",
     "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-a11y-dialog": "^4.1.0",

@@ -1,5 +1,5 @@
 [build]
-  Functions = "./lambda"
+  functions = "lambda-build"
   publish = "_site/"
   command = "npm run build:pwa"
 [[headers]]

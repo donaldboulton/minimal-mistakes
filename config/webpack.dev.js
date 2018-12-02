@@ -22,9 +22,9 @@ module.exports = Merge(CommonConfig, {
       },
       {
         reload: false,
-      },
+      }
     ),
-    new webpack.HotModuleReplacementPlugin(),
+    new webpack.HotModuleReplacementPlugin()
   ],
   module: {
     rules: [
@@ -33,13 +33,19 @@ module.exports = Merge(CommonConfig, {
         enforce: 'pre',
         exclude: /node_modules/,
         loader: 'eslint-loader',
-      },
-    ],
+      }
+    ]
   },
   devServer: {
+    proxy: {
+      "/.netlify": {
+        target: "http://localhost:9000",
+        pathRewrite: { "^/.netlify/functions": "" }
+      }
+    },
     contentBase: [
       path.resolve('_site'),
     ],
     hot: true,
-  },
+  }
 });
