@@ -15,7 +15,7 @@ reviews: false
 comments: false
 cookies: true
 notifications: false
-
+side_react: true
 image:
   cover: true
   path: &image /assets/images/support.jpg

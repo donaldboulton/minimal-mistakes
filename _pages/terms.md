@@ -11,7 +11,7 @@ youtubeId: yoE9-tNvhRs
 adds: true
 chat: true
 reviews: true
-reviews-sidebar: true
+side_react: true
 comments: true
 web-intents: true
 tweet_id: 145116818707714048

@@ -30,6 +30,7 @@ chat: true
 reviews: false
 comments: true
 cookies: true
+side_react: true
 youtube: true
 youtubeId: 3LbWJzZwKWw
 
