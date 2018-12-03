@@ -57,15 +57,12 @@ layout: default
             {% if page.reviews-sidebar == true %}
                {% include reviews-sidebar.html %}
             {% endif %}
-            {% if page.adds == true %}
-              {% include google-adds.html %}
+            {% if page.newsletters == true %}
+              {% include sidebar-newsletters.html %}
             {% endif %}
             {% if page.side_react == true %}
               {% include sidebar-react.html %}
-            {% endif %}
-            {% if page.newsletters == true %}
-              {% include sidebar-newsletters.html %}
-            {% endif %}            
+            {% endif %}          
             {% if page.web-intents == true %}
               {% include webmentions.html %}
             {% endif %}
@@ -77,6 +74,9 @@ layout: default
             {% endif %}
             {% if page.slack == true %}
               {% include slack-functions.html %}
+            {% endif %}
+            {% if page.adds == true %}
+              {% include google-adds.html %}
             {% endif %}
           </aside>
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import trash from './images/trash-alt.svg';
 class List extends Component {
 
   state={
@@ -35,6 +35,7 @@ class List extends Component {
               </div>
               <div className="item-remove-div">
                 <button className="item-remove" onClick={() => this.props.onDeleteList(index)}>
+                <img src={trash} className="icon" alt="trash" />
                 </button>
               </div>
             </div>

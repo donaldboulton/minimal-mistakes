@@ -22,14 +22,15 @@ header:
   image: /assets/images/support-1200.jpg
   teaser: /assets/images/support-320.jpg
   excerpt: "Sitemap of Posts"
-support: [adds, cookies, anchor]
-adds: true
+support: [cookies, anchor]
+adds: false
 toc: false
 sidenav: true
 chat: true
 reviews: false
 comments: true
 cookies: true
+newsletters: false
 side_react: true
 youtube: true
 youtubeId: 3LbWJzZwKWw

@@ -46,7 +46,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Start", name: "start", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
       - {label: "End", name: "end", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
-      - {label: "allDay", name: "allDay", widget: "boolean"}
+      - {label: "allDay", name: "allDay", widget: "boolean", required: false}
       - {label: "Url", name: "url", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown", required: false}
   - name: "posts"

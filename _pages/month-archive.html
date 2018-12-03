@@ -8,6 +8,7 @@ author_profile: true
 comments: false
 sidenav: true
 side_react: true
+newsletters: true
 reviews: false
 adds: true
 support: [adds]

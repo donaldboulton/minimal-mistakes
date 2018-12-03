@@ -14,6 +14,7 @@ toc_label: "Support"
 comments: true
 webmentions: false
 notifications: false
+newsletters: true
 sidenav: true
 reviews: false
 adds: true

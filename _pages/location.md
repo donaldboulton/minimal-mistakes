@@ -5,6 +5,8 @@ no_menu_item: true
 chat: true
 vimeo: true
 vimeoId: 86_vnQc1oBE
+youtube: true
+youtubeId: Ymsb_4Z3uy0
 sitemap: false
 permalink: /location/
 slack: false
@@ -18,7 +20,7 @@ sidenav: true
 reviews: false
 adds: true
 here-maps: true
-support: [adds, cookies, here-maps, youtube]
+support: [adds, cookies, youtube]
 
 header:
   image: /assets/images/support-1200.jpg
@@ -34,7 +36,7 @@ header:
 This Google api is now cost based, so this map is not going to display correctly at the end of the free billing period. But can still be used for directions.
 
 {% include rockwell-rv-map.html %}
-{% include youtubePlayer_be.html %}
+{% include youtubePlayer.html %}
 
 ## Follow Me on Social Media
 
