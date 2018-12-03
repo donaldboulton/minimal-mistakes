@@ -29,7 +29,8 @@ category:
 
 toc: true
 toc_label: "Admin Contents"
-
+slack: true
+newsletters: true
 image:
   cover: true
   path: &image /assets/images/jekyll-admin.jpg

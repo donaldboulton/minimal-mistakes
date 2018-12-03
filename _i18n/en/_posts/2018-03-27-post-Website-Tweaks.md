@@ -22,6 +22,8 @@ comments: true
 share: false
 web-intents: false
 side_react: true
+slack: true
+newsletters: true
 tweet_id: 1028382457731670022
 related: true
 sidenav: true

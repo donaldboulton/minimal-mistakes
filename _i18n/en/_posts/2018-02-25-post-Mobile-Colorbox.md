@@ -23,6 +23,8 @@ read_time: true
 comments: true
 share: false
 web-intents: false
+slack: true
+newsletters: true
 tweet_id: 145116818707714048
 social-share: twitter --twitter-hashtags facebook
 related: true

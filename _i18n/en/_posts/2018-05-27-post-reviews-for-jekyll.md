@@ -6,6 +6,8 @@ read_time: true
 comments: true
 share: false
 web-intents: false
+slack: true
+newsletters: true
 side_react: true
 tweet_id: 1027103870474960896
 social-share: twitter --twitter-hashtags facebook

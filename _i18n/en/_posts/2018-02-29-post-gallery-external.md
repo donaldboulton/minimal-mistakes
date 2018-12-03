@@ -17,6 +17,8 @@ search: true
 author: false
 related: false
 anchor: false
+slack: true
+newsletters: true
 tags:
   - Gallery
   - Cats

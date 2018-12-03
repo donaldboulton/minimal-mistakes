@@ -23,7 +23,8 @@ web-intents: false
 tweet_id: 1027105043496034304
 toc: true
 toc_label: "Page Contents"
-
+slack: true
+newsletters: true
 read_time: true
 comments: true
 share: false

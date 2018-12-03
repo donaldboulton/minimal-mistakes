@@ -29,6 +29,7 @@ cookies: true
 share: false
 web-intents: false
 slack: true
+newsletters: true
 event_title: My Birthday
 event_comment: Love ya Mom
 event_date: 2019-15-1

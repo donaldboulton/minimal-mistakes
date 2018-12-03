@@ -12,6 +12,7 @@ side_react: true
 cookies: true
 reviews: true
 slack: true
+newsletters: true
 tags:
   - SQL Server
   - Fragmentation

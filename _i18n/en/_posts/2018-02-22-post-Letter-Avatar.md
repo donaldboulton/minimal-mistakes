@@ -29,6 +29,7 @@ toc_label: "Page Contents"
 read_time: true
 comments: true
 share: false
+newsletters: true
 web-intents: false
 tweet_id: 1021888928280924161
 social-share: twitter --twitter-hashtags facebook

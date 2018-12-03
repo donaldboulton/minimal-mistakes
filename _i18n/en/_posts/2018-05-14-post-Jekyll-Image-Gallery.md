@@ -26,7 +26,9 @@ read_time: true
 comments: true
 related: true
 share: false
-web-intents: true
+web-intents: false
+slack: true
+newsletters: true
 tweet_id: 1027106412470718465
 social-share: twitter --twitter-hashtags facebook
 sidenav: true
