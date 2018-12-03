@@ -85,7 +85,7 @@ class App extends React.Component {
   render() {
 
     return (
-      <div className="Appcenter">
+      <div className="AppCenter">
         <h3 className="Appheader"><img src={bell} className="icon icon--bell fa-bell" alt="Notify" /> React Notify </h3>
         <div className='notifyCenter'>
         <button className="btn btn--primary" onClick={this.handleButtonClick.bind(this)}>Notif!</button>

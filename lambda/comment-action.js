@@ -57,7 +57,7 @@ export function handler(event, context, callback) {
           'received': new Date().toString(),
           'email': data.email,
           'name': data.name,
-          'comment': data.comment
+          'comment': data.message
         };
         var approvedURL = process.env.URL;
 

@@ -25,7 +25,7 @@ export function handler(event, context, callback) {
         "author_name": body.data.email,
         "title": body.data.path,
         "title_link": process.env.URL + body.data.path,
-        "text": body.data.comment
+        "text": body.data.message
       },
       {
         "fallback": "Manage comments on " + process.env.URL,
