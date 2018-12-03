@@ -13,11 +13,16 @@ export function handler(event, context, callback) {
 	  "attachments": [
       {
         "fallback": "New comment on donboulton.com",
-        "color": "#444",
+        "color": "#343434",
         "author_name": body.data.email,
         "title": body.data.path,
         "title_link": process.env.URL + body.data.path,
-        "text": body.data.message
+        'avatar': body.data.name,
+        'name': body.data.name,
+        'email': body.data.email,
+        'url': body.data.url,
+        'message': body.data.message,
+        'replying_to': body.data.replying_to
       },
       {
         "fallback": "Manage comments on " + process.env.URL,
