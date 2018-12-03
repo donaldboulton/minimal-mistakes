@@ -43,4 +43,4 @@ support: [gallery]
   {% include archive-single.html %}
 {% endfor %}
 
-{% include image-gallery.html folder="/dest/build/photography/tahoe-gallery" %}
+{% include image-gallery.html folder="/build/photography/tahoe-gallery" %}

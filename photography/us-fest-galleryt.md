@@ -26,7 +26,7 @@ sidebar:
     image_alt: "Quarter Flash"
     text: "Cool at the fest"
   - title: "Four days of fun"
-    text: "Scott Fife and I drove to LA, stayed in Pamona with my Grandparents for the two weekends and 4 days of fun."
+    text: "Scott Fife and I drove to LA, stayed in Pamona CA. with my Grandparents for the two weekends and 4 days of fun."
 header:
   image: /build/photography/us-fest-gallery/US Fest Stage.jpg
   teaser: /build/photography/us-fest-gallery/US Fest Stage.jpg

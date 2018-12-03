@@ -41,4 +41,4 @@ support: [gallery]
   {% include archive-single.html %}
 {% endfor %}
 
-{% include image-gallery.html folder="/dest/build/photography/san-diego-gallery" %}
+{% include image-gallery.html folder="/build/photography/san-diego-gallery" %}

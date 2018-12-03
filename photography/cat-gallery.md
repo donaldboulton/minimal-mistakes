@@ -25,7 +25,7 @@ sidebar:
     image_alt: "Hun Kitty"
     text: "Hun at 3 weaks"
   - title: "Responsibilities"
-    text: "I take care of about 20 stray cats in three different parts of OKC."  
+    text: "I take care of about 20 stray cats in OKC."  
 header:
   image: /build/photography/cat-gallery/Little-Hun-1200.jpg
   teaser: /build/photography/cat-gallery/Little-Hun-th.jpg"
