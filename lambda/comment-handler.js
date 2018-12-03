@@ -1,28 +1,31 @@
 'use strict';
 
 var request = require("request");
+
+// populate environment variables locally.
 require('dotenv').config()
 
+
+/*
+  Our serverless function handler
+*/
 export function handler(event, context, callback) {
 
+  // get the arguments from the notification
   var body = JSON.parse(event.body);
 
+  // prepare call to the Slack API
   var slackURL = process.env.SLACK_WEBHOOK_URL
   var slackPayload = {
     "text": "New comment on " + process.env.URL,
 	  "attachments": [
       {
-        "fallback": "New comment on donboulton.com",
-        "color": "#343434",
+        "fallback": "New comment on the comment example site",
+        "color": "#444",
         "author_name": body.data.email,
         "title": body.data.path,
         "title_link": process.env.URL + body.data.path,
-        'avatar': body.data.name,
-        'name': body.data.name,
-        'email': body.data.email,
-        'url': body.data.url,
-        'message': body.data.message,
-        'replying_to': body.data.replying_to
+        "text": body.data.comment
       },
       {
         "fallback": "Manage comments on " + process.env.URL,
@@ -45,6 +48,7 @@ export function handler(event, context, callback) {
       }]
     };
 
+    // post the notification to Slack
     request.post({url:slackURL, json: slackPayload}, function(err, httpResponse, body) {
       var msg;
       if (err) {

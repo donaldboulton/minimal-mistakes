@@ -6,7 +6,7 @@
 
     $(form).addClass('disabled');
     $("#comment-form-submit").html(
-      '<img class="icon spin" src="/assets/icons/loading.svg" /> Loading...'
+      '<svg class="icon spin"><use xlink:href="/assets/icons/icons.svg#icon-loading"></use></svg> Loading...'
     );
 
     $.ajax({
@@ -121,7 +121,7 @@ var addComment = {
   return false;
 },
 
-function(id) {
+I: function(id) {
   return document.getElementById(id);
 }
 };
