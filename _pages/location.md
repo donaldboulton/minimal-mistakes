@@ -7,7 +7,7 @@ youtube: true
 youtubeId: Ymsb_4Z3uy0
 sitemap: false
 permalink: /location/
-slack: false
+slack: true
 side_react: true
 toc: false
 toc_label: "Location"
