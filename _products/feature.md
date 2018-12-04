@@ -8,7 +8,7 @@ layout: productdetails
 permalink: /products/feature/
 classes: product
 products: true
-support: [products, cart, lightbox]
+support: [adds, cookies, cart, products]
 sitemap: false
 author_profile: true
 adds: false

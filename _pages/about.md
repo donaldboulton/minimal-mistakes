@@ -142,7 +142,7 @@ Links to Netlify this GitHub repo, Staticman Reviews, MMistakes Framework Design
 
 ![Netlify Builds](/assets/images/icons/netlifyBuildIcon.svg){:.align-center}
 
-[Latest Build & Deploy History](https://app.netlify.com/sites/donaldboulton/deploys){:id="open-website" rel="noreferrer"}
+[Latest Build & Deploy History](https://app.netlify.com/sites/donaldboulton/deploys){:.external-links open-website}
 
 ## Working for Father God
 

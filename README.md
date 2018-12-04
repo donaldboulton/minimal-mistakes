@@ -9,6 +9,7 @@
 [![LICENSE](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/mmistakes/minimal-mistakes/master/LICENSE.txt)
 [![Jekyll](https://img.shields.io/badge/jekyll-%3E%3D%203.6-blue.svg)](https://jekyllrb.com/)
 [![Tip Me via PayPal](https://img.shields.io/badge/PayPal-tip%20me-green.svg?logo=paypal)](https://www.paypal.me/donaldboulton)
+[![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/?t=fa5cdbee-00bf-4ca8-be8f-f150a6f643e1)
 
 ## React Components
 
@@ -122,9 +123,9 @@ To start the development server just run  `npm start`
 
 ```md
 .
-├── 404.html
-├── about.md
-├── blog.md
+├── pages
+|   |──404.html
+|   |──about.md
 ├── config <--- This folder contains the different Webpack config files
 │   ├── optimization-fix <--- A fix for optimization, do not delete this folder
 │   ├── postcss.config.js <--- Post css config
@@ -143,7 +144,7 @@ To start the development server just run  `npm start`
 │   └── large-icon.png <--- Replace this with your Facebook Open Graph picture
 ├── icon.png <--- Same with this one
 ├── _includes
-├── index.md
+├── index.html
 ├── _layouts
 │   ├── amp.html <--- The layout for Accelerated mobile page
 │   ├── blog.html

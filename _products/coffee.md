@@ -7,7 +7,7 @@ excerpt: "Buy me a cup of coffee."
 layout: productdetails
 products: true
 product: Coffee
-support: [products, cart, lightbox]
+support: [adds, cookies, cart, products]
 lightbox: true
 sitemap: false
 author_profile: true

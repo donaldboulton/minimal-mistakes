@@ -46,6 +46,10 @@ h1 {
   min-height: 80px;
 }
 
+.external-links{
+  color: #00c100!important;
+}
+
 .inputField {
   margin-bottom: 1.5em;
 }

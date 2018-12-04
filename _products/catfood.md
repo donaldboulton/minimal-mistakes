@@ -6,7 +6,7 @@ sitemap: false
 layout: productdetails
 permalink: /products/catfood/
 products: true
-support: [products, cart, adds]
+support: [adds, cookies, cart, products]
 adds: false
 sku: catfood
 sidenav: true

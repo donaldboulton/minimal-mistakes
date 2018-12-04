@@ -14,7 +14,7 @@ layout: productdetails
 products: true
 product: Share
 lightbox: true
-support: [products, lightbox, cart, adds]
+support: [adds, cookies, cart, products]
 subtitle: Share the love
 images:
   - image: /assets/images/cart/share/share-800.jpg

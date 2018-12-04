@@ -7,8 +7,7 @@ sitemap: false
 author_profile: true
 adds: false
 sidenav: true
-support: [lightbox, cart, adds]
-lightbox: true
+support: [adds, cookies, cart, products]
 classes: product
 permalink: /products/beer/
 stock:  10
