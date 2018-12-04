@@ -1989,7 +1989,6 @@ td,th,tr {
   align-items: center;
   font-weight: 700;
   z-index: 20;
-  font-size: 26px;
 }
 
 .masthead__menu {
@@ -6343,8 +6342,8 @@ td.endpoint {
   display: none;
   text-align: center;
   position: fixed;
-  bottom: 20px;
-  right: 8px;
+  bottom: 15px;
+  right: 10px;
   z-index: 99;
   color: #fff;
   font-size: 18px;

@@ -22,7 +22,6 @@ category:
   - Programing
   
 toc: true
-toc_label: "Page Contents"
 read_time: true
 comments: true
 share: false
@@ -33,7 +32,6 @@ related: true
 anchor: true
 locations:
   - Idabel OKlahoma
-
 excerpt: "Check SQL Server a specified database index fragmentation percentage (SQL). A Dynamic CMS using SQL Server most always has fragmentation. When files or data are in the wrong place then SQL Server has to spend time looking for the missing data, slowing the whole process down and increasing load times for your site."
 image:
   cover: true
@@ -51,8 +49,9 @@ slug: sql-fragmentation
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_i18n/en/_posts/2018-02-23-post-SQL-Fragmentation.md
 ---
 
-{% include page-intro.html %}
 {% include octo-arm.html %}
+
+{% include page-intro.html %}
 
 # Introduction
 
@@ -75,7 +74,7 @@ Step 1\. Open Microsoft SQL Server 2008 R2
 Step 2\. Open Microsoft SQL Server Management Studio
 Start- All programs- Microsoft SQL Server 2008 R2- Microsoft SQL Server Management Studio
 
-![SQL Management](/assets/images/sql_management.png){: .align-left}
+![SQL Management](/assets/images/sql_management.png){:.align-left}
 
 Step 3\. Drag the script file to SQL Server Management Studio
 
@@ -85,7 +84,7 @@ indexstats.avg_fragmentation_in_percent: In the script the  indexstats.avg_frag
 
 Step 5\. Run the script
 
-![Script Results](/assets/images/script-results.jpg){: .align-left}
+![Script Results](/assets/images/script-results.jpg){:.align-left}
 
 This script selects AdventureWorks2008.
 
@@ -95,7 +94,7 @@ After the script executing, we will get this result:
 
 Open Web Matrix select databases and logon to your database, Select new query and paste IndexDefrag query in workspace the execute.
 
-![Web Matrix](/assets/images/IndexFragmentation_WebMatrix.png){: .align-left}
+![Web Matrix](/assets/images/IndexFragmentation_WebMatrix.png){:.align-left}
 
 Here is my result on a database that is less than a month old. Media Library is 87% FRAGMENTED.
 
