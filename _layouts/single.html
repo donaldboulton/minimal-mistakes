@@ -51,23 +51,11 @@ layout: default
             {% if page.maps == true %}
                {% include rockwell-rv-map.html %}
             {% endif %}
-            {% if page.reviews == true %}
-               {% include reviews-sidebar.html %}
-            {% endif %}
-            {% if page.reviews-sidebar == true %}
-               {% include reviews-sidebar.html %}
-            {% endif %}
             {% if page.newsletters == true %}
               {% include sidebar-newsletters.html %}
-            {% endif %}
-            {% if page.side_react == true %}
-              {% include sidebar-react.html %}
-            {% endif %}          
-            {% if page.web-intents == true %}
+            {% endif %}         
+            {% if page.web-mentions == true %}
               {% include webmentions.html %}
-            {% endif %}
-            {% if page.notifications-admin == true %}
-              {% include sidebar-subscribe-admin.html %}
             {% endif %}
             {% if page.notifications == true %}
               {% include sidebar-subscribe.html %}
@@ -75,14 +63,19 @@ layout: default
             {% if page.slack == true %}
               {% include slack-functions.html %}
             {% endif %}
+            {% if page.side_react == true %}
+              {% include sidebar-react.html %}
+            {% endif %} 
+            {% if page.reviews-sidebar == true %}
+               {% include reviews-sidebar.html %}
+            {% endif %}
             {% if page.adds == true %}
               {% include google-adds.html %}
             {% endif %}
           </aside>
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
         {% if page.web-intents == true %}
-          {% include twitter-web-intents.html %}
-          {% include to-top.html %}
+          {% include twitter-web-intents.html %}        
         {% endif %}
       </section>
       <footer class="page__meta">
