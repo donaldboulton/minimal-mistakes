@@ -3,8 +3,6 @@ title: Location
 excerpt: "Location of donboulton.com."
 no_menu_item: true
 chat: true
-vimeo: true
-vimeoId: 86_vnQc1oBE
 youtube: true
 youtubeId: Ymsb_4Z3uy0
 sitemap: false
