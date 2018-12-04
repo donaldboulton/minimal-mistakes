@@ -23,7 +23,9 @@ layout: compress
     <div id="initial-content" class="initial-content">
       {{ content }}
     </div>  
-    {% include footer-ad.html %}
+    <div class="text-center" role="note" itemscope itemtype="https://schema.org/WPAdBlock">
+      {% include footer-ad.html %}
+    </div>
   </div>
   <div class="page__footer" itemscope itemtype="https://schema.org/WPFooter">
     <footer>
