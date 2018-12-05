@@ -94,7 +94,10 @@ module.exports = {
       {
         test: require.resolve("svg4everybody"),
         loader: "imports-loader?this=>window"
-      }
+      },
+      { test: /vendor\/.+\.(jsx|js)$/,
+        loader: 'imports-loader?jQuery=jquery,$=jquery,this=>window'
+      }      
     ],
   },
 };
