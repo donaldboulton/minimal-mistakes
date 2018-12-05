@@ -94,7 +94,7 @@ module.exports = {
       {
         test: require.resolve("svg4everybody"),
         loader: "imports-loader?this=>window"
-      },    
+      }
     ],
   },
 };

@@ -86,7 +86,7 @@
     "sw-precache-webpack-plugin": "^0.11.5",
     "webpack": "^3.4.1",
     "webpack-bundle-analyzer": "^2.13.1",
-    "webpack-dev-server": "^3.1.10",
+    "webpack-dev-server": "^2.6.1",
     "webpack-merge": "^4.1.0",
     "webpack-plugin-critical": "^1.0.0",
     "webpack-pwa-manifest": "^3.1.6"
@@ -96,11 +96,11 @@
     "babel-polyfill": "^6.16.0",
     "default-passive-events": "^1.0.10",
     "jquery-smooth-scroll": "^2.2.0",
-    "lazysizes": "^4.1.4",
+    "lazysizes": "^4.1.2",
     "prop-types": "^15.6.2",
-    "react": "^16.6.3",
+    "react": "^16.5.2",
     "react-a11y-dialog": "^4.1.0",
-    "react-dom": "^16.6.3",
+    "react-dom": "^16.5.2",
     "react-web-notification": "^0.4.0",
     "svg4everybody": "^2.1.9"
   }
