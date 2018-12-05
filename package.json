@@ -98,9 +98,9 @@
     "jquery-smooth-scroll": "^2.2.0",
     "lazysizes": "^4.1.4",
     "prop-types": "^15.6.2",
-    "react": "^16.5.3",
+    "react": "^16.6.3",
     "react-a11y-dialog": "^4.1.0",
-    "react-dom": "^16.5.3",
+    "react-dom": "^16.6.3",
     "react-web-notification": "^0.4.0",
     "svg4everybody": "^2.1.9"
   }
