@@ -40,9 +40,6 @@ module.exports = {
     }]),
     new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i }),
   ],
-  externals: {
-    jquery: 'jQuery'
-  },
   devServer: {
     contentBase: './assets',
     port: 3000,
