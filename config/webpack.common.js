@@ -4,13 +4,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 module.exports = {
   entry: {
     app: './_src/index.js',
-    vendor: ['a11y-dialog', 'a11y-toggle', 'default-passive-events', 'jquery-smooth-scroll', 'lazysizes', 'prop-types', 'react', 'react-a11y-dialog', 'react-dom', 'react-web-notification', 'svg4everybody'],
+    vendor: ['a11y-dialog', 'default-passive-events', 'jquery-smooth-scroll', 'lazysizes', 'prop-types', 'react', 'react-a11y-dialog', 'react-dom', 'react-web-notification', 'svg4everybody'],
   },
   resolve: {
     extensions: ['.js', '.jsx']
@@ -36,7 +35,6 @@ module.exports = {
       from: path.resolve('_images'),
       to: 'images/',
     }]),
-    new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i }),
   ],
   devServer: {
     contentBase: './assets',
