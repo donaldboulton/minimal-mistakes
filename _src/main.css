@@ -3,6 +3,10 @@ a {
   text-decoration-color: #141010!important;
 }
 
+[role="button"] {
+  cursor: pointer;
+} 
+
 [data-a11y-toggle]:not([aria-controls]),
 [aria-hidden='true'] {
   display: none;
