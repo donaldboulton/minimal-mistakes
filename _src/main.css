@@ -188,6 +188,7 @@ dialog {
   left: 0;
   right: 0;
   width: 100%;
+  height: 90%;
   transform: none;
   overflow: auto;
 }
