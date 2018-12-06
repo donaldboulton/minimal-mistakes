@@ -3,17 +3,9 @@ a {
   text-decoration-color: #141010!important;
 }
 
-#mmain {
-  border-width: 1px 0;
-  border-style: solid;
-}
-
 #mmain h3 {
   margin: 0;
-}
-
-#mmain > div + h3 {
-  border-top: 1px solid;
+  color: #fff
 }
 
 h3 button {

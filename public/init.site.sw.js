@@ -128,8 +128,8 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 (function() {
-  // Get all the <h2> headings
-  const headings = document.querySelectorAll('#mmain h3')
+
+  const headings = document.querySelectorAll('#mmain h3');
   
   Array.prototype.forEach.call(headings, heading => {
     heading.innerHTML = `
@@ -150,7 +150,7 @@ for (i = 0; i < coll.length; i++) {
       
       elems.forEach((node) => {
         node.parentNode.removeChild(node);
-      })
+      });
 
       return elems;
     };
