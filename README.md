@@ -1,17 +1,17 @@
-# [Don Boulton version Of:](https://donboulton.com)
+# [Don Boulton version Of: MMistakes with React Webpack & Netlify CMS](https://donboulton.com)
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/donaldboulton/DWB)
 
 [![Known Vulnerabilities](https://snyk.io/test/github/donaldboulton/DWB/badge.svg?targetFile=package.json)](https://snyk.io/test/github/donaldboulton/DWB?targetFile=package.json)
 
-## [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/)
+## [Jekyll based Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/)
 
 [![LICENSE](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/mmistakes/minimal-mistakes/master/LICENSE.txt)
 [![Jekyll](https://img.shields.io/badge/jekyll-%3E%3D%203.6-blue.svg)](https://jekyllrb.com/)
 [![Tip Me via PayPal](https://img.shields.io/badge/PayPal-tip%20me-green.svg?logo=paypal)](https://www.paypal.me/donaldboulton)
 [![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/?t=fa5cdbee-00bf-4ca8-be8f-f150a6f643e1)
 
-## React Components
+## Adding React Components
 
 All react additions were hand build adding components individually in the DOM for now, soon at root levels. The following node react modules added.
 
@@ -34,7 +34,7 @@ This component show nothing in dom element, but trigger HTML5 Web Notification A
 
 [View Demo](https://georgeosddev.github.io/react-web-notification/example/)
 
-## Jekyll Webpack boilerplate
+## Incorporating Jekyll Webpack boilerplate
 
 Adding a Jekyll boilerplate supercharged with React & Webpack to build modern performant websites (including Progressive Web Apps).
 Read more about how this boilerplate has been built: https://medium.com/learning-lab/5-how-i-learnt-webpack-3-and-created-a-jekyll-and-webpack-boilerplate-edd86645fd5e
@@ -195,8 +195,11 @@ To build the website run the following line
 
 ```sh
 npm run build
+```
 
-# or if you want the critical css
+## Or if you want the critical css
+
+```sh
 npm run build:optim
 ```
 
@@ -215,8 +218,11 @@ The built website will be in `_site` folder.
 
 ```sh
 npm run build:pwa
+```
 
-# or if you want the critical css
+### Or if you want the critical css with pwa
+
+```sh
 npm run build:pwa:optim
 ```
 
@@ -295,11 +301,8 @@ Events will be displayed on my [events calendar](https://donboulton.com/events/)
 - [Susy](https://susy.oddbird.net/)
 - [Breakpoint](https://breakpoint-sass.com/)
 - [FitVids.JS](https://fitvidsjs.com/)
-- [GreedyNav.js](https://github.com/lukejacksonn/GreedyNav)
 - [jQuery Smooth Scroll](https://github.com/kswedberg/jquery-smooth-scroll)
 - [Lunr](https://lunrjs.com)
-
----
 
 ## License
 

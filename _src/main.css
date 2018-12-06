@@ -3,6 +3,95 @@ a {
   text-decoration-color: #141010!important;
 }
 
+@keyframes waveAnimateA {
+  0% {
+    transform: translate(-80px,5px);
+  }
+
+  100% {
+    transform: translate(80px,0);
+  }
+}
+
+@-webkit-keyframes waveAnimateA {
+  0% {
+    transform: translate(-80px,5px);
+  }
+
+  100% {
+    transform: translate(80px,0);
+  }
+}
+
+@keyframes waveAnimateB {
+  0% {
+    transform: translate(-80px,10px);
+  }
+
+  100% {
+    transform: translate(80px,0);
+  }
+}
+
+@-webkit-keyframes waveAnimateB {
+  0% {
+    transform: translate(-80px,10px);
+  }
+
+  100% {
+    transform: translate(80px,0);
+  }
+}
+
+@keyframes waveAnimateC {
+  0% {
+    transform: translate(-20px,5px);
+  }
+
+  100% {
+    transform: translate(-80px,10px);
+  }
+}
+
+@-webkit-keyframes waveAnimateC {
+  0% {
+    transform: translate(-20px,5px);
+  }
+
+  100% {
+    transform: translate(-80px,10px);
+  }
+}
+.masthead .intro-waves,.masthead .waves-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.masthead .waves-wrapper {
+  height: 124px;
+}
+
+.masthead .waves {
+  position: absolute;
+  top: -3px;
+  width: calc(100% + 400px);
+  margin: 0 0 0 -200px;
+}
+
+.masthead .waves path {
+  opacity: .4;
+  animation: 14s ease-in-out infinite alternate waveAnimateA;
+}
+
+.masthead .waves path:nth-child(2) {
+  animation: 14s ease-in-out infinite alternate waveAnimateB;
+}
+
+.masthead .waves path:last-child {
+  animation: 14s ease-in-out infinite alternate waveAnimateC;
+}
+
 h1 {
   color: #fff!important;
 }
@@ -1957,6 +2046,7 @@ td,th,tr {
   -ms-flex-pack: justify;
   justify-content: space-between;
   font-family: -apple-system,BlinkMacSystemFont,Roboto,Segoe UI,Helvetica Neue,Lucida Grande,Arial,sans-serif;
+  background-image: url("/assets/images/icons/waves.svg");
 }
 
 .masthead__inner-wrap:after {

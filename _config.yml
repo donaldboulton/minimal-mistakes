@@ -223,7 +223,6 @@ strict_front_matter      : true
 
 # Reading Files
 include:
-  - .htaccess
   - _pages
   - build
   - _headers
@@ -231,6 +230,7 @@ exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache
+  - .env
   - vendor
   - .require.content
   - .jekyll-assets-cache
