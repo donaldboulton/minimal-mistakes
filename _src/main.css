@@ -3,93 +3,40 @@ a {
   text-decoration-color: #141010!important;
 }
 
-@keyframes waveAnimateA {
-  0% {
-    transform: translate(-80px,5px);
-  }
-
-  100% {
-    transform: translate(80px,0);
-  }
+[data-a11y-toggle]:not([aria-controls]),
+[aria-hidden='true'] {
+  display: none;
 }
 
-@-webkit-keyframes waveAnimateA {
-  0% {
-    transform: translate(-80px,5px);
-  }
-
-  100% {
-    transform: translate(80px,0);
-  }
+.gm-style [aria-hidden='true'] { /* 1 */
+  display: block; /* 2 */
+  display: initial;
 }
 
-@keyframes waveAnimateB {
-  0% {
-    transform: translate(-80px,10px);
-  }
-
-  100% {
-    transform: translate(80px,0);
-  }
+[id^='target'] {
+  padding: 0.5em;
+  margin: 0.5em 0;
+  border: 1px solid #483e2f;
+  border-radius: 3px;
 }
 
-@-webkit-keyframes waveAnimateB {
-  0% {
-    transform: translate(-80px,10px);
-  }
-
-  100% {
-    transform: translate(80px,0);
-  }
-}
-
-@keyframes waveAnimateC {
-  0% {
-    transform: translate(-20px,5px);
-  }
-
-  100% {
-    transform: translate(-80px,10px);
-  }
-}
-
-@-webkit-keyframes waveAnimateC {
-  0% {
-    transform: translate(-20px,5px);
-  }
-
-  100% {
-    transform: translate(-80px,10px);
-  }
-}
-.masthead .intro-waves,.masthead .waves-wrapper {
-  position: relative;
+.collapsible-box {
   overflow: hidden;
-  width: 100%;
+  opacity: 1;
+  max-height: 80em;
+  visibility: visible;
+  transition:
+    visibility 0s ease,
+    max-height 2s ease,
+    opacity    2s ease;
+  transition-delay: 0s;
 }
 
-.masthead .waves-wrapper {
-  height: 124px;
-}
-
-.masthead .waves {
-  position: absolute;
-  top: -3px;
-  width: calc(100% + 400px);
-  margin: 0 0 0 -200px;
-}
-
-.masthead .waves path {
-  opacity: .4;
-  animation: 14s ease-in-out infinite alternate waveAnimateA;
-}
-
-.masthead .waves path:nth-child(2) {
-  animation: 14s ease-in-out infinite alternate waveAnimateB;
-}
-
-.masthead .waves path:last-child {
-  animation: 14s ease-in-out infinite alternate waveAnimateC;
+.collapsible-box[aria-hidden='true'] {
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition-delay: 2s, 0s, 0s;
 }
 
 h1 {
