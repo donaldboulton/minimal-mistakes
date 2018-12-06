@@ -3,25 +3,34 @@ a {
   text-decoration-color: #141010!important;
 }
 
-[role="button"] {
-  cursor: pointer;
-} 
+main > div + h3 {
+  border-top: 2px solid;
+}
 
-[data-a11y-toggle]:not([aria-controls]),
-[aria-hidden='true'] {
+h3 button {
+  all: inherit;
+  border: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.5em 0;
+}
+
+h3 button:focus svg {
+  outline: 2px solid;
+}
+
+button svg {
+  height: 1em;
+  margin-left: 0.5em;
+}
+
+[aria-expanded="true"] .vert {
   display: none;
 }
 
-.gm-style [aria-hidden='true'] { /* 1 */
-  display: block; /* 2 */
-  display: initial;
-}
-
-[id^='target'] {
-  padding: 0.5em;
-  margin: 0.5em 0;
-  border: 1px solid #483e2f;
-  border-radius: 3px;
+[aria-expanded] rect {
+  fill: currentColor;
 }
 
 .collapsible-box {

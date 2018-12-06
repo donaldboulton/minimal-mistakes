@@ -127,6 +127,21 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
+(function() {
+  const headings = document.querySelectorAll('h2')
+
+  Array.prototype.forEach.call(headings, heading => {
+    let btn = heading.querySelector('button')
+    let target = heading.nextElementSibling
+
+    btn.onclick = () => {
+      let expanded = btn.getAttribute('aria-expanded') === 'true' || false;
+
+      btn.setAttribute('aria-expanded', !expanded)
+      target.hidden = expanded;
+    }
+  })
+})();
 var dialog = document.getElementById('my-accessible-dialog');
 
 var btn = document.getElementById("myBtn");
