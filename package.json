@@ -94,6 +94,7 @@
   "dependencies": {
     "a11y-dialog": "^5.2.0",
     "babel-polyfill": "^6.16.0",
+    "classnames": "^2.2.6",
     "default-passive-events": "^1.0.10",
     "jquery-smooth-scroll": "^2.2.0",
     "lazysizes": "^4.1.2",

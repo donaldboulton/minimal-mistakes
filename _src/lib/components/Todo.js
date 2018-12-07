@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDom from 'react-dom';
 import logo from './images/logo.svg';
 import List from './List';
-class Todo extends Component {
+class Todo extends React.Component {
 
   state = {
     items: [],
@@ -10,12 +10,12 @@ class Todo extends Component {
   }
 
  onChange(event){
-   this.setState({ term: event });
+   this.setState({ term: event })
  }
 
  onDelete= (item) =>{
-   this.state.items.splice(item, 1);
-   this.setState({items: this.state.items});
+   this.state.items.splice(item, 1)
+   this.setState({items: this.state.items})
  }
 
   onSubmit= (event) => {
