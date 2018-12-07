@@ -1,0 +1,6 @@
+{% for page in site.pages %}
+  {% include entry.html %}
+    {% if page.external_url %}
+      [{{ page.title }}]({{ page.external_url }})
+    {% endif %}
+{% endfor %}

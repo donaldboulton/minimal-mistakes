@@ -1,6 +1,6 @@
-{% for page in site.pages %}
+{% for post in site.posts %}
   {% include entry.html %}
-    {% if page.external_url %}
-      [{{ page.title }}]({{ page.external_url }})
+    {% if post.external_url %}
+      [{{ post.title }}]({{ post.external_url }})
     {% endif %}
 {% endfor %}
