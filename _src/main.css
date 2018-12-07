@@ -59,11 +59,10 @@ h1 {
 
 .App-logo {
   animation: a infinite 20s linear;
-  height: 80px;
+  height: 100px;
 }
 
 .App-header {
-  background-color: #222;
   padding: 1em;
   color: #fff;
 }
@@ -89,6 +88,7 @@ h1 {
   margin: 0 auto;
   text-align: center;
   border: 1px solid #000;
+  border-radius: 3px;
   position: relative;
 }
 
@@ -130,7 +130,7 @@ hr {
   width: 16px;
   height: 16px;
   background-color: transparent;
-  background-image: url(/assets/1ad885581f686e8fad624b14d8f7ec84.svg);
+  background-image: url(/images/icons/trash-alt.svg);
   background-size: 100% 100%;
   border: 0;
   vertical-align: middle;
