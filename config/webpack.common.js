@@ -57,7 +57,8 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['react', 'stage-2', 'env'],
+            presets: ['env', 'react', 'stage-2'],
+            plugins: ["transform-class-properties"]
           },
         },
       },
