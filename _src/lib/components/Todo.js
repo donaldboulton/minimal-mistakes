@@ -31,7 +31,7 @@ class Todo extends Component {
   render() {
     return (
       <div className="AppCenter">
-      <img src={logo} className="App-logo" alt="logo" />
+      <img src={logo} alt="logo" />
        <h3 className="Appheader"> TODO-LIST </h3>
        <div className='AppCentermain'>
         <form className="App notify-center" onSubmit={this.onSubmit}>

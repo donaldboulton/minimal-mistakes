@@ -34,8 +34,8 @@ class List extends Component {
                  <span style= {strike}> {item} </span>
               </div>
               <div className="item-remove-div">
-                <button className="item-remove" onClick={() => this.props.onDeleteList(index)}>
-                <img src={trash} className="icon" alt="trash" />
+                <button className="item-remove icon" onClick={() => this.props.onDeleteList(index)}>
+                <img src={trash} alt="trash" />
                 </button>
               </div>
             </div>

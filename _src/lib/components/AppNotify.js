@@ -78,6 +78,7 @@ class App extends React.Component {
     }
     this.setState({
       title: title,
+      body: body,
       options: options
     });
   }
@@ -86,7 +87,7 @@ class App extends React.Component {
 
     return (
       <div className="AppCenter">
-        <h3 className="Appheader"><img src={bell} className="icon icon--bell fa-bell" alt="Notify" /> React Notify </h3>
+        <h3 className="Appheader"><span className="icon icon--bell fa-bell"><img src={bell} alt="Notify" /></span> React Notify </h3>
         <div className='notifyCenter'>
         <button className="btn btn--primary" onClick={this.handleButtonClick.bind(this)}>Notif!</button>
         <Notification
