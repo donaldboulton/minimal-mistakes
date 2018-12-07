@@ -57,34 +57,34 @@
     transform: translate(-80px,10px);
   }
 }
-.masthead .intro-waves,.masthead .waves-wrapper {
+.intro-waves .waves-wrapper {
   position: relative;
   overflow: hidden;
   width: 100%;
 }
 
-.masthead .waves-wrapper {
+.waves-wrapper {
   height: 124px;
   transform: rotate(180deg);
 }
 
-.masthead .waves {
+.waves {
   position: absolute;
   top: 0px;
   width: calc(100% + 400px);
   margin: 0 0 0 -200px;
 }
 
-.masthead .waves path {
+.waves path {
   opacity: .4;
   animation: 14s ease-in-out infinite alternate waveAnimateA;
 }
 
-.masthead .waves path:nth-child(2) {
+.waves path:nth-child(2) {
   animation: 14s ease-in-out infinite alternate waveAnimateB;
 }
 
-.masthead .waves path:last-child {
+.waves path:last-child {
   animation: 14s ease-in-out infinite alternate waveAnimateC;
 }
 

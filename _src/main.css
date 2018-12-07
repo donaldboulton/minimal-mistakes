@@ -363,12 +363,6 @@ dialog::backdrop {
   margin-left: 1.2em;
 }
 
-.toc1-li-popup {
-  margin-bottom: .25em;
-  line-height: 1.5;
-  margin-left: 20px;
-}
-
 [type=file] {
   height: 0;
   overflow: hidden;
@@ -2007,7 +2001,6 @@ td,th,tr {
   -ms-flex-pack: justify;
   justify-content: space-between;
   font-family: -apple-system,BlinkMacSystemFont,Roboto,Segoe UI,Helvetica Neue,Lucida Grande,Arial,sans-serif;
-  background-image: url("/assets/images/icons/waves.svg");
 }
 
 .masthead__inner-wrap:after {
