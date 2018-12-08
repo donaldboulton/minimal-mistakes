@@ -24,4 +24,4 @@ github_editme_path: donaldboulton/DWB/blob/gh-pages/_pages/site-pages.md
 
 # List of Site Pages
 
-{% include pages-archive.html %}
+{% include page-archive.html %}
