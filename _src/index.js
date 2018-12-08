@@ -1,6 +1,3 @@
-import $ from 'jquery';
-window.jQuery = $;
-window.$ = $;
 import React from 'react';
 import Todo from './lib/components/Todo';
 import AppNotify from './lib/components/AppNotify';
