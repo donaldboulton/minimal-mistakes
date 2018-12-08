@@ -18,8 +18,6 @@ slug: site-pages
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_pages/site-pages.md
 ---
 
-{% include waves.html %}
-
 {% include octo-arm.html %}
 
 # List of Site Pages

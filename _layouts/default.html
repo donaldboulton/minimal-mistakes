@@ -20,10 +20,8 @@ layout: compress
       {% include search/search_form.html %}
     </div>
     {% endif %}
-    {% if site.waves == true %}
-    <div class="intro-waves">
+    {% if site.waves == true %}   
       {% include waves.html %}
-    </div>
     {% endif %}
     <div id="initial-content" class="initial-content">
       {{ content }}
