@@ -68,7 +68,6 @@
     "file-loader": "^0.11.2",
     "html-webpack-plugin": "^3.2.0",
     "http-server": "^0.10.0",
-    "imagemin-webpack-plugin": "^2.3.0",
     "imports-loader": "^0.8.0",
     "netlify-lambda": "^0.4.0",
     "node-fetch": "^2.3.0",
