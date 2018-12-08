@@ -427,25 +427,6 @@ defaults:
       breadcrumbs:
         - label: "Posts"
           url: /year-archive/
-  # amp-html
-  - scope:
-      path: "amp"
-      type: posts
-    values:
-      layout: amp
-      author_profile: true
-      read_time: true
-      comments: false
-      share: false
-      related: true
-      toc: true
-      adds: true
-      reviews: true
-      cookies: true
-      notifications: false
-      breadcrumbs:
-        - label: "Amp Posts"
-          url: /:amp/:name/
   # _pages
   - scope:
       path: "_pages"
