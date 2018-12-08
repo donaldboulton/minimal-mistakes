@@ -136,7 +136,10 @@ Full Webpack integration of all static assets, Working on react components to re
 Links to Netlify this GitHub repo, Staticman Reviews, MMistakes Framework Designers Michel Rose and Donald Boulton.
 
 {% include feature_row %}
+
 {% include github.html %}
+
+{% include charts/builds.html %}
 
 ## Latest Netlify Docker build
 
