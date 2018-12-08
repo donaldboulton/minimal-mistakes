@@ -90,7 +90,7 @@ module.exports = {
       },
       {
         test: require.resolve("svg4everybody"),
-        loader: "imports-loader?$=jquery",
+        loader: "imports-loader?this=>window"
       }
     ],
   },
