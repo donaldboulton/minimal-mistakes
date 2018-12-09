@@ -359,7 +359,7 @@ dialog::backdrop {
   fill: #fff;
 }
 
-.toc1__menu-popup {
+.toc1-menu-popup {
   margin-left: 1.2em;
 }
 
@@ -3693,13 +3693,13 @@ ins,u {
   clear: both;
 }
 
-.page__title {
+.page-title {
   margin-top: 0;
   font-family: Kaushan Script,cursive;
   line-height: 1;
 }
 
-.page__title+.comment__date,.page__title+.page__meta,.page__title+.review__date {
+.page-title+.comment__date,.page-title+.page__meta,.page-title+.review__date {
   margin-top: -.5em;
 }
 
@@ -3803,7 +3803,7 @@ ins,u {
   }
 }
 
-.page__hero--overlay #goog-wm-sb,.page__hero--overlay .btn,.page__hero--overlay .comment__date,.page__hero--overlay .page__lead,.page__hero--overlay .page__meta,.page__hero--overlay .page__title,.page__hero--overlay .review__date {
+.page__hero--overlay #goog-wm-sb,.page__hero--overlay .btn,.page__hero--overlay .comment__date,.page__hero--overlay .page__lead,.page__hero--overlay .page__meta,.page__hero--overlay .page-title,.page__hero--overlay .review__date {
   color: #fff;
   text-shadow: 1px 1px 4px rgba(0,0,0,.5);
 }
@@ -3812,12 +3812,12 @@ ins,u {
   max-width: 768px;
 }
 
-.page__hero--overlay .page__title {
+.page__hero--overlay .page-title {
   font-size: 1.953em;
 }
 
 @media (min-width:37.5em) {
-  .page__hero--overlay .page__title {
+  .page__hero--overlay .page-title {
     font-size: 2.441em;
   }
 }

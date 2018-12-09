@@ -52,7 +52,7 @@
   }
 }
 
-.page__title {
+.page-title {
   margin-top: 0;
   font-family: 'Kaushan Script', cursive;
   line-height: 1;
@@ -161,7 +161,7 @@
       }
     }
 
-    .page__title,
+    .page-title,
     .page__meta,
     .page__lead,
     .btn {
@@ -173,7 +173,7 @@
       max-width: $medium;
     }
 
-    .page__title {
+    .page-title {
       font-size: $type-size-2;
 
       @include breakpoint($small) {
