@@ -53,8 +53,20 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['react', 'stage-2', 'env'],
-            plugins: ["transform-class-properties"]
+            presets: [
+              "react",
+              [
+                  "env",
+                  {
+                      "targets": {
+                          "browsers": ["last 2 versions"]
+                      },
+                      "debug": true,
+                      "modules": "commonjs"
+                  }
+              ]
+          ],
+          plugins: ["transform-object-rest-spread", "transform-class-properties"]
           },
         },
       },
