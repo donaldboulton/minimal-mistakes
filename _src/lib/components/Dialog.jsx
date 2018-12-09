@@ -4,7 +4,7 @@ import bars from './images/bars.svg';
 
 const Dialog = require('react-a11y-dialog');
 
-class DialogMenu extends React.Component {
+class MyComponent extends React.Component {
   handleClick = () => {
     this.dialog.show()
   }
@@ -66,6 +66,6 @@ class DialogMenu extends React.Component {
 }
 
 ReactDOM.render(
-  <DialogMenu />,
+  <MyComponent />,
   document.getElementById('menu')
 )
