@@ -221,11 +221,6 @@ extlinks:
 
 strict_front_matter      : true
 
-# jekyll-multiple-languages-plugin settings:
-languages: ["it", "en", "es"]
-
-exclude_from_localizations: ["javascript", "images", "css", "scripts", "favicon.ico"]
-
 # Reading Files
 include:
   - _pages
@@ -317,7 +312,6 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-archives
-  - jekyll-multiple-languages-plugin
   - jekyll-figure
   - jekyll-tagging
   - jekyll-tagging-related_posts
@@ -336,7 +330,6 @@ whitelist:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-archives
-  - jekyll-multiple-languages-plugin
   - jekyll-figure
   - jekyll-tagging
   - jekyll-tagging-related_posts
