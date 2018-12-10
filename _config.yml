@@ -312,6 +312,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-archives
+  - jekyll-multiple-languages-plugin
   - jekyll-figure
   - jekyll-tagging
   - jekyll-tagging-related_posts
@@ -330,6 +331,7 @@ whitelist:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-archives
+  - jekyll-multiple-languages-plugin
   - jekyll-figure
   - jekyll-tagging
   - jekyll-tagging-related_posts
