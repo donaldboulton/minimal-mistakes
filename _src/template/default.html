@@ -6,6 +6,15 @@ layout: compress
 
 <html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js" itemscope itemtype="https://schema.org/WebSite">
 <head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-47664028-1"></script>
+  <script type="text/javascript">
+  window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-47664028-1');</script>
   {% include head.html %}
   {% include head/custom.html %}
   <script type="text/javascript" asnyc src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
