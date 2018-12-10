@@ -2635,7 +2635,6 @@ td,th,tr {
 
 .toc1 {
   font-family: -apple-system,BlinkMacSystemFont,Roboto,Segoe UI,Helvetica Neue,Lucida Grande,Arial,sans-serif;
-  background-color: #141010;
   border: 1px solid #434040;
   border-radius: 4px;
   margin-bottom: 1.5em;
@@ -2661,7 +2660,8 @@ td,th,tr {
 }
 
 .toc1-li {
-  margin-bottom: .25em;
+  margin-bottom: .5em;
+  padding-bottom: .5em;
   border-bottom: 1px solid #434040;
   line-height: 1.5;
 }

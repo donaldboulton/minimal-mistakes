@@ -5,10 +5,10 @@ permalink: /site-pages/
 toc: false
 sidenav: true
 side_react: true
-comments: false
+comments: true
 anchor: true
 reviews: false
-adds: true
+adds: false
 waves: false
 excerpt: "List of Site Pages"
 support: [adds, cookies, anchor]
