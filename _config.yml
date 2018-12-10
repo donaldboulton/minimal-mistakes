@@ -221,6 +221,11 @@ extlinks:
 
 strict_front_matter      : true
 
+# jekyll-multiple-languages-plugin settings:
+languages: ["it", "en", "es"]
+
+exclude_from_localizations: ["javascript", "images", "css", "scripts", "favicon.ico"]
+
 # Reading Files
 include:
   - _pages

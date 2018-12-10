@@ -1,9 +1,14 @@
-home:
-  header:
-    headline: Your beautiful headline
-    call_to_action:
-      title: Check out our blog posts
-      link: /posts
-
-footer:
-  love: 'Made with <span class="accent">❤</span>'
+global:
+  tagline: English
+  about: About
+  twitter: Twitter
+  github: GitHub
+langs:
+  it: Italiano
+  en: English
+  es: Español
+pages:
+  example: example
+  includeexample: The following text is a Jekyll include liquid tag parameter
+titles:
+  pagination: Pagination
