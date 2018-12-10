@@ -6,10 +6,9 @@ layout: compress
 
 <html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js" itemscope itemtype="https://schema.org/WebSite">
 <head>
-<meta charset="utf-8">
+  <meta charset="utf-8">
   {% include head.html %}
-  {% include head/custom.html %}
-  <script type="text/javascript" asnyc src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script asnyc src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 
 <body id="style-3" class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %} auth-false" itemscope itemtype="https://schema.org/WebPage">
