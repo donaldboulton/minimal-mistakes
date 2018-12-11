@@ -19,4 +19,7 @@ class App extends React.Component {
 import './main.css';
 import './IndexMicro';
 
+// eslint-disable-next-line no-undef
+IndexMicro();
+
 export default App;
