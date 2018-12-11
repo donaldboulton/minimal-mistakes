@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import ReactDom from 'react-dom';
 import logo from './images/logo.svg';
 import List from './List';
-
 class Todo extends React.Component {
 
   state = {
