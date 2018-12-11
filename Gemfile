@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 gem 'github-pages', '~> 193', group: :jekyll_plugins
 
-gem "rake",
+gem "rake"
 gem 'tzinfo-data', '~> 1.2018', '>= 1.2018.7'
 gem "wdm", "~> 0.1.1"
 gem "html-proofer"
