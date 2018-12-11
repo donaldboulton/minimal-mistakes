@@ -7,5 +7,5 @@ const db = promisify(level('visits.db', {
   valueEncoding: 'json'
 }))
 
-const micro = require('./micro');
-micro('../server.js');
+const micro = require('./Micro');
+micro('./Server.js');

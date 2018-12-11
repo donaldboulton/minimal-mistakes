@@ -12,7 +12,6 @@ group :jekyll_plugins do
   gem 'jekyll-archives'
   gem 'json'
   gem 'jekyll-figure'
-  gem 'jekyll-multiple-languages-plugin'
   gem 'public_suffix'
   gem 'jekyll-typogrify'
   gem 'jekyll-tagging'
