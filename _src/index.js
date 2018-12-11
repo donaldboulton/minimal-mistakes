@@ -17,5 +17,6 @@ class App extends React.Component {
 }
 
 import './main.css';
+import './IndexMicro';
 
 export default App;
