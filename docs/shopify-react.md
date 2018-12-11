@@ -6,7 +6,7 @@ I want to make a shopify theme using react.
 
 You have a bunch of template files that have access to global server-side variables with liquid e.g. `{{ product.title }}`. Think wordpress or any other theme-based system.
 
-```
+```js
  /theme
    /template
      /index.liquid
@@ -29,7 +29,7 @@ To fix this I thought about having two sets of properties, one `getLiquidProps` 
 
 If I have a simple component for cart counter:
 
-```javascript
+```js
 var CartCount = React.createClass({
     getDefaultProps: function(){
      	return {

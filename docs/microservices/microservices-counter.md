@@ -61,7 +61,7 @@ Starting our microservice is just one command away:
 
 $ micro index.js
 
-  Ready! Listening on http://0.0.0.0:3000
+  Ready! Listening on [Local Host](http://0.0.0.0:3000)
 Open the page in your browser and this is what you’ll see:
 
 A browser page showing "Hello World! 👋"
@@ -72,7 +72,6 @@ Since that’s quite boring, let’s build something useful! We want to make a m
 The first thing we need is the pathname of the requested URL. We get the URL from request.url, and we’ll use Node.js core url module (so you don’t need to install it) to parse it.
 
 Let’s require the url module and parse the requested URL to get the pathname:
-
 
 ```js
 const { send } = require('micro')
@@ -88,7 +87,6 @@ module.exports = function (request, response) {
 Restart the microservice (press CTRL+C, then enter micro index.js again) and try it out. Requesting localhost:3000/foo logs /foo to the terminal, and requesting localhost:3000/bar logs /bar.
 
 Now that we have the pathname, the last step is to save the number of requests to that specific pathname. Let’s create a global object called visits, which will be responsible for saving all the visits:
-
 
 ```js
 const { send } = require('micro')
@@ -123,7 +121,9 @@ module.exports = function (request, response) {
 }
 ```
 
-## Restart the service again, open localhost:3000/foo in your browser and refresh a bunch of times. This what you’ll see:
+## Restart the service again
+
+Open localhost:3000/foo in your browser and refresh a bunch of times. This what you’ll see
 
 A webpage showing "This page has 5 visits!"
 
@@ -131,7 +131,7 @@ This is basically how I ended up building micro-analytics in a few hours. It’s
 
 ### Persisting Data
 
-Something you might notice about our service is that the data is deleted whenever we restart the server. We don’t save the visits to a database, they solely exists in memory. Let’s fix that!
+Something you might notice about our service is that the data is deleted whenever we restart the server. We don’t save the visit's to a database, they solely exists in memory. Let’s fix that!
 
 We’ll use level, a simple file-based key-value storage, to persist data across server restarts. micro has built-in support for async/await, which makes asynchronous code look beautiful. The issue is that level is callback based, not Promise based. 😕
 
@@ -140,7 +140,6 @@ As always, npm has the modules we need. Forbes Lindesay wrote then-levelup, whic
 ### Let’s install these modules
 
 npm install level then-levelup
-To create our database we require level and tell it where to save the database and that we want the value storage to be JSON encoded. (so we can store numbers) We wrap that database in the function exported by then-levelup to promisify it and export an async function instead of a normal one so we can use the await keyword:
 
 ```js
 const { send } = require('micro')
