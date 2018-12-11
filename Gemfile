@@ -1,18 +1,16 @@
 source "https://rubygems.org"
 
-gem 'github-pages', '~> 192', group: :jekyll_plugins
+gem 'github-pages', '~> 193', group: :jekyll_plugins
 
-gem "rake", "~> 12"
-gem "tzinfo-data"
-gem "wdm", "~> 0.1.0"
+gem "rake",
+gem 'tzinfo-data', '~> 1.2018', '>= 1.2018.7'
+gem "wdm", "~> 0.1.1"
 gem "html-proofer"
 gem "activesupport"
 
 group :jekyll_plugins do
   gem 'jekyll-archives'
   gem 'json'
-  gem 'jemoji'
-  gem 'jekyll-redirect-from', '~> 0.14.0'
   gem 'jekyll-figure'
   gem 'jekyll-multiple-languages-plugin'
   gem 'public_suffix'
