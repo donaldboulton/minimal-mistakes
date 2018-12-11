@@ -223,6 +223,7 @@ strict_front_matter      : true
 
 # Reading Files
 include:
+  - .htaccess
   - _pages
   - build
   - _headers
@@ -230,7 +231,6 @@ exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache
-  - .env
   - vendor
   - .require.content
   - .jekyll-assets-cache
@@ -307,6 +307,7 @@ timezone: America/Chicago
 # Plugins (previously gems:)
 plugins:
   - posts_json
+  - jekyll-sitemap
   - jekyll-paginate
   - jekyll-gist
   - jekyll-feed
@@ -316,7 +317,7 @@ plugins:
   - jekyll-tagging
   - jekyll-tagging-related_posts
   - jekyll-redirect-from
-  - jekyll-sitemap
+  - jekyll-algolia
   - lazyload
   - notice
   - jemoji
@@ -325,6 +326,7 @@ plugins:
 # mimic GitHub Pages with --safe
 whitelist:
   - posts_json
+  - jekyll-sitemap
   - jekyll-paginate
   - jekyll-gist
   - jekyll-feed
@@ -334,7 +336,8 @@ whitelist:
   - jekyll-tagging
   - jekyll-tagging-related_posts
   - jekyll-redirect-from
-  - jekyll-sitemap
+  - jekyll-algolia  
+  - jekyll-webmention_io
   - lazyload
   - notice
   - jemoji
@@ -424,6 +427,25 @@ defaults:
       breadcrumbs:
         - label: "Posts"
           url: /year-archive/
+  # amp-html
+  - scope:
+      path: "amp"
+      type: posts
+    values:
+      layout: amp
+      author_profile: true
+      read_time: true
+      comments: false
+      share: false
+      related: true
+      toc: true
+      adds: true
+      reviews: true
+      cookies: true
+      notifications: false
+      breadcrumbs:
+        - label: "Amp Posts"
+          url: /:amp/:name/
   # _pages
   - scope:
       path: "_pages"

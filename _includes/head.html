@@ -1,3 +1,4 @@
+<meta charset="utf-8">
 {% include seo.html %}
 <link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
 <!-- https://t.co/dKP3o1e -->
@@ -30,7 +31,6 @@
 <meta name="google-signin-cookiepolicy" Content="single_host_origin">
 <meta name="specificfeeds-verification-code" content="w48MyShCerwN6kA3DklR">
 <meta name="theme-color" content="#212529">
-<meta name="msapplication-TileColor" content="#b91d47">
 <meta name="logo" content="{{ site.url }}/apple-touch-icon-precomposed.png">
 <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
 <meta name="slack-app-id" content="ADKNMSBSM">
@@ -93,10 +93,6 @@
 {% if page.events == true %}
   <link rel="stylesheet" href="{{ '/build/jquery-ui/fullcalendar.min.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/build/jquery-ui/jquery-ui.theme.min.css' | relative_url }}">
-{% endif %}
-
-{% if page.waves == true %}
-  <link rel="stylesheet" href="{{ '/build/css/waves.css' | relative_url }}">
 {% endif %}
 
 {% if page.support contains 'here-maps' %}
