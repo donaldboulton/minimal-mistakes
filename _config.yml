@@ -307,40 +307,25 @@ timezone: America/Chicago
 # Plugins (previously gems:)
 plugins:
   - posts_json
-  - jekyll-sitemap
-  - jekyll-paginate
-  - jekyll-gist
-  - jekyll-feed
-  - jekyll-seo-tag
   - jekyll-archives
   - jekyll-figure
   - jekyll-tagging
   - jekyll-tagging-related_posts
   - jekyll-redirect-from
-  - jekyll-algolia
   - lazyload
   - notice
-  - jemoji
   - json
 
 # mimic GitHub Pages with --safe
 whitelist:
   - posts_json
-  - jekyll-sitemap
-  - jekyll-paginate
-  - jekyll-gist
-  - jekyll-feed
-  - jekyll-seo-tag
   - jekyll-archives
   - jekyll-figure
   - jekyll-tagging
   - jekyll-tagging-related_posts
   - jekyll-redirect-from
-  - jekyll-algolia  
-  - jekyll-webmention_io
   - lazyload
   - notice
-  - jemoji
   - json
 
 # Archives
@@ -373,6 +358,10 @@ jekyll-archives:
 
 # Collections
 collections:
+  posts:
+    output: true
+    title: Posts By Collection
+    permalink: /:posts/:path/
   photography:
     output: true
     permalink: /:photography/:name/
@@ -381,7 +370,7 @@ collections:
     permalink: /:amp/:name/
   events:
     output: true
-    permalink: /events/:path/
+    permalink: /:events/:path/
     title: Events
   products:
     output: true
@@ -390,6 +379,18 @@ collections:
     output: true
 # Defaults
 defaults:
+  # _posts
+  - scope:
+      path: "_posts"
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: false
+      related: true
+      search: true
   - scope:
       path: "photography"
       type: "photograpny"
@@ -416,7 +417,7 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: false
+      comments: true
       share: false
       related: true
       toc: true
