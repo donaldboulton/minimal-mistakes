@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from 'react-dom';
 import bars from './images/bars.svg';
-
+import Chevron from './images/chevron.svg';
 const Dialog = require('react-a11y-dialog');
 
 class MyComponent extends React.Component {
@@ -29,7 +29,7 @@ class MyComponent extends React.Component {
                    <div><a rel="noreferrer" itemProp="url" href="/">Home</a></div>
                    <div><a rel="noreferrer" itemProp="url" href="/about/">About</a></div>
                    <div><a rel="noreferrer" itemProp="url" href="/contact/">Contact</a></div>
-                   <span className="page-title"><a rel="noreferrer" itemProp="url" href="/site-pages/">Site Pages&nbsp;&rarr;</a></span>
+                   <span className="page-title"><a rel="noreferrer" itemProp="url" href="/site-pages/">Site Pages&nbsp;<img src={Chevron} className="icon" alt="Pages" /></a></span>
                 </div>
             </div>
             <div>
@@ -38,7 +38,7 @@ class MyComponent extends React.Component {
                   <div><a href="/programing/letter-avatar/">&nbsp;Letter Avatar</a></div>
                   <div><a href="/2017-04-11-post-social-sharing.html">&nbsp;Social Sharing</a></div>
                   <div><a href="/2018-05-27-post-reviews-for-jekyll.html">&nbsp;Jekyll Reviews</a></div>
-                  <span className="page-title"><a rel="noreferrer" itemProp="url" href="/categories/">Post Archives&nbsp;&rarr;</a></span>
+                  <span className="page-title"><a rel="noreferrer" itemProp="url" href="/categories/">Post Archives&nbsp;<img src={Chevron} className="icon" alt="Posts" /></a></span>
                 </div>
             </div>
             <div>
@@ -47,7 +47,7 @@ class MyComponent extends React.Component {
                   <div><a href="/photography/cat-gallery/">My Cats</a></div>
                   <div><a href="/photography/stray-cat-gallery/">Stray Cats</a></div>
                   <div><a href="/photography/old-cat-gallery/">Old Cats</a></div>
-                  <span className="page-title"><a rel="noreferrer" itemProp="url" href="/photography/">All Galleries&nbsp;&rarr;</a></span>
+                  <span className="page-title"><a rel="noreferrer" itemProp="url" href="/photography/">All Galleries&nbsp;<img src={Chevron} className="icon" alt="Gallerys" /></a></span>
                 </div>
             </div>
             <div>

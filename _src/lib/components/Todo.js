@@ -31,7 +31,7 @@ class Todo extends React.Component {
   render() {
     return (
       <div className="AppCenter">
-      <img src={logo} className="App-logo align-center" alt="logo" />
+      <img src={logo} className="App-logo-spin align-center" alt="logo" />
        <h3 className="Appheader"> TODO-LIST </h3>
        <div className='AppCentermain'>
         <form className="App notify-center" onSubmit={this.onSubmit}>

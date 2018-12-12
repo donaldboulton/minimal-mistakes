@@ -57,9 +57,14 @@ h1 {
   color: #fff!important;
 }
 
-.App-logo {
+.App-logo-spin {
   animation: a infinite 20s linear;
   height: 100px;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 .App-header {
@@ -87,7 +92,7 @@ h1 {
   max-width: 230px;
   margin: 0 auto;
   text-align: center;
-  border: 1px solid #000;
+  border: thin solid #000;
   border-radius: 3px;
   position: relative;
 }
@@ -107,7 +112,7 @@ h1 {
 .item-list {
   width: 90%;
   background-color: #00c100;
-  border: 2px solid #01a501;
+  border: 1px solid #01a501;
 }
 
 hr {
@@ -1151,6 +1156,7 @@ nav li ol,nav li ul {
 form {
   margin: 0 0 5px;
   padding: 1em;
+  background-color: #110e0e;
 }
 
 form fieldset {
@@ -2613,6 +2619,7 @@ td,th,tr {
   font-family: -apple-system,BlinkMacSystemFont,Roboto,Segoe UI,Helvetica Neue,Lucida Grande,Arial,sans-serif;
   color: #7a8288;
   letter-spacing: 1px;
+  background-color: #141010;
   border: 1px solid #434040;
   border-radius: 4px;
   margin-bottom: 1em;
@@ -2633,6 +2640,7 @@ td,th,tr {
 
 .toc1 {
   font-family: -apple-system,BlinkMacSystemFont,Roboto,Segoe UI,Helvetica Neue,Lucida Grande,Arial,sans-serif;
+  background-color: #141010;
   border: 1px solid #434040;
   border-radius: 4px;
   margin-bottom: 1.5em;
@@ -2659,7 +2667,6 @@ td,th,tr {
 
 .toc1-li {
   margin-bottom: .25em;
-  padding-bottom: .5em;
   border-bottom: 1px solid #434040;
   line-height: 1.5;
 }
