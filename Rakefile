@@ -45,7 +45,6 @@ task :preview do
   ENV["LISTEN_GEM_DEBUGGING"] = "1"
   listener = Listen.to(
     base.join("_data"),
-    base.join("_events"),
     base.join("_includes"),
     base.join("_layouts"),
     base.join("_sass"),
@@ -74,11 +73,4 @@ task :preview do
   end
 
   Jekyll::Commands::Serve.process(options)
-end
-
-require 'html/proofer'
-
-task :test do
-  sh "bundle exec jekyll build"
-  HTML::Proofer.new("./_site", { :check_html => true }).run
 end

@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-
+ruby '~> 2.5'
 gem 'github-pages', '~> 193', group: :jekyll_plugins
 
 gem "rake", "~> 12"
