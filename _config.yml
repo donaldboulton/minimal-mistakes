@@ -295,15 +295,18 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
+
 # Sass/SCSS
 sass:
   sass_dir: _sass
   style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+
 # Outputting
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
 timezone: America/Chicago
+
 # Plugins (previously gems:)
 plugins:
   - posts_json
@@ -344,6 +347,7 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+
 # https://github.com/jekyll/jekyll-archives
 jekyll-archives:
    enabled:
@@ -356,38 +360,27 @@ jekyll-archives:
      category: /categories/:name/
      tag: /tags/:name/
 
+# HTML Compression
+# - http://jch.penibelst.de/
+compress_html:
+  clippings: all
+  comments:  ["<!-- ", " -->"]
+  endings:   all
+  ignore:
+    envs: development
+
 # Collections
 collections:
-  posts:
-    output: true
-    title: Posts By Collection
-    permalink: /posts/:path/
   photography:
     output: true
-    permalink: /photography/:name/
-  events:
-    output: true
-    permalink: /events/:path/
-    title: Events
+    permalink: /:photography/:name/
   products:
     output: true
-    permalink: /products/:name/
+    permalink: /:products/:name/
   category:
     output: true
 # Defaults
 defaults:
-  # _posts
-  - scope:
-      path: "_posts"
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: false
-      related: true
-      search: true
   - scope:
       path: "photography"
       type: "photograpny"
@@ -396,7 +389,7 @@ defaults:
       author_profile: false
       gallery: true
       comments: true
-      share: false
+      share: true
       related: true
       sidenav-gallery: true
       adds: true
@@ -414,14 +407,13 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: true
-      share: false
+      comments: false
+      share: true
       related: true
       toc: true
       adds: true
       reviews: true
       cookies: true
-      notifications: false
       breadcrumbs:
         - label: "Posts"
           url: /year-archive/
@@ -432,32 +424,11 @@ defaults:
     values:
       layout: single
       author_profile: true
-      notifications: false
   - scope:
       path: ""
       type: category
     values:
       layout: "category"
-  # _events
-  - scope:
-      path: "_events"
-      type: events
-    values:
-      layout: null
-      author_profile: true
-      read_time: true
-      comments: true
-      share: false
-      side_react: true
-      related: true
-      toc: true
-      adds: true
-      reviews: false
-      cookies: true
-      notifications: false
-      breadcrumbs:
-        - label: "Events"
-          url: /events/:path/
   # _products
   - scope:
       path: "_products"
@@ -468,7 +439,17 @@ defaults:
         - label: "products"
           url: /products/
       permalink: /:products/:name/
-     
+  # _events
+  - scope:
+      path: "_events"
+      type: "events"
+    values:
+      layout: "null"
+      breadcrumbs:
+        - label: "events"
+          url: /events/
+      permalink: /:events/:path/
+
 posts_json_path: posts.json
 ipstack:
   api_key: b3e3a6f8d63be4a25492fef554f9e28a
