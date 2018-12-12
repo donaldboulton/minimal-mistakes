@@ -361,20 +361,17 @@ collections:
   posts:
     output: true
     title: Posts By Collection
-    permalink: /:posts/:path/
+    permalink: /posts/:path/
   photography:
     output: true
-    permalink: /:photography/:name/
-  amp:
-    output: true
-    permalink: /:amp/:name/
+    permalink: /photography/:name/
   events:
     output: true
-    permalink: /:events/:path/
+    permalink: /events/:path/
     title: Events
   products:
     output: true
-    permalink: /:products/:name/
+    permalink: /products/:name/
   category:
     output: true
 # Defaults
