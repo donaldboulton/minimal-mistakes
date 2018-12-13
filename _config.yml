@@ -318,7 +318,6 @@ plugins:
   - lazyload
   - notice
   - json
-  - jekyll-include-cache
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -331,7 +330,6 @@ whitelist:
   - lazyload
   - notice
   - json
-  - jekyll-include-cache
 
 # Archives
 #  Type
