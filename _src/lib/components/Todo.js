@@ -6,7 +6,7 @@ class Todo extends React.Component {
 
   state = {
     items: [],
-    term : "",
+    term : ""
   }
 
  onChange(event){
@@ -49,4 +49,4 @@ class Todo extends React.Component {
   }
 }
 
-ReactDom.render(<Todo/>, document.getElementById('todo'));
+ReactDom.render(<Todo/>, document.getElementById('todo'))

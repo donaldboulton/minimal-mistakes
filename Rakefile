@@ -62,7 +62,7 @@ task :preview do
     unless options['serving']
       trap("INT") do
         listener.stop
-        puts "     Halting auto-regeneration."
+        puts "Halting auto-regeneration."
         exit 0
       end
 

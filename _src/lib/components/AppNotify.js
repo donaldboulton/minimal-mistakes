@@ -56,7 +56,7 @@ class App extends React.Component {
   handleButtonClick() {
 
     if(this.state.ignore) {
-      return;
+      return
     }
 
     const now = Date.now();
@@ -112,4 +112,4 @@ class App extends React.Component {
   }
 }
 
-ReactDom.render(<App/>, document.getElementById('out'));
+ReactDom.render(<App/>, document.getElementById('out'))
