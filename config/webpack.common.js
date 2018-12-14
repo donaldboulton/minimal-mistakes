@@ -4,10 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
-
-require("dotenv").config();
 
 module.exports = {
   entry: {
@@ -38,7 +35,6 @@ module.exports = {
       from: path.resolve('_images'),
       to: 'images/',
     }]),
-    new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i }),
   ],
   devServer: {
     contentBase: './assets',
@@ -57,7 +53,20 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['env', 'react', 'stage-2'],
+            presets: [
+              "react",
+              [
+                  "env",
+                  {
+                      "targets": {
+                          "browsers": ["last 2 versions"]
+                      },
+                      "debug": true,
+                      "modules": "commonjs"
+                  }
+              ]
+          ],
+          plugins: ["transform-object-rest-spread", "transform-class-properties", "transform-react-jsx"]
           },
         },
       },
