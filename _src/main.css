@@ -34,21 +34,36 @@ button svg {
   fill: currentColor;
 }
 
+.collapsible-box {
+  overflow: hidden;
+  opacity: 1;
+  max-height: 80em;
+  visibility: visible;
+  transition:
+    visibility 0s ease,
+    max-height 2s ease,
+    opacity    2s ease;
+  transition-delay: 0s;
+}
+
+.collapsible-box[aria-hidden='true'] {
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition-delay: 2s, 0s, 0s;
+}
+
 h1 {
   color: #fff!important;
 }
 
-.App-logo-spin {
+.App-logo {
   animation: a infinite 20s linear;
-  height: 100px;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  height: 80px;
 }
 
 .App-header {
+  background-color: #222;
   padding: 1em;
   color: #fff;
 }
@@ -73,8 +88,7 @@ h1 {
   max-width: 230px;
   margin: 0 auto;
   text-align: center;
-  border: thin solid #000;
-  border-radius: 3px;
+  border: 1px solid #000;
   position: relative;
 }
 
@@ -93,7 +107,7 @@ h1 {
 .item-list {
   width: 90%;
   background-color: #00c100;
-  border: 1px solid #01a501;
+  border: 2px solid #01a501;
 }
 
 hr {
@@ -110,13 +124,13 @@ hr {
 }
 
 .item-remove {
-  -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
-  align-self: center;
+  -ms-flex-item-align: right;
+  -ms-grid-row-align: right;
+  align-self: right;
   width: 16px;
   height: 16px;
   background-color: transparent;
-  background-image: url(/images/icons/trash-alt.svg);
+  background-image: url(/assets/1ad885581f686e8fad624b14d8f7ec84.svg);
   background-size: 100% 100%;
   border: 0;
   vertical-align: middle;
@@ -175,7 +189,7 @@ hr {
 }
 
 dialog {
-  z-index: 100!important;
+  z-index: 1!important;
   position: fixed;
   background-color: #141010;
   border: 1px solid #141010;
@@ -343,10 +357,6 @@ dialog::backdrop {
 
 .svg-icon path {
   fill: #fff;
-}
-
-.toc1-menu-popup {
-  margin-left: 1.2em;
 }
 
 [type=file] {
@@ -1137,7 +1147,6 @@ nav li ol,nav li ul {
 form {
   margin: 0 0 5px;
   padding: 1em;
-  background-color: #110e0e;
 }
 
 form fieldset {
@@ -1987,6 +1996,7 @@ td,th,tr {
   -ms-flex-pack: justify;
   justify-content: space-between;
   font-family: -apple-system,BlinkMacSystemFont,Roboto,Segoe UI,Helvetica Neue,Lucida Grande,Arial,sans-serif;
+  background-image: url("/assets/images/icons/waves.svg");
 }
 
 .masthead__inner-wrap:after {
@@ -2600,7 +2610,6 @@ td,th,tr {
   font-family: -apple-system,BlinkMacSystemFont,Roboto,Segoe UI,Helvetica Neue,Lucida Grande,Arial,sans-serif;
   color: #7a8288;
   letter-spacing: 1px;
-  background-color: #141010;
   border: 1px solid #434040;
   border-radius: 4px;
   margin-bottom: 1em;
@@ -2621,7 +2630,6 @@ td,th,tr {
 
 .toc1 {
   font-family: -apple-system,BlinkMacSystemFont,Roboto,Segoe UI,Helvetica Neue,Lucida Grande,Arial,sans-serif;
-  background-color: #141010;
   border: 1px solid #434040;
   border-radius: 4px;
   margin-bottom: 1.5em;
@@ -2648,6 +2656,7 @@ td,th,tr {
 
 .toc1-li {
   margin-bottom: .25em;
+  padding-bottom: .5em;
   border-bottom: 1px solid #434040;
   line-height: 1.5;
 }
@@ -3679,13 +3688,13 @@ ins,u {
   clear: both;
 }
 
-.page-title {
+.page__title {
   margin-top: 0;
   font-family: Kaushan Script,cursive;
   line-height: 1;
 }
 
-.page-title+.comment__date,.page-title+.page__meta,.page-title+.review__date {
+.page__title+.comment__date,.page__title+.page__meta,.page__title+.review__date {
   margin-top: -.5em;
 }
 
@@ -3789,7 +3798,7 @@ ins,u {
   }
 }
 
-.page__hero--overlay #goog-wm-sb,.page__hero--overlay .btn,.page__hero--overlay .comment__date,.page__hero--overlay .page__lead,.page__hero--overlay .page__meta,.page__hero--overlay .page-title,.page__hero--overlay .review__date {
+.page__hero--overlay #goog-wm-sb,.page__hero--overlay .btn,.page__hero--overlay .comment__date,.page__hero--overlay .page__lead,.page__hero--overlay .page__meta,.page__hero--overlay .page__title,.page__hero--overlay .review__date {
   color: #fff;
   text-shadow: 1px 1px 4px rgba(0,0,0,.5);
 }
@@ -3798,12 +3807,12 @@ ins,u {
   max-width: 768px;
 }
 
-.page__hero--overlay .page-title {
+.page__hero--overlay .page__title {
   font-size: 1.953em;
 }
 
 @media (min-width:37.5em) {
-  .page__hero--overlay .page-title {
+  .page__hero--overlay .page__title {
     font-size: 2.441em;
   }
 }

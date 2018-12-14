@@ -175,6 +175,9 @@ author:
   xing                   :
   youtube                : # None
 
+languages: ["en"]
+ampdir: amp
+
 cookie_consent: false
 keybase-site-verification: "j_5ZqCt462kr8ezGyD274sa0Iwxn-wFIEfm91ehNj2Y"
 weather:
@@ -209,7 +212,7 @@ firebase:
 
 netlifycms: true
 backend:
-  name: github
+  name: git-gateway
   branch: gh-pages # Branch to update (master by default)
 
 extlinks:
@@ -246,8 +249,6 @@ exclude:
   - vendor/ruby/
   - node_modules
   - node_modules/
-  - lambda
-  - lambda-build
   - .vs
   - .vscode
   - LICENSE
@@ -270,12 +271,11 @@ exclude:
   - optimization-fix-this-file-is-ignored.js
   - favicon.png
   - tmp
+  - /docs
 keep_files:
   - .git
   - .svn
-
-encoding: utf-8  
-
+encoding: "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
 # Conversion
@@ -295,40 +295,52 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
-
 # Sass/SCSS
 sass:
   sass_dir: _sass
   style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
-
 # Outputting
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
 timezone: America/Chicago
-
 # Plugins (previously gems:)
 plugins:
   - posts_json
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-seo-tag
   - jekyll-archives
   - jekyll-figure
   - jekyll-tagging
   - jekyll-tagging-related_posts
   - jekyll-redirect-from
+  - jekyll-algolia
   - lazyload
   - notice
+  - jemoji
   - json
 
 # mimic GitHub Pages with --safe
 whitelist:
   - posts_json
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-seo-tag
   - jekyll-archives
   - jekyll-figure
   - jekyll-tagging
   - jekyll-tagging-related_posts
   - jekyll-redirect-from
+  - jekyll-algolia  
+  - jekyll-webmention_io
   - lazyload
   - notice
+  - jemoji
   - json
 
 # Archives
@@ -347,7 +359,6 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
-
 # https://github.com/jekyll/jekyll-archives
 jekyll-archives:
    enabled:
@@ -360,20 +371,18 @@ jekyll-archives:
      category: /categories/:name/
      tag: /tags/:name/
 
-# HTML Compression
-# - http://jch.penibelst.de/
-compress_html:
-  clippings: all
-  comments:  ["<!-- ", " -->"]
-  endings:   all
-  ignore:
-    envs: development
-
 # Collections
 collections:
   photography:
     output: true
     permalink: /:photography/:name/
+  amp:
+    output: true
+    permalink: /:amp/:name/
+  events:
+    output: true
+    permalink: /events/:path/
+    title: Events
   products:
     output: true
     permalink: /:products/:name/
@@ -389,7 +398,7 @@ defaults:
       author_profile: false
       gallery: true
       comments: true
-      share: true
+      share: false
       related: true
       sidenav-gallery: true
       adds: true
@@ -408,15 +417,35 @@ defaults:
       author_profile: true
       read_time: true
       comments: false
-      share: true
+      share: false
       related: true
       toc: true
       adds: true
       reviews: true
       cookies: true
+      notifications: false
       breadcrumbs:
         - label: "Posts"
           url: /year-archive/
+  # amp-html
+  - scope:
+      path: "amp"
+      type: posts
+    values:
+      layout: amp
+      author_profile: true
+      read_time: true
+      comments: false
+      share: false
+      related: true
+      toc: true
+      adds: true
+      reviews: true
+      cookies: true
+      notifications: false
+      breadcrumbs:
+        - label: "Amp Posts"
+          url: /:amp/:name/
   # _pages
   - scope:
       path: "_pages"
@@ -424,11 +453,32 @@ defaults:
     values:
       layout: single
       author_profile: true
+      notifications: false
   - scope:
       path: ""
       type: category
     values:
       layout: "category"
+  # _events
+  - scope:
+      path: "_events"
+      type: events
+    values:
+      layout: null
+      author_profile: true
+      read_time: true
+      comments: true
+      share: false
+      side_react: true
+      related: true
+      toc: true
+      adds: true
+      reviews: false
+      cookies: true
+      notifications: false
+      breadcrumbs:
+        - label: "Events"
+          url: /events/:path/
   # _products
   - scope:
       path: "_products"
@@ -439,17 +489,7 @@ defaults:
         - label: "products"
           url: /products/
       permalink: /:products/:name/
-  # _events
-  - scope:
-      path: "_events"
-      type: "events"
-    values:
-      layout: "null"
-      breadcrumbs:
-        - label: "events"
-          url: /events/
-      permalink: /:events/:path/
-
+     
 posts_json_path: posts.json
 ipstack:
   api_key: b3e3a6f8d63be4a25492fef554f9e28a

@@ -11,7 +11,7 @@ toc: false
 side_react: true
 sidenav: true
 reviews: false
-comments: false
+comments: true
 cookies: true
 recaptcha: false
 notifications: false
@@ -40,8 +40,4 @@ github_editme_path: donaldboulton/DWB/blob/gh-pages/index.html
 
 {% include octo-arm.html %}
 
-<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
-
-{% include posts-all.html %}
-
-{% include post_pagination.html %}
+{% include home.html %}

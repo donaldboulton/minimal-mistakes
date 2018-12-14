@@ -139,11 +139,9 @@ Links to Netlify this GitHub repo, Staticman Reviews, MMistakes Framework Design
 
 {% include github.html %}
 
-{% include charts/builds.html %}
-
 ## Latest Netlify Docker build
 
-![Netlify Builds](/assets/images/icons/netlifyBuildIcon.svg){:.align-center}
+{% include build-icons.html %}
 
 [Latest Build & Deploy History](https://app.netlify.com/sites/donaldboulton/deploys){:.external-links open-website}
 

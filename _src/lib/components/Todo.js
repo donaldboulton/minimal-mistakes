@@ -2,20 +2,20 @@ import React, { Component } from 'react';
 import ReactDom from 'react-dom';
 import logo from './images/logo.svg';
 import List from './List';
-class Todo extends React.Component {
+class Todo extends Component {
 
   state = {
     items: [],
-    term : ""
+    term : "",
   }
 
  onChange(event){
-   this.setState({ term: event })
+   this.setState({ term: event });
  }
 
  onDelete= (item) =>{
-   this.state.items.splice(item, 1)
-   this.setState({items: this.state.items})
+   this.state.items.splice(item, 1);
+   this.setState({items: this.state.items});
  }
 
   onSubmit= (event) => {
@@ -31,7 +31,7 @@ class Todo extends React.Component {
   render() {
     return (
       <div className="AppCenter">
-      <img src={logo} className="App-logo-spin align-center" alt="logo" />
+      <img src={logo} className="App-logo" alt="logo" />
        <h3 className="Appheader"> TODO-LIST </h3>
        <div className='AppCentermain'>
         <form className="App notify-center" onSubmit={this.onSubmit}>
@@ -49,4 +49,4 @@ class Todo extends React.Component {
   }
 }
 
-ReactDom.render(<Todo/>, document.getElementById('todo'))
+ReactDom.render(<Todo/>, document.getElementById('todo'));

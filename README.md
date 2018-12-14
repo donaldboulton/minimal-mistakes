@@ -60,11 +60,9 @@ Read more about how this boilerplate has been built: https://medium.com/learning
 * ES Lint
 
 **Images optimized**
-
 * Webpack Imagemin, images optimizations
 
 **Write less code**
-
 * Theme color in config
 * Favicon generated automatically
 * Google Analytics setup in config file (optional)
@@ -92,8 +90,7 @@ Read more about how this boilerplate has been built: https://medium.com/learning
 ## Prerequisites
 
 The following tools should be installed before starting:
-* NodeJS
-* npm
+* NodeJS, npm
 * Ruby, Gem, Bundler
 * Jekyll
 * React
@@ -182,6 +179,13 @@ You can see above the basic structure of the boilerplate and the main difference
 * SCSS partials should be located in `_scss` for better reading
 * Put all your images in `_images` the content of this folder will be moved to the `_site/assets/images` so you can access them with this path `/assets/images/**` in your templates, check the examples
 * Put all your JavaScript files inside `_src` and import them from `index.js` or you can also add them as a new entry point in your Webpack configuration file
+
+### Internationalization
+
+* All the posts should be there in inside `_i18n` folder inside its language, check the boilerplate examples
+* You can put your variables inside `_i18n/en.yml` (replace en with your language) and call them in your template with `{% t variable_name.sub_variable %}`
+* You can remove the plugin by removing `gem 'jekyll-multiple-languages-plugin'` from `gemfile` and `jekyll-multiple-languages-plugin` from `plugins` in `_config.yml`
+* We invite you to read the very good [official documentation](https://github.com/Anthony-Gaudino/jekyll-multiple-languages-plugin) of the plugin Jekyll multiple language plugin
 
 ## Build
 
