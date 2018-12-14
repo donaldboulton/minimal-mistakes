@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from 'react-dom';
-import bars from './images/bars.svg';
 
 const Dialog = require('react-a11y-dialog');
 
@@ -12,9 +11,7 @@ class MyComponent extends React.Component {
   render () {
     return (
       <div>
-        <button id="myBtn" className="link-like" type="button" onClick={this.handleClick}>
-          <img src={bars} className="icon" alt="Menu" />
-        </button>
+        <button id="myBtn" className="link-like" type="button" onClick={this.handleClick}></button>
 
         <Dialog id="my-accessible-dialog"
                 appRoot="#app"
