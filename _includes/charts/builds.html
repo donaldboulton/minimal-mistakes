@@ -1,19 +1,21 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
 <!-- Portfolio Start -->
-<section id="portfolio-work">
+<div>
+  <section id="portfolio-work">
     <div class="panel">
         <div class="row">
-          <div class="group">
+          <div class="form-group">
             <h1>Build Data</h1>
             <p>Use the Netlify CMS to maintain json & or yaml files which is the source data for creating this chart.</p>
-
-             <canvas id="canvas"></canvas>
+            <div class="form-group">
+               <canvas id="canvas"></canvas>
+            </div>
           </div>
         </div>
     </div>
-</section>
-
+  </section>
+</div>
 <script>
 var chartData = {
             labels: [
