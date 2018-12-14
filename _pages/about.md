@@ -149,10 +149,4 @@ I use Netlify CMS to maintain json & or yaml files which is the source data for 
 
 ## Latest Netlify Docker build
 
-[Latest Build & Deploy History](https://app.netlify.com/sites/donaldboulton/deploys){:.external-links open-website}
-
 {% include build-icons.html %}
-
-## Working for Father God
-
-Always worked for Father Creator since the beginning of time. Just hanging out watching our children play; till my day then playtime ends, to my new way.

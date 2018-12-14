@@ -5,10 +5,10 @@ permalink: /site-pages/
 toc: false
 sidenav: true
 side_react: true
-comments: false
+comments: true
 anchor: false
 reviews: false
-adds: true
+adds: false
 waves: true
 excerpt: "List of Site Pages"
 support: [adds, cookies, anchor]
@@ -22,4 +22,4 @@ github_editme_path: donaldboulton/DWB/blob/gh-pages/_pages/site-pages.md
 
 # List of Site Pages
 
-{% include page-archive.html %}
+{% include pages-all.html %}
