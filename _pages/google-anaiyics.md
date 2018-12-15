@@ -1,7 +1,7 @@
 ---
 layout: single
 permalink: google-analytics.html
-title: About
+title: Analytics
 author_profile: false
 chat: true
 toc: true
@@ -20,11 +20,7 @@ event_comment: Love ya Mom
 event_date: 2019-1-3
 tags: 
   - Donald Boulton
-  - React
-  - Jekyll
-  - GitHub Pages
-  - Webpack
-  - Netlify
+  - Analytics
 category:
   - Donald Boulton
 image:
