@@ -4,7 +4,61 @@
       <div id="view-selector-container"></div>
       <div id="view-name"></div>
       <div id="active-users-container"></div>
+      <div class="Header-user" id="header-user">
+        <span class="Header-userIcon">
+          <svg class="Icon" viewBox="0 0 24 24">
+            <use xlink:href="/public/images/icons.svg#icon-person"></use>
+          </svg>
+        </span>
+      </div>
+      <div class="Header-embedApi" id="embed-api-auth-container" ga-on="click" ga-event-category="User" ga-event-label="auth" ga-event-action="signin">
+        <div style="display: none;"><div class="gapi-analytics-auth-styles-signinbutton gapi-analytics-auth-styles-signinbutton:hover" title="Access Google Analytics"><span class="gapi-analytics-auth-styles-signinbutton-image"></span><span class="gapi-analytics-auth-styles-signinbutton-buttonText">Access Google Analytics</span></div></div><div style="display: block;">donaldboulton@gmail.com</div></div>
+        <button class="Header-signOut LinkButton" id="header-sign-out" ga-on="click" ga-event-category="User" ga-event-label="auth" ga-event-action="signout">
+          Sign Out
+        </button>
+      </aside>
     </header>
+    <p class="g-signin2" data-onsuccess="queryReports"></p>
+
+<!-- The API response will be printed here. -->
+<textarea cols="80" rows="20" id="query-output"></textarea>
+
+<script>
+  // Replace with your view ID.
+  var VIEW_ID = '81667753';
+
+  // Query the API and print the results to the page.
+  function queryReports() {
+    gapi.client.request({
+      path: '/v4/reports:batchGet',
+      root: 'https://analyticsreporting.googleapis.com/',
+      method: 'POST',
+      body: {
+        reportRequests: [
+          {
+            viewId: VIEW_ID,
+            dateRanges: [
+              {
+                startDate: '7daysAgo',
+                endDate: 'today'
+              }
+            ],
+            metrics: [
+              {
+                expression: 'ga:sessions'
+              }
+            ]
+          }
+        ]
+      }
+    }).then(displayResults, console.error.bind(console));
+  }
+
+  function displayResults(response) {
+    var formattedJson = JSON.stringify(response.result, null, 2);
+    document.getElementById('query-output').value = formattedJson;
+  }
+</script>
     <div>
       <div class="Chartjs">
         <h3>This Week vs Last Week (by sessions)</h3>

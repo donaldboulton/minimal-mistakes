@@ -64,6 +64,7 @@ h1 {
 .App-logo {
   animation: a infinite 20s linear;
   height: 80px;
+  text-align: center
 }
 
 .App-header {
@@ -120,7 +121,7 @@ hr {
 }
 
 .item-checkbox {
-  width: 5%;
+  width: 15px;
 }
 
 .item-checkbox,.item-remove-div {
