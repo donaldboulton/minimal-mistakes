@@ -35,18 +35,18 @@ class MyComponent extends React.Component {
             <div>
                <span className="page-title"><a rel="noreferrer" itemProp="url" href="/year-archive/">Posts</a></span>
                 <div className="toc1-menu-popup">
-                  <div><a href="/programing/letter-avatar/">&nbsp;Letter Avatar</a></div>
-                  <div><a href="/2017-04-11-post-social-sharing.html">&nbsp;Social Sharing</a></div>
-                  <div><a href="/2018-05-27-post-reviews-for-jekyll.html">&nbsp;Jekyll Reviews</a></div>
+                  <div><a rel="noreferrer" itemProp="url" href="/2018-02-22-post-Letter-Avatar.html">&nbsp;Letter Avatar</a></div>
+                  <div><a rel="noreferrer" itemProp="url" href="/2017-04-11-post-social-sharing.html">&nbsp;Social Sharing</a></div>
+                  <div><a rel="noreferrer" itemProp="url" href="/2018-05-27-post-reviews-for-jekyll.html">&nbsp;Jekyll Reviews</a></div>
                   <span className="page-title"><a rel="noreferrer" itemProp="url" href="/categories/">Post Archives&nbsp;&rarr;</a></span>
                 </div>
             </div>
             <div>
                 <span className="page-title"><a rel="noreferrer" itemProp="url" href="/photography/">Galleries</a></span>
                 <div className="toc1-menu-popup">
-                  <div><a href="/photography/cat-gallery/">My Cats</a></div>
-                  <div><a href="/photography/stray-cat-gallery/">Stray Cats</a></div>
-                  <div><a href="/photography/old-cat-gallery/">Old Cats</a></div>
+                  <div><a rel="noreferrer" itemProp="url" href="/photography/cat-gallery/">My Cats</a></div>
+                  <div><a rel="noreferrer" itemProp="url" href="/photography/stray-cat-gallery/">Stray Cats</a></div>
+                  <div><a rel="noreferrer" itemProp="url" href="/photography/old-cat-gallery/">Old Cats</a></div>
                   <span className="page-title"><a rel="noreferrer" itemProp="url" href="/photography/">All Galleries&nbsp;&rarr;</a></span>
                 </div>
             </div>

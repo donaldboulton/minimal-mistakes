@@ -146,7 +146,3 @@ Links to Netlify this GitHub repo, Staticman Reviews, MMistakes Framework Design
 I use Netlify CMS to maintain json & or yaml files which is the source data for creating this chart.
 
 {% include charts/builds.html %}
-
-## Latest Netlify Docker build
-
-{% include build-icons.html %}
