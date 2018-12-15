@@ -93,7 +93,6 @@ h1 {
   max-width: 230px;
   margin: 0 auto;
   text-align: center;
-  border: 1px solid #000;
   position: relative;
 }
 
@@ -122,6 +121,7 @@ hr {
 
 .item-checkbox {
   width: 15px;
+  color: #fff;
 }
 
 .item-checkbox,.item-remove-div {
