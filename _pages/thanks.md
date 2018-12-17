@@ -33,7 +33,7 @@ cookies: true
 newsletters: false
 side_react: true
 youtube: true
-youtubeId: Nx8eMti-rQ4
+youtubeId: _1qXQM3Mt4Q
 
 excerpt: 'Github CloudFlare Hosting with Full SSL.<br /> <small><a href="https://github.com/donaldboulton/DWB/">Jekyll Gulp Travis CI Build</a></small><br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=donaldboulton&repo=DWB&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
 support: [adds, cookies]
@@ -50,5 +50,11 @@ github_editme_path: donaldboulton/DWB/blob/gh-pages/pages/thanks.md
 If a response if required, I will try to reply A.S.A.P..
 
 Thank You For Being A Friend. ⚔️
+
+## Build and Deploy a Serverless Function to Netlify
+
+The form you submitted used Netlify Functions.
+
+Video taken from [scotch.io Posted by: James Quick](https://scotch.io/tutorials/build-and-deploy-a-serverless-function-to-netlify)
 
 {% include youtubePlayer.html id=page.youtubeId %}
