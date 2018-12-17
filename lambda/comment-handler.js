@@ -3,7 +3,7 @@
 var request = require("request");
 
 // populate environment variables locally.
-require('dotenv').config()
+require('dotenv').config();
 
 
 /*

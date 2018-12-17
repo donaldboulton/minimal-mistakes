@@ -923,3 +923,7 @@ gapi.analytics.ready(function() {
 <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js"></script>
 <script src="{{ '/public/here-maps.js' | relative_url }}"></script>
 {% endif %}
+
+{% if page.newsletters == true %}
+<script src="{{ '/public/mewsletters.js' | relative_url }}"></script>
+{% endif %}
