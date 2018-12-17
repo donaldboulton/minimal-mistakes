@@ -2,20 +2,13 @@
 
 var request = require("request");
 
-// populate environment variables locally.
 require('dotenv').config();
 
-
-/*
-  Our serverless function handler
-*/
 export function handler(event, context, callback) {
 
-  // get the arguments from the notification
   var body = JSON.parse(event.body);
 
-  // prepare call to the Slack API
-  var slackURL = process.env.SLACK_WEBHOOK_URL
+  var slackURL = process.env.SLACK_WEBHOOK_URL;
   var slackPayload = {
     "text": "New comment on " + process.env.URL,
 	  "attachments": [
@@ -48,7 +41,6 @@ export function handler(event, context, callback) {
       }]
     };
 
-    // post the notification to Slack
     request.post({url:slackURL, json: slackPayload}, function(err, httpResponse, body) {
       var msg;
       if (err) {
