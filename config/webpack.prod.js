@@ -18,6 +18,7 @@ module.exports = Merge(CommonConfig, {
       minimize: true,
       debug: false,
     }),
+    new webpack.IgnorePlugin(/\/iconv-loader$/),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'common',
       minChunks: 2,
