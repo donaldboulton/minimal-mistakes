@@ -17,8 +17,9 @@
       <li><a rel="noreferrer" href="https://gitlab.com/{{ site.author.gitlab }}" target="_blank"><svg class="icon icon--gitlab icon-footer fa-gitlab" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-gitlab' | prepend: 'build/icons/' | relative_url }}"></use></svg> Gitlab</a></li>
     {% endif %}
     <li><a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | absolute_url }}{% endif %}"> <svg class="icon icon--rss icon-footer fa-rss" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-rss' | prepend: 'build/icons/' | relative_url }}"></use></svg> {{ site.data.ui-text[site.locale].feed_label | default: "Feed" }}</a></li>
-  </ul><svg class="icon icon--power-off fa-power-off" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-power-off' | prepend: 'build/icons/' | relative_url }}"></use></svg>&nbsp;
-  <a href="https://jekyllrb.com" rel="noreferrer"><img src="/assets/images/red-flask-32.png" alt="Jekyll Icon" class="icon icon-footer icon--red-flask" onclick="window.open('https://jekyllrb.com');">Jekyll</a>&amp;
+  </ul>
+  <svg class="icon icon--power-off fa-power-off" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-power-off' | prepend: 'build/icons/' | relative_url }}"></use></svg>
+  <a href="https://jekyllrb.com" rel="noreferrer"><img src="/assets/images/red-flask-32.png" alt="Jekyll Icon" class="icon icon-footer icon--red-flask" onclick="window.open('https://jekyllrb.com');">Jekyll</a>
   <a href="https://reactjs.org/" rel="noreferrer"><img src="/assets/images/react-32.png" alt="React Icon" class="icon icon-footer icon--react" onclick="window.open('https://reactjs.org/');">React</a>
   <a href="https://webpack.js.org/" rel="noreferrer"><img src="/assets/images/webpack-32.png" alt="Webpack Icon" class="icon icon-footer icon--webpack" onclick="window.open('https://webpack.js.org/');">Webpack</a>
   <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="noreferrer">
