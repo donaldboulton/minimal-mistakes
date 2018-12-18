@@ -7,6 +7,7 @@ comments: false
 sidenav: true
 reviews: false
 side_react: true
+newsletters: true
 slack: true
 adds: true
 hotjar: true
