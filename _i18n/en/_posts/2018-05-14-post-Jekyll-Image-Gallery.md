@@ -29,6 +29,7 @@ share: false
 web-intents: false
 slack: true
 newsletters: true
+hotjar: true
 tweet_id: 1027106412470718465
 social-share: twitter --twitter-hashtags facebook
 sidenav: true

@@ -6,7 +6,7 @@ read_time: true
 comments: true
 share: false
 side_react: true
-web-intents: false
+web-intents: true
 tweet_id: 1027613282729975808
 social-share: twitter --twitter-hashtags facebook
 sidenav: true
@@ -14,6 +14,7 @@ adds: true
 cookies: true
 reviews: true
 anchor: true
+hotjar: true
 title: Jekyll Admin
 date: 2018-02-26 16:16:01 -0600
 last_modified_at: 2018-04-13T12:42:38-04:00

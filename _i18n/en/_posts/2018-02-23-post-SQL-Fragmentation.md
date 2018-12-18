@@ -13,6 +13,8 @@ cookies: true
 reviews: true
 slack: true
 newsletters: true
+hotjar: true
+
 tags:
   - SQL Server
   - Fragmentation

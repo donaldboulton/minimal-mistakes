@@ -17,6 +17,7 @@ adds: true
 cookies: true
 footnotes: true
 comments: true
+hotjar: true
 tags:
   - Gravatar
   - Letter Avatar

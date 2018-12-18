@@ -21,6 +21,7 @@ author_profile: true
 adds: true
 cookies: true
 reviews: true
+hotjar: true
 date: 2018-05-27 16:16:01 -0600
 last_modified_at: 2018-05-28T10:42:38-04:00
 tags:

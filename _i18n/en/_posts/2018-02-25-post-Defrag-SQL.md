@@ -13,6 +13,8 @@ adds: true
 cookies: true
 reviews: true
 anchor: true
+hotjar: true
+
 tags:
   - SQL Server
   - SQL Defragment

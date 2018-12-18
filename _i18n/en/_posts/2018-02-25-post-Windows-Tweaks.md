@@ -13,6 +13,7 @@ adds: true
 cookies: true
 reviews: true
 anchor: true
+hotjar: true
 tags:
   - Windows Tweaks
   - Windows 10
