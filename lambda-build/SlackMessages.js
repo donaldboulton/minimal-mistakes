@@ -127,17 +127,14 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 
 exports.handler = (() => {
   var _ref = _asyncToGenerator(function* (event, context) {
-    // Only allow POST
+
     if (event.httpMethod !== "POST") {
       return { statusCode: 405, body: "Method Not Allowed" };
     }
 
-    // When the method is POST, the name will no longer be in the event’s
-    // queryStringParameters – it’ll be in the event body encoded as a queryString
     const params = _querystring2.default.parse(event.body);
     const name = params.name || "World";
 
-    // Send greeting to Slack
     return (0, _nodeFetch2.default)(process.env.SLACK_WEBHOOK_URL, {
       headers: {
         "content-type": "application/json"

@@ -82,7 +82,6 @@ exports.handler = (event, context, callback) => {
     body = (0, _querystring.parse)(event.body);
   }
 
-  // Bail if email is missing
   if (!body.email) {
     return callback(null, {
       statusCode: 400,
@@ -92,11 +91,8 @@ exports.handler = (event, context, callback) => {
     });
   }
 
-  // Do my email subscription logic
-
-
   if (event.headers['content-type'] === 'application/x-www-form-urlencoded') {
-    // Do redirect for non JS enabled browsers
+
     return callback(null, {
       statusCode: 302,
       headers: {
@@ -107,7 +103,6 @@ exports.handler = (event, context, callback) => {
     });
   }
 
-  // Return data to AJAX request
   return callback(null, {
     statusCode: 200,
     body: JSON.stringify({
