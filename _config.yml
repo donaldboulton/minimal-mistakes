@@ -424,6 +424,7 @@ defaults:
       reviews: true
       cookies: true
       notifications: false
+      hotjar: true
       breadcrumbs:
         - label: "Posts"
           url: /year-archive/
