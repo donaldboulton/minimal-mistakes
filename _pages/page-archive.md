@@ -8,6 +8,8 @@ side_react: true
 sidenav: true
 reviews: false
 adds: true
+slack: true
+hotjar: true
 support: [adds]
 ---
 

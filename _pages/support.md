@@ -18,6 +18,7 @@ newsletters: true
 sidenav: true
 reviews: false
 adds: false
+hotjar: true
 support: [adds, cookies, youtube]
 
 header:

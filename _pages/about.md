@@ -15,6 +15,7 @@ cookies: true
 side_react: true
 slack: true
 newsletters: true
+hotjar: true
 event_title: Moms Birthday
 event_comment: Love ya Mom
 event_date: 2019-1-3

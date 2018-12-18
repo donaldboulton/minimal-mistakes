@@ -17,6 +17,7 @@ cookies: true
 notifications: false
 side_react: true
 slack: true
+hotjar: true
 image:
   cover: true
   path: &image /assets/images/support.jpg

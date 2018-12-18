@@ -11,6 +11,8 @@ side_react: true
 newsletters: true
 reviews: false
 adds: true
+slack: true
+hotjar: true
 support: [adds]
 ---
 

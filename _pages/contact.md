@@ -8,6 +8,7 @@ chat: true
 hero: Get in touch
 permalink: /contact/
 maps: true
+hotjar: true
 map:
   latitude: 35.458429035
   longitude: -97.634299097

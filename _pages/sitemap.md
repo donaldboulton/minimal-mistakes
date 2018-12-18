@@ -9,6 +9,8 @@ comments: false
 anchor: false
 reviews: false
 adds: true
+slack: true
+hotjar: true
 excerpt: "Sitemap with Post by Categories, by Tags and by Years"
 image:
   cover: true

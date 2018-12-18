@@ -6,8 +6,10 @@ author_profile: true
 comments: false
 sidenav: true
 side_react: true
-newsletters: true
 reviews: false
 adds: true
+newsletters: true
+slack: true
+hotjar: true
 support: [adds]
 ---

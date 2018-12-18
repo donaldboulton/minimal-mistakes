@@ -9,5 +9,6 @@ reviews: false
 side_react: true
 slack: true
 adds: true
+hotjar: true
 support: [adds]
 ---

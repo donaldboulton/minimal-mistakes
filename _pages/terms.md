@@ -22,6 +22,7 @@ folder: _pages
 product: terms
 slug: terms
 web-intents: true
+hotjar: true
 tweet_id: 145116818707714048
 image:
   cover: true

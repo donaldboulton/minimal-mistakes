@@ -12,6 +12,7 @@ sidenav: true
 layout: productdetails
 name: "Donate"
 products: true
+hotjar: true
 image: /assets/images/cart/sponser-us.png
 header:
   image: /assets/images/cart/sponser-us.png
