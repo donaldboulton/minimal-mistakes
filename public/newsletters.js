@@ -5,7 +5,7 @@ form.addEventListener("submit", function(e) {
     submitEmail(email);
 });
 function submitEmail(email) {
-  fetch('/.netlify/lambda-build/form-handler', {
+  fetch('/.netlify/functions/form-handler', {
       method: 'post',
       body: JSON.stringify({
         email: email
