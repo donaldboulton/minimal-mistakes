@@ -32043,7 +32043,7 @@ function handler(event, context, callback) {
           'received': new Date().toString(),
           'email': data.email,
           'name': data.name,
-          'comment': data.message
+          'comment': data.comment
         };
         var approvedURL = process.env.URL;
 

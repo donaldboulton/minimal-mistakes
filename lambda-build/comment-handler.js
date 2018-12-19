@@ -32017,7 +32017,7 @@ function handler(event, context, callback) {
       "author_name": body.data.email,
       "title": body.data.path,
       "title_link": process.env.URL + body.data.path,
-      "text": body.data.message
+      "text": body.data.comment
     }, {
       "fallback": "Manage comments on " + process.env.URL,
       "callback_id": "comment-action",
