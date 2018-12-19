@@ -2,7 +2,7 @@
 
 var request = require("request");
 
-require('dotenv').config();
+require('dotenv').config()
 
 function purgeComment(id) {
   var url = `https://api.netlify.com/api/v1/submissions/${id}?access_token=${process.env.API_AUTH}`;
@@ -32,7 +32,7 @@ export function handler(event, context, callback) {
 
     var url = `https://api.netlify.com/api/v1/submissions/${id}?access_token=${process.env.API_AUTH}`;
 
-    console.log();
+    console.log()
 
 
     request(url, function(err, response, body){
@@ -45,7 +45,7 @@ export function handler(event, context, callback) {
           'received': new Date().toString(),
           'email': data.email,
           'name': data.name,
-          'comment': data.message
+          'comment': data.comment
         };
         var approvedURL = process.env.URL;
 

@@ -22,8 +22,8 @@
               <input type="text" id="title" name="title" required placeholder="Title (required *)">
           </div>
           <div class="form-group">
-              <label for="message"><strong>Comment</strong><abbr class="abbr" title="Required">&nbsp;*</abbr><small>&nbsp;(<a rel="noreferrer" href="https://kramdown.gettalong.org/quickref.html">Markdown</a> is allowed)</small></label>
-              <textarea type="text" rows="6" id="message" name="message" spellcheck="true" placeholder="Comment (required *)" value="" required></textarea>
+              <label for="comment"><strong>Comment</strong><abbr class="abbr" title="Required">&nbsp;*</abbr><small>&nbsp;(<a rel="noreferrer" href="https://kramdown.gettalong.org/quickref.html">Markdown</a> is allowed)</small></label>
+              <textarea type="text" rows="6" id="comment" name="comment" spellcheck="true" placeholder="Comment (required *)" value="" required></textarea>
           </div>
               <input type="hidden" name="path" value="{{ page.url }}">
               <input type="hidden" name="options[parent]" value="{{ page.url | relative_url }}">
