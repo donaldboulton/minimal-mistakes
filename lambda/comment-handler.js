@@ -2,7 +2,7 @@
 
 var request = require("request");
 
-require('dotenv').config()
+require('dotenv').config();
 
 export function handler(event, context, callback) {
 
@@ -42,7 +42,7 @@ export function handler(event, context, callback) {
     };
 
     request.post({url:slackURL, json: slackPayload}, function(err, httpResponse, body) {
-      var msg;
+      let msg;
       if (err) {
         msg = 'Post to Slack failed:' + err;
       } else {
@@ -51,7 +51,7 @@ export function handler(event, context, callback) {
       callback(null, {
         statusCode: 200,
         body: msg
-      })
+      });
       return console.log(msg);
     });
 
