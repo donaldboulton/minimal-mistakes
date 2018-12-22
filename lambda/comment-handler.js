@@ -1,26 +1,25 @@
+/* eslint-disable no-mixed-spaces-and-tabs */
 'use strict';
 
-var request = require("request");
+const request = require("request");
 
 require('dotenv').config();
 
 export function handler(event, context, callback) {
 
-  var body = JSON.parse(event.body);
+  const body = JSON.parse(event.body);
 
-  var slackURL = process.env.SLACK_WEBHOOK_URL;
-  var slackPayload = {
+  let slackURL = process.env.SLACK_WEBHOOK_URL;
+  let slackPayload = {
     "text": "New comment on " + process.env.URL,
-	  "attachments": [
-      {
+	  "attachments": [{
         "fallback": "New comment on the comment example site",
         "color": "#444",
         "author_name": body.data.email,
         "title": body.data.path,
         "title_link": process.env.URL + body.data.path,
         "text": body.data.comment
-      },
-      {
+      },{
         "fallback": "Manage comments on " + process.env.URL,
         "callback_id": "comment-action",
         "actions": [
@@ -29,8 +28,7 @@ export function handler(event, context, callback) {
             "text": "Approve comment",
             "name": "approve",
             "value": body.id
-          },
-          {
+          },{
             "type": "button",
             "style": "danger",
             "text": "Delete comment",

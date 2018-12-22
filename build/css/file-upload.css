@@ -1,0 +1,61 @@
+.js .file-up {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 1.25em;
+}
+
+.js .file-up__label {
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+}
+
+
+.js .file-up__label__text {
+    border: 1px solid #434040;
+	display: inline-block;
+	padding: .5em;
+}
+
+.js .file-up [type="file"] {
+	font-size: .1px;
+	height: 100%;
+	left: 0;
+	min-width: 100%;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+}
+
+.js .file-up__output {
+	display: inline-block;
+	font-size: .825em;
+	max-width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.js .file-up__output {
+    border: 1px solid #434040;
+	padding: .75em;
+	vertical-align: top;
+}
+
+.js .file-up--compact .file-up__output {
+	display: none;
+}
+
+.js .file-up__label:hover .file-up__label__text,
+.js .file-up__label.focus-within .file-up__label__text {
+    border: 1px solid #00c100;
+	outline: 2px solid #00c100;
+    outline-offset: 2px;
+    color: #fff;
+    background-color: #00c100;
+}
+
+[data-file-input].is-disabled {
+	opacity: .5;
+	pointer-events: none;
+}

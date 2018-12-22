@@ -103,6 +103,10 @@
   <link rel="webmention" href="{{ site.webmention_url }}">
 {% endif %}
 
+{% if page.support contains 'file-upload' %}
+   <link rel="stylesheet" href="{{ '/build/css/file-upload.css' | relative_url }}">
+{% endif %}
+
 {% if page.support contains 'analytics' %}
 <script>
   !function() {
