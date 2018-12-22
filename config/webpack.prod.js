@@ -5,6 +5,8 @@ const path = require('path');
 const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
+require('dotenv').config();
+
 module.exports = Merge(CommonConfig, {
   output: {
     filename: '[name]-[hash].bundle.js',
@@ -38,5 +40,9 @@ module.exports = Merge(CommonConfig, {
       $: 'jquery',
       jQuery: 'jquery'
     }),
+    new webpack.DefinePlugin({
+      LAMBDA_ENDPOINT: JSON.stringify(process.env.LAMBDA_ENDPOINT),
+      SLACK_WEBHOOK_URL: JSON.stringify(process.env.SLACK_WEBHOOK_URL)
+    })
   ],
 });
