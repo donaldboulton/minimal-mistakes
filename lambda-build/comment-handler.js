@@ -31994,22 +31994,23 @@ module.exports.parse = parse
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+/* eslint-disable no-mixed-spaces-and-tabs */
 
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.handler = handler;
-var request = __webpack_require__(83);
+const request = __webpack_require__(83);
 
 __webpack_require__(193).config();
 
 function handler(event, context, callback) {
 
-  var body = JSON.parse(event.body);
+  const body = JSON.parse(event.body);
 
-  var slackURL = process.env.SLACK_WEBHOOK_URL;
-  var slackPayload = {
+  let slackURL = process.env.SLACK_WEBHOOK_URL;
+  let slackPayload = {
     "text": "New comment on " + process.env.URL,
     "attachments": [{
       "fallback": "New comment on the comment example site",
@@ -32037,7 +32038,7 @@ function handler(event, context, callback) {
   };
 
   request.post({ url: slackURL, json: slackPayload }, function (err, httpResponse, body) {
-    var msg;
+    let msg;
     if (err) {
       msg = 'Post to Slack failed:' + err;
     } else {
