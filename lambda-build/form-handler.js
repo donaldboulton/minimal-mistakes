@@ -60,18 +60,25 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 199);
+/******/ 	return __webpack_require__(__webpack_require__.s = 222);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 199:
+/***/ 20:
+/***/ (function(module, exports) {
+
+module.exports = require("querystring");
+
+/***/ }),
+
+/***/ 222:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _querystring = __webpack_require__(22);
+var _querystring = __webpack_require__(20);
 
 exports.handler = (event, context, callback) => {
   let body = {};
@@ -110,13 +117,6 @@ exports.handler = (event, context, callback) => {
     })
   });
 };
-
-/***/ }),
-
-/***/ 22:
-/***/ (function(module, exports) {
-
-module.exports = require("querystring");
 
 /***/ })
 

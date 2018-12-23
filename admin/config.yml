@@ -1,6 +1,8 @@
 backend:
   name: git-gateway
   repo: donaldboulton/DWB
+  identity_url: "https://donboulton.com/.netlify/identity"
+  gateway_url: "https://donboulton.com/.netlify/git"
   branch: gh-pages
   squash_merges: true
   accept_roles: #optional - accepts all users if left out

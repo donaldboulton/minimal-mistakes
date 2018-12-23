@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 224);
+/******/ 	return __webpack_require__(__webpack_require__.s = 223);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -4755,7 +4755,7 @@ module.exports = safer
 
 /***/ }),
 
-/***/ 224:
+/***/ 223:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4781,18 +4781,18 @@ exports.handler = (() => {
     }
 
     const params = _querystring2.default.parse(event.body);
-    const name = params.name || "World";
+    const email = params.name || "NewLetters";
 
     return (0, _nodeFetch2.default)(process.env.SLACK_WEBHOOK_URL, {
       headers: {
         "content-type": "application/json"
       },
       method: "POST",
-      body: JSON.stringify({ text: `${name} says hello!` })
+      body: JSON.stringify({ text: `${email} signs up!` })
     }).then(function () {
       return {
         statusCode: 200,
-        body: `Hello, ${name}! Your greeting has been sent to Slack`
+        body: `Hello, ${email}! You email address is added for Newsletters!`
       };
     }).catch(function (error) {
       return {
