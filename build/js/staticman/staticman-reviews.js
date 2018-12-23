@@ -1,8 +1,8 @@
 (function ($) {
-    const $reviews = $('.js-reviews');
+    var $reviews = $('.js-reviews');
 
     $('#review-form').submit(function () {
-        const form = this;
+        var form = this;
 
         $(form).addClass('disabled');
         $('#review-form-submit').html(

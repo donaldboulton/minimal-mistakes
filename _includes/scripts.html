@@ -87,7 +87,7 @@
 {% endif %}
 
 {% if page.support contains 'cookies' %}
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/cookie-bar/cookiebar-latest.min.js?tracking=1&showNoConsent=1&privacyPage=https%3A%2F%2Fdonboulton.com%2Fterms%23cookies--beacons"></script>
+<script src="{{ '/build/cookie-bar/cookiebar-latest.min.js?tracking=1&showNoConsent=1&privacyPage=https%3A%2F%2Fdonboulton.com%2Fterms%23cookies--beacons' | relative_url }}"></script>
 {% endif %}
 
 {% if page.support contains 'dragula' %}

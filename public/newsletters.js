@@ -4,8 +4,9 @@ form.addEventListener("submit", function(e) {
     var email = document.getElementById('inputEmail').value
     submitEmail(email);
 });
+
 function submitEmail(email) {
-  fetch('/.netlify/functions/form-handler', {
+  fetch('/.netlify/functions/Newsletter', {
       method: 'post',
       body: JSON.stringify({
         email: email
