@@ -2869,8 +2869,7 @@ img.poweredby {
 }
 
 .search__toggle {
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin-right: .5em;
   border: 0;
   outline: none;
   color: #fff9fc;

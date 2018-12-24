@@ -4,6 +4,9 @@ import signin from './images/sign-in-alt.svg';
 import netlifyIdentity from 'netlify-identity-widget';
 
 class NetlifyIdentity extends React.Component {
+  componentDidMount(){    
+    netlifyIdentity.init();
+  }
   constructor() {
     super()
 

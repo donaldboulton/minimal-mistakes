@@ -7,12 +7,12 @@ export function loginUser() {
     } = netlifyIdentity.currentUser();
 
     localStorage.setItem(
-      "currentOpenSaucedUser",
+      "currentUser",
       JSON.stringify({...app_metadata, created_at, confirmed_at, email, id, ...user_metadata})
     );
   }
 }
 
 export function logoutUser() {
-  localStorage.removeItem("currentOpenSaucedUser");
+  localStorage.removeItem("currentUser");
 }
