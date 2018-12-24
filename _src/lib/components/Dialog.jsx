@@ -13,7 +13,7 @@ class MyComponent extends React.Component {
     return (
       <div>
         <button id="myBtn" className="link-like" type="button" onClick={this.handleClick}>
-          <img src={bars} className="icon"  alt="Menu" />
+          <img src={bars} className="icon" alt="Menu" />
         </button>
 
         <Dialog id="my-accessible-dialog"
