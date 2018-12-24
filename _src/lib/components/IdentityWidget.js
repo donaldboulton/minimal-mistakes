@@ -19,7 +19,7 @@ class NetlifyIdentity extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="hidden">
           <button id="mySigninBtn" className="link-like" type="button" onClick={this.handleLogIn} >
             <img src={signin} className="icon" alt="Login" />
           </button>
