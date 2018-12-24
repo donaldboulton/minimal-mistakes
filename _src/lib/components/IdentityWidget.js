@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import signin from './images/sugn-in-alt.svg';
+import signin from './images/sign-in-alt.svg';
 import netlifyIdentity from 'netlify-identity-widget';
 
 class NetlifyIdentity extends React.Component {
