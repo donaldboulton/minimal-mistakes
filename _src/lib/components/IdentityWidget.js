@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import netlifyIdentity from 'netlify-identity-widget';
 
 
-class NetlifyIdentity extends React.Component {{
+class NetlifyIdentity extends React.Component {
   constructor() {
     super()
 
