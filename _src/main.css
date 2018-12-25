@@ -7,6 +7,10 @@ a {
   color: #841617!important;
 }
 
+.full-width{
+  width: 100%;
+}
+
 .slack-signup {
   margin: 1em;
 }
@@ -788,9 +792,10 @@ dialog::backdrop {
 }
 
 a:focus,button:focus {
-  outline: thin dotted #40d140;
-  outline: 5px auto #40d140;
-  outline-offset: -2px;
+  border-color: #00c100;
+  outline: 0;
+  outline: thin dotted\9;
+  box-shadow: inset 0 1px 3px rgba(255,246,251,.06),0 0 5px rgba(0,193,0,.7);
 }
 
 *,html {
