@@ -31,8 +31,12 @@ price: 12.75
 product: catfood
 id: catfood
 folder: _products
+loc: "/catfood"
+desc: Get the Cats some Food
+private: false
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_products/catfood.md
 ---
+
 # Cat Food
 
 Buy the kittys some cat food.

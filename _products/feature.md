@@ -27,6 +27,9 @@ variants:
     price: 
 price: 150
 folder: _products
+loc: "/feature"
+desc: Sponsor a Feature
+private: true
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_products/feature.md
 ---
 

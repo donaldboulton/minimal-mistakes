@@ -37,8 +37,12 @@ variants:
 price: 2.50
 id: catfood
 folder: _products
+loc: "/coffee"
+desc: Buy me a Coffee
+private: false
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_products/coffee.md
 ---
+
 # Coffee
 
 A perfect coffee in the morning absolutely makes my day. Buy me a small one for a good start or a big one to keep going all day!

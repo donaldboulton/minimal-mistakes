@@ -36,8 +36,12 @@ variants:
 price: 2.75
 folder: _products
 id: feature
+loc: "/beer"
+desc: Buy me a beer
+private: false
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_products/feature.md
 ---
+
 # Beer
 
 I like beer a lot! IPA, Guinness, Stout, craft beers... and I love to try new ones. Buy me half-a-pint to get going or a pint to get a good buzz.

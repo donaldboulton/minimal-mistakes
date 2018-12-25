@@ -98,6 +98,7 @@
   "dependencies": {
     "a11y-dialog": "^5.2.0",
     "default-passive-events": "^1.0.10",
+    "graphql": "^14.0.2",
     "jquery-smooth-scroll": "^2.2.0",
     "lazysizes": "^4.1.5",
     "netlify-identity-widget": "^1.5.2",

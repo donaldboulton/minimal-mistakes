@@ -30,8 +30,12 @@ variants:
 price: 25.70
 folder: _products
 id: t-shirt
+loc: "/t-shirt"
+desc: Buy me a T-Shirt
+private: false
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_products/t-shirt.md
 ---
+
 # T Shirts
 
 This awesome t-shirt is for sale at [zazzle.com](https://www.zazzle.com/jekyll_t_shirt-235672519224817294). I would really like to have it, but I do not allow myself to spent this much on a single t-shirt. Will you buy me one?
