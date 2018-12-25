@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './product.module.css';
 const netlifyIdentity = require("netlify-identity-widget");
-var { graphql } = require('graphql');
+const { graphql } = require('graphql');
 const NETLIFY_FUNC = 'donboulton.com/.netlify/functions';
 const NETLIFY_URL = 'https://donboulton.com';
 
