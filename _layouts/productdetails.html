@@ -4,13 +4,11 @@ layout: single
 <div class="product-details">
   <img src="{{ page.image }}" alt="{{ page.name }}" class="thumbnail"/>
   <div class="product-description">
-    <p>{{ page.name }}</p>
-
     <p>
       {{ page.content }}
     </p>
 
-    <button class="snipcart-add-item"
+    <button class="snipcart-add-item btn btn--primary"
       data-item-name="{{ page.name }}"
       data-item-id="{{ page.sku }}"
       data-item-image="{{ page.image }}"
@@ -34,7 +32,7 @@ layout: single
       (Rating Average: {{ sum | round: 1 }})
     {% endif %}
   </h3>
-  <form method="POST" action="https://api.staticman.net/v2/entry/donaldboulton/DWB/gh-pages/reviews" oninput="result.value=parseInt(this['fields[review]'].value)">
+  <form class="js-form form" method="POST" action="https://api.staticman.net/v2/entry/donaldboulton/DWB/gh-pages/reviews" oninput="result.value=parseInt(this['fields[review]'].value)">
     <input name="fields[product]" type="hidden" value="{{ page.slug }}" />
     <input name="options[redirect]" type="hidden" value="{{site.url}}{{site.baseurl}}{{ page.url }}" />
 
@@ -42,7 +40,7 @@ layout: single
     <p><label>Your name: <input type="text" name="fields[name]" /></label></p>
     <p><label>Review: <input type="range" id="fields-review" name="fields[review]" min="0" max="5" step="0.1" value="5" /></label><output for="fields-review" name="result">5</output>/5</p>
     <p><label>Comment: <input type="text" name="fields[message]" /></label></p>
-    <p><button type="submit">Save review</button></p>
+    <p><button class="btn btn--primary" type="submit">Save review</button></p>
   </form>
   <ul>
     {% for review in reviews %}

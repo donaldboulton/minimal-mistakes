@@ -6229,13 +6229,6 @@ ul li.list-content,ul li.list-month {
   margin-bottom: .5em;
 }
 
-.product-description {
-  width: 400px;
-  padding: 25px;
-  margin: 25px;
-  font-size: 20px;
-}
-
 .product-reviews {
   -ms-flex-direction: column;
   flex-direction: column;
