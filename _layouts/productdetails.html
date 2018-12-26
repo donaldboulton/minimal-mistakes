@@ -17,7 +17,7 @@ layout: single
     </div>
   </div>
 </div>
-<div>{{ page.includes }}</div>
+<div>{% include {{ page.my_variable }} %}</div>
 <div class="product-reviews">
   {% assign reviews = site.data.reviews | where:'product',page.slug %}
   {% assign reviewCount = reviews | size %}

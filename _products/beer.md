@@ -11,7 +11,7 @@ sidenav: true
 support: [adds, cookies, cart, products]
 classes: product
 permalink: /products/beer/
-includes: /includes/donate_beer.html
+my_variable: donate_beer.html
 stock:  10
 header:
   image: /assets/images/cart/beer/beer-cover.jpg
