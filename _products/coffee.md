@@ -12,7 +12,19 @@ lightbox: true
 sitemap: false
 author_profile: true
 adds: false
-sidenav: true
+tags:
+  - Products
+  - Beer
+category:
+  - Products
+toc: false
+adds: true
+read_time: true
+comments: true
+reviews: false
+share: false
+related: true
+cart: true
 classes: product
 permalink: /products/coffee/
 header:
@@ -45,3 +57,6 @@ github_editme_path: donaldboulton/DWB/blob/gh-pages/_products/coffee.md
 
 A perfect coffee in the morning absolutely makes my day. Buy me a small one for a good start or a big one to keep going all day!
 
+{% include products-image-gallery.html folder="/assets/images/cart/coffee" %}
+
+{% include lightbox.html %}

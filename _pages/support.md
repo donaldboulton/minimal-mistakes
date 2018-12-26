@@ -50,3 +50,5 @@ The main feed's for everything on Don Boulton.
 
 - Atom: [{{ 'atom.xml' | relative_url }}]({{ 'atom.xml' | relative_url }})
 - JSON: [{{ 'feed.json' | relative_url }}]({{ 'feed.json' | relative_url }})
+
+{% include lightbox.html %}

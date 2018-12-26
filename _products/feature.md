@@ -12,7 +12,10 @@ support: [adds, cookies, cart, products]
 sitemap: false
 author_profile: true
 adds: false
+search: true
+comments: true
 sidenav: true
+side_react: true
 lightbox: true
 toc: false
 header:
@@ -33,6 +36,4 @@ private: true
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_products/feature.md
 ---
 
-# Sponser a Feature
-
-You can sponsor a feature from the 'without plugins' page/library. I will not only give you an honourable mention on the site, but I will also let you suggest some additional functionalities of this feature.
+You can sponsor a feature from the 'without plugins' page/library. I will not only give you an honorable mention on the site, but I will also let you suggest some additional functionalities of this feature.

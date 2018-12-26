@@ -6256,8 +6256,11 @@ ul li.list-content,ul li.list-month {
 .snipcart-add-item {
   background-color: #10c000;
   color: #fff;
-  border-radius: 3px;
+  border-radius: 4px;
   border-color: #10c000;
+  display: inline-block;
+  margin-bottom: .25em;
+  padding: .5em 1em;
 }
 
 .checkbox_wrapper {

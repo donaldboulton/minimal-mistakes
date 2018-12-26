@@ -20,6 +20,18 @@
 		max-height: 1200px;
 	}
 }
+.lightbox span {display: block; position: fixed; bottom: 13px; height: 1.5em; line-height: 1.4em; width: 100%; text-align: center; color: white; text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;  
+}
+
+{% if include.lightbox_captions == "false" %}.lightbox span {display: none;}{% endif %}
+{% if include.lightbox_captions == "true" %}.lightbox span {display: block;}{% endif %}
+{% if page.lightbox_captions == false %}.lightbox span {display: none;}{% endif %}
+{% if page.lightbox_captions == true %}.lightbox span {display: block;}{% endif %}
+
 .lightbox .videoWrapperContainer {
 	position: relative; 
 	top: 50%;
@@ -115,7 +127,14 @@ $(document).ready(function() {
 		if(url) {
 			if(url.indexOf('vimeo') !== -1 && !$(this).hasClass('no-lightbox')) is_vimeolink(url,$(this));
 			if(is_youtubelink(url) && !$(this).hasClass('no-lightbox')) $(this).addClass('lightbox-youtube').attr('data-id',is_youtubelink(url));
-			if(is_imagelink(url) && !$(this).hasClass('no-lightbox')) $(this).addClass('lightbox-image');
+			if(is_imagelink(url) && !$(this).hasClass('no-lightbox')) {
+				$(this).addClass('lightbox-image');
+				var href = $(this).attr('href');
+				var filename = href.split('/').pop();
+				var split = filename.split(".");
+				var name = split[0];
+				$(this).attr('title',name);
+			}
 		}
 	});
 	//remove the clicked lightbox
@@ -148,7 +167,7 @@ $(document).ready(function() {
 	//add the image lightbox on click
 	$("a.lightbox-image").click(function(event){
 		event.preventDefault();
-		$('<div class="lightbox"><a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><img src="'+$(this).attr('href')+'" /></div>').appendTo('body');
+		$('<div class="lightbox"><a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><img src="'+$(this).attr('href')+'" alt="'+$(this).attr('title')+'" title="'+$(this).attr('title')+'" /><span>'+$(this).attr('title')+'</span></div>').appendTo('body');
 	});
 	//add the vimeo lightbox on click
 	$("body").on("click", "a.lightbox-vimeo", function(event){

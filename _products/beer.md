@@ -7,21 +7,38 @@ excerpt: "Buy me a bottle of Beer."
 sitemap: false
 author_profile: true
 adds: false
+search: true
 sidenav: true
+side_react: true
+author: Donald Boulton
+author_profile: false
+tags:
+  - Products
+  - Beer
+category:
+  - Products
+toc: false
+adds: true
+read_time: true
+comments: true
+reviews: false
+share: false
+related: true
+products: true
+cart: true
 support: [adds, cookies, cart, products]
 classes: product
 permalink: /products/beer/
 my_variable: donate_beer.html
 stock:  10
 header:
-  image: /assets/images/cart/beer/beer-cover.jpg
-  teaser: /assets/images/cart/beer/beer-cover-320.jpg
+  image: /assets/images/cart/cover/beer-cover.jpg
+  teaser: /assets/images/cart/cover/beer-cover-320.jpg
 name: beer
 sku: BEER
 product: Beer
 products: true
-image: /assets/images/cart/beer/beer-cover-320.jpg
-layout: productdetails
+image: /assets/images/cart/cover/beer-cover-320.jpg
 subtitle: Buy me a beer
 images:
   - image: /assets/images/cart/beer/5.jpg
@@ -43,3 +60,9 @@ desc: Buy me a beer
 private: false
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_products/feature.md
 ---
+
+I like beer a lot! IPA, Guinness, Stout, mico brews… Dead Guy Ale is my favorite but I love to try new ones. Buy me half-a-pint to get going or a pint to get a good buzz.
+
+{% include products-image-gallery.html folder="/assets/images/cart/beer" %}
+
+{% include lightbox.html %}

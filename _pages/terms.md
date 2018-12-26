@@ -222,3 +222,5 @@ All original content (e.g. articles, blog posts, illustrations, artwork, and pho
 ## Attribution
 
 If you're inclined to give credit --- a link back to the source article attributed to either [Made Mistakes](https://mmistakes.github.io/minimal-mistakes/terms/){:id="open-website9" rel="noreferrer"} or [Michael Rose](https://mademistakes.com/about/){:id="open-website10" rel="noreferrer"} or this website designer [Donald Boulton](https://github.com/bibwoe){:id="open-website11" rel="noreferrer"} or [donboulton.com](https://donaldboulton.github.io/bibwoe/){:id="open-website" rel="noreferrer"} is good enough for me. If you don't want to attribute our content, hey that's cool too. Just don't go using our stuff and republishing it as your own.
+
+{% include lightbox.html %}

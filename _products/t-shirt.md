@@ -42,4 +42,4 @@ This awesome t-shirt is for sale at [zazzle.com](https://www.zazzle.com/jekyll_t
 
 {% include donate_t-shirt.html %}
 
-{% include links.html %}
+{% include lightbox.html %}

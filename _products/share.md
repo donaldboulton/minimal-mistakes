@@ -5,7 +5,10 @@ sku: Share
 permalink: /products/share/
 excerpt: "Share on social media this donboulton.com website."
 adds: false
+comments: true
+search: true
 sidenav: true
+side_react: true
 header:
   image: /assets/images/cart/share/share-cover.jpg
   teaser: /assets/images/cart/share/share-320.jpg

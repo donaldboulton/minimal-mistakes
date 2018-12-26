@@ -5,11 +5,29 @@ excerpt: "Buy my kitty some cat food."
 sitemap: false
 layout: productdetails
 permalink: /products/catfood/
-products: true
 support: [adds, cookies, cart, products]
 adds: false
+comments: true
 sku: catfood
+search: true
 sidenav: true
+side_react: true
+author: Donald Boulton
+author_profile: false
+tags:
+  - Products
+  - Cat Food
+category:
+  - Products
+toc: false
+adds: true
+read_time: true
+comments: true
+reviews: false
+share: false
+related: true
+products: true
+cart: true
 image: /assets/images/cart/catfood/blue-wilderness-320.jpg
 header:
   image: /assets/images/cart/catfood/blue-wilderness.jpg
@@ -37,8 +55,6 @@ private: false
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_products/catfood.md
 ---
 
-# Cat Food
-
-Buy the kittys some cat food.
+Buy the kittys some cat food. My cats like Blue Wilderness but most of the food I use Is Meow Mix for the stray cats and other critters that show up at feeding time.
 
 {% include links.html %}
