@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 221);
+/******/ 	return __webpack_require__(__webpack_require__.s = 222);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -289,7 +289,7 @@ module.exports = _setExports(process.env.NODE_NDEBUG);
 
 
 
-var buffer = __webpack_require__(14)
+var buffer = __webpack_require__(15)
 var Buffer = buffer.Buffer
 
 var safer = {}
@@ -408,7 +408,7 @@ var PrivateKey = __webpack_require__(7);
 var Key = __webpack_require__(5);
 var crypto = __webpack_require__(2);
 var algs = __webpack_require__(6);
-var asn1 = __webpack_require__(13);
+var asn1 = __webpack_require__(14);
 
 var ec, jsbn;
 var nacl;
@@ -639,7 +639,7 @@ function calculateDSAPublic(g, p, x) {
 	assert.buffer(p);
 	assert.buffer(x);
 	try {
-		var bigInt = __webpack_require__(15).BigInteger;
+		var bigInt = __webpack_require__(16).BigInteger;
 	} catch (e) {
 		throw (new Error('To load a PKCS#8 format DSA private key, ' +
 		    'the node jsbn library is required.'));
@@ -656,7 +656,7 @@ function calculateED25519Public(k) {
 	assert.buffer(k);
 
 	if (nacl === undefined)
-		nacl = __webpack_require__(12);
+		nacl = __webpack_require__(13);
 
 	var kp = nacl.sign.keyPair.fromSeed(new Uint8Array(k));
 	return (Buffer.from(kp.publicKey));
@@ -666,7 +666,7 @@ function calculateX25519Public(k) {
 	assert.buffer(k);
 
 	if (nacl === undefined)
-		nacl = __webpack_require__(12);
+		nacl = __webpack_require__(13);
 
 	var kp = nacl.box.keyPair.fromSeed(new Uint8Array(k));
 	return (Buffer.from(kp.publicKey));
@@ -676,7 +676,7 @@ function addRSAMissing(key) {
 	assert.object(key);
 	assertCompatible(key, PrivateKey, [1, 1]);
 	try {
-		var bigInt = __webpack_require__(15).BigInteger;
+		var bigInt = __webpack_require__(16).BigInteger;
 	} catch (e) {
 		throw (new Error('To write a PEM private key from ' +
 		    'this source, the node jsbn lib is required.'));
@@ -709,7 +709,7 @@ function publicFromPrivateECDSA(curveName, priv) {
 	if (ec === undefined)
 		ec = __webpack_require__(27);
 	if (jsbn === undefined)
-		jsbn = __webpack_require__(15).BigInteger;
+		jsbn = __webpack_require__(16).BigInteger;
 	var params = algs.curves[curveName];
 	var p = new jsbn(params.p);
 	var a = new jsbn(params.a);
@@ -783,9 +783,9 @@ var assert = __webpack_require__(0);
 var algs = __webpack_require__(6);
 var crypto = __webpack_require__(2);
 var Fingerprint = __webpack_require__(25);
-var Signature = __webpack_require__(11);
+var Signature = __webpack_require__(12);
 var DiffieHellman = __webpack_require__(38).DiffieHellman;
-var errs = __webpack_require__(10);
+var errs = __webpack_require__(11);
 var utils = __webpack_require__(4);
 var PrivateKey = __webpack_require__(7);
 var edCompat;
@@ -801,10 +801,10 @@ var KeyParseError = errs.KeyParseError;
 
 var formats = {};
 formats['auto'] = __webpack_require__(59);
-formats['pem'] = __webpack_require__(16);
+formats['pem'] = __webpack_require__(17);
 formats['pkcs1'] = __webpack_require__(41);
 formats['pkcs8'] = __webpack_require__(28);
-formats['rfc4253'] = __webpack_require__(18);
+formats['rfc4253'] = __webpack_require__(20);
 formats['ssh'] = __webpack_require__(61);
 formats['ssh-private'] = __webpack_require__(32);
 formats['openssh'] = formats['ssh-private'];
@@ -1239,8 +1239,8 @@ var Buffer = __webpack_require__(1).Buffer;
 var algs = __webpack_require__(6);
 var crypto = __webpack_require__(2);
 var Fingerprint = __webpack_require__(25);
-var Signature = __webpack_require__(11);
-var errs = __webpack_require__(10);
+var Signature = __webpack_require__(12);
+var errs = __webpack_require__(11);
 var util = __webpack_require__(3);
 var utils = __webpack_require__(4);
 var dhe = __webpack_require__(38);
@@ -1263,10 +1263,10 @@ var KeyEncryptedError = errs.KeyEncryptedError;
 
 var formats = {};
 formats['auto'] = __webpack_require__(59);
-formats['pem'] = __webpack_require__(16);
+formats['pem'] = __webpack_require__(17);
 formats['pkcs1'] = __webpack_require__(41);
 formats['pkcs8'] = __webpack_require__(28);
-formats['rfc4253'] = __webpack_require__(18);
+formats['rfc4253'] = __webpack_require__(20);
 formats['ssh-private'] = __webpack_require__(32);
 formats['openssh'] = formats['ssh-private'];
 formats['ssh'] = formats['ssh-private'];
@@ -1323,7 +1323,7 @@ PrivateKey.prototype.derive = function (newType) {
 
 	if (this.type === 'ed25519' && newType === 'curve25519') {
 		if (nacl === undefined)
-			nacl = __webpack_require__(12);
+			nacl = __webpack_require__(13);
 
 		priv = this.part.k.data;
 		if (priv[0] === 0x00)
@@ -1341,7 +1341,7 @@ PrivateKey.prototype.derive = function (newType) {
 		}));
 	} else if (this.type === 'curve25519' && newType === 'ed25519') {
 		if (nacl === undefined)
-			nacl = __webpack_require__(12);
+			nacl = __webpack_require__(13);
 
 		priv = this.part.k.data;
 		if (priv[0] === 0x00)
@@ -1499,6 +1499,12 @@ module.exports = require("url");
 
 /***/ }),
 /* 10 */
+/***/ (function(module, exports) {
+
+module.exports = require("https");
+
+/***/ }),
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Copyright 2015 Joyent, Inc.
@@ -1588,7 +1594,7 @@ module.exports = {
 
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Copyright 2015 Joyent, Inc.
@@ -1599,9 +1605,9 @@ var assert = __webpack_require__(0);
 var Buffer = __webpack_require__(1).Buffer;
 var algs = __webpack_require__(6);
 var crypto = __webpack_require__(2);
-var errs = __webpack_require__(10);
+var errs = __webpack_require__(11);
 var utils = __webpack_require__(4);
-var asn1 = __webpack_require__(13);
+var asn1 = __webpack_require__(14);
 var SSHBuffer = __webpack_require__(29);
 
 var InvalidAlgorithmError = errs.InvalidAlgorithmError;
@@ -1908,7 +1914,7 @@ Signature._oldVersionDetect = function (obj) {
 
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 (function(nacl) {
@@ -4302,7 +4308,7 @@ nacl.setPRNG = function(fn) {
 
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Copyright 2011 Mark Cavage <mcavage@gmail.com> All rights reserved.
@@ -4328,13 +4334,13 @@ module.exports = {
 
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports) {
 
 module.exports = require("buffer");
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 (function(){
@@ -5697,7 +5703,7 @@ module.exports = require("buffer");
 
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Copyright 2015 Joyent, Inc.
@@ -5708,7 +5714,7 @@ module.exports = {
 };
 
 var assert = __webpack_require__(0);
-var asn1 = __webpack_require__(13);
+var asn1 = __webpack_require__(14);
 var crypto = __webpack_require__(2);
 var Buffer = __webpack_require__(1).Buffer;
 var algs = __webpack_require__(6);
@@ -5719,9 +5725,9 @@ var PrivateKey = __webpack_require__(7);
 var pkcs1 = __webpack_require__(41);
 var pkcs8 = __webpack_require__(28);
 var sshpriv = __webpack_require__(32);
-var rfc4253 = __webpack_require__(18);
+var rfc4253 = __webpack_require__(20);
 
-var errors = __webpack_require__(10);
+var errors = __webpack_require__(11);
 
 /*
  * For reading we support both PKCS#1 and PKCS#8. If we find a private key,
@@ -5895,13 +5901,19 @@ function write(key, options, type) {
 
 
 /***/ }),
-/* 17 */
+/* 18 */
+/***/ (function(module, exports) {
+
+module.exports = require("querystring");
+
+/***/ }),
+/* 19 */
 /***/ (function(module, exports) {
 
 module.exports = require("http");
 
 /***/ }),
-/* 18 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Copyright 2015 Joyent, Inc.
@@ -6071,18 +6083,6 @@ function write(key, options) {
 	return (buf.toBuffer());
 }
 
-
-/***/ }),
-/* 19 */
-/***/ (function(module, exports) {
-
-module.exports = require("https");
-
-/***/ }),
-/* 20 */
-/***/ (function(module, exports) {
-
-module.exports = require("querystring");
 
 /***/ }),
 /* 21 */
@@ -6364,7 +6364,7 @@ function unescapeJsonPointer(str) {
 /***/ (function(module, exports, __webpack_require__) {
 
 /* eslint-disable node/no-deprecated-api */
-var buffer = __webpack_require__(14)
+var buffer = __webpack_require__(15)
 var Buffer = buffer.Buffer
 
 // alternative to using Object.keys for old browsers
@@ -6445,7 +6445,7 @@ var assert = __webpack_require__(0);
 var Buffer = __webpack_require__(1).Buffer;
 var algs = __webpack_require__(6);
 var crypto = __webpack_require__(2);
-var errs = __webpack_require__(10);
+var errs = __webpack_require__(11);
 var Key = __webpack_require__(5);
 var Certificate = __webpack_require__(26);
 var utils = __webpack_require__(4);
@@ -6614,8 +6614,8 @@ var Buffer = __webpack_require__(1).Buffer;
 var algs = __webpack_require__(6);
 var crypto = __webpack_require__(2);
 var Fingerprint = __webpack_require__(25);
-var Signature = __webpack_require__(11);
-var errs = __webpack_require__(10);
+var Signature = __webpack_require__(12);
+var errs = __webpack_require__(11);
 var util = __webpack_require__(3);
 var utils = __webpack_require__(4);
 var Key = __webpack_require__(5);
@@ -6994,7 +6994,7 @@ Certificate._oldVersionDetect = function (obj) {
 // Only Fp curves implemented for now
 
 // Requires jsbn.js and jsbn2.js
-var BigInteger = __webpack_require__(15).BigInteger
+var BigInteger = __webpack_require__(16).BigInteger
 var Barrett = BigInteger.prototype.Barrett
 
 // ----------------
@@ -7569,13 +7569,13 @@ module.exports = {
 };
 
 var assert = __webpack_require__(0);
-var asn1 = __webpack_require__(13);
+var asn1 = __webpack_require__(14);
 var Buffer = __webpack_require__(1).Buffer;
 var algs = __webpack_require__(6);
 var utils = __webpack_require__(4);
 var Key = __webpack_require__(5);
 var PrivateKey = __webpack_require__(7);
-var pem = __webpack_require__(16);
+var pem = __webpack_require__(17);
 
 function read(buf, options) {
 	return (pem.read(buf, options, 'pkcs8'));
@@ -8337,11 +8337,11 @@ var assert = __webpack_require__(0);
 var algs = __webpack_require__(6);
 var crypto = __webpack_require__(2);
 var Fingerprint = __webpack_require__(25);
-var Signature = __webpack_require__(11);
-var errs = __webpack_require__(10);
+var Signature = __webpack_require__(12);
+var errs = __webpack_require__(11);
 var util = __webpack_require__(3);
 var utils = __webpack_require__(4);
-var asn1 = __webpack_require__(13);
+var asn1 = __webpack_require__(14);
 var Buffer = __webpack_require__(1).Buffer;
 
 /*JSSTYLED*/
@@ -8751,7 +8751,7 @@ module.exports = {
 };
 
 var assert = __webpack_require__(0);
-var asn1 = __webpack_require__(13);
+var asn1 = __webpack_require__(14);
 var Buffer = __webpack_require__(1).Buffer;
 var algs = __webpack_require__(6);
 var utils = __webpack_require__(4);
@@ -8759,10 +8759,10 @@ var crypto = __webpack_require__(2);
 
 var Key = __webpack_require__(5);
 var PrivateKey = __webpack_require__(7);
-var pem = __webpack_require__(16);
-var rfc4253 = __webpack_require__(18);
+var pem = __webpack_require__(17);
+var rfc4253 = __webpack_require__(20);
 var SSHBuffer = __webpack_require__(29);
-var errors = __webpack_require__(10);
+var errors = __webpack_require__(11);
 
 var bcrypt;
 
@@ -9223,11 +9223,11 @@ module.exports = require("zlib");
 
 var Key = __webpack_require__(5);
 var Fingerprint = __webpack_require__(25);
-var Signature = __webpack_require__(11);
+var Signature = __webpack_require__(12);
 var PrivateKey = __webpack_require__(7);
 var Certificate = __webpack_require__(26);
 var Identity = __webpack_require__(30);
-var errs = __webpack_require__(10);
+var errs = __webpack_require__(11);
 
 module.exports = {
 	/* top-level classes */
@@ -9314,7 +9314,7 @@ function DiffieHellman(key) {
 			if (ec === undefined)
 				ec = __webpack_require__(27);
 			if (jsbn === undefined)
-				jsbn = __webpack_require__(15).BigInteger;
+				jsbn = __webpack_require__(16).BigInteger;
 
 			this._ecParams = new X9ECParameters(this._curve);
 
@@ -9343,7 +9343,7 @@ function DiffieHellman(key) {
 
 	} else if (key.type === 'curve25519') {
 		if (nacl === undefined)
-			nacl = __webpack_require__(12);
+			nacl = __webpack_require__(13);
 
 		if (this._isPriv) {
 			utils.assertCompatible(key, PrivateKey, [1, 5], 'key');
@@ -9588,7 +9588,7 @@ ECPrivate.prototype.deriveSharedSecret = function (pubKey) {
 
 function generateED25519() {
 	if (nacl === undefined)
-		nacl = __webpack_require__(12);
+		nacl = __webpack_require__(13);
 
 	var pair = nacl.sign.keyPair();
 	var priv = Buffer.from(pair.secretKey);
@@ -9645,7 +9645,7 @@ function generateECDSA(curve) {
 		if (ec === undefined)
 			ec = __webpack_require__(27);
 		if (jsbn === undefined)
-			jsbn = __webpack_require__(15).BigInteger;
+			jsbn = __webpack_require__(16).BigInteger;
 
 		var ecParams = new X9ECParameters(curve);
 
@@ -9755,14 +9755,14 @@ module.exports = {
 };
 
 var assert = __webpack_require__(0);
-var asn1 = __webpack_require__(13);
+var asn1 = __webpack_require__(14);
 var Buffer = __webpack_require__(1).Buffer;
 var algs = __webpack_require__(6);
 var utils = __webpack_require__(4);
 
 var Key = __webpack_require__(5);
 var PrivateKey = __webpack_require__(7);
-var pem = __webpack_require__(16);
+var pem = __webpack_require__(17);
 
 var pkcs8 = __webpack_require__(28);
 var readECDSACurve = pkcs8.readECDSACurve;
@@ -11224,7 +11224,7 @@ exports.pathMatch = pathMatch;
 /***/ (function(module, exports, __webpack_require__) {
 
 var crypto = __webpack_require__(2);
-var BigInteger = __webpack_require__(15).BigInteger;
+var BigInteger = __webpack_require__(16).BigInteger;
 var ECPointFp = __webpack_require__(27).ECPointFp;
 var Buffer = __webpack_require__(1).Buffer;
 exports.ECCurves = __webpack_require__(99);
@@ -11299,11 +11299,11 @@ var stream = __webpack_require__(8);
 var util = __webpack_require__(3);
 var assert = __webpack_require__(0);
 var Buffer = __webpack_require__(1).Buffer;
-var Signature = __webpack_require__(11);
+var Signature = __webpack_require__(12);
 
 function Verifier(key, hashAlgo) {
 	if (nacl === undefined)
-		nacl = __webpack_require__(12);
+		nacl = __webpack_require__(13);
 
 	if (hashAlgo.toLowerCase() !== 'sha512')
 		throw (new Error('ED25519 only supports the use of ' +
@@ -11351,7 +11351,7 @@ Verifier.prototype.verify = function (signature, fmt) {
 
 function Signer(key, hashAlgo) {
 	if (nacl === undefined)
-		nacl = __webpack_require__(12);
+		nacl = __webpack_require__(13);
 
 	if (hashAlgo.toLowerCase() !== 'sha512')
 		throw (new Error('ED25519 only supports the use of ' +
@@ -11404,9 +11404,9 @@ var utils = __webpack_require__(4);
 var Key = __webpack_require__(5);
 var PrivateKey = __webpack_require__(7);
 
-var pem = __webpack_require__(16);
+var pem = __webpack_require__(17);
 var ssh = __webpack_require__(61);
-var rfc4253 = __webpack_require__(18);
+var rfc4253 = __webpack_require__(20);
 var dnssec = __webpack_require__(42);
 
 var DNSSEC_PRIVKEY_HEADER_PREFIX = 'Private-key-format: v1';
@@ -11507,7 +11507,7 @@ function write(key, options) {
 "use strict";
 
 
-var crypto_hash_sha512 = __webpack_require__(12).lowlevel.crypto_hash;
+var crypto_hash_sha512 = __webpack_require__(13).lowlevel.crypto_hash;
 
 /*
  * This file is a 1:1 port from the OpenBSD blowfish.c and bcrypt_pbkdf.c. As a
@@ -12076,7 +12076,7 @@ module.exports = {
 
 var assert = __webpack_require__(0);
 var Buffer = __webpack_require__(1).Buffer;
-var rfc4253 = __webpack_require__(18);
+var rfc4253 = __webpack_require__(20);
 var utils = __webpack_require__(4);
 var Key = __webpack_require__(5);
 var PrivateKey = __webpack_require__(7);
@@ -12199,15 +12199,15 @@ module.exports = {
 };
 
 var assert = __webpack_require__(0);
-var asn1 = __webpack_require__(13);
+var asn1 = __webpack_require__(14);
 var Buffer = __webpack_require__(1).Buffer;
 var algs = __webpack_require__(6);
 var utils = __webpack_require__(4);
 var Key = __webpack_require__(5);
 var PrivateKey = __webpack_require__(7);
-var pem = __webpack_require__(16);
+var pem = __webpack_require__(17);
 var Identity = __webpack_require__(30);
-var Signature = __webpack_require__(11);
+var Signature = __webpack_require__(12);
 var Certificate = __webpack_require__(26);
 var pkcs8 = __webpack_require__(28);
 
@@ -17178,8 +17178,8 @@ function serializer(replacer, cycleReplacer) {
 "use strict";
 
 
-var http = __webpack_require__(17)
-var https = __webpack_require__(19)
+var http = __webpack_require__(19)
+var https = __webpack_require__(10)
 var url = __webpack_require__(9)
 var util = __webpack_require__(3)
 var stream = __webpack_require__(8)
@@ -18953,7 +18953,7 @@ module.exports.canonicalizeResource = canonicalizeResource
 
 var aws4 = exports,
     url = __webpack_require__(9),
-    querystring = __webpack_require__(20),
+    querystring = __webpack_require__(18),
     crypto = __webpack_require__(2),
     lru = __webpack_require__(96),
     credentialsCache = lru(1000)
@@ -19750,7 +19750,7 @@ module.exports = {
 // Named EC curves
 
 // Requires ec.js, jsbn.js, and jsbn2.js
-var BigInteger = __webpack_require__(15).BigInteger
+var BigInteger = __webpack_require__(16).BigInteger
 var ECCurveFp = __webpack_require__(27).ECCurveFp
 
 
@@ -20569,8 +20569,8 @@ var algs = __webpack_require__(6);
 var Key = __webpack_require__(5);
 var PrivateKey = __webpack_require__(7);
 var Identity = __webpack_require__(30);
-var rfc4253 = __webpack_require__(18);
-var Signature = __webpack_require__(11);
+var rfc4253 = __webpack_require__(20);
+var Signature = __webpack_require__(12);
 var utils = __webpack_require__(4);
 var Certificate = __webpack_require__(26);
 
@@ -20888,15 +20888,15 @@ module.exports = {
 };
 
 var assert = __webpack_require__(0);
-var asn1 = __webpack_require__(13);
+var asn1 = __webpack_require__(14);
 var Buffer = __webpack_require__(1).Buffer;
 var algs = __webpack_require__(6);
 var utils = __webpack_require__(4);
 var Key = __webpack_require__(5);
 var PrivateKey = __webpack_require__(7);
-var pem = __webpack_require__(16);
+var pem = __webpack_require__(17);
 var Identity = __webpack_require__(30);
-var Signature = __webpack_require__(11);
+var Signature = __webpack_require__(12);
 var Certificate = __webpack_require__(26);
 
 function read(buf, options) {
@@ -20964,7 +20964,7 @@ function write(cert, options) {
 
 var assert = __webpack_require__(0);
 var crypto = __webpack_require__(2);
-var http = __webpack_require__(17);
+var http = __webpack_require__(19);
 var util = __webpack_require__(3);
 var sshpk = __webpack_require__(37);
 var jsprim = __webpack_require__(106);
@@ -23079,10 +23079,10 @@ module.exports = ForeverAgent
 ForeverAgent.SSL = ForeverAgentSSL
 
 var util = __webpack_require__(3)
-  , Agent = __webpack_require__(17).Agent
+  , Agent = __webpack_require__(19).Agent
   , net = __webpack_require__(34)
   , tls = __webpack_require__(65)
-  , AgentSSL = __webpack_require__(19).Agent
+  , AgentSSL = __webpack_require__(10).Agent
   
 function getConnectionName(host, port) {  
   var name = ''
@@ -23222,8 +23222,8 @@ function createConnectionSSL (port, host, options) {
 var CombinedStream = __webpack_require__(66);
 var util = __webpack_require__(3);
 var path = __webpack_require__(43);
-var http = __webpack_require__(17);
-var https = __webpack_require__(19);
+var http = __webpack_require__(19);
+var https = __webpack_require__(10);
 var parseUrl = __webpack_require__(9).parse;
 var fs = __webpack_require__(45);
 var mime = __webpack_require__(64);
@@ -24096,7 +24096,7 @@ module.exports = getProxyFromURI
 
 
 var qs = __webpack_require__(74)
-var querystring = __webpack_require__(20)
+var querystring = __webpack_require__(18)
 
 function Querystring (request) {
   this.request = request
@@ -24551,7 +24551,7 @@ module.exports = function (str, opts) {
 
 
 var fs = __webpack_require__(45)
-var qs = __webpack_require__(20)
+var qs = __webpack_require__(18)
 var validate = __webpack_require__(128)
 var extend = __webpack_require__(33)
 
@@ -31589,8 +31589,8 @@ exports.Tunnel = Tunnel
 
 var net = __webpack_require__(34)
   , tls = __webpack_require__(65)
-  , http = __webpack_require__(17)
-  , https = __webpack_require__(19)
+  , http = __webpack_require__(19)
+  , https = __webpack_require__(10)
   , events = __webpack_require__(194)
   , assert = __webpack_require__(24)
   , util = __webpack_require__(3)
@@ -32013,7 +32013,8 @@ module.exports.parse = parse
 /* 218 */,
 /* 219 */,
 /* 220 */,
-/* 221 */
+/* 221 */,
+/* 222 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

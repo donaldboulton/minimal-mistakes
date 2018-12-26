@@ -60,29 +60,36 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 223);
+/******/ 	return __webpack_require__(__webpack_require__.s = 225);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 14:
+/***/ 10:
+/***/ (function(module, exports) {
+
+module.exports = require("https");
+
+/***/ }),
+
+/***/ 15:
 /***/ (function(module, exports) {
 
 module.exports = require("buffer");
 
 /***/ }),
 
-/***/ 17:
+/***/ 18:
 /***/ (function(module, exports) {
 
-module.exports = require("http");
+module.exports = require("querystring");
 
 /***/ }),
 
 /***/ 19:
 /***/ (function(module, exports) {
 
-module.exports = require("https");
+module.exports = require("http");
 
 /***/ }),
 
@@ -97,11 +104,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FetchError", function() { return FetchError; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_stream__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_stream___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_stream__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_http__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_http__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_http___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_http__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_url__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_url___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_url__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_https__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_https__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_https___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_https__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_zlib__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_zlib___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_zlib__);
@@ -1998,13 +2005,6 @@ if (false) {
     console.error("iconv-lite warning: javascript files use encoding different from utf-8. See https://github.com/ashtuchkin/iconv-lite/wiki/Javascript-source-file-encodings for more info.");
 }
 
-
-/***/ }),
-
-/***/ 20:
-/***/ (function(module, exports) {
-
-module.exports = require("querystring");
 
 /***/ }),
 
@@ -4287,7 +4287,7 @@ module.exports = [["8740","䏰䰲䘃䖦䕸𧉧䵷䖳𧲱䳢𧳅㮕䜶䝄䱇䱀�
 "use strict";
 
 
-var Buffer = __webpack_require__(14).Buffer,
+var Buffer = __webpack_require__(15).Buffer,
     Transform = __webpack_require__(8).Transform;
 
 
@@ -4415,7 +4415,7 @@ IconvLiteDecoderStream.prototype.collect = function(cb) {
 
 "use strict";
 
-var Buffer = __webpack_require__(14).Buffer;
+var Buffer = __webpack_require__(15).Buffer;
 // Note: not polyfilled with safer-buffer on a purpose, as overrides Buffer
 
 // == Extend Node primitives to use iconv-lite =================================
@@ -4448,7 +4448,7 @@ module.exports = function (iconv) {
         }
 
         // -- SlowBuffer -----------------------------------------------------------
-        var SlowBuffer = __webpack_require__(14).SlowBuffer;
+        var SlowBuffer = __webpack_require__(15).SlowBuffer;
 
         original.SlowBufferToString = SlowBuffer.prototype.toString;
         SlowBuffer.prototype.toString = function(encoding, start, end) {
@@ -4611,7 +4611,7 @@ module.exports = function (iconv) {
 
         delete Buffer.isNativeEncoding;
 
-        var SlowBuffer = __webpack_require__(14).SlowBuffer;
+        var SlowBuffer = __webpack_require__(15).SlowBuffer;
 
         SlowBuffer.prototype.toString = original.SlowBufferToString;
         SlowBuffer.prototype.write = original.SlowBufferWrite;
@@ -4678,7 +4678,7 @@ webpackEmptyContext.id = 219;
 
 
 
-var buffer = __webpack_require__(14)
+var buffer = __webpack_require__(15)
 var Buffer = buffer.Buffer
 
 var safer = {}
@@ -4755,13 +4755,13 @@ module.exports = safer
 
 /***/ }),
 
-/***/ 223:
+/***/ 225:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _querystring = __webpack_require__(20);
+var _querystring = __webpack_require__(18);
 
 var _querystring2 = _interopRequireDefault(_querystring);
 
