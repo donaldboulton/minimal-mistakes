@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDom from 'react-dom';
 
 class WeatherApp extends React.Component {
   handleCityChange(e) {
@@ -65,7 +64,7 @@ class WeatherApp extends React.Component {
   }
   render() {
     return <div className="weatherapp">
-      <h1>Weather Checker Widget</h1>
+      <h2>Weather Checker Widget</h2>
       <h3>{this.state.city}</h3>
       <img src={this.state.img} />
       <h1>{this.state.feelslike}</h1>
@@ -86,9 +85,9 @@ class WeatherApp extends React.Component {
       <div>
        <h3 className="header">Change Location</h3>
       <form onSubmit={this.updateWeather.bind(this)}>
-        <input type="text" placeholder="Enter City ex (Memphis)" className="input" value={this.state.cityInput} onChange={this.handleCityChange.bind(this)} />
+        <input type="text" placeholder="Enter City ex (Memphis)" className="form-control input" value={this.state.cityInput} onChange={this.handleCityChange.bind(this)} />
         <br />
-        <input type="text" placeholder="Enter State ex (TN)" className="input" value={this.state.stateInput} onChange={this.handleStateChange.bind(this)} />
+        <input type="text" placeholder="Enter State ex (TN)" className="form-control input" value={this.state.stateInput} onChange={this.handleStateChange.bind(this)} />
         <br />
         <input type="submit" value="Submit" className="btn btn--primary" />
       </form>

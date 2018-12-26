@@ -1,6 +1,7 @@
 ---
 title: Beer
 name: Beer
+layout: productdetails
 subtitle: Buy me a beer
 excerpt: "Buy me a bottle of Beer."
 sitemap: false

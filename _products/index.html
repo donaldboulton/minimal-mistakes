@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: products
 permalink: /products/
 title: Gallerys
 date: 2018-11-01 16:18:01 -0600
@@ -17,7 +17,7 @@ tags:
   - Coffee
   - T-Shirt
 category:
-  - Prioducts
+  - Products
 toc: false
 adds: true
 read_time: true
@@ -30,9 +30,9 @@ products: true
 cart: true
 breakcrumb: true
 sidebar:
-  - title: "My Hun Kitty"
+  - title: "Share cover"
     image: /assets/images/cart/share/share-cover.jpg
-    image_alt: "Hun Kitty"
+    image_alt: "Share Cover"
     text: "Hun at 3 weaks"
   - title: "Responsibilities"
     text: "Cat food for 20 stray cats in OKC."
@@ -51,12 +51,10 @@ support: [adds, cookies, cart, products]
 github_editme_path: donaldboulton/DWB/blob/gh-pages/products/index.html
 ---
 
-{% include octo-arm.html %}
-
-{% include page-intro.html %}
-
 <p>Support the Kitties.</p>
 
-{% include product.html %}
+{% for product in site.products %}
+  {% include product.html %}
+{% endfor %}
 
 

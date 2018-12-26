@@ -1,6 +1,7 @@
 import React from 'react';
-import styles from './product.module.css';
+import styles from './css/product.module.css';
 const netlifyIdentity = require("netlify-identity-widget");
+import fourOfour from './404.js';
 const { graphql } = require('graphql');
 const NETLIFY_FUNC = 'donboulton.com/.netlify/functions';
 const NETLIFY_URL = 'https://donboulton.com';
@@ -125,4 +126,5 @@ query productById($sku: String) {
       }
     }
   }
-`
+
+`ReactDom.render(<Product/>, document.getElementById('product'));
