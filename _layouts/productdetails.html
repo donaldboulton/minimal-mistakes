@@ -1,21 +1,20 @@
 ---
 layout: single
 ---
-<div class="product-details">
-  <img src="{{ page.image }}" alt="{{ page.name }}" class="thumbnail"/>
-  <div class="product-description">
-    <p>
-      {{ page.content }}
-    </p>
-
-    <button class="snipcart-add-item btn btn--primary"
-      data-item-name="{{ page.name }}"
-      data-item-id="{{ page.sku }}"
-      data-item-image="{{ page.image }}"
-      data-item-url="{{ site.baseurl }}"
-      data-item-price="{{ page.price }}">
-      Buy it for {{ page.price }} $
-    </button>
+<div class="product-details gallery-2-col">
+  <div><img src="{{ page.image }}" alt="{{ page.name }}" class="thumbnail"/></div>
+  <div class="product-description">  
+    {{ page.content }}
+    <div>
+      <button class="snipcart-add-item"
+        data-item-name="{{ page.name }}"
+        data-item-id="{{ page.sku }}"
+        data-item-image="{{ page.image }}"
+        data-item-url="{{ site.baseurl }}"
+        data-item-price="{{ page.price }}">
+        Buy it for {{ page.price }} $
+      </button>
+    </div>
   </div>
 </div>
 <div class="product-reviews">

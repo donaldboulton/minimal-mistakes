@@ -16,10 +16,10 @@ sidenav: true
 classes: product
 permalink: /products/coffee/
 header:
-  image: /assets/images/cart/coffee/1.jpg
+  image: /assets/images/cart/coffee/coffee-1200.jpg
   teaser: /assets/images/cart/coffee/coffee-cover-320.jpg
 subtitle: Buy me a coffee
-image: /assets/images/cart/coffee/1.jpg
+image: /assets/images/cart/coffee/coffee-320.jpg
 images:
   - image: /assets/images/cart/coffee/1.jpg
   - image: /assets/images/cart/coffee/2.jpg
@@ -35,7 +35,7 @@ variants:
   - name: venti
     price: 4.30
 price: 2.50
-id: catfood
+id: coffee
 folder: _products
 loc: "/coffee"
 desc: Buy me a Coffee
@@ -43,10 +43,5 @@ private: false
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_products/coffee.md
 ---
 
-# Coffee
-
 A perfect coffee in the morning absolutely makes my day. Buy me a small one for a good start or a big one to keep going all day!
 
-{% include donate_coffee.html %}
-
-{% include links.html %}

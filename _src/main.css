@@ -6253,6 +6253,13 @@ ul li.list-content,ul li.list-month {
   float: right;
 }
 
+.snipcart-add-item {
+  background-color: #10c000;
+  color: #fff;
+  border-radius: 3px;
+  border-color: #10c000;
+}
+
 .checkbox_wrapper {
   cursor: pointer;
   height: 50px;

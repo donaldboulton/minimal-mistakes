@@ -113,7 +113,7 @@ reviews:
   commitMessage: "Add Review from {fields.name}"
   filename: "review-{fields.product}-{@id}"
   moderation: true
-  requiredFields: ['name', "email", 'title', 'description', 'review']
+  requiredFields: ['name', 'review']
   format: "json"
   path: "_data/reviews/{options.slug}"
 
