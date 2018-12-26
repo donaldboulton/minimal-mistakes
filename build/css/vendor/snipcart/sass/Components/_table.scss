@@ -1,0 +1,225 @@
+﻿/**
+    TABLE
+
+    [1]. Special jedi's mind trick, thanks to inheritance, we only style tbody or thead elements.
+         Since we can't define `padding` or `border` for tbody, thead, tr elements, it's easier.
+         And for mobile block table behavior, style is already set for those elements.
+    [2]. Exception to low specificity rule, as it removes a lot of classes.
+         For product table, on small device screen size, we use block display rather than table display.
+*/
+
+/*------------------------------------*\
+    LOCAL VARIABLES
+\*------------------------------------*/
+
+$_table-border: 1px solid palette(table, border);
+
+$_notice-warning--background-color: lighten(palette(flash, background--warning), 20%);
+$_notice-warning--text-color: palette(static, color--highlight);
+
+$_notice-error--background-color: lighten(palette(flash, background--error), 40%);
+$_notice-error--text-color: palette(static, color--highlight);
+
+
+/*------------------------------------*\
+    STYLE
+\*------------------------------------*/
+
+.snip-table {
+    font-size: fontsize(table, base);
+    text-align: left;
+    width: 100%;
+
+    // [1]
+    td, th, tr {
+        border-bottom: $_table-border;
+        padding: inherit;
+
+        &.snip-table__row--no-border {
+          border-bottom: none;
+          td {
+            border-bottom: 0;
+          }
+        }
+    }
+}
+
+.snip-table {
+  .snip-table__cell__notices {
+    margin: 0;
+    padding: 0;
+
+    div {
+      margin: 10px 20px 5px 20px;
+      padding: 10px;
+      border-radius: 5px;
+
+      &.snip-table__cell__notices--warning {
+        background-color: $_notice-warning--background-color;
+        color: $_notice-warning--text-color;
+      }
+
+      &.snip-table__cell__notices--error {
+        background-color: $_notice-error--background-color;
+        color: $_notice-error--text-color;
+      }
+    }
+  }
+}
+
+.snip-table--small {
+    // [2]
+    @media #{$mq-small} {
+        display: block;
+        font-size: fontsize(table, base);
+        text-align: left;
+
+        td, th, tr {
+            display: block;
+
+            &:empty {
+                padding: 0;
+                width: 0;
+            }
+        }
+
+        tr {
+            @include clearfix;
+            padding: $padding-small 0;
+            position: relative;
+
+            + tr {
+                //border-top: $_table-border;
+            }
+        }
+
+        td {
+            border: 0;
+            padding: $padding-small;
+        }
+
+        .snip-table__header {
+            display: none;
+        }
+
+        .snip-table__body {
+            border: 0;
+            display: block;
+            padding: 0;
+
+            &:empty {
+                padding: 0;
+            }
+
+            ~ .snip-table__body {
+                border-top: $_table-border;
+
+                &:empty {
+                    border: 0;
+                }
+            }
+        }
+
+        .snip-table__body--small,
+        .snip-table__body--big {
+            text-align: center;
+
+            tr,
+            td {
+                padding: .5em;
+                text-align: inherit;
+            }
+        }
+    }
+}
+
+.snip-table__header {
+    font-size: fontsize(table, small);
+    padding: 1em 2em;
+    text-transform: uppercase;
+
+    ~ .snip-table__header {
+        border-top: $_table-border;
+    }
+}
+
+.snip-table__body {
+    border-top: $_table-border;
+    display: table-row-group;
+    padding: 1.429em;
+}
+
+.snip-table__body--small {
+    background: palette(table, background--highlight);
+
+    @media #{$mq-medium} {
+        padding: .429em 1.429em .429em 2.857em;
+    }
+}
+
+.snip-table__body--big {
+    font-size: fontsize(table, large);
+
+    @media #{$mq-medium} {
+        padding: 1.222em 1.111em 1.222em 1.222em;
+    }
+}
+
+.snip-table__loading {
+    text-align: center;
+    font-size: fontsize(table, base);
+    color: palette(table, color--highlight);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.snip-table__cell--center {
+    text-align: center;
+}
+
+.snip-table__cell--long-text {
+    @media #{$mq-medium} {
+      max-width: 20em;
+    }
+}
+
+.snip-table__cell--right {
+    text-align: right;
+}
+
+.snip-table__cell--clear {
+    @include clearfix;
+}
+
+.snip-table__cell--invalid {
+    text-decoration: line-through;
+    font-weight: normal;
+    display: block;
+}
+
+.snip-table__cell--bold {
+    @include font-bold;
+}
+
+.snip-table__cell--highlight {
+    @include font-bold;
+    color: palette(table, color--highlight);
+}
+
+.snip-table__cell--success {
+    @include font-bold;
+    color: palette(table, color--success);
+}
+
+.snip-table__small-col {
+    @media #{$mq-small} {
+        float: left;
+        margin-top: $padding-small * 2;
+        text-align: center;
+        width: 33.333333%;
+
+        + .snip-table__small-col {
+            border-left: $_table-border;
+        }
+    }
+}

@@ -1,0 +1,81 @@
+﻿/**
+    COLUMNS
+
+    Basic grid system for the cart
+
+    [1]. We use flexbox here since overall browser support is about 95% worldwide.
+    [2]. Also, as fallback, we 'float' the columns. If your browser doesn't support flexbox, columns will be
+         properly positionned even if the columns won't have the same height (graceful degradation).
+    [3]. Thanks to flexbox, you can easily order columns. However, it won't be ordered for older browser.
+*/
+
+/*------------------------------------*\
+    LOCAL VARIABLES
+\*------------------------------------*/
+
+$_cols-border: 1px solid palette(layout, border);
+
+
+/*------------------------------------*\
+    STYLE
+\*------------------------------------*/
+
+.snip-cols {
+    @media #{$mq-medium} {
+        // [1]
+        display: flex;
+
+        // [2]
+        @include clearfix;
+    }
+}
+
+.snip-col {
+    padding: 0 $padding-small $padding-small;
+    
+    + .snip-col {
+        border-top: $_cols-border;
+        padding-top: $padding-small;
+    }
+
+    @media #{$mq-medium} {
+        // [2]
+        float: left;
+        padding: .25em 1.25em;
+        width: 33.333333%;
+    
+        + .snip-col {
+            border-left: $_cols-border;
+            border-top: 0;
+            padding-top: .25em;
+
+            &.snip-col--no-border {
+                border-left: none;
+            }
+        }
+    }
+}
+
+
+.snip-col--half {
+    @media #{$mq-medium} {
+        width: 50%;
+    }
+}
+
+
+.snip-col--full {
+    @media #{$mq-medium} {
+        width: 100%;
+    }
+}
+
+.snip-col--right {
+    border-left: $_cols-border;
+    // [3]
+    order: 2;
+}
+
+.snip-col--no-border {
+    border: none;
+}

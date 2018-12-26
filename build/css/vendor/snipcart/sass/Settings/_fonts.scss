@@ -1,0 +1,90 @@
+﻿/**
+    CUSTOM FONT FAMILY
+
+    We don't want to load many fonts on your site so we stay classic.
+    You can add your custom fonts here and/or define your own fonts family variables.
+*/
+$font-base: Arial, sans-serif;
+
+
+/**
+    ICONS FONT
+*/
+@font-face {
+    font-family: "Snipcart";
+    src: url('fonts/snipcart/Snipcart.woff?94043836') format("woff"),
+         url('fonts/snipcart/Snipcart.ttf?94043836') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/**
+    FONT HELPERS
+
+    If you use custom fonts and you don't want browser side weighted/italic fonts:
+    - remove font-weight (or add font-weight: normal for example)
+    - add your font-family. Ex: font-family: 'myFont-bold';
+*/
+@mixin font-bold {
+    font-weight: 700;
+}
+
+
+/**
+    FONT SIZES
+*/
+$fontsize: (
+    action: (
+        small: 12px
+    ),
+    button: (
+        base: 12px
+    ),
+    error: (
+        base: 14px
+    ),
+    flash: (
+        base: 12px
+    ),
+    footer: (
+        base: 10px
+    ),
+    form: (
+        small: 12px,
+        base: 14px
+    ),
+    header: (
+        small: 14px,
+        large: 30px
+    ),
+    product: (
+        base: 14px,
+        large: 20px,
+        icon: 30px
+    ),
+    quantity-trigger: (
+        large: 18px,
+        x-large: 22px
+    ),
+    reset: (
+        base: 14px,
+        large: 16px
+    ),
+    static: (
+        small: 12px,
+        base: 14px
+    ),
+    step: (
+        small: 10px,
+        icon: 34px
+    ),
+    table: (
+        small: 12px,
+        base: 14px,
+        large: 20px
+    ),
+    discount: (
+        icon: 20px
+    )
+);

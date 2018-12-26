@@ -1,0 +1,66 @@
+﻿/**
+    LOADER
+
+    Loader element for product modifications
+    
+    [1]. Do not remove ".js-active" class.
+*/
+
+/*------------------------------------*\
+    LOCAL VARIABLES
+\*------------------------------------*/
+
+$_loader-size: 20px;
+$_big-loader-height: .3em;
+
+
+/*------------------------------------*\
+    STYLE
+\*------------------------------------*/
+
+.snip-loader {
+    // [1]
+    &.js-active {
+        background-image: url(img/ajax-loader.gif);
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+}
+
+.snip-loader--table {
+    // [1]
+    &.js-active {
+        background-size: $_loader-size $_loader-size;
+        height: $_loader-size;
+        width: $_loader-size;
+    }
+}
+
+.snip-loader--bar {
+    height: $_big-loader-height;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: palette(loader, background);
+    margin-top: -.3em;
+
+    &:before{
+        display: block;
+        position: absolute;
+        content: "";
+        left: -200px;
+        width: 30%;
+        height: $_big-loader-height;
+        background-color: palette(loader, background--highlight);
+        animation: snip-loading 2s ease-in-out infinite;
+    }
+
+    &.js-hidden {
+        display: none;
+    }
+}
+
+@keyframes snip-loading {
+    from {left: -30%; }
+    to {left: 100%;}
+}

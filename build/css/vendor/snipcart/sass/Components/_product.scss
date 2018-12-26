@@ -1,0 +1,136 @@
+﻿/**
+    PRODUCT
+
+    Product component, used for product items, shipping choices and payment methods
+
+    [1]. Do not remove ".js-selected" class
+*/
+
+/*------------------------------------*\
+    LOCAL VARIABLES
+\*------------------------------------*/
+
+$_product-border: 1px solid palette(product, border);
+
+$_product-thumbnail-size: 65px;
+
+$_product-customfield-size: 200px;
+
+$_product-disabled-opacity: 0.2;
+
+
+/*------------------------------------*\
+    STYLE
+\*------------------------------------*/
+
+.snip-product {
+    @include clearfix;
+    background: palette(product, background);
+    border-top: $_product-border;
+    font-size: fontsize(product, base);
+    padding: 2em 1.25em;
+}
+
+.snip-product--selectable {
+    cursor: pointer;
+}
+
+.snip-product--selectable-item {
+    background: url("img/checkbox.png") no-repeat 0 center;
+    padding-left: 2.286em;
+
+    // [1]
+    &.js-selected {
+        background-image: url("img/selected.png");
+    }
+}
+
+.snip-product__thumbnail {
+    display: none;
+    float: left;
+    height: $_product-thumbnail-size;
+    margin-right: .714em;
+    width: $_product-thumbnail-size;
+
+    img {
+        max-height: 100%;
+        max-width: 100%;
+    }
+
+    @media #{$mq-medium} {
+        display: block;
+    }
+}
+
+.snip-product__name {
+    @include font-bold;
+    color: palette(product, color--highlight);
+    font-size: 1.125em;
+    overflow: hidden;
+    text-transform: uppercase;
+
+    @media #{$mq-medium} {
+        font-size: fontsize(product, base);
+        margin-top: .5em;
+    }
+}
+
+.snip-product__description {
+    font-size: fontsize(product, base) / 1.125;
+    margin-top: .25em;
+    overflow: hidden;
+
+    @media #{$mq-medium} {
+        font-size: fontsize(product, base);
+        margin-top: .5em;
+    }
+}
+
+.snip-product__important {
+    @include font-bold;
+    font-size: fontsize(product, base) / 1.125;
+
+    @media #{$mq-medium} {
+        font-size: fontsize(product, base);
+    }
+}
+
+.snip-product__remove {
+    color: palette(product, color--error);
+    font-size: fontsize(product, icon);
+    position: static;
+
+    @media #{$mq-small} {
+      position: absolute;
+      right: $padding-small / 3.5;
+      top: $padding-small / 1.75;
+    }
+
+    @media #{$mq-medium} {
+        float: left;
+        margin: -.154em .192em 0 0;
+    }
+}
+
+.snip-product__remove--disabled {
+    opacity: $_product-disabled-opacity;
+    cursor: default;
+}
+
+.snip-product__customfields {
+    @media #{$mq-medium} {
+        max-width: $_product-customfield-size;
+    }
+}
+
+.snip-product__customfields-checkbox {
+    float: left;
+    margin: 0 .5em .75em 0;
+}
+
+.snip-product__empty {
+    font-size: fontsize(product, large);
+    padding: 1em 2em;
+    text-align: center;
+    text-transform: uppercase;
+}

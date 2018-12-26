@@ -1,0 +1,114 @@
+﻿/**
+    STEP
+
+    Breadcrump list navigation for the cart
+
+    [1]. We add user-select: none to prevent text selection on navigation items
+*/
+
+/*------------------------------------*\
+    LOCAL VARIABLES
+\*------------------------------------*/
+
+$_steps-height: 60px;
+
+$_steps-border: 1px solid palette(step, border);
+
+
+/*------------------------------------*\
+    STYLE
+\*------------------------------------*/
+
+.snip-steps {
+    background: palette(step, background);
+    display: block;
+    height: $_steps-height / 1.25;
+
+    &.snip-steps--4 li {
+        width: percentage(1 / 4);
+    }
+
+    &.snip-steps--5 li {
+        width: percentage(1 / 5);
+    }
+
+    &.snip-steps--6 li {
+        width: percentage(1 / 6);
+    }
+
+    &.snip-steps--7 li {
+        width: percentage(1 / 7);
+    }
+
+    @media #{$mq-medium} {
+        height: $_steps-height;
+    }
+}
+
+.snip-step__item {
+    background: palette(step, background);
+    border-bottom: $_steps-border;
+    color: palette(step, color);
+    cursor: pointer;
+    display: table;
+    float: left;
+    height: inherit;
+    // [1]
+    user-select: none;
+
+    @supports (display: flex) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    + .snip-step__item {
+        border-left: $_steps-border;
+    }
+
+    &.js-active {
+        background: palette(step, background--active);
+        border-bottom-color: palette(step, background--active);
+        color: palette(step, color--active);
+    }
+
+    &.js-hidden {
+        display: none;
+    }
+
+    @media #{$mq-medium} {
+        justify-content: initial;
+    }
+}
+
+.snip-step__nb {
+    display: table-cell;
+    font-size: fontsize(step, icon) / 1.25;
+    padding: 0 .25em;
+    text-align: center;
+    vertical-align: middle;
+
+    @media #{$mq-medium} {
+        font-size: fontsize(step, icon);
+    }
+}
+
+.snip-step__label {
+    display: none;
+
+    @media #{$mq-medium} {
+        @include font-bold;
+        display: table-cell;
+        font-size: fontsize(step, small);
+        line-height: 16px;
+        padding-right: .5em;
+        text-align: left;
+        text-transform: uppercase;
+        vertical-align: middle;
+        width: 66.666666%;
+    }
+
+    @media #{$mq-large} {
+        padding-right: 1em;
+    }
+}

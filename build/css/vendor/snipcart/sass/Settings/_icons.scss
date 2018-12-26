@@ -1,0 +1,46 @@
+﻿/**
+    ICON
+
+    We use icons font. You can use them with css pseudo elements.
+    You can also use your own icon set. There's many online services to generate your iconfont (fontello, glyphter, icomoon, ...).
+*/
+
+/*------------------------------------*\
+    GLOBAL VARIABLES
+\*------------------------------------*/
+
+$snip-ico__font: "Snipcart";
+
+$snip-ico--credit-cart: "\e805";
+$snip-ico--truck: "\e804";
+$snip-ico--letter: "\e803";
+$snip-ico--receipt: "\e802";
+$snip-ico--checklist: "\e801";
+$snip-ico--basket: "\e800";
+$snip-ico--check: "\e806";
+$snip-ico--close: "\e807";
+
+
+/*------------------------------------*\
+    STYLE
+\*------------------------------------*/
+
+.snip-ico {
+    -webkit-font-smoothing: antialiased;
+    font-family: $snip-ico__font;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1;
+    speak: none;
+    text-transform: none;
+}
+
+.snip-ico--credit-cart:before { content: $snip-ico--credit-cart; }
+.snip-ico--truck:before { content: $snip-ico--truck; }
+.snip-ico--letter:before { content: $snip-ico--letter; }
+.snip-ico--receipt:before { content: $snip-ico--receipt; }
+.snip-ico--checklist:before { content: $snip-ico--checklist; }
+.snip-ico--basket:before { content: $snip-ico--basket; }
+.snip-ico--check:before { content: $snip-ico--check; }
+.snip-ico--close:before { content: $snip-ico--close; }

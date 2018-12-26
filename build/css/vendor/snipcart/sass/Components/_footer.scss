@@ -1,0 +1,36 @@
+﻿/**
+    FOOTER
+
+    Footer container and copyright link
+*/
+
+/*------------------------------------*\
+    LOCAL VARIABLES
+\*------------------------------------*/
+
+$_footer-height: 35px;
+
+
+/*------------------------------------*\
+    STYLE
+\*------------------------------------*/
+
+.snip-footer {
+    background: palette(footer, background);
+    padding: .125em .625em;
+    text-transform: uppercase;
+}
+
+.snip-footer__copyright {
+    background: url('img/lock.png') no-repeat left .3em;
+    color: palette(footer, color);
+    display: inline-block;
+    font-size: fontsize(footer, base);
+    height: $_footer-height;
+    line-height: $_footer-height;
+    padding-left: 3.2em;
+}
+
+.snip-footer__highlight {
+    color: palette(footer, color--highlight);
+}

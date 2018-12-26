@@ -1,0 +1,86 @@
+﻿/**
+    BUTTON
+
+    [1]. Classic gray button
+    [2]. Smaller button for tooltip
+    [3]. Next or validate yellow action button
+    [4]. Position classes: right, left, full size button
+*/
+
+/*------------------------------------*\
+    LOCAL VARIABLES
+\*------------------------------------*/
+
+$_btn-size: 36px;
+
+
+/*------------------------------------*\
+    STYLE
+\*------------------------------------*/
+
+// [1]
+.snip-btn {
+    @include font-bold;
+    background-color: palette(button, background);
+    border-radius: 3px;
+    border: 0;
+    color: palette(button, color);
+    cursor: pointer;
+    display: inline-block;
+    font-size: fontsize(button, base) / 1.2;
+    height: $_btn-size;
+    line-height: $_btn-size;
+    outline: 0;
+    padding: 0 1em;
+    text-transform: uppercase;
+
+    &:hover {
+        background-color: palette(button, background--hover);
+    }
+
+    @media #{$mq-medium} {
+        font-size: fontsize(button, base);
+        padding: 0 2em;
+    }
+}
+
+// [2]
+.snip-btn--small {
+    height: auto;
+    line-height: normal;
+    padding: .417em;
+}
+
+// [3]
+.snip-btn--highlight {
+    background: palette(button, background--highlight);
+    color: palette(button, color--highlight);
+
+    &:hover {
+        background-color: palette(button, background--highlight-hover);
+    }
+}
+
+// [4]
+.snip-btn--left {
+    float: left;
+}
+
+.snip-btn--right {
+    float: right;
+    margin-left: 1em;
+}
+
+.snip-btn--danger {
+    background-color: palette(button, background--danger);
+
+    &:hover {
+        background-color: palette(button, background--danger-hover);
+    }
+}
+
+.snip-btn--full {
+    display: block;
+    margin-top: 1em;
+    text-align: center;
+}

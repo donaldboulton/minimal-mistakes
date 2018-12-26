@@ -1,0 +1,106 @@
+﻿/**
+    RESET
+
+    We reset to default value for each elements used in snipcart.
+    Your style must not impact our style.
+*/
+
+/*------------------------------------*\
+    LOCAL VARIABLES
+\*------------------------------------*/
+
+$_reset-form-transition: border .66s ease;
+$_reset-link-transition: background .33s ease;
+
+
+/*------------------------------------*\
+    STYLE
+\*------------------------------------*/
+
+div,
+span,
+h1,
+h2,
+h3
+h4,
+p,
+a,
+img,
+em,
+small,
+strong,
+ol,
+ul,
+li,
+form,
+label,
+table,
+tbody,
+thead,
+tr,
+th,
+td,
+dl,
+dt,
+dd {
+    border: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+    font: inherit;
+    line-height: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+a,
+button {
+    text-decoration: none;
+    transition: $_reset-link-transition;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th,
+td {
+    vertical-align: middle;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+input,
+select {
+    &:focus,
+    &:hover {
+        box-shadow: none;
+        outline: none;
+    }
+}
+
+input[type=text],
+input[type=password],
+select {
+    background: palette(form, background);
+    border-radius: 3px;
+    border: 1px solid palette(form, border);
+    box-sizing: border-box;
+    color: palette(form, color);
+    display: block;
+    font-size: fontsize(reset, base);
+    height: auto;
+    line-height: 18px;
+    margin: 0;
+    padding: .571em .429em;
+    transition: $_reset-form-transition;
+    width: 100%;
+
+    &:focus,
+    &:hover {
+        border-color: palette(form, border--focus);
+    }
+}

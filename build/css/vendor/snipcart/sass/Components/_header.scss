@@ -1,0 +1,141 @@
+﻿/**
+    HEADER
+
+    Top content for the Cart
+
+    [1]. Connected user welcome message.
+    [2]. If you keep the "js-show" class, title will be displayed on small size when there's no total block.
+*/
+
+/*------------------------------------*\
+    LOCAL VARIABLES
+\*------------------------------------*/
+
+$_header-height: 105px;
+$_header-total-height: 38px;
+
+
+/*------------------------------------*\
+    STYLE
+\*------------------------------------*/
+
+.snip-header {
+    @include font-bold;
+    background: palette(header, background);
+    color: palette(header, color);
+    padding: $padding-small;
+    position: relative;
+    text-align: left;
+    text-transform: uppercase;
+
+    @media #{$mq-medium} {
+        color: palette(header, color);
+        height: $_header-height;
+        padding: 0;
+        text-align: center;
+    }
+}
+
+// [1]
+.snip-header__user {
+    background: palette(header, background--highlight);
+    font-size: fontsize(header, small);
+    padding: .714em 1.429em;
+    text-align: center;
+}
+
+.snip-header__user-text {
+    max-width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: auto;
+}
+
+.snip-header__back {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: flex;
+    background: palette(header, background--highlight);
+    font-size: fontsize(header, small);
+    padding: .714em 1.429em;
+}
+
+.snip-header__back--button {
+  cursor: pointer;
+  cursor: hand;
+  margin: auto;
+}
+
+.snip-header__back--button:hover {
+  color: palette(header, color);
+}
+
+
+.snip-header__user-mail {
+    color: palette(header, color);
+}
+
+.snip-header__title {
+    display: none;
+    font-size: fontsize(header, large) / 2;
+    text-align: center;
+
+    // [2]
+    &.js-show {
+        display: block;
+    }
+
+    @media #{$mq-medium} {
+        display: block;
+        font-size: fontsize(header, large);
+        left: 1.25em;
+        line-height: $_header-height;
+        position: absolute;
+        text-align: left;
+    }
+}
+
+.snip-header__total {
+    background: palette(header, background--highlight);
+    border-radius: 5px;
+    display: inline-block;
+    padding: .5em;
+
+    @media #{$mq-medium} {
+        height: $_header-total-height;
+        line-height: $_header-total-height;
+        margin-top: 2.188em;
+        padding: 0 .625em;
+    }
+}
+
+.snip-header__total-label {
+    color: palette(header, label-color);
+    margin-right: .625em;
+}
+
+.snip-header__continue {
+    display: none;
+
+    @media #{$mq-medium} {
+        &.js-show {
+            display: block;
+            margin-top: -1.5em;
+            position: absolute;
+            right: 1.25em;
+            top: 50%;
+        }
+    }
+}
+
+.snip-header__placeorder {
+    @media #{$mq-medium} {
+            display: block;
+            margin-top: -1.5em;
+            position: absolute;
+            right: 1.25em;
+            top: 50%;
+    }
+}

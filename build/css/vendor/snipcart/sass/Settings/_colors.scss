@@ -1,0 +1,116 @@
+/**
+    COLOR
+
+    Where all color's variables are defined
+
+    Thanks to SASS Map, we can define all colors at one place.
+    We also respect our BEM like notation and files architecture.
+*/
+
+$palettes: (
+    action: (
+        link: #999
+    ),
+    button: (
+        background: #555,
+        background--highlight: #efe778,
+        background--hover: darken(#555, 10%),
+        background--danger: #f10,
+        background--danger-hover: darken(#f10, 10%),
+        background--highlight-hover: darken(#efe778, 10%),
+        color: #fff,
+        color--highlight: #222,
+    ),
+    error: (
+        color: #f10,
+        text-color: #333,
+        text-color--invert: #fff
+    ),
+    badge: (
+        background--success: #76d443,
+        background--error: #f10,
+        background--warn: #efe778,
+        text--success: #333,
+        text--error: #fff,
+        text--warn: #333
+    ),
+    flash: (
+        background--error: #f10,
+        background--success: #76d443,
+        background--warning: #efe778,
+        background--confirm: #222,
+        border: #333,
+        color: #333,
+        color--invert: #fff
+    ),
+    footer: (
+        background: #222,
+        color: #555,
+        color--highlight: #999
+    ),
+    form: (
+        background: #fff,
+        border: #eee,
+        border--focus: #333,
+        color: #555,
+        color--highlight: #333,
+        label-color: #999
+    ),
+    header: (
+        background: #222,
+        background--highlight: #111,
+        color: #fff,
+        label-color: #999
+    ),
+    layout: (
+        background: #fff,
+        border: #eee,
+        close-color: #fff,
+        color: #999,
+        content-background: #f8f8f8,
+        content-border: #bbb,
+        loading-color: #333
+    ),
+    loader: (
+        background: #222,
+        background--highlight: #efe778
+    ),
+    product: (
+        background: #f8f8f8,
+        border: #eee,
+        color--error: #f10,
+        color--highlight: #333
+    ),
+    quantity-trigger: (
+        background: #ccc,
+        background--hover: #efe778,
+        background--disabled: #eee,
+        color: #111,
+        color--disabled: #bbb
+    ),
+    static: (
+        background--highlight: #f8f8f8,
+        border: #eee,
+        color--highlight: #333,
+        color--link: #999
+    ),
+    step: (
+        background: #ccc,
+        background--active: #fff,
+        border: #bbb,
+        color: #999,
+        color--active: #333
+    ),
+    table: (
+        background--highlight: #f8f8f8,
+        border: #eee,
+        color--highlight: #333,
+        color--success: #76d443
+    ),
+    tooltip: (
+        background: #ccc,
+        border: #ccc transparent,
+        label: #555,
+        text: #111
+    )
+);

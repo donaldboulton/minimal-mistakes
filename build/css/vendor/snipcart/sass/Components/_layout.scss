@@ -1,0 +1,82 @@
+﻿/**
+    LAYOUT
+
+    Snipcar main container, basic content container, modal elements, loading screen
+*/
+
+/*------------------------------------*\
+    LOCAL VARIABLES
+\*------------------------------------*/
+
+$_layout-border: 1px solid palette(layout, border);
+
+$_layout-close-font-size: 1.5em;
+
+$_layout-content-border: 1px solid palette(layout, content-border);
+
+
+/*------------------------------------*\
+    STYLE
+\*------------------------------------*/
+
+.snip-layout__main-container {
+    background: palette(layout, background);
+    margin: 0 auto;
+    max-width: 62.25em;
+    position: relative;
+}
+
+.snip-layout__close {
+    color: palette(layout, close-color);
+    font-size: $_layout-close-font-size * 1.2;
+    padding: .333em;
+    padding: 0;
+    position: absolute;
+    right: .417em;
+    top: .1em;
+    z-index: 2;
+
+    @media #{$mq-medium} {
+        font-size: $_layout-close-font-size;
+        top: .208em;
+
+        &.js-hidden {
+            display: none;
+        }
+    }
+}
+
+.snip-layout__loading {
+    @include font-bold;
+    color: palette(layout, loading-color);
+    padding: 5em 0;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: -0.3em;
+
+}
+
+.snip-layout__content {
+    padding: 1em 0;
+
+    @media #{$mq-medium} {
+        padding: 2em 0;
+    }
+}
+
+.snip-layout__content--highlight {
+    background-color: palette(layout, content-background);
+    border-bottom: $_layout-content-border;
+    border-top: $_layout-content-border;
+    padding: 1em 0;
+}
+
+.snip-layout__content--bordered {
+    border-bottom: $_layout-border;
+}
+
+.snip-layout__subtitle {
+    padding: 0 1em;
+    text-transform: uppercase;
+    font-size: 18px;
+}

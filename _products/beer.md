@@ -11,6 +11,7 @@ sidenav: true
 support: [adds, cookies, cart, products]
 classes: product
 permalink: /products/beer/
+includes: /includes/donate_beer.html
 stock:  10
 header:
   image: /assets/images/cart/beer/beer-cover.jpg
@@ -42,5 +43,3 @@ desc: Buy me a beer
 private: false
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_products/feature.md
 ---
-
-{% include donate_beer.html %}

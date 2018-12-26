@@ -1,0 +1,105 @@
+﻿/**
+    SNIPCART V2
+
+    We strongly use BEM methodology
+    Every rule must be written within .snip-layout class, to prevent basic conflict with your css
+    Every class name must be prefix with "snip-"
+
+    IMPORTANT you have to include snipcart's stylesheet AFTER all your stylesheets
+*/
+
+/*------------------------------------*\
+    GLOBAL IMPORTS
+\*------------------------------------*/
+
+// Global mixins, functions
+@import "tools/_mixins.scss";
+
+// Global settings, mostly variables
+@import "settings/_fonts.scss";
+@import "settings/_mediaQueries.scss";
+@import "settings/_colors.scss";
+
+
+/*------------------------------------*\
+    GLOBAL VARIABLES
+\*------------------------------------*/
+
+$padding-small: 1em;
+
+
+/*------------------------------------*\
+    LOCAL VARIABLES
+\*------------------------------------*/
+
+$_base-padding: 1.5em 0;
+
+$_base-z-index: 1040;
+
+
+/*------------------------------------*\
+    STYLE
+\*------------------------------------*/
+
+// Body override
+body.snip-open {
+    height: auto !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+
+    // Fix body scroll and input focus issue in iOS11 Safari
+    @media #{$mq-phone} {
+        position: fixed;
+        width: 100%;
+    }
+}
+
+// Base layout
+.snip-layout {
+    background: rgba(123, 123, 123, .75);
+    bottom: 0;
+    color: palette(layout, color);
+    font-family: $font-base;
+    font-size: fontsize(reset, base);
+    left: 0;
+    line-height: normal;
+    overflow-x: auto;
+    padding: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: $_base-z-index;
+
+    // Compound settings and reset
+    @import "settings/_icons.scss";
+    @import "settings/_reset.scss";
+
+    // components
+    @import "components/_button.scss";
+
+    @import "components/_layout.scss";
+    @import "components/_header.scss";
+    @import "components/_footer.scss";
+
+    @import "components/_action.scss";
+    @import "components/_table.scss";
+    @import "components/_product.scss";
+    @import "components/_quantity-trigger.scss";
+    @import "components/_loader.scss";
+    @import "components/_form.scss";
+    @import "components/_step.scss";
+    @import "components/_cols.scss";
+    @import "components/_error.scss";
+    @import "components/_static.scss";
+    @import "components/_tooltip.scss";
+    @import "components/_flash.scss";
+    @import "components/_discount.scss";
+    @import "components/_badge.scss";
+
+    // Responsive
+    @media #{$mq-large} {
+        font-size: fontsize(reset, large);
+        padding: $_base-padding;
+    }
+}

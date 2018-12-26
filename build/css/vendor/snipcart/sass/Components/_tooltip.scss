@@ -1,0 +1,78 @@
+﻿/**
+    TOOLTIP
+
+    For subscription payment on confirm order view
+
+    [1]. You can choose your own symbol (or even custom icon font) for closed and opened state.
+*/
+
+/*------------------------------------*\
+    LOCAL VARIABLES
+\*------------------------------------*/
+
+$_tooltip-padding: 10px 20px;
+
+// [1]
+$_tooltip-text-closed: "?";
+$_tooltip-text-opened: "-";
+
+
+/*------------------------------------*\
+    STYLE
+\*------------------------------------*/
+
+.snip-tooltip {
+    background-color: palette(tooltip, background);
+    border-radius: 3px;
+    bottom: 100%;
+    display: none;
+    margin-bottom: 15px;
+    padding: $_tooltip-padding;
+    position: absolute;
+    right: 0;
+    text-align: center;
+
+    &:after {
+        border-color: palette(tooltip, border);
+        border-style: solid;
+        border-width: 15px 15px 0;
+        bottom: -15px;
+        content: "";
+        display: block;
+        left: 50%;
+        position: absolute;
+        transform: translateX(-50%);
+        width: 0;
+    }
+}
+
+.snip-tooltip__toggle {
+    &:before {
+        // [1]
+        content: $_tooltip-text-closed;
+        display: block;
+        text-align: center;
+        width: 1.5em;
+    }
+
+    &.js-active {
+        &:before {
+            // [1]
+            content: $_tooltip-text-opened;
+        }
+    }
+}
+
+.snip-tooltip__container {
+    position: relative;
+}
+
+.snip-tooltip__list {
+    color: palette(tooltip, label);
+}
+
+.snip-tooltip__item {
+    @include font-bold;
+    color: palette(tooltip, text);
+    margin-bottom: 5px;
+}

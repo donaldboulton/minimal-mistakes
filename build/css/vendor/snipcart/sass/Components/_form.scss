@@ -1,0 +1,85 @@
+﻿/**
+    FORM
+
+    Form elements, except for basic input and select styling (check _reset.scss).
+    Also form fields errors.
+*/
+
+/*------------------------------------*\
+    LOCAL VARIABLES
+\*------------------------------------*/
+
+$_form-border: 1px solid palette(form, border);
+
+
+/*------------------------------------*\
+    STYLE
+\*------------------------------------*/
+
+.snip-form--small {
+    padding: 2em 15%;
+    text-align: center;
+}
+
+.snip-form--discount {
+    float: right;
+    margin-right: .5em;
+    max-width: 50%;
+
+    @media #{$mq-medium} {
+        margin-right: 1em;
+        max-width: none;
+    }
+}
+
+.snip-form__container {
+    @include clearfix;
+    clear: left;
+
+    + .snip-form__container {
+        margin-top: 1em;
+    }
+}
+
+.snip-form__label {
+    color: palette(form, label-color);
+    display: block;
+    font-size: fontsize(form, small);
+    margin: 0 0 .5em 0;
+    overflow: hidden;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.snip-form__description {
+    margin: 1em 0;
+}
+
+.snip-form__help {
+    @include font-bold;
+    color: palette(form, color--highlight);
+    float: right;
+    font-size: fontsize(form, small);
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.snip-form__select--small {
+    float: left;
+    width: 49%;
+
+    ~ .snip-form__select--small {
+        margin-left: 2%;
+    }
+}
+
+.snip-form__error {
+    background: palette(error, color);
+    border-radius: 3px;
+    color: palette(error, text-color--invert);
+    font-size: fontsize(form, base);
+    padding: .357em;
+    text-align: center;
+}

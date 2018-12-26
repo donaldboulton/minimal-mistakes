@@ -1,0 +1,63 @@
+﻿/**
+    STATIC
+
+    Classic text and content blocks
+*/
+
+/*------------------------------------*\
+    LOCAL VARIABLES
+\*------------------------------------*/
+
+$_static-border: 1px solid palette(static, border);
+
+
+/*------------------------------------*\
+    STYLE
+\*------------------------------------*/
+
+.snip-static {
+    font-size: fontsize(step, base);
+    padding: 1em 15%;
+    text-align: center;
+}
+
+.snip-static--highlight {
+    background: palette(static, background--highlight);
+    border-top: $_static-border;
+}
+
+.snip-static__title {
+    @include font-bold;
+    color: palette(static, color--highlight);
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+.snip-static__title--main {
+    margin: .5em 1.429em 1em;
+}
+
+.snip-static__content {
+    font-size: fontsize(static, small);
+    line-height: 1.6;
+    margin-top: 1em;
+}
+
+.snip-static__item {
+    max-width: 100%;
+
+    ~ .snip-static__item {
+        margin-top: 1.5em;
+    }
+}
+
+.snip-static__link {
+    color: palette(static, color--link);
+    display: inline-block;
+    margin-top: .25em;
+    text-decoration: underline;
+
+    &:hover {
+        color: palette(static, color--highlight);
+    }
+}
