@@ -1538,7 +1538,7 @@ td,th,tr {
 }
 
 .btn--primary:visited {
-  background-color: #00c100;
+  background-color: #037c03;
   color: #fff;
 }
 
@@ -1561,7 +1561,7 @@ td,th,tr {
 .btn--light-outline {
   background-color: transparent;
   color: #fff;
-  border: 1px solid #fff;
+  border: thin solid #434040;
 }
 
 .btn--light-outline:hover {
@@ -1571,7 +1571,7 @@ td,th,tr {
 
 .btn--light-outline:visited {
   background-color: transparent;
-  color: #fff;
+  color: #037c03;
 }
 
 .btn--success {
@@ -1585,7 +1585,7 @@ td,th,tr {
 }
 
 .btn--success:visited {
-  background-color: #00c100;
+  background-color: #037c03;
   color: #fff;
 }
 
@@ -3652,6 +3652,16 @@ ins,u {
 
 .active:after {
   content: "\2796";
+}
+
+.collapsible:before {
+  font-size: 15px;
+  float: left;
+  margin-left: 10px;
+  display: block;
+  color: #fff;
+  text-align: left;
+  top: .6em;
 }
 
 #main {
