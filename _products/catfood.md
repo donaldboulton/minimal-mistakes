@@ -34,9 +34,6 @@ header:
   teaser: /assets/images/cart/covers/cat-foods-320.png
 classes: product
 subtitle: Buy me some cat food
-images:
-  - image: /assets/images/cart/covers/cat-foods.png
-
 variant_name: size
 variants:
   - name: small bag

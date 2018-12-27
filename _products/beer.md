@@ -32,13 +32,13 @@ permalink: /products/beer/
 my_variable: donate_beer.html
 stock:  10
 header:
-  image: /assets/images/cart/cover/beer-cover.jpg
-  teaser: /assets/images/cart/cover/beer-cover-320.jpg
+  image: /assets/images/cart/covers/beer-cover.jpg
+  teaser: /assets/images/cart/covers/beer-cover-320.jpg
 name: beer
 sku: BEER
 product: Beer
 products: true
-image: /assets/images/cart/cover/beer-cover-320.jpg
+image: /assets/images/cart/covers/beer-cover.jpg
 subtitle: Buy me a beer
 variant_name: size
 variants:

@@ -28,10 +28,10 @@ cart: true
 classes: product
 permalink: /products/coffee/
 header:
-  image: /assets/images/cart/coffee/coffee-1200.jpg
-  teaser: /assets/images/cart/coffee/coffee-cover-320.jpg
+  image: /assets/images/covers/coffee-1200.jpg
+  teaser: /assets/images/cart/covers/coffee-cover-320.jpg
 subtitle: Buy me a coffee
-image: /assets/images/cart/coffee/coffee-320.jpg
+image: /assets/images/cart/covers/coffee-320.jpg
 variant_name: size
 variants:
   - name: tall
