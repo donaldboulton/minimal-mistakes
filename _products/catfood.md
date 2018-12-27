@@ -1,6 +1,8 @@
 ---
 title: "Cat Food"
 name: Cat Food
+description_markdown: >-
+  Buy the kittys some cat food. My cats like Blue Wilderness but most of the food I use Is Meow Mix for the stray cats and other critters that show up at feeding time.
 excerpt: "Buy my kitty some cat food."
 sitemap: false
 layout: productdetails
@@ -51,6 +53,12 @@ variants:
   - name: large bag
     price: 29.99
 price: 12.75
+sizes:
+  - Small
+  - Medium
+  - Large
+  - XL
+
 product: catfood
 id: catfood
 folder: _products

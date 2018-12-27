@@ -1,6 +1,8 @@
 ---
 title: Buy a Coffee
 subtitle: Buy me a Coffee
+description_markdown: >-
+  A perfect coffee in the morning absolutely makes my day. Buy me a small one for a good start or a big one to keep going all day!
 name: Cup of Joe
 sku: Coffee
 excerpt: "Buy me a cup of coffee."
@@ -10,7 +12,7 @@ product: Coffee
 support: [adds, cookies, cart, products]
 lightbox: true
 sitemap: false
-author_profile: true
+author_profile: false
 adds: false
 tags:
   - Products
@@ -49,6 +51,12 @@ variants:
   - name: venti
     price: 4.30
 price: 2.50
+sizes:
+  - Small
+  - Medium
+  - Large
+  - XL
+stock: 10
 id: coffee
 folder: _products
 loc: "/coffee"

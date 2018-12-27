@@ -1,6 +1,8 @@
 ---
 title: Feature
 name: Sponsor a Feature
+description_markdown: >-
+  You can sponsor a feature from the 'without plugins' page/library. I will not only give you an honorable mention on the site, but I will also let you suggest some additional functionalities of this feature.
 subtitle: Sponsor a feature
 excerpt: "Sponser Us"
 no_menu_item: true
@@ -10,13 +12,12 @@ classes: product
 products: true
 support: [adds, cookies, cart, products]
 sitemap: false
-author_profile: true
+author_profile: false
 adds: false
 search: true
 comments: true
 sidenav: true
 side_react: true
-lightbox: true
 toc: false
 header:
   image: /assets/images/cart/covers/World Code.jpg
@@ -34,10 +35,11 @@ variant_name: size
 variants:
   - name:
     price: 
-price: 150
+price: 150.00
 folder: _products
 loc: "/feature"
 desc: Sponsor a Feature
+id: sponser
 private: true
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_products/feature.md
 ---

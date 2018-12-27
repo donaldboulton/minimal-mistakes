@@ -1349,4 +1349,36 @@ body.snip-open {
     width: 50%;
     text-align: right;
   }
+
+}
+.styles {
+  width: 100%;
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+.styles .style-picker {
+  z-index: 2;
+  display: block;
+  line-height: 0;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+.styles .style-picker > div {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000;
+  display: inline-block;
+  margin: 0 5px 0 0;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.styles > div + div {
+  display: none;
+}
+.styles i {
+  font-size: 14rem;
+  color: #fff;
 }

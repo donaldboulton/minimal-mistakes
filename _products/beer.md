@@ -4,6 +4,8 @@ name: A Good Beer
 layout: productdetails
 subtitle: Buy me a beer
 excerpt: "Buy me a bottle of Beer."
+description_markdown: >-
+  I like beer a lot! IPA, Guinness, Stout, mico brews… Dead Guy Ale is my favorite but I love to try new ones. Buy me half-a-pint to get going or a pint to get a good buzz.
 sitemap: false
 author_profile: true
 adds: false
@@ -54,6 +56,13 @@ variants:
   - name: pint
     price: 4.25
 price: 2.75
+stock: 10
+sizes:
+  - Small
+  - Medium
+  - Large
+  - XL
+
 folder: _products
 id: feature
 loc: "/beer"

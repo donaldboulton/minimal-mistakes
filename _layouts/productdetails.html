@@ -7,12 +7,19 @@ layout: single
     {{ page.content }}
     <div>
       <button class="snipcart-add-item"
-        data-item-name="{{ page.name }}"
-        data-item-id="{{ page.sku }}"
-        data-item-image="{{ page.image }}"
-        data-item-url="{{ site.baseurl }}"
-        data-item-price="{{ page.price }}">
+        data-item-name="{{ include.product.name }}"
+        data-item-id="{{ include.product.sku }}"
+        data-item-image="{{ include.product.image }}"
+        data-item-description="{{ include.product.description }}"
+        data-item-custom1-name="Size"
+        data-item-custom1-options="{{ include.product.sizes | join: '|' }}"
+        data-item-custom1-value="Medium"
+        data-item-custom2-name="Color"
+        data-item-custom2-options="{{ colors }}"
+        data-item-url="{{ include.product.url }}"
+        data-item-price="{{ include.product.price }}">
         Buy it for $ {{ page.price }}
+        {% if include.text %}{{ include.text }}{% else %}Add to cart{% endif %}
       </button>
     </div>
   </div>
@@ -37,14 +44,32 @@ layout: single
     <input name="options[redirect]" type="hidden" value="{{site.url}}{{site.baseurl}}{{ page.url }}" />
 
     <h4>Add a review</h4>
-    <p><label>Your name: <input type="text" name="fields[name]" /></label></p>
     <div id="fields-review"class="field-group rating-select"><span>Rating:&nbsp;</span><label class="rating-radio-label" for="comment-form[star-1]"> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="1" name="fields[review]" id="comment-form[star-1]" checked=""> <label class="rating-radio-label" for="comment-form[star-2]"> <svg class="icon icon--star_border rating-star rating-radio-star--off"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star_border"></use>star_border</svg> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="2" name="fields[review]" id="comment-form[star-2]"> <label class="rating-radio-label" for="comment-form[star-3]"> <svg class="icon icon--star_border rating-star rating-radio-star--off"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star_border"></use>star_border</svg> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="3" name="fields[review]" id="comment-form[star-3]"> <label class="rating-radio-label" for="comment-form[star-4]"> <svg class="icon icon--star_border rating-star rating-radio-star--off"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star_border"></use>star_border</svg> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="4" name="fields[review]" id="comment-form[star-4]"> <label class="rating-radio-label" for="comment-form[star-5]"> <svg class="icon icon--star_border rating-star rating-radio-star--off"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star_border"></use>star_border</svg> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="5" name="fields[review]" id="comment-form[star-5]"></div>
-    <p>Average:&nbsp;<output for="fields-review" name="result">5</output>/5</p>
-    <p><label>Comment: <input type="text" name="fields[message]" /></label></p>
-    <p><button class="btn btn--primary" type="submit">Save review</button></p>
+    <div>Average:&nbsp;<output for="fields-review" name="result">5</output>/5</div>
+    <div class="form-group">
+      <label class="sr-only" for="name">Your name:</label>
+      <input id="name" type="text" name="fields[name]" required placeholder="Your Name *" />
+    </div>
+    <div class="form-group">
+        <label class="sr-only" for="review-form[email]">Your email</label>
+        <input type="email" id="review-form[email]" name="email" required placeholder="Your Email *"/>
+      </div>
+      <div class="form-group">
+        <label for="review-form[message]">Review Message<abbr class="abbr" title="Required">&nbsp;*</abbr><small>&nbsp;(<a href="https://kramdown.gettalong.org/quickref.html">Markdown</a> is allowed)</small></label>
+        <textarea maxlength="200" name="fields[message]" type="text" rows="6" id="review-form[message]" placeholder="Message * 200 chars" required></textarea>
+      </div>
+    <div class="form-group"><button class="btn btn--primary" type="submit">Save review</button></div>
   </form>
   <ul>
     {% for review in reviews %}
+    <li>
+      <div class="field-group1">
+        <span class="heading">Rating:</span>
+        {% for i in (1..reviewData.review) %}
+          <svg class="icon icon--star rating-star rating-radio-star--on"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'build/icons/' | relative_url }}"></use></svg>
+        {% endfor %}
+      </div>
+    </li>
     <li>
       <b>{{ review.review }}/5</b>  by <b>{{ review.name }}</b> on <i>{{ review.date | date: '%B %d, %Y' }}</i>
       {% if review.message %}
