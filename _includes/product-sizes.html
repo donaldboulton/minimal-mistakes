@@ -1,15 +1,15 @@
-<div class="styles">
-	{% for style in include.product.styles %}
+<div class="sizes">
+	{% for size in product.sizes %}
 		<div class="style" data-item-id="{{ forloop.index }}" {% unless forloop.first %}style="display: none"{% endunless %}>
-			<a href="{{ include.product.url }}">
-				<img src="{{ style.image }}">
+			<a href="{{ product.url }}">
+				<img src="{{ size.image }}">
 			</a>
 		</div>
 	{% endfor %}
 
-	<div class="style-picker">
-		{% for style in include.product.styles %}
-			<div style="background-color: {{ style.color }}" data-item-id="{{ forloop.index }}"></div>
+	<div class="size-picker">
+		{% for size in product.sizes %}
+			<div style="background-color: {{ size.color }}" data-item-id="{{ forloop.index }}"></div>
 		{% endfor %}
 	</div>
 </div>

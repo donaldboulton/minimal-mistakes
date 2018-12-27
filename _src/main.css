@@ -2079,6 +2079,12 @@ td,th,tr {
   display: block;
   list-style-type: none;
   white-space: nowrap;
+}
+
+.masthead__menu-item-font {
+  display: block;
+  list-style-type: none;
+  white-space: nowrap;
   font-family: Kaushan Script,cursive;
 }
 
