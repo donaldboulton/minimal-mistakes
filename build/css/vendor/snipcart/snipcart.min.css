@@ -317,7 +317,7 @@ body.snip-open {
 
 .snip-layout .snip-footer__copyright {
   background: url(img/lock.png) left .3em no-repeat;
-  color: #555;
+  color: rgb(134, 128, 128);
   display: inline-block;
   font-size: 10px;
   height: 35px;
@@ -326,7 +326,7 @@ body.snip-open {
 }
 
 .snip-layout .snip-actions__link,.snip-layout .snip-footer__highlight {
-  color: #999;
+  color: #fff;
 }
 
 .snip-layout .snip-actions {
