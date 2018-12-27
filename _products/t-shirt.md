@@ -32,8 +32,14 @@ image: /assets/images/cart/covers/shirt-320.jpg
 
 variant_name: size
 variants:
-  - name:
-    price: 
+  - name: Small
+    price: 25.70
+  - name: Medium
+    price: 25.70
+  - name: Large
+    price: 25.70
+  - name: X-Large
+    price: 25.70
 garment_type:    
 price: 25.70
 stock: 10
@@ -41,7 +47,7 @@ sizes:
   - Small
   - Medium
   - Large
-  - XL
+  - X-Large
 styles:
   - name: Black
     color: '#000000'
@@ -54,7 +60,7 @@ private: false
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_products/t-shirt.md
 ---
 
-# T Shirts
+{% include donate_t-shirt.html %}
 
 This awesome t-shirt is for sale at [zazzle.com](https://www.zazzle.com/jekyll_t_shirt-235672519224817294). I would really like to have it, but I do not allow myself to spent this much on a single t-shirt. Will you buy me one?
 

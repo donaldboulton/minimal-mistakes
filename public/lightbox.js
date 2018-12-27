@@ -39,20 +39,20 @@ function is_youtubelink(url) {
       });
       //remove the clicked lightbox
       $("body").on("click", ".lightbox", function(event){
-          if($(this).hasClass('gallery')) {
+          if($(this).hasClass('lightbox-gallery')) {
               $(this).remove();
               if($(event.target).attr('id')=='next') {
                   //next item
-                  if($("a.gallery.current").nextAll("a.gallery:first").length) $("a.gallery.current").nextAll("a.gallery:first").click();
-                  else $("a.gallery.current").parent().find("a.gallery").first().click();
+                  if($("a.lightbox-gallery.current").nextAll("a.lightbox-gallery:first").length) $("a.lightbox-gallery.current").nextAll("a.lightbox-gallery:first").click();
+                  else $("a.lightbox-gallery.current").parent().find("a.lightbox-gallery").first().click();
               }
               else if ($(event.target).attr('id')=='prev') {
                   //prev item
-                  if($("a.gallery.current").prevAll("a.gallery:first").length) $("a.gallery.current").prevAll("a.gallery:first").click();
-                  else $("a.gallery.current").parent().find("a.gallery").last().click();
+                  if($("a.lightbox-gallery.current").prevAll("a.lightbox-gallery:first").length) $("a.lightbox-gallery.current").prevAll("a.lightbox-gallery:first").click();
+                  else $("a.lightbox-gallery.current").parent().find("a.lightbox-gallery").last().click();
               }
               else {
-                  $("a.gallery").removeClass('gallery');
+                  $("a.lightbox-gallery").removeClass('lightbox-gallery');
               }
           }
           else $(this).remove();
@@ -84,8 +84,8 @@ function is_youtubelink(url) {
               }
           }
           if(link_elements.length>1) {
-              $('.lightbox').addClass('gallery');
-              $(link_elements).addClass('gallery');
+              $('.lightbox').addClass('lightbox-gallery');
+              $(link_elements).addClass('lightbox-gallery');
           }
       });
   

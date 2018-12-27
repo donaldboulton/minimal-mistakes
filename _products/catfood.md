@@ -46,18 +46,17 @@ classes: product
 subtitle: Buy me some cat food
 variant_name: size
 variants:
-  - name: small bag
-    price: 12.75
-  - name: medium bag
+  - name: small
+    price: 2.75
+  - name: medium
+    price: 9.99
+  - name: large
     price: 19.99
-  - name: large bag
-    price: 29.99
 price: 12.75
 sizes:
   - Small
   - Medium
   - Large
-  - XL
 
 product: catfood
 id: catfood
@@ -67,6 +66,8 @@ desc: Get the Cats some Food
 private: false
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_products/catfood.md
 ---
+
+{% include donate_catfood.html %}
 
 Buy the kittys some cat food. My cats like Blue Wilderness but most of the food I use Is Meow Mix for the stray cats and other critters that show up at feeding time.
 

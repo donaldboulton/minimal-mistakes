@@ -109,11 +109,11 @@ body.snip-open {
 }
 
 .snip-layout input[type=password],.snip-layout input[type=text],.snip-layout select {
-  background: #fff;
+  background: #555;
   border-radius: 3px;
-  border: 1px solid #eee;
+  border: 1px solid #555;
   box-sizing: border-box;
-  color: #555;
+  color: #fff;
   display: block;
   font-size: 14px;
   height: auto;
@@ -156,12 +156,12 @@ body.snip-open {
 }
 
 .snip-layout .snip-btn--highlight {
-  background: #efe778;
+  background-color: #00c100;
   color: #222;
 }
 
 .snip-layout .snip-btn--highlight:hover {
-  background-color: #eadf4a;
+  background-color: #00c100;
 }
 
 .snip-layout .snip-btn--left {
@@ -286,6 +286,7 @@ body.snip-open {
   display: none;
   font-size: 15px;
   text-align: center;
+  font-family: Kaushan Script,cursive;
 }
 
 .snip-layout .snip-header__title.js-show {

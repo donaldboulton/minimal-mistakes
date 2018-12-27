@@ -52,10 +52,9 @@ variants:
     price: 4.30
 price: 2.50
 sizes:
-  - Small
-  - Medium
-  - Large
-  - XL
+  - tall
+  - grande
+  - venti
 stock: 10
 id: coffee
 folder: _products
@@ -64,6 +63,8 @@ desc: Buy me a Coffee
 private: false
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_products/coffee.md
 ---
+
+{% include donate_coffee.html %}
 
 A perfect coffee in the morning absolutely makes my day. Buy me a small one for a good start or a big one to keep going all day!
 

@@ -55,13 +55,14 @@ variants:
     price: 2.75
   - name: pint
     price: 4.25
+  - name: half-gallon
+    price: 10.75
 price: 2.75
 stock: 10
 sizes:
-  - Small
-  - Medium
-  - Large
-  - XL
+  - half-a-pint
+  - pint
+  - pitcher
 
 folder: _products
 id: feature
@@ -70,6 +71,8 @@ desc: Buy me a beer
 private: false
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_products/feature.md
 ---
+
+{% include donate_beer.html %}
 
 I like beer a lot! IPA, Guinness, Stout, mico brews… Dead Guy Ale is my favorite but I love to try new ones. Buy me half-a-pint to get going or a pint to get a good buzz.
 
