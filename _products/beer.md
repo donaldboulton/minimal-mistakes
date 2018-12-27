@@ -29,7 +29,6 @@ cart: true
 support: [adds, cookies, cart, products]
 classes: product
 permalink: /products/beer/
-my_variable: donate_beer.html
 stock:  10
 header:
   image: /assets/images/cart/covers/beer-cover.jpg
@@ -38,7 +37,7 @@ name: beer
 sku: BEER
 product: Beer
 products: true
-image: /assets/images/cart/covers/beer-cover.jpg
+image: /assets/images/cart/covers/beer-cover-320.jpg
 subtitle: Buy me a beer
 variant_name: size
 variants:
