@@ -1,25 +1,29 @@
 ---
 layout: single
 ---
+{% assign colors = "" %}
+{% for style in page.styles %}
+	{% assign colors = colors | append: '|' | append: style.name %}
+{% endfor %}
+{% assign colors = colors | remove_first: '|' %}
 <div class="product-details gallery-2-col">
   <div><img src="{{ page.image }}" alt="{{ page.name }}" class="product-thumbnail"/></div>
   <div class="product-description">  
     {{ page.content }}
     <div>
       <button class="snipcart-add-item"
-        data-item-name="{{ include.product.name }}"
-        data-item-id="{{ include.product.sku }}"
-        data-item-image="{{ include.product.image }}"
-        data-item-description="{{ include.product.description }}"
+        data-item-name="{{ page.name }}"
+        data-item-id="{{ page.sku }}"
+        data-item-image="{{ page.image }}"
+        data-item-description="{{ page.description }}"
         data-item-custom1-name="Size"
-        data-item-custom1-options="{{ include.product.sizes | join: '|' }}"
+        data-item-custom1-options="{{ page.sizes | join: '|' }}"
         data-item-custom1-value="Medium"
         data-item-custom2-name="Color"
         data-item-custom2-options="{{ colors }}"
-        data-item-url="{{ include.product.url }}"
-        data-item-price="{{ include.product.price }}">
-        Buy it for $ {{ page.price }}
-        {% if include.text %}{{ include.text }}{% else %}Add to cart{% endif %}
+        data-item-url="{{ page.url }}"
+        data-item-price="{{ page.price }}">
+        Buy it for $ {{ page.price }} Add to cart
       </button>
     </div>
   </div>

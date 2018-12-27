@@ -32,7 +32,7 @@ products: true
 cart: true
 image: /assets/images/cart/covers/cat-foods-320.jpg
 header:
-  image: /assets/images/cart/covers/cat-foods.png
+  image: /assets/images/cart/covers/cat-foods.jpg
   teaser: /assets/images/cart/covers/cat-foods-320.jpg
 sidebar:
   - title: "Share"
