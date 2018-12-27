@@ -54,4 +54,6 @@ github_editme_path: donaldboulton/DWB/blob/gh-pages/_products/catfood.md
 
 Buy the kittys some cat food. My cats like Blue Wilderness but most of the food I use Is Meow Mix for the stray cats and other critters that show up at feeding time.
 
-{% include links.html %}
+{% include products-image-gallery.html folder="/assets/images/cart/catfood" %}
+
+{% include lightbox.html %}

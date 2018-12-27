@@ -19,11 +19,10 @@ side_react: true
 lightbox: true
 toc: false
 header:
-  image: /assets/images/cart/share/share-cover.jpg
-  teaser: /assets/images/cart/share/share-320.jpg
-image: /assets/images/cart/share/share-800.jpg
-images:
-  - image: /assets/images/cart/share/share-800.jpg
+  image: /assets/images/cart/covers/World Code.jpg
+  teaser: /assets/images/cart/covers/World Code-320.jpg
+image: /assets/images/cart/covers/World Code.jpg
+
 variant_name: size
 variants:
   - name:
@@ -37,3 +36,7 @@ github_editme_path: donaldboulton/DWB/blob/gh-pages/_products/feature.md
 ---
 
 You can sponsor a feature from the 'without plugins' page/library. I will not only give you an honorable mention on the site, but I will also let you suggest some additional functionalities of this feature.
+
+{% include products-image-gallery.html folder="/assets/images/cart/feature" %}
+
+{% include lightbox.html %}

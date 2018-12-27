@@ -2874,7 +2874,7 @@ img.poweredby {
 }
 
 .search__toggle {
-  margin-right: .5em;
+  margin-right: 1em;
   border: 0;
   outline: none;
   color: #fff9fc;
@@ -6234,7 +6234,7 @@ ul li.list-content,ul li.list-month {
   flex-direction: column;
 }
 
-.product-details,.product-reviews {
+.product-reviews {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: row;
