@@ -28,10 +28,17 @@ cart: true
 classes: product
 permalink: /products/coffee/
 header:
-  image: /assets/images/covers/coffee-cover.jpg
+  image: /assets/images/cart/covers/coffee-cover.jpg
   teaser: /assets/images/cart/covers/coffee-320.jpg
 subtitle: Buy me a coffee
 image: /assets/images/cart/covers/coffee-320.jpg
+sidebar:
+  - title: "Share"
+    image: /assets/images/cart/covers/Share-Logo-320.jpg
+    image_alt: "Sharing Hands"
+    text: "Open Source Share"
+  - title: "Share with Cats"
+    text: "Cat food for 20 stray cats in OKC."
 variant_name: size
 variants:
   - name: tall

@@ -12,6 +12,13 @@ classes: product
 header:
   image: /assets/images/cart/covers/view.jpg
   teaser: /assets/images/cart/covers/shirt-320.jpg
+sidebar:
+  - title: "Share"
+    image: /assets/images/cart/covers/Share-Logo-320.jpg
+    image_alt: "Sharing Hands"
+    text: "Open Source Share"
+  - title: "Share with Cats"
+    text: "Cat food for 20 stray cats in OKC."
 layout: productdetails
 products: true
 product: t-shirt
