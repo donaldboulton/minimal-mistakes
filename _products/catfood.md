@@ -28,10 +28,18 @@ share: false
 related: true
 products: true
 cart: true
-image: /assets/images/covers/cat-foods.png
+image: /assets/images/covers/cat-foods-320.png
 header:
-  image: /assets/images/cart/covers/cat-foods.png
+  image: /assets/images/cart/covers/cat-foods.jpg
   teaser: /assets/images/cart/covers/cat-foods-320.png
+sidebar:
+  - title: "Share"
+    image: /assets/images/cart/covers/Share-Logo-320.jpg
+    image_alt: "Sharing Hands"
+    image_class: "author__avatar"
+    text: "Open Source Share"
+  - title: "Share with Cats"
+    text: "Cat food for 20 stray cats in OKC."  
 classes: product
 subtitle: Buy me some cat food
 variant_name: size

@@ -16,6 +16,7 @@ sidebar:
   - title: "Share"
     image: /assets/images/cart/covers/Share-Logo-320.jpg
     image_alt: "Sharing Hands"
+    image_class: "author__avatar"
     text: "Open Source Share"
   - title: "Share with Cats"
     text: "Cat food for 20 stray cats in OKC."
