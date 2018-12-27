@@ -26,7 +26,7 @@ product: t-shirt
 support: [adds, cookies, cart, products]
 lightbox: true
 subtitle: Buy me a t-shirt
-image: /assets/images/cart/covers/view.jpg
+image: /assets/images/cart/covers/shirt-320.jpg
 
 variant_name: size
 variants:
