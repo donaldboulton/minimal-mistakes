@@ -28,10 +28,10 @@ share: false
 related: true
 products: true
 cart: true
-image: /assets/images/covers/cat-foods-320.png
+image: /assets/images/cart/covers/cat-foods-32jpg
 header:
   image: /assets/images/cart/covers/cat-foods.jpg
-  teaser: /assets/images/cart/covers/cat-foods-320.png
+  teaser: /assets/images/cart/covers/cat-foods-320.jpg
 sidebar:
   - title: "Share"
     image: /assets/images/cart/covers/Share-Logo-320.jpg
@@ -63,5 +63,3 @@ github_editme_path: donaldboulton/DWB/blob/gh-pages/_products/catfood.md
 Buy the kittys some cat food. My cats like Blue Wilderness but most of the food I use Is Meow Mix for the stray cats and other critters that show up at feeding time.
 
 {% include products-image-gallery.html folder="/assets/images/cart/catfood" %}
-
-{% include lightbox.html %}

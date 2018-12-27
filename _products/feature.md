@@ -1,6 +1,6 @@
 ---
 title: Feature
-name: Feature
+name: Sponsor a Feature
 subtitle: Sponsor a feature
 excerpt: "Sponser Us"
 no_menu_item: true
@@ -45,5 +45,3 @@ github_editme_path: donaldboulton/DWB/blob/gh-pages/_products/feature.md
 You can sponsor a feature from the 'without plugins' page/library. I will not only give you an honorable mention on the site, but I will also let you suggest some additional functionalities of this feature.
 
 {% include products-image-gallery.html folder="/assets/images/cart/feature" %}
-
-{% include lightbox.html %}
