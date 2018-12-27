@@ -28,14 +28,14 @@ share: false
 related: true
 products: true
 cart: true
-image: /assets/images/cart/catfood/blue-wilderness-320.jpg
+image: /assets/images/covers/cat-foods.png
 header:
-  image: /assets/images/cart/catfood/blue-wilderness.jpg
-  teaser: /assets/images/cart/catfood/blue-wilderness-320.jpg
+  image: /assets/images/cart/covers/cat-foods.png
+  teaser: /assets/images/cart/covers/cat-foods-320.png
 classes: product
 subtitle: Buy me some cat food
 images:
-  - image: /assets/images/cart/catfood/blue-wilderness.jpg
+  - image: /assets/images/cart/covers/cat-foods.png
 
 variant_name: size
 variants:

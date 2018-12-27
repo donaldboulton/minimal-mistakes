@@ -1,6 +1,6 @@
 ---
 title: Beer
-name: Beer
+name: A Good Beer
 layout: productdetails
 subtitle: Buy me a beer
 excerpt: "Buy me a bottle of Beer."
@@ -40,12 +40,6 @@ product: Beer
 products: true
 image: /assets/images/cart/cover/beer-cover-320.jpg
 subtitle: Buy me a beer
-images:
-  - image: /assets/images/cart/beer/5.jpg
-  - image: /assets/images/cart/beer/2.jpg
-  - image: /assets/images/cart/beer/3.jpg
-  - image: /assets/images/cart/beer/4.jpg
-  - image: /assets/images/cart/beer/1.jpg
 variant_name: size
 variants:
   - name: half-a-pint

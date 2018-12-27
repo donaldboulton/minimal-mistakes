@@ -1,7 +1,7 @@
 ---
 title: Buy a Coffee
 subtitle: Buy me a Coffee
-name: Coffee
+name: Cup of Joe
 sku: Coffee
 excerpt: "Buy me a cup of coffee."
 layout: productdetails
@@ -32,12 +32,6 @@ header:
   teaser: /assets/images/cart/coffee/coffee-cover-320.jpg
 subtitle: Buy me a coffee
 image: /assets/images/cart/coffee/coffee-320.jpg
-images:
-  - image: /assets/images/cart/coffee/1.jpg
-  - image: /assets/images/cart/coffee/2.jpg
-  - image: /assets/images/cart/coffee/3.jpg
-  - image: /assets/images/cart/coffee/4.jpg
-  - image: /assets/images/cart/coffee/5.jpg
 variant_name: size
 variants:
   - name: tall

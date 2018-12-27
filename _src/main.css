@@ -6263,6 +6263,15 @@ ul li.list-content,ul li.list-month {
   padding: .5em 1em;
 }
 
+.product-thumbnail {
+  background: rgba(102,51,153, 0.3);
+  border: 1px solid rebeccapurple;
+  border-radius: 50%;
+  padding: 1em;
+  height: 320px;
+  width: 320px;
+}
+
 .checkbox_wrapper {
   cursor: pointer;
   height: 50px;
