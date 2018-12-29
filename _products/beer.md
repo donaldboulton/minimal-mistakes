@@ -74,6 +74,4 @@ github_editme_path: donaldboulton/DWB/blob/gh-pages/_products/feature.md
 
 {% include donate_beer.html %}
 
-I like beer a lot! IPA, Guinness, Stout, mico brews… Dead Guy Ale is my favorite but I love to try new ones. Buy me half-a-pint to get going or a pint to get a good buzz.
-
 {% include products-image-gallery.html folder="/assets/images/cart/beer" %}

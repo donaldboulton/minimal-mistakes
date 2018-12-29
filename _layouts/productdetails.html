@@ -7,16 +7,16 @@ layout: single
 	{% assign colors = colors | append: '|' | append: style.name %}
 {% endfor %}
 {% assign colors = colors | remove_first: '|' %}
-<div id="add" class="product-details gallery-2-col">
-    {% include product-sizes.html product=page %}
+<div id="add" class="product-details gallery-2-col">    
   <div><img src="{{ page.image }}" alt="{{ page.name }}" class="product-thumbnail"/></div>
-  <p>{{ page.name }}</p>
   <div class="product-description">  
       {{ page.description_markdown | markdownify }}
-      {{ content }}
   </div>
-  <h4>${{ page.price }}</h4>
-  <div class="button">{% include snipcart-button.html product=page %}</div>
+  <div>{% include product-sizes.html product=page %}</div>
+  <div>
+    <h4>${{ page.price }}</h4>
+    <div class="button">{% include snipcart-button.html product=page %}</div>
+  </div>
 </div>
 <div class=clear-both></div>
 <div class="product-reviews">
@@ -56,8 +56,8 @@ layout: single
             <input type="text" id="review-form[title]" name="title" required placeholder="Review Title *"/>
           </div>
       <div class="form-group">
-        <label for="review-form[message]">Review Message<abbr class="abbr" title="Required">&nbsp;*</abbr><small>&nbsp;(<a href="https://kramdown.gettalong.org/quickref.html">Markdown</a> is allowed)</small></label>
-        <textarea maxlength="200" name="fields[message]" type="text" rows="6" id="review-form[message]" placeholder="Message * 200 chars" required></textarea>
+        <label for="review-form[description]">Review Description<abbr class="abbr" title="Required">&nbsp;*</abbr><small>&nbsp;(<a href="https://kramdown.gettalong.org/quickref.html">Markdown</a> is allowed)</small></label>
+        <textarea maxlength="200" name="fields[description]" type="text" rows="6" id="review-form[description]" placeholder="Message * 200 chars" required></textarea>
       </div>
       <div>Please Agree to Our <a href="https://donboulton.com/terms">Terms and Conditions</a>&nbsp;<abbr class="abbr" title="Required">&nbsp;*&nbsp;</abbr></div>
       <div class="enable-push">
