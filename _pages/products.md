@@ -1,5 +1,5 @@
 ---
-layout: products
+layout: single
 permalink: /products/
 title: Products
 date: 2018-11-01 16:18:01 -0600
@@ -49,5 +49,5 @@ github_editme_path: donaldboulton/DWB/blob/gh-pages/products/index.html
 ---
 
 {% for product in site.products %}
-  {% include product.html %}
+  {% include products.html %}
 {% endfor %}
