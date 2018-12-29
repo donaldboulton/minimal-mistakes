@@ -1,17 +1,18 @@
-<div class="product">
-
-  <a class="product" href="{{ site.baseurl }}{{ product.url }}">
-    <img src="{{ product.image }}" alt="{{ product.name }}" class="products-thumbnail"/>
-    <p>{{ product.name }}</p>
-  </a>
-
-  <button class="snipcart-add-item"
-    data-item-name="{{ product.name }}"
-    data-item-id="{{ product.sku }}"
-    data-item-image="{{ product.image }}"
-    data-item-url="{{ site.baseurl }}"
-    data-item-price="{{ product.price }}">
-    Buy it for {{ product.price }} $
-  </button>
-
+<div itemscope itemtype="http://schema.org/ItemList">
+  {% assign items = site.products | sort: 'price' %}
+  {% for product in products %}
+  {% assign price_split = product.price | round: 2 | split: "." %}
+  {% assign integral = price_split[0] %}
+  {% assign fractional = price_split[1] | append: "00" | truncate: 2, "" %}
+  {% if fractional == '00' %}{% assign fractional = '-' %}{% endif %}
+  <span itemprop="numberOfItems">6</span>
+  <div itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+    <a class="product" itemprop="url" href="{{ site.baseurl }}{{ product.url }}" {% if product.inactive %}style="color: #000; text-decoration: none; cursor: text;"{% endif %}>
+      <img itemprop="image" src="{{ product.image }}" alt="{{ product.name }}" class="products-thumbnail"/>
+    <h3>{{ product.name }}</h3>
+    {{ product.subtitle }}<br />
+    {% if product.price > 0 %}&dollar; {{ integral }}.{{ fractional }}{% else %}free{% endif %}<br />&nbsp;
+    </a>
+  </div>
+  {% endfor %}
 </div>

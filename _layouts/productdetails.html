@@ -1,32 +1,22 @@
 ---
 layout: single
 ---
+
 {% assign colors = "" %}
 {% for style in page.styles %}
 	{% assign colors = colors | append: '|' | append: style.name %}
 {% endfor %}
 {% assign colors = colors | remove_first: '|' %}
-<div class="product-details gallery-2-col">
+<div id="add" class="product-details gallery-2-col">
+    {% include product-sizes.html product=page %}
   <div><img src="{{ page.image }}" alt="{{ page.name }}" class="product-thumbnail"/></div>
+  <p>{{ page.name }}</p>
   <div class="product-description">  
-    {{ page.content }}
-    <div>
-      <button class="snipcart-add-item"
-        data-item-name="{{ page.name }}"
-        data-item-id="{{ page.sku }}"
-        data-item-image="{{ page.image }}"
-        data-item-description="{{ page.description }}"
-        data-item-custom1-name="Size"
-        data-item-custom1-options="{{ page.sizes | join: '|' }}"
-        data-item-custom1-value="Medium"
-        data-item-custom2-name="Color"
-        data-item-custom2-options="{{ colors }}"
-        data-item-url="{{ page.url }}"
-        data-item-price="{{ page.price }}">
-        Add to cart
-      </button>
-    </div>
+      {{ page.description_markdown | markdownify }}
+      {{ content }}
   </div>
+  <h4>${{ page.price }}</h4>
+  <div class="button">{% include snipcart-button.html product=page %}</div>
 </div>
 <div class=clear-both></div>
 <div class="product-reviews">
@@ -46,7 +36,6 @@ layout: single
   <form class="js-form form" method="POST" action="https://api.staticman.net/v2/entry/donaldboulton/DWB/gh-pages/reviews" oninput="result.value=parseInt(this['fields[review]'].value)">
     <input name="fields[product]" type="hidden" value="{{ page.slug }}" />
     <input name="options[redirect]" type="hidden" value="{{site.url}}{{site.baseurl}}{{ page.url }}" />
-
     <h4>Add a review</h4>
     <div id="fields-review"class="field-group rating-select"><span>Rating:&nbsp;</span><label class="rating-radio-label" for="comment-form[star-1]"> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="1" name="fields[review]" id="comment-form[star-1]" checked=""> <label class="rating-radio-label" for="comment-form[star-2]"> <svg class="icon icon--star_border rating-star rating-radio-star--off"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star_border"></use>star_border</svg> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="2" name="fields[review]" id="comment-form[star-2]"> <label class="rating-radio-label" for="comment-form[star-3]"> <svg class="icon icon--star_border rating-star rating-radio-star--off"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star_border"></use>star_border</svg> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="3" name="fields[review]" id="comment-form[star-3]"> <label class="rating-radio-label" for="comment-form[star-4]"> <svg class="icon icon--star_border rating-star rating-radio-star--off"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star_border"></use>star_border</svg> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="4" name="fields[review]" id="comment-form[star-4]"> <label class="rating-radio-label" for="comment-form[star-5]"> <svg class="icon icon--star_border rating-star rating-radio-star--off"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star_border"></use>star_border</svg> <svg class="icon icon--star rating-star rating-radio-star--on"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/build/icons/icons.svg#icon-star"></use>star</svg> </label> <input class="rating-radio" type="radio" value="5" name="fields[review]" id="comment-form[star-5]"></div>
     <div>Average:&nbsp;<output for="fields-review" name="result">5</output>/5</div>
@@ -59,29 +48,96 @@ layout: single
         <input type="email" id="review-form[email]" name="email" required placeholder="Your Email *"/>
       </div>
       <div class="form-group">
+          <label class="sr-only" for="review-form[url]"><strong>Website</strong> <small>(optional)</small></label>
+          <input type="url" id="review-form[url]" name="url" placeholder="Website (optional)"/>
+        </div>
+        <div class="form-group">
+            <label class="sr-only" for="review-form[title]">Review Title</label>
+            <input type="text" id="review-form[title]" name="title" required placeholder="Review Title *"/>
+          </div>
+      <div class="form-group">
         <label for="review-form[message]">Review Message<abbr class="abbr" title="Required">&nbsp;*</abbr><small>&nbsp;(<a href="https://kramdown.gettalong.org/quickref.html">Markdown</a> is allowed)</small></label>
         <textarea maxlength="200" name="fields[message]" type="text" rows="6" id="review-form[message]" placeholder="Message * 200 chars" required></textarea>
       </div>
+      <div>Please Agree to Our <a href="https://donboulton.com/terms">Terms and Conditions</a>&nbsp;<abbr class="abbr" title="Required">&nbsp;*&nbsp;</abbr></div>
+      <div class="enable-push">
+        <div class="toggle-switch">
+          <input aria-label="Terms and Conditions" id="field_terms_review" name="field_terms_review" value="field_terms_review" type="checkbox" />
+          <label for="field_terms_review"></label>
+        </div>
+      </div>
     <div class="form-group"><button class="btn btn--primary" type="submit">Save review</button></div>
   </form>
+  <article itemscope itemtype="https://schema.org/Review" class="gallery-item">
   <ul>
     {% for review in reviews %}
     <li>
-      <div class="field-group1">
+      <div class="group field-group1" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+        <div><span class="item-reviewed">Item Reviewed</span></div>
+        <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Thing">
+            <span itemprop="name">{{ review.product | strip_html }}</span>
+        </div>
+        <div class="review__date">
+            {% if review.date %}
+            {% if review.index %}<a href="#review{{ review.index }}" itemprop="url">{% endif %}
+                <span class="heading">Dated:&nbsp;</span><time datetime="{{ review.date | date_to_xmlschema }}" itemprop="datePublished">{{ review.date | date: "%B %d, %Y at %I:%M %p" }}</time>
+            {% if review.index %}</a>{% endif %}
+            {% endif %}
+        </div>
+        <div class="group" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
         <span class="heading">Rating:</span>
-        {% for i in (1..reviewData.review) %}
+        {% for i in (1..review.review) %}
           <svg class="icon icon--star rating-star rating-radio-star--on"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'build/icons/' | relative_url }}"></use></svg>
         {% endfor %}
+        </div>
       </div>
+      <meta type="hidden" itemprop="ratingValue" content="{{ reviewData.review }}">
     </li>
     <li>
-      <b>{{ review.review }}/5</b>  by <b>{{ review.name }}</b> on <i>{{ review.date | date: '%B %d, %Y' }}</i>
+        <div itemprop="author" class="review-author" itemscope itemtype="https://schema.org/Person">
+          <div class="heading">Author</div>
+            <img itemprop="image" avatar="{{ review.name }}" alt="{{ review.name }}" class="review-avatar-image text-left" />
+            {% unless review.url == blank %}
+            <small><span class="review-author-name">
+              <span itemprop="url">
+                <a rel="noreferrer" title="{{ review.name | strip_html }}" href="{{ review.url }}"></span>
+                  <span itemprop="name">{{ review.name | strip_html }}</span>
+                </a>
+              {% else %}
+                {{ review.name | strip_html }}
+              {% endunless %}
+            </span></small>
+        </div>
+        <div class="entry-meta" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+        <div>{{ review.review }}/5</div>
+        {% assign reviews = page.reviews | where:'product',page.slug %}
+        {% assign reviewCount = reviews | size %}
+        {% assign sum = 0 %}
+        {% for review in reviews %}
+          {% assign sum = sum | plus: review.review %}
+        {% endfor %}
+        <span class="byline-item text-right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="icon rating-star"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"/></svg>&nbsp;Page Rating
+          {% if reviewCount > 0 %}
+            {% assign sum = sum | divided_by:reviewCount %}
+            (&nbsp;Average:&nbsp;<span itemprop="ratingValue">{{ sum | round: 1 }}&nbsp;</span>)
+          {% elsif page.reviews | where:'product',page.slug.reviewCount.size > 0 %} 0 {% else %}
+          {% endif %}
+        </span>
+      </div>
+     </li>
+     <li>
       {% if review.message %}
-      <p>
+      <div itemprop="reviewBody"> 
         {{review.message}}
-      </p>
+      </div>
       {% endif %}
     </li>
     {% endfor %}
   </ul>
+  <span style="display: none;" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+    <meta class="hidden" itemprop="name" content="donboulton.com">
+  </span>
+  <meta itemprop="url" type="hidden" value="{{ page.url | absolute_url }}">
+  <input type="hidden" name="options[parent]" value="{{ page.url | absolute_url }}">
+  </article>
 </div>

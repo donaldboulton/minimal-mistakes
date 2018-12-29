@@ -18,11 +18,12 @@ layout: none
       APIUrl: "https://donboulton.com/.netlify/identity"
     });
   }</script>
+  <title>Content Manager</title>
 </head>
 
 <body id="style-3" class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %} auth-false" itemscope itemtype="https://schema.org/WebPage">
 <div class="page">
-<script src="https://cdn.jsdelivr.net/npm/netlify-cms@2.3.0/dist/netlify-cms.js"></script>
+  <script src="./main-6e867e5f1bff2834a633.bundle.js"></script>
 
 <script>
   CMS.registerEditorComponent({
@@ -51,8 +52,7 @@ layout: none
         '<img src="https://www.w3.org/2000/svgimg.youtube.com/vi/' + obj.id + '/maxresdefault.jpg" alt="Youtube Video"/>'
       );
     }
-  });
-  </script>
+  });</script>
 </div>
 <script charset="utf-8" src="//ucarecdn.com/libs/widget/3.6.1/uploadcare.full.min.js"></script>
 <script>

@@ -218,7 +218,10 @@ backend:
 extlinks:
   attributes: {rel: noreferrer, target: _blank}
   rel_exclude: ['facebook.com', 'twitter.com']
-
+snipcart_key: "NDhkOWU1ZGQtNWQyZi00ZDVmLThmYmEtZDFiYmJhYzdmYTE3NjM2NjE0Nzc1OTQ2NzMzMTU5"
+garment_types:
+  - hat
+  - shirt
 strict_front_matter      : true
 
 # Reading Files

@@ -2,7 +2,7 @@
   <button class="collapsible btn btn--light-outline full-width">Reviews&nbsp;&rarr;</button>    
   <div class="content">
    <div id="reviews" class="entry-reviews">
-    {% if page.reviews == true and site.data.reviews | where:'product',page.slug.size > 1 %}
+    {% if page.reviews == true and page.data.reviews | where:'product',page.slug.size > 1 %}
     {% assign reviews = site.data.reviews | where:'product',page.slug %}
     {% assign reviews = site.data.reviews | sort %}
     <header class="section-title">
@@ -34,7 +34,7 @@
     						<svg class="icon icon--star rating-star rating-radio-star--on"><use xlink:href="{{ 'icons.svg#icon-star' | prepend: 'build/icons/' | relative_url }}"></use></svg>
               {% endfor %}
             </div>
-            {% assign reviews = site.data.reviews | where:'product',page.slug %}
+            {% assign reviews = page.data.reviews | where:'product',page.slug %}
             {% assign reviewCount = reviews | size %}
             {% assign sum = 0 %}
             {% for review in reviews %}
@@ -45,7 +45,7 @@
                 {% if reviewCount > 0 %}
                   {% assign sum = sum | divided_by:reviewCount %}
                   (&nbsp;Average:&nbsp;<span>{{ sum | round: 1 }}&nbsp;</span>)
-                {% elsif site.data.reviews | where:'product',page.slug.reviewCount.size > 0 %} 0 {% else %}
+                {% elsif page.data.reviews | where:'product',page.slug.reviewCount.size > 0 %} 0 {% else %}
                 {% endif %}
               </span>
               <meta type="hidden" itemprop="ratingValue" content="{{ reviewData.review }}">

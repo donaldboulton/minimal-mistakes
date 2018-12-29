@@ -455,7 +455,7 @@ body.snip-open {
 
 .snip-layout .snip-table__cell--highlight {
   font-weight: 700;
-  color: #333;
+  color: #ccc;
 }
 
 .snip-layout .snip-table__cell--success {
@@ -504,7 +504,7 @@ body.snip-open {
 
 .snip-layout .snip-product__name {
   font-weight: 700;
-  color: #333;
+  color: #ccc;
   font-size: 1.125em;
   overflow: hidden;
   text-transform: uppercase;
@@ -559,10 +559,11 @@ body.snip-open {
 .snip-layout .snip-quantity-trigger__text {
   float: left;
   padding: 0 .313em;
+  color: #fff;
 }
 
 .snip-layout .snip-quantity-trigger__btn--duplicate {
-  background-color: #efe778;
+  background-color: #343434;
   border-radius: 30px;
   display: -webkit-box;
   display: flex;
@@ -1381,5 +1382,109 @@ body.snip-open {
 }
 .styles i {
   font-size: 14rem;
+  color: #fff;
+}
+
+.styles {
+  width: 100%;
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+.styles .style-picker {
+  z-index: 2;
+  display: block;
+  line-height: 0;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+.styles .style-picker > div {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000;
+  display: inline-block;
+  margin: 0 5px 0 0;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.styles > div + div {
+  display: none;
+}
+.styles i {
+  font-size: 14rem;
+  color: #fff;
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -40px;
+}
+.product-container .styles {
+  width: auto;
+  flex: 1 1 300px;
+  margin-left: 40px;
+}
+.product-container .product-details {
+  flex: 2 1 500px;
+  text-align: left;
+  margin-left: 40px;
+}
+.product-container .product-details h4 {
+  color: #fff;
+}
+.product-container form {
+  border: 1px solid #444;
+  padding: 20px;
+  border-radius: 2px;
+}
+.product-container form label:first-child {
+  margin-top: 0;
+}
+
+.product-list {
+  display: flex;
+  flex-flow: wrap;
+  margin: 0 -20px;
+}
+.product-list, .product-list > li {
+  list-style: none;
+  padding: 0;
+}
+.product-list > li {
+  flex: 1 1 300px;
+}
+.product-list > li:not(:empty) {
+  margin: 20px;
+}
+.product-list h4 {
+  margin: 10px 0 0 0;
+  padding-right: 100px;
+}
+.product-list p {
+  line-height: 1;
+  margin: 10px 0 0 0;
+}
+.product-list .product-description p {
+  font-size: 1.1rem;
+}
+.product-list {
+  -webkit-appearance: none;
+  color: #fff;
+  text-decoration: none;
+  border: 3px;
+  background: none;
+  font-weight: bold;
+  font-size: 1.2em;
+  padding: 10px 15px 15px;
+  float: right;
+  cursor: pointer;
+  line-height: 1;
+  margin-top: 10px;
+}
+.product-list .snipcart-add-item:hover {
+  background: #066b13;
   color: #fff;
 }
