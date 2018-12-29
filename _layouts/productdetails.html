@@ -120,7 +120,7 @@ layout: single
           {% if reviewCount > 0 %}
             {% assign sum = sum | divided_by:reviewCount %}
             (&nbsp;Average:&nbsp;<span itemprop="ratingValue">{{ sum | round: 1 }}&nbsp;</span>)
-          {% elsif page.reviews | where:'product',page.slug.reviewCount.size > 0 %} 0 {% else %}
+          {% elsif page.reviews | where:'product', page.slug.reviewCount.size > 0 %} 0 {% else %}
           {% endif %}
         </span>
       </div>
