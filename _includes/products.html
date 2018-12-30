@@ -1,25 +1,28 @@
 <div class="content" id="products">
-	<section>
+		{% assign items = site.products | sort: 'price' %}
+		{% for product in products %}
+		{% assign price_split = product.price | round: 2 | split: "." %}
+		{% assign integral = price_split[0] %}
+		{% assign fractional = price_split[1] | append: "00" | truncate: 2, "" %}
+		{% if fractional == '00' %}{% assign fractional = '-' %}{% endif %}
 		<div class="container">
 			<p class="editor-link" style="text-align: center;"><a href="donboulton:collections/_products" class="btn"><strong>&#9998;</strong> Manage products</a></p>
-			<ul class="product-list gallery-2-col">
+			<p><span itemprop="numberOfItems">6</span></p>
+			<div class="product-list gallery-2-col">
 				{% for product in site.products %}
-					<li>
+					<div><a href="{{ product.url }}"><img itemprop="image" src="{{ product.image }}" alt="{{ product.name }}" class="products-thumbnail"/></a></div>
                         {% include product-styles.html product=product %}
-                        {% include product-sizes.html product=product %}
 						<div class="product-details">
 							<h4><a href="{{ product.url }}">{{ product.name }}</a></h4>
+							{{ product.subtitle }}<br />
+							{% if product.price > 0 %}&dollar; {{ integral }}.{{ fractional }}{% else %}free{% endif %}<br />&nbsp;
 							<div class="product-description">
-								{{ product.description_markdown | truncate: 45 | markdownify }}
-							</div>
-							<p>${{ product.price }}</p>
+								{{ product.description_markdown | truncate: 45 | markdownify }}							
+							    <p>${{ product.price }}</p>
+					        </div>
 						</div>
-					</li>
+					</div>
 				{% endfor %}
-				<li></li>
-				<li></li>
-				<li></li>
-			</ul>
+			</div>
 		</div>
-	</section>
 </div>
