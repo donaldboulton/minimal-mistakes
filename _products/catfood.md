@@ -1,9 +1,9 @@
 ---
 title: "Cat Food"
-name: Cat Food
+name: Buy Me Some Cat Food
 description_markdown: >-
   Buy the kittys some cat food. My cats like Blue Wilderness but most of the food I use Is Meow Mix for the stray cats and other critters that show up at feeding time.
-excerpt: "Buy my kitty some cat food."
+excerpt: "Buy my kitty's some cat food."
 sitemap: false
 layout: productdetails
 permalink: /products/catfood/
@@ -71,7 +71,5 @@ github_editme_path: donaldboulton/DWB/blob/gh-pages/_products/catfood.md
 ---
 
 {% include donate_catfood.html %}
-
-Buy the kittys some cat food. My cats like Blue Wilderness but most of the food I use Is Meow Mix for the stray cats and other critters that show up at feeding time.
 
 {% include products-image-gallery.html folder="/assets/images/cart/catfood" %}

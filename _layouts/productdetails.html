@@ -16,7 +16,16 @@ layout: single
   <div>{% include product-sizes.html product=page %}</div>
   <div>
     <h4>${{ page.price }}</h4>
-    <div class="button">{% include snipcart-button.html product=page %}</div>
+    <div>
+      <button class="snipcart-add-item"
+      data-item-name="{{ product.name }}"
+      data-item-id="{{ product.sku }}"
+      data-item-image="{{ product.image }}"
+      data-item-url="{{ site.baseurl }}"
+      data-item-price="{{ product.price }}">
+      Buy it for {{ product.price }} $
+      </button>
+    </div>
   </div>
 </div>
 <div class=clear-both></div>

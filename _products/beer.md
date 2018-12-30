@@ -1,11 +1,11 @@
 ---
 title: Beer
-name: A Good Beer
+name: Buy Me A Beer
 layout: productdetails
 subtitle: Buy me a beer
 excerpt: "Buy me a bottle of Beer."
 description_markdown: >-
-  I like beer a lot! IPA, Guinness, Stout, mico brews… Dead Guy Ale is my favorite but I love to try new ones. Buy me half-a-pint to get going or a pint to get a good buzz.
+  I like beer a lot! IPA, Guinness, Stout, micro brews… Dead Guy Ale is my favorite but I love to try new ones. Buy me half-a-pint to get going or a pint to get a good buzz.
 sitemap: false
 author_profile: true
 adds: false

@@ -1,8 +1,8 @@
 ---
 title: Buy a Weed
-subtitle: Buy me a Weed
+subtitle: Buy me some Weed
 description_markdown: >-
-   Share a big fatty blunt to puff on while I get lost in my digital box.
+   All products are just for testing. Share a big fatty blunt to puff on while I get lost in my digital box. Gods gift to man, it was made illegal because of its mind expanding and healing ability. A little weed every day to keep the doctor away. Had stage 4 liver destruction for 20 years how do you think I am still alive.
 name: Some smoke
 sku: Weed
 excerpt: "Buy me some Weed."
@@ -69,7 +69,5 @@ github_editme_path: donaldboulton/DWB/blob/gh-pages/_products/weed.md
 ---
 
 {% include donate_weed.html %}
-
-A perfect weed in the morning absolutely makes my day. Buy me a small one for a good start or a big one to keep going all day!
 
 {% include products-image-gallery.html folder="/assets/images/cart/weed" %}
