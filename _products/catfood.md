@@ -74,6 +74,4 @@ private: false
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_products/catfood.md
 ---
 
-{% include donate_catfood.html %}
-
 {% include products-image-gallery.html folder="/assets/images/cart/catfood" %}

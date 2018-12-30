@@ -27,6 +27,7 @@ reviews: false
 share: false
 related: true
 cart: true
+side_react: true
 classes: product
 permalink: /products/coffee/
 header:
@@ -67,7 +68,5 @@ desc: Buy me a Coffee
 private: false
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_products/coffee.md
 ---
-
-{% include donate_coffee.html %}
 
 {% include products-image-gallery.html folder="/assets/images/cart/coffee" %}

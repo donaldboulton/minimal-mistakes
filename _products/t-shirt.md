@@ -7,7 +7,9 @@ excerpt: "Buy me a Jekyll T Shirt."
 permalink: /products/t-shirt/
 no_menu_item: true
 sitemap: false
+side_react: true
 comments: false
+side_react: true
 adds: false
 sidenav: true
 classes: product
@@ -63,7 +65,5 @@ desc: Buy me a T-Shirt
 private: false
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_products/t-shirt.md
 ---
-
-{% include donate_t-shirt.html %}
 
 {% include products-image-gallery.html folder="/assets/images/cart/t-shirt" %}

@@ -44,6 +44,4 @@ private: true
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_products/feature.md
 ---
 
-{% include donate_feature.html %}
-
 {% include products-image-gallery.html folder="/assets/images/cart/feature" %}

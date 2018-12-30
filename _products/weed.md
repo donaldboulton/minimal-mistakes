@@ -25,6 +25,7 @@ comments: false
 reviews: false
 share: false
 related: true
+side_react: true
 cart: true
 classes: product
 permalink: /products/weed/

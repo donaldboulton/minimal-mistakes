@@ -7,6 +7,10 @@ a {
   color: #841617!important;
 }
 
+.becca-purple {
+  color: #663399;
+}
+
 .full-width{
   width: 100%;
 }
@@ -4787,7 +4791,8 @@ ul li.list-content,ul li.list-month {
 @media (min-width:64em) {
   .author__avatar img {
     padding: 5px;
-    border: 1px solid #434040;
+    background: rgba(102,51,153,.3);
+    border: 1px solid #639;
   }
 }
 
