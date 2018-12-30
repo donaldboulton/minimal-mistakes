@@ -30,10 +30,10 @@ share: false
 related: true
 products: true
 cart: true
-image: /assets/images/cart/covers/cat-foods-320.jpg
+image: /assets/images/cart/covers/blue-wilderness-320.jpg
 header:
   image: /assets/images/cart/covers/cat-foods.jpg
-  teaser: /assets/images/cart/covers/cat-foods-320.jpg
+  teaser: /assets/images/cart/covers/blue-wilderness-320.jpg
 sidebar:
   - title: "Share"
     image: /assets/images/cart/covers/Share-Logo-320.jpg
@@ -52,15 +52,19 @@ variants:
     price: 9.99
   - name: large
     price: 19.99
-price: 12.75
+garment_type:
+price: '12.75'
 sizes:
   - Small
   - Medium
   - Large
 styles:
-  - name: Black
-    color: '#1d1d1d'
-    image:  /assets/images/cart/covers/cat-foods-320.jpg
+  - name: Blue
+    color: '#0000FF'
+    image:  /assets/images/cart/covers/blue-wilderness-320.jpg
+  - name: Meow Mix
+    color: '#ffff00'
+    image:  /assets/images/cart/covers/blue-wilderness-320.jpg
 product: catfood
 id: catfood
 folder: _products

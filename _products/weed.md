@@ -4,7 +4,6 @@ subtitle: Buy me some Weed
 description_markdown: >-
    All products are just for testing. Share a big fatty blunt to puff on while I get lost in my digital box. Gods gift to man, it was made illegal because of its mind expanding and healing ability. A little weed every day to keep the doctor away. Had stage 4 liver destruction for 20 years how do you think I am still alive.
 name: Some smoke
-sku: Weed
 excerpt: "Buy me some Weed."
 layout: productdetails
 products: true
@@ -50,15 +49,21 @@ variants:
     price: 20.00
   - name: ounce
     price: 400.00
-price: 2.50
+garment_type:
+price: '2.50'
+sku: Weed
 sizes:
   - joint
   - gram
   - ounce
 styles:
-  - name: Black
-    color: '#000000'
+  - name: Gold
+    color: '#ffd700'
     image: /assets/images/cart/covers/weed-320.jpg
+  - name: White
+    color: '#ffffff'
+    image: /assets/images/cart/covers/white-widow-320.jpg 
+   
 stock: 10
 id: weed
 folder: _products

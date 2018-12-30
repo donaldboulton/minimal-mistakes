@@ -43,8 +43,7 @@ sidebar:
     text: "Open Source Share"
   - title: "Share with Cats"
     text: "Cat food for 20 stray cats in OKC."  
-name: beer
-sku: BEER
+
 product: Beer
 products: true
 image: /assets/images/cart/covers/beer-cover-320.jpg
@@ -57,16 +56,21 @@ variants:
     price: 4.25
   - name: half-gallon
     price: 10.75
-price: 2.75
+garment_type:
+price: '2.75'
 stock: 10
+sku: beer
 sizes:
   - half-a-pint
   - pint
   - pitcher
 styles:
-  - name: Black
-    color: '#000000'
+  - name: Light
+    color: '#ececec'
     image: /assets/images/cart/covers/beer-cover-320.jpg
+  - name: Dark
+    color: '000000'
+    image: /assets/images/cart/covers/german-dark-320.jpg
 folder: _products
 id: feature
 loc: "/beer"
