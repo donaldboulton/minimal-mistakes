@@ -49,5 +49,5 @@ github_editme_path: donaldboulton/DWB/blob/gh-pages/products/index.html
 ---
 
 {% for product in site.products %}
-  {% include products.html %}
+  {% include product.html %}
 {% endfor %}
