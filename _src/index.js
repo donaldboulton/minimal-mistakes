@@ -3,7 +3,6 @@ import Todo from './lib/components/Todo';
 import AppNotify from './lib/components/AppNotify';
 import "babel-polyfill";
 import Dialog from './lib/components/Dialog';
-import IdentityWidget from './lib/components/IdentityWidget';
 
 class App extends React.Component {
   render() {
@@ -12,7 +11,6 @@ class App extends React.Component {
         <Todo />
         <AppNotify />        
         <Dialog />
-        <IdentityWidget />
       </div>
     );
   }
