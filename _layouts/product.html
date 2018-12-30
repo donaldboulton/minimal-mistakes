@@ -2,19 +2,23 @@
 layout: single
 ---
 <div class="content">
-	<section class="page">
-		<div class="container">
-			<div class="product-container">
-				{% include product-sizes.html product=page %}
-				<div class="product-details" id="add">
-					<h3>{{ page.name }}</h3>
-					{{ page.description_markdown | markdownify }}
-					{{ content }}
-
-					<h4>${{ page.price }}</h4>
-					<div class="button">{% include snipcart-button.html product=page %}</div>
-				</div>
-			</div>
+  <div class="product-container">
+		{% include product-sizes.html product=page %}
+	  <div class="product-details" id="add">
+		<h3>{{ page.name }}</h3>
+		{{ page.description_markdown | markdownify }}
+		{{ content }}
+		<h4>${{ page.price }}</h4>
+		<div>
+			<button class="snipcart-add-item"
+			data-item-name="{{ product.name }}"
+			data-item-id="{{ product.sku }}"
+			data-item-image="{{ product.image }}"
+			data-item-url="{{ site.baseurl }}{{ product.url }}"
+			data-item-price="{{ product.price }}">
+			Buy it for ${{ product.price }}
+			</button>
 		</div>
-	</section>
+	  </div>
+	</div>
 </div>
