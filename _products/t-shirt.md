@@ -43,6 +43,7 @@ variants:
 garment_type:    
 price: 25.70
 stock: 10
+
 sizes:
   - Small
   - Medium

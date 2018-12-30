@@ -57,7 +57,10 @@ sizes:
   - Small
   - Medium
   - Large
-
+styles:
+  - name: Black
+    color: '#1d1d1d'
+    image:  /assets/images/cart/covers/cat-foods-320.jpg
 product: catfood
 id: catfood
 folder: _products

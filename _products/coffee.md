@@ -55,6 +55,10 @@ sizes:
   - tall
   - grande
   - venti
+styles:
+  - name: Black
+    color: '#000000'
+    image: /assets/images/cart/covers/coffee-320.jpg
 stock: 10
 id: coffee
 folder: _products

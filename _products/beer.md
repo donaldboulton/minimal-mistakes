@@ -63,7 +63,10 @@ sizes:
   - half-a-pint
   - pint
   - pitcher
-
+styles:
+  - name: Black
+    color: '#000000'
+    image: /assets/images/cart/covers/beer-cover-320.jpg
 folder: _products
 id: feature
 loc: "/beer"

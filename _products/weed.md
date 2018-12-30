@@ -36,7 +36,7 @@ subtitle: Buy me a weed
 image: /assets/images/cart/covers/weed-320.jpg
 sidebar:
   - title: "Share"
-    image: /assets/images/cart/covers/Share-Logo-320.jpg
+    image: /assets/images/cart/covers/weed-320.jpg
     image_alt: "Sharing Hands"
     image_class: "author__avatar"
     text: "Open Source Share"
@@ -55,6 +55,10 @@ sizes:
   - joint
   - gram
   - ounce
+styles:
+  - name: Black
+    color: '#000000'
+    image: /assets/images/cart/covers/weed-320.jpg
 stock: 10
 id: weed
 folder: _products

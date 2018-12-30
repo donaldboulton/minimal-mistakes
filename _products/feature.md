@@ -31,10 +31,10 @@ sidebar:
     text: "Open Source Share"
   - title: "Share with Cats"
     text: "Cat food for 20 stray cats in OKC."
-variant_name: size
-variants:
-  - name:
-    price: 
+styles:
+  - name: Black
+    color: '#000000'
+    image: /assets/images/cart/covers/World Code-320.jpg
 price: 150.00
 folder: _products
 loc: "/feature"
