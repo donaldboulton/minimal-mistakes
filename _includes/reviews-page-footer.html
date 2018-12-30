@@ -2,7 +2,7 @@
   <button class="collapsible btn btn--light-outline full-width">Reviews&nbsp;&rarr;</button>    
   <div class="content">
    <div id="reviews" class="entry-reviews">
-    {% if page.reviews == true and page.data.reviews | where:'product',page.slug.size > 1 %}
+    {% if site.data.reviews[page.slug] %}
     {% assign reviews = site.data.reviews | where:'product',page.slug %}
     {% assign reviews = site.data.reviews | sort %}
     <header class="section-title">

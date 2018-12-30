@@ -111,10 +111,10 @@ reviews:
   allowedOrigins: ["https://donboulton.com"]
   branch: "gh-pages"
   commitMessage: "Add Review from {fields.name}"
-  filename: "review-{fields.product}-{@id}"
+  filename: "review-{@timestamp}"
   moderation: true
   requiredFields: ['name', "email", "title", "description", "review"]
-  format: "json"
+  format: "yaml"
   path: "_data/reviews/{options.slug}"
 
   generatedFields:

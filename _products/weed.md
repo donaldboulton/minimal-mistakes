@@ -1,5 +1,5 @@
 ---
-title: Buy a Weed
+title: Weed
 subtitle: Buy me some Weed
 description_markdown: >-
    All products are just for testing. Share a big fatty blunt to puff on while I get lost in my digital box. Gods gift to man, it was made illegal because of its mind expanding and healing ability. A little weed every day to keep the doctor away. Had stage 4 liver destruction for 20 years how do you think I am still alive.
@@ -51,7 +51,7 @@ variants:
     price: 400.00
 garment_type:
 price: '2.50'
-sku: Weed
+sku: weed
 sizes:
   - joint
   - gram
@@ -72,7 +72,5 @@ desc: Buy me a Gram
 private: false
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_products/weed.md
 ---
-
-{% include donate_weed.html %}
 
 {% include products-image-gallery.html folder="/assets/images/cart/weed" %}

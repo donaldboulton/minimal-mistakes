@@ -79,6 +79,4 @@ private: false
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_products/feature.md
 ---
 
-{% include donate_beer.html %}
-
 {% include products-image-gallery.html folder="/assets/images/cart/beer" %}
