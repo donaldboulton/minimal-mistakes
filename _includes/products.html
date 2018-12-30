@@ -1,26 +1,18 @@
-
-<div class="content" id="products">
-		{% assign items = site.products | sort: 'price' %}
-		{% for product in products %}
-		{% assign price_split = product.price | round: 2 | split: "." %}
-		{% assign integral = price_split[0] %}
-		{% assign fractional = price_split[1] | append: "00" | truncate: 2, "" %}
-		
-		<p><span itemprop="numberOfItems">6</span></p>
-			<div class="product-list gallery-2-col">
-				{% for product in site.products %}
-					<div><a href="{{ product.url }}"><img itemprop="image" src="{{ product.image }}" alt="{{ product.name }}" class="products-thumbnail" /></a></div>
-                        {% include product-styles.html product=product %}
-						<div class="product-details">
-							<h4><a href="{{ product.url }}">{{ product.name }}</a></h4>
-							<p>{{ product.subtitle }}</p>							
-							<div class="product-description">
-								<p>{{ product.description_markdown | truncate: 45 | markdownify }}</p>
-								{% if fractional == '00' %}{% assign fractional = '-' %}{% endif %}
-								 <p>{% if product.price > 0 %}&dollar; {{ integral }}.{{ fractional }}{% else %}free{% endif %}${{ product.price }}</p>							   
-					        </div>
-						</div>
-					</div>
-				{% endfor %}
-			</div>
+<div class="post-page">
+    <div class="gallery-2-col-unjustified product-grid">
+        {% assign items = site.products | sort: 'price' %}
+        {% for product in products %}
+        {% assign price_split = product.price | round: 2 | split: "." %}
+        {% assign integral = price_split[0] %}
+        {% assign fractional = price_split[1] | append: "00" | truncate: 2, "" %}
+        {% if fractional == '00' %}{% assign fractional = '-' %}{% endif %}
+        <div>
+            <a href="{{ site.baseurl }}{{ product.url }}" {% if item.inactive %}style="color: #777777; text-decoration: none; cursor: text;"{% endif %}>
+            <img src="/assets/images/cart/beer/blank.png" style="width: 100%; background: url('https://images.weserv.nl/?url={{ site.url | replace: 'https://','' | replace: 'https://','' }}{{ product.images[0].image }}&w=500&h=350&output=jpg&q=50') center center no-repeat; background-size: cover;" />  
+            {{ product.subtitle }}<br />
+            {% if product.price > 0 %}&dollar; {{ integral }}.{{ fractional }}{% else %}free{% endif %}<br />&nbsp;
+            </a>
+        </div>
+        {% endfor %}
+    </div>                     
 </div>
