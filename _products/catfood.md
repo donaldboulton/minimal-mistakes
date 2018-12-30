@@ -9,7 +9,7 @@ layout: productdetails
 permalink: /products/catfood/
 support: [adds, cookies, cart, products]
 adds: false
-comments: true
+comments: false
 sku: catfood
 search: true
 sidenav: true

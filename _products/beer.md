@@ -22,7 +22,7 @@ category:
 toc: false
 adds: true
 read_time: true
-comments: true
+comments: false
 reviews: false
 share: false
 related: true

@@ -15,7 +15,7 @@ sitemap: false
 author_profile: false
 adds: false
 search: true
-comments: true
+comments: false
 sidenav: true
 side_react: true
 toc: false

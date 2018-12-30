@@ -8,6 +8,7 @@ excerpt: "Buy me a Jekyll T Shirt."
 permalink: /products/t-shirt/
 no_menu_item: true
 sitemap: false
+comments: false
 adds: false
 sidenav: true
 classes: product
