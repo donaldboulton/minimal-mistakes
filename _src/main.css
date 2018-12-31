@@ -11,6 +11,14 @@ a {
   color: #663399;
 }
 
+.fa-twitter{
+  color: #1DA1F2!important;
+}
+
+.fa-heart{
+  color: #e0245e!important;
+}
+
 .full-width{
   width: 100%;
 }

@@ -14,7 +14,7 @@ reviews: true
 side_react: true
 comments: true
 web-intents: true
-tweet_id: 145116818707714048
+tweet_id: pEkcdhNGH9
 cookies: true
 anchor: true
 support: [adds, cookies, anchor]
@@ -23,7 +23,7 @@ product: terms
 slug: terms
 web-intents: true
 hotjar: true
-tweet_id: 145116818707714048
+tweet_id: pEkcdhNGH9
 image:
   cover: true
   path: &image /assets/images/terms-conditions.jpg

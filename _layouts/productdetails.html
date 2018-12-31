@@ -8,15 +8,16 @@ layout: single
       {{ page.description_markdown | markdownify }} 
       {{ page.content }}
   </div>
-  <div>{% include product-styles.html product=page %}</div>
-  <div class="product-details" id="add">
+  <div>
     <h4>${{ page.price }}</h4>
     {% assign colors = "" %}
     {% for style in include.product.styles %}
 	    {% assign colors = colors | append: '|' | append: style.name %}
     {% endfor %}
     {% assign colors = colors | remove_first: '|' %}
-    <div>
+    {% include product-styles.html product=page %}
+  </div>
+  <div class="product-details" id="add">
       <button class="snipcart-add-item"
       data-api-key="NDhkOWU1ZGQtNWQyZi00ZDVmLThmYmEtZDFiYmJhYzdmYTE3NjM2NjE0Nzc1OTQ2NzMzMTU5"
       data-item-name="{{ product.name }}"
@@ -35,7 +36,6 @@ layout: single
       data-item-price="{{ product.price }}">
       Buy it for $ {{ product.price }} 
       </button>
-    </div>
   </div>
 </div>
 <div class=clear-both></div>
