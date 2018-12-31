@@ -48,22 +48,16 @@ product: Beer
 products: true
 image: /assets/images/cart/covers/beer-cover-320.jpg
 subtitle: Buy me a beer
-variant_name: size
-variants:
-  - name: half-a-pint
-    price: 2.75
-  - name: pint
-    price: 4.25
-  - name: half-gallon
-    price: 10.75
 garment_type:
 price: '2.75'
-stock: 10
+stock: 100
 sku: beer
+
 sizes:
-  - half-a-pint
-  - pint
-  - pitcher
+  - half-a-pint [2.75]
+  - pint [5.50]
+  - pitcher [12.00]
+
 styles:
   - name: Light
     color: '#ececec'
