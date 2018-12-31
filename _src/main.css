@@ -11,11 +11,18 @@ a {
   color: #663399;
 }
 
-.fa-twitter{
+.fa-twitter {
   color: #1DA1F2!important;
 }
 
-.fa-heart{
+.fa-heart {
+  display: inline-block;
+  width: 1em;
+  height: 1.1em;
+  line-height: 1;
+  position: relative;
+  top: -.1em;
+  vertical-align: middle;
   color: #e0245e!important;
 }
 
