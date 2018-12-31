@@ -12,6 +12,7 @@ comments: false
 side_react: true
 adds: false
 sidenav: true
+cart: true
 classes: product
 header:
   image: /assets/images/cart/covers/t-shirt-dark.jpg

@@ -17,6 +17,7 @@ adds: false
 search: true
 comments: false
 sidenav: true
+cart: true
 side_react: true
 toc: false
 header:

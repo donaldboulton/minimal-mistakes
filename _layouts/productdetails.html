@@ -2,11 +2,6 @@
 layout: single
 ---
 
-{% assign colors = "" %}
-{% for style in page.styles %}
-	{% assign colors = colors | append: '|' | append: style.name %}
-{% endfor %}
-{% assign colors = colors | remove_first: '|' %}
 <div class="product-container gallery-2-col">    
   <div><img src="{{ page.image }}" alt="{{ page.name }}" class="product-thumbnail"/></div>
   <div class="product-description">  
@@ -16,6 +11,11 @@ layout: single
   <div>{% include product-styles.html product=page %}</div>
   <div class="product-details" id="add">
     <h4>${{ page.price }}</h4>
+    {% assign colors = "" %}
+    {% for style in include.product.styles %}
+	    {% assign colors = colors | append: '|' | append: style.name %}
+    {% endfor %}
+    {% assign colors = colors | remove_first: '|' %}
     <div>
       <button class="snipcart-add-item"
       data-api-key="NDhkOWU1ZGQtNWQyZi00ZDVmLThmYmEtZDFiYmJhYzdmYTE3NjM2NjE0Nzc1OTQ2NzMzMTU5"

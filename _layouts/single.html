@@ -42,6 +42,9 @@ layout: default
                  {% include toc.html sanitize=true html=content h_min=2 h_max=3 class="toc__menu" %}
                </nav>
             {% endif %}
+            {% if page.cart == true %}
+              {% include snipcart-users.html %}
+            {% endif %}
             {% if page.sidenav-gallery == true %}
                {% include sidenav-gallery.html %}
             {% endif %}
