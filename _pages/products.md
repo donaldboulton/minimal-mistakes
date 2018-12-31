@@ -9,6 +9,7 @@ sidenav: true
 side_react: true
 author: Donald Boulton
 author_profile: false
+cart: true
 tags:
   - Products
   - OKC
