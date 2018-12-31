@@ -14,7 +14,6 @@ reviews: true
 side_react: true
 comments: true
 web-intents: true
-tweet_id: pEkcdhNGH9
 cookies: true
 anchor: true
 support: [adds, cookies, anchor]
@@ -22,8 +21,8 @@ folder: _pages
 product: terms
 slug: terms
 web-intents: true
+tweet_id: "pEkcdhNGH9"
 hotjar: true
-tweet_id: pEkcdhNGH9
 image:
   cover: true
   path: &image /assets/images/terms-conditions.jpg
