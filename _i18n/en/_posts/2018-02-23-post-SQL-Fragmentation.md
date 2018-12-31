@@ -27,7 +27,7 @@ toc: true
 read_time: true
 comments: true
 share: false
-web-intents: false
+web-intents: true
 tweet_id: 1023373858290786304
 social-share: twitter --twitter-hashtags facebook
 related: true

@@ -26,7 +26,7 @@ read_time: true
 comments: true
 related: true
 share: false
-web-intents: false
+web-intents: true
 slack: true
 newsletters: true
 hotjar: true

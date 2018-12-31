@@ -26,7 +26,7 @@ related: true
 read_time: true
 comments: true
 share: false
-web-intents: false
+web-intents: true
 slack: true
 newsletters: true
 tweet_id: 1023374609566113793

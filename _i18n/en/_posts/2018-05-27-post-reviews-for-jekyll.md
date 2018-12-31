@@ -5,7 +5,7 @@ layout: single
 read_time: true
 comments: true
 share: false
-web-intents: false
+web-intents: true
 slack: true
 newsletters: true
 side_react: true

@@ -20,7 +20,7 @@ tags:
   - Performance
 category:
   - Windows
-web-intents: false
+web-intents: true
 tweet_id: 1027105043496034304
 toc: true
 toc_label: "Page Contents"

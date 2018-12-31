@@ -427,6 +427,7 @@ defaults:
       reviews: true
       cookies: true
       notifications: false
+      web-intents: true
       hotjar: true
       breadcrumbs:
         - label: "Posts"

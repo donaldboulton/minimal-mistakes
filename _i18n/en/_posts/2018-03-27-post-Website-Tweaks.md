@@ -20,7 +20,7 @@ social-share: twitter --twitter-hashtags facebook
 read_time: true
 comments: true
 share: false
-web-intents: false
+web-intents: true
 side_react: true
 slack: true
 newsletters: true

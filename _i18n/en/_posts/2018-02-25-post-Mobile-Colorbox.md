@@ -24,7 +24,7 @@ toc_label: "Page Contents"
 read_time: true
 comments: true
 share: false
-web-intents: false
+web-intents: true
 slack: true
 newsletters: true
 tweet_id: 145116818707714048
