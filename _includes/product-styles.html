@@ -1,15 +1,19 @@
-<div class="styles">
-	{% for style in product.styles %}
-		<div class="style" data-item-id="{{ forloop.index }}" {% unless forloop.first %}style="display: none"{% endunless %}>
-			<a href="{{ product.url }}">
-				<img src="{{ style.image }}">
-			</a>
-		</div>
-	{% endfor %}
-
-	<div class="style-picker">
-		{% for style in product.styles %}
-			<div style="background-color: {{ style.color }}" data-item-id="{{ forloop.index }}"></div>
-		{% endfor %}
+<div class="full-width">
+	<div class="form-group">
+		<select id="my-size" class="form-control full-width">                                                                                                            
+			<option value="small | 25.70">Small 25.70</option>                            
+			<option value="medium | 25.70">Medium 25.70</option>                            
+			<option value="large | 25.70">Large 25.70</option>    
+			<option value="x-large | 25.70">X-Large 25.70</option>   
+		</select>
+	</div>
+	<div class="form-group">
+			<select id="select-color" class="form-control full-width">                                                                                                            
+				<option value="black">Black</option>                            
+				<option value="cream">Cream</option>                            
+			</select>
+	</div>
+	<div class="form-group">
+	   <input class="form-control" type="number" id="my-quantity" value="1" />
 	</div>
 </div>

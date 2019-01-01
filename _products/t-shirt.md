@@ -32,18 +32,7 @@ support: [adds, cookies, cart, products]
 lightbox: false
 subtitle: Buy me a t-shirt
 image: /assets/images/cart/covers/t-shirt-dark-320.jpg
-
-variant_name: size
-variants:
-  - name: Small
-    price: 25.70
-  - name: Medium
-    price: 25.70
-  - name: Large
-    price: 25.70
-  - name: X-Large
-    price: 25.70
-garment_type:    
+garment_type: shirt  
 price: 25.70
 stock: 10
 sku: t-shirt
@@ -66,7 +55,5 @@ desc: Buy me a T-Shirt
 private: false
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_products/t-shirt.md
 ---
-
-{% include donate_t-shirt.html %}
 
 {% include products-image-gallery.html folder="/assets/images/cart/t-shirt" %}

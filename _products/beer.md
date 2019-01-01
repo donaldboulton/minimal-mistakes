@@ -58,7 +58,7 @@ sizes:
   - pint [5.50]
   - pitcher [12.00]
 
-styles:
+colors:
   - name: Light
     color: '#ececec'
     image: /assets/images/cart/covers/beer-cover-320.jpg

@@ -1,25 +1,46 @@
-{% assign colors = "" %}
-{% for style in include.product.styles %}
-	{% assign colors = colors | append: '|' | append: style.name %}
-{% endfor %}
-{% assign colors = colors | remove_first: '|' %}
-
-<button class="snipcart-add-item"
-data-api-key="NDhkOWU1ZGQtNWQyZi00ZDVmLThmYmEtZDFiYmJhYzdmYTE3NjM2NjE0Nzc1OTQ2NzMzMTU5"
-data-item-name="{{ product.name }}"
-data-item-id="{{ product.sku }}"
-data-item-quantity="{{ product.stock }}"
-data-item-image="{{ product.image }}"
-data-item-description="{{ product.description_markdown }}"
-data-item-custom1-name="Size"
-data-item-custom1-options="{{ product.sizes | join: '|' }}"
-data-item-custom1-value="Medium"
-data-item-custom2-name="Color"
-data-item-custom2-options="{{ colors }}"
-data-cart-custom3-name="Do you accept our terms?"
-data-cart-custom3-options="true|false"
-data-cart-custom3-required="true"
-data-item-url="{{ site.baseurl }}{{ product.url }}"
-data-item-price="{{ product.price }}">
-Buy it for $ {{ product.price }} 
-</button>
+<div class="full-width">
+		<div class="form-group">
+		  <button id="my-button" class="snipcart-add-item"
+		  data-api-key="NDhkOWU1ZGQtNWQyZi00ZDVmLThmYmEtZDFiYmJhYzdmYTE3NjM2NjE0Nzc1OTQ2NzMzMTU5"
+		  data-item-name="{{ product.name }}"
+		  data-item-image="{{ product.image }}"
+		  data-item-description="{{ product.description_markdown }}"
+		  data-item-custom1-name="Size"
+		  data-item-custom1-options="{{ product.sizes | join: '|' }}"
+		  data-item-custom1-value="Medium"
+		  data-item-custom2-name="Color"
+		  data-item-custom2-options="{{ product.colors }}"
+		  data-item-custom3-name="Quantity"
+		  data-item-custom3-options="{{ product.stock }}"
+		  data-cart-custom4-name="Do you accept our terms?"
+		  data-cart-custom4-options="true|false"
+		  data-cart-custom4-required="true"
+		  data-item-id="TSHIRT_BLACK"
+		  data-item-url="{{ site.baseurl }}{{ product.url }}"
+		  data-item-name="Black T-shirt"
+		  data-item-price="{{ product.price }}">
+			Donate now
+		  </button>
+		</div>
+		<div class="form-group">
+		  <button id="color-2" class="snipcart-add-item" style="display: none"
+		  data-api-key="NDhkOWU1ZGQtNWQyZi00ZDVmLThmYmEtZDFiYmJhYzdmYTE3NjM2NjE0Nzc1OTQ2NzMzMTU5"
+		  data-item-name="{{ product.name }}"
+		  data-item-image="{{ product.image }}"
+		  data-item-description="{{ product.description_markdown }}"
+		  data-item-custom1-name="Size"
+		  data-item-custom1-options="{{ product.sizes | join: '|' }}"
+		  data-item-custom1-value="Medium"
+		  data-item-custom2-name="Color"
+		  data-item-custom2-options="{{ product.colors }}"
+		  data-cart-custom3-name="Do you accept our terms?"
+		  data-cart-custom3-options="true|false"
+		  data-cart-custom3-required="true"
+		  data-item-id="TSHIRT_Cream"
+		  data-item-url="{{ site.baseurl }}{{ product.url }}"
+		  data-item-name="Cream T-shirt"
+		  data-item-price="{{ product.price }}">
+		  Buy it for $ {{ product.price }} 
+		  </button>
+		</div>
+</div>
