@@ -13,9 +13,10 @@ layout: single
       <h4>${{ page.price }}</h4>
       <div class="button">{% include snipcart-button.html product=page %}</div>
     </div>
-</div>
+  </div>
+</div>  
 <div class=clear-both></div>
-<div class="product-reviews">
+<div class="reviews">
   {% assign reviews = site.data.reviews | where:'product',page.slug %}
   {% assign reviewCount = reviews | size %}
   {% assign sum = 0 %}
