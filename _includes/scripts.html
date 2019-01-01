@@ -92,6 +92,7 @@ function updatevariant(el,productname) {
     $('.price').html("&dollar; " + addtocart[1]);
     $('#shoppingcartbutton').attr('description',productname + ' ' + addtocart[0]);
 }
+Snipcart.execute('config', 'show_continue_shopping', true);
 </script>
 <script src="{{ '/public/style-picker.js' | relative_url }}"></script>
 <script src="{{ '/public/lightbox.js' | relative_url }}"></script>

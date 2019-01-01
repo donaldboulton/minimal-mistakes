@@ -1,8 +1,63 @@
-<div id="T-Shirt" class="no-js">
-    <select name="variant" class="form-control full-width" onchange="updatevariant(this,'T-Shirt');">                                                                                                            
+<div id="TShirt" class="select">
+    <select id="select-size" class="form-control full-width">                                                                                                            
         <option value="small | 25.70">Small 25.70</option>                            
         <option value="medium | 25.70">Medium 25.70</option>                            
         <option value="large | 25.70">Large 25.70</option>    
         <option value="x-large | 25.70">X-Large 25.70</option>   
     </select>
+    <div>
+      <select id="select-color" class="form-control full-width">
+        <option value="TSHIRT_BLACK">Black</option>
+        <option value="TSHIRT_CREAM">Cream</option>
+      </select>
+    </div>
+    <button class="snipcart-add-item"
+    data-api-key="NDhkOWU1ZGQtNWQyZi00ZDVmLThmYmEtZDFiYmJhYzdmYTE3NjM2NjE0Nzc1OTQ2NzMzMTU5"
+    data-item-name="{{ product.name }}"
+    data-item-image="{{ product.image }}"
+    data-item-description="{{ product.description_markdown }}"
+    data-item-custom1-name="Size"
+    data-item-custom1-options="{{ product.sizes | join: '|' }}"
+    data-item-custom1-value="Medium"
+    data-item-custom2-name="Color"
+    data-item-custom2-options="{{ colors }}"
+    data-cart-custom3-name="Do you accept our terms?"
+    data-cart-custom3-options="true|false"
+    data-cart-custom3-required="true"
+    data-item-id="TSHIRT_BLACK"
+    data-item-url="{{ site.baseurl }}{{ product.url }}"
+    data-item-name="Black T-shirt"
+    data-item-price="{{ product.price }}">
+      Buy now
+    </button>
+
+    <button class="snipcart-add-item" style="display: none"
+    data-api-key="NDhkOWU1ZGQtNWQyZi00ZDVmLThmYmEtZDFiYmJhYzdmYTE3NjM2NjE0Nzc1OTQ2NzMzMTU5"
+    data-item-name="{{ product.name }}"
+    data-item-image="{{ product.image }}"
+    data-item-description="{{ product.description_markdown }}"
+    data-item-custom1-name="Size"
+    data-item-custom1-options="{{ product.sizes | join: '|' }}"
+    data-item-custom1-value="Medium"
+    data-item-custom2-name="Color"
+    data-item-custom2-options="{{ colors }}"
+    data-cart-custom3-name="Do you accept our terms?"
+    data-cart-custom3-options="true|false"
+    data-cart-custom3-required="true"
+    data-item-id="TSHIRT_Cream"
+    data-item-url="{{ site.baseurl }}{{ product.url }}"
+    data-item-name="Cream T-shirt"
+    data-item-price="{{ product.price }}">
+      Buy now
+    </button>
 </div>
+<script>
+$('#select-color').change(function() {
+    // Hide all the buttons by default
+    $('.snipcart-add-item').hide();
+    
+    // Show the selected button
+    var s = $('.snipcart-add-item[data-item-id="' + $(this).val() + '"]');
+    s.show();
+});
+</script>

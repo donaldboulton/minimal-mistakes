@@ -53,18 +53,20 @@ sizes:
   - Large
   - X-Large
 styles:
-  - name: Black
+  - name: TSHIRT_BLACK
     color: '#000000'
     image: /assets/images/cart/covers/t-shirt-dark-320.jpg
-  - name: Light
-    color: 'Cream'
+  - name: TSHIRT_CREAM
+    color: '#fffdd0'
     image: /assets/images/cart/covers/t-shirt-light-320.jpg
 folder: _products
-id: t-shirt
+id: TSHIRT
 loc: "/t-shirt"
 desc: Buy me a T-Shirt
 private: false
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_products/t-shirt.md
 ---
+
+{% include donate_t-shirt.html %}
 
 {% include products-image-gallery.html folder="/assets/images/cart/t-shirt" %}
