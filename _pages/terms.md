@@ -21,7 +21,7 @@ folder: _pages
 product: terms
 slug: terms
 web-intents: true
-tweet_id: "pEkcdhNGH9"
+tweet_id: 1079827326228148225
 hotjar: true
 image:
   cover: true
