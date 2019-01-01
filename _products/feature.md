@@ -10,6 +10,7 @@ layout: productdetails
 permalink: /products/feature/
 classes: product
 products: true
+cart: true
 support: [adds, cookies, cart, products]
 sitemap: false
 author_profile: false

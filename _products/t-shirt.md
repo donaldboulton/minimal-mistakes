@@ -10,7 +10,7 @@ sitemap: false
 side_react: true
 comments: false
 side_react: true
-adds: false
+adds: true
 sidenav: true
 cart: true
 classes: product

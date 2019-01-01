@@ -1,12 +1,11 @@
-(function() {
-	"use strict";
-
-	$(".style-picker").on("click", "> div", function (e) {
-		var $el = $(e.currentTarget),
-			id = $el.data("itemId"),
-			$parent = $el.closest(".styles");
-
-		$parent.children(".style").hide();
-		$parent.children(".style[data-item-id=" + id + "]").show();
-	});
-})();
+$('#my-size').change(function() {
+    $('#my-button').data('item-custom1-value', $(this).val());
+});
+$('#select-color').change(function() {
+    $('.snipcart-add-item').hide();    
+    var s = $('.snipcart-add-item[data-item-id="' + $(this).val() + '"]');
+    s.show();
+});
+$('#my-quantity').change(function() {
+    $('#my-button').data('item-quantity', $(this).val());
+});

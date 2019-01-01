@@ -42,16 +42,8 @@ sidebar:
     text: "Open Source Share"
   - title: "Share with Cats"
     text: "Cat food for 20 stray cats in OKC."
-variant_name: size
-variants:
-  - name: joint
-    price: 2.50
-  - name: gram
-    price: 20.00
-  - name: ounce
-    price: 400.00
-garment_type:
-price: '2.50'
+item_type:
+price: 2.50
 sku: weed
 sizes:
   - joint
