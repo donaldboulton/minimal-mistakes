@@ -1,24 +1,24 @@
 <div class="full-width">
 		<div class="form-group">
 		  <button id="my-button" class="snipcart-add-item"
-		  data-api-key="NDhkOWU1ZGQtNWQyZi00ZDVmLThmYmEtZDFiYmJhYzdmYTE3NjM2NjE0Nzc1OTQ2NzMzMTU5"
+			data-api-key="NDhkOWU1ZGQtNWQyZi00ZDVmLThmYmEtZDFiYmJhYzdmYTE3NjM2NjE0Nzc1OTQ2NzMzMTU5"
+			data-item-id="{{ product.sku }}"
 		  data-item-name="{{ product.name }}"
 		  data-item-image="{{ product.image }}"
 		  data-item-description="{{ product.description_markdown }}"
-		  data-item-custom1-name="Size"
+			data-item-custom1-name="Size"
 		  data-item-custom1-options="{{ product.sizes | join: '|' }}"
 		  data-item-custom1-value="Medium"
 		  data-item-custom2-name="Color"
-		  data-item-custom2-options="{{ product.colors }}"
-		  data-item-custom3-name="Quantity"
+		  data-item-custom2-options="{{ product.colors  | join: '|' }}"
+		  data-item-custom3-name="Stock"
 		  data-item-custom3-options="{{ product.stock }}"
 		  data-cart-custom4-name="Do you accept our terms?"
 		  data-cart-custom4-options="true|false"
 		  data-cart-custom4-required="true"
-		  data-item-id="TSHIRT_BLACK"
 		  data-item-url="{{ site.baseurl }}{{ product.url }}"
-		  data-item-name="Black T-shirt"
-		  data-item-price="{{ product.price }}">
+			data-item-quantity="1"
+		  data-item-price="{{ product.price  | join: '|' }}">
 			Donate now
 		  </button>
 		</div>
