@@ -387,8 +387,8 @@ collections:
     permalink: /events/:path/
     title: Events
   products:
+    _hide_content: true
     output: true
-    permalink: /:products/:path/
   category:
     output: true
 # Defaults
