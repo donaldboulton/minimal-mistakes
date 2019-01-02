@@ -493,7 +493,7 @@ defaults:
       breadcrumbs:
         - label: "products"
           url: /products/
-      permalink: /:products/:name/
+      permalink: /:path/:basename:output_ext
      
 posts_json_path: posts.json
 ipstack:
