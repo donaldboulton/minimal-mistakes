@@ -18,7 +18,6 @@ styles:
   - name: Meow Mix
     color: '#ffff00'
     image:  /build/cart/covers/blue-wilderness-320.jpg
-product: catfood
 id: catfood
 folder: _products
 loc: "/catfood"

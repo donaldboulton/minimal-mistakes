@@ -11,9 +11,6 @@ tags:
 category:
   - Products
 stock: 10
-
-product: Beer
-products: true
 image: /build/cart/covers/beer-cover-320.jpg
 subtitle: Buy me a beer
 garment_type:

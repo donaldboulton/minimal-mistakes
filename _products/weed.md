@@ -1,9 +1,9 @@
 ---
 title: Weed
+name: Buy me some Weed
 subtitle: Buy me some Weed
 description_markdown: >-
    All products are just for testing. Share a big fatty blunt to puff on while I get lost in my digital box. Gods gift to man, it was made illegal because of its mind expanding and healing ability. A little weed every day to keep the doctor away. Had stage 4 liver destruction for 20 years, how do you think I am still alive.
-name: Buy me some Weed
 item_type:
 price: 2.50
 sku: weed
