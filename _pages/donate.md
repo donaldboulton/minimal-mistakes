@@ -13,10 +13,10 @@ layout: productdetails
 name: "Donate"
 products: true
 hotjar: true
-image: /assets/images/cart/sponser-us.png
+image: /build/cart/sponser-us.png
 header:
-  image: /assets/images/cart/sponser-us.png
-  teaser: /assets/images/cart/sponser-us-320.png
+  image: /build/cart/sponser-us.png
+  teaser: /build/cart/sponser-us-320.png
 support: [lightbox, products, adds]  
 ---
 

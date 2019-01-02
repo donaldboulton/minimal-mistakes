@@ -1,12 +1,11 @@
 <div class="product">
-  <div class="products gallery-2-col">    
-    <div><img src="{{ page.image }}" alt="{{ page.name }}" class="product-thumbnail"/></div>  
-    <div class="product-details" id="add">
-        <h3>{{ page.name }}</h3>
-        {{ page.description_markdown | markdownify }}      
-        <h4>${{ page.price }}</h4>
-    </div>
-    <div class="form-group">{% include product-styles.html product=page %}</div>
-    <div class="button">{% include snipcart-button.html product=page %}</div>
-  </div> 
+
+  <a class="product" href="{{ site.baseurl }}{{ product.url }}">
+    <img src="{{ product.image }}" alt="{{ product.name }}" class="products-thumbnail"/>
+    <p>{{ product.name }}</p>
+  </a>
+
+  <div class="form-group">{% include product-styles.html product=product %}</div>
+  <div class="form-group">{% include snipcart-button.html product=product %}</div>
+
 </div>

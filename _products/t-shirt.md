@@ -15,11 +15,11 @@ sidenav: true
 cart: true
 classes: product
 header:
-  image: /assets/images/cart/covers/t-shirt-dark.jpg
-  teaser: /assets/images/cart/covers/t-shirt-dark-320.jpg
+  image: /build/cart/covers/t-shirt-dark.jpg
+  teaser: /build/cart/covers/t-shirt-dark-320.jpg
 sidebar:
   - title: "Share"
-    image: /assets/images/cart/covers/Share-Logo-320.jpg
+    image: /build/cart/covers/Share-Logo-320.jpg
     image_alt: "Sharing Hands"
     image_class: "author__avatar"
     text: "Open Source Share"
@@ -31,7 +31,7 @@ product: t-shirt
 support: [adds, cookies, cart, products]
 lightbox: false
 subtitle: Buy me a t-shirt
-image: /assets/images/cart/covers/t-shirt-dark-320.jpg
+image: /build/cart/covers/t-shirt-dark-320.jpg
 garment_type: shirt  
 price: 25.70
 stock: 10
@@ -44,10 +44,10 @@ sizes:
 styles:
   - name: TSHIRT_BLACK
     color: '#000000'
-    image: /assets/images/cart/covers/t-shirt-dark-320.jpg
+    image: /build/cart/covers/t-shirt-dark-320.jpg
   - name: TSHIRT_CREAM
     color: '#fffdd0'
-    image: /assets/images/cart/covers/t-shirt-light-320.jpg
+    image: /build/cart/covers/t-shirt-light-320.jpg
 folder: _products
 id: TSHIRT
 loc: "/t-shirt"
@@ -60,7 +60,5 @@ github_editme_path: donaldboulton/DWB/blob/gh-pages/_products/t-shirt.md
   {% include product.html %}
 {% endfor %}
 
-{% include products-image-gallery.html folder="/assets/images/cart/t-shirt" %}
-
-{% include product-reviews.html %}
+{% include products-image-gallery.html folder="/build/cart/t-shirt" %}
 

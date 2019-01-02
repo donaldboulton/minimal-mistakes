@@ -197,6 +197,16 @@ Demonstrate and share the intelligence, wisdom, and humor we know you possess.
 
 {% include comment-policy.html %}
 
+## Purchases
+
+### Purchase Policy
+
+{% include shipping.html %}
+
+### Return Policy
+
+{% include returns.html %}
+
 ## Disclosure Policy
 
 I make money on this website through affiliate programs. If you click an affiliate link or ad banner and buy the product, you help support this website because I'll get a percentage of that sale.

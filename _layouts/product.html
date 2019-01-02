@@ -1,15 +1,20 @@
 ---
 layout: single
 ---
-<div class="content">
+
+{% for products in site.products %}
+<div class="content gallery-2-col">
+	<div><img src="{{ page.image }}" alt="{{ page.name }}" class="product-thumbnail"/></div>
   <div class="product-container">		
 	  <div class="product-details" id="add">
 		<h3>{{ page.name }}</h3>
 		{{ page.description_markdown | markdownify }}
 		{{ content }}
-		{% include product-styles.html product=page %}
+
 		<h4>${{ page.price }}</h4>
-		<div class="button">{% include snipcart-button.html product=page %}</div>
 	  </div>
 	</div>
+	<div>{% include product-styles.html product=page %}</div>
+	<div class="button">{% include snipcart-button.html product=page %}</div>
 </div>
+{% endfor%}

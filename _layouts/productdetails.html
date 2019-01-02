@@ -9,7 +9,8 @@ layout: single
       {{ page.description_markdown | markdownify }}      
       <h4>${{ page.price }}</h4>
   </div>
-  <div class="form-group">{% include product-styles.html product=page %}</div>
-  <div class="button">{% include snipcart-button.html product=page %}</div>
+  <div class="form-group">{% include product-styles.html product=product %}</div>
+  <div class="form-group">{% include snipcart-button.html product=product %}</div>
 </div>  
 <div class=clear-both></div>
+{% include product-reviews.html %}

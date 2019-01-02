@@ -3,7 +3,7 @@ title: Weed
 subtitle: Buy me some Weed
 description_markdown: >-
    All products are just for testing. Share a big fatty blunt to puff on while I get lost in my digital box. Gods gift to man, it was made illegal because of its mind expanding and healing ability. A little weed every day to keep the doctor away. Had stage 4 liver destruction for 20 years how do you think I am still alive.
-name: Some smoke
+name: Buy me some Weed
 excerpt: "Buy me some Weed."
 layout: productdetails
 products: true
@@ -30,13 +30,13 @@ cart: true
 classes: product
 permalink: /products/weed/
 header:
-  image: /assets/images/cart/covers/weed-cover.jpg
-  teaser: /assets/images/cart/covers/weed-320.jpg
+  image: /build/cart/covers/weed-cover.jpg
+  teaser: /build/cart/covers/weed-320.jpg
 subtitle: Buy me a weed
-image: /assets/images/cart/covers/weed-320.jpg
+image: /build/cart/covers/weed-320.jpg
 sidebar:
   - title: "Share"
-    image: /assets/images/cart/covers/weed-320.jpg
+    image: /build/cart/covers/weed-320.jpg
     image_alt: "Sharing Hands"
     image_class: "author__avatar"
     text: "Open Source Share"
@@ -52,10 +52,10 @@ sizes:
 styles:
   - name: Gold
     color: '#ffd700'
-    image: /assets/images/cart/covers/weed-320.jpg
+    image: /build/cart/covers/weed-320.jpg
   - name: White
     color: '#ffffff'
-    image: /assets/images/cart/covers/white-widow-320.jpg 
+    image: /build/cart/covers/white-widow-320.jpg 
    
 stock: 10
 id: weed
@@ -66,4 +66,4 @@ private: false
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_products/weed.md
 ---
 
-{% include products-image-gallery.html folder="/assets/images/cart/weed" %}
+{% include products-image-gallery.html folder="/build/cart/weed" %}

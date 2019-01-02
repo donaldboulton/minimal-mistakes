@@ -30,13 +30,13 @@ share: false
 related: true
 products: true
 cart: true
-image: /assets/images/cart/covers/blue-wilderness-320.jpg
+image: /build/cart/covers/blue-wilderness-320.jpg
 header:
-  image: /assets/images/cart/covers/cat-foods.jpg
-  teaser: /assets/images/cart/covers/blue-wilderness-320.jpg
+  image: /build/cart/covers/cat-foods.jpg
+  teaser: /build/cart/covers/blue-wilderness-320.jpg
 sidebar:
   - title: "Share"
-    image: /assets/images/cart/covers/Share-Logo-320.jpg
+    image: /build/cart/covers/Share-Logo-320.jpg
     image_alt: "Sharing Hands"
     image_class: "author__avatar"
     text: "Open Source Share"
@@ -61,10 +61,10 @@ sizes:
 styles:
   - name: Blue
     color: '#0000FF'
-    image:  /assets/images/cart/covers/blue-wilderness-320.jpg
+    image:  /build/cart/covers/blue-wilderness-320.jpg
   - name: Meow Mix
     color: '#ffff00'
-    image:  /assets/images/cart/covers/blue-wilderness-320.jpg
+    image:  /build/cart/covers/blue-wilderness-320.jpg
 product: catfood
 id: catfood
 folder: _products
@@ -74,4 +74,4 @@ private: false
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_products/catfood.md
 ---
 
-{% include products-image-gallery.html folder="/assets/images/cart/catfood" %}
+{% include products-image-gallery.html folder="/build/cart/catfood" %}

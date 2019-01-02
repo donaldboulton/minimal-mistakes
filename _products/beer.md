@@ -28,16 +28,16 @@ share: false
 related: true
 products: true
 cart: true
-support: [adds, cookies, cart, products]
+support: [gallery, adds, cookies, cart, products]
 classes: product
 permalink: /products/beer/
 stock:  10
 header:
-  image: /assets/images/cart/covers/beer-cover.jpg
-  teaser: /assets/images/cart/covers/beer-cover-320.jpg
+  image: /build/cart/covers/beer-cover.jpg
+  teaser: /build/cart/covers/beer-cover-320.jpg
 sidebar:
   - title: "Share"
-    image: /assets/images/cart/covers/Share-Logo-320.jpg
+    image: /build/cart/covers/Share-Logo-320.jpg
     image_alt: "Sharing Hands"
     image_class: "author__avatar"
     text: "Open Source Share"
@@ -46,7 +46,7 @@ sidebar:
 
 product: Beer
 products: true
-image: /assets/images/cart/covers/beer-cover-320.jpg
+image: /build/cart/covers/beer-cover-320.jpg
 subtitle: Buy me a beer
 garment_type:
 price: '2.75'
@@ -61,16 +61,16 @@ sizes:
 colors:
   - name: Light
     color: '#ececec'
-    image: /assets/images/cart/covers/beer-cover-320.jpg
+    image: /build/cart/covers/beer-cover-320.jpg
   - name: Dark
     color: '000000'
-    image: /assets/images/cart/covers/german-dark-320.jpg
+    image: /build/cart/covers/german-dark-320.jpg
 folder: _products
 id: feature
 loc: "/beer"
 desc: Buy me a beer
 private: false
-github_editme_path: donaldboulton/DWB/blob/gh-pages/_products/feature.md
+github_editme_path: donaldboulton/DWB/blob/gh-pages/_products/beer.md
 ---
 
-{% include products-image-gallery.html folder="/assets/images/cart/beer" %}
+{% include image-gallery.html folder="/build/cart/beer" %}

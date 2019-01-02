@@ -3,7 +3,7 @@ title: Buy a Coffee
 subtitle: Buy me a Coffee
 description_markdown: >-
   A perfect coffee in the morning absolutely makes my day. Buy me a small one for a good start or a big one to keep going all day!
-name: Cup of Joe
+name: Buy me a Coffee
 sku: Coffee
 excerpt: "Buy me a cup of coffee."
 layout: productdetails
@@ -31,13 +31,13 @@ side_react: true
 classes: product
 permalink: /products/coffee/
 header:
-  image: /assets/images/cart/covers/coffee-cover.jpg
-  teaser: /assets/images/cart/covers/coffee-320.jpg
+  image: /build/cart/covers/coffee-cover.jpg
+  teaser: /build/cart/covers/coffee-320.jpg
 subtitle: Buy me a coffee
-image: /assets/images/cart/covers/coffee-320.jpg
+image: /build/cart/covers/coffee-320.jpg
 sidebar:
   - title: "Share"
-    image: /assets/images/cart/covers/Share-Logo-320.jpg
+    image: /build/cart/covers/Share-Logo-320.jpg
     image_alt: "Sharing Hands"
     image_class: "author__avatar"
     text: "Open Source Share"
@@ -59,7 +59,7 @@ sizes:
 styles:
   - name: Black
     color: '#000000'
-    image: /assets/images/cart/covers/coffee-320.jpg
+    image: /build/cart/covers/coffee-320.jpg
 stock: 10
 id: coffee
 folder: _products
@@ -69,4 +69,4 @@ private: false
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_products/coffee.md
 ---
 
-{% include products-image-gallery.html folder="/assets/images/cart/coffee" %}
+{% include products-image-gallery.html folder="/build/cart/coffee" %}
