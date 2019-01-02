@@ -3,7 +3,6 @@ title: "T-Shirt"
 name: Buy Me A Jekyll T-Shirt
 description_markdown: >-
   This awesome t-shirt is for sale at [zazzle.com](https://www.zazzle.com/jekyll_t_shirt-235672519224817294). I would really like to have it, but I do not allow myself to spent this much on a single t-shirt. Will you buy me one?
-excerpt: "Buy me a Jekyll T Shirt."
 subtitle: Buy me a t-shirt
 image: /build/cart/covers/t-shirt-dark-320.jpg
 garment_type: shirt  

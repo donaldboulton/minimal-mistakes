@@ -1,9 +1,7 @@
 ---
 title: Beer
 name: Buy Me A Beer
-layout: products
 subtitle: Buy me a beer
-excerpt: "Buy me a bottle of Beer."
 description_markdown: >-
   I like beer a lot! IPA, Guinness, Stout, micro brews… Dead Guy Ale is my favorite but I love to try new ones. Buy me half-a-pint to get going or a pint to get a good buzz.
 author: Donald Boulton
@@ -20,9 +18,7 @@ image: /build/cart/covers/beer-cover-320.jpg
 subtitle: Buy me a beer
 garment_type:
 price: '2.75'
-stock: 100
 sku: beer
-
 sizes:
   - half-a-pint [2.75]
   - pint [5.50]
