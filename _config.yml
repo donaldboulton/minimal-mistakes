@@ -388,7 +388,7 @@ collections:
     title: Events
   products:
     output: true
-    permalink: /:products/:name/
+    permalink: /:products/:path/
   category:
     output: true
 # Defaults
@@ -493,7 +493,6 @@ defaults:
       breadcrumbs:
         - label: "products"
           url: /products/
-      permalink: /:path/:basename:output_ext
      
 posts_json_path: posts.json
 ipstack:
