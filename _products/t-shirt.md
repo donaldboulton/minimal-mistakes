@@ -56,4 +56,11 @@ private: false
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_products/t-shirt.md
 ---
 
+{% for product in site.products %}
+  {% include product.html %}
+{% endfor %}
+
 {% include products-image-gallery.html folder="/assets/images/cart/t-shirt" %}
+
+{% include product-reviews.html %}
+
