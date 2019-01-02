@@ -6,7 +6,7 @@ description_markdown: >-
 subtitle: Sponsor a feature
 excerpt: "Sponser Us"
 no_menu_item: true
-layout: productdetails
+layout: products
 permalink: /products/feature/
 classes: product
 products: true

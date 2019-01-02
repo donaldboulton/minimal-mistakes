@@ -8,7 +8,7 @@
         {% if fractional == '00' %}{% assign fractional = '-' %}{% endif %}
         <div>
             <a href="{{ site.baseurl }}{{ product.url }}" {% if item.inactive %}style="color: #777777; text-decoration: none; cursor: text;"{% endif %}>
-            <img src="/build/cart/beer/blank.png" style="width: 100%; background: url('https://images.weserv.nl/?url={{ site.url | replace: 'https://','' | replace: 'https://','' }}{{ product.images[0].image }}&w=500&h=350&output=jpg&q=50') center center no-repeat; background-size: cover;" />  
+            <img src="/build/cart/beer/blank.png" class="product-thumbnail" style="width: 100%; background: url('https://images.weserv.nl/?url={{ site.url | replace: 'https://','' | replace: 'https://','' }}{{ product.images[0].image }}&w=500&h=350&output=jpg&q=50') center center no-repeat; background-size: cover;" />  
             {{ product.subtitle }}<br />
             {% if product.price > 0 %}&dollar; {{ integral }}.{{ fractional }}{% else %}free{% endif %}<br />&nbsp;
             </a>

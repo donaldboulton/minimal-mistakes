@@ -4,32 +4,6 @@ name: Buy Me A Jekyll T-Shirt
 description_markdown: >-
   This awesome t-shirt is for sale at [zazzle.com](https://www.zazzle.com/jekyll_t_shirt-235672519224817294). I would really like to have it, but I do not allow myself to spent this much on a single t-shirt. Will you buy me one?
 excerpt: "Buy me a Jekyll T Shirt."
-permalink: /products/t-shirt/
-no_menu_item: true
-sitemap: false
-side_react: true
-comments: false
-side_react: true
-adds: true
-sidenav: true
-cart: true
-classes: product
-header:
-  image: /build/cart/covers/t-shirt-dark.jpg
-  teaser: /build/cart/covers/t-shirt-dark-320.jpg
-sidebar:
-  - title: "Share"
-    image: /build/cart/covers/Share-Logo-320.jpg
-    image_alt: "Sharing Hands"
-    image_class: "author__avatar"
-    text: "Open Source Share"
-  - title: "Share with Cats"
-    text: "Cat food for 20 stray cats in OKC."
-layout: productdetails
-products: true
-product: t-shirt
-support: [adds, cookies, cart, products]
-lightbox: false
 subtitle: Buy me a t-shirt
 image: /build/cart/covers/t-shirt-dark-320.jpg
 garment_type: shirt  
@@ -49,16 +23,10 @@ styles:
     color: '#fffdd0'
     image: /build/cart/covers/t-shirt-light-320.jpg
 folder: _products
-id: TSHIRT
+id: t-shirt
 loc: "/t-shirt"
 desc: Buy me a T-Shirt
 private: false
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_products/t-shirt.md
 ---
-
-{% for product in site.products %}
-  {% include product.html %}
-{% endfor %}
-
-{% include products-image-gallery.html folder="/build/cart/t-shirt" %}
 
