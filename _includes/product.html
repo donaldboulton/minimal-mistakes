@@ -11,12 +11,12 @@
   data-item-name="{{ product.name }}"
   data-item-id="{{ product.sku }}"
   data-item-image="{{ product.image }}"
-  data-item-description="{{ product.description }}"
+  data-item-description="{{ product.description_mardown }}"
   data-item-custom1-name="Size"
   data-item-custom1-options="{{ product.sizes | join: '|' }}"
   data-item-custom1-value="Medium"
   data-item-custom2-name="Color"
-  data-item-custom2-options="{{ colors }}" 
+  data-item-custom2-options="{{ product.color | join: '|' }}"
   data-item-url="{{ product.url }}"
   data-item-price="{{ product.price }}">
   Buy it for $ {{ product.price }} 
