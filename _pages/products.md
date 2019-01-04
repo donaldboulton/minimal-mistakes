@@ -1,5 +1,5 @@
 ---
-layout: products
+layout: product
 permalink: /products/
 title: Products
 date: 2018-11-01 16:18:01 -0600

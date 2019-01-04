@@ -367,6 +367,8 @@ dialog::backdrop {
 #my-accessible-dialog-title {
   color: #fff;
   border-bottom: 1px solid #434040;
+  font-family: Kaushan Script,cursive;
+  font-weight: 700;
 }
 
 #my-accessible-dialog button {
@@ -811,10 +813,7 @@ dialog::backdrop {
 }
 
 a:focus,button:focus {
-  border-color: #00c100;
-  outline: 0;
-  outline: thin dotted\9;
-  box-shadow: inset 0 1px 3px rgba(255,246,251,.06),0 0 5px rgba(0,193,0,.7);
+  border-color: transparent!important;
 }
 
 *,html {
@@ -950,6 +949,9 @@ body {
   line-height: 1.5;
   background-image: url(/assets/images/bg10-min.png);
   background-repeat: repeat;
+  background-image: -webkit-gradient(linear,left top,left bottom,from(hsla(0,0%,100%,.2)),to(transparent));
+  background-image: -o-linear-gradient(top,hsla(0,0%,100%,.2),transparent);
+  background-image: linear-gradient(180deg,hsla(0,0%,100%,.2),transparent);
 }
 
 body.overflow--hidden {
@@ -6291,7 +6293,7 @@ ul li.list-content,ul li.list-month {
   border: 1px solid rebeccapurple;
   border-radius: 50%;
   padding: 1em;
-  height: 320px;
+  height: 280px;
   width: 320px;
 }
 
