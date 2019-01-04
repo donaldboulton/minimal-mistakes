@@ -1,4 +1,5 @@
 ---
+layout: productdetails
 title: "Cat Food"
 name: Buy Me Some Cat Food
 description: Buy the kittys some cat food. My cats like Blue Wilderness but most of the food I use Is Meow Mix for the stray cats and other critters that show up at feeding time.
@@ -20,6 +21,7 @@ styles:
 id: catfood
 folder: _products
 loc: "/catfood"
+sku: catfood
 desc: Get the Cats some Food
 private: false
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_products/catfood.md

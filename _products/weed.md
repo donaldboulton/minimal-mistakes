@@ -1,4 +1,5 @@
 ---
+layout: productdetails
 title: Weed
 name: Buy me some Weed
 subtitle: Buy me some Weed

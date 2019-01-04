@@ -1,19 +1,22 @@
-<div class="product-details">
-
-  <a itemprop="contentUrl" id="product" class="product" href="{{ site.baseurl }}{{ product.url }}">
-    <img itemscope itemtype="https://schema.org/ImageObject" src="{{ product.image }}" alt="{{ product.name }}" class="product-thumbnail"/>    
-  </a>
-  <div class="product-description">
-    <p>{{ page.name }}</p>
+<div class="product-details" itemscope itemtype="https://schema.org/ImageGallery">
+  <ul id="lightgallery">
+    <li class="product-description" data-responsive="{{ product.image }}" data-src="https://sachinchoolur.github.io/lightGallery/static/img/4-1600.jpg"
+      data-sub-html="<h4>{{ product.title }}</h4><p>{{ product.desc }}</p>" data-tweet-text="share on twitter">
+      <div>
+        <a href=""><img src="{{ product.image }}" itemscope itemtype="https://schema.org/ImageObject" alt="{{ product.name }}" class="product-thumbnail image-responsive"/>
+        <div class="demo-gallery-poster">
+          <img src="/build/images/zoom.png">
+        </div>
+        </a>
+      </div>
+      <div class="text-center">{{ product.name }}</div>
     <p>Base Price $ {{ product.price }}</p>
-    <p class="text-center">{{ product.description_markdown | markdownify }}</p>
-  
     <div class="text-center">
     <button class="snipcart-add-item"
     data-item-name="{{ product.name }}"
     data-item-id="{{ product.sku }}"
     data-item-image="{{ product.image }}"
-    data-item-description="{{ product.description_mardown }}"
+    data-item-description="{{ product.description }}"
     data-item-custom1-name="Size"
     data-item-custom1-options="{{ product.sizes | join: '|' }}"
     data-item-custom1-value="Medium"
@@ -21,8 +24,9 @@
     data-item-custom2-options="{{ product.color | join: '|' }}"
     data-item-url="{{ site.baseurl }}{{ product.url }}"
     data-item-price="{{ product.price }}">
-    Buy it for $ {{ product.price }} 
+    Donate Now 
     </button>
     </div>
-  </div> 
+  </li>
+</ul>
 </div>

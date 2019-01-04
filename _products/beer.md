@@ -1,4 +1,5 @@
 ---
+layout: productdetails
 title: Beer
 name: Buy Me A Beer
 subtitle: Buy me a beer

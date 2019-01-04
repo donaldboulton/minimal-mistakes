@@ -6,9 +6,25 @@ layout: single
   <div><img src="{{ page.image }}" alt="{{ page.name }}" class="product-thumbnail"/></div>  
   <div class="product-description" id="add">
       <h3>{{ page.name }}</h3>
-      {{ page.description_markdown | markdownify }}      
+      {{ page.description | markdownify }}      
       <h4>${{ page.price }}</h4>
-      <div class="form-group">{% include snipcart-button.html product=product %}</div>
+      
+      <div class="form-group">    
+        <button class="snipcart-add-item"
+        data-item-name="{{ page.name }}"
+        data-item-id="{{ product.sku }}"
+        data-item-image="{{ page.image }}"
+        data-item-description="{{ page.desc }}"
+        data-item-custom1-name="Size"
+        data-item-custom1-options="{{ product.sizes | join: '|' }}"
+        data-item-custom1-value="Medium"
+        data-item-custom2-name="Colors"
+        data-item-custom2-options="{{ product.colors | join: '|' }}"
+        data-item-url="{{ site.baseurl }}{{ page.url }}"
+        data-item-price="{{ page.price }}">
+        Donate Now 
+        </button>
+      </div>
 
   </div>
   <div class="form-group">{% include product-styles.html product=product %}</div>

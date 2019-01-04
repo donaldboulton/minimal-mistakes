@@ -1,4 +1,5 @@
 ---
+layout: productdetails
 title: Feature
 name: Sponsor a Feature
 subtitle: Sponsor a feature333333333

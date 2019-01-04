@@ -1,4 +1,5 @@
 ---
+layout: productdetails
 title: "T-Shirt"
 name: Buy Me A Jekyll T-Shirt
 subtitle: Buy me a t-shirt
