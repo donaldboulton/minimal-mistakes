@@ -2,8 +2,7 @@
 title: Feature
 name: Sponsor a Feature
 subtitle: Sponsor a feature333333333
-description_markdown: >-
-  You can sponsor a feature. I will not only give you an honorable mention on the site, but I will also let you suggest some additional functionalities of this feature.
+description: You can sponsor a feature. I will not only give you an honorable mention on the site, but I will also let you suggest some additional functionalities of this feature.
 image: /build/cart/covers/World Code-320.jpg
 styles:
   - name: Black

@@ -1,8 +1,7 @@
 ---
 title: "Cat Food"
 name: Buy Me Some Cat Food
-description_markdown: >-
-  Buy the kittys some cat food. My cats like Blue Wilderness but most of the food I use Is Meow Mix for the stray cats and other critters that show up at feeding time.
+description: Buy the kittys some cat food. My cats like Blue Wilderness but most of the food I use Is Meow Mix for the stray cats and other critters that show up at feeding time.
 author: Donald Boulton
 image: /build/cart/covers/blue-wilderness-320.jpg
 garment_type:

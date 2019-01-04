@@ -2,18 +2,12 @@
 title: Beer
 name: Buy Me A Beer
 subtitle: Buy me a beer
-description_markdown: >-
-  I like beer a lot! IPA, Guinness, Stout, micro brews… Dead Guy Ale is my favorite but I love to try new ones. Buy me half-a-pint to get going or a pint to get a good buzz.
+description: I like beer a lot! IPA, Guinness, Stout, micro brews… Dead Guy Ale is my favorite but I love to try new ones. Buy me half-a-pint to get going or a pint to get a good buzz.
 author: Donald Boulton
-tags:
-  - Products
-  - Beer
-category:
-  - Products
 stock: 10
 image: /build/cart/covers/beer-cover-320.jpg
 subtitle: Buy me a beer
-garment_type:
+garment_type: beer
 price: '2.75'
 sku: beer
 sizes:
@@ -28,6 +22,7 @@ colors:
   - name: Dark
     color: '000000'
     image: /build/cart/covers/german-dark-320.jpg
+
 folder: _products
 id: beer
 loc: "/beer"

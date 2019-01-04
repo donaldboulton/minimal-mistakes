@@ -1,8 +1,7 @@
 ---
 title: Buy a Coffee
 subtitle: Buy me a Coffee
-description_markdown: >-
-  A perfect coffee in the morning absolutely makes my day. Buy me a small one for a good start or a big one to keep going all day!
+description: A perfect coffee in the morning absolutely makes my day. Buy me a small one for a good start or a big one to keep going all day!
 name: Buy me a Coffee
 sku: Coffee
 image: /build/cart/covers/coffee-320.jpg

@@ -387,7 +387,6 @@ collections:
     permalink: /events/:path/
     title: Events
   products:
-    _hide_content: true
     output: true
   category:
     output: true
