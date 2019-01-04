@@ -51,12 +51,11 @@ class MyComponent extends React.Component {
                 </div>
             </div>
             <div>
-                <span className="page__title"><a rel="noreferrer" itemProp="url" href="/products/">Products</a></span>
+                <span className="page__title">User Links</span>
                 <div className="toc1-menu">
                    <div><a rel="noreferrer" itemProp="url" href="/products/beer/">Beer</a></div>              
-                   <div><a rel="noreferrer" itemProp="url" href="/products/coffee/">Coffee</a></div>  
-                   <div><a rel="noreferrer" itemProp="url" href="/products/catfood/">Cat Food</a></div>  
-                   <span className="page__title"><a rel="noreferrer" itemProp="url" href="/products/">All Products&nbsp;&rarr;</a></span>
+                   <div><span className="page__title"><a rel="noreferrer" itemProp="url" href="/products/">Products&nbsp;&rarr;</a></span></div>  
+                   <span className="page__title"><a rel="noreferrer" itemProp="url" href="/admin/">Admin&nbsp;&rarr;</a></span>
                 </div>
             </div>
           </div>

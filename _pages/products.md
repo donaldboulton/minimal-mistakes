@@ -1,11 +1,10 @@
 ---
-layout: product
+layout: products
 permalink: /products/
 title: Products
 date: 2018-11-01 16:18:01 -0600
 last_modified_at: 2018-12-01T12:42:38-04:0
 search: true
-classes: wide
 sidenav: true
 side_react: true
 author: Donald Boulton
@@ -22,14 +21,12 @@ category:
   - Products
 toc: false
 adds: true
-read_time: true
 comments: true
 reviews: false
 share: false
 related: true
 catagory: true
 products: true
-cart: true
 breakcrumb: true
 sidebar:
   - title: "Share"
@@ -46,7 +43,7 @@ image: /build/cart/covers/Share-Logo-320.jpg
 folder: products
 product: products
 slug: /products/
-support: [gallery, adds, cookies, cart, products]
+support: [adds, cookies, cart]
 github_editme_path: donaldboulton/DWB/blob/gh-pages/products/index.html
 ---
 

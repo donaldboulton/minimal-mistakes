@@ -1454,3 +1454,10 @@ body.snip-open {
   background: #066b13;
   color: #fff;
 }
+
+.snipcart-total-items {
+  background-color: rebeccapurple;
+  padding: .25em;
+  border: 1px thin rebeccapurple;
+  border-radius: 50%;
+}

@@ -1,11 +1,25 @@
-<div class="post">
+<div class="product">
 
-  <a class="product" href="{{ product.image }}">
-    <img src="{{ product.image }}" alt="{{ product.name }}" class="product-thumbnail"/>
-    <p>{{ product.name }}</p>
+  <a itemprop="contentUrl" id="product" class="product" href="#">
+    <img itemscope itemtype="https://schema.org/ImageObject" src="{{ product.image }}" alt="{{ product.name }}" class="product-thumbnail"/>
+    <p class="text-center">{{ product.name }}</p>
   </a>
-
-  <div class="form-group">{% include product-styles.html product=product %}</div>
-  <div class="form-group">{% include snipcart-button.html product=product %}</div>
-
+  <p class="text-center">{{ product.description_markdown | markdownify }}</p>
+  
+  <div class="text-center">
+  <button class="snipcart-add-item"
+  data-item-name="{{ product.name }}"
+  data-item-id="{{ product.sku }}"
+  data-item-image="{{ product.image }}"
+  data-item-description="{{ product.description }}"
+  data-item-custom1-name="Size"
+  data-item-custom1-options="{{ product.sizes | join: '|' }}"
+  data-item-custom1-value="Medium"
+  data-item-custom2-name="Color"
+  data-item-custom2-options="{{ colors }}" 
+  data-item-url="{{ product.url }}"
+  data-item-price="{{ product.price }}">
+  Buy it for $ {{ product.price }} 
+  </button>
+  </div>
 </div>
