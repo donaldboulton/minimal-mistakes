@@ -3,14 +3,24 @@ layout: single
 ---
 
 <div class="product-details gallery-2-col">    
-  <div><img src="{{ page.image }}" alt="{{ page.name }}" class="product-thumbnail"/></div>  
-  <div class="product-description" id="add">
-      <h3>{{ page.name }}</h3>
-      {{ page.description | markdownify }}      
-      <h4>${{ page.price }}</h4>
-      
+  <div itemscope itemtype="http://schema.org/Product"><img src="{{ page.image }}" alt="{{ page.name }}" class="product-thumbnail"/></div>  
+  <div class="product-description">
+    <div itemprop="name" class="text-center">{{ product.name }}</div>
+    <p itemprop="description" class="text-center">{{ product.description | markdownify }}</p>      
+    <div itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="numberOfItems">{{ product.stock }}</span>, Items
+      <span itemprop="priceCurrency" content="USD">Price $ </span><span itemprop="price" content="{{ product.price }}">{{ product.price }}</span>
+      <link itemprop="availability" href="http://schema.org/InStock" />In stock
+    </div>
+    <div>Please Agree to Our <a href="https://donboulton.com/terms#purchases">Terms</a>&nbsp;<abbr class="abbr" title="Required">&nbsp;*&nbsp;</abbr></div>
+		<div class="enable-push">
+				<div class="toggle-switch">
+					<input aria-label="Terms and Conditions" id="options" name="options" type="checkbox" />
+					<label for="options"></label>
+				</div>
+			</div>
       <div class="form-group">    
         <button class="snipcart-add-item"
+        data-api-key="NDhkOWU1ZGQtNWQyZi00ZDVmLThmYmEtZDFiYmJhYzdmYTE3NjM2NjE0Nzc1OTQ2NzMzMTU5"
         data-item-name="{{ page.name }}"
         data-item-id="{{ product.sku }}"
         data-item-image="{{ page.image }}"
@@ -20,7 +30,13 @@ layout: single
         data-item-custom1-value="Medium"
         data-item-custom2-name="Colors"
         data-item-custom2-options="{{ product.colors | join: '|' }}"
+        data-item-custom3-name="Stock"
+        data-item-custom3-options="{{ product.stock }}"
+        data-cart-custom4-name="Do you accept our terms?"
+        data-cart-custom4-options="true|false"
+        data-cart-custom4-required="true"
         data-item-url="{{ site.baseurl }}{{ page.url }}"
+        data-item-quantity="1"
         data-item-price="{{ page.price }}">
         Donate Now 
         </button>
@@ -28,6 +44,7 @@ layout: single
 
   </div>
   <div class="form-group">{% include product-styles.html product=product %}</div>
+</div>  
 </div>  
 <div class=clear-both></div>
 {% include product-reviews.html %}

@@ -1,19 +1,33 @@
-<div class="post-page">
-    <div class="gallery-2-col-unjustified">
-        {% assign items = site.products | sort: 'price' %}
-        {% for product in products %}
-        {% assign price_split = product.price | round: 2 | split: "." %}
-        {% assign integral = price_split[0] %}
-        {% assign fractional = price_split[1] | append: "00" | truncate: 2, "" %}
-        {% if fractional == '00' %}{% assign fractional = '-' %}{% endif %}
+<div class="product-details" itemscope itemtype="http://schema.org/ItemList">
+    <ul id="lightgallery" class="list-unstyled">
+      <li class="product-description" data-responsive="{{ product.images }}," data-src="{{ product.image }}" itemscope itemtype="http://schema.org/Product"
+        data-sub-html="<h4>{{ product.title }}</h4><p>{{ product.desc }}</p>" data-tweet-text="share on twitter">
         <div>
-            <a href="{{ site.baseurl }}{{ product.url }}" {% if item.inactive %}style="color: #777777; text-decoration: none; cursor: text;"{% endif %}>
-            <img src="/build/cart/beer/blank.png" class="product-thumbnail" style="width: 100%; background: url('https://images.weserv.nl/?url={{ site.url | replace: 'https://','' | replace: 'https://','' }}{{ product.images[0].image }}&w=500&h=350&output=jpg&q=50') center center no-repeat; background-size: cover;" />  
-            {{ product.subtitle }}<br />
-            {{ page.description_markdown | markdownify }}
-            {% if product.price > 0 %}&dollar; {{ integral }}.{{ fractional }}{% else %}free{% endif %}<br />&nbsp;
-            </a>
+          <a itemprop="url" data-iframe="true" data-src="{{ site.baseurl }}{{ product.url }}" href=""><img src="{{ product.image }}" itemprop="image" alt="{{ product.name }}" class="product-thumbnail image-responsive"/>
+          </a>
         </div>
-        {% endfor %}
-    </div>                     
-</div>
+        <div itemprop="name" class="text-center">{{ product.name }}</div>
+        <p itemprop="description" class="text-center">{{ product.description | markdownify }}</p>      
+        <div itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="numberOfItems">{{ product.stock }}</span>, Items
+          <span itemprop="priceCurrency" content="USD">Price $ </span><span itemprop="price" content="{{ product.price }}">{{ product.price }}</span>
+          <link itemprop="availability" href="http://schema.org/InStock" />In stock
+        </div>
+      <div class="text-center">
+      <button class="snipcart-add-item"
+      data-item-name="{{ product.name }}"
+      data-item-id="{{ product.sku }}"
+      data-item-image="{{ product.image }}"
+      data-item-description="{{ product.description }}"
+      data-item-custom1-name="Size"
+      data-item-custom1-options="{{ product.sizes | join: '|' }}"
+      data-item-custom1-value="Medium"
+      data-item-custom2-name="Colors"
+      data-item-custom2-options="{{ product.colors | join: '|' }}"
+      data-item-url="{{ site.baseurl }}{{ product.url }}"
+      data-item-price="{{ product.price }}">
+      Donate Now 
+      </button>
+      </div>
+    </li>
+  </ul>
+  </div>

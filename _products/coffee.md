@@ -5,7 +5,12 @@ subtitle: Buy me a Coffee
 description: A perfect coffee in the morning absolutely makes my day. Buy me a small one for a good start or a big one to keep going all day!
 name: Buy me a Coffee
 sku: Coffee
-image: /build/cart/covers/coffee-320.jpg
+image: /build/cart/covers/coffee-cover-320.jpg
+images: 
+  - /build/cart/covers/coffee-cover-320.jpg
+  - /build/cart/covers/coffee-cover-800.jpg
+  - /build/cart/covers/coffee-cover-1200.jpg
+  - /build/cart/covers/coffee-cover.jpg
 price: 2.50
 sizes:
   - tall

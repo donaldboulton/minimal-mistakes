@@ -22,8 +22,7 @@ sidebar:
     image: /build/photography/family-gallery/250 Maico 83.jpg
     image_alt: "Factory 250 Maico"
     text: "Factory 250 Maico"
-  - title: "Motocross the toughest sport"
-    text: "Had to do the most radical past time there is and that's Motocross - Supercross when I was young, everything else is wimpy."
+
 category:
   - Gallerys
 tags: [Gallery, Family]

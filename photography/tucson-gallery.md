@@ -18,14 +18,13 @@ adds: false
 cookies: false
 breadcrumb: true
 sidebar:
-  - title: "Epic Care"
-    image: /build/photography/tuscon-gallery/Epic-Cafe-2.jpg
+  - title: "Epic Cafe"
+    image: /build/photography/tuscon-gallery/Epic-Cafe.jpg
     image_alt: "Epic Cafe"
-    text: "Hun at 3 weaks"
-  - title: "Tucson 4 ave coffee shop."
-    text: "Hung out alot in Epic Care 4th Ave, worked at western drapery down the street."
+    text: "Hung out alot in Epic Cafe 4th Ave. I worked at Western Drapery down the street"
 category:
   - Gallerys
+
 tags: [Gallery, Tucson Az]  
 header:
   image: /build/photography/tucson-gallery/Epic-Cafe.jpg
@@ -36,6 +35,7 @@ locations:
 
 support: [gallery]
 ---
+
 # Tucson Az, 1997
 
 {% for gallery in site.photography %}

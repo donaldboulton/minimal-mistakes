@@ -7,6 +7,12 @@ description: I like beer a lot! IPA, Guinness, Stout, micro brews… Dead Guy Al
 author: Donald Boulton
 stock: 10
 image: /build/cart/covers/beer-cover-320.jpg
+images: 
+  - /build/cart/covers/beer-cover-320.jpg
+  - /build/cart/covers/beer-cover-800.jpg
+  - /build/cart/covers/beer-cover-1200.jpg
+  - /build/cart/covers/beer-cover.jpg
+
 subtitle: Buy me a beer
 garment_type: beer
 price: '2.75'

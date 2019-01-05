@@ -1,16 +1,24 @@
-<div class="product-details" itemscope itemtype="https://schema.org/ImageGallery">
-  <ul id="lightgallery">
-    <li class="product-description" data-responsive="{{ product.image }}" data-src="https://sachinchoolur.github.io/lightGallery/static/img/4-1600.jpg"
+<div class="product-details" itemscope itemtype="http://schema.org/ItemList">
+  <ul id="lightgallery" class="list-unstyled">
+    <li class="product-description" data-responsive="{{ product.images }}," data-src="{{ product.image }}" itemscope itemtype="http://schema.org/Product"
       data-sub-html="<h4>{{ product.title }}</h4><p>{{ product.desc }}</p>" data-tweet-text="share on twitter">
       <div>
-        <a href=""><img src="{{ product.image }}" itemscope itemtype="https://schema.org/ImageObject" alt="{{ product.name }}" class="product-thumbnail image-responsive"/>
-        <div class="demo-gallery-poster">
-          <img src="/build/images/zoom.png">
-        </div>
+        <a itemprop="url" data-iframe="true" data-src="{{ site.baseurl }}{{ product.url }}" href=""><img src="{{ product.image }}" itemprop="image" alt="{{ product.name }}" class="product-thumbnail image-responsive"/>
         </a>
       </div>
-      <div class="text-center">{{ product.name }}</div>
-    <p>Base Price $ {{ product.price }}</p>
+      <div itemprop="name" class="text-center">{{ product.name }}</div>
+      <p itemprop="description">{{ product.description | markdownify }}</p>      
+      <div itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="numberOfItems">{{ product.stock }}</span>, Items
+        <span itemprop="priceCurrency" content="USD">Price $ </span><span itemprop="price" content="{{ product.price }}">{{ product.price }}</span>
+        <link itemprop="availability" href="http://schema.org/InStock" />In stock
+      </div>
+      <div>Please Agree to Our <a href="https://donboulton.com/terms#purchases">Terms</a>&nbsp;<abbr class="abbr" title="Required">&nbsp;*&nbsp;</abbr></div>
+      <div class="enable-push">
+          <div class="toggle-switch">
+            <input aria-label="Terms and Conditions" id="options" name="options" type="checkbox" />
+            <label for="options"></label>
+          </div>
+        </div>
     <div class="text-center">
     <button class="snipcart-add-item"
     data-item-name="{{ product.name }}"
@@ -20,8 +28,8 @@
     data-item-custom1-name="Size"
     data-item-custom1-options="{{ product.sizes | join: '|' }}"
     data-item-custom1-value="Medium"
-    data-item-custom2-name="Color"
-    data-item-custom2-options="{{ product.color | join: '|' }}"
+    data-item-custom2-name="Colors"
+    data-item-custom2-options="{{ product.colors | join: '|' }}"
     data-item-url="{{ site.baseurl }}{{ product.url }}"
     data-item-price="{{ product.price }}">
     Donate Now 
