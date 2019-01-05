@@ -3,7 +3,7 @@
     <li class="product-description" data-responsive="{{ product.images }}," data-src="{{ product.image }}" itemscope itemtype="http://schema.org/Product"
       data-sub-html="<h4>{{ product.title }}</h4><p>{{ product.desc }}</p>" data-tweet-text="share on twitter">
       <div>
-        <a itemprop="url" data-iframe="true" data-src="{{ site.baseurl }}{{ product.url }}" href=""><img src="{{ product.image }}" itemprop="image" alt="{{ product.name }}" class="product-thumbnail image-responsive"/>
+        <a itemprop="url" data-iframe="true" data-src="{{ site.baseurl }}{{ product.url }}" href="{{ site.baseurl }}{{ product.url }}"><img src="{{ product.image }}" itemprop="image" alt="{{ product.name }}" class="product-thumbnail image-responsive"/>
         </a>
       </div>
       <div itemprop="name" class="text-center">{{ product.name }}</div>
@@ -30,6 +30,12 @@
     data-item-custom1-value="Medium"
     data-item-custom2-name="Colors"
     data-item-custom2-options="{{ product.colors | join: '|' }}"
+    data-item-custom3-name="Stock"
+    data-item-custom3-options="{{ product.stock }}"
+    data-cart-custom4-name="Do you accept our terms?"
+    data-cart-custom4-options="true|false"
+    data-cart-custom4-required="true"
+    data-item-quantity="1"
     data-item-url="{{ site.baseurl }}{{ product.url }}"
     data-item-price="{{ product.price }}">
     Donate Now 

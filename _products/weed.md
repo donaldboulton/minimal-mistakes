@@ -20,7 +20,22 @@ styles:
   - name: White
     color: '#ffffff'
     image: /build/cart/covers/white-widow-320.jpg 
-   
+sidenav: true
+side_react: true
+adds: true
+cookies: true
+catagory: true
+products: true
+breakcrumb: true
+sidebar:
+  - title: "Share"
+    image: /build/cart/covers/Share-Logo-320.jpg
+    image_alt: "Sharing Hands"
+    image_class: "author__avatar"
+    text: "Open Source Share"
+  - title: "Share with Cats"
+    text: "Cat food for 20 stray cats in OKC."
+support: [adds, cookies, cart]   
 stock: 10
 id: weed
 folder: _products

@@ -1,15 +1,19 @@
 ---
 layout: single
+sidenav: true
+side_react: true
+adds: true
+cookies: true
 ---
 
 <div class="product-details gallery-2-col">    
   <div itemscope itemtype="http://schema.org/Product"><img src="{{ page.image }}" alt="{{ page.name }}" class="product-thumbnail"/></div>  
   <div class="product-description">
-    <div itemprop="name" class="text-center">{{ product.name }}</div>
-    <p itemprop="description" class="text-center">{{ product.description | markdownify }}</p>      
-    <div itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="numberOfItems">{{ product.stock }}</span>, Items
-      <span itemprop="priceCurrency" content="USD">Price $ </span><span itemprop="price" content="{{ product.price }}">{{ product.price }}</span>
-      <link itemprop="availability" href="http://schema.org/InStock" />In stock
+    <div itemprop="name" class="text-center">{{ page.name }}</div>
+    <p itemprop="description" class="text-center">{{ page.description | markdownify }}</p>      
+    <div itemprop="offers" itemscope itemtype="http://schema.org/Offer"> Item
+      <span itemprop="priceCurrency" content="USD">Price $ </span><span itemprop="price" content="{{ page.price }}">{{ page.price }}</span>
+      <link itemprop="availability" href="http://schema.org/InStock" /><span itemprop="numberOfItems">{{ page.stock }}</span>, In stock
     </div>
     <div>Please Agree to Our <a href="https://donboulton.com/terms#purchases">Terms</a>&nbsp;<abbr class="abbr" title="Required">&nbsp;*&nbsp;</abbr></div>
 		<div class="enable-push">
@@ -22,16 +26,16 @@ layout: single
         <button class="snipcart-add-item"
         data-api-key="NDhkOWU1ZGQtNWQyZi00ZDVmLThmYmEtZDFiYmJhYzdmYTE3NjM2NjE0Nzc1OTQ2NzMzMTU5"
         data-item-name="{{ page.name }}"
-        data-item-id="{{ product.sku }}"
+        data-item-id="{{ page.sku }}"
         data-item-image="{{ page.image }}"
         data-item-description="{{ page.desc }}"
         data-item-custom1-name="Size"
-        data-item-custom1-options="{{ product.sizes | join: '|' }}"
+        data-item-custom1-options="{{ page.sizes | join: '|' }}"
         data-item-custom1-value="Medium"
         data-item-custom2-name="Colors"
-        data-item-custom2-options="{{ product.colors | join: '|' }}"
+        data-item-custom2-options="{{ page.colors | join: '|' }}"
         data-item-custom3-name="Stock"
-        data-item-custom3-options="{{ product.stock }}"
+        data-item-custom3-options="{{ page.stock }}"
         data-cart-custom4-name="Do you accept our terms?"
         data-cart-custom4-options="true|false"
         data-cart-custom4-required="true"

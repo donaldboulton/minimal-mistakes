@@ -29,7 +29,22 @@ colors:
   - name: Dark
     color: '000000'
     image: /build/cart/covers/german-dark-320.jpg
-
+sidenav: true
+side_react: true
+adds: true
+cookies: true
+catagory: true
+products: true
+breakcrumb: true
+sidebar:
+  - title: "Share"
+    image: /build/cart/covers/Share-Logo-320.jpg
+    image_alt: "Sharing Hands"
+    image_class: "author__avatar"
+    text: "Open Source Share"
+  - title: "Share with Cats"
+    text: "Cat food for 20 stray cats in OKC."
+support: [adds, cookies, cart]
 folder: _products
 id: beer
 loc: "/beer"
