@@ -1,0 +1,3 @@
+{
+  "query": "query { viewer { pinnedRepositories(first: 10) { edges { node { id name descriptionHTML url primaryLanguage { id name } owner { id login } } } } } }"
+}

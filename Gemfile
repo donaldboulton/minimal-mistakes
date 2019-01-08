@@ -19,5 +19,5 @@ group :jekyll_plugins do
   gem 'jekyll-typogrify'
   gem 'jekyll-tagging'
   gem 'jekyll-tagging-related_posts'
-
+  gem 'jeql'  
 end

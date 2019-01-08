@@ -307,6 +307,10 @@ permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
 timezone: America/Chicago
+jeql:
+  github:
+    url: "https://api.github.com/graphql"
+
 # Plugins (previously gems:)
 plugins:
   - posts_json
@@ -325,6 +329,7 @@ plugins:
   - notice
   - jemoji
   - json
+  - jeql
 
 # mimic GitHub Pages with --safe
 whitelist:
