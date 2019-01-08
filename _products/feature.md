@@ -12,7 +12,7 @@ styles:
 stock: 10
 sidenav: true
 side_react: true
-adds: true
+adds: false
 cookies: true
 catagory: true
 products: true

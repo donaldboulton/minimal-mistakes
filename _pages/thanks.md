@@ -22,7 +22,7 @@ header:
   image: /assets/images/support-1200.jpg
   teaser: /assets/images/support-320.jpg
   excerpt: "Sitemap of Posts"
-support: [cookies, anchor]
+support: [adds, cookies, anchor]
 adds: false
 toc: false
 sidenav: true

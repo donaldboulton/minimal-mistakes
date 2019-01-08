@@ -10,9 +10,9 @@ item_type: Weed
 price: 2.55
 sku: weed
 sizes:
-  - joint
-  - gram
-  - ounce
+  - joint [4.21]
+  - gram [21.11]
+  - ounce [400.11]
 styles:
   - name: Gold
     color: '#ffd700'
@@ -23,7 +23,7 @@ styles:
 stock: 100
 sidenav: true
 side_react: true
-adds: true
+adds: false
 cookies: true
 catagory: true
 products: true

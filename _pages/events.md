@@ -22,7 +22,7 @@ header:
 sidebar_events: true
 locations: 
   - Oklahoma City, OKC
-support: [cookies, events]
+support: [cookies, events, adds]
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_pages/events.md
 ---
 

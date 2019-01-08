@@ -10,6 +10,10 @@ catagory: true
 products: true
 cart: true
 breakcrumb: true
+side_react: true
+adds: false
+cookies: true
+stock: 20
 sidebar:
   - title: "Share"
     image: /build/cart/covers/Share-Logo-320.jpg

@@ -23,7 +23,9 @@ layout: compress
       {{ content }}
     </div>  
     <div class="text-center" role="note" itemscope itemtype="https://schema.org/WPAdBlock">
-      {% include footer-ad.html %}
+      {% if page.support contains 'adds' %}
+        {% include footer-ad.html %}
+      {% endif %}
     </div>
   </div>
   {% include to-top.html %}

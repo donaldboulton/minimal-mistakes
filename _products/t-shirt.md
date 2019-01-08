@@ -23,7 +23,7 @@ styles:
     image: /build/cart/covers/t-shirt-light-320.jpg
 sidenav: true
 side_react: true
-adds: true
+adds: false
 cookies: true
 catagory: true
 products: true

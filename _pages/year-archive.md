@@ -11,5 +11,5 @@ newsletters: true
 slack: true
 adds: true
 hotjar: true
-support: [adds]
+support: [adds, cookies]
 ---

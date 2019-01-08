@@ -13,7 +13,7 @@ reviews: false
 adds: true
 slack: true
 hotjar: true
-support: [adds]
+support: [adds, cookies]
 ---
 
 {% include month-archive.html %}
