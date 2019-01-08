@@ -1,12 +1,14 @@
 ---
 layout: productdetails
 title: "Cat Food"
-name: Buy Me Some Cat Food
+subtitle: Get the Cats some Food
+name: Feed the Kittys
 description: Buy the kittys some cat food. My cats like Blue Wilderness but most of the food I use Is Meow Mix for the stray cats and other critters that show up at feeding time.
 author: Donald Boulton
 sidenav: true
 catagory: true
 products: true
+cart: true
 breakcrumb: true
 sidebar:
   - title: "Share"
@@ -19,12 +21,13 @@ sidebar:
 support: [adds, cookies, cart]
 folder: _products
 image: /build/cart/covers/blue-wilderness-320.jpg
-garment_type:
+item_type: Cat Food
 price: '12.75'
 sizes:
-  - Small
-  - Medium
-  - Large
+  - Small [4.75]
+  - Medium [12.75]
+  - Large [25.25]
+
 styles:
   - name: Blue
     color: '#0000FF'
@@ -36,7 +39,6 @@ id: catfood
 folder: _products
 loc: "/catfood"
 sku: catfood
-desc: Get the Cats some Food
 private: false
 support: [adds, cookies, cart]
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_products/catfood.md

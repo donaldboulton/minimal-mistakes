@@ -2,19 +2,21 @@
 layout: productdetails
 title: Feature
 name: Sponsor a Feature
-subtitle: Sponsor a feature333333333
-description: You can sponsor a feature. I will not only give you an honorable mention on the site, but I will also let you suggest some additional functionalities of this feature.
+subtitle: Leave a review
+description: You can sponsor a feature. I will give you an honorable mention on the site Also suggest some additional functionalities of this feature.
 image: /build/cart/covers/World Code-320.jpg
 styles:
   - name: Black
     color: '#000000'
     image: /build/cart/covers/World Code-320.jpg
+stock: 10
 sidenav: true
 side_react: true
 adds: true
 cookies: true
 catagory: true
 products: true
+cart: true
 breakcrumb: true
 sidebar:
   - title: "Share"
@@ -25,7 +27,7 @@ sidebar:
   - title: "Share with Cats"
     text: "Cat food for 20 stray cats in OKC."
 support: [adds, cookies, cart]
-price: 150.00
+price: 150.25
 folder: _products
 loc: "/feature"
 desc: Sponsor a Feature

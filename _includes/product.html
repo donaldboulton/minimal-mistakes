@@ -1,11 +1,24 @@
 <div class="post">
 
-  <a class="product" href="{{ product.image }}">
+  <a class="product" href="{{ product.url }}">
     <img src="{{ product.image }}" alt="{{ product.name }}" class="product-thumbnail"/>
-    <p>{{ product.name }}</p>
+    <p class="text-center">{{ product.name }}</p>  
   </a>
-
+  <p class="text-left">{{ product.description | markdownify }}</p>
   <div class="form-group">{% include product-styles.html product=product %}</div>
-  <div class="form-group">{% include snipcart-button.html product=product %}</div>
+  <div class="form-group">
+    <button class="snipcart-add-item"
+    data-item-name="{{ product.name }}"
+    data-item-id="{{ product.sku }}"
+    data-item-image="{{ product.image }}"
+    data-item-description="{{ product.subtitle }}"
+    data-item-custom1-name="Size"
+    data-item-custom1-options="{{ product.sizes | join: '|' }}"
+    data-item-custom1-value="Medium"
+    data-item-url="{{ product.url }}"
+    data-item-price="{{ product.price }}">
+    Donate for $ {{ product.price }} 
+    </button>
+  </div>
 
 </div>

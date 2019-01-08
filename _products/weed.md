@@ -2,12 +2,12 @@
 layout: productdetails
 title: Weed
 name: Buy me some Weed
-subtitle: Buy me some Weed
-description: All products are just for testing. Share a big fatty blunt to puff on while I get lost in my digital box. Gods gift to man, it was made illegal because of its mind expanding and healing ability. A little weed every day to keep the doctor away. Had stage 4 liver destruction for 20 years, how do you think I am still alive.
+subtitle: At least Several J's a day
+description: Share a big fatty blunt to puff on while I get lost in my digital box. Gods gift to man, it was made illegal because of its mind expanding and healing ability.
 subtitle: Buy me a weed
 image:  /build/cart/covers/weed-320.jpg
-item_type:
-price: 2.50
+item_type: Weed
+price: 2.55
 sku: weed
 sizes:
   - joint
@@ -19,13 +19,15 @@ styles:
     image: /build/cart/covers/weed-320.jpg
   - name: White
     color: '#ffffff'
-    image: /build/cart/covers/white-widow-320.jpg 
+    image: /build/cart/covers/white-widow-320.jpg
+stock: 100
 sidenav: true
 side_react: true
 adds: true
 cookies: true
 catagory: true
 products: true
+cart: true
 breakcrumb: true
 sidebar:
   - title: "Share"
@@ -35,8 +37,7 @@ sidebar:
     text: "Open Source Share"
   - title: "Share with Cats"
     text: "Cat food for 20 stray cats in OKC."
-support: [adds, cookies, cart]   
-stock: 10
+support: [adds, cookies, cart]
 id: weed
 folder: _products
 loc: "/weed"

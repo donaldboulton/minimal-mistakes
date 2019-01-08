@@ -2,11 +2,11 @@
 layout: productdetails
 title: "T-Shirt"
 name: Buy Me A Jekyll T-Shirt
-subtitle: Buy me a t-shirt
+subtitle: Would really like one of these
 description: This awesome t-shirt is for sale at [zazzle.com](https://www.zazzle.com/jekyll_t_shirt-235672519224817294). I would really like to have it, but I do not allow myself to spent this much on a single t-shirt. Will you buy me one?
 image: /build/cart/covers/t-shirt-dark-320.jpg
-garment_type: shirt  
-price: 25.70
+item_type: shirt  
+price: 25.75
 stock: 10
 sku: t-shirt
 sizes:
@@ -27,6 +27,7 @@ adds: true
 cookies: true
 catagory: true
 products: true
+cart: true
 breakcrumb: true
 sidebar:
   - title: "Share"
