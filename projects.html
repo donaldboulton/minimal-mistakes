@@ -1,0 +1,19 @@
+---
+layout: page
+title: "Projects"
+sidebar_link: true
+---
+
+<div class="content">
+  <h2>OSS Contributions</h2>
+  <div class="projects">
+    {% graphql endpoint: "github", query: "pinned" %}
+      {% for repo in data["viewer"]["pinnedRepositories"]["edges"] %}
+        <div class="project">
+          <h4><a href="{{ repo['node']['url'] }}">{{ repo["node"]["owner"]["login"] }} / {{ repo["node"]["name"] }}</a></h4>
+          <p>{{ repo["node"]["descriptionHTML"] }}</p>
+        </div>
+      {% endfor %}
+    {% endgraphql %}
+  </div>
+</div>
