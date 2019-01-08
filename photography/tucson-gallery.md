@@ -19,7 +19,7 @@ cookies: false
 breadcrumb: true
 sidebar:
   - title: "Epic Cafe"
-    image: /build/photography/tuscon-gallery/Epic-Cafe.jpg
+    image: /build/photography/tuscon-gallery/Epic-Cafe-320.jpg
     image_alt: "Epic Cafe"
     text: "Hung out alot in Epic Cafe 4th Ave. I worked at Western Drapery down the street"
 category:

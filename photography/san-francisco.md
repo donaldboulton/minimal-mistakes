@@ -23,7 +23,7 @@ category:
 tags: [Gallery, San Francisco Ca] 
 sidebar:
   - title: "Golden Gate"
-    image: /build/photography/san-francisco-gallery/VS-2012-5948-2999x1999.jpg
+    image: /build/photography/san-francisco/VS-2012-5930-2999x1999.jpg
     image_alt: "Golden Gate Bridge"
     text: "Take a walk across this baby"
   - title: "Golden Gate Bridge"

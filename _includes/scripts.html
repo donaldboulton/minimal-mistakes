@@ -24,6 +24,25 @@
   {%- endcase -%}
 {% endif %}
 
+{% if page.cart == true %}
+<script async src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" id="snipcart" data-api-key="NDhkOWU1ZGQtNWQyZi00ZDVmLThmYmEtZDFiYmJhYzdmYTE3NjM2NjE0Nzc1OTQ2NzMzMTU5"></script>
+<script>
+function updatevariant(el,productname) {
+    var addtocart = $(el).val().split(' | ');
+    $('#shoppingcartbutton').attr('price',addtocart[1]);
+    $('.price').html("&dollar; " + addtocart[1]);
+    $('#shoppingcartbutton').attr('description',productname + ' ' + addtocart[0]);
+};
+Snipcart.execute('config', 'show_continue_shopping', true);
+</script>
+<script src="{{ '/public/style-picker.js' | relative_url }}"></script>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T2NFHJ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<script src="{{ '/public/snipcart.gtm.js' | relative_url }}"></script>
+{% endif %}
+
 {% if page.support contains 'gallery' %}
   <script src="{{ '/public/lightgallery.min.js' | relative_url }}"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
@@ -80,20 +99,6 @@
 
 {% if page.support contains 'validate' %}
 <script src="{{ '/public/validation.js' | relative_url }}"></script>
-{% endif %}
-
-{% if page.cart == true %}
-<script async src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" id="snipcart" data-api-key="NDhkOWU1ZGQtNWQyZi00ZDVmLThmYmEtZDFiYmJhYzdmYTE3NjM2NjE0Nzc1OTQ2NzMzMTU5"></script>
-<script>
-function updatevariant(el,productname) {
-    var addtocart = $(el).val().split(' | ');
-    $('#shoppingcartbutton').attr('price',addtocart[1]);
-    $('.price').html("&dollar; " + addtocart[1]);
-    $('#shoppingcartbutton').attr('description',productname + ' ' + addtocart[0]);
-};
-Snipcart.execute('config', 'show_continue_shopping', true);
-</script>
-<script src="{{ '/public/style-picker.js' | relative_url }}"></script>
 {% endif %}
 
 {% if page.support contains 'cookies' %}
