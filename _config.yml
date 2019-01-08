@@ -310,7 +310,8 @@ timezone: America/Chicago
 jeql:
   github:
     url: "https://api.github.com/graphql"
-
+    header:
+    Authorization: "a2f51fb5d47d7a04e5e0b4b83c229910007aea6b"
 # Plugins (previously gems:)
 plugins:
   - posts_json
