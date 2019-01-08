@@ -23,7 +23,9 @@ layout: compress
       {{ content }}
     </div>  
     <div class="text-center" role="note" itemscope itemtype="https://schema.org/WPAdBlock">
-      {% include footer-ad.html %}
+      {% if page.support contains 'adds' %}
+        {% include footer-ad.html %}
+      {% endif %}
     </div>
   </div>
   {% include to-top.html %}
@@ -33,5 +35,5 @@ layout: compress
     </footer>
   </div>  
   {% include scripts.html %}
-<script type="text/javascript" src="/assets/common-a84fbdb561de43ed2ed7.bundle.js" async></script><script type="text/javascript" src="/assets/app-a84fbdb561de43ed2ed7.bundle.js" async></script><script type="text/javascript" src="/assets/vendor-a84fbdb561de43ed2ed7.bundle.js" async></script></body>
+<script type="text/javascript" src="/assets/common-e4db2f21d10a826149cd.bundle.js" async></script><script type="text/javascript" src="/assets/app-e4db2f21d10a826149cd.bundle.js" async></script><script type="text/javascript" src="/assets/vendor-e4db2f21d10a826149cd.bundle.js" async></script></body>
 </html>
