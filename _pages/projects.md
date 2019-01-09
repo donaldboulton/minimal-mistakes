@@ -26,5 +26,3 @@ header:
   image: /assets/images/support-1200.jpg
   teaser: /assets/images/support-320.jpg
 ---
-
-{% include projects.html %}
