@@ -6,7 +6,7 @@ email: c1e68ec3dd3cc5dad0d017d2930b259c
 address: ''
 title: Testing staticman v2
 url: donaboulton.com
-description: >-
+description:
   Adding a review to my own page for site ratings count. Need rating count on
   multiple pages to get sum average
 product: website-tweaks
@@ -14,4 +14,4 @@ hidden: ''
 date: '2018-05-23T19:51:30.036Z'
 timestamp: 1527105090
 tags:
-  - creview-subscription
+  - review-subscription

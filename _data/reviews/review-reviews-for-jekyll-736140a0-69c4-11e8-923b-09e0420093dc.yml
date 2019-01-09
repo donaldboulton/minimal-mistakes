@@ -6,7 +6,7 @@ email: c1e68ec3dd3cc5dad0d017d2930b259c
 url: 'https://donboulton.com'
 address: ''
 title: Reviews for Jekyll
-description: >-
+description:
   Still trying looping over the reviews data file and pulling down reviews for
   that page. No much luck gets other pages reviews?
 product: reviews-for-jekyll
