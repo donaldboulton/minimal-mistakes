@@ -3,7 +3,7 @@ layout: productdetails
 title: Feature
 name: Sponsor a Feature
 subtitle: Leave a review
-description: Sponsor a feature. Giving you an honorable mention. Also suggest some additional functionalities of this feature.
+description: Sponsor a feature. Giving you an honorable mention. You can also suggest one or some additional functionalities of this feature.
 image: /build/cart/covers/World Code-320.jpg
 styles:
   - name: Black
