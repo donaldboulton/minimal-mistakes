@@ -7,7 +7,8 @@ cookies: true
 ---
 
 <div class="product-details gallery-2-col">    
-  <div itemscope itemtype="http://schema.org/Product"><img src="{{ page.image }}" alt="{{ page.name }}" class="product-thumbnail"/></div>  
+  <div itemscope itemtype="http://schema.org/Product">
+    <img itemprop="image" src="{{ page.image }}" alt="{{ page.name }}" class="product-thumbnail"/></div>  
   <div class="product-description">
     <div itemprop="name" class="text-center">{{ page.name }}</div>
     <p itemprop="description" class="text-center">{{ page.description | markdownify }}</p>      

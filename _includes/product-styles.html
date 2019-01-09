@@ -1,7 +1,12 @@
+{% assign colors = "" %}
+{% for style in include.product.styles %}
+	{% assign colors = colors | append: '|' | append: style.name %}
+{% endfor %}
+{% assign colors = colors | remove_first: '|' %}
 <div class="full-width">
 	<div class="form-group">
 		<select id="my-size" class="form-control full-width">                                                                                                            
-			<option value="small">Small</option>                            
+			<option value="{{ product.styles }}">Small</option>                            
 			<option value="medium">Medium</option>                            
 			<option value="large">Large</option>    
 			<option value="x-large">X-Large</option>   
