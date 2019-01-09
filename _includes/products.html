@@ -10,7 +10,7 @@
         <p itemprop="description" class="text-center">{{ product.description | markdownify }}</p>      
         <div itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="numberOfItems">{{ product.stock }}</span>, Items
           <span itemprop="priceCurrency" content="USD">Price $ </span><span itemprop="price" content="{{ product.price }}">{{ product.price }}</span>
-          <link itemprop="availability" href="http://schema.org/InStock" />In stock
+          <link itemprop="availability" href="https://schema.org/InStock" />In stock
         </div>
       <div class="text-center">
       <button class="snipcart-add-item"

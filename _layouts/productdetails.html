@@ -13,7 +13,7 @@ cookies: true
     <p itemprop="description" class="text-center">{{ page.description | markdownify }}</p>      
     <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
       <span itemprop="priceCurrency" content="USD">Price $ </span><span itemprop="price" content="{{ page.price }}">{{ page.price }},</span>
-      <link itemprop="availability" href="http://schema.org/InStock" />In stock&nbsp;<span itemprop="numberOfItems">{{ page.stock }}</span>&nbsp;- items
+      <link itemprop="availability" href="https://schema.org/InStock" />In stock&nbsp;<span itemprop="numberOfItems">{{ page.stock }}</span>&nbsp;- items
     </div>
   </div>
   <div class="form-group">{% include product-styles.html product=product %}</div>
