@@ -330,7 +330,6 @@ plugins:
   - notice
   - jemoji
   - json
-  - jeql
 
 # mimic GitHub Pages with --safe
 whitelist:
