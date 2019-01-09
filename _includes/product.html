@@ -1,6 +1,6 @@
 <div class="post" itemscope itemtype="http://schema.org/ItemList">
   <link itemprop="url" href="https://donboulton.com/products/" />
-  <meta itemprop="numberOfItems">6</meta>
+  <meta type="hidden" value="{{ product.stock }}" itemprop="numberOfItems">
   <div itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
   <a itemprop="url" class="product" href="{{ product.url }}">
     <img itemprop="image" src="{{ product.image }}" alt="{{ product.name }}" class="product-thumbnail"/>
@@ -8,12 +8,10 @@
   </a>
   <div class="text-left">{{ product.description | markdownify }}</div>
   <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-    <span itemprop="price">{{ product.price }}</span>
+    <span itemprop="price">Base Price:&nbsp;{{ product.price }}</span>
   </div>
   </div>
-  <div class="form-group">{% include product-styles.html product=product %}</div>
   <div class="form-group">
-
     <button class="snipcart-add-item"
     data-item-name="{{ product.name }}"
     data-item-id="{{ product.sku }}"

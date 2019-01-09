@@ -6217,7 +6217,10 @@ ul li.list-content,ul li.list-month {
 }
 
 .review-content {
-  padding-left: .3em;
+  padding: .3em;
+  background-color: transparent;
+  color: #fff;
+  border: thin solid #434040;
 }
 
 .reviews-notifications {
