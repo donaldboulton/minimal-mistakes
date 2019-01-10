@@ -149,4 +149,4 @@ products:
 
   name: "DWB Products"
   path: "_data/products"
-  requiredFields: ["name", "email", "review", "product"]
+  requiredFields: ["name", "review", "product"]

@@ -22,26 +22,38 @@ cookies: true
       <div>Please Agree to Our <a href="https://donboulton.com/terms#purchases">Terms</a>&nbsp;<abbr class="abbr" title="Required">&nbsp;*&nbsp;</abbr></div>
 		<div class="enable-push">
 				<div class="toggle-switch">
-					<input aria-label="Terms and Conditions" id="options" name="options" type="checkbox" />
-					<label for="options"></label>
+					<input aria-label="Terms and Conditions" id="terms" name="terms" type="checkbox" />
+					<label for="terms"></label>
 				</div>
 			</div>
-      <div class="form-group">    
-        <button class="snipcart-add-item"
+      <div class="form-group">
+          {% assign colors = "" %}
+          {% for style in include.product.styles %}
+            {% assign colors = colors | append: '|' | append: style.name %}
+          {% endfor %}
+          {% assign colors = colors | remove_first: '|' %}
+        <button class="snipcart-add-item" id="my-button"
         data-item-name="{{ page.name }}"
         data-item-id="{{ page.sku }}"
         data-item-image="{{ page.image }}"
         data-item-description="{{ page.desc }}"
+        data-item-url="{{ page.url }}"
         data-item-custom1-name="Size"
         data-item-custom1-options="{{ page.sizes | join: '|' }}"
         data-item-custom1-value="Medium"
-        data-item-url="{{ page.url }}"
+        data-item-custom2-name="Color"
+        data-item-custom2-options="{{ page.colors | join: '|' }}"
+        data-item-custom3-name="Stock"
+        data-item-custom3-options="{{ page.stock }}"
+        data-cart-custom4-name="terms"
+        data-cart-custom4-options="true|false"
+        data-cart-custom4-required="true"
+        data-item-quantity="1"
         data-item-price="{{ page.price }}">
         Donate for $ {{ page.price }} 
         </button>
       </div>
   </div>
 </div>  
-
 <div class=clear-both></div>
 {% include product-reviews.html %}
