@@ -13,7 +13,7 @@
       (Rating Average: {{ sum | round: 1 }})
     {% endif %}
   </h3>
-  <form class="js-form form" method="POST" action="https://api.staticman.net/v2/entry/donaldboulton/DWB/gh-pages/products">
+  <form class="js-form form" method="POST" action="https://dev.staticman.net/v3/entry/github/donaldboulton/DWB/gh-pages/products">
     <input name="fields[product]" type="hidden" value="{{ page.slug }}" />
     <input name="options[redirect]" type="hidden" value="{{site.url}}{{site.baseurl}}{{ page.url }}" />
     <h4>Add a review</h4>

@@ -136,7 +136,7 @@ products:
   branch: "gh-pages"
   commitMessage: "Add Review from {fields.name}"
 
-  filename: "review-{fields.product}-{@id}"
+  filename: "review-{fields.products}-{@id}"
   format: "yaml"
 
   generatedFields:
