@@ -32,15 +32,27 @@
               <input type="hidden" id="comment-post-id" name="options[slug]" value="{{ page.slug }}">
               <input type="hidden" name="options[reCaptcha][siteKey]" value="6LdjemEUAAAAAElWvXeLBlksiR83cZvXB2d9ZDmF">
               <input type="hidden" name="options[reCaptcha][secret]" value="6LdjemEUAAAAAFk9H9kg9agjERxDZdUSbXK65M8_">
-              <div>Please Agree to Our <a class="external-links" href="https://donboulton.com/terms">Terms and Conditions</a>&nbsp;<abbr class="abbr" title="Required">&nbsp;*&nbsp;</abbr></div>
+            <div class="gallery-col-2">
+              <div>Agree to Our <a class="external-links" href="https://donboulton.com/terms">Terms</a>&nbsp;<abbr class="abbr" title="Required">&nbsp;*&nbsp;</abbr></div>
               <div class="form-group">
                 <div class="enable-push">
                   <div class="toggle-switch">
-                    <input aria-label="Terms and Conditions" id="terms" name="terms" value="terms" type="checkbox" required />
+                    <input aria-label="Terms and Conditions" id="terms" name="options[terms]" value="terms" type="checkbox">
                     <label for="terms"></label>
                   </div>
                 </div>
               </div>
+              <div class="notify-me">
+                <div>Send me an email when someone comments.</div> 
+                <div class="enable-push">
+                    <div class="toggle-switch">               
+                    <input type="checkbox" id="comment-form-reply" name="options[subscribe]" value="email">
+                    <label for="comment-form-reply">
+                  </div>
+                </div>
+              </div>
+            </div>
+
               <div class="g-recaptcha" data-theme="dark" data-sitekey="6LdjemEUAAAAAElWvXeLBlksiR83cZvXB2d9ZDmF"></div>
             <div class="form-group">
                 <button type="submit" id="comment-form-submit" class="btn btn--primary submit-button" name="comment-form-submit" value="Submit Comment">Submit Comment</button>
