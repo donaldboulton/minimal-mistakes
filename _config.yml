@@ -215,6 +215,9 @@ backend:
   name: git-gateway
   branch: gh-pages # Branch to update (master by default)
 
+# Staticman comments
+staticmanUrl: https://dev.staticman.net/v3/entry/githb/donaldboulton/DWB/gh-pages/comments
+
 extlinks:
   attributes: {rel: noreferrer, target: _blank}
   rel_exclude: ['facebook.com', 'twitter.com']

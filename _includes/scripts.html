@@ -41,6 +41,7 @@ Snipcart.execute('config', 'show_continue_shopping', true);
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <script src="{{ '/public/snipcart.gtm.js' | relative_url }}"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 {% endif %}
 
 {% if page.support contains 'gallery' %}
@@ -509,6 +510,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 {% if page.comments == true %}
   <script src="{{ '/build/js/staticman/staticman-comments-reply.js' | relative_url }}"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 {% endif %}
 
 {% if page.reviews == true %}
