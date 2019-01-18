@@ -91,7 +91,6 @@ h1 {
 .App-logo {
   animation: a infinite 20s linear;
   height: 80px;
-  text-align: center;
 }
 
 @keyframes App-logo-spin {
@@ -124,12 +123,12 @@ h1 {
 .AppCentermain,.notifyCenter {
   max-width: 230px;
   margin: 0 auto;
-  text-align: center;
   position: relative;
 }
 
 .notifyCenter {
   min-height: 80px;
+  text-align: center;
 }
 
 .external-links{

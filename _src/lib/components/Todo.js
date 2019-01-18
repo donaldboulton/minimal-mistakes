@@ -31,13 +31,13 @@ class Todo extends Component {
   render() {
     return (
       <div className="AppCenter">
-      <img src={logo} className="App-logo" alt="logo" />
+      <img src={logo} className="App-logo align-center" alt="logo" />
        <h3 className="Appheader"> TODO-LIST </h3>
        <div className='AppCentermain'>
         <form className="App notify-center" onSubmit={this.onSubmit}>
           <input placeholder="add task" value={this.state.term} onChange={(e) => this.onChange(e.target.value)}
           className="inputField"/>
-          <button className="btn btn--primary">Add</button>
+          <button className="btn btn--primary notifyCenter">Add</button>
         </form>
         <List items={this.state.items}  onDeleteList={this.onDelete}/>
         <div className="bottom-outer">
