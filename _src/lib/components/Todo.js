@@ -37,7 +37,7 @@ class Todo extends Component {
         <form className="App notify-center" onSubmit={this.onSubmit}>
           <input placeholder="add task" value={this.state.term} onChange={(e) => this.onChange(e.target.value)}
           className="inputField"/>
-          <button className="btn btn--primary notifyCenter">Add</button>
+          <button className="btn btn--primary text-center">Add</button>
         </form>
         <List items={this.state.items}  onDeleteList={this.onDelete}/>
         <div className="bottom-outer">
