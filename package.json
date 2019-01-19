@@ -99,6 +99,7 @@
   },
   "dependencies": {
     "a11y-dialog": "^5.2.0",
+    "a11y-toggle": "^2.1.0",
     "default-passive-events": "^1.0.10",
     "graphql": "^14.0.2",
     "jquery-smooth-scroll": "^2.2.0",

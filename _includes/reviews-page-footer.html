@@ -1,6 +1,6 @@
 <div>
-  <button id="collapsible" class="collapsible btn btn--light-outline full-width">Reviews&nbsp;&rarr;</button>    
-  <div class="content">
+  <button data-a11y-toggle="reviewscontent" class="btn btn--light-outline full-width">Reviews&nbsp;&rarr;</button>    
+  <div id="reviewscontent" class="collapsible-box">
    <div id="reviews" class="entry-reviews">
     {% if site.data.reviews[page.slug] %}
     {% assign reviews = site.data.reviews | where:'product',page.slug %}
