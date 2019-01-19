@@ -6375,7 +6375,7 @@ svg {
   padding: 2px;
   width: 60px;
   height: 34px;
-  background-color: #ddd;
+  background-color: #e90606;
   border-radius: 30px;
   transition: background .4s;
   box-sizing: border-box;
@@ -6402,7 +6402,7 @@ svg {
   left: 4px;
   bottom: 4px;
   width: 26px;
-  background-color: #ddd;
+  background-color: #c3c3c3;
   border-radius: 22px;
   transition: margin .4s,background .4s;
 }
