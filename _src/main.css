@@ -49,7 +49,7 @@ h3 button {
 }
 
 h3 button:focus svg {
-  outline: 1px solid;
+  outline: none;
 }
 
 button svg {
@@ -375,7 +375,26 @@ dialog::backdrop {
   border: 1px solid #141010;
   color: #fff;
   float: right;
-  font-size: 1.5em;
+  font-size: 1em;
+}
+
+#my-accessible-dialog button:hover {
+  background-color: #00c100;
+  border: 1px solid #00c100;
+  border-radius: 50%;
+  color: #fff;
+  float: right;
+  outline: none;
+  font-size: 1em;
+}
+
+#my-accessible-dialog button:focus {
+  background-color: #00c100;
+  border: 1px solid #00c100;
+  border-radius: 50%;
+  color: #fff;
+  float: right;
+  outline: none;
 }
 
 .closeButton {
@@ -812,7 +831,7 @@ dialog::backdrop {
 }
 
 a:focus,button:focus {
-  border-color: transparent!important;
+  border-color: #00c100!important;
 }
 
 *,html {
@@ -2378,7 +2397,7 @@ td,th,tr {
 }
 
 .greedy-nav a:hover {
-  color: #ccc5c9;
+  color: #00c100!important;
 }
 
 .greedy-nav a.site-title {
