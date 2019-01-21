@@ -113,6 +113,7 @@
     "react-dom": "^16.5.2",
     "react-snipcart": "^0.1.6",
     "react-web-notification": "^0.3.2",
+    "react-webworker": "^2.1.0",
     "request": "^2.88.0",
     "svg4everybody": "^2.1.9"
   },
