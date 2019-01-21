@@ -125,9 +125,3 @@ function submitEmail(email) {
     });
 }
 
-myWorker.addEventListener('message', function(e) {
-  console.log('Message from Worker: ' + e.data);
-}
-
-myWorker.postMessage("Hello World");
-
