@@ -4,11 +4,11 @@ import AppNotify from './lib/components/AppNotify';
 import Dialog from './lib/components/Dialog';
 import myWorker from 'worker-loader!./workers/Workers';
 
-myWorker.addEventListener('message', function(e) {
-  console.log('Message from Worker: ' + e.data);
-}
+myWorker.onmessage = function(event) {  
+  console.log("worker returned " + event.data);
+};
 
-myWorker.postMessage('Hello World');
+myWorker.postMessage("Init Message");
 class App extends React.Component {
   render() {
     return (
