@@ -104,6 +104,10 @@ module.exports = {
       {
         test: require.resolve("svg4everybody"),
         loader: "imports-loader?this=>window"
+      },
+      {
+        test: /\.worker\.js$/,
+        use: [{ loader: "worker-loader", options: { publicPath: "/src/workers/" } }]
       }
     ],
   },

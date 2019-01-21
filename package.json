@@ -83,9 +83,9 @@
     "regenerator-runtime": "^0.12.1",
     "rimraf": "^2.6.2",
     "sass-loader": "^6.0.6",
+    "script-ext-html-webpack-plugin": "^2.0.1",
     "slash": "^1.0.0",
     "slug": "^0.9.1",
-    "script-ext-html-webpack-plugin": "^2.0.1",
     "source-map-loader": "^0.2.4",
     "standard": "^12.0.1",
     "style-loader": "^0.18.2",
@@ -95,7 +95,9 @@
     "webpack-bundle-analyzer": "^2.13.1",
     "webpack-merge": "^4.1.0",
     "webpack-plugin-critical": "^1.0.0",
-    "webpack-pwa-manifest": "^3.1.6"
+    "webpack-pwa-manifest": "^3.1.6",
+    "worker-loader": "^2.0.0",
+    "workerize-loader": "^1.0.4"
   },
   "dependencies": {
     "a11y-dialog": "^5.2.0",
