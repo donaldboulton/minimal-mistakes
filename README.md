@@ -1,4 +1,4 @@
-# [Don Boulton version Of: MMistakes with React Webpack & Netlify CMS](https://donboulton.com)
+# [Don Boulton version Of: MMistakes with React Webpack & Netlify Identity Widget with a Netlify CMS - GraphQL Backend](https://donboulton.com)
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/donaldboulton/DWB)
 
@@ -10,6 +10,41 @@
 [![Jekyll](https://img.shields.io/badge/jekyll-%3E%3D%203.6-blue.svg)](https://jekyllrb.com/)
 [![Tip Me via PayPal](https://img.shields.io/badge/PayPal-tip%20me-green.svg?logo=paypal)](https://www.paypal.me/donaldboulton)
 [![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/?t=fa5cdbee-00bf-4ca8-be8f-f150a6f643e1)
+
+## Authentication
+
+## Netlify Identity Widget
+
+A component used to authenticate with Netlify's Identity service.
+[Live demo](https://identity.netlify.com)
+
+For a lower level library to the underlying [GoTrue](https://github.com/netlify/gotrue) API, see
+[gotrue-js](https://github.com/netlify/gotrue-js).
+
+### What is Netlify Identity
+
+Netlify’s Identity service is a plug-and-play microservice for handling site
+functionalities like signups, logins, password recovery, user metadata, and
+roles. You can use it from single page apps instead of rolling your own, and
+integrate with any service that understands JSON Web Tokens (JWTs).
+
+Learn more about this service from this
+[blog post](https://www.netlify.com/blog/2017/09/07/introducing-built-in-identity-service-to-streamline-user-management/).
+
+donboulton.com uses a custom Webpack Preact build of the Netlify Identity Widget found in this repo.
+
+## GrapnQL Backend
+
+{% include graphql-backend.html %}
+
+## Netlify CMS Backend
+
+This donboulton.com website is a static website but has a administration backend through Netlify CMS.
+Adding custom notifications, events, contacts and updates to Netlify CMS _config.yml
+
+Users that register on this site will be added to My Netlify Contacts, Using Zapper to zap users data to Google Contacts, and to my event calendars and zapped to back my repo for a saved locally contacts.json data file which hashes email addresses and other personal for site and Users security.
+
+Events will be displayed on my [events calendar](https://donboulton.com/events/) calendar.
 
 ## Adding React Components
 
@@ -236,7 +271,7 @@ npm run clean:project
 
 ## Known issues
 
-* Jekyll watch doesn't reload / rebuild when a translation file is updated inside `_i18n` folder, I recommand to remove `jekyll-multiple-languages-plugin` if you don't want a multi language website and if you want to watch / rebuild faster. Otherwise close and start  `npm run start` to rebuild and see your changes from `_i18n`
+* Jekyll watch doesn't reload / rebuild when a translation file is updated inside `_i18n` folder, I recommend to remove `jekyll-multiple-languages-plugin` if you don't want a multi language website and if you want to watch / rebuild faster. Otherwise close and start  `npm run start` to rebuild and see your changes from `_i18n`
 * The critical CSS Path may show some weird behavior when the page is loading that is why there are separated npm scripts
 
 ## Websites using Jekyll Webpack Boilerplate
@@ -256,33 +291,6 @@ npm run clean:project
 * [Jekyll SEO tag](https://github.com/jekyll/jekyll-seo-tag)
 * [BrowserSync Webpack plugin](https://www.npmjs.com/package/browser-sync-webpack-plugin)
 * [PostCSS](https://www.w3.org/2000/svgpostcss.org/)
-
-## Netlify Identity Widget
-
-A component used to authenticate with Netlify's Identity service.
-[Live demo](https://identity.netlify.com)
-
-For a lower level library to the underlying [GoTrue](https://github.com/netlify/gotrue) API, see
-[gotrue-js](https://github.com/netlify/gotrue-js).
-
-## What is Netlify Identity
-
-Netlify’s Identity service is a plug-and-play microservice for handling site
-functionalities like signups, logins, password recovery, user metadata, and
-roles. You can use it from single page apps instead of rolling your own, and
-integrate with any service that understands JSON Web Tokens (JWTs).
-
-Learn more about this service from this
-[blog post](https://www.netlify.com/blog/2017/09/07/introducing-built-in-identity-service-to-streamline-user-management/).
-
-## Netlify CMS
-
-This donboulton.com website is a static website but has a administration backend through Netlify CMS.
-Adding custom notifications, events, contacts and updates to Netlify CMS _config.yml
-
-Users that register on this site will be added to My Netlify Contacts, Using Zapper to zap users data to Google Contacts, and to my event calendars and zapped to back my repo for a saved locally contacts.json data file which hashes email addresses and other personal for site and Users security.
-
-Events will be displayed on my [events calendar](https://donboulton.com/events/) calendar.
 
 ## Credits
 
