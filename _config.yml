@@ -216,7 +216,7 @@ backend:
   branch: gh-pages # Branch to update (master by default)
 
 # Staticman comments
-staticmanUrl: https://dev.staticman.net/v3/entry/githb/donaldboulton/DWB/gh-pages/comments
+staticmanUrl: https://dev.staticman.net/v3/entry/githb/donaldboulton/DWB/gh-pages/reviews
 
 extlinks:
   attributes: {rel: noreferrer, target: _blank}
@@ -328,7 +328,6 @@ plugins:
   - jekyll-tagging
   - jekyll-tagging-related_posts
   - jekyll-redirect-from
-  - jekyll-algolia
   - lazyload
   - notice
   - jemoji
@@ -347,8 +346,6 @@ whitelist:
   - jekyll-tagging
   - jekyll-tagging-related_posts
   - jekyll-redirect-from
-  - jekyll-algolia  
-  - jekyll-webmention_io
   - lazyload
   - notice
   - jemoji

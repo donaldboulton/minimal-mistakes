@@ -195,3 +195,9 @@ if ('serviceWorker' in navigator) {
     console.log('Service worker successfully registered on scope', registration.scope);
   });
 }
+
+{
+  user(login: "username") {
+      avatarUrl;
+  }
+}
