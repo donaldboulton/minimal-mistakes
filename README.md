@@ -37,12 +37,26 @@ donboulton.com uses a custom Webpack Preact build of the Netlify Identity Widget
 
 {% include graphql-backend.html %}
 
+![endpoint](http://i.imgur.com/cYFsaQs.png)
+
+### 2. Retrieve GitHub Access Token
+**!Important**: 👉 To get access to the GitHub early access GraphQL API, fill out the [prerelease agreement](https://github.com/prerelease/agreement)
+
+You will need a GitHub access token to access the repository data
+fetching portion of this app. You can find [instructions on how to retrieve one](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/) on GitHub.
+
+![token-example](http://i.imgur.com/TAvrse9.png)
+
+Be sure to allow access to your user information when creating your token.
+
+![token-options](http://i.imgur.com/WefKl5c.png)
+
 ## Netlify CMS Backend
 
 This donboulton.com website is a static website but has a administration backend through Netlify CMS.
 Adding custom notifications, events, contacts and updates to Netlify CMS _config.yml
 
-Users that register on this site will be added to My Netlify Contacts, Using Zapper to zap users data to Google Contacts, and to my event calendars and zapped to back my repo for a saved locally contacts.json data file which hashes email addresses and other personal for site and Users security.
+Users that register on this site will be added to My Netlify Contacts, Using Zapper to zap users data to Google Contacts, and to my event calendars and zapped to back my repo for a saved locally contacts.json data file which hashes email addresses and other personal data for site and Users security.
 
 Events will be displayed on my [events calendar](https://donboulton.com/events/) calendar.
 

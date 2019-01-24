@@ -15,5 +15,5 @@ for = "/assets/*"
 [headers.values]
 Cache-Control = "public, max-age=31536000"
 [template.environment]
-  GRAPHCOOL_ENDPOINT = "enter url to GraphQL endpoint here"
-  GITHUB_TOKEN = "a2f51fb5d47d7a04e5e0b4b83c229910007aea6b"
+  GRAPHCOOL_ENDPOINT = "https://api.graph.cool/simple/v1/cjr7z998d9inc0130oy2uxsif"
+  GITHUB_TOKEN = "SdOnyq2urAzLA7/ZQ0T6ZY/m+FuL5P5E4tZNzmYL+8desOsmOwGfaz/qEycNrer9aCYkuyTjyx3vxH2aF3ShCYoIKgEzEEcDHVgWJ4yBTXj5LB7Hic9Q7VW3atIVLqr659LvG2LFGksfZC1nrVa9EoxjOZNFSBr5VxJc1mMTwfM="

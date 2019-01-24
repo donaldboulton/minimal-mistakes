@@ -7,6 +7,8 @@ const client = new ApolloClient({
   uri: "/.netlify/functions/graphql-users"
 });
 
+self.addEventListener('message', (event) => console.log(event)) 
+
 const LambdaDemo = () => (
   <ApolloProvider client={client}>
     <Query
