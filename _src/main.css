@@ -93,6 +93,11 @@ h1 {
   height: 80px;
 }
 
+.App-logo-spin {
+  animation: a infinite 20s linear;
+  height: 80px;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
@@ -233,8 +238,8 @@ dialog {
   top: 70px!important;
   left: 0;
   right: 0;
-  width: 70%;
-  height: 50%;
+  width: 80%;
+  height: 70%;
   transform: none;
   overflow: auto;
 }
