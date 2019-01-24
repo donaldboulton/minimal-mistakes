@@ -18,6 +18,7 @@ class App extends React.Component {
         <Todo />
         <AppNotify />        
         <Dialog />
+        <Worker />
       </div>
     );
   }
