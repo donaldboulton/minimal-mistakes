@@ -14,9 +14,9 @@ class LambdaDemo extends Component {
     render() {
       return (
         <div className="AppCenter">
-          <header className="App-header">
+          <header className="Appheader">
             <img src={apollo} className="App-logo align-center" alt="logo" />
-            <h1 className="Appheader">GraphQL Lambda</h1>
+            <h3 className="Appheader">GraphQL Lambda</h3>
           </header>
           <p className="App-intro">
             Netlify Functions
