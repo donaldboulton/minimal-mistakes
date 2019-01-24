@@ -13,7 +13,11 @@ X-XSS-Protection = "1; mode=block"
 [[headers]]
 for = "/assets/*"
 [headers.values]
-Cache-Control = "public, max-age=31536000"
+    Cache-Control = "public, max-age=31536000"
+[[headers]]
+for = "/serviceworker.js"
+[headers.values]
+    cache-control = "max-age=0,no-cache,no-store,must-revalidate"
 [template.environment]
   GRAPHCOOL_ENDPOINT = "https://api.graph.cool/simple/v1/cjr7z998d9inc0130oy2uxsif"
   GITHUB_TOKEN = "SdOnyq2urAzLA7/ZQ0T6ZY/m+FuL5P5E4tZNzmYL+8desOsmOwGfaz/qEycNrer9aCYkuyTjyx3vxH2aF3ShCYoIKgEzEEcDHVgWJ4yBTXj5LB7Hic9Q7VW3atIVLqr659LvG2LFGksfZC1nrVa9EoxjOZNFSBr5VxJc1mMTwfM="
