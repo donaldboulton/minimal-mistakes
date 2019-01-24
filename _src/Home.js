@@ -10,7 +10,7 @@ worker.onmessage = function (event) {};
  
 worker.addEventListener("message", function (event) {});
 
-class LambdaWorker extends Component {
+class Home extends Component {
     render() {
       return (
         <div className="AppCenter">
@@ -18,12 +18,12 @@ class LambdaWorker extends Component {
             <img src={apollo} className="App-Logo align-center" alt="logo" />
             <h3 className="Appheader">GraphQL Lambda</h3>
           </header>
-          <p className="App-intro">
-            Netlify Functions
+          <p className="AppCentermain">
+          <Worker />
           </p>          
         </div>
       );
     }
   }
   
-  ReactDom.render(<LambdaWorker />, document.getElementById('graph'));
+  ReactDom.render(<Home />, document.getElementById('graph'));
