@@ -60,25 +60,25 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 226);
+/******/ 	return __webpack_require__(__webpack_require__.s = 680);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 10:
+/***/ 15:
 /***/ (function(module, exports) {
 
 module.exports = require("https");
 
 /***/ }),
 
-/***/ 226:
+/***/ 680:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var https = __webpack_require__(10);
+var https = __webpack_require__(15);
 
 exports.handler = function (event, context, callback) {
     var body = JSON.parse(event.body);

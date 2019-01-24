@@ -60,63 +60,28 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 434);
+/******/ 	return __webpack_require__(__webpack_require__.s = 678);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 25:
-/***/ (function(module, exports) {
-
-module.exports = require("querystring");
-
-/***/ }),
-
-/***/ 434:
+/***/ 678:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _querystring = __webpack_require__(25);
-
-exports.handler = (event, context, callback) => {
-  let body = {};
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.handler = handler;
+function handler(event, context, callback) {
   console.log(event);
-  try {
-    body = JSON.parse(event.body);
-  } catch (e) {
-    body = (0, _querystring.parse)(event.body);
-  }
-
-  if (!body.email) {
-    return callback(null, {
-      statusCode: 400,
-      body: JSON.stringify({
-        error: 'missing email'
-      })
-    });
-  }
-
-  if (event.headers['content-type'] === 'application/x-www-form-urlencoded') {
-
-    return callback(null, {
-      statusCode: 302,
-      headers: {
-        Location: '/thanks.html',
-        'Cache-Control': 'no-cache'
-      },
-      body: JSON.stringify({})
-    });
-  }
-
-  return callback(null, {
+  callback(null, {
     statusCode: 200,
-    body: JSON.stringify({
-      emailAdded: true
-    })
+    body: JSON.stringify({ msg: "Hello, World!" })
   });
-};
+}
 
 /***/ })
 
