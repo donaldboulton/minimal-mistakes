@@ -15,7 +15,7 @@ class LambdaDemo extends Component {
       return (
         <div className="AppCenter">
           <header className="Appheader">
-            <img src={apollo} className="App-logo align-center" alt="logo" />
+            <img src={apollo} className="align-center" alt="logo" />
             <h3 className="Appheader">GraphQL Lambda</h3>
           </header>
           <p className="App-intro">
