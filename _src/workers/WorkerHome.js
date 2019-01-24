@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ReactDom from 'react-dom';
 import apollo from "./apollo.svg";
-import Worker from 'worker-loader!./workers/Worker';
+import Worker from 'worker-loader!./Worker';
 
 const worker = new Worker();
  
