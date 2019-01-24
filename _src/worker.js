@@ -10,7 +10,7 @@ const client = new ApolloClient({
   uri: "/.netlify/functions/graphql-users"
 });
 
-const LambdaDemo = () => (
+const App = () => (
   <ApolloProvider client={client}>
     <Query
       query={gql`
@@ -24,4 +24,4 @@ const LambdaDemo = () => (
   </ApolloProvider>
 );
 
-export default LambdaDemo;
+export default App;

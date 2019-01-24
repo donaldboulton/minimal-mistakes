@@ -3,7 +3,7 @@ import Todo from './lib/components/Todo';
 import AppNotify from './lib/components/AppNotify';
 import "babel-polyfill";
 import Dialog from './lib/components/Dialog';
-import Worker from './Workers/WorkerHome';
+import Worker from './WorkerHome';
 class App extends React.Component {
   render() {
     return (
