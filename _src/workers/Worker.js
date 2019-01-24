@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ReactDom from 'react-dom';
 import ApolloClient, { gql } from "apollo-boost";
 import { ApolloProvider, Query } from "react-apollo";
 
@@ -7,22 +8,7 @@ import apollo from "./apollo.svg";
 const client = new ApolloClient({
   uri: "/.netlify/functions/graphql-users"
 });
-
-const LambdaDemo = () => (
-  <ApolloProvider client={client}>
-    <Query
-      query={gql`
-        {
-          hello
-        }
-      `}
-    >
-      {({ data }) => <div>A greeting from the server: {data.hello}</div>}
-    </Query>
-  </ApolloProvider>
-);
-
-class App extends Component {
+class LambdaDemo extends Component {
   render() {
     return (
       <div className="AppCenter">
@@ -33,10 +19,25 @@ class App extends Component {
         <p className="App-intro">
           Netlify Functions
         </p>
-        <LambdaDemo />
+        const ApolloClient = () => (
+        <ApolloProvider client={client}>
+        <Query
+          query={gql`
+            {
+              hello
+            }
+          `}
+        >
+          {({ data }) => <div>A greeting from the server: {data.hello}</div>}
+        </Query>
+      </ApolloProvider>
+      );
       </div>
     );
   }
 }
 
-export default App;
+ReactDOM.render(
+  <LambdaDemo />,
+  document.getElementById('graph')
+)
