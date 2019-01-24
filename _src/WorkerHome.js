@@ -10,12 +10,12 @@ worker.onmessage = function (event) {};
  
 worker.addEventListener("message", function (event) {});
 
-class LambdaDemo extends Component {
+class LambdaWorker extends Component {
     render() {
       return (
         <div className="AppCenter">
           <header className="Appheader">
-            <img src={apollo} className="align-center" alt="logo" />
+            <img src={apollo} className="App-Logo align-center" alt="logo" />
             <h3 className="Appheader">GraphQL Lambda</h3>
           </header>
           <p className="App-intro">
@@ -26,4 +26,4 @@ class LambdaDemo extends Component {
     }
   }
   
-  ReactDom.render(<LambdaDemo />, document.getElementById('graph'));
+  ReactDom.render(<LambdaWorker />, document.getElementById('graph'));

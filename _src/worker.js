@@ -10,7 +10,7 @@ const client = new ApolloClient({
   uri: "/.netlify/functions/graphql-users"
 });
 
-const App = () => (
+const Worker = () => (
   <ApolloProvider client={client}>
     <Query
       query={gql`
@@ -24,4 +24,4 @@ const App = () => (
   </ApolloProvider>
 );
 
-export default App;
+export default Worker;

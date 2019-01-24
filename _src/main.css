@@ -94,14 +94,14 @@ h1 {
 }
 
 .App-logo-spin {
-  animation: a infinite 20s linear;
-  height: 80px;
+  animation: spin infinite 20s linear;
+  animation: App-logo-spin infinite 20s linear;
 }
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
-}
+}  
 
 .App-header {
   background-color: #222;
@@ -384,8 +384,8 @@ dialog::backdrop {
 }
 
 #my-accessible-dialog button:hover {
-  background-color: #00c100;
-  border: 1px solid #00c100;
+  background-color: #141010;
+  border: 1px solid #141010;
   border-radius: 50%;
   color: #fff;
   float: right;
