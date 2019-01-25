@@ -33,13 +33,16 @@ Learn more about this service from this
 
 donboulton.com uses a custom Webpack Preact build of the Netlify Identity Widget found in this repo.
 
-## GrapnQL Backend
+## GraphQL Backend
 
-{% include graphql-backend.html %}
+[](href="https://raw.githubusercontent.com/donaldboulton/DWB/gh-pages/types.graphql" rel="nofollow"><img src="https://camo.githubusercontent.com/f340241ecd8a23f3583494d0b883ad0ea488ea3f/687474703a2f2f7374617469632e67726170682e636f6f6c2f696d616765732f6772617068716c2d75702e737667" alt="graphql-up" data-canonical-src="http://static.graph.cool/images/graphql-up.svg")
+
+Setup your GraphQL backend using the <em>graphql-up</em> button at the top of this section. Once your backend is created in Graphcool, copy your GraphQL enpoint using the enpoints link.
 
 ![endpoint](http://i.imgur.com/cYFsaQs.png)
 
 ### 2. Retrieve GitHub Access Token
+
 **!Important**: 👉 To get access to the GitHub early access GraphQL API, fill out the [prerelease agreement](https://github.com/prerelease/agreement)
 
 You will need a GitHub access token to access the repository data
