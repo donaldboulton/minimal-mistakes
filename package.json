@@ -18,7 +18,7 @@
     "Service Worker",
     "WebWorkers",
     "Netlify Functions",
-    "Donald Boutlon"
+    "Donald Boulton"
   ],
   "author": "Donald Boulton",
   "license": "MPL-2.0",
@@ -115,7 +115,6 @@
     "axios": "0.18.0",
     "bufferutil": "^4.0.1",
     "default-passive-events": "^1.0.10",
-    "graphcool": "^0.11.6",
     "graphql": "^14.1.1",
     "graphql-schema": "0.5.1",
     "graphql-tag": "2.10.1",
