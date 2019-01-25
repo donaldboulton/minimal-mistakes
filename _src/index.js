@@ -3,7 +3,7 @@ import Todo from './lib/components/Todo';
 import AppNotify from './lib/components/AppNotify';
 import "babel-polyfill";
 import Dialog from './lib/components/Dialog';
-import Worker from './Home';
+import Home from './Home';
 class App extends React.Component {
   render() {
     return (
@@ -11,7 +11,7 @@ class App extends React.Component {
         <Todo />
         <AppNotify />        
         <Dialog />
-        <Worker />
+        <Home />
       </div>
     );
   }

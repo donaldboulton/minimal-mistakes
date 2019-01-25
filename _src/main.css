@@ -96,6 +96,7 @@ h1 {
 .App-logo-spin {
   animation: spin infinite 20s linear;
   animation: App-logo-spin infinite 20s linear;
+  height: 80px;
 }
 
 @keyframes App-logo-spin {
@@ -394,8 +395,8 @@ dialog::backdrop {
 }
 
 #my-accessible-dialog button:focus {
-  background-color: #00c100;
-  border: 1px solid #00c100;
+  background-color: #141010;
+  border: 1px solid #141010;
   border-radius: 50%;
   color: #fff;
   float: right;
