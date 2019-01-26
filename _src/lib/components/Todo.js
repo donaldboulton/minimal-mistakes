@@ -34,10 +34,10 @@ class Todo extends Component {
       <img src={logo} className="App-logo-spin align-center" alt="logo" />
        <h3 className="Appheader"> TODO-LIST </h3>
        <div className='AppCentermain'>
-        <form className="App notify-center" onSubmit={this.onSubmit}>
-          <input placeholder="add task" value={this.state.term} onChange={(e) => this.onChange(e.target.value)}
-          className="inputField"/>
-          <button className="btn btn--primary text-center">Add</button>
+        <form className="App notifyCenter" onSubmit={this.onSubmit}>
+          <input placeholder="Add Task" value={this.state.term} onChange={(e) => this.onChange(e.target.value)}
+          className="inputField"/>          
+          <button className="btn btn--primary text-center">Add Task</button>
         </form>
         <List items={this.state.items}  onDeleteList={this.onDelete}/>
         <div className="bottom-outer">

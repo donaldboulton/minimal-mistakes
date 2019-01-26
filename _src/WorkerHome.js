@@ -19,7 +19,6 @@ class LambdaDemo extends Component {
             <h3 className="Appheader">GraphQL Lambda</h3>
           </header>
           <p className="App-intro">
-            Netlify Functions
           </p>          
         </div>
       );
