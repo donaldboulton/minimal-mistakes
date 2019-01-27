@@ -16,7 +16,7 @@ module.exports = {
   },
   plugins: [
     new FaviconsWebpackPlugin({
-      logo: './favicon.png',
+      logo: './logo.png',
       background: '#212529',
     }),
     new HtmlWebpackPlugin({
