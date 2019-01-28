@@ -12,7 +12,7 @@ gallery: true
 comments: false
 side_react: true
 share: false
-reviews: false
+reviews: true
 related: true
 sidenav-gallery: true
 adds: false

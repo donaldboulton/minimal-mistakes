@@ -10,7 +10,7 @@ author_profile: false
 gallery: true
 comments: false
 side_react: true
-reviews: false
+reviews: true
 share: false
 reviews: true
 related: true
