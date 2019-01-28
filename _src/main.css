@@ -6599,7 +6599,7 @@ td.endpoint {
 #cookie-bar-browsers a {
   width: 60px;
   display: inline-block;
-  background: url("/images/cart/images.png") no-repeat;
+  background: url("/assets/images/images.png") no-repeat;
   text-align: left;
   margin: 0;
   padding: 0;
@@ -6714,7 +6714,7 @@ td.endpoint {
 }
 
 #cookie-bar-prompt-close {
-  background: url("/images/cart/images.png") no-repeat;
+  background: url("/assets/images/images.png") no-repeat;
   background-position: -102px -94px;
   display: block;
   float: right;
@@ -6726,7 +6726,7 @@ td.endpoint {
 }
 
 #cookie-bar-prompt-logo {
-  background: url("/images/cart/images.png") no-repeat;
+  background: url("/assets/images/images.png") no-repeat;
   background-position: -2px 0px;
   display: block;
   float: left;

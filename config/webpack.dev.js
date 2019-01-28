@@ -33,6 +33,10 @@ module.exports = Merge(CommonConfig, {
         enforce: 'pre',
         exclude: /node_modules/,
         loader: 'eslint-loader',
+      },
+      {
+        test: /worker\.js$/,
+        loader: require.resolve('worker-loader'),
       }
     ]
   },
