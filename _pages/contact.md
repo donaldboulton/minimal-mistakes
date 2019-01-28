@@ -23,8 +23,8 @@ notifications: false
 toc: false
 sidenav: true
 side_react: true
-reviews: false
-comments: true
+reviews: true
+comments: false
 cookies: true
 contact: false
 adds: false

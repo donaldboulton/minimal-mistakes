@@ -22,7 +22,7 @@ category:
 toc: true
 toc_label: "Page Contents"
 read_time: true
-comments: true
+comments: false
 share: false
 web-intents: true
 slack: true

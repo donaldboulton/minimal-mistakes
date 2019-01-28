@@ -7,7 +7,7 @@ sitemap: false
 author_profile: true
 side_react: true
 adds: true
-reviews: false
+reviews: true
 sidenav: true
 layout: productdetails
 name: "Donate"

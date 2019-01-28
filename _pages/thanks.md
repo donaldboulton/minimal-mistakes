@@ -27,8 +27,8 @@ adds: false
 toc: false
 sidenav: true
 chat: true
-reviews: false
-comments: true
+reviews: true
+comments: false
 cookies: true
 newsletters: false
 side_react: true

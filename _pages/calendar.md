@@ -7,8 +7,8 @@ toc: false
 sidenav: false
 adds: true
 side_react: true
-reviews: false
-comments: true
+reviews: true
+comments: false
 cookies: true
 calendar: true
 event: Moms Birthday

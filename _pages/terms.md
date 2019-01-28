@@ -11,7 +11,7 @@ youtubeId: yoE9-tNvhRs
 adds: true
 chat: true
 reviews: true
-comments: true
+comments: false
 web-intents: true
 cookies: true
 anchor: true

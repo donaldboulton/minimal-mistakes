@@ -8,8 +8,8 @@ toc: false
 sidenav: false
 side_react: true
 adds: false
-reviews: false
-comments: true
+reviews: true
+comments: false
 cookies: true
 events: true
 image:

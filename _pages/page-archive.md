@@ -6,7 +6,7 @@ author_profile: true
 comments: false
 side_react: true
 sidenav: true
-reviews: false
+reviews: true
 adds: true
 slack: true
 hotjar: true

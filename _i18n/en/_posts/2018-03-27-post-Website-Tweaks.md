@@ -18,7 +18,7 @@ toc: true
 toc_label: "Page Contents"
 social-share: twitter --twitter-hashtags facebook
 read_time: true
-comments: true
+comments: false
 share: false
 web-intents: true
 side_react: true

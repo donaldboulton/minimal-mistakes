@@ -24,7 +24,7 @@ toc: true
 toc_label: "Defrag Contents"
 related: true
 read_time: true
-comments: true
+comments: false
 share: false
 web-intents: true
 slack: true

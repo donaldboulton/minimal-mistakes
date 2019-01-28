@@ -11,7 +11,7 @@ adds: true
 toc: false
 chat: true
 sidenav: true
-reviews: false
+reviews: true
 comments: false
 cookies: true
 notifications: false

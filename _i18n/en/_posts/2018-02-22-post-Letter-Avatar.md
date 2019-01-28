@@ -16,7 +16,7 @@ side_react: true
 adds: true
 cookies: true
 footnotes: true
-comments: true
+comments: false
 web-intents: true
 hotjar: true
 tags:
@@ -30,7 +30,7 @@ locations:
 toc: true
 toc_label: "Page Contents"
 read_time: true
-comments: true
+comments: false
 share: false
 newsletters: true
 tweet_id: 1021888928280924161

@@ -12,7 +12,7 @@ chat: true
 toc: false
 sidenav: true
 side_react: true
-reviews: false
+reviews: true
 comments: false
 cookies: true
 recaptcha: false

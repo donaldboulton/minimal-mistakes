@@ -404,7 +404,7 @@ defaults:
       layout: single
       author_profile: false
       gallery: true
-      comments: true
+      comments: false
       share: false
       related: true
       sidenav-gallery: true
@@ -476,7 +476,7 @@ defaults:
       layout: null
       author_profile: true
       read_time: true
-      comments: true
+      comments: false
       share: false
       side_react: true
       related: true

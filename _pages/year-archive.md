@@ -5,7 +5,7 @@ layout: posts
 author_profile: true
 comments: false
 sidenav: true
-reviews: false
+reviews: true
 side_react: true
 newsletters: true
 slack: true

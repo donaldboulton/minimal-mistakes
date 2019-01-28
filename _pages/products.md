@@ -21,8 +21,8 @@ category:
   - Products
 toc: false
 adds: true
-comments: true
-reviews: false
+comments: false
+reviews: true
 share: false
 related: true
 catagory: true

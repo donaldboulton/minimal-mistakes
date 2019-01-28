@@ -3,7 +3,7 @@ title: Reviews for Jekyll
 name: Reviews for Jekyll
 layout: single
 read_time: true
-comments: true
+comments: false
 share: false
 web-intents: true
 slack: true

@@ -25,7 +25,7 @@ category:
   
 toc: true
 read_time: true
-comments: true
+comments: false
 share: false
 web-intents: true
 tweet_id: 1023373858290786304

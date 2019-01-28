@@ -23,7 +23,7 @@ locations:
 toc: true
 toc_label: "Page Contents"
 read_time: true
-comments: true
+comments: false
 related: true
 share: false
 web-intents: true

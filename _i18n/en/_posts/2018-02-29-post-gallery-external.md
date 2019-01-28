@@ -6,7 +6,7 @@ redirect_to:
 read_time: true
 youtube: true
 youtubeId: IGMCAZk5xlg
-comments: true
+comments: false
 share: false
 web-intents: true
 tweet_id: 145116818707714048

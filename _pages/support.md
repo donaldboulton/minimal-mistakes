@@ -11,12 +11,12 @@ slack: true
 side_react: true
 toc: true
 toc_label: "Support"
-comments: true
+comments: false
 webmentions: false
 notifications: false
 newsletters: true
 sidenav: true
-reviews: false
+reviews: true
 adds: false
 hotjar: true
 support: [adds, cookies, youtube]

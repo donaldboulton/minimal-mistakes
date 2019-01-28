@@ -3,7 +3,7 @@ layout: single
 permalink: 2018-02-26-post-Jekyll-Admin.html
 author_profile: true
 read_time: true
-comments: true
+comments: false
 share: false
 side_react: true
 web-intents: true

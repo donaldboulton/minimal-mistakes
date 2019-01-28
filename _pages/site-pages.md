@@ -5,9 +5,9 @@ permalink: /site-pages/
 toc: false
 sidenav: true
 side_react: true
-comments: true
+comments: false
 anchor: false
-reviews: false
+reviews: true
 adds: false
 waves: true
 excerpt: "List of Site Pages"

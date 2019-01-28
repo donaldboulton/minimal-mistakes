@@ -12,12 +12,12 @@ slack: true
 side_react: true
 toc: false
 toc_label: "Projects"
-comments: true
+comments: false
 webmentions: false
 notifications: false
 newsletters: true
 sidenav: true
-reviews: false
+reviews: true
 adds: false
 hotjar: true
 support: [adds, cookies]

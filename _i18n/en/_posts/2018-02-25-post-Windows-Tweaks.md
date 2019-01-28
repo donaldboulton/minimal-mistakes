@@ -27,7 +27,7 @@ toc_label: "Page Contents"
 slack: true
 newsletters: true
 read_time: true
-comments: true
+comments: false
 share: false
 social-share: twitter --twitter-hashtags facebook
 related: true

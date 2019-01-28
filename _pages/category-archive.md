@@ -6,7 +6,7 @@ author_profile: true
 comments: false
 sidenav: true
 side_react: true
-reviews: false
+reviews: true
 adds: true
 newsletters: true
 slack: true

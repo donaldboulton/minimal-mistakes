@@ -11,11 +11,11 @@ slack: true
 side_react: true
 toc: false
 toc_label: "Location"
-comments: true
+comments: false
 webmentions: false
 notifications: false
 sidenav: true
-reviews: false
+reviews: true
 adds: true
 here-maps: true
 support: [adds, cookies, youtube]

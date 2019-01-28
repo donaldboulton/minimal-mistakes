@@ -3,7 +3,7 @@ layout: single
 author_profile: true
 permalink: 2018-02-26-post-Staticman-with-Gitlab.html
 read_time: true
-comments: true
+comments: false
 share: false
 side_react: true
 web-intents: false
