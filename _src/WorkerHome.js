@@ -14,7 +14,7 @@ worker.addEventListener("message", function (event) {});
 const LambdaDemo = () => (
     <WebWorker url="/assets/9ad10eae928b064c486b.worker.js">
       <WebWorker.Pending>
-        {({ postMessage }) => <button onClick={() => postMessage("hello")}>Hello</button>}
+        {({ postMessage }) => <button className="text-center btn btn--primary" onClick={() => postMessage("hello")}>Hello</button>}
       </WebWorker.Pending>
       <WebWorker.Data>
         {data => (
