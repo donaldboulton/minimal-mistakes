@@ -1,0 +1,14 @@
+NetlifyTemplateFormatVersion: '2010-09-09'
+Transform: Netlify::Serverless-2016-10-31
+Resources:
+  GraphQL:
+    Type: Netligfy::Serverless::Function
+    Properties:
+      Handler: graphql.handler
+      Runtime: nodejs8.10
+      Events:
+        AnyRequest:
+          Type: Api
+          Properties:
+            Path: /graphql
+            Method: ANY

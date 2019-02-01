@@ -1,3 +1,4 @@
+import React from "react";
 import WebWorker from "react-webworker";
 
 const MyComponent = () => (

@@ -1,8 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 import ReactDom from 'react-dom';
 import apollo from "./lib/components/images/apollo.svg";
 import Worker from 'worker-loader!./worker';
 import WebWorker from "react-webworker";
+import Server from './lib/components/ApolloServer';
 
 const worker = new Worker();
  
@@ -10,8 +11,14 @@ worker.postMessage({ a: 1 });
 worker.onmessage = function (event) {};
  
 worker.addEventListener("message", function (event) {});
-  
-const LambdaDemo = () => (
+
+const server = new Server();
+
+server.listen().then(({ url }) => {
+  console.log(`🚀 Server ready at ${url}`)
+});
+
+const ApolloServer = () => (
     <WebWorker url="/assets/9ad10eae928b064c486b.worker.js">
       <WebWorker.Pending>
         {({ postMessage }) => <button className="text-center btn btn--primary" onClick={() => postMessage("hello")}>GraphQL Hello</button>}
@@ -29,6 +36,7 @@ const LambdaDemo = () => (
         )}
       </WebWorker.Data>
       <WebWorker.Error>{error => `Something went wrong: ${error.message}`}</WebWorker.Error>
-    </WebWorker>
+    </WebWorker> 
   )
-  ReactDom.render(<LambdaDemo />, document.getElementById('graph'));
+
+  ReactDom.render(<ApolloServer />, document.getElementById('graph'));

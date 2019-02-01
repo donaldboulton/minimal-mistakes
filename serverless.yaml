@@ -1,0 +1,16 @@
+functions:
+  graphql:
+    handler: handler.graphql
+    events:
+      - http:
+          path: graphql
+          method: POST
+          cors: true
+      - http:
+          path: graphql
+          method: GET
+          cors: true`
+      - http:
+          path: playground
+          method: '*'
+          cors: true
