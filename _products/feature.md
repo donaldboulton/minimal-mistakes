@@ -30,8 +30,9 @@ support: [adds, cookies, cart]
 price: 150.25
 folder: _products
 loc: "/feature"
+sku: "feature"
 desc: Sponsor a Feature
-id: sponser
+id: feature
 private: true
 github_editme_path: donaldboulton/DWB/blob/gh-pages/_products/feature.md
 ---
