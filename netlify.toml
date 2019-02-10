@@ -10,6 +10,8 @@ Referrer-Policy = "same-origin"
 X-Content-Type-Options = "nosniff"
 X-Frame-Options = "DENY"
 X-XSS-Protection = "1; mode=block"
+Access-Control-Allow-Origin = "https://app.snipcart.com/api/sessions"
+Vary = "Origin"
 [[headers]]
 for = "/assets/*"
 [headers.values]
