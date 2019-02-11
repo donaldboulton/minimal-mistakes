@@ -10,7 +10,11 @@ layout: compress
   {% include head/custom.html %}
 </head>
 
-<body id="style-3" class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %} auth-false" itemscope itemtype="https://schema.org/WebPage">
+<body id="style-3" class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %} auth-false" itemscope itemtype="https://schema.org/WebPage">  
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T2NFHJ"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <meta class="u-url" itemprop="url" content="{{ site.url }}{{ page.url }}">  
   {% include masthead.html %}
   <div id="App">

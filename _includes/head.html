@@ -57,9 +57,6 @@
     "logo": "https://donboulton.com/apple-touch-icon-precomposed.png"
   }
 </script>
-<script>
-  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
-</script>
 {% if site.head_scripts %}
   {% for script in site.head_scripts %}
     {% if script contains "://" %}
@@ -70,6 +67,9 @@
       <script src="{{ script_path }}"></script>
   {% endfor %}
 {% endif %}
+<script src="{{ '/public/doc-classname.js' | relative_url }}"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-47664028-1"></script>
+<script src="{{ '/public/google-tag-manager.js' | relative_url }}"></script>
 
 {% if page.support contains 'gallery' %}
    <link rel="stylesheet" href="{{ '/build/dist/css/lightgallery.min.css' | relative_url }}">
@@ -82,13 +82,6 @@
 {% if page.cart == true %}
   <link rel="stylesheet" href="{{ '/build/css/vendor/snipcart/snipcart.min.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/build/dist/css/lightgallery.min.css' | relative_url }}">
-  <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-T2NFHJ');</script>
-  <!-- End Google Tag Manager -->
 {% endif %}
 
 {% if page.support contains 'github' %}
