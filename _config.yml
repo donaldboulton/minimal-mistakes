@@ -328,8 +328,8 @@ plugins:
   - jekyll-tagging
   - jekyll-tagging-related_posts
   - jekyll-redirect-from
-  - lazyload
-  - notice
+  - jekyll-include-cache
+  - jekyll-toc
   - jemoji
   - json
 
@@ -346,8 +346,8 @@ whitelist:
   - jekyll-tagging
   - jekyll-tagging-related_posts
   - jekyll-redirect-from
-  - lazyload
-  - notice
+  - jekyll-include-cache
+  - jekyll-toc
   - jemoji
   - json
 
