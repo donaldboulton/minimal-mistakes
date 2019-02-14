@@ -205,6 +205,8 @@ GEM
       jekyll-seo-tag (~> 2.0)
     jekyll-titles-from-headings (0.5.1)
       jekyll (~> 3.3)
+    jekyll-toc (0.9.1)
+      nokogiri (~> 1.8)
     jekyll-typogrify (0.3.5)
       titlecase
       typogruby
@@ -284,15 +286,18 @@ DEPENDENCIES
   jekyll-figure
   jekyll-multiple-languages-plugin
   jekyll-redirect-from (~> 0.14.0)
+  jekyll-seo-tag
+  jekyll-sitemap
   jekyll-tagging
   jekyll-tagging-related_posts
+  jekyll-toc (>= 0.9.0)
   jekyll-typogrify
   jemoji
   json
   public_suffix
   rake (~> 12)
   tzinfo-data
-  wdm (~> 0.1.0)
+  wdm (~> 0.1.1)
 
 BUNDLED WITH
    1.17.2
