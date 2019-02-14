@@ -328,7 +328,6 @@ plugins:
   - jekyll-tagging
   - jekyll-tagging-related_posts
   - jekyll-redirect-from
-  - jekyll-include-cache
   - jekyll-toc
   - jemoji
   - json
