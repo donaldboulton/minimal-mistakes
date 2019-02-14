@@ -328,7 +328,26 @@ plugins:
   - jekyll-tagging
   - jekyll-tagging-related_posts
   - jekyll-redirect-from
-  - jekyll-toc
+  - lazyload
+  - notice
+  - jemoji
+  - json
+
+# mimic GitHub Pages with --safe
+whitelist:
+  - posts_json
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-archives
+  - jekyll-figure
+  - jekyll-tagging
+  - jekyll-tagging-related_posts
+  - jekyll-redirect-from
+  - lazyload
+  - notice
   - jemoji
   - json
 
