@@ -13,7 +13,7 @@ X-XSS-Protection = "1; mode=block"
 Access-Control-Allow-Origin = "*"
 Vary = "Accept-Encoding"
 Access-Control-Allow-Credentials = "true"
-Feature-Policy = "geolocation 'self' https://donboulton.com; autoplay 'none'; lazyload; sync-xhr 'self' https://donboulton.com"
+Feature-Policy = "geolocation 'self' https://donboulton.com; autoplay 'none'; lazyload 'self' https://donboulton.com; sync-xhr 'self' https://donboulton.com"
 [[headers]]
 for = "/assets/*"
 [headers.values]

@@ -60,7 +60,7 @@ lcb: "{"
 
 {% include page-intro.html %}
 
-How to easily create Letter Avatars for your comments in Minimal Mistakes. This coversion is a work in progress as I am just learning liquid.
+How to easily create Letter Avatars for your comments in Minimal Mistakes.
 
 # Letter Avatar Original gist
 
@@ -68,7 +68,7 @@ How to easily create Letter Avatars for your comments in Minimal Mistakes. This 
 
 Avatar Generator from - Commenter name [^names] as input and a canvas element as output using the initials from the name and a background color.
 
-[^names]: based on the first name & surname first letter.
+[^names]: Based on the first name & surname first letter.
 
 The background colors are from from [Flat Ui Colors](https://flatuicolors.com/) Now with retina support.
 
