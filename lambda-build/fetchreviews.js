@@ -60,63 +60,91 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 224);
+/******/ 	return __webpack_require__(__webpack_require__.s = 252);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 18:
-/***/ (function(module, exports) {
-
-module.exports = require("querystring");
-
-/***/ }),
-
-/***/ 224:
+/***/ 252:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _querystring = __webpack_require__(18);
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-exports.handler = (event, context, callback) => {
-  let body = {};
-  console.log(event);
-  try {
-    body = JSON.parse(event.body);
-  } catch (e) {
-    body = (0, _querystring.parse)(event.body);
-  }
+const https = __webpack_require__(9);
 
-  if (!body.email) {
-    return callback(null, {
-      statusCode: 400,
-      body: JSON.stringify({
-        error: 'missing email'
-      })
+exports.handler = function (event, context, callback) {
+    var id = event.queryStringParameters.id;
+    var token = process.env.netlify_access_token;
+
+    if (id == undefined) {
+        callback('A product id must be specified.', {
+            statusCode: 500
+        });
+    }
+
+    var options = {
+        hostname: 'api.netlify.com',
+        port: 443,
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    };
+
+    var queryToken = `access_token=${token}`;
+    var opts1 = _extends({}, options, { path: `/api/v1/sites/${process.env.site_id}/forms?${queryToken}` });
+
+    var req = https.request(opts1, function (res) {
+
+        res.setEncoding('utf8');
+        var body = "";
+
+        res.on('data', data => {
+            body += data;
+        });
+
+        res.on('end', function () {
+            body = JSON.parse(body);
+
+            var form = body.filter(x => x.name == `product-${id}`)[0];
+            var opts2 = _extends({}, options, { path: `/api/v1/forms/${form.id}/submissions?${queryToken}` });
+
+            var req2 = https.request(opts2, function (res2) {
+                res2.setEncoding('utf8');
+                var body2 = "";
+
+                res2.on("data", data => {
+                    body2 += data;
+                });
+
+                res2.on('end', function () {
+                    callback(null, {
+                        statusCode: 200,
+                        headers: {
+                            "Access-Control-Allow-Origin": "*",
+                            'Content-Type': 'application/json'
+                        },
+                        body: body2
+                    });
+                });
+            });
+
+            req2.end();
+        });
     });
-  }
 
-  if (event.headers['content-type'] === 'application/x-www-form-urlencoded') {
-
-    return callback(null, {
-      statusCode: 302,
-      headers: {
-        Location: '/thanks.html',
-        'Cache-Control': 'no-cache'
-      },
-      body: JSON.stringify({})
-    });
-  }
-
-  return callback(null, {
-    statusCode: 200,
-    body: JSON.stringify({
-      emailAdded: true
-    })
-  });
+    req.end();
 };
+
+/***/ }),
+
+/***/ 9:
+/***/ (function(module, exports) {
+
+module.exports = require("https");
 
 /***/ })
 

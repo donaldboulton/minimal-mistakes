@@ -110,7 +110,7 @@ github_editme_path: donaldboulton/DWB/blob/gh-pages/_pages/about.md
 This website is built as static HTML with Jekyll component-modular builds including a Node backend, with React components and Built with Webpack.
 
 Served on Netlify via a continuous deployment (CD) workflow. Pull requests are automatically built into preview apps, while commits to the master branch trigger the production build and deploy onto Netlify’s CDN edge node infrastructure. Since the whole site is just a bunch of static files copied onto multiple CDN nodes around the world, time to first byte (TTFB) is consistently fast at around 1ms to 2ms.
-React Notifications through my Slack Bots and Zapier for my Mansbooks donboulton.com workspace.
+React Notifications through my Slack Bots and Netlify Functions for my Mansbooks donboulton.com workspace.
 
 ## Server-less
 

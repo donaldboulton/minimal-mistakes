@@ -38,7 +38,7 @@ exports.handler = function(event, context, callback) {
             res.setEncoding('utf8');
             
             res.on('end', function () {
-                console.log(`Review with id: ${id} was deleted successfully.`)
+                console.log(`Comment with id: ${id} was deleted successfully.`)
             });
         });
         
@@ -53,8 +53,8 @@ exports.handler = function(event, context, callback) {
         replace_original: true,
         attachments: [{
             text: answer == 'keep'
-                ? `The review (${id}) was approved!`
-                : `The review (${id}) was rejected.`
+                ? `The comment (${id}) was approved!`
+                : `The comment (${id}) was rejected.`
         }]
     });
 
