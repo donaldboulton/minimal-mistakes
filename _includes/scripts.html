@@ -95,7 +95,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 {% endif %}
 
 {% if page.support contains 'cookies' %}
-<script src="{{ '/build/cookie-bar/cookiebar-latest.min.js?tracking=1&showNoConsent=1&privacyPage=https%3A%2F%2Fdonboulton.com%2Fterms%23cookies--beacons' | relative_url }}"></script>
+<script rel="preload" src="{{ '/build/cookie-bar/cookiebar-latest.min.js?tracking=1&showNoConsent=1&privacyPage=https%3A%2F%2Fdonboulton.com%2Fterms%23cookies--beacons' | relative_url }}" as="script"></script>
+<script>
+  // Later on, after some condition has been met, we run the preloaded
+  // JavaScript by inserting a <script> tag into the DOM.
+  var cookiebarScript = document.createElement('script');
+  cookiebarScript.src = "{{ '/build/cookie-bar/cookiebar-latest.min.js?tracking=1&showNoConsent=1&privacyPage=https%3A%2F%2Fdonboulton.com%2Fterms%23cookies--beacons' | relative_url }}";
+  document.body.appendChild(cookiebarScript)
+</script>
 {% endif %}
 
 {% if page.support contains 'dragula' %}
