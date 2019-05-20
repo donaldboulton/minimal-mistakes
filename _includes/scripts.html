@@ -94,17 +94,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script src="{{ '/public/validation.js' | relative_url }}"></script>
 {% endif %}
 
-{% if page.support contains 'cookies' %}
-<script rel="preload" src="{{ '/build/cookie-bar/cookiebar-latest.min.js?tracking=1&showNoConsent=1&privacyPage=https%3A%2F%2Fdonboulton.com%2Fterms%23cookies--beacons' | relative_url }}" as="script"></script>
-<script>
-  // Later on, after some condition has been met, we run the preloaded
-  // JavaScript by inserting a <script> tag into the DOM.
-  var cookiebarScript = document.createElement('script');
-  cookiebarScript.src = "{{ '/build/cookie-bar/cookiebar-latest.min.js?tracking=1&showNoConsent=1&privacyPage=https%3A%2F%2Fdonboulton.com%2Fterms%23cookies--beacons' | relative_url }}";
-  document.body.appendChild(cookiebarScript)
-</script>
-{% endif %}
-
 {% if page.support contains 'dragula' %}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js" crossorigin="anonymous"></script>
   <script src="{{ '/build/js/vendor/dragula/example.min.js' | relative_url }}"></script>
