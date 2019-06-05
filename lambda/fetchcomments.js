@@ -1,5 +1,9 @@
 const https = require('https')
 
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 exports.handler = function (event, context, callback) {
   var id = event.queryStringParameters.id
   var token = process.env.netlify_access_token
