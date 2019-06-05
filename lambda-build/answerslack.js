@@ -65,13 +65,6 @@
 /************************************************************************/
 /******/ ({
 
-/***/ 10:
-/***/ (function(module, exports) {
-
-module.exports = require("https");
-
-/***/ }),
-
 /***/ 18:
 /***/ (function(module, exports) {
 
@@ -85,7 +78,7 @@ module.exports = require("querystring");
 "use strict";
 
 
-var https = __webpack_require__(10);
+var https = __webpack_require__(9);
 var qs = __webpack_require__(18);
 
 function getURL(href) {
@@ -176,6 +169,13 @@ exports.handler = function (event, context, callback) {
         statusCode: 200
     });
 };
+
+/***/ }),
+
+/***/ 9:
+/***/ (function(module, exports) {
+
+module.exports = require("https");
 
 /***/ })
 

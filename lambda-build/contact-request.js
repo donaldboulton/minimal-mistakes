@@ -60,18 +60,16 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 224);
+/******/ 	return __webpack_require__(__webpack_require__.s = 223);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 224:
+/***/ 223:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 const https = __webpack_require__(9);
 
@@ -79,71 +77,24 @@ __webpack_require__(50).config({
   path: `.env.${process.env.NODE_ENV}`
 });
 
-exports.handler = function (event, context, callback) {
-  var id = event.queryStringParameters.id;
-  var token = process.env.netlify_access_token;
+exports.handler = (event, context, callback) => {
+  const payload = JSON.stringify({
+    text: `Message sent by ${event.name} (${event.email}):\n ${event.message}`
+  });
 
-  if (id === undefined) {
-    // eslint-disable-next-line standard/no-callback-literal
-    callback('A product id must be specified.', {
-      statusCode: 500
-    });
-  }
-
-  var options = {
-    hostname: 'api.netlify.com',
+  const options = {
+    hostname: 'hooks.slack.com',
     port: 443,
-    method: 'GET',
+    path: process.env.SLACK_WEBHOOK_URL,
+    method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     }
   };
 
-  var queryToken = `access_token=${token}`;
-  var opts1 = _extends({}, options, { path: `/api/v1/sites/${process.env.site_id}/forms?${queryToken}` });
-
-  var req = https.request(opts1, function (res) {
-    res.setEncoding('utf8');
-    var body = '';
-
-    res.on('data', data => {
-      body += data;
-    });
-
-    res.on('data', data => {
-      body += data;
-    });
-
-    res.on('end', function () {
-      body = JSON.parse(body);
-
-      var form = body.filter(x => x.name == `post-${id}`)[0];
-      var opts2 = _extends({}, options, { path: `/api/v1/forms/${form.id}/submissions?${queryToken}` });
-
-      var req2 = https.request(opts2, function (res2) {
-        res2.setEncoding('utf8');
-        var body2 = '';
-
-        res2.on('data', data => {
-          body2 += data;
-        });
-
-        res2.on('end', function () {
-          callback(null, {
-            statusCode: 200,
-            headers: {
-              'Access-Control-Allow-Origin': '*',
-              'Content-Type': 'application/json'
-            },
-            body: body2
-          });
-        });
-      });
-
-      req2.end();
-    });
-  });
-
+  const req = https.request(options, res => res.on('data', () => callback(null, 'OK')));
+  req.on('error', error => callback(JSON.stringify(error)));
+  req.write(payload);
   req.end();
 };
 
