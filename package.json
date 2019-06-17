@@ -34,7 +34,9 @@
     "build:pwa": "npm run-script clean:project && cross-env NODE_ENV=production webpack -p --env=pwa --progress --profile --colors && cross-env JEKYLL_ENV=pwa bundle exec jekyll build && sw-precache --config=config/sw.config.js --verbose",
     "serve:dist": "http-server _site",
     "serve": "bundle exec jekyll serve & netlify-lambda serve lambda-build",
-    "clean:project": "rimraf ./_site ./assets"
+    "clean:project": "rimraf ./_site ./assets",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -135,7 +137,8 @@
     "react-webworker": "^2.1.0",
     "request": "^2.88.0",
     "subscriptions-transport-ws": "^0.9.15",
-    "svg4everybody": "^2.1.9"
+    "svg4everybody": "^2.1.9",
+    "snyk": "^1.163.3"
   },
   "proxy": {
     "/.netlify/functions": {
@@ -144,5 +147,6 @@
         "^/\\.netlify/functions": ""
       }
     }
-  }
+  },
+  "snyk": true
 }
