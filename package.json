@@ -138,7 +138,7 @@
     "request": "^2.88.0",
     "subscriptions-transport-ws": "^0.9.15",
     "svg4everybody": "^2.1.9",
-    "snyk": "^1.163.3"
+    "snyk": "^1.192.3"
   },
   "proxy": {
     "/.netlify/functions": {

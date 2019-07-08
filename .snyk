@@ -1,8 +1,23 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.13.3
+version: v1.13.5
 ignore: {}
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   SNYK-JS-AXIOS-174505:
     - axios:
         patched: '2019-05-12T01:30:18.776Z'
+  SNYK-JS-LODASH-450202:
+    - apollo-server > apollo-server-core > lodash:
+        patched: '2019-07-07T01:30:21.213Z'
+    - apollo-server-lambda > apollo-server-core > lodash:
+        patched: '2019-07-07T01:30:21.213Z'
+    - apollo-server > apollo-server-core > apollo-engine-reporting > lodash:
+        patched: '2019-07-07T01:30:21.213Z'
+    - apollo-server > apollo-server-express > apollo-server-core > lodash:
+        patched: '2019-07-07T01:30:21.213Z'
+    - apollo-server-lambda > apollo-server-core > apollo-engine-reporting > lodash:
+        patched: '2019-07-07T01:30:21.213Z'
+    - react-apollo > apollo-client > redux > lodash:
+        patched: '2019-07-07T01:30:21.213Z'
+    - apollo-server > apollo-server-express > apollo-server-core > apollo-engine-reporting > lodash:
+        patched: '2019-07-07T01:30:21.213Z'
