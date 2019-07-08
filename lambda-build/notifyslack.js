@@ -65,13 +65,20 @@
 /************************************************************************/
 /******/ ({
 
+/***/ 11:
+/***/ (function(module, exports) {
+
+module.exports = require("https");
+
+/***/ }),
+
 /***/ 228:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var https = __webpack_require__(9);
+var https = __webpack_require__(11);
 
 exports.handler = function (event, context, callback) {
     var body = JSON.parse(event.body);
@@ -147,13 +154,6 @@ exports.handler = function (event, context, callback) {
         });
     }
 };
-
-/***/ }),
-
-/***/ 9:
-/***/ (function(module, exports) {
-
-module.exports = require("https");
 
 /***/ })
 

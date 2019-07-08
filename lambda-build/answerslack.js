@@ -65,7 +65,14 @@
 /************************************************************************/
 /******/ ({
 
-/***/ 18:
+/***/ 11:
+/***/ (function(module, exports) {
+
+module.exports = require("https");
+
+/***/ }),
+
+/***/ 17:
 /***/ (function(module, exports) {
 
 module.exports = require("querystring");
@@ -78,8 +85,8 @@ module.exports = require("querystring");
 "use strict";
 
 
-var https = __webpack_require__(9);
-var qs = __webpack_require__(18);
+var https = __webpack_require__(11);
+var qs = __webpack_require__(17);
 
 function getURL(href) {
     var match = href.match(/^(https?\:)\/\/(([^:\/?#]*)(?:\:([0-9]+))?)([\/]{0,1}[^?#]*)(\?[^#]*|)(#.*|)$/);
@@ -169,13 +176,6 @@ exports.handler = function (event, context, callback) {
         statusCode: 200
     });
 };
-
-/***/ }),
-
-/***/ 9:
-/***/ (function(module, exports) {
-
-module.exports = require("https");
 
 /***/ })
 
