@@ -320,6 +320,7 @@ plugins:
   - posts_json
   - jekyll-sitemap
   - jekyll-paginate
+  - jekyll-include-cache
   - jekyll-gist
   - jekyll-feed
   - jekyll-seo-tag
