@@ -124,7 +124,7 @@
     "graphql-schema": "0.5.1",
     "graphql-tag": "2.10.1",
     "jquery-smooth-scroll": "^2.2.0",
-    "lazysizes": "^4.1.5",
+    "lazysizes": "^5.2.2",
     "node-fetch": "^2.3.0",
     "pg": "^7.8.0",
     "prop-types": "^15.6.2",
